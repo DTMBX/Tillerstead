@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Screen Demo - Tillerstead Theme Integration</title>
+  
+  <!-- Import theme tokens -->
+  <link rel="stylesheet" href="src/styles/tokens.css">
+  
+  <style>
+    /* Demo page styles */
+    body {
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      color: var(--color-text);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    
+    .demo-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: var(--space-8);
+    }
+    
+    .demo-header {
+      text-align: center;
+      margin-bottom: var(--space-10);
+    }
+    
+    .demo-header h1 {
+      font-size: var(--heading-1);
+      color: var(--color-heading);
+      margin-bottom: var(--space-4);
+    }
+    
+    .demo-header p {
+      font-size: var(--font-size-lg);
+      color: var(--color-text-muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .demo-section {
+      margin-bottom: var(--space-8);
+      padding: var(--space-6);
+      background: var(--color-surface-elevated);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+    }
+    
+    .demo-section h2 {
+      font-size: var(--heading-3);
+      color: var(--color-primary);
+      margin-bottom: var(--space-4);
+    }
+    
+    .demo-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .demo-section li {
+      padding: var(--space-2) 0;
+      color: var(--color-text-muted);
+      border-bottom: 1px solid var(--color-divider);
+    }
+    
+    .demo-section li:last-child {
+      border-bottom: none;
+    }
+    
+    .demo-section li::before {
+      content: "✓";
+      color: var(--color-primary);
+      font-weight: bold;
+      margin-right: var(--space-2);
+    }
+    
+    .reload-btn {
+      background: var(--gradient-primary);
+      color: var(--color-text);
+      border: none;
+      padding: var(--space-3) var(--space-6);
+      border-radius: var(--radius-md);
+      font-size: var(--font-size-base);
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: var(--shadow-button);
+      transition: all var(--transition-med);
+      margin-top: var(--space-4);
+      display: inline-block;
+    }
+    
+    .reload-btn:hover {
+      box-shadow: var(--shadow-button-hover);
+      transform: translateY(-2px);
+    }
+    
+    .token-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: var(--space-4);
+      margin-top: var(--space-4);
+    }
+    
+    .token-card {
+      padding: var(--space-4);
+      background: var(--color-surface);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--color-border);
+    }
+    
+    .token-card h3 {
+      font-size: var(--font-size-base);
+      color: var(--color-heading);
+      margin-bottom: var(--space-2);
+    }
+    
+    .token-card code {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: var(--font-size-sm);
+      color: var(--color-primary);
+      background: var(--color-bg);
+      padding: var(--space-2);
+      border-radius: var(--radius-sm);
+      margin-top: var(--space-2);
+    }
+    
+    .color-swatch {
+      width: 100%;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      margin-top: var(--space-2);
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Screen (will be hidden after page loads) -->
+  <div id="ts-loading-screen" class="ts-loading-screen" aria-hidden="true">
+    <div class="ts-loading-content">
+      <div class="ts-loading-logo">
+        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Tillerstead Loading">
+          <!-- Sacred Tile Pattern Icon -->
+          <circle cx="40" cy="40" r="38" stroke="var(--color-primary)" stroke-width="2" fill="none" opacity="0.3"/>
+          <circle cx="40" cy="40" r="30" stroke="var(--color-primary)" stroke-width="2" fill="none" opacity="0.5"/>
+          <circle cx="40" cy="40" r="22" stroke="var(--color-primary)" stroke-width="2" fill="none" opacity="0.7"/>
+          <path d="M40 18 L40 62 M18 40 L62 40" stroke="var(--color-primary)" stroke-width="2" opacity="0.6"/>
+          <path d="M25.86 25.86 L54.14 54.14 M54.14 25.86 L25.86 54.14" stroke="var(--color-accent)" stroke-width="2" opacity="0.5"/>
+          <!-- Center dot -->
+          <circle cx="40" cy="40" r="4" fill="var(--color-primary)"/>
+        </svg>
+      </div>
+      <h1 class="ts-loading-title">Tillerstead</h1>
+      <p class="ts-loading-subtitle">Property Care, Done Right</p>
+      <div class="ts-loading-spinner">
+        <div class="ts-spinner-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Screen Styles -->
+  <style>
+    .ts-loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--color-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity var(--transition-slow), visibility var(--transition-slow);
+    }
+
+    .ts-loading-screen.ts-loaded {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .ts-loading-content {
+      text-align: center;
+      max-width: 400px;
+      padding: var(--space-6);
+    }
+
+    .ts-loading-logo {
+      margin-bottom: var(--space-5);
+      animation: ts-pulse 2s ease-in-out infinite;
+    }
+
+    .ts-loading-logo svg {
+      margin: 0 auto;
+      display: block;
+    }
+
+    .ts-loading-title {
+      font-size: var(--heading-2);
+      font-weight: 700;
+      color: var(--color-heading);
+      margin: 0 0 var(--space-2);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .ts-loading-subtitle {
+      font-size: var(--font-size-lg);
+      color: var(--color-text-muted);
+      margin: 0 0 var(--space-6);
+      font-weight: 400;
+    }
+
+    .ts-loading-spinner {
+      width: 100%;
+      max-width: 200px;
+      height: 4px;
+      background: var(--color-surface-elevated);
+      border-radius: var(--radius-pill);
+      overflow: hidden;
+      margin: 0 auto;
+    }
+
+    .ts-spinner-bar {
+      width: 40%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--color-primary),
+        var(--color-primary-strong),
+        transparent
+      );
+      animation: ts-loading-slide 1.5s ease-in-out infinite;
+      border-radius: var(--radius-pill);
+    }
+
+    @keyframes ts-pulse {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+      }
+    }
+
+    @keyframes ts-loading-slide {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(350%);
+      }
+    }
+
+    .ts-loading-logo {
+      animation: ts-pulse 2s ease-in-out infinite, ts-fade-in 0.6s ease backwards;
+    }
+
+    .ts-loading-title {
+      animation: ts-fade-in 0.8s ease 0.2s backwards;
+    }
+
+    .ts-loading-subtitle {
+      animation: ts-fade-in 1s ease 0.4s backwards;
+    }
+
+    .ts-loading-spinner {
+      animation: ts-fade-in 1.2s ease 0.6s backwards;
+    }
+
+    @keyframes ts-fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ts-loading-screen,
+      .ts-loading-logo,
+      .ts-loading-title,
+      .ts-loading-subtitle,
+      .ts-loading-spinner,
+      .ts-spinner-bar {
+        animation: none !important;
+      }
+      
+      .ts-loading-screen {
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+    }
+  </style>
+
+  <!-- Demo Content -->
+  <div class="demo-container">
+    <div class="demo-header">
+      <h1>Tillerstead Loading Screen Demo</h1>
+      <p>
+        This demo showcases the enhanced loading screen with comprehensive theme token integration
+        for the index.backup.html page.
+      </p>
+    </div>
+
+    <div class="demo-section">
+      <h2>✨ Loading Screen Features</h2>
+      <ul>
+        <li>Sacred geometry-inspired logo animation with brand colors</li>
+        <li>Smooth fade-in animations for all elements</li>
+        <li>Animated progress bar with gradient effect</li>
+        <li>Minimum display time to prevent flash (800ms)</li>
+        <li>Automatic fade-out when page loads</li>
+        <li>Removes itself from DOM after transition</li>
+        <li>Respects prefers-reduced-motion preference</li>
+        <li>Accessible with aria-hidden attribute</li>
+      </ul>
+      <button class="reload-btn" onclick="window.location.reload()">
+        Reload Page to See Loading Screen
+      </button>
+    </div>
+
+    <div class="demo-section">
+      <h2>🎨 Theme Token Integration</h2>
+      <div class="token-grid">
+        <div class="token-card">
+          <h3>Colors</h3>
+          <code>--color-primary<br>--color-accent<br>--color-bg<br>--color-heading</code>
+          <div class="color-swatch" style="background: var(--color-primary);"></div>
+        </div>
+        <div class="token-card">
+          <h3>Spacing</h3>
+          <code>--space-2<br>--space-3<br>--space-5<br>--space-6</code>
+        </div>
+        <div class="token-card">
+          <h3>Typography</h3>
+          <code>--heading-2<br>--font-size-lg<br>--font-sans</code>
+        </div>
+        <div class="token-card">
+          <h3>Effects</h3>
+          <code>--radius-pill<br>--transition-slow<br>--shadow-button</code>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-section">
+      <h2>📋 Implementation Details</h2>
+      <ul>
+        <li>Component: <code>_includes/loading-screen.html</code></li>
+        <li>Enhanced CSS: <code>assets/css/index-enhanced.css</code></li>
+        <li>Uses theme tokens from: <code>src/styles/tokens.css</code></li>
+        <li>Integrated into: <code>index.backup.html</code></li>
+        <li>Compatible with existing Jekyll layouts and includes</li>
+        <li>No JavaScript dependencies - vanilla implementation</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Loading Screen Script -->
+  <script>
+    (function() {
+      'use strict';
+      
+      const loadingScreen = document.getElementById('ts-loading-screen');
+      if (!loadingScreen) return;
+      
+      const MIN_DISPLAY_TIME = 800;
+      const startTime = Date.now();
+      
+      function hideLoadingScreen() {
+        const elapsed = Date.now() - startTime;
+        const remainingTime = Math.max(0, MIN_DISPLAY_TIME - elapsed);
+        
+        setTimeout(function() {
+          loadingScreen.classList.add('ts-loaded');
+          setTimeout(function() {
+            // Don't remove in demo so it can be shown again
+            // loadingScreen.remove();
+          }, 350);
+        }, remainingTime);
+      }
+      
+      if (document.readyState === 'complete') {
+        hideLoadingScreen();
+      } else {
+        window.addEventListener('load', hideLoadingScreen);
+      }
+      
+      setTimeout(hideLoadingScreen, 5000);
+    })();
+  </script>
+</body>
+</html>
