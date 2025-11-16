@@ -4,6 +4,118 @@
    ============================================ */
 
 /* ==================================================
+   LOGO RESPONSIVE STYLING & FALLBACK SUPPORT
+   Ensures logo (assets/logo.png) displays correctly
+   across all screen sizes with background fallback
+   
+   Design inspiration: Apple (apple.com), Dropbox (dropbox.com), Stripe (stripe.com)
+   - Clean spacing with fluid layouts
+   - Minimal borders, strong brand visibility
+   - Responsive sizing with proper constraints
+   
+   Related: GitHub issue - Fix missing logo in header & footer
+   ================================================== */
+
+/* Header Logo - Modern responsive styling */
+.site-header .site-logo,
+.ts-header .site-logo {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  /* Fallback background in case <img> fails to load */
+  background: url('../img/logo.png') no-repeat center;
+  background-size: contain;
+}
+
+.site-header .site-logo-img,
+.ts-header .site-logo-img,
+.ts-brand .site-logo-img {
+  display: block;
+  max-width: 150px;
+  width: clamp(120px, 14vw, 150px);
+  height: auto;
+  margin: 0;
+  /* Ensure visibility - override any potential hiding rules */
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Footer Logo - Responsive and visible */
+.site-footer .footer-logo-img,
+.ts-footer .footer-logo-img {
+  display: block;
+  max-width: 110px;
+  width: clamp(80px, 12vw, 110px);
+  height: auto;
+  margin: 0;
+  filter: drop-shadow(0 6px 18px rgba(2, 6, 23, 0.65));
+  /* Ensure visibility */
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Footer brand link with fallback background */
+.site-footer .footer-brand,
+.ts-footer .footer-brand {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--ts-space-2, 0.5rem);
+  color: inherit;
+  text-decoration: none;
+  /* Fallback background for logo */
+  background: url('../img/logo.png') no-repeat top center;
+  background-size: contain;
+  min-height: 110px; /* Ensure background shows if img fails */
+}
+
+/* Responsive breakpoints for logo sizing */
+@media (min-width: 480px) {
+  .site-header .site-logo-img,
+  .ts-header .site-logo-img,
+  .ts-brand .site-logo-img {
+    width: clamp(136px, 14vw, 150px);
+  }
+}
+
+@media (min-width: 768px) {
+  .site-header .site-logo-img,
+  .ts-header .site-logo-img,
+  .ts-brand .site-logo-img {
+    max-width: 160px;
+  }
+  
+  .site-footer .footer-logo-img,
+  .ts-footer .footer-logo-img {
+    max-width: 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-header .site-logo-img,
+  .ts-header .site-logo-img,
+  .ts-brand .site-logo-img {
+    width: 160px;
+  }
+}
+
+/* Mobile optimization - ensure logo stays visible */
+@media (max-width: 479px) {
+  .site-header .site-logo-img,
+  .ts-header .site-logo-img,
+  .ts-brand .site-logo-img {
+    min-width: 100px;
+    width: clamp(100px, 20vw, 120px);
+  }
+  
+  .site-footer .footer-logo-img,
+  .ts-footer .footer-logo-img {
+    min-width: 70px;
+    width: clamp(70px, 18vw, 90px);
+  }
+}
+
+/* ==================================================
    ACCESSIBILITY ENHANCEMENTS
    ================================================== */
 
