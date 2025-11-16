@@ -96,9 +96,19 @@ body {
   background: var(--ts-bg);
   color: var(--ts-text);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  /* scroll-behavior: smooth; moved to media query below */
+  overflow-x: hidden;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  body {
+    scroll-behavior: smooth;
+  }
+}
 body.site-body {
   display: flex;
   flex-direction: column;
@@ -113,6 +123,14 @@ img,
 svg {
   display: block;
   max-width: 100%;
+  height: auto;
+}
+
+img {
+  /* Modern image rendering */
+  image-rendering: -webkit-optimize-contrast;
+  /* Better loading UX */
+  background-color: var(--ts-surface-elevated);
 }
 
 figure {
@@ -284,6 +302,10 @@ pre {
 .section,
 .ts-section {
   padding-block: clamp(3rem, 6vw, 5rem);
+  /* Performance: CSS containment */
+  contain: layout style paint;
+  /* content-visibility: auto; removed for accessibility */
+  contain-intrinsic-size: auto 500px;
 }
 
 .ts-section--muted {
@@ -388,6 +410,14 @@ button.btn {
     background var(--ts-transition-fast),
     color var(--ts-transition-fast);
   box-shadow: 0 16px 36px rgba(26, 200, 122, 0.35);
+  /* Better touch targets for mobile */
+  min-height: 44px;
+  min-width: 44px;
+  /* Prevent text selection on buttons */
+  user-select: none;
+  -webkit-user-select: none;
+  /* Better button performance */
+  will-change: transform;
 }
 
 .btn:hover,
@@ -864,6 +894,8 @@ body.nav-open {
   border-radius: inherit;
   /* Lazy loading - start with transparent, fade in when loaded */
   animation: fadeInPattern 0.4s ease-in-out;
+  /* Performance optimization */
+  will-change: opacity;
 }
 
 /* Fallback for browsers without WebP support */
@@ -1128,12 +1160,8 @@ body.nav-open {
 .who-grid {
   display: grid;
   gap: clamp(1.5rem, 3vw, 2rem);
-}
-
-@media (min-width: 960px) {
-  .who-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  /* Modern responsive grid: max 2 columns at 960px+ */
+  grid-template-columns: repeat(auto-fit, minmax(min(450px, 100%), 1fr));
 }
 
 .who-card {
@@ -1187,12 +1215,8 @@ body.nav-open {
 .why-grid {
   display: grid;
   gap: clamp(1.5rem, 3vw, 2rem);
-}
-
-@media (min-width: 960px) {
-  .why-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  /* Modern responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
 }
 
 .why-item {
@@ -1218,12 +1242,8 @@ body.nav-open {
 .scope-grid {
   display: grid;
   gap: clamp(1.5rem, 3vw, 2rem);
-}
-
-@media (min-width: 900px) {
-  .scope-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  /* Modern responsive grid */
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
 }
 
 .scope-card {
@@ -1454,9 +1474,26 @@ select {
   color: var(--ts-text);
   font-family: var(--ts-font-sans);
   font-size: 0.95rem;
+  line-height: 1.5;
   transition:
     border-color var(--ts-transition-fast),
-    box-shadow var(--ts-transition-fast);
+    box-shadow var(--ts-transition-fast),
+    background-color var(--ts-transition-fast);
+  /* Better touch targets */
+  min-height: 44px;
+}
+
+/* Invalid state */
+input:user-invalid,
+textarea:user-invalid,
+select:user-invalid {
+  border-color: #ef4444;
+}
+
+/* Valid state */
+input:user-valid,
+textarea:user-valid {
+  border-color: var(--ts-primary);
 }
 
 input::placeholder,
@@ -1682,4 +1719,140 @@ textarea {
 .review-meta {
   font-size: 0.875rem;
   color: var(--ts-text-muted);
+}
+
+/* ============================================
+   Print Styles - Optimize for printing
+   ============================================ */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /* Don't show links for images or javascript: URIs */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after,
+  a[href^="tel:"]::after,
+  a[href^="mailto:"]::after {
+    content: "";
+  }
+
+  /* Page breaks */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* Hide navigation and non-essential elements */
+  .site-header,
+  .site-footer,
+  .nav-toggle,
+  .hero-actions,
+  .btn,
+  button {
+    display: none !important;
+  }
+
+  /* Expand content */
+  body {
+    font-size: 12pt;
+  }
+
+  h1 {
+    font-size: 24pt;
+  }
+
+  h2 {
+    font-size: 18pt;
+  }
+
+  h3 {
+    font-size: 14pt;
+  }
+}
+
+/* ============================================
+   Dark mode improvements (for those who prefer it)
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Already dark by default, but ensure consistency */
+    color-scheme: dark;
+  }
+}
+
+/* ============================================
+   High contrast mode support
+   ============================================ */
+
+@media (prefers-contrast: high) {
+  :root {
+    --ts-border: rgba(255, 255, 255, 0.5);
+    --ts-border-strong: rgba(255, 255, 255, 0.7);
+  }
+
+  .btn,
+  button.btn {
+    border-width: 2px;
+  }
+}
+
+/* ============================================
+   Reduced transparency for better readability
+   ============================================ */
+
+@media (prefers-reduced-transparency: reduce) {
+  * {
+    backdrop-filter: none !important;
+  }
+
+  .site-header {
+    background: var(--ts-bg) !important;
+  }
 }
