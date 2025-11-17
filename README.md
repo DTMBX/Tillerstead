@@ -8,35 +8,64 @@ Optimized for **GitHub Pages** and **Netlify**, using pure **HTML/CSS/JS** for s
 
 ---
 
-## 🧱 Quick Preview (Local)
-Serve the site locally from the repo root:
+## 🚀 Quick Start
 
+### Local Development (Simple HTTP Server)
+For quick testing without Jekyll processing:
 ```bash
 python3 -m http.server
 # then open http://localhost:8000
 ```
 
----
+**Note**: This will show raw Liquid templates. For full rendering, use one of the methods below.
 
-## 🔧 Offline-friendly `bundle exec jekyll build`
-To keep CI and air‑gapped machines happy, the repo includes a vendored `jekyll` gem (see `vendor/gems/jekyll`). Bundler only has to resolve a path dependency, so no external gem servers are contacted.
+### Production Build (Jekyll)
+The site uses Jekyll for templating. To build locally:
 
 ```bash
-# optional: keep Bundler installs local to the repo
+# Install Ruby dependencies (vendored Jekyll)
 bundle config set --local path 'vendor/bundle'
-
-# install (purely local resolution)
 bundle install
 
-# render the site to ./_site using the custom builder
+# Build the site to ./_site
 bundle exec jekyll build
+
+# Serve the built site
+cd _site && python3 -m http.server
 ```
 
-The custom CLI currently supports the `build` command. Use any static file server (e.g., `python3 -m http.server`) to preview `_site` after a build.
+### Automatic Deployment
+When pushed to GitHub or Netlify, Jekyll processes automatically:
+- **GitHub Pages**: Automatically builds on push to main
+- **Netlify**: Configured in deploy settings
 
-If something fails inside the builder, re-run with `JEKYLL_TRACE=1 bundle exec jekyll build` to surface a full backtrace.
+---
 
-> **Heads-up:** This lightweight builder implements the Liquid features and Markdown coverage used across the site. If you introduce new Liquid tags or filters, add support inside `vendor/gems/jekyll/lib/jekyll/liquid_engine.rb` before expecting the build to pass.
+## 🎨 Building CSS from SCSS
+
+The site uses a modular SCSS structure for maintainability. CSS must be compiled before deployment.
+
+### Compile SCSS
+```bash
+# Install npm dependencies (includes sass compiler)
+npm install
+
+# Compile SCSS to CSS (one-time)
+npm run build:css
+
+# Watch mode for development (auto-compile on changes)
+npm run watch:css
+```
+
+This compiles `src/scss/theme.scss` into `assets/css/theme-compiled.css`.
+
+### SCSS Structure
+- `src/scss/_common.scss` - Base styles, reset, typography  
+- `src/scss/components/` - UI components (buttons, cards, header, footer, etc.)
+- `src/scss/layouts/` - Page and section layouts
+- `src/scss/utilities/` - Spacing and text utilities
+
+See `src/scss/README.md` for detailed documentation.
 
 ---
 
