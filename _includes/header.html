@@ -48,13 +48,8 @@
             {% elsif item.match and page.url contains item.match %}
               {% assign is_current = true %}
             {% endif %}
-            <li role="presentation">
-              <a href="{{ item.url | relative_url }}"
-                 class="nav-link{% if is_current %} active{% endif %}"
-                 role="menuitem"{% if is_current %} aria-current="page"{% endif %}>
-                {{ item.title }}
-              </a>
-            </li>
+            {% capture nav_link %}<a href="{{ item.url | relative_url }}" class="nav-link{% if is_current %} active{% endif %}" role="menuitem"{% if is_current %} aria-current="page"{% endif %}>{{ item.title }}</a>{% endcapture %}
+            <li role="presentation">{{ nav_link }}</li>
           {% endfor %}
         </ul>
       </nav>

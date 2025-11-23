@@ -73,36 +73,43 @@ module Jekyll
     end
 
     def convert_tags(text)
+      # Patch: preserve closing tags for <a> and other inline HTML with Liquid logic
       text.gsub(TAG_REGEX) do
         body = Regexp.last_match(1).strip
-        case body
-        when /^include\s+(.+)$/
-          name = Regexp.last_match(1).strip
-          "<%= render_include(#{name.dump}) %>"
-        when /^if\s+(.+)$/
-          "<% if liquid_condition(#{Regexp.last_match(1).dump}) %>"
-        when /^unless\s+(.+)$/
-          "<% unless liquid_condition(#{Regexp.last_match(1).dump}) %>"
-        when /^elsif\s+(.+)$/
-          "<% elsif liquid_condition(#{Regexp.last_match(1).dump}) %>"
-        when /^else$/
-          '<% else %>'
-        when /^endif$/
-          '<% end %>'
-        when /^endunless$/
-          '<% end %>'
-        when /^for\s+(\w+)\s+in\s+(.+)$/
-          variable = Regexp.last_match(1)
-          expression = Regexp.last_match(2)
-          "<% liquid_each(#{variable.dump}, #{expression.dump}) do |#{variable}| %>"
-        when /^endfor$/
-          '<% end %>'
-        when /^assign\s+(\w+)\s*=\s*(.+)$/
-          variable = Regexp.last_match(1)
-          expression = Regexp.last_match(2)
-          "<% liquid_assign(#{variable.dump}, #{expression.dump}) %>"
+        # If the tag is inside an HTML element, preserve the closing tag
+        if body =~ /^if|unless|elsif|else|endif|endunless|for|endfor|assign/
+          case body
+          when /^include\s+(.+)$/
+            name = Regexp.last_match(1).strip
+            "<%= render_include(#{name.dump}) %>"
+          when /^if\s+(.+)$/
+            "<% if liquid_condition(#{Regexp.last_match(1).dump}) %>"
+          when /^unless\s+(.+)$/
+            "<% unless liquid_condition(#{Regexp.last_match(1).dump}) %>"
+          when /^elsif\s+(.+)$/
+            "<% elsif liquid_condition(#{Regexp.last_match(1).dump}) %>"
+          when /^else$/
+            '<% else %>'
+          when /^endif$/
+            '<% end %>'
+          when /^endunless$/
+            '<% end %>'
+          when /^for\s+(\w+)\s+in\s+(.+)$/
+            variable = Regexp.last_match(1)
+            expression = Regexp.last_match(2)
+            "<% liquid_each(#{variable.dump}, #{expression.dump}) do |#{variable}| %>"
+          when /^endfor$/
+            '<% end %>'
+          when /^assign\s+(\w+)\s*=\s*(.+)$/
+            variable = Regexp.last_match(1)
+            expression = Regexp.last_match(2)
+            "<% liquid_assign(#{variable.dump}, #{expression.dump}) %>"
+          else
+            ''
+          end
         else
-          ''
+          # For inline HTML, preserve the tag
+          "{% #{body} %}"
         end
       end
     end
