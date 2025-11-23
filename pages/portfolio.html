@@ -1,7 +1,6 @@
+---
 layout: default
-{% include ts-hero.html %}
-{% include ts-portfolio.html %}
-description: Showers, floors, backsplashes, drywall repairs, prep, trim, and caulk work completed with proper substrate prep, waterproofing, and clean finishes.
+description: "Showers, floors, backsplashes, drywall repairs, prep, trim, and caulk work completed with proper substrate prep, waterproofing, and clean finishes."
 body_class: page-portfolio
 hero_eyebrow: "Portfolio"
 hero_title: "Recent Tile & Finish Work Across South Jersey"
@@ -10,6 +9,9 @@ hero_summary: >
   Clean layouts, code-compliant assemblies, and reliable schedules.
  
 ---
+
+{% include ts-hero.html %}
+{% include ts-portfolio.html %}
 
 {% assign projects = site.data.portfolio.projects | default: [] %}
 {% assign total_projects = projects | size | plus: 0 %}
@@ -77,7 +79,7 @@ hero_summary: >
 
 <script>
 /* Image data – shared with slider and initial markup via _data/portfolio.yml */
-const PROJECTS = {{ projects | jsonify | replace: '</', '<\/' }};
+const PROJECTS = {{ projects | jsonify | replace: '</', '<\/'} };
 </script>
 
 <script>
