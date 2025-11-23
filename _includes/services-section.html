@@ -12,7 +12,7 @@ Usage examples:
 {% assign summary = include.summary | default: 'Waterproof tile assemblies, clean remodeling finishes, and a maintenance mindset keep rentals, second homes, and storefronts on schedule. Design consultations align look, budget, and timeline before work starts.' %}
 {% assign cta_services_label = include.cta_services_label | default: 'View full services' %}
 {% assign cta_portfolio_label = include.cta_portfolio_label | default: 'See recent projects' %}
-<section id="services" class="section" aria-labelledby="services-title" aria-describedby="services-summary" itemscope itemtype="https://schema.org/OfferCatalog">
+<section id="services" class="section services" aria-labelledby="services-title" aria-describedby="services-summary" itemscope itemtype="https://schema.org/OfferCatalog">
   <meta itemprop="name" content="Services Overview">
   <div class="container">
     <header class="section__intro">
@@ -73,9 +73,11 @@ Usage examples:
               </ul>
             {% endif %}
             {% if s.url %}
-              <a class="service-card__link" href="{{ s.url | relative_url }}" itemprop="url" aria-label="Explore {{ s.name }} service">
-                Explore {{ s.name | downcase }} <span aria-hidden="true">&rarr;</span>
-              </a>
+              <p class="service-card__cta">
+                <a class="service-card__link" href="{{ s.url | relative_url }}" itemprop="url" aria-label="Explore {{ s.name }} service">
+                  Explore {{ s.name | downcase }} <span aria-hidden="true">&rarr;</span>
+                </a>
+              </p>
             {% endif %}
           </article>
         {% endfor %}

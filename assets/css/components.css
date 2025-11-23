@@ -101,6 +101,43 @@ button.btn {
 }
 
 /* ============================================
+   SECTION REFINEMENTS (Services / Reviews / Blog)
+   ============================================ */
+.services .service-grid { display:grid; gap:clamp(1.25rem,2.5vw,2rem); grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); margin:2rem 0 2.5rem; }
+.service-card { background:var(--color-surface-elevated); border:1px solid var(--color-border); border-radius:1.25rem; padding:1.25rem 1.25rem 1.75rem; display:flex; flex-direction:column; gap:.85rem; box-shadow:var(--shadow-soft); transition:box-shadow .2s, transform .2s; }
+.service-card:hover { box-shadow:var(--shadow-lift); transform:translateY(-2px); }
+.service-card__header { display:flex; align-items:flex-start; gap:.9rem; }
+.service-card__icon { width:48px; height:48px; display:grid; place-items:center; border-radius:.9rem; background:linear-gradient(135deg,rgba(13,59,44,.08),rgba(201,154,63,.10)); color:var(--color-primary); }
+.service-card__title { margin:0; font-size:1.15rem; letter-spacing:.01em; }
+.service-card__eyebrow { font-size:.6rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700; margin:0 0 .25rem; color:var(--color-accent); }
+.service-card__desc { margin:0; font-size:.9rem; line-height:1.5; color:var(--color-text-muted); }
+.service-card__list { list-style:none; margin:0; padding:0; display:grid; gap:.4rem; font-size:.85rem; }
+.service-card__item { position:relative; padding-left:1rem; }
+.service-card__item::before { content:'•'; position:absolute; left:.15rem; color:var(--color-accent); }
+.service-card__cta { margin-top:auto; }
+.service-card__link { font-weight:600; font-size:.85rem; text-decoration:none; color:var(--color-primary-strong); }
+.service-card__link:hover { text-decoration:underline; }
+
+.reviews .cards--3col, .blog .cards--3col { margin-top:1.5rem; }
+.card--review, .card--post { background:var(--color-surface-elevated); border:1px solid var(--color-border); border-radius:1.15rem; padding:1.1rem 1.25rem 1.25rem; display:flex; flex-direction:column; gap:.65rem; box-shadow:var(--shadow-soft); transition:box-shadow .2s, transform .2s; }
+.card--review:hover, .card--post:hover { box-shadow:var(--shadow-lift); transform:translateY(-2px); }
+.card-rating { font-size:1rem; color:var(--color-accent); letter-spacing:.15em; }
+.star { display:inline-block; }
+.star--filled { color:var(--color-accent); }
+.card-quote { margin:0; font-size:.9rem; line-height:1.5; }
+.card-author { margin:0; font-size:.75rem; letter-spacing:.05em; color:var(--color-text-muted); }
+.card-title { margin:0 0 .25rem; font-size:1.05rem; line-height:1.3; }
+.card-meta { margin:0; font-size:.65rem; text-transform:uppercase; letter-spacing:.12em; color:var(--color-accent); }
+.card-desc { margin:0; font-size:.85rem; line-height:1.5; color:var(--color-text-muted); }
+.card-link { font-size:.75rem; font-weight:600; letter-spacing:.04em; color:var(--color-primary-strong); text-decoration:none; }
+.card-link:hover { text-decoration:underline; }
+
+@media (prefers-color-scheme: dark) {
+  .service-card, .card--review, .card--post { background:var(--color-surface); }
+  .service-card__desc, .card-desc, .card-quote { color:var(--color-text); }
+}
+
+/* ============================================
    HERO ENHANCEMENTS
    ============================================ */
 

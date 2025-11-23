@@ -7,7 +7,7 @@ Usage: {% include reviews-highlights.html limit=3 %}
 {% assign all = site.data.reviews | default: [] %}
 {% assign limit = include.limit | default: 3 %}
 {% assign items = all | slice: 0, limit %}
-<section class="section" aria-labelledby="reviews-title">
+<section class="section reviews" aria-labelledby="reviews-title">
   <div class="container">
     <div class="section-header">
       <p class="eyebrow">{{ include.eyebrow | default: 'Client feedback' }}</p>
@@ -16,14 +16,15 @@ Usage: {% include reviews-highlights.html limit=3 %}
     </div>
 
     {% if items and items.size > 0 %}
-      <ul class="cards cards--3col">
+      <ul class="cards cards--3col" role="list" aria-label="Highlighted client reviews">
         {% for r in items %}
-          <li class="card card--review">
-            <div class="card-rating" aria-label="{{ r.rating | default: 5 }} out of 5 stars">
+          <li class="card card--review" itemscope itemtype="https://schema.org/Review">
+            <div class="card-rating" aria-label="{{ r.rating | default: 5 }} out of 5 stars" role="img">
               {% assign stars = r.rating | default: 5 %}
               {% for i in (1..5) %}
-                {% if i <= stars %}★{% else %}☆{% endif %}
+                <span class="star{% if i <= stars %} star--filled{% endif %}" aria-hidden="true">{% if i <= stars %}★{% else %}☆{% endif %}</span>
               {% endfor %}
+              <meta itemprop="reviewRating" content="{{ stars }}" />
             </div>
             {% if r.text %}<p class="card-quote">{{ r.text }}</p>{% endif %}
             <p class="card-author">
