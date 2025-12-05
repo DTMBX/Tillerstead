@@ -56,7 +56,7 @@
               body: encoded,
             });
 
-            if (!response.ok && response.type !== 'opaque') {
+            if (!response.ok) {
               throw new Error(`Status ${response.status}`);
             }
 
