@@ -160,7 +160,10 @@
     document.documentElement.setAttribute("data-theme", normalized);
     themeBtn?.setAttribute("aria-pressed", String(normalized === "dark"));
     const label = normalized === "dark" ? "Dark" : "Light";
-    themeBtn?.querySelector(".theme-toggle__label")?.textContent = label;
+    const labelEl = themeBtn ? themeBtn.querySelector(".theme-toggle__label") : null;
+    if (labelEl) {
+      labelEl.textContent = label;
+    }
     swapLogos(normalized);
   };
 
