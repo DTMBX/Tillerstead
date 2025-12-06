@@ -8,59 +8,63 @@
   <meta itemprop="description" content="Property maintenance and remodeling with tile specialty for South Jersey homeowners, landlords, and small commercial properties.">
   <meta itemprop="areaServed" content="Atlantic County NJ, Ocean County NJ, Cape May County NJ">
 
-  <div class="footer-flex">
-    <div class="footer-brand-area">
-      <div class="footer-brand-card">
-        {% include logo-main.html class="ts-logo-link--footer" img_class="ts-logo ts-logo--footer footer-logo-img" %}
-        <p class="footer-tagline">Property Maintenance · Remodeling · Tile</p>
+  <div class="footer-shell">
+    <div class="footer-panel ts-panel ts-panel--navy">
+      <div class="footer-flex">
+        <div class="footer-brand-area">
+          <div class="footer-brand-card">
+            {% include logo-main.html class="ts-logo-link--footer" img_class="ts-logo ts-logo--footer footer-logo-img" variant="dark" %}
+            <p class="footer-tagline">Property Maintenance · Remodeling · Tile</p>
+          </div>
+          <p class="footer-desc">
+            Monthly maintenance plans, reliable remodeling, and waterproof tile assemblies across Atlantic, Ocean, and Cape May counties.
+          </p>
+          <p class="footer-licensing"><strong>NJ Licensed HIC #{{ site.company.hic }}</strong></p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer">
+          <ul class="footer-list">
+            <li><a href="{{ '/services/' | relative_url }}#tile" class="footer-link">Tile &amp; Stone</a></li>
+            <li><a href="{{ '/services/' | relative_url }}#remodeling" class="footer-link">Remodeling</a></li>
+            <li><a href="{{ '/services/' | relative_url }}#maintenance" class="footer-link">Maintenance Plans</a></li>
+            <li><a href="{{ '/portfolio/' | relative_url }}" class="footer-link">Recent Projects</a></li>
+            <li><a href="{{ '/about/' | relative_url }}" class="footer-link">About</a></li>
+            <li><a href="{{ '/reviews/' | relative_url }}" class="footer-link">Reviews</a></li>
+            <li><a href="{{ '/contact/' | relative_url }}" class="footer-link">Contact</a></li>
+            <li><a href="{{ '/privacy/' | relative_url }}" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contact-area">
+          <h2 class="footer-title">Licensed NJ Contractor</h2>
+          <p>
+            <strong>NJ Home Improvement Contractor</strong><br>
+            <small>License #{{ site.company.hic }}</small>
+          </p>
+          <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="streetAddress">{{ site.company.address_line }}</span><br>
+            <span itemprop="addressLocality">{{ site.company.address_locality }}</span>,
+            <span itemprop="addressRegion">{{ site.company.address_region }}</span>
+            <span itemprop="postalCode">{{ site.company.address_postal_code }}</span>
+          </address>
+          <p>
+            <a href="tel:{{ site.company.phone_link }}" itemprop="telephone" class="footer-link">{{ site.company.phone_display }}</a>
+            <br>
+            <a href="mailto:{{ site.company.email }}" itemprop="email" class="footer-link">{{ site.company.email }}</a>
+          </p>
+          <p>
+            <small><strong>Quick response times.</strong> Written scopes. Licensed &amp; insured.</small>
+          </p>
+        </div>
       </div>
-      <p class="footer-desc">
-        Monthly maintenance plans, reliable remodeling, and waterproof tile assemblies across Atlantic, Ocean, and Cape May counties.
-      </p>
-      <p class="footer-licensing"><strong>NJ Licensed HIC #{{ site.company.hic }}</strong></p>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; {{ 'now' | date: '%Y' }} Tillerstead LLC. All rights reserved.
+          <a href="{{ '/privacy/' | relative_url }}" class="footer-link">Privacy</a> |
+          <a href="{{ '/sitemap.xml' | relative_url }}" class="footer-link">Sitemap</a>
+        </p>
+      </div>
     </div>
-
-    <nav class="footer-nav" aria-label="Footer">
-      <ul class="footer-list">
-        <li><a href="{{ '/services/' | relative_url }}#tile" class="footer-link">Tile &amp; Stone</a></li>
-        <li><a href="{{ '/services/' | relative_url }}#remodeling" class="footer-link">Remodeling</a></li>
-        <li><a href="{{ '/services/' | relative_url }}#maintenance" class="footer-link">Maintenance Plans</a></li>
-        <li><a href="{{ '/portfolio/' | relative_url }}" class="footer-link">Recent Projects</a></li>
-        <li><a href="{{ '/about/' | relative_url }}" class="footer-link">About</a></li>
-        <li><a href="{{ '/reviews/' | relative_url }}" class="footer-link">Reviews</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}" class="footer-link">Contact</a></li>
-        <li><a href="{{ '/privacy/' | relative_url }}" class="footer-link">Privacy Policy</a></li>
-      </ul>
-    </nav>
-
-    <div class="footer-contact-area">
-      <h2 class="footer-title">Licensed NJ Contractor</h2>
-      <p>
-        <strong>NJ Home Improvement Contractor</strong><br>
-        <small>License #{{ site.company.hic }}</small>
-      </p>
-      <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-        <span itemprop="streetAddress">{{ site.company.address_line }}</span><br>
-        <span itemprop="addressLocality">{{ site.company.address_locality }}</span>,
-        <span itemprop="addressRegion">{{ site.company.address_region }}</span>
-        <span itemprop="postalCode">{{ site.company.address_postal_code }}</span>
-      </address>
-      <p>
-        <a href="tel:{{ site.company.phone_link }}" itemprop="telephone" class="footer-link">{{ site.company.phone_display }}</a>
-        <br>
-        <a href="mailto:{{ site.company.email }}" itemprop="email" class="footer-link">{{ site.company.email }}</a>
-      </p>
-      <p>
-        <small><strong>Quick response times.</strong> Written scopes. Licensed &amp; insured.</small>
-      </p>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>
-      &copy; {{ 'now' | date: '%Y' }} Tillerstead LLC. All rights reserved.
-      <a href="{{ '/privacy/' | relative_url }}" class="footer-link">Privacy</a> |
-      <a href="{{ '/sitemap.xml' | relative_url }}" class="footer-link">Sitemap</a>
-    </p>
   </div>
 </footer>

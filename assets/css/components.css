@@ -320,6 +320,13 @@ select {
   box-sizing: border-box;
 }
 
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.9;
+}
+
 input:focus,
 textarea:focus,
 select:focus {
