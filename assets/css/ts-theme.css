@@ -255,23 +255,6 @@ ul { padding-left: 1.15rem; margin: 0 0 var(--space-3); color: var(--ts-color-mu
 .call-btn { color: var(--ts-color-heading); font-weight: 700; }
 .call-btn-display { padding: 0.55rem 1rem; border: 1px solid var(--ts-color-border); border-radius: var(--ts-radius-pill); }
 
-.theme-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.65rem 0.9rem;
-  border-radius: var(--ts-radius-pill);
-  border: 1px solid var(--ts-color-border);
-  background: var(--ts-color-surface-muted);
-  color: var(--ts-color-heading);
-  cursor: pointer;
-  transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
-}
-
-.theme-toggle:hover,
-.theme-toggle:focus-visible { border-color: var(--ts-color-border-strong); box-shadow: var(--focus-ring); }
-.theme-toggle svg { width: 18px; height: 18px; }
-
 .nav-toggle {
   display: inline-flex;
   align-items: center;
@@ -332,13 +315,10 @@ body.nav-open { overflow: hidden; }
 
 .nav-close:hover { border-color: var(--ts-color-border-strong); }
 
-html[data-theme="dark"] .site-header {
-  background: linear-gradient(180deg, rgba(11, 20, 33, 0.98) 0%, rgba(11, 20, 33, 0.92) 100%);
-}
-
 @media (max-width: 919px) {
   .site-header-inner { grid-template-columns: 1fr auto; grid-template-areas: "brand actions"; }
-  .site-nav-shell { position: fixed; inset: 0; z-index: 1000; display: block; }
+  .site-nav-shell { position: fixed; inset: 0; z-index: 1000; display: block; pointer-events: none; }
+  .site-nav-shell.is-open { pointer-events: auto; }
   .site-nav-backdrop { display: block; position: fixed; inset: 0; background: rgba(5, 10, 20, 0.75); opacity: 0; pointer-events: none; transition: opacity 160ms ease; }
   .site-nav-shell.is-open .site-nav-backdrop { opacity: 1; pointer-events: auto; }
   .site-nav {

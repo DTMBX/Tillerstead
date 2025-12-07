@@ -1,6 +1,6 @@
 /* main.js — Tillerstead
    - Responsive, accessible nav (ESC, outside click, resize)
-   - Theme toggle with system match + localStorage
+   - High contrast mode toggle with localStorage
    - Smooth anchor scrolling (respects reduced motion)
    - Static-host form handling (GitHub Pages) + Netlify passthrough
 */
@@ -125,69 +125,6 @@
         closeNav();
       }
     }, 120);
-  });
-
-  /* =========================
-     THEME: toggle with memory
-     - uses html[data-theme]
-     - defaults to light unless user saved preference
-  ========================= */
-  const THEME_KEY = "ts:theme";
-  const themeBtn = document.querySelector("[data-theme-toggle]");
-  const prefersDark =
-    window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-  const getStoredTheme = () => {
-    try {
-      const value = localStorage.getItem(THEME_KEY);
-      return value === "light" || value === "dark" ? value : null;
-    } catch (_) {
-      return null;
-    }
-  };
-
-  const swapLogos = (theme) => {
-    $$("img[data-logo-light][data-logo-dark]").forEach((img) => {
-      const next = theme === "dark" ? img.dataset.logoDark : img.dataset.logoLight;
-      if (next && img.getAttribute("src") !== next) {
-        img.setAttribute("src", next);
-      }
-    });
-  };
-
-  const applyTheme = (theme) => {
-    const normalized = theme === "dark" ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", normalized);
-    themeBtn?.setAttribute("aria-pressed", String(normalized === "dark"));
-    const label = normalized === "dark" ? "Dark" : "Light";
-    const labelEl = themeBtn ? themeBtn.querySelector(".theme-toggle__label") : null;
-    if (labelEl) {
-      labelEl.textContent = label;
-    }
-    swapLogos(normalized);
-  };
-
-  const storedTheme = getStoredTheme();
-  const initialTheme = storedTheme || (prefersDark ? "dark" : "light");
-  applyTheme(initialTheme);
-
-  themeBtn?.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme") || "light";
-    const next = current === "dark" ? "light" : "dark";
-    applyTheme(next);
-    try {
-      localStorage.setItem(THEME_KEY, next);
-    } catch (_) {
-      /* ignore */
-    }
-    // Reapply contrast system after theme change
-    if (typeof window.applyContrast === "function") {
-      window.applyContrast();
-    }
-    // Run brand auto-contrast corrections (if loaded)
-    if (typeof window.autoContrast === "function") {
-      window.autoContrast();
-    }
   });
 
   /* =========================
