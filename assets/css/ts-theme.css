@@ -661,3 +661,86 @@ body.nav-open { overflow: hidden; }
   .card,
   .ts-card { padding: var(--space-3); }
 }
+.ts-hero--home {
+  padding: 4rem 1.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    padding: 5rem 1.5rem 4rem;
+  }
+}
+
+.ts-hero__inner {
+  max-width: 42rem;
+  width: 100%;
+}
+
+.ts-hero__brand {
+  margin-bottom: 1.5rem;
+
+  .ts-logo--hero {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+}
+
+.ts-hero__tagline {
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 600;
+  /* darker for contrast */
+  color: #0f172a;
+}
+
+.ts-hero__badge {
+  margin-bottom: 1.25rem;
+}
+
+.ts-hero__badge-label {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: #d4af37; /* brass */
+  color: #0f172a;       /* dark text for contrast */
+}
+
+.ts-hero__title {
+  font-size: 1.9rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: #020617; /* near-black for strong contrast */
+}
+
+.ts-hero__lede {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+.ts-hero__bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+
+  li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #111827;
+  }
+}
+
+.ts-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
