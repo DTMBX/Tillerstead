@@ -356,7 +356,9 @@ module Jekyll
         Utils.blank?(value) ? fallback : value
       when 'relative_url'
         path = value.to_s
-        return path if path.start_with?('http://', 'https://')
+        # Skip applying relative_url for absolute URLs and special protocols
+        return path if path.start_with?('http://', 'https://', 'tel:', 'mailto:', 'sms:', 'ftp://', 'ftps://')
+        return path if path.start_with?('#')
 
         baseurl = lookup_variable('site.baseurl') || ''
         joined = [baseurl.to_s.chomp('/'), path.start_with?('/') ? path : "/#{path}"].join
