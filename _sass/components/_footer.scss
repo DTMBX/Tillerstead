@@ -55,19 +55,27 @@
 
 .footer-brand-card {
   display: flex;
-  align-items: center;
-  gap: var(--ts-spacing-md);
-  padding: 1.25rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--ts-spacing-sm);
+  padding: clamp(1rem, 3vw, 1.5rem);
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--ts-radius-lg);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transition: all var(--transition-base);
   
+  @media (min-width: 640px) {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--ts-spacing-md);
+  }
+  
   &:hover {
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.12);
     transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
   }
 }
 
@@ -75,10 +83,17 @@
   flex-shrink: 0;
 }
 
+.footer-brand-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
 .footer-tagline {
   margin: 0;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: clamp(0.8125rem, 1.4vw, 0.9375rem);
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.95);
@@ -86,6 +101,15 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  line-height: 1.3;
+}
+
+.footer-license-badge {
+  margin: 0;
+  font-size: clamp(0.6875rem, 1.1vw, 0.75rem);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.4;
 }
 
 .footer-desc {
