@@ -16,7 +16,7 @@ bundle install
 npm install
 
 # Build the site
-npm run build:site   # runs Sass build + bundle exec jekyll build
+npm run build        # runs Sass build + bundle exec jekyll build
 ```
 
 If `scripts/activate-ruby.ps1` cannot find RubyInstaller it will stop with a helpful message that includes the download URL. Once activated, the terminal echoes the Ruby version so you know the environment is ready.
@@ -26,7 +26,7 @@ A fast, client-safe static site for Tillerstead LLC, built with Jekyll and a han
 
 ## At a Glance
 - **Platform:** Jekyll static site with custom layouts and includes—no third-party themes.
-- **Styling:** SCSS sources in [`src/scss`](src/scss) compiled to [`assets/css`](assets/css).
+- **Styling:** SCSS sources in [`_sass`](./_sass) compiled to [`assets/css/main.css`](./assets/css).
 - **Content:** Markdown posts and pages in [`_posts`](./_posts) and [`pages`](./pages) with data-driven sections in [`_data`](./_data).
 - **Templates:** Layouts and shared fragments live in [`_layouts`](./_layouts) and [`_includes`](./_includes).
 - **Performance & SEO:** Minified CSS, sitemap, robots directives, and tightly written meta data in [`_config.yml`](./_config.yml) and [`manifest.webmanifest`](./manifest.webmanifest).
@@ -34,8 +34,16 @@ A fast, client-safe static site for Tillerstead LLC, built with Jekyll and a han
 
 ## Prerequisites
 - **Ruby & Bundler** for Jekyll (`bundle install`).
-- **Node.js & npm** for tooling (`npm install`).
-- **Sass** and **Sharp** are installed via `npm install`; no global installs required.
+- **Node.js & npm** for tooling (`npm ci` preferred for reproducibility).
+- **Sass** and **Sharp** are installed via `npm ci`; no global installs required.
+
+## Local / Codespaces dev
+- **Codespaces:** Opening the repo in GitHub Codespaces auto-builds a dev container with Ruby 3.2 and Node 20. Dependencies install via `bundle install` + `npm ci` after the container is created.
+- **Local machines:** Install Ruby 3.2 and Node 20, then run `bundle install && npm ci` in the project root.
+- **Run the dev server:** `npm run dev` serves Jekyll on `http://127.0.0.1:4000` with LiveReload (`4000`/`35729` forwarded in Codespaces).
+- **Build once:** `npm run build` compiles CSS and runs `bundle exec jekyll build`.
+- **Test locally:** `npm run test` rebuilds the site and runs an internal link/asset check to verify the generated `_site` output. External link checks are skipped to keep runs offline-friendly.
+- **Note:** Playwright/browser-based screenshot tooling is not installed in Codespaces for this repo—skip any screenshot capture steps.
 
 ## Getting Started
 1. Install dependencies:
@@ -48,7 +56,7 @@ A fast, client-safe static site for Tillerstead LLC, built with Jekyll and a han
 4. Visit `http://127.0.0.1:4000` to preview.
 
 ## Development Workflow
-- **Style changes:** Edit `src/scss/theme.scss` (and partials) then run `npm run watch:css` during development or `npm run build:css` for a one-off build.
+- **Style changes:** Edit `_sass/base/_tokens.scss` for design tokens or `_sass/components/_theme.scss` for component styles, then run `npm run watch:css` during development or `npm run build:css` for a one-off build.
 - **Content updates:** Add or edit Markdown files in `_posts/` for dated content or `pages/` for evergreen pages. Use `_data/` YAML/JSON for repeatable content blocks.
 - **Templates:** Modify `_layouts/` for page-level wrappers and `_includes/` for reusable fragments (headers, footers, CTAs).
 - **Images:** Use `npm run images:webp` to generate WebP variants in-place under `assets/`.
@@ -66,14 +74,18 @@ A fast, client-safe static site for Tillerstead LLC, built with Jekyll and a han
 ## Production Build
 - Generate a full site (including CSS compilation) with:
   ```sh
-  npm run build:site
+  npm run build
   ```
 - The built site appears in `_site/` and is ready to deploy to any static host (Netlify config is available in `netlify.toml`).
+
+## Automation
+- **CI:** GitHub Actions (`.github/workflows/ci.yml`) runs `npm run lint` plus `npm run test` on every push/PR and uploads `_site` as an artifact.
+- **Pages + previews:** `.github/workflows/pages.yml` builds the site for production pushes to `main` and publishes preview deployments for pull requests. Preview URLs show up on the PR checks tab; forked PRs may skip previews if repository permissions restrict deployments.
 
 ## Project Structure
 ```
 assets/           # Compiled and static assets (CSS, images, fonts)
-src/scss/         # Source SCSS for the design system
+_sass/            # Source SCSS for the design system (base, components, layout, utilities)
 _includes/        # Reusable HTML partials (navigation, footer, CTAs)
 _layouts/         # Page and post layout templates
 _posts/           # Blog or update entries (Markdown)

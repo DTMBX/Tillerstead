@@ -1,17 +1,39 @@
 {%- comment -%}
 Breadcrumb Navigation Component
-- Modern minimal styling with emerald accent
-- Schema.org BreadcrumbList for SEO
-- Hidden on homepage or when disabled
-- Accessible with proper ARIA labels and semantic markup
+
+• Uses Schema.org BreadcrumbList (in markup wrapper).
+• Hidden on:
+  – Home page
+  – Root-level single pages (e.g. /about/, /contact.html)
+  – When `breadcrumb: false` is set in front matter
 {%- endcomment -%}
 
-{%- assign is_home_page = page.url == "/" or page.url == "/index.html" or page.is_home == true or page.layout == "home" -%}
-{%- if is_home_page or page.breadcrumb == false -%}
-  {%- comment -%}Breadcrumbs hidden on home or when disabled{%- endcomment -%}
-{%- else -%}
-  {%- assign path = page.url | default: '' | replace: 'index.html', '' -%}
-  {%- assign segments = path | split: '/' -%}
+{%- assign url = page.url | default: "/" -%}
+{%- assign is_home_page = url == "/" or url == "/index.html" or page.is_home == true or page.layout == "home" -%}
+
+{%- comment -%}
+Normalize path and count non-empty segments.
+Examples:
+  "/"            → 0
+  "/index.html"  → 0
+  "/about/"      → 1 (root-level → no breadcrumbs)
+  "/contact.html"→ 1 (root-level → no breadcrumbs)
+  "/pages/about/ → 2 (nested → show breadcrumbs)
+{%- endcomment -%}
+
+{%- assign path = url | replace: 'index.html', '' -%}
+{%- assign segments = path | split: '/' -%}
+{%- assign segment_count = 0 -%}
+{%- for segment in segments -%}
+  {%- unless segment == '' -%}
+    {%- assign segment_count = segment_count | plus: 1 -%}
+  {%- endunless -%}
+{%- endfor -%}
+
+{%- assign is_root_leaf = segment_count <= 1 -%}
+{%- assign show_breadcrumbs = page.breadcrumb != false and is_home_page == false and is_root_leaf == false -%}
+
+{%- if show_breadcrumbs -%}
   {%- assign clean_segments = '' | split: '' -%}
   {%- for segment in segments -%}
     {%- unless segment == '' -%}
@@ -19,41 +41,19 @@ Breadcrumb Navigation Component
     {%- endunless -%}
   {%- endfor -%}
 
-  <style data-inline-breadcrumbs>
-    .breadcrumbs{display:flex;align-items:center;font-size:.88rem;margin:0 0 1rem;color:var(--color-text-muted,#4b5563);} 
-    .breadcrumbs-list{display:flex;flex-wrap:wrap;gap:.35rem;align-items:center;list-style:none;margin:0;padding:0;}
-    .breadcrumbs-list li{display:flex;align-items:center;gap:.35rem;}
-    .breadcrumbs-list li+li::before{content:"/";opacity:.45;}
-    .breadcrumb-link{color:inherit;text-decoration:none;padding:.15rem .45rem;border-radius:.35rem;}
-    .breadcrumb-link:hover,.breadcrumb-link:focus-visible{color:var(--color-primary,#0f766e);background:rgba(13,75,62,.08);text-decoration:none;}
-    .breadcrumb-link[aria-current="page"]{color:var(--color-primary,#0f766e);font-weight:600;}
-    @media(max-width:640px){.breadcrumbs{font-size:.8rem;}}
-  </style>
-
-  <nav class="breadcrumbs" aria-label="Breadcrumb" role="navigation">
-    <ol class="breadcrumbs-list"
-      itemscope
-      itemtype="https://schema.org/BreadcrumbList">
-
+  <nav class="ts-breadcrumbs" aria-label="Breadcrumb">
+    <ol class="ts-breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
       {%- assign position = 1 -%}
-
-      <!-- Home breadcrumb -->
-      <li class="breadcrumb-item"
-          itemprop="itemListElement"
-          itemscope
+      <li class="ts-breadcrumbs__item" itemprop="itemListElement" itemscope
           itemtype="https://schema.org/ListItem">
-        <a itemprop="item"
-           href="{{ '/' | relative_url }}"
-           class="breadcrumb-link">
+        <a class="ts-breadcrumbs__link" href="{{ '/' | relative_url }}" itemprop="item">
           <span itemprop="name">Home</span>
         </a>
         <meta itemprop="position" content="{{ position }}">
       </li>
-
       {%- assign position = position | plus: 1 -%}
-      {%- assign current_path = "" -%}
 
-      <!-- Path segment breadcrumbs -->
+      {%- assign current_path = "" -%}
       {%- for segment in clean_segments -%}
         {%- assign current_path = current_path | append: "/" | append: segment -%}
         {%- assign is_last = forloop.last -%}
@@ -64,31 +64,20 @@ Breadcrumb Navigation Component
           {%- assign label = segment | replace: '-', ' ' | capitalize -%}
         {%- endif -%}
 
-        <li class="breadcrumb-item"
-            itemprop="itemListElement"
-            itemscope
+        {%- assign crumb_href = current_path | append: "/" | relative_url -%}
+        <li class="ts-breadcrumbs__item" itemprop="itemListElement" itemscope
             itemtype="https://schema.org/ListItem">
-          {% assign crumb_href = current_path | append: '/' | relative_url %}
-          {% if is_last %}
-            <a itemprop="item"
-               href="{{ crumb_href }}"
-               class="breadcrumb-link"
-               aria-current="page">
+          {%- if is_last -%}
+            <span class="ts-breadcrumbs__current" aria-current="page" itemprop="name">{{ label }}</span>
+          {%- else -%}
+            <a class="ts-breadcrumbs__link" href="{{ crumb_href }}" itemprop="item">
               <span itemprop="name">{{ label }}</span>
             </a>
-          {% else %}
-            <a itemprop="item"
-               href="{{ crumb_href }}"
-               class="breadcrumb-link">
-              <span itemprop="name">{{ label }}</span>
-            </a>
-          {% endif %}
+          {%- endif -%}
           <meta itemprop="position" content="{{ position }}">
         </li>
-
         {%- assign position = position | plus: 1 -%}
-      {%- endfor -%}
-
+  {%- endfor -%}
     </ol>
   </nav>
 {%- endif -%}

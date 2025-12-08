@@ -17,11 +17,11 @@
 
 .site-main > .hero,
 .site-main > .ts-hero {
-  padding: clamp(2.5rem, 6vw, 4.5rem) 0 clamp(2.5rem, 6vw, 4.5rem);
+  padding: var(--section-padding-y) 0;
 }
 
 .site-main > .page-content.section {
-  padding: clamp(2.25rem, 5vw, 3.5rem) 0 clamp(2.75rem, 6vw, 4.5rem);
+  padding: var(--section-padding-y) 0;
 }
 
 .site-main > .page-content .container {

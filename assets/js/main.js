@@ -1,6 +1,6 @@
 /* main.js — Tillerstead
    - Responsive, accessible nav (ESC, outside click, resize)
-   - Theme toggle with system match + localStorage
+   - High contrast mode toggle with localStorage
    - Smooth anchor scrolling (respects reduced motion)
    - Static-host form handling (GitHub Pages) + Netlify passthrough
 */
@@ -13,22 +13,27 @@
   ========================= */
   const navToggle = $(".nav-toggle");
   const header = $(".site-header");
-  const navShell = header?.querySelector("[data-nav-container]");
-  const nav = header?.querySelector("#site-nav");
-  const navClose = header?.querySelector("[data-nav-close]");
-  const navOverlay = header?.querySelector("[data-nav-overlay]");
+  const navShell = header ? header.querySelector("[data-nav-container]") : null;
+  const nav = header ? header.querySelector("#site-nav") : null;
+  const navClose = header ? header.querySelector("[data-nav-close]") : null;
+  const navOverlay = header ? header.querySelector("[data-nav-overlay]") : null;
   let lastFocus = null;
   const BP_DESKTOP = 920; // matches SCSS breakpoint for drawer
 
   const isNavOpen = () => !!navShell && navShell.classList.contains("is-open");
 
   const syncAria = (open) => {
-    nav?.setAttribute("aria-expanded", String(open));
-    navToggle?.setAttribute("aria-expanded", String(open));
-    navToggle?.setAttribute(
-      "aria-label",
-      open ? "Close navigation menu" : "Open navigation menu",
-    );
+    if (nav) nav.setAttribute("aria-expanded", String(open));
+    if (navToggle) navToggle.setAttribute("aria-expanded", String(open));
+    if (navToggle) {
+      navToggle.setAttribute(
+        "aria-label",
+        open ? "Close navigation menu" : "Open navigation menu",
+      );
+    }
+    if (navShell) navShell.dataset.open = open ? "true" : "false";
+    if (nav) nav.dataset.open = open ? "true" : "false";
+    if (navOverlay) navOverlay.dataset.open = open ? "true" : "false";
   };
 
   const onKeydownEsc = (e) => {
@@ -64,7 +69,7 @@
 
   const outsideClick = (e) => {
     if (!isNavOpen()) return;
-    if (header?.contains(e.target)) return;
+    if (header && header.contains(e.target)) return;
     closeNav();
   };
 
@@ -77,7 +82,7 @@
     document.body.classList.add("nav-open");
 
     const firstLink = $("a, button", nav);
-    firstLink?.focus();
+    if (firstLink) firstLink.focus();
 
     document.addEventListener("keydown", trapFocus);
     document.addEventListener("keydown", onKeydownEsc);
@@ -95,15 +100,20 @@
     document.removeEventListener("keydown", onKeydownEsc);
     document.removeEventListener("click", outsideClick, true);
 
-    (lastFocus || navToggle || document.body).focus?.();
+    const focusTarget = lastFocus || navToggle || document.body;
+    if (focusTarget && typeof focusTarget.focus === "function") {
+      focusTarget.focus();
+    }
   };
 
-  navToggle?.addEventListener("click", () => {
-    isNavOpen() ? closeNav() : openNav();
-  });
+  if (navToggle) {
+    navToggle.addEventListener("click", () => {
+      isNavOpen() ? closeNav() : openNav();
+    });
+  }
 
-  navClose?.addEventListener("click", closeNav);
-  navOverlay?.addEventListener("click", closeNav);
+  if (navClose) navClose.addEventListener("click", closeNav);
+  if (navOverlay) navOverlay.addEventListener("click", closeNav);
 
   // Close nav on link click (mobile only)
   if (nav) {
@@ -128,61 +138,6 @@
   });
 
   /* =========================
-     THEME: manual toggle with memory
-     - toggles html.classList 'light'
-     - defaults to dark theme (brand design)
-  ========================= */
-  const THEME_KEY = "ts:theme";
-  const themeBtn = $(".theme-toggle");
-  const DEFAULT_THEME = "dark";
-
-  const getStoredTheme = () => {
-    try {
-      const value = localStorage.getItem(THEME_KEY);
-      return value === "light" || value === "dark" ? value : null;
-    } catch (_) {
-      return null;
-    }
-  };
-
-  const applyTheme = (theme) => {
-    const isLight = theme === "light";
-    document.documentElement.classList.toggle("light", isLight);
-    themeBtn?.setAttribute("aria-pressed", String(isLight));
-  };
-
-  let saved = null;
-  try {
-    saved = localStorage.getItem(THEME_KEY);
-  } catch (_) {
-    saved = null;
-  }
-
-  // Default to dark theme (brand design) unless user explicitly saved a preference
-  applyTheme(saved || "dark");
-  const savedTheme = getStoredTheme();
-  applyTheme(savedTheme || DEFAULT_THEME);
-
-  themeBtn?.addEventListener("click", () => {
-    const isLight = document.documentElement.classList.toggle("light");
-    const theme = isLight ? "light" : "dark";
-    themeBtn.setAttribute("aria-pressed", String(isLight));
-    try {
-      localStorage.setItem(THEME_KEY, theme);
-    } catch (_) {
-      /* ignore */
-    }
-    // Reapply contrast system after theme change
-    if (typeof window.applyContrast === "function") {
-      window.applyContrast();
-    }
-    // Run brand auto-contrast corrections (if loaded)
-    if (typeof window.autoContrast === "function") {
-      window.autoContrast();
-    }
-  });
-
-  /* =========================
      HIGH CONTRAST MODE TOGGLE
      - Adds html.high-contrast class
      - Persists preference in localStorage
@@ -193,8 +148,10 @@
 
   const applyHighContrast = (enabled) => {
     document.documentElement.classList.toggle('high-contrast', !!enabled);
-    contrastToggle?.setAttribute('aria-pressed', String(!!enabled));
-    contrastToggle?.setAttribute('aria-label', enabled ? 'Disable high contrast mode' : 'Enable high contrast mode');
+    if (contrastToggle) {
+      contrastToggle.setAttribute('aria-pressed', String(!!enabled));
+      contrastToggle.setAttribute('aria-label', enabled ? 'Disable high contrast mode' : 'Enable high contrast mode');
+    }
     if (typeof window.applyContrast === 'function') window.applyContrast(enabled ? 7 : 7); // keep AAA target
     if (typeof window.autoContrast === 'function') window.autoContrast();
   };
@@ -204,11 +161,13 @@
     applyHighContrast(storedHC);
   } catch (_) { /* ignore */ }
 
-  contrastToggle?.addEventListener('click', () => {
-    const enabled = !document.documentElement.classList.contains('high-contrast');
-    applyHighContrast(enabled);
-    try { localStorage.setItem(HC_KEY, enabled ? '1' : '0'); } catch (_) { /* ignore */ }
-  });
+  if (contrastToggle) {
+    contrastToggle.addEventListener('click', () => {
+      const enabled = !document.documentElement.classList.contains('high-contrast');
+      applyHighContrast(enabled);
+      try { localStorage.setItem(HC_KEY, enabled ? '1' : '0'); } catch (_) { /* ignore */ }
+    });
+  }
 
   /* =========================
      KEYBOARD SHORTCUTS
@@ -229,7 +188,7 @@
         localStorage.removeItem('ts:audit');
         // Remove existing panel if present without reload
         const panel = document.querySelector('.ts-dev-overlay');
-        panel?.remove();
+        if (panel) panel.remove();
       } else {
         localStorage.setItem('ts:audit', '1');
         // Reload to allow dev-overlay.js to initialize
@@ -265,80 +224,4 @@
     setTimeout(() => target.removeAttribute("tabindex"), 1000);
   });
 
-  /* =========================
-     CONTACT FORM (static hosts)
-     - Netlify: normal POST
-     - GitHub Pages: fake success
-  ========================= */
-  const contactForms = $$('[data-contact-form], form[name="contact"]');
-  const encodeForm = (form) => {
-    const data = new FormData(form);
-    if (!data.get("form-name") && form.getAttribute("name")) {
-      data.append("form-name", form.getAttribute("name"));
-    }
-    return new URLSearchParams(data).toString();
-  };
-
-  contactForms.forEach((contactForm) => {
-    contactForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const submitBtn = $(
-        'button[type="submit"], input[type="submit"]',
-        contactForm,
-      );
-      submitBtn?.setAttribute("disabled", "true");
-
-      const statusEl =
-        contactForm.querySelector("[data-form-status]") ||
-        document.getElementById("form-status");
-      const showStatus = (message, isError = false) => {
-        if (!statusEl) return;
-        statusEl.textContent = message;
-        statusEl.classList.remove("sr-only");
-        statusEl.classList.toggle("has-error", isError);
-      };
-
-      const invalid = $$("[required]", contactForm).find(
-        (el) => !el.value?.trim(),
-      );
-      if (invalid) {
-        showStatus("Please fill in all required fields.", true);
-        submitBtn?.removeAttribute("disabled");
-        invalid.focus();
-        return;
-      }
-
-      const action = contactForm.getAttribute("action") || "/";
-      const fallbackEmail =
-        contactForm.getAttribute("data-contact-email") || "info@tillerstead.com";
-      const fallbackPhone =
-        contactForm.getAttribute("data-contact-phone") || "(609) 862-8808";
-
-      try {
-        const response = await fetch(action, {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encodeForm(contactForm),
-        });
-
-        if (!response.ok && response.type !== "opaque") {
-          throw new Error(`Status ${response.status}`);
-        }
-
-        showStatus(
-          "Request received. I’ll review and reply shortly (usually within 1 business day).",
-        );
-        alert("Thanks! Your message has been submitted.");
-        contactForm.reset();
-      } catch (err) {
-        console.error("Form submission failed", err);
-        showStatus(
-          `We couldn’t submit the form automatically. Please email ${fallbackEmail} or call ${fallbackPhone}.`,
-          true,
-        );
-      } finally {
-        submitBtn?.removeAttribute("disabled");
-      }
-    });
-  });
 })();

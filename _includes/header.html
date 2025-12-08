@@ -6,22 +6,11 @@
   <div class="site-header-inner">
     <!-- Brand -->
     <div class="ts-brand">
-      <a class="site-logo"
-         href="{{ '/' | relative_url }}"
-         aria-label="Tillerstead LLC - Return to homepage"
-         rel="home">
-        <img src="{{ 'assets/img/logo-tillerstead-inverse.svg' | relative_url }}"
-             alt="Tillerstead LLC logo"
-             width="160"
-             height="48"
-             loading="eager"
-             decoding="async"
-             class="site-logo-img" />
-      </a>
+      {% include logo-main.html class="ts-logo-link--header" img_class="ts-logo ts-logo--header" variant="light" %}
     </div>
 
     <!-- Navigation container -->
-    <div class="site-nav-shell" data-nav-container>
+    <div class="site-nav-shell" data-nav-container aria-hidden="true">
       <div class="site-nav-backdrop" data-nav-overlay aria-hidden="true"></div>
       <nav id="site-nav"
            class="site-nav"
@@ -39,7 +28,7 @@
             </span>
           </button>
         </div>
-        <ul class="site-menu" role="menubar">
+        <ul class="site-menu site-nav__list">
           {% assign nav_items = site.data.navigation.primary %}
           {% for item in nav_items %}
             {% assign is_current = false %}
@@ -49,31 +38,30 @@
               {% assign is_current = true %}
             {% endif %}
             {% if is_current %}
-              <li role="presentation">
+              <li>
                 <a href="{{ item.url | relative_url }}"
                    class="nav-link active"
-                   role="menuitem"
                    aria-current="page">
                   {{ item.title }}
                 </a>
               </li>
             {% else %}
-              <li role="presentation">
+              <li>
                 <a href="{{ item.url | relative_url }}"
-                   class="nav-link"
-                   role="menuitem">
+                   class="nav-link">
                   {{ item.title }}
                 </a>
               </li>
             {% endif %}
           {% endfor %}
-      <!-- All tags are now properly paired above. No duplicate closing tags needed. -->
-
-      <!-- Header actions -->
+          <li class="nav-cta nav-cta--drawer">
+            <a class="btn btn--primary" href="{{ '/contact/' | relative_url }}">Request estimate</a>
+          </li>
         </ul>
       </nav>
     </div>
     <div class="site-header-actions" role="group" aria-label="Site actions">
+      <a class="btn btn--primary header-cta" href="{{ '/contact/' | relative_url }}">Request estimate</a>
       <a class="call-btn"
          href="tel:{{ site.company.phone_link | default: '+16098628808' }}"
          aria-label="Call Tillerstead at {{ site.company.phone_display | default: '(609) 862-8808' }}"
@@ -83,11 +71,12 @@
         </span>
       </a>
       <button type="button"
-              class="nav-toggle"
+              class="nav-toggle site-nav-toggle"
               aria-controls="site-nav"
               aria-expanded="false"
               aria-label="Open navigation menu"
               data-nav-toggle>
+        <span class="sr-only">Toggle navigation</span>
         <span class="nav-toggle-label" aria-hidden="true">Menu</span>
         <span class="nav-toggle-icon" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg"

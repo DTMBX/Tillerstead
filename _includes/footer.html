@@ -1,177 +1,100 @@
-<footer class="site-footer ts-footer" role="contentinfo" itemscope itemtype="https://schema.org/HomeAndConstructionBusiness">
+<footer class="site-footer ts-footer" role="contentinfo"
+        itemscope itemtype="https://schema.org/HomeAndConstructionBusiness">
+
   <meta itemprop="name" content="Tillerstead LLC">
   <meta itemprop="@id" content="{{ site.url }}/#contractor">
   <meta itemprop="url" content="{{ site.url }}/">
   <meta itemprop="priceRange" content="$$">
   <meta itemprop="telephone" content="{{ site.company.phone_link }}">
   <meta itemprop="email" content="{{ site.company.email }}">
-  <meta itemprop="description" content="Property maintenance and remodeling with tile specialty for South Jersey homeowners, landlords, and small commercial properties.">
+  <meta itemprop="description" content="Property maintenance, remodeling, and tile installation across Atlantic, Ocean, and Cape May counties.">
   <meta itemprop="areaServed" content="Atlantic County NJ, Ocean County NJ, Cape May County NJ">
 
-  <div class="footer-flex">
-    <div class="footer-brand-area">
-      <a href="{{ '/' | relative_url }}" aria-label="Tillerstead LLC Home" itemprop="url" rel="home" class="footer-logo-link">
-        <img
-          src="{{ '/assets/img/logo/tillerstead-logo-header.svg' | relative_url }}"
-          class="footer-logo-img"
-          alt="Tillerstead LLC"
-          width="220"
-          height="80"
-          loading="lazy"
-          decoding="async">
-      </a>
-      <p class="footer-tagline">
-        <strong>Property Maintenance &middot; Remodeling &middot; Tile</strong><br>
-        <small>NJ Licensed HIC #{{ site.company.hic }}</small>
-      </p>
-      <p class="footer-desc">
-        Monthly maintenance plans, reliable remodeling, and waterproof tile assemblies across Atlantic, Ocean, and Cape May counties.
-      </p>
-    </div>
+  <div class="footer-shell">
+    <div class="footer-panel ts-panel ts-panel--navy">
+      <div class="container footer-flex">
 
-    <nav class="footer-nav" aria-label="Footer">
-      <ul class="footer-list">
-        <li><a href="{{ '/services/' | relative_url }}#tile" class="footer-link">Tile &amp; Stone</a></li>
-        <li><a href="{{ '/services/' | relative_url }}#remodeling" class="footer-link">Remodeling</a></li>
-        <li><a href="{{ '/services/' | relative_url }}#maintenance" class="footer-link">Maintenance Plans</a></li>
-        <li><a href="{{ '/portfolio/' | relative_url }}" class="footer-link">Recent Projects</a></li>
-        <li><a href="{{ '/about/' | relative_url }}" class="footer-link">About</a></li>
-        <li><a href="{{ '/reviews/' | relative_url }}" class="footer-link">Reviews</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}" class="footer-link">Contact</a></li>
-        <li><a href="{{ '/privacy/' | relative_url }}" class="footer-link">Privacy Policy</a></li>
-      </ul>
-    </nav>
+        <!-- Brand / About -->
+        <div class="footer-brand-area">
+          <div class="footer-brand-card">
+            {% include logo-main.html class="ts-logo-link--footer"
+               img_class="ts-logo ts-logo--footer footer-logo-img" variant="dark" %}
+            <p class="footer-tagline">Property Maintenance · Remodeling · Tile</p>
+          </div>
 
-    <div class="footer-contact-area">
-      <h2 class="footer-title">Licensed NJ Contractor</h2>
-      <p>
-        <strong>NJ Home Improvement Contractor</strong><br>
-        <small>License #{{ site.company.hic }}</small>
-      </p>
-      <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-        <span itemprop="streetAddress">{{ site.company.address_line }}</span><br>
-        <span itemprop="addressLocality">{{ site.company.address_locality }}</span>,
-        <span itemprop="addressRegion">{{ site.company.address_region }}</span>
-        <span itemprop="postalCode">{{ site.company.address_postal_code }}</span>
-      </address>
-      <p>
-        <a href="tel:{{ site.company.phone_link }}" itemprop="telephone" class="footer-link">{{ site.company.phone_display }}</a>
-        <br>
-        <a href="mailto:{{ site.company.email }}" itemprop="email" class="footer-link">{{ site.company.email }}</a>
-      </p>
-      <p>
-        <small><strong>Quick response times.</strong> Written scopes. Licensed &amp; insured.</small>
-      </p>
+          <p class="footer-desc">
+            Reliable contracting, waterproof tile assemblies, and monthly maintenance plans for South Jersey homeowners, landlords, and small commercial properties.
+          </p>
+
+          <p class="footer-licensing">
+            <strong>NJ Licensed Home Improvement Contractor</strong><br>
+            HIC #{{ site.company.hic }}
+          </p>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <ul class="footer-list">
+
+            <li><a href="{{ '/services/' | relative_url }}#tile" class="footer-link">Tile &amp; Stone</a></li>
+            <li><a href="{{ '/services/' | relative_url }}#remodeling" class="footer-link">Remodeling</a></li>
+            <li><a href="{{ '/services/' | relative_url }}#maintenance" class="footer-link">Maintenance Plans</a></li>
+
+            <li><a href="{{ '/portfolio/' | relative_url }}" class="footer-link">Recent Projects</a></li>
+            <li><a href="{{ '/about/' | relative_url }}" class="footer-link">About</a></li>
+            <li><a href="{{ '/reviews/' | relative_url }}" class="footer-link">Reviews</a></li>
+            <li><a href="{{ '/contact/' | relative_url }}" class="footer-link">Contact</a></li>
+
+            <!-- Legal pages -->
+            <li><a href="{{ '/privacy/' | relative_url }}" class="footer-link">Privacy Policy</a></li>
+            <li><a href="{{ '/terms/' | relative_url }}" class="footer-link">Terms &amp; Conditions</a></li>
+
+          </ul>
+        </nav>
+
+        <!-- Contact / Address -->
+        <div class="footer-contact-area">
+          <h2 class="footer-title">Licensed NJ Contractor</h2>
+
+          <p>
+            <strong>Home Improvement Contractor</strong><br>
+            <small>License #{{ site.company.hic }}</small>
+          </p>
+
+          <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="streetAddress">{{ site.company.address_line }}</span><br>
+            <span itemprop="addressLocality">{{ site.company.address_locality }}</span>,
+            <span itemprop="addressRegion">{{ site.company.address_region }}</span>
+            <span itemprop="postalCode">{{ site.company.address_postal_code }}</span>
+          </address>
+
+          <p>
+            <a href="tel:{{ site.company.phone_link }}" class="footer-link" itemprop="telephone">
+              {{ site.company.phone_display }}
+            </a><br>
+            <a href="mailto:{{ site.company.email }}" class="footer-link" itemprop="email">
+              {{ site.company.email }}
+            </a>
+          </p>
+
+          <p class="footer-subnote">
+            <small>
+              <strong>Fast response.</strong> Written scopes. Licensed &amp; insured.
+            </small>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Line -->
+      <div class="container footer-bottom">
+        <p>
+          &copy; {{ 'now' | date: '%Y' }} Tillerstead LLC. All rights reserved.
+          <a href="{{ '/privacy/' | relative_url }}" class="footer-link">Privacy</a> |
+          <a href="{{ '/terms/' | relative_url }}" class="footer-link">Terms</a>
+        </p>
+      </div>
+
     </div>
   </div>
-
-  <div class="footer-bottom">
-    <p>
-      &copy; {{ 'now' | date: '%Y' }} Tillerstead LLC. All rights reserved.
-      <a href="{{ '/privacy/' | relative_url }}" class="footer-link">Privacy</a> |
-      <a href="{{ '/sitemap.xml' | relative_url }}" class="footer-link">Sitemap</a>
-    </p>
-  </div>
-
-  <style>
-    .site-footer.ts-footer {
-      background: var(--color-surface-elevated, #0f2240);
-      color: var(--color-heading, #f8fbff);
-      font-family: var(--font-sans, 'Segoe UI', Arial, sans-serif);
-      padding: 3rem 1rem 1.75rem 1rem;
-      border-top: 0;
-    }
-    .footer-flex {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2.5rem;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 2rem;
-    }
-    .footer-brand-area {
-      flex: 1 1 240px;
-      min-width: 220px;
-      max-width: 340px;
-    }
-    .footer-logo-img {
-      display: block;
-      margin-bottom: 1rem;
-      max-width: 220px;
-      max-height: 72px;
-      height: auto;
-      width: 100%;
-      object-fit: contain;
-    }
-    .footer-tagline {
-      font-size: 1.1rem;
-      margin-bottom: 0.5rem;
-    }
-    .footer-desc {
-      font-size: 0.95rem;
-      color: #e6efff;
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-    .footer-nav {
-      flex: 1 1 180px;
-      min-width: 160px;
-      max-width: 220px;
-    }
-    .footer-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 0.5rem;
-    }
-    .footer-link {
-      color: #f1f7ff;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.2s, text-decoration-color 0.2s;
-    }
-    .footer-link:hover,
-    .footer-link:focus {
-      color: var(--color-primary, #1ac87a);
-      text-decoration: underline;
-    }
-    .footer-link:focus-visible {
-      outline: 2px solid var(--color-primary, #1ac87a);
-      outline-offset: 3px;
-    }
-    .footer-contact-area {
-      flex: 1 1 220px;
-      min-width: 200px;
-      max-width: 320px;
-      font-size: 0.98rem;
-    }
-    .footer-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    address {
-      font-style: normal;
-      margin-bottom: 0.5rem;
-      display: block;
-    }
-    .footer-bottom {
-      text-align: center;
-      font-size: 0.95rem;
-      color: #fff;
-      margin-top: 2rem;
-    }
-    @media (max-width: 900px) {
-      .footer-flex {
-        flex-direction: column;
-        gap: 2rem;
-      }
-      .footer-brand-area,
-      .footer-nav,
-      .footer-contact-area {
-        max-width: 100%;
-      }
-    }
-  </style>
 </footer>
