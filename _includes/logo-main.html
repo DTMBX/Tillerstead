@@ -1,10 +1,11 @@
 {%- comment -%}
-Main Tillerstead logo include – single inverse logo for header, hero, and footer.
+Main Tillerstead logo include – shared by header, hero, and footer.
 
 Params:
-- class: classes for the link wrapper (optional)
-- img_class: classes for the <img> (optional)
-- alt: optional alt text override
+  - class: extra classes for the wrapper link
+  - img_class: extra classes for the <img>
+  - alt: optional alt text override
+  - variant: "inverse" (default) or "main" to pick the SVG
 {%- endcomment -%}
 
 {%- assign logo_link_classes = 'ts-logo-link' -%}
@@ -17,21 +18,21 @@ Params:
   {%- assign logo_img_classes = include.img_class -%}
 {%- endif -%}
 
-{%- assign logo_src = '/assets/img/logo/tillerstead-inverse.svg' -%}
+{%- assign variant = include.variant | default: 'inverse' -%}
+{%- if variant == 'main' -%}
+  {%- assign logo_src = '/assets/img/logo/tillerstead-main.svg' -%}
+{%- else -%}
+  {%- assign logo_src = '/assets/img/logo/tillerstead-inverse.svg' -%}
+{%- endif -%}
 
-{%- assign logo_alt = include.alt | default: 'Tillerstead LLC – Professional Tile & Stone Installation in South Jersey' -%}
+{%- assign logo_alt = include.alt
+  | default: 'Tillerstead LLC – Professional Tile & Stone Installation in South Jersey'
+-%}
 
 <a href="{{ '/' | relative_url }}"
    class="{{ logo_link_classes }}"
-   rel="home"
-   aria-label="Tillerstead LLC home"
-   itemprop="url">
-  <img class="{{ logo_img_classes }}"
-       src="{{ logo_src | relative_url }}"
-       alt="{{ logo_alt }}"
-       width="240"
-       height="56"
-       loading="eager"
-       decoding="async"
-       itemprop="logo">
+   aria-label="Tillerstead – home">
+  <img src="{{ logo_src | relative_url }}"
+       class="{{ logo_img_classes }}"
+       alt="{{ logo_alt }}">
 </a>
