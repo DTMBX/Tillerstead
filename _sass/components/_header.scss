@@ -585,3 +585,71 @@ body.nav-open {
     transform: none !important;
   }
 }
+/* ============================================
+   PATCH: Mobile Drawer Reliability
+   - fixes stacking, clickability, and open state
+   - supports either .site-nav-shell.is-open OR body.nav-open
+   ============================================ */
+
+/* Ensure header doesn't trap the drawer in a lower stacking context */
+.site-header {
+  isolation: isolate; /* creates predictable stacking for children */
+}
+
+/* Mobile drawer/backdrop must sit ABOVE sticky header */
+@media (max-width: 920px) {
+  .site-nav-shell {
+    /* already fixed/inset in your code — reinforce reliability */
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2000; /* must be > .site-header z-index (1400) */
+  }
+
+  /* If your JS toggles body.nav-open instead of .is-open, this will still work */
+  body.nav-open .site-nav-shell {
+    pointer-events: auto;
+  }
+
+  .site-nav-shell.is-open {
+    pointer-events: auto;
+  }
+
+  .site-nav-backdrop {
+    /* you already set z-index: 1325 — that can fall behind header (1400) */
+    z-index: 2001;
+  }
+
+  .site-nav {
+    /* you already set z-index: 1450 — also can fall behind header */
+    z-index: 2002;
+
+    /* Ensure transforms/opacity don't create “invisible but clickable” bugs */
+    will-change: transform, opacity;
+  }
+
+  /* OPEN state — support BOTH toggling methods safely */
+  body.nav-open .site-nav-backdrop,
+  .site-nav-shell.is-open .site-nav-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  body.nav-open .site-nav,
+  .site-nav-shell.is-open .site-nav {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* CLOSED state — ensure hidden panel isn't clickable */
+  body:not(.nav-open) .site-nav-shell:not(.is-open) .site-nav {
+    pointer-events: none;
+  }
+
+  /* Prevent page from scrolling behind the drawer on iOS */
+  body.nav-open {
+    position: relative;
+    overscroll-behavior: contain;
+  }
+}
