@@ -37,6 +37,7 @@
 {% endif %}
 
 <!-- Theme / Icons -->
+<<<<<<< HEAD
 <!-- Theme / Icons -->
 <meta name="theme-color" content="#000080" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
@@ -74,11 +75,20 @@
 <!-- Alternate / full logo SVGs for tools that might request them -->
 <link rel="alternate" type="image/svg+xml" href="{{ '/assets/img/logo/tillerstead-logo-full.svg' | relative_url }}" title="Tillerstead Logo">
 
+=======
+<meta name="theme-color" content="#0b1421" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/img/logo/tillerstead-favicon.svg' | relative_url }}" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/logo/tillerstead-logo-mark.svg' | relative_url }}">
+<link rel="manifest" href="{{ '/manifest.webmanifest' | relative_url }}">
+<link rel="mask-icon" href="{{ '/assets/img/logo/tillerstead-logo-mark.svg' | relative_url }}" color="#1cb394">
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 {% include ts-icon-sprite.html %}
 
 <!-- Performance: Preload critical assets -->
 <link rel="preload" as="image" href="{{ '/assets/img/logo/tillerstead-logo-header.svg' | relative_url }}" fetchpriority="high">
 <link rel="preload" as="style" href="{{ '/assets/css/main.css' | relative_url }}">
+<<<<<<< HEAD
 
 {% comment %}
   Preload hero image for improved LCP across pages.
@@ -104,6 +114,10 @@
 {% assign hero_preload_image = page.hero_image | default: site.hero_default_image | default: site.default_og_image %}
 {% if (page.is_home or page.hero_image) and hero_preload_image %}
   <link rel="preload" as="image" href="{{ hero_preload_image | relative_url }}" fetchpriority="high">
+=======
+{% if page.is_home or page.hero_image %}
+  <link rel="preload" as="image" href="{{ page.hero_image | default: '/assets/img/hero-bg.jpg' | relative_url }}" fetchpriority="high">
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 {% endif %}
 
 <!-- Open Graph / Social -->

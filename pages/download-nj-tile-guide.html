@@ -64,13 +64,17 @@ hero_summary: >
           <h3>Download Your Free Guide</h3>
           <p>Enter your email to receive instant access to the <strong>NJ Homeowner's Tile Installation Guide</strong> (PDF).</p>
           
+<<<<<<< HEAD
           {% assign guide_endpoint = site.forms.guide_endpoint | default: site.forms.endpoint | default: 'https://formsubmit.co/info@tillerstead.com' %}
           {% assign guide_redirect = site.forms.guide_redirect_path | default: '/download/nj-tile-guide/thank-you/' %}
           {% assign guide_redirect_url = guide_redirect | absolute_url %}
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
           <form 
             class="form-group"
             name="tile-guide-download"
             method="POST"
+<<<<<<< HEAD
             action="{{ guide_endpoint }}"
             accept-charset="UTF-8"
             netlify-honeypot="bot-field">
@@ -80,6 +84,13 @@ hero_summary: >
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_next" value="{{ guide_redirect_url }}">
+=======
+            action="/download/nj-tile-guide/thank-you/"
+            data-netlify="true"
+            netlify-honeypot="bot-field">
+            
+            <input type="hidden" name="form-name" value="tile-guide-download">
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
             
             <p class="sr-only">
               <label for="bot-field">Don't fill this out</label>
@@ -135,8 +146,11 @@ hero_summary: >
               📥 Download Free Guide
             </button>
 
+<<<<<<< HEAD
             <div class="form-status sr-only" aria-live="polite" data-form-status></div>
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
             <p class="form-help microcopy">
               We respect your privacy. We'll send you the guide + occasional tips. Unsubscribe anytime. No spam.
             </p>

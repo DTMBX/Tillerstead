@@ -10,7 +10,11 @@
 .site-header {
   position: sticky;
   top: 0;
+<<<<<<< HEAD
   z-index: 4000;
+=======
+  z-index: 1400;
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   background: var(--header-bg);
   border-bottom: 1px solid var(--color-border);
   backdrop-filter: blur(16px) saturate(180%);
@@ -28,11 +32,22 @@
 }
 
 .site-header-inner {
+<<<<<<< HEAD
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: var(--space-3);
   min-width: 0;
+=======
+  max-width: var(--shell-width);
+  margin: 0 auto;
+  padding: clamp(0.6rem, 2vw, 0.85rem) clamp(0.9rem, 3.5vw, 1.75rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ts-spacing-xs);
+  min-height: calc(var(--header-height) - 6px);
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 }
 
 /* -----------------------------
@@ -56,7 +71,10 @@
   min-width: 0;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 .site-logo,
 .ts-logo-link {
   display: inline-flex;
@@ -70,11 +88,19 @@
     opacity var(--transition-fast),
     outline-color var(--transition-fast);
 
+<<<<<<< HEAD
   &:hover,
   &:focus-visible {
     opacity: 0.96;
     transform: translateY(-1px);
   }
+=======
+  &:hover {
+    opacity: 0.96;
+    transform: translateY(-1px);
+  }
+
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   &:focus-visible {
     outline-color: var(--color-primary);
   }
@@ -91,23 +117,42 @@
     filter var(--transition-fast),
     transform var(--transition-fast);
 
+<<<<<<< HEAD
   &.ts-logo--header {
     width: clamp(150px, 28vw, 220px);
     max-height: 50px;
   }
   &.ts-logo--footer {
+=======
+  &--header {
+    width: clamp(150px, 28vw, 220px);
+    max-height: 50px;
+  }
+
+  &--footer {
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
     width: clamp(160px, 32vw, 240px);
     max-height: 56px;
     opacity: 0.95;
   }
+<<<<<<< HEAD
   &.ts-logo--hero {
+=======
+
+  /* Hero/heroine logo sizing moved here so header styles stay canonical */
+  &--hero {
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
     width: clamp(200px, 50vw, 300px);
     max-height: 64px;
   }
 }
 
+<<<<<<< HEAD
 .ts-logo-link:hover .ts-logo,
 .ts-logo-link:focus-visible .ts-logo {
+=======
+.ts-logo-link:hover .ts-logo {
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   filter: drop-shadow(0 2px 4px var(--ts-color-shadow-medium));
 }
 
@@ -118,7 +163,10 @@
   max-height: 52px;
   height: auto;
   object-fit: contain;
+<<<<<<< HEAD
   aspect-ratio: 16/4;
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 }
 
 /* Optional tagline/license beside logo on desktop */
@@ -156,7 +204,10 @@
    Header Actions (Call + CTA)
    ----------------------------- */
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 .site-header-actions {
   display: flex;
   align-items: center;
@@ -180,16 +231,24 @@
   display: flex;
   justify-content: center;
   position: relative;
+<<<<<<< HEAD
   z-index: 5000;
+=======
+  z-index: 1300;
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 }
 
 .site-nav-backdrop {
   display: none;
+<<<<<<< HEAD
   z-index: 5005;
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 }
 
 /* Desktop nav: inline */
 .site-nav {
+<<<<<<< HEAD
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,6 +259,12 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-4);
+=======
+  flex: 0 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 }
 
 /* Drawer header only for mobile */
@@ -213,10 +278,13 @@
   display: none;
 }
 
+<<<<<<< HEAD
 .nav-social-links {
   display: none;
 }
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 /* -----------------------------
    Desktop menu – clean text tabs
    ----------------------------- */
@@ -348,6 +416,7 @@
 
 @media (max-width: 920px) {
   /* Layout: brand on left, actions/toggle on right */
+<<<<<<< HEAD
 
   .site-header-inner {
     display: flex;
@@ -356,6 +425,11 @@
     padding: 0.75rem clamp(1rem, 4vw, 1.5rem);
     gap: var(--space-2);
     min-width: 0;
+=======
+  .site-header-inner {
+    padding: 0.75rem clamp(1rem, 4vw, 1.5rem);
+    gap: var(--space-2);
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   }
 
   .site-branding {
@@ -363,7 +437,10 @@
   }
 
   /* Key: drawer lives in its own fixed layer, not as a flex column */
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   .site-nav-shell {
     position: fixed;
     inset: 0;
@@ -373,19 +450,28 @@
     flex: 0 0 auto;
     width: 0;
     height: 0;
+<<<<<<< HEAD
     z-index: 5000;
     background: transparent;
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   }
 
   .site-nav-shell.is-open {
     pointer-events: auto;
   }
 
+<<<<<<< HEAD
 
   .site-header-actions {
     margin-left: auto;
     gap: var(--ts-spacing-sm);
     flex-shrink: 0;
+=======
+  .site-header-actions {
+    margin-left: auto;
+    gap: var(--ts-spacing-sm);
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   }
 
   /* Backdrop */
@@ -397,7 +483,11 @@
     opacity: 0;
     pointer-events: none;
     transition: opacity var(--transition-med);
+<<<<<<< HEAD
     z-index: 5005;
+=======
+    z-index: 1325;
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 
     @supports (backdrop-filter: blur(4px)) {
       backdrop-filter: blur(4px) saturate(140%);
@@ -411,7 +501,10 @@
   }
 
   /* Drawer panel */
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   .site-nav {
     position: fixed;
     top: 0;
@@ -429,17 +522,26 @@
     transition:
       transform 380ms cubic-bezier(0.4, 0, 0.2, 1),
       opacity 280ms ease;
+<<<<<<< HEAD
     z-index: 5010;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     outline: none;
+=======
+    z-index: 1450;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   }
 
   .site-nav-shell.is-open .site-nav {
     transform: translateX(0);
     opacity: 1;
     pointer-events: auto;
+<<<<<<< HEAD
     will-change: transform, opacity;
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   }
 
   /* Drawer header */
@@ -497,12 +599,16 @@
   }
 
   /* Drawer menu */
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   .site-menu {
     flex-direction: column;
     width: 100%;
     gap: 0.5rem;
     margin-top: var(--space-3);
+<<<<<<< HEAD
     opacity: 0;
     transform: translateY(6px);
     transition: opacity 240ms ease, transform 240ms ease;
@@ -510,16 +616,27 @@
   }
 
 
+=======
+  }
+
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   .site-menu .nav-link {
     width: 100%;
     padding: 0.875rem 1rem;
     font-size: 1.02rem;
+<<<<<<< HEAD
     border-radius: var(--radius-sm);
     outline: none;
   }
 
 
   .site-menu .nav-link::after {
+=======
+  }
+
+  .site-menu .nav-link::after {
+    /* remove desktop underline bar in drawer */
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
     display: none;
   }
 
@@ -536,11 +653,15 @@
     }
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   .nav-cta--drawer {
     margin-top: var(--space-3);
     padding-top: var(--space-3);
     border-top: 1px solid var(--color-border);
+<<<<<<< HEAD
     width: 100%;
   }
 
@@ -590,6 +711,20 @@
   }
 
 
+=======
+  }
+
+  /* Toggle / actions */
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .header-cta {
+    /* drawer handles CTAs on mobile */
+    display: none;
+  }
+
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   .call-btn {
     display: none;
   }
@@ -597,25 +732,37 @@
 
 /* Tiny screens: tighten everything */
 @media (max-width: 640px) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   .site-logo-img,
   .ts-logo {
     width: clamp(135px, 45vw, 180px);
     max-height: 48px;
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   .nav-toggle-label {
     display: none;
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   .site-nav {
     width: min(92vw, 320px);
     padding: clamp(1rem, 5vw, 1.5rem);
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   .site-menu .nav-link {
     padding: 0.75rem 0.875rem;
     font-size: 1rem;
@@ -624,13 +771,19 @@
 
 /* iPhone SE-ish */
 @media (max-width: 375px) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   .site-header-inner {
     padding: 0.6rem 1rem;
     gap: 0.5rem;
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   .site-logo-img,
   .ts-logo {
     width: clamp(120px, 40vw, 160px);
@@ -645,6 +798,7 @@ body.nav-open {
   touch-action: none;
 }
 
+<<<<<<< HEAD
 body.nav-open .site-header {
   position: fixed;
   width: 100%;
@@ -652,6 +806,8 @@ body.nav-open .site-header {
   right: 0;
 }
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 @media (prefers-reduced-motion: reduce) {
   .site-nav,
   .site-nav-backdrop,
@@ -661,7 +817,114 @@ body.nav-open .site-header {
     transition: none !important;
     animation: none !important;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   .site-menu .nav-link:hover {
     transform: none !important;
   }
 }
+<<<<<<< HEAD
+=======
+/* ============================================
+   PATCH: Mobile Drawer Reliability
+   - fixes stacking, clickability, and open state
+   - supports either .site-nav-shell.is-open OR body.nav-open
+   ============================================ */
+
+/* Ensure header doesn't trap the drawer in a lower stacking context */
+.site-header {
+  isolation: isolate; /* creates predictable stacking for children */
+}
+
+/* Mobile drawer/backdrop must sit ABOVE sticky header */
+@media (max-width: 920px) {
+  .site-nav-shell {
+    /* already fixed/inset in your code — reinforce reliability */
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2000; /* must be > .site-header z-index (1400) */
+  }
+
+  /* If your JS toggles body.nav-open instead of .is-open, this will still work */
+  body.nav-open .site-nav-shell {
+    pointer-events: auto;
+  }
+
+  .site-nav-shell.is-open {
+    pointer-events: auto;
+  }
+
+  .site-nav-backdrop {
+    /* you already set z-index: 1325 — that can fall behind header (1400) */
+    z-index: 2001;
+  }
+
+  .site-nav {
+    /* you already set z-index: 1450 — also can fall behind header */
+    z-index: 2002;
+
+    /* Ensure transforms/opacity don't create “invisible but clickable” bugs */
+    will-change: transform, opacity;
+  }
+
+  /* OPEN state — support BOTH toggling methods safely */
+  body.nav-open .site-nav-backdrop,
+  .site-nav-shell.is-open .site-nav-backdrop {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  body.nav-open .site-nav,
+  .site-nav-shell.is-open .site-nav {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* CLOSED state — ensure hidden panel isn't clickable */
+  body:not(.nav-open) .site-nav-shell:not(.is-open) .site-nav {
+    pointer-events: none;
+  }
+
+  /* Prevent page from scrolling behind the drawer on iOS */
+  body.nav-open {
+    position: relative;
+    overscroll-behavior: contain;
+  }
+}
+/* ============================================
+   SAFETY PATCH — prevent invisible header items
+   ============================================ */
+
+.site-header-inner {
+  min-height: var(--header-height);
+}
+
+.site-branding,
+.ts-logo-link,
+.ts-logo {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.nav-toggle {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Ensure mobile toggle always appears on small screens */
+@media (max-width: 920px) {
+  .nav-toggle {
+    display: inline-flex !important;
+  }
+}
+
+/* Prevent accidental collapse */
+.site-header-actions {
+  min-height: 44px;
+}
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde

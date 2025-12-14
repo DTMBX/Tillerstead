@@ -3,15 +3,19 @@ primary:
     title: Home
     url: /
     exact: /
+<<<<<<< HEAD
   - id: new-jersey
     title: Service Area
     url: /services/#new-jersey-coverage
     match: /services/
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   - id: services
     title: Services
     url: /services/
     match: /services/
   - id: portfolio
+<<<<<<< HEAD
     title: Our Work
     url: /portfolio/
     match: /portfolio/
@@ -26,6 +30,11 @@ primary:
 
 # Items that only appear in footer / legal
 secondary:
+=======
+    title: Portfolio
+    url: /portfolio/
+    match: /portfolio/
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   - id: gc
     title: Contractors
     url: /for-general-contractors/
@@ -34,10 +43,27 @@ secondary:
     title: Reviews
     url: /reviews/
     match: /reviews/
+<<<<<<< HEAD
+=======
+  - id: about
+    title: About
+    url: /about/
+    match: /about/
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   - id: financing
     title: Financing
     url: /financing/
     match: /financing/
+<<<<<<< HEAD
+=======
+  - id: contact
+    title: Contact
+    url: /contact/
+    match: /contact/
+
+# Items that only appear in footer / legal
+secondary:
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   - id: blog
     title: Blog
     url: /blog/

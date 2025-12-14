@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿{% assign hero_badge = include.badge | default: page.hero_badge | default: 'Licensed NJ Home Improvement Contractor' %}
+=======
+{% assign hero_badge = include.badge | default: page.hero_badge | default: 'Licensed NJ Home Improvement Contractor' %}
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 {% assign hero_eyebrow = include.eyebrow | default: page.hero_eyebrow | default: 'Licensed & Documented' %}
 {% assign hero_title = include.title | default: page.hero_title | default: page.title | default: site.title %}
 {% assign hero_summary = include.summary | default: page.hero_summary | default: page.description | default: site.tagline %}
@@ -6,6 +10,7 @@
 {% assign hero_primary_label = include.primary_label | default: page.hero_primary_label | default: 'Request a consultation' %}
 {% assign hero_secondary_url = include.secondary_url | default: page.hero_secondary_url | default: '/portfolio/' %}
 {% assign hero_secondary_label = include.secondary_label | default: page.hero_secondary_label | default: 'View recent work' %}
+<<<<<<< HEAD
 {% assign hero_project_raw = include.hero_project | default: page.hero_project_image %}
 {% assign hero_project_src = hero_project_raw.src | default: hero_project_raw | default: page.hero_image | default: site.hero_default_image | default: site.default_og_image | default: '/assets/img/tillerstead-work/bathrooms/bathroom-marble-floor-finish.jpg' %}
 {% assign hero_project_alt = hero_project_raw.alt | default: page.hero_image_alt | default: 'Custom tile shower installation with brass fixtures' %}
@@ -15,6 +20,9 @@
 {% unless hero_project_img contains '://' %}
   {% assign hero_project_img = hero_project_img | relative_url %}
 {% endunless %}
+=======
+{% assign hero_project = include.hero_project | default: page.hero_project_image %}
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 
 {% assign primary_href = hero_primary_url %}
 {% unless primary_href contains '://' or primary_href contains 'mailto:' or primary_href contains 'tel:' or primary_href | slice: 0, 1 == '#' %}
@@ -43,12 +51,17 @@
 
       {% if hero_eyebrow %}<p class="ts-hero__eyebrow">{{ hero_eyebrow }}</p>{% endif %}
 
+<<<<<<< HEAD
         <h1 id="home-hero-title" class="ts-hero__title">{{ hero_title }}</h1>
+=======
+      <h1 id="home-hero-title" class="ts-hero__title">{{ hero_title }}</h1>
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 
       {% if hero_summary %}
         <p class="ts-hero__lede">{{ hero_summary }}</p>
       {% endif %}
 
+<<<<<<< HEAD
       {% assign hero_bullets = include.hero_bullets | default: page.hero_bullets | default: page.services %}
       {% if hero_bullets %}
         <ul class="ts-hero__bullets" role="list">
@@ -66,6 +79,16 @@
                   <span class="ts-hero__bullet-text">{{ bullet_detail }}</span>
                 {% endif %}
               </div>
+=======
+      {% if page.services %}
+        <ul class="ts-hero__bullets">
+          {% for service in page.services limit:4 %}
+            <li>
+              {{ service.title }}
+              {% if service.description %}
+                <span>{{ service.description }}</span>
+              {% endif %}
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
             </li>
           {% endfor %}
         </ul>
@@ -84,6 +107,7 @@
     </div>
 
     <aside class="ts-hero__aside" aria-label="Tile specialist highlights">
+<<<<<<< HEAD
       <figure class="ts-hero__project">
         <img src="{{ hero_project_img }}"
           alt="{{ hero_project_alt | default: 'Marble bathroom floor finish by Tillerstead' }}"
@@ -92,6 +116,18 @@
           <figcaption>{{ hero_project_caption }}</figcaption>
         {% endif %}
       </figure>
+=======
+      {% if hero_project %}
+        <figure class="ts-hero__project">
+          <img src="{{ hero_project.src | default: '/assets/img/marble-bath.jpg' | relative_url }}"
+            alt="{{ hero_project.alt | default: 'Custom tile shower installation with brass fixtures' }}"
+            loading="eager" fetchpriority="high" decoding="async" width="1200" height="800">
+          {% if hero_project.caption %}
+            <figcaption>{{ hero_project.caption }}</figcaption>
+          {% endif %}
+        </figure>
+      {% endif %}
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 
       {% assign hero_facts = include.facts | default: page.hero_facts %}
       {% if hero_facts %}

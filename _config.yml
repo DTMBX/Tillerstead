@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 ﻿# ============================
 #  Tillerstead.com â€” _config.yml
+=======
+# ============================
+#  Tillerstead.com — _config.yml
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 # ============================
 
 # Site identity
@@ -34,9 +39,15 @@ social:
   name: Tillerstead LLC
   links:
     - https://tillerstead.com
+<<<<<<< HEAD
   instagram: "https://www.instagram.com/tillerstead?igsh=MWg5NjlwNXBnYXM2Mg%3D%3D&utm_source=qr"
   facebook: "https://www.facebook.com/share/17ZQCR2zdZ/?mibextid=wwXIfr"
   x: "https://x.com/tillerstead?s=21"
+=======
+    # Add social links once ready:
+    # - https://www.instagram.com/tillerstead
+    # - https://www.facebook.com/tillerstead
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 
 # Business variables
 company:
@@ -53,9 +64,14 @@ company:
 
 # Optional: global defaults for OG/social
 logo: /assets/img/logo/tillerstead-logo-header.svg
+<<<<<<< HEAD
 # Use existing project imagery for social + hero preloads
 default_og_image: /assets/img/social/tillerstead-showcase.jpg
 hero_default_image: /assets/img/tillerstead-work/bathrooms/bathroom-accent-wall-and-shower.jpg
+=======
+# Use an existing raster image for social sharing previews
+default_og_image: /assets/img/marble-bath.jpg
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 
 # Cache-busting helper
 assets_version: "2025-11-23.1"
@@ -89,13 +105,18 @@ ux:
   cta_primary_label: "Book a consultation"
   cta_secondary_label: "Explore services"
   reassurances:
+<<<<<<< HEAD
     - "NJ Licensed & Insured â€¢ HIC #13VH10808800"
+=======
+    - "NJ Licensed & Insured • HIC #13VH10808800"
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
     - "Written scopes & change orders"
     - "Waterproof assemblies by default"
     - "Owner on site and accountable"
   value_props:
     - "Design consultations to align look, budget, and timeline"
     - "Transparent scheduling and material lead times"
+<<<<<<< HEAD
     - "Monthly property care plans with photo reports"
 # Form submission defaults
 forms:
@@ -104,3 +125,6 @@ forms:
   redirect_path: "/success/?form=contact"
   guide_redirect_path: "/download/nj-tile-guide/thank-you/"
   subject: "New Tillerstead LLC inquiry from tillerstead.com"
+=======
+    - "Monthly property care plans with photo reports"
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde

@@ -3,6 +3,7 @@
    Clean spacing and balanced card layout
    ============================================ */
 
+<<<<<<< HEAD
 
 // Plans Section Root
 .ts-plans {
@@ -73,11 +74,51 @@
 
 
 // Feature List
+=======
+.ts-plans {
+  padding: var(--section-padding-y) 0;
+}
+
+.ts-plans__header {
+  display: grid;
+  gap: var(--ts-spacing-sm);
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.ts-plans__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: clamp(1.25rem, 3vw, 2rem);
+  align-items: start;
+}
+
+.ts-plan-card {
+  background: var(--ts-color-surface);
+  border: 1px solid var(--ts-color-border);
+  border-radius: var(--ts-radius-lg);
+  box-shadow: var(--ts-shadow-soft);
+  padding: clamp(1rem, 3vw, 1.5rem);
+  display: flex;
+  min-height: 100%;
+}
+
+.ts-plan-card__body {
+  display: grid;
+  gap: var(--ts-spacing-sm);
+}
+
+.ts-plan-card__summary {
+  color: var(--ts-color-muted);
+  margin: 0;
+}
+
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 .ts-plan-card ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
+<<<<<<< HEAD
   gap: 0.75rem;
 }
 
@@ -90,10 +131,21 @@
 }
 
 
+=======
+  gap: 0.5rem;
+}
+
+.ts-plan-card ul li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 .ts-plan-card ul li::before {
   content: "";
   position: absolute;
   left: 0;
+<<<<<<< HEAD
   top: 0.55em;
   width: 0.6em;
   height: 0.6em;
@@ -169,6 +221,35 @@
 }
 
 
+=======
+  top: 0.45rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--ts-color-primary);
+  box-shadow: 0 0 0 3px var(--ts-color-primary-soft);
+}
+
+.ts-plan-card--accent {
+  background: var(--ts-color-surface-elevated);
+  border-color: var(--ts-color-primary);
+}
+
+.ts-plans__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ts-spacing-sm);
+  margin-top: clamp(1rem, 3vw, 1.5rem);
+}
+
+@media (min-width: 768px) {
+  .ts-plans__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1.25rem, 2.5vw, 2rem);
+  }
+}
+
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 @media (min-width: 1024px) {
   .ts-plans__grid {
     grid-template-columns: repeat(3, 1fr);

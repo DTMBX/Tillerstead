@@ -1,21 +1,32 @@
+<<<<<<< HEAD
 {% assign form_endpoint = site.forms.endpoint | default: 'https://formsubmit.co/info@tillerstead.com' %}
 {% assign redirect_url = '/success/?form=contact' | absolute_url %}
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 <form
   name="{{ include.form_name | default: 'contact-short' }}"
   id="{{ include.form_id | default: 'contact-form-short' }}"
   class="contact-form contact-form--short"
   method="post"
+<<<<<<< HEAD
   action="{{ form_endpoint }}"
   accept-charset="UTF-8"
+=======
+  action="/success/"          <!-- FIX: real Netlify redirect -->
+  data-netlify="true"
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   netlify-honeypot="_trap_short"
   aria-live="polite"
 >
   <!-- Netlify-required -->
   <input type="hidden" name="form-name" value="{{ include.form_name | default: 'contact-short' }}">
+<<<<<<< HEAD
   <input type="hidden" name="_subject" value="{{ site.forms.subject | default: 'New Tillerstead LLC inquiry' }}">
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_template" value="table">
   <input type="hidden" name="_next" value="{{ redirect_url }}">
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 
   <!-- Honeypot -->
   <p class="sr-only">
@@ -101,6 +112,10 @@
   <button type="submit" class="btn btn-primary">
     {{ include.button_label | default: 'Send my request' }}
   </button>
+<<<<<<< HEAD
 
   <p id="{{ include.prefix }}form-status-short" data-form-status class="sr-only" role="status" aria-live="polite"></p>
 </form>
+=======
+</form>
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿---
+=======
+---
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 layout: default
 description: "Showers, floors, backsplashes, drywall repairs, prep, trim, and caulk work completed with proper substrate prep, waterproofing, and clean finishes."
 body_class: page-portfolio
@@ -14,7 +18,11 @@ hero_summary: >
 
 {% assign projects = site.data.portfolio.projects | default: [] %}
 {% assign total_projects = projects | size | plus: 0 %}
+<<<<<<< HEAD
 {% assign fallback_src = '/assets/img/tillerstead-work/bathrooms/bathroom-marble-floor-finish.jpg' | relative_url %}
+=======
+{% assign fallback_src = '/assets/img/marble-bath.jpg' | relative_url %}
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 {% assign fallback_alt = 'Documented project photo from Tillerstead LLC' %}
 {% assign fallback_caption = 'Waterproof tile, remodeling, and maintenance scopes completed across South Jersey.' %}
 
@@ -54,13 +62,22 @@ hero_summary: >
         {% if total_projects == 0 %}
           All work
         {% else %}
+<<<<<<< HEAD
           All work Â· 1 of {{ total_projects }}
+=======
+          All work · 1 of {{ total_projects }}
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
         {% endif %}
       </span>
 
       <div class="slider-controls" aria-label="Slide controls">
+<<<<<<< HEAD
         <button type="button" class="slider-arrow prev" aria-label="Previous photo">â€¹</button>
         <button type="button" class="slider-arrow next" aria-label="Next photo">â€º</button>
+=======
+        <button type="button" class="slider-arrow prev" aria-label="Previous photo">‹</button>
+        <button type="button" class="slider-arrow next" aria-label="Next photo">›</button>
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
       </div>
     </div>
 
@@ -77,7 +94,11 @@ hero_summary: >
 </section>
 
 <script>
+<<<<<<< HEAD
 /* Image data â€“ shared with slider and initial markup via _data/portfolio.yml */
+=======
+/* Image data – shared with slider and initial markup via _data/portfolio.yml */
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 const PROJECTS = {{ projects | jsonify | replace: '</', '<\/'} };
 </script>
 
@@ -177,7 +198,11 @@ const PROJECTS = {{ projects | jsonify | replace: '</', '<\/'} };
     imgEl.src = BASE + slide.file; // Primary (jpg or webp). If webp-only older browsers may not show; acceptable given support.
     imgEl.alt = slide.alt || '';
     captionEl.textContent = slide.caption || '';
+<<<<<<< HEAD
     metaEl.textContent = `${TAG_LABELS[currentFilter] || 'All work'} Â· ${index + 1} of ${slides.length}`;
+=======
+    metaEl.textContent = `${TAG_LABELS[currentFilter] || 'All work'} · ${index + 1} of ${slides.length}`;
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 
     $$('.slider-dot', dotsEl).forEach(dot => {
       dot.classList.toggle('is-active', Number(dot.dataset.index) === index);
@@ -263,4 +288,7 @@ const PROJECTS = {{ projects | jsonify | replace: '</', '<\/'} };
   setFilter(initialFilter);
 })();
 </script>
+<<<<<<< HEAD
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde

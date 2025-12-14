@@ -3,7 +3,11 @@ Main Tillerstead logo include – shared by header, hero, and footer.
 
 Params:
   - class: extra classes for the wrapper link
+<<<<<<< HEAD
   - img_class: extra classes for the <img alt="">
+=======
+  - img_class: extra classes for the <img>
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   - alt: optional alt text override
   - variant: header (default), inverse/on-dark, full, mark, header-dark
 {%- endcomment -%}
@@ -15,6 +19,7 @@ Params:
 
 {%- assign logo_img_classes = 'ts-logo' -%}
 {%- if include.img_class -%}
+<<<<<<< HEAD
   {%- assign logo_img_classes = logo_img_classes | append: ' ' | append: include.img_class -%}
 {%- endif -%}
 {%- comment -%}
@@ -23,10 +28,15 @@ This makes it easier to restructure assets without editing this include.
 {%- endcomment -%}
 
 {%- assign logo_base = site.logo_base | default: '/assets/img/logo' -%}
+=======
+  {%- assign logo_img_classes = include.img_class -%}
+{%- endif -%}
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 
 {%- assign variant = include.variant | default: 'header' -%}
 {%- case variant -%}
   {%- when 'inverse', 'dark', 'on-dark' -%}
+<<<<<<< HEAD
     {%- assign logo_src = logo_base | append: '/tillerstead-inverse.svg' -%}
   {%- when 'full' -%}
     {%- assign logo_src = logo_base | append: '/tillerstead-logo-full.svg' -%}
@@ -39,6 +49,22 @@ This makes it easier to restructure assets without editing this include.
 {%- endcase -%}
 
 {%- assign logo_alt = include.alt | default: site.title | default: 'Tillerstead LLC – Professional Tile & Stone' -%}
+=======
+    {%- assign logo_src = '/assets/img/logo/tillerstead-inverse.svg' -%}
+  {%- when 'full' -%}
+    {%- assign logo_src = '/assets/img/logo/tillerstead-logo-full.svg' -%}
+  {%- when 'mark' -%}
+    {%- assign logo_src = '/assets/img/logo/tillerstead-logo-mark.svg' -%}
+  {%- when 'header-dark' -%}
+    {%- assign logo_src = '/assets/img/logo/tillerstead-logo-header-dark.svg' -%}
+  {%- else -%}
+    {%- assign logo_src = '/assets/img/logo/tillerstead-logo-header.svg' -%}
+{%- endcase -%}
+
+{%- assign logo_alt = include.alt
+  | default: 'Tillerstead LLC – Professional Tile & Stone'
+-%}
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 
 <a href="{{ '/' | relative_url }}"
    class="{{ logo_link_classes }}"

@@ -8,6 +8,7 @@
 body.ts-theme {
   background-color: var(--ts-color-bg);
   background-image:
+<<<<<<< HEAD
     var(--ts-grid-horizontal),
     var(--ts-grid-vertical),
     var(--ts-geometry-overlay),
@@ -23,6 +24,12 @@ body.ts-theme {
     100% 100%;
   background-attachment: fixed;
   background-blend-mode: soft-light, soft-light, normal, normal, normal, normal;
+=======
+    var(--ts-bg-pattern),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(247, 241, 227, 0.8));
+  background-size: var(--ts-bg-pattern-size), 100% 100%;
+  background-attachment: fixed;
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   color: var(--ts-color-text);
 }
 
@@ -31,12 +38,19 @@ body.ts-theme {
   position: fixed;
   inset: 0;
   pointer-events: none;
+<<<<<<< HEAD
   background-image:
     linear-gradient(115deg, transparent 0 42%, rgba(31, 176, 145, 0.08) 48%, transparent 54%),
     linear-gradient(300deg, transparent 0 68%, rgba(208, 160, 90, 0.08) 72%, transparent 78%);
   background-size: 100% 100%;
   opacity: 0.55;
   mix-blend-mode: soft-light;
+=======
+  background: radial-gradient(circle at 20% 10%, rgba(200, 157, 79, 0.07), transparent 60%),
+              radial-gradient(circle at 80% 0%, rgba(11, 107, 92, 0.05), transparent 62%);
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   z-index: -1;
 }
 
@@ -66,6 +80,7 @@ body.ts-theme {
   content: "";
   position: absolute;
   inset: 0;
+<<<<<<< HEAD
   background-image:
     var(--ts-card-grid),
     linear-gradient(90deg, rgba(20, 33, 28, 0.04) 1px, transparent 1px),
@@ -86,6 +101,12 @@ body.ts-theme {
   background-image: var(--ts-card-geometry);
   background-size: 100% 100%;
   opacity: 0.45;
+=======
+  background-image: linear-gradient(90deg, rgba(28, 35, 31, 0.03) 1px, transparent 1px),
+                    linear-gradient(0deg, rgba(28, 35, 31, 0.03) 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.6;
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   pointer-events: none;
 }
 
@@ -137,6 +158,7 @@ body.ts-theme {
   overflow: hidden;
 }
 
+<<<<<<< HEAD
 .ts-services .container::before {
   content: "";
   position: absolute;
@@ -150,15 +172,22 @@ body.ts-theme {
   mix-blend-mode: soft-light;
 }
 
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 .ts-services .container::after {
   content: "";
   position: absolute;
   inset: 0;
+<<<<<<< HEAD
   background-image:
     var(--ts-geometry-overlay),
     radial-gradient(circle at 20% 20%, rgba(11, 107, 92, 0.08), transparent 40%),
     radial-gradient(circle at 80% 10%, rgba(200, 157, 79, 0.06), transparent 38%);
   background-size: 420px 420px, 100% 100%, 100% 100%;
+=======
+  background-image: radial-gradient(circle at 20% 20%, rgba(11, 107, 92, 0.08), transparent 40%),
+                    radial-gradient(circle at 80% 10%, rgba(200, 157, 79, 0.06), transparent 38%);
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
   opacity: 0.6;
   pointer-events: none;
 }
@@ -253,6 +282,7 @@ body.ts-theme {
   display: flex;
   flex-direction: column;
   gap: var(--ts-spacing-md);
+<<<<<<< HEAD
   position: relative;
   overflow: hidden;
 }
@@ -283,6 +313,8 @@ body.ts-theme {
 .ts-service-card > * {
   position: relative;
   z-index: 1;
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 }
 
 .ts-service-card__icon {
@@ -373,6 +405,7 @@ body.ts-theme {
     transition: none;
   }
 }
+<<<<<<< HEAD
 /* Emerald & Parchment brand theme (scoped to home sections) */
   :root {
     --emerald-600: #059669; /* primary emerald */
@@ -434,3 +467,5 @@ body.ts-theme {
 
   /* Slightly stronger section titles if present */
   [aria-labelledby] > *:first-child { scroll-margin-top: 5rem; }
+=======
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde

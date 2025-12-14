@@ -60,6 +60,7 @@
 
 /* ===== Backgrounds ===== */
 .bg-surface { background: var(--ts-color-surface) !important; }
+<<<<<<< HEAD
 .bg-gradient {
   background: linear-gradient(135deg, #1fbda4 0%, #0d6c5b 55%, #064238 100%) !important;
   color: #f4fbf7;
@@ -99,6 +100,9 @@
 .bg-gradient .btn--primary:focus-visible {
   color: var(--ts-color-primary-strong);
 }
+=======
+.bg-gradient { background: var(--ts-gradient-primary) !important; }
+>>>>>>> cd94431d4595c868507e3ce0fccbb2a3869edcde
 
 /* ===== Borders ===== */
 .rounded-sm { border-radius: var(--ts-radius-sm) !important; }
