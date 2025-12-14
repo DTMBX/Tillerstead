@@ -469,6 +469,47 @@ body.ts-theme {
   }
 }
 
+/* Global mobile spacing and grid cleanup */
+@media (max-width: 768px) {
+  .container,
+  .ts-container,
+  .section-inner,
+  .ts-section-inner {
+    padding-inline: clamp(1rem, 6vw, 1.45rem);
+  }
+
+  .ts-section {
+    padding-block: clamp(2.5rem, 7vw, 3.25rem);
+  }
+
+  .card,
+  .ts-card,
+  .ts-service-card {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .ts-services__grid,
+  .ts-services__grid > li,
+  .ts-services__gallery {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .ts-contact__grid,
+  .ts-contact__panel,
+  .ts-contact__form {
+    width: 100%;
+  }
+
+  .hero-actions,
+  .hero-cta-group,
+  .ts-contact__cta {
+    flex-direction: column;
+    gap: var(--ts-spacing-sm);
+  }
+}
+
 /* Responsive tweaks */
 @media (max-width: 640px) {
   .ts-services .container {
