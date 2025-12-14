@@ -94,13 +94,14 @@
   content: "";
   position: absolute;
   left: 0;
-  top: 0.55em;
+  top: 50%;
   width: 0.6em;
   height: 0.6em;
   border-radius: 50%;
   background: var(--ts-color-primary);
   box-shadow: 0 0 0 3px var(--ts-color-primary-soft);
   outline: 2px solid transparent;
+  transform: translateY(-50%);
 }
 
 
@@ -119,15 +120,15 @@
 }
 
 .ts-plan-card--accent::after {
-  content: "Best for Tillerstead";
+  content: "Best Value";
   position: absolute;
-  top: 0.75rem;
-  right: -2.5rem;
+  top: 1rem;
+  right: -2.25rem;
   background: linear-gradient(90deg, var(--ts-color-primary) 60%, var(--ts-color-accent, #2dd4bf) 100%);
   color: #fff;
   font-size: 0.95em;
   font-weight: 800;
-  padding: 0.35em 1.75em;
+  padding: 0.45em 1.75em;
   border-radius: 2em;
   box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10);
   transform: rotate(10deg);
