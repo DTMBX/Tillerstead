@@ -42,7 +42,9 @@ jobs:
           bundler: '2.4.19'
           bundler-cache: true
 
+      # Forked PRs don't have Pages permissions; skip Pages-only steps to avoid hard failures.
       - name: Setup Pages
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
         uses: actions/configure-pages@v5
 
       - name: Build site (production)
@@ -51,6 +53,7 @@ jobs:
         run: npm run build
 
       - name: Upload artifact
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
