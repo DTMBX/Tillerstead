@@ -65,7 +65,7 @@
 .bg-gradient {
   /* TCNA/NJ HIC-compliant: High-contrast, accessible gradient for hero/CTA */
   background: linear-gradient(135deg, #0b6b5c 0%, #053a2e 55%, #022318 100%) !important;
-  color: var(--hero-text);
+  color: var(--tiller-hero-text);
   border: 1px solid rgb(255, 255, 255, 0.08);
 }
 
@@ -75,16 +75,16 @@
 }
 
 .bg-gradient .section-header .eyebrow {
-  color: var(--hero-text-muted);
+  color: var(--tiller-hero-text-muted);
 }
 
 .bg-gradient .section-header .heading-2,
 .bg-gradient .section-header .heading-3 {
-  color: var(--hero-text);
+  color: var(--tiller-hero-text);
 }
 
 .bg-gradient .section-header .lead {
-  color: var(--hero-text-muted);
+  color: var(--tiller-hero-text-muted);
 }
 
 .bg-gradient .section-action {
@@ -127,12 +127,12 @@
 
 /* ===== Responsive Utilities (container-based, mobile-first) ===== */
 @container (inline-size < 30rem) {
-  .sm\:d-none      { display: none !important; }
-  .sm\:text-center { text-align: center !important; }
+  .sm-d-none      { display: none !important; }
+  .sm-text-center { text-align: center !important; }
 }
 
 @container (inline-size > 48rem) {
-  .md\:d-flex { display: flex !important; }
+  .md-d-flex { display: flex !important; }
 }
 
 /* ===== Accessibility & Compliance Notes =====

@@ -5,16 +5,16 @@
   ============================================ */
 
 .social-links {
-  --social-pill-size: 2.5rem;
-  --social-gap: 0.75rem;
-  --social-border: var(--ts-color-border-strong, rgb(12, 40, 54, 0.2));
-  --social-bg: var(--ts-color-surface-elevated, rgb(255, 255, 255, 0.9));
-  --social-icon-color: var(--ts-color-heading, #12212c);
+  --tiller-social-pill-size: 2.5rem;
+  --tiller-social-gap: 0.75rem;
+  --tiller-social-border: var(--ts-color-border-strong, rgb(12, 40, 54, 0.2));
+  --tiller-social-bg: var(--ts-color-surface-elevated, rgb(255, 255, 255, 0.9));
+  --tiller-social-icon-color: var(--ts-color-heading, #12212c);
 
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  gap: var(--social-gap);
+  gap: var(--tiller-social-gap);
   container-type: inline-size;
   container-name: social-links;
 }
@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: var(--social-gap);
+  gap: var(--tiller-social-gap);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -38,12 +38,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: var(--social-pill-size);
-  height: var(--social-pill-size);
+  width: var(--tiller-social-pill-size);
+  height: var(--tiller-social-pill-size);
   border-radius: 999px;
-  border: 1.5px solid var(--social-border);
-  background: var(--social-bg);
-  color: var(--social-icon-color);
+  border: 1.5px solid var(--tiller-social-border);
+  background: var(--tiller-social-bg);
+  color: var(--tiller-social-icon-color);
   text-decoration: none;
   transition:
    background var(--transition-fast, 160ms ease),
@@ -76,9 +76,9 @@
 
 /* Header context: High-contrast for navigation bar */
 .social-links--header {
-  --social-border: rgb(255, 255, 255, 0.3);
-  --social-bg: rgb(255, 255, 255, 0.1);
-  --social-icon-color: var(--ts-white, #ffffff);
+  --tiller-social-border: rgb(255, 255, 255, 0.3);
+  --tiller-social-bg: rgb(255, 255, 255, 0.1);
+  --tiller-social-icon-color: var(--ts-white, #ffffff);
 }
 
 .social-links--header .social-link:hover,
@@ -101,17 +101,17 @@
   }
 
   .social-link {
-   --social-bg: var(--ts-color-surface, #ffffff);
-   --social-icon-color: var(--ts-color-heading, #12212c);
-   --social-border: var(--ts-color-border-strong, rgb(12, 40, 54, 0.2));
+   --tiller-social-bg: var(--ts-color-surface, #ffffff);
+   --tiller-social-icon-color: var(--ts-color-heading, #12212c);
+   --tiller-social-border: var(--ts-color-border-strong, rgb(12, 40, 54, 0.2));
   }
 }
 
 /* Footer context: Brand-compliant styling */
 .social-links--footer {
-  --social-border: rgb(255, 255, 255, 0.35);
-  --social-bg: rgb(255, 255, 255, 0.1);
-  --social-icon-color: rgb(255, 255, 255, 0.9);
+  --tiller-social-border: rgb(255, 255, 255, 0.35);
+  --tiller-social-bg: rgb(255, 255, 255, 0.1);
+  --tiller-social-icon-color: rgb(255, 255, 255, 0.9);
 
   margin-top: 1rem;
 }
@@ -128,14 +128,14 @@
 /* Responsive sizing */
 @container (inline-size < 30rem) {
   .social-links {
-   --social-pill-size: 2.25rem;
-   --social-gap: 0.625rem;
+   --tiller-social-pill-size: 2.25rem;
+   --tiller-social-gap: 0.625rem;
   }
 }
 
 @media (max-width: 480px) {
   .social-links {
-   --social-pill-size: 2.25rem;
+   --tiller-social-pill-size: 2.25rem;
   }
 
   .social-icon {

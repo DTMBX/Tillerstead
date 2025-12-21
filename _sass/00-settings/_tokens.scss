@@ -16,26 +16,26 @@
      TCNA-compliant palette for tile & bath environments.
      All colors pass 4.5:1+ contrast (WCAG 2.1 AA).
      =========================== */
-  --stone-50: #f9f5eb;         /* Parchment light */
-  --stone-100: #f0ead8;        /* Parchment medium */
-  --stone-200: #e4dcc5;        /* Parchment dark */
+  --color-stone-50: #f9f5eb;         /* Parchment light */
+  --color-stone-100: #f0ead8;        /* Parchment medium */
+  --color-stone-200: #e4dcc5;        /* Parchment dark */
 
-  --ink-900: #1c231f;          /* Primary text */
-  --ink-700: #3a413c;          /* Secondary text */
+  --color-ink-900: #1c231f;          /* Primary text */
+  --color-ink-700: #3a413c;          /* Secondary text */
 
-  --emerald-600: #0b6b5c;      /* Brand emerald (TCNA: colorfast, mold-resistant) */
-  --emerald-700: #084c3d;      /* Emerald hover */
+  --color-emerald-600: #0b6b5c;      /* Brand emerald (TCNA: colorfast, mold-resistant) */
+  --color-emerald-700: #084c3d;      /* Emerald hover */
 
   /* Shadow colors for depth and accessibility */
-  --shadow-soft: rgb(28, 35, 31, 0.12);
-  --shadow-deep: rgb(28, 35, 31, 0.18);
+  --color-shadow-soft: rgb(28, 35, 31, 0.12);
+  --color-shadow-deep: rgb(28, 35, 31, 0.18);
 
   /* Layout & Rhythm — Responsive, accessible spacing */
-  --container: 1100px;
-  --section-pad-y: clamp(2.5rem, 6vi, 5.25rem);
-  --card-pad: clamp(1.125rem, 2vi, 1.625rem);
-  --gutter: clamp(1.5rem, 3.5vi, 2.5rem);
-  --grid-gap: clamp(1.5rem, 3vi, 2.5rem);
+  --spacing-container: 1100px;
+  --spacing-section-pad-y: clamp(2.5rem, 6vi, 5.25rem);
+  --spacing-card-pad: clamp(1.125rem, 2vi, 1.625rem);
+  --spacing-gutter: clamp(1.5rem, 3.5vi, 2.5rem);
+  --spacing-grid-gap: clamp(1.5rem, 3vi, 2.5rem);
 
   /* ===========================
      Brand Palette (WCAG 2.1 AA Verified)
@@ -57,8 +57,8 @@
   /* ===========================
      Surface & Text — Contrast-Optimized
      =========================== */
-  --ts-color-bg: var(--stone-100);             /* Page background */
-  --ts-color-surface: var(--stone-50);         /* Card/section surface */
+  --ts-color-bg: var(--color-stone-100);             /* Page background */
+  --ts-color-surface: var(--color-stone-50);         /* Card/section surface */
   --ts-color-surface-muted: #f5f0e0;
   --ts-color-surface-elevated: #fcfaf4;
   --ts-color-surface-highlight: #ffffff;
@@ -98,12 +98,12 @@
   /* ===========================
      Footer (Accessible, AA+ contrast)
      =========================== */
-  --footer-bg: #0f1713;
-  --footer-text: #e8f0ec;
-  --footer-text-muted: #9fb4a5;
-  --footer-link: #16a384;
-  --footer-link-hover: #84d1b8;
-  --footer-border: rgb(22, 163, 132, 0.2);
+  --tiller-footer-bg: #0f1713;
+  --tiller-footer-text: #e8f0ec;
+  --tiller-footer-text-muted: #9fb4a5;
+  --tiller-footer-link: #16a384;
+  --tiller-footer-link-hover: #84d1b8;
+  --tiller-footer-border: rgb(22, 163, 132, 0.2);
   --ts-footer-link: #84d1b8;
   --ts-footer-link-hover: #a8e0cd;
   --ts-footer-success: #d0f5e8;
@@ -111,9 +111,9 @@
   /* ===========================
      Hero (Light text on dark overlay)
      =========================== */
-  --hero-bg: linear-gradient(180deg, #1c231f 0%, #0f1713 100%);
-  --hero-text: #ffffff;
-  --hero-text-muted: rgb(255, 255, 255, 0.85);
+  --tiller-hero-bg: linear-gradient(180deg, #1c231f 0%, #0f1713 100%);
+  --tiller-hero-text: #ffffff;
+  --tiller-hero-text-muted: rgb(255, 255, 255, 0.85);
 
   /* ===========================
      Gradients & Patterns (Designer: update for new scheme)
@@ -145,15 +145,15 @@
   --font-size-4xl: 2.75rem;
   --font-size-5xl: 3.25rem;
 
-  --heading-1: clamp(2.45rem, 4vw, 3.75rem);
-  --heading-2: clamp(2rem, 3vw, 3rem);
-  --heading-3: clamp(1.45rem, 2.2vw, 2.1rem);
-  --heading-4: clamp(1.2rem, 1.7vw, 1.45rem);
-  --heading-5: clamp(1.05rem, 1.6vw, 1.25rem);
-  --heading-6: clamp(0.92rem, 1.4vw, 1.05rem);
-  --line-height-base: 1.65;
-  --line-height-tight: 1.2;
-  --line-height-relaxed: 1.85;
+  --font-heading-1: clamp(2.45rem, 4vw, 3.75rem);
+  --font-heading-2: clamp(2rem, 3vw, 3rem);
+  --font-heading-3: clamp(1.45rem, 2.2vw, 2.1rem);
+  --font-heading-4: clamp(1.2rem, 1.7vw, 1.45rem);
+  --font-heading-5: clamp(1.05rem, 1.6vw, 1.25rem);
+  --font-heading-6: clamp(0.92rem, 1.4vw, 1.05rem);
+  --font-line-height-base: 1.65;
+  --font-line-height-tight: 1.2;
+  --font-line-height-relaxed: 1.85;
 
   /* ===========================
      Spacing (8px base grid, responsive)
@@ -168,54 +168,54 @@
   --ts-spacing-4xl: 6rem;
   --ts-spacing-5xl: 8rem;
 
-  --hero-padding-mobile: clamp(3rem, 5vw, 4rem);
-  --hero-padding-desktop: clamp(4rem, 8vw, 6rem);
-  --section-spacing: clamp(3rem, 6vw, 5rem);
-  --card-spacing: clamp(1.5rem, 3vw, 2.5rem);
+  --spacing-hero-padding-mobile: clamp(3rem, 5vw, 4rem);
+  --spacing-hero-padding-desktop: clamp(4rem, 8vw, 6rem);
+  --spacing-section-spacing: clamp(3rem, 6vw, 5rem);
+  --spacing-card-spacing: clamp(1.5rem, 3vw, 2.5rem);
 
   /* ===========================
      Radius & Shadows (AA focus, accessible)
      =========================== */
-  --radius-base: 16px;
-  --radius-large: 22px;
+  --tiller-radius-base: 16px;
+  --tiller-radius-large: 22px;
   --ts-radius-sm: 12px;
-  --ts-radius-md: var(--radius-base);
+  --ts-radius-md: var(--tiller-radius-base);
   --ts-radius-lg: 16px;
   --ts-radius-xl: 22px;
   --ts-radius-pill: 999px;
   --ts-radius-card: var(--ts-radius-lg);
 
-  --ts-color-shadow-light: var(--shadow-soft);
-  --ts-color-shadow-medium: var(--shadow-soft);
-  --ts-color-shadow: var(--shadow-soft);
-  --ts-shadow-soft: 0 10px 30px var(--shadow-soft);
-  --ts-shadow-lift: 0 14px 34px var(--shadow-soft);
-  --ts-shadow-header: 0 10px 28px var(--shadow-soft);
+  --ts-color-shadow-light: var(--color-shadow-soft);
+  --ts-color-shadow-medium: var(--color-shadow-soft);
+  --ts-color-shadow: var(--color-shadow-soft);
+  --ts-shadow-soft: 0 10px 30px var(--color-shadow-soft);
+  --ts-shadow-lift: 0 14px 34px var(--color-shadow-soft);
+  --ts-shadow-header: 0 10px 28px var(--color-shadow-soft);
   --ts-shadow-header-scrolled: 0 12px 24px rgb(0, 0, 0, 0.12), -8px 0 24px rgb(0, 0, 0, 0.08);
   --ts-shadow-glow: 0 0 0 3px rgb(11, 107, 92, 0.25);
   --ts-shadow-glow-accent: 0 0 0 3px rgb(11, 107, 92, 0.3);
-  --focus-ring: 0 0 0 3px rgb(11, 107, 92, 0.35);
-  --transition-fast: 160ms ease;
-  --transition-med: 240ms ease;
+  --tiller-focus-ring: 0 0 0 3px rgb(11, 107, 92, 0.35);
+  --tiller-transition-fast: 160ms ease;
+  --tiller-transition-med: 240ms ease;
 
   /* ===========================
      Layout Metrics (TCNA/NJ HIC: responsive, accessible)
      =========================== */
-  --layout-max: 1320px;
-  --layout-wide: 1440px;
-  --layout-narrow: 960px;
-  --shell-width: var(--layout-max);
-  --container-gutter: clamp(1rem, 4vw, 2.5rem);
-  --section-padding-y: var(--section-pad-y);
-  --section-gap: clamp(1.4rem, 2.6vw, 2.6rem);
-  --header-height: 76px;
-  --grid-gap: clamp(1rem, 3vw, 1.6rem);
+  --tiller-layout-max: 1320px;
+  --tiller-layout-wide: 1440px;
+  --tiller-layout-narrow: 960px;
+  --tiller-shell-width: var(--tiller-layout-max);
+  --tiller-container-gutter: clamp(1rem, 4vw, 2.5rem);
+  --tiller-section-padding-y: var(--spacing-section-pad-y);
+  --tiller-section-gap: clamp(1.4rem, 2.6vw, 2.6rem);
+  --tiller-header-height: 76px;
+  --tiller-grid-gap: clamp(1rem, 3vw, 1.6rem);
 
   /* ===========================
      Header/Footer (No duplicate keys, AA+ contrast)
      =========================== */
-  --header-bg: rgb(249, 245, 235, 0.95);
-  --header-border: rgb(11, 107, 92, 0.18);
+  --tiller-header-bg: rgb(249, 245, 235, 0.95);
+  --tiller-header-border: rgb(11, 107, 92, 0.18);
 
   /* ===========================
      Legacy Alias Support (for utility classes)
@@ -255,10 +255,10 @@
   --space-7: calc(var(--ts-spacing-2xl) + 1rem);
   --space-8: var(--ts-spacing-3xl);
 
-  --radius-sm: var(--ts-radius-sm);
-  --radius-md: var(--ts-radius-md);
-  --radius-lg: var(--ts-radius-lg);
-  --radius-xl: var(--ts-radius-xl);
+  --ts-radius-sm: var(--ts-radius-sm);
+  --ts-radius-md: var(--ts-radius-md);
+  --ts-radius-lg: var(--ts-radius-lg);
+  --ts-radius-xl: var(--ts-radius-xl);
 }
 
 /* ===========================

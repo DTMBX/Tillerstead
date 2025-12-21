@@ -1,0 +1,878 @@
+
+> lint:css
+> stylelint "**/*.{css,scss}"
+
+
+assets/css/conversion-optimizations.css
+   19:25  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   21:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   38:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   56:21  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   62:21  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   80:25  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   82:29  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  100:29  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  106:29  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  117:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  118:25  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  120:29  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  135:29  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  148:25  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  150:29  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  173:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  182:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  190:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  213:25  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  215:29  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  217:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  224:29  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  243:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  264:25  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  268:29  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  277:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  282:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  298:25  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  301:29  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  310:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  319:25  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  333:25  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  338:12  Γ£û  Expected no more than 1 declaration                              declaration-block-single-line-max-declarations
+  339:7   Γ£û  Expected no more than 1 declaration                              declaration-block-single-line-max-declarations
+  362:25  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  364:29  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  396:25  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  398:29  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  421:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  427:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+
+_sass/00-settings/_contrast.scss
+   23:4   Γ£û  Expected color.red instead of red                                                       scss/no-global-function-names
+   24:4   Γ£û  Expected color.green instead of green                                                   scss/no-global-function-names
+   25:4   Γ£û  Expected color.blue instead of blue                                                     scss/no-global-function-names
+   31:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+   33:19  Γ£û  Expected "0.03928" to be "0.0393"                                                       number-max-precision
+   42:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+   43:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+   43:25  Γ£û  Expected map.get instead of map-get                                                     scss/no-global-function-names
+   44:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+   44:25  Γ£û  Expected map.get instead of map-get                                                     scss/no-global-function-names
+   45:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+   45:25  Γ£û  Expected map.get instead of map-get                                                     scss/no-global-function-names
+   52:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+   53:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+   54:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+   55:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+   77:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+   78:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+   85:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+   86:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+  102:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+  103:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+  106:4   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+  106:13  Γ£û  Expected color.adjust($color, $lightness: $amount) instead of lighten($color, $amount)  scss/no-global-function-names
+  107:4   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+  119:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+  120:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+  123:4   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+  123:13  Γ£û  Expected color.adjust($color, $lightness: -$amount) instead of darken($color, $amount)  scss/no-global-function-names
+  124:4   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+  136:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+  142:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+  164:3   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)                           scss/dollar-variable-pattern
+
+_sass/00-settings/_tokens-90s.scss
+   22:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   23:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   24:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   25:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   26:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   27:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   30:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   31:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   32:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   33:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   34:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   35:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   38:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   39:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   40:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   41:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   42:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   43:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   46:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   47:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   48:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   49:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   50:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   51:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   54:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   55:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   56:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   57:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   58:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   59:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   62:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   63:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   64:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   65:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   66:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   67:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   74:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   75:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   76:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   77:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   78:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   79:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   80:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   81:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   82:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   83:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   90:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   92:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   93:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   94:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   97:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   98:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   99:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  102:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  103:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  104:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  112:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  120:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  128:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  138:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  224:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  225:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  226:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  229:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  231:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  233:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  237:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  240:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  243:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  252:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  253:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  254:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  255:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  256:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  257:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  258:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  259:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  260:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  261:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  262:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  263:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  274:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  275:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  276:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  277:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  278:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  279:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  280:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  281:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  282:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  283:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  284:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  298:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  299:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  300:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  302:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  303:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  304:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  305:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  312:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  313:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  314:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  315:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  316:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  317:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  318:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  321:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  342:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  343:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  344:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  345:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  346:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  348:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  349:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  350:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  372:5  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  373:5  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  374:5  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+
+_sass/00-settings/_tokens-cartoon.scss
+   21:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   22:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   23:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   24:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   27:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   28:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   29:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   30:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   33:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   34:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   35:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   36:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   39:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   40:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   41:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   44:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   45:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   46:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   47:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   50:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   51:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   52:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   59:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   60:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   61:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   62:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   69:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   70:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   71:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   72:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   73:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   76:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   77:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   84:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   85:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   86:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   87:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   88:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   89:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   92:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   93:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   94:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   95:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  138:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  145:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  152:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  159:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  171:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  172:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  173:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  174:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  177:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  185:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  186:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  187:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  188:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  191:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  192:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  193:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  207:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  208:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  209:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  210:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  211:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  212:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  213:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  214:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  215:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  216:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  217:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  231:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  232:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  233:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  235:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  236:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  237:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  244:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  245:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  246:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  247:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  248:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  249:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  250:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  251:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  252:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  253:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  254:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  270:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  271:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  272:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  273:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  274:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+
+_sass/00-settings/_tokens-hybrid.scss
+   26:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   27:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   28:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   29:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   30:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   31:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   32:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   40:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   41:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   42:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   43:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   44:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   45:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   48:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   49:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   50:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   51:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   52:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   53:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   61:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   62:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   63:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   64:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   65:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   68:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   69:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   70:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   71:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   74:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   75:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   76:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   77:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   84:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   85:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   86:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   87:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   88:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   89:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   90:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   91:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   92:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   93:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  184:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  192:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  199:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  206:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  224:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  225:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  226:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  227:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  228:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  231:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  232:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  235:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  236:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  270:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  271:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  272:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  273:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  274:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  275:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  277:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  278:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  279:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  302:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  303:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  304:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  305:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  306:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  307:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  308:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  309:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  311:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  312:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  313:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  314:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  321:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  322:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  323:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  324:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  325:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  326:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  327:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  328:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  342:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  343:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  344:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  346:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  347:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  348:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  350:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  351:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  353:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  359:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  360:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  361:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  362:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  363:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  364:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  366:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  367:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  368:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  369:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  370:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  372:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  373:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  374:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  376:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  377:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  378:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  379:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  385:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  386:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  388:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  389:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  390:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  391:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  392:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  392:28  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  393:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  395:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  402:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  403:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  404:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  452:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  453:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  454:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  455:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  456:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  457:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  458:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  459:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  461:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  461:3   Γ£û  Unexpected duplicate "--radius-md"                               declaration-block-no-duplicate-custom-properties
+  462:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  462:3   Γ£û  Unexpected duplicate "--radius-lg"                               declaration-block-no-duplicate-custom-properties
+  463:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  463:3   Γ£û  Unexpected duplicate "--radius-xl"                               declaration-block-no-duplicate-custom-properties
+  470:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  471:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  482:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  483:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  484:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  485:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  486:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+
+_sass/00-settings/_tokens.scss
+  241:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  242:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  243:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  244:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  245:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  246:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  247:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  249:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  250:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  251:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  252:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  253:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  254:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  255:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  256:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  258:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  259:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  260:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  261:3  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+
+_sass/10-base/_reset.scss
+   43:20  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                    custom-property-pattern
+   61:20  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                    custom-property-pattern
+  100:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                    custom-property-pattern
+  142:1   Γ£û  Expected selector "button" to come before selector "button:disabled", at line 135  no-descending-specificity
+
+_sass/10-base/_typography.scss
+   15:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+   25:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+   26:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+   35:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+   36:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+   45:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+   46:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+   55:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+   56:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+   67:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+   68:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+   74:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+  176:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+  177:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+  177:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+  193:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+  212:15  Γ£û  Unexpected deprecated keyword "break-word" for property "word-break"  declaration-property-value-keyword-no-deprecated
+  219:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)       custom-property-pattern
+
+_sass/20-layout/_container.scss
+   14:24  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   31:24  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   41:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   46:24  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   62:26  Γ£û  Expected legacy color-function notation                          color-function-notation
+   83:41  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   84:17  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   85:17  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   91:12  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   93:13  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   94:13  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   95:13  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  101:12  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  104:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  105:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  106:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  114:12  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  140:12  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  141:64  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  159:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  234:13  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+
+_sass/20-layout/_grid.scss
+  15:12  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  25:1   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)    scss/dollar-variable-pattern
+  39:1   Γ£û  SCSS variables must be prefixed (e.g., $tiller-color-primary)    scss/dollar-variable-pattern
+
+_sass/20-layout/_mobile.scss
+  125:3  Γ£û  Expected selector ".btn" to come before selector ".btn:active", at line 120  no-descending-specificity
+
+_sass/20-layout/_tillerstead-theme.scss
+  22:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  22:43  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+
+_sass/30-components/_breadcrumbs.scss
+  75:1  Γ£û  Expected selector ".ts-breadcrumbs__separator" to come before selector ".ts-breadcrumbs__item:last-child .ts-breadcrumbs__separator", at line 45  no-descending-specificity
+
+_sass/30-components/_buttons.scss
+   78:1  Γ£û  Expected selector ".btn-primary:focus-visible" to come before selector ".btn-primary:hover:not(:disabled)", at line 77                         no-descending-specificity
+   80:1  Γ£û  Expected selector ".btn--primary:focus-visible" to come before selector ".btn--primary:hover:not(:disabled)", at line 77                       no-descending-specificity
+  107:1  Γ£û  Expected selector ".btn-secondary:focus-visible::before" to come before selector ".btn-secondary:hover:not(:disabled)::before", at line 106    no-descending-specificity
+  109:1  Γ£û  Expected selector ".btn--secondary:focus-visible::before" to come before selector ".btn--secondary:hover:not(:disabled)::before", at line 106  no-descending-specificity
+  115:1  Γ£û  Expected selector ".btn-secondary:focus-visible" to come before selector ".btn-secondary:hover:not(:disabled)", at line 114                    no-descending-specificity
+  117:1  Γ£û  Expected selector ".btn--secondary:focus-visible" to come before selector ".btn--secondary:hover:not(:disabled)", at line 114                  no-descending-specificity
+  134:1  Γ£û  Expected selector ".btn-accent:focus-visible" to come before selector ".btn-accent:hover:not(:disabled)", at line 133                          no-descending-specificity
+  136:1  Γ£û  Expected selector ".btn--accent:focus-visible" to come before selector ".btn--accent:hover:not(:disabled)", at line 133                        no-descending-specificity
+  170:1  Γ£û  Expected selector ".btn-ghost:focus-visible::before" to come before selector ".btn-ghost:hover:not(:disabled)::before", at line 168            no-descending-specificity
+  171:1  Γ£û  Expected selector ".btn-outline:focus-visible::before" to come before selector ".btn-outline:hover:not(:disabled)::before", at line 168        no-descending-specificity
+  178:1  Γ£û  Expected selector ".btn-ghost:focus-visible" to come before selector ".btn-ghost:hover:not(:disabled)", at line 176                            no-descending-specificity
+  179:1  Γ£û  Expected selector ".btn-outline:focus-visible" to come before selector ".btn-outline:hover:not(:disabled)", at line 176                        no-descending-specificity
+  196:1  Γ£û  Expected selector ".btn-text:focus-visible" to come before selector ".btn-text:hover:not(:disabled)", at line 195                              no-descending-specificity
+  313:1  Γ£û  Expected selector ".btn-icon-bounce .btn-icon" to come before selector ".btn:hover:not(:disabled) .btn-icon", at line 309                      no-descending-specificity
+  439:1  Γ£û  Expected selector ".btn-icon" to come before selector ".btn .btn-icon", at line 304                                                            no-descending-specificity
+  466:1  Γ£û  Expected selector ".btn-group > .btn" to come before selector ".btn:hover:not(:disabled)", at line 238                                         no-descending-specificity
+  467:1  Γ£û  Expected selector ".btn-group > .button" to come before selector ".button:hover:not(:disabled)", at line 238                                   no-descending-specificity
+  498:1  Γ£û  Expected selector ".btn-grid > .btn" to come before selector ".btn:hover:not(:disabled)", at line 238                                          no-descending-specificity
+  499:1  Γ£û  Expected selector ".btn-grid > .button" to come before selector ".button:hover:not(:disabled)", at line 238                                    no-descending-specificity
+  510:1  Γ£û  Expected selector ".btn-stack > .btn" to come before selector ".btn:hover:not(:disabled)", at line 238                                         no-descending-specificity
+  511:1  Γ£û  Expected selector ".btn-stack > .button" to come before selector ".button:hover:not(:disabled)", at line 238                                   no-descending-specificity
+  512:1  Γ£û  Expected selector ".btn-group--stack > .btn" to come before selector ".btn:hover:not(:disabled)", at line 238                                  no-descending-specificity
+  513:1  Γ£û  Expected selector ".btn-group--stack > .button" to come before selector ".button:hover:not(:disabled)", at line 238                            no-descending-specificity
+
+_sass/30-components/_cards.scss
+  12:12  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  31:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+
+_sass/30-components/_cartoon-components.scss
+   13:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   14:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   14:42  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   15:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   16:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   16:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   17:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   35:30  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   47:30  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   60:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   61:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   62:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   62:42  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   63:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   63:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   67:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   79:18  Γ£û  Expected no more than 1 declaration                              declaration-block-single-line-max-declarations
+   79:36  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   79:66  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   80:37  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   81:37  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   82:36  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   90:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   91:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   92:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   92:43  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   93:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   93:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   97:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   98:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  106:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  107:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  107:42  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  108:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  109:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  110:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  111:23  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  111:46  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  117:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  122:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  123:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  124:21  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  129:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  130:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  131:21  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  136:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  137:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  138:21  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  151:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  151:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  152:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  153:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  154:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  154:42  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  155:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  156:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  160:23  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  160:44  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  166:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  171:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  176:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  177:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  181:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  185:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  186:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  190:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  194:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  195:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  199:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  203:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  204:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  208:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  213:18  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  214:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  214:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  219:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  219:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  229:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  229:32  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  230:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  231:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  231:49  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  243:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  244:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  244:43  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  248:26  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  249:25  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  256:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  260:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  264:21  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  265:20  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  266:20  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  267:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  274:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  276:30  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  278:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  289:12  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  295:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  295:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  296:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  297:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  298:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  298:43  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  300:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  304:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  305:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  309:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  310:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  314:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  315:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  323:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  331:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  334:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  338:12  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  345:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  349:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  359:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  373:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  374:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  374:43  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  379:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  389:9   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  390:9   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  404:12  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  405:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  413:29  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  413:52  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  437:18  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  442:18  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  442:33  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  446:18  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  446:34  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  451:18  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  451:33  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  509:30  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+
+_sass/30-components/_comic-components.scss
+   12:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   13:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   13:48  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   14:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   15:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   15:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   16:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   31:30  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   43:30  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   50:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   68:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   69:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   69:49  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   96:18  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   98:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   98:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   99:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  100:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  100:48  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  104:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  115:36  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  116:37  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  117:36  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  122:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  122:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  123:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  124:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  124:49  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  131:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  133:29  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  133:50  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  146:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  146:48  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  148:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  149:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  150:23  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  150:46  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  157:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  168:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  169:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  169:49  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  177:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  179:21  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  190:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  190:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  191:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  193:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  193:48  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  195:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  199:23  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  199:44  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  206:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  207:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  212:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  217:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  221:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  225:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  229:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  233:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  237:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  241:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  242:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  246:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  252:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  252:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  259:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  259:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  269:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  269:32  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  270:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  271:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  271:55  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  297:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  299:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  308:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  318:12  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  319:16  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  319:31  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  320:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  321:15  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  321:49  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  322:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  328:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  331:37  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  332:39  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  333:37  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  334:38  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  335:39  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  343:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  351:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  354:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  358:12  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  369:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  383:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  384:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  397:33  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  410:9   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  411:9   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  423:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  427:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  435:29  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  435:50  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  443:30  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  443:53  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  447:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  471:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  475:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+
+_sass/30-components/_forms.scss
+   31:3   Γ£û  Unexpected unknown property "aria-hidden"  property-no-unknown
+   77:25  Γ£û  Expected legacy color-function notation    color-function-notation
+  112:3   Γ£û  Unexpected unknown property "aria-live"    property-no-unknown
+  117:15  Γ£û  Expected legacy color-function notation    color-function-notation
+  118:21  Γ£û  Expected legacy color-function notation    color-function-notation
+  123:15  Γ£û  Expected legacy color-function notation    color-function-notation
+  124:21  Γ£û  Expected legacy color-function notation    color-function-notation
+
+_sass/30-components/_header-premium.scss
+  441:1  Γ£û  Expected selector ".ts-logo" to come before selector ".site-header.is-scrolled .ts-logo", at line 65  no-descending-specificity
+  449:1  Γ£û  Unexpected duplicate selector ".site-header", first used at line 7                                    no-duplicate-selectors
+
+_sass/30-components/_header.scss
+  441:1  Γ£û  Expected selector ".ts-logo" to come before selector ".site-header.is-scrolled .ts-logo", at line 65  no-descending-specificity
+  449:1  Γ£û  Unexpected duplicate selector ".site-header", first used at line 7                                    no-duplicate-selectors
+
+_sass/30-components/_hero-premium.scss
+   89:12  Γ£û  Expected keyframe name "fadeInUp" to be kebab-case  keyframes-name-pattern
+  274:12  Γ£û  Expected keyframe name "fadeIn" to be kebab-case    keyframes-name-pattern
+
+_sass/30-components/_hero.scss
+   89:12  Γ£û  Expected keyframe name "fadeInUp" to be kebab-case  keyframes-name-pattern
+  274:12  Γ£û  Expected keyframe name "fadeIn" to be kebab-case    keyframes-name-pattern
+
+_sass/30-components/_home.scss
+    7:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                                              custom-property-pattern
+   58:24  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                                              custom-property-pattern
+   60:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                                              custom-property-pattern
+   64:12  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                                              custom-property-pattern
+  379:1   Γ£û  Expected selector ".page-home .site-main > section" to come before selector ".page-home .site-main > section:nth-of-type(even)", at line 26  no-descending-specificity
+  379:1   Γ£û  Unexpected duplicate selector ".page-home .site-main > section", first used at line 20                                                       no-duplicate-selectors
+
+_sass/30-components/_nj-statewide.scss
+    7:22  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   14:24  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   53:12  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+   69:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  131:20  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+
+_sass/30-components/_social-links.scss
+    8:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+    9:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+   10:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+   11:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+   12:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+   49:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+   50:21  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+   51:14  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+   52:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+   53:18  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+   79:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+   80:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+   81:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+  103:3   Γ£û  Expected selector ".social-link" to come before selector ".social-links--header .social-link:hover", at line 84  no-descending-specificity
+  104:4   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+  105:4   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+  106:4   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+  112:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+  113:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+  114:3   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+  131:4   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+  132:4   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+  138:4   Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)                                                  custom-property-pattern
+
+_sass/40-pages/_portfolio.scss
+  104:19  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  136:21  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  278:18  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  279:20  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+  293:20  Γ£û  Custom properties must be prefixed (e.g., tiller-color-primary)  custom-property-pattern
+
+Γ£û 818 problems (818 errors, 0 warnings)
+  7 errors potentially fixable with the "--fix" option.
+

@@ -183,7 +183,7 @@
 
 /* Card Elevation: For featured or highlighted projects */
 .card-elevated {
-  box-shadow: 0 14px 34px var(--shadow-soft);
+  box-shadow: 0 14px 34px var(--color-shadow-soft);
 }
 
 /* Card Color Variants: Use for primary CTAs or accent services */
@@ -202,7 +202,7 @@
 /* Featured Card: For award-winning or code-compliant projects */
 .card-featured {
   border-color: var(--ts-color-primary);
-  box-shadow: 0 14px 34px var(--shadow-soft);
+  box-shadow: 0 14px 34px var(--color-shadow-soft);
 }
 
 .card-featured::before {
@@ -324,7 +324,7 @@
   .card:hover,
   .ts-card:hover {
    transform: none;
-   box-shadow: 0 10px 30px var(--shadow-soft);
+   box-shadow: 0 10px 30px var(--color-shadow-soft);
   }
 }
 

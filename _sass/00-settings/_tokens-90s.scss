@@ -88,20 +88,20 @@
      =========================== */
   
   --comic-dot-pattern: 
-    radial-gradient(circle at 50% 50%, var(--neon-teal-500) 1px, transparent 1px);
+    radial-gradient(circle at 50% 50%, var(--color-neon-teal-500) 1px, transparent 1px);
   --comic-outline-thick: 3px;
   --comic-outline-medium: 2px;
   --comic-outline-thin: 1px;
   
   /* Speech bubble colors */
   --bubble-bg: #ffffff;
-  --bubble-border: var(--cool-gray-900);
+  --bubble-border: var(--tiller-cool-gray-900);
   --bubble-shadow: rgb(0, 0, 0, 0.25);
   
   /* Comic action effects */
-  --pow-yellow: var(--cyber-yellow-500);
-  --boom-orange: var(--sunset-orange-500);
-  --zap-purple: var(--electric-purple-500);
+  --pow-yellow: var(--tiller-cyber-yellow-500);
+  --boom-orange: var(--color-sunset-orange-500);
+  --zap-purple: var(--tiller-electric-purple-500);
 
   /* ===========================
      🌟 GRADIENT SYSTEMS
@@ -111,36 +111,36 @@
   /* Sunrise gradient (optimistic, energetic) */
   --gradient-sunrise: linear-gradient(
     135deg,
-    var(--sunset-orange-400) 0%,
-    var(--hot-pink-500) 50%,
-    var(--electric-purple-600) 100%
+    var(--color-sunset-orange-400) 0%,
+    var(--color-hot-pink-500) 50%,
+    var(--tiller-electric-purple-600) 100%
   );
   
   /* Ocean gradient (trustworthy, professional) */
   --gradient-ocean: linear-gradient(
     135deg,
-    var(--neon-teal-400) 0%,
-    var(--neon-teal-600) 50%,
-    var(--electric-purple-700) 100%
+    var(--color-neon-teal-400) 0%,
+    var(--color-neon-teal-600) 50%,
+    var(--tiller-electric-purple-700) 100%
   );
   
   /* Retro gradient (90s throwback) */
   --gradient-retro: linear-gradient(
     90deg,
-    var(--hot-pink-500) 0%,
-    var(--sunset-orange-500) 25%,
-    var(--cyber-yellow-500) 50%,
-    var(--lime-green-500) 75%,
-    var(--neon-teal-500) 100%
+    var(--color-hot-pink-500) 0%,
+    var(--color-sunset-orange-500) 25%,
+    var(--tiller-cyber-yellow-500) 50%,
+    var(--color-lime-green-500) 75%,
+    var(--color-neon-teal-500) 100%
   );
   
   /* Neon glow gradient (eye-catching) */
   --gradient-neon: linear-gradient(
     45deg,
-    var(--electric-purple-500) 0%,
-    var(--hot-pink-500) 33%,
-    var(--sunset-orange-500) 66%,
-    var(--cyber-yellow-500) 100%
+    var(--tiller-electric-purple-500) 0%,
+    var(--color-hot-pink-500) 33%,
+    var(--color-sunset-orange-500) 66%,
+    var(--tiller-cyber-yellow-500) 100%
   );
 
   /* ===========================
@@ -149,36 +149,36 @@
      =========================== */
   
   /* Primary Brand (Teal - trustworthy tile expert) */
-  --ts-color-primary: var(--neon-teal-600);
-  --ts-color-primary-hover: var(--neon-teal-700);
-  --ts-color-primary-light: var(--neon-teal-400);
-  --ts-color-primary-soft: var(--neon-teal-50);
+  --ts-color-primary: var(--color-neon-teal-600);
+  --ts-color-primary-hover: var(--color-neon-teal-700);
+  --ts-color-primary-light: var(--color-neon-teal-400);
+  --ts-color-primary-soft: var(--color-neon-teal-50);
   
   /* Secondary Brand (Orange - energetic, warm) */
-  --ts-color-secondary: var(--sunset-orange-500);
-  --ts-color-secondary-hover: var(--sunset-orange-600);
-  --ts-color-secondary-light: var(--sunset-orange-400);
-  --ts-color-secondary-soft: var(--sunset-orange-50);
+  --ts-color-secondary: var(--color-sunset-orange-500);
+  --ts-color-secondary-hover: var(--color-sunset-orange-600);
+  --ts-color-secondary-light: var(--color-sunset-orange-400);
+  --ts-color-secondary-soft: var(--color-sunset-orange-50);
   
   /* Accent (Pink - memorable, fun) */
-  --ts-color-accent: var(--hot-pink-500);
-  --ts-color-accent-hover: var(--hot-pink-600);
-  --ts-color-accent-light: var(--hot-pink-400);
-  --ts-color-accent-soft: var(--hot-pink-50);
+  --ts-color-accent: var(--color-hot-pink-500);
+  --ts-color-accent-hover: var(--color-hot-pink-600);
+  --ts-color-accent-light: var(--color-hot-pink-400);
+  --ts-color-accent-soft: var(--color-hot-pink-50);
   
   /* Success (Lime - positive, fresh) */
-  --ts-color-success: var(--lime-green-600);
-  --ts-color-success-bg: var(--lime-green-50);
-  --ts-color-success-text: var(--lime-green-700);
+  --ts-color-success: var(--color-lime-green-600);
+  --ts-color-success-bg: var(--color-lime-green-50);
+  --ts-color-success-text: var(--color-lime-green-700);
   
   /* Warning (Yellow - attention without alarm) */
-  --ts-color-warning: var(--cyber-yellow-600);
-  --ts-color-warning-bg: var(--cyber-yellow-50);
+  --ts-color-warning: var(--tiller-cyber-yellow-600);
+  --ts-color-warning-bg: var(--tiller-cyber-yellow-50);
   --ts-color-warning-text: #7c5e10;
   
   /* Error (Hot Pink - visible but not scary) */
   --ts-color-error: #d81b60;
-  --ts-color-error-bg: var(--hot-pink-50);
+  --ts-color-error-bg: var(--color-hot-pink-50);
   --ts-color-error-text: #c2185b;
 
   /* ===========================
@@ -186,7 +186,7 @@
      Clean, modern, lets colors pop
      =========================== */
   
-  --ts-surface-base: var(--cool-gray-50);
+  --ts-surface-base: var(--tiller-cool-gray-50);
   --ts-surface-raised: #ffffff;
   --ts-surface-overlay: rgb(255, 255, 255, 0.95);
   --ts-surface-tinted-teal: rgb(0, 151, 167, 0.05);
@@ -198,22 +198,22 @@
      High contrast for readability
      =========================== */
   
-  --ts-text-primary: var(--cool-gray-900);
-  --ts-text-secondary: var(--cool-gray-700);
-  --ts-text-muted: var(--cool-gray-500);
+  --ts-text-primary: var(--tiller-cool-gray-900);
+  --ts-text-secondary: var(--tiller-cool-gray-700);
+  --ts-text-muted: var(--tiller-cool-gray-500);
   --ts-text-on-color: #ffffff;
-  --ts-text-on-light: var(--cool-gray-900);
+  --ts-text-on-light: var(--tiller-cool-gray-900);
   
   /* ===========================
      🖌️ BORDER & OUTLINE SYSTEM
      Comic book inspired
      =========================== */
   
-  --ts-border-thin: 1px solid var(--cool-gray-200);
-  --ts-border-medium: 2px solid var(--cool-gray-300);
-  --ts-border-thick: 3px solid var(--cool-gray-900);
-  --ts-border-comic: 3px solid var(--cool-gray-900);
-  --ts-border-accent: 2px solid var(--neon-teal-500);
+  --ts-border-thin: 1px solid var(--tiller-cool-gray-200);
+  --ts-border-medium: 2px solid var(--tiller-cool-gray-300);
+  --ts-border-thick: 3px solid var(--tiller-cool-gray-900);
+  --ts-border-comic: 3px solid var(--tiller-cool-gray-900);
+  --ts-border-accent: 2px solid var(--color-neon-teal-500);
   
   /* ===========================
      ✨ SHADOW SYSTEM
@@ -222,16 +222,16 @@
   
   /* Soft shadows (subtle elevation) */
   --shadow-xs: 0 1px 3px rgb(0, 0, 0, 0.08);
-  --shadow-sm: 0 2px 6px rgb(0, 0, 0, 0.10);
-  --shadow-md: 0 4px 12px rgb(0, 0, 0, 0.12);
+  --ts-shadow-soft: 0 2px 6px rgb(0, 0, 0, 0.10);
+  --ts-shadow-soft: 0 4px 12px rgb(0, 0, 0, 0.12);
   
   /* Comic shadows (bold, graphic) */
   --shadow-comic-sm: 
-    3px 3px 0 var(--cool-gray-900);
+    3px 3px 0 var(--tiller-cool-gray-900);
   --shadow-comic-md: 
-    5px 5px 0 var(--cool-gray-900);
+    5px 5px 0 var(--tiller-cool-gray-900);
   --shadow-comic-lg: 
-    8px 8px 0 var(--cool-gray-900);
+    8px 8px 0 var(--tiller-cool-gray-900);
   
   /* Colored glow shadows (90s neon effect) */
   --shadow-glow-teal: 
@@ -271,11 +271,11 @@
   --font-body: "Inter", -apple-system, system-ui, sans-serif;
   --font-mono: "Fira Code", "Courier New", monospace;
   
-  --text-xs: 0.75rem;     /* 12px */
-  --text-sm: 0.875rem;    /* 14px */
-  --text-base: 1rem;      /* 16px */
-  --text-lg: 1.125rem;    /* 18px */
-  --text-xl: 1.25rem;     /* 20px */
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.25rem;     /* 20px */
   --text-2xl: 1.5rem;     /* 24px */
   --text-3xl: 1.875rem;   /* 30px */
   --text-4xl: 2.25rem;    /* 36px */
@@ -309,10 +309,10 @@
      Friendly, approachable curves
      =========================== */
   
-  --radius-sm: 0.25rem;   /* 4px */
-  --radius-md: 0.5rem;    /* 8px */
-  --radius-lg: 0.75rem;   /* 12px */
-  --radius-xl: 1rem;      /* 16px */
+  --ts-radius-sm: 0.25rem;   /* 4px */
+  --ts-radius-md: 0.5rem;    /* 8px */
+  --ts-radius-lg: 0.75rem;   /* 12px */
+  --ts-radius-xl: 1rem;      /* 16px */
   --radius-2xl: 1.5rem;   /* 24px */
   --radius-3xl: 2rem;     /* 32px */
   --radius-full: 9999px;  /* Pill */
@@ -345,9 +345,9 @@
   --container-xl: 1280px;
   --container-2xl: 1536px;
   
-  --container: var(--container-lg);
-  --container-narrow: var(--container-md);
-  --container-wide: var(--container-xl);
+  --container: var(--spacing-container-lg);
+  --container-narrow: var(--spacing-container-md);
+  --container-wide: var(--spacing-container-xl);
 }
 
 /* ===========================
@@ -357,21 +357,21 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --ts-surface-base: var(--cool-gray-900);
-    --ts-surface-raised: var(--cool-gray-800);
-    --ts-text-primary: var(--cool-gray-50);
-    --ts-text-secondary: var(--cool-gray-300);
-    --ts-text-muted: var(--cool-gray-400);
+    --ts-surface-base: var(--tiller-cool-gray-900);
+    --ts-surface-raised: var(--tiller-cool-gray-800);
+    --ts-text-primary: var(--tiller-cool-gray-50);
+    --ts-text-secondary: var(--tiller-cool-gray-300);
+    --ts-text-muted: var(--tiller-cool-gray-400);
     
     /* Vibrant colors stay vibrant in dark mode! */
-    --ts-color-primary: var(--neon-teal-400);
-    --ts-color-secondary: var(--sunset-orange-400);
-    --ts-color-accent: var(--hot-pink-400);
+    --ts-color-primary: var(--color-neon-teal-400);
+    --ts-color-secondary: var(--color-sunset-orange-400);
+    --ts-color-accent: var(--color-hot-pink-400);
     
     /* Comic shadows inverse */
-    --shadow-comic-sm: -3px -3px 0 var(--cool-gray-100);
-    --shadow-comic-md: -5px -5px 0 var(--cool-gray-100);
-    --shadow-comic-lg: -8px -8px 0 var(--cool-gray-100);
+    --shadow-comic-sm: -3px -3px 0 var(--tiller-cool-gray-100);
+    --shadow-comic-md: -5px -5px 0 var(--tiller-cool-gray-100);
+    --shadow-comic-lg: -8px -8px 0 var(--tiller-cool-gray-100);
   }
 }
 
@@ -380,18 +380,18 @@
    Quick access to system
    =========================== */
 
-.gradient-sunrise { background: var(--gradient-sunrise); }
-.gradient-ocean { background: var(--gradient-ocean); }
-.gradient-retro { background: var(--gradient-retro); }
-.gradient-neon { background: var(--gradient-neon); }
+.gradient-sunrise { background: var(--tiller-gradient-sunrise); }
+.gradient-ocean { background: var(--tiller-gradient-ocean); }
+.gradient-retro { background: var(--tiller-gradient-retro); }
+.gradient-neon { background: var(--tiller-gradient-neon); }
 
-.shadow-comic-sm { box-shadow: var(--shadow-comic-sm); }
-.shadow-comic-md { box-shadow: var(--shadow-comic-md); }
-.shadow-comic-lg { box-shadow: var(--shadow-comic-lg); }
+.shadow-comic-sm { box-shadow: var(--color-shadow-comic-sm); }
+.shadow-comic-md { box-shadow: var(--color-shadow-comic-md); }
+.shadow-comic-lg { box-shadow: var(--color-shadow-comic-lg); }
 
-.glow-teal { box-shadow: var(--shadow-glow-teal); }
-.glow-pink { box-shadow: var(--shadow-glow-pink); }
-.glow-orange { box-shadow: var(--shadow-glow-orange); }
+.glow-teal { box-shadow: var(--color-shadow-glow-teal); }
+.glow-pink { box-shadow: var(--color-shadow-glow-pink); }
+.glow-orange { box-shadow: var(--color-shadow-glow-orange); }
 
 .border-comic { border: var(--ts-border-comic); }
 .border-accent { border: var(--ts-border-accent); }
@@ -404,8 +404,8 @@
 /* Halftone dot pattern */
 .halftone-bg {
   background-image: 
-    radial-gradient(circle at 25% 25%, var(--neon-teal-500) 2px, transparent 2px),
-    radial-gradient(circle at 75% 75%, var(--sunset-orange-500) 2px, transparent 2px);
+    radial-gradient(circle at 25% 25%, var(--color-neon-teal-500) 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, var(--color-sunset-orange-500) 2px, transparent 2px);
   background-size: 20px 20px;
   background-position: 0 0, 10px 10px;
 }
@@ -416,14 +416,14 @@
     45deg,
     transparent,
     transparent 10px,
-    var(--neon-teal-500) 10px,
-    var(--neon-teal-500) 12px
+    var(--color-neon-teal-500) 10px,
+    var(--color-neon-teal-500) 12px
   );
 }
 
 /* Neon text effect */
 .text-neon {
-  color: var(--cyber-yellow-500);
+  color: var(--tiller-cyber-yellow-500);
   text-shadow: 
     0 0 10px rgb(255, 235, 59, 0.8),
     0 0 20px rgb(255, 235, 59, 0.6),

@@ -98,52 +98,52 @@
      =========================== */
 
   /* Primary Actions & Brand */
-  --ts-color-primary: var(--brand-teal-600);
-  --ts-color-primary-hover: var(--brand-teal-700);
-  --ts-color-primary-light: var(--brand-teal-400);
-  --ts-color-primary-soft: var(--brand-teal-50);
-  --ts-color-primary-bg: var(--brand-teal-500);
-  --ts-color-primary-bg-hover: var(--brand-teal-600);
-  --ts-color-primary-strong: var(--brand-teal-900);
+  --ts-color-primary: var(--tiller-brand-teal-600);
+  --ts-color-primary-hover: var(--tiller-brand-teal-700);
+  --ts-color-primary-light: var(--tiller-brand-teal-400);
+  --ts-color-primary-soft: var(--tiller-brand-teal-50);
+  --ts-color-primary-bg: var(--tiller-brand-teal-500);
+  --ts-color-primary-bg-hover: var(--tiller-brand-teal-600);
+  --ts-color-primary-strong: var(--tiller-brand-teal-900);
 
   /* Secondary Actions & Warmth */
-  --ts-color-secondary: var(--sunset-500);
-  --ts-color-secondary-hover: var(--sunset-600);
-  --ts-color-secondary-light: var(--sunset-400);
-  --ts-color-secondary-soft: var(--sunset-50);
+  --ts-color-secondary: var(--color-sunset-500);
+  --ts-color-secondary-hover: var(--color-sunset-600);
+  --ts-color-secondary-light: var(--color-sunset-400);
+  --ts-color-secondary-soft: var(--color-sunset-50);
 
   /* Accent & Special Attention */
-  --ts-color-accent: var(--golden-500);
-  --ts-color-accent-hover: var(--golden-600);
-  --ts-color-accent-light: var(--golden-400);
-  --ts-color-accent-soft: var(--golden-50);
-  --ts-color-accent-strong: var(--golden-700);
+  --ts-color-accent: var(--tiller-golden-500);
+  --ts-color-accent-hover: var(--tiller-golden-600);
+  --ts-color-accent-light: var(--tiller-golden-400);
+  --ts-color-accent-soft: var(--tiller-golden-50);
+  --ts-color-accent-strong: var(--tiller-golden-700);
 
   /* Success States */
-  --ts-color-success: var(--success-600);
-  --ts-color-success-bg: var(--success-50);
-  --ts-color-success-text: var(--success-700);
-  --ts-color-success-light: var(--success-500);
+  --ts-color-success: var(--tiller-success-600);
+  --ts-color-success-bg: var(--tiller-success-50);
+  --ts-color-success-text: var(--tiller-success-700);
+  --ts-color-success-light: var(--tiller-success-500);
 
   /* Warning States */
-  --ts-color-warning: var(--attention-600);
-  --ts-color-warning-bg: var(--attention-50);
+  --ts-color-warning: var(--tiller-attention-600);
+  --ts-color-warning-bg: var(--tiller-attention-50);
   --ts-color-warning-text: #92400e;
-  --ts-color-warning-light: var(--attention-500);
+  --ts-color-warning-light: var(--tiller-attention-500);
 
   /* Error States */
-  --ts-color-error: var(--alert-600);
-  --ts-color-error-bg: var(--alert-50);
-  --ts-color-error-text: var(--alert-700);
-  --ts-color-error-dark: var(--alert-700);
+  --ts-color-error: var(--tiller-alert-600);
+  --ts-color-error-bg: var(--tiller-alert-50);
+  --ts-color-error-text: var(--tiller-alert-700);
+  --ts-color-error-dark: var(--tiller-alert-700);
 
   /* ===========================
      📄 SURFACES & BACKGROUNDS
      =========================== */
   
-  --ts-color-bg: var(--slate-50);
+  --ts-color-bg: var(--tiller-slate-50);
   --ts-color-surface: #ffffff;
-  --ts-color-surface-muted: var(--slate-100);
+  --ts-color-surface-muted: var(--tiller-slate-100);
   --ts-color-surface-elevated: #ffffff;
   --ts-color-surface-highlight: #ffffff;
   --ts-color-surface-tinted-teal: rgb(13, 154, 170, 0.04);
@@ -154,26 +154,26 @@
      ✍️ TEXT COLORS
      =========================== */
   
-  --ts-color-text: var(--slate-900);
-  --ts-color-heading: var(--slate-900);
-  --ts-color-muted: var(--slate-600);
-  --ts-color-text-subtle: var(--slate-500);
+  --ts-color-text: var(--tiller-slate-900);
+  --ts-color-heading: var(--tiller-slate-900);
+  --ts-color-muted: var(--tiller-slate-600);
+  --ts-color-text-subtle: var(--tiller-slate-500);
   --ts-text-on-primary: #ffffff;
   --ts-text-on-secondary: #ffffff;
-  --ts-text-on-accent: var(--slate-900);
-  --ts-text-on-light: var(--slate-900);
+  --ts-text-on-accent: var(--tiller-slate-900);
+  --ts-text-on-light: var(--tiller-slate-900);
 
   /* ===========================
      🖌️ BORDERS & DIVIDERS
      =========================== */
   
-  --ts-color-border: var(--slate-200);
-  --ts-color-border-strong: var(--slate-300);
-  --ts-color-divider: var(--slate-200);
-  --ts-border-thin: 1px solid var(--slate-200);
-  --ts-border-medium: 2px solid var(--slate-300);
-  --ts-border-thick: 3px solid var(--slate-700);
-  --ts-border-accent: 2px solid var(--brand-teal-500);
+  --ts-color-border: var(--tiller-slate-200);
+  --ts-color-border-strong: var(--tiller-slate-300);
+  --ts-color-divider: var(--tiller-slate-200);
+  --ts-border-thin: 1px solid var(--tiller-slate-200);
+  --ts-border-medium: 2px solid var(--tiller-slate-300);
+  --ts-border-thick: 3px solid var(--tiller-slate-700);
+  --ts-border-accent: 2px solid var(--tiller-brand-teal-500);
 
   /* ===========================
      🌅 GRADIENT SYSTEMS
@@ -183,23 +183,23 @@
   /* Hero gradient (professional depth) */
   --gradient-hero: linear-gradient(
     135deg,
-    var(--brand-teal-600) 0%,
-    var(--brand-teal-700) 60%,
-    var(--slate-800) 100%
+    var(--tiller-brand-teal-600) 0%,
+    var(--tiller-brand-teal-700) 60%,
+    var(--tiller-slate-800) 100%
   );
 
   /* Warm accent gradient (nostalgic touch) */
   --gradient-warm: linear-gradient(
     135deg,
-    var(--sunset-400) 0%,
-    var(--golden-500) 100%
+    var(--color-sunset-400) 0%,
+    var(--tiller-golden-500) 100%
   );
 
   /* Sunrise gradient (optimistic sections) */
   --gradient-sunrise: linear-gradient(
     90deg,
-    var(--golden-400) 0%,
-    var(--sunset-500) 100%
+    var(--tiller-golden-400) 0%,
+    var(--color-sunset-500) 100%
   );
 
   /* Depth gradient (cards, surfaces) */
@@ -210,9 +210,9 @@
   );
 
   /* Applied gradients */
-  --ts-gradient-primary: var(--gradient-hero);
-  --ts-gradient-accent: var(--gradient-warm);
-  --ts-gradient-section: var(--gradient-depth);
+  --ts-gradient-primary: var(--tiller-gradient-hero);
+  --ts-gradient-accent: var(--tiller-gradient-warm);
+  --ts-gradient-section: var(--tiller-gradient-depth);
   --ts-gradient-surface: none;
 
   /* ===========================
@@ -222,14 +222,14 @@
   
   /* Soft shadows (most common) */
   --shadow-xs: 0 1px 2px rgb(0, 0, 0, 0.05);
-  --shadow-sm: 0 2px 4px rgb(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 8px rgb(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 16px rgb(0, 0, 0, 0.10);
+  --ts-shadow-soft: 0 2px 4px rgb(0, 0, 0, 0.06);
+  --ts-shadow-soft: 0 4px 8px rgb(0, 0, 0, 0.08);
+  --ts-shadow-lift: 0 8px 16px rgb(0, 0, 0, 0.10);
   --shadow-xl: 0 12px 24px rgb(0, 0, 0, 0.12);
 
   /* Cartoon offset (use sparingly for badges/buttons) */
-  --shadow-comic-sm: 3px 3px 0 var(--slate-900);
-  --shadow-comic-md: 5px 5px 0 var(--slate-900);
+  --shadow-comic-sm: 3px 3px 0 var(--tiller-slate-900);
+  --shadow-comic-md: 5px 5px 0 var(--tiller-slate-900);
 
   /* Color glows (subtle brand accents) */
   --shadow-glow-teal: 0 0 20px rgb(13, 154, 170, 0.2);
@@ -239,10 +239,10 @@
   --ts-color-shadow-light: rgb(0, 0, 0, 0.04);
   --ts-color-shadow-medium: rgb(0, 0, 0, 0.08);
   --ts-color-shadow: rgb(0, 0, 0, 0.08);
-  --ts-shadow-soft: var(--shadow-md);
-  --ts-shadow-lift: var(--shadow-lg);
-  --ts-shadow-header: var(--shadow-sm);
-  --ts-shadow-header-scrolled: var(--shadow-md);
+  --ts-shadow-soft: var(--color-shadow-md);
+  --ts-shadow-lift: var(--color-shadow-lg);
+  --ts-shadow-header: var(--color-shadow-sm);
+  --ts-shadow-header-scrolled: var(--color-shadow-md);
   --ts-shadow-glow: 0 0 0 3px rgb(13, 154, 170, 0.25);
   --ts-shadow-glow-accent: 0 0 0 3px rgb(245, 158, 11, 0.25);
 
@@ -318,21 +318,21 @@
      Friendly but professional
      =========================== */
   
-  --radius-sm: 0.375rem;   /* 6px */
-  --radius-base: 0.5rem;   /* 8px */
-  --radius-md: 0.75rem;    /* 12px */
-  --radius-lg: 1rem;       /* 16px */
-  --radius-xl: 1.5rem;     /* 24px */
+  --ts-radius-sm: 0.375rem;   /* 6px */
+  --ts-radius-md: 0.5rem;   /* 8px */
+  --ts-radius-md: 0.75rem;    /* 12px */
+  --ts-radius-lg: 1rem;       /* 16px */
+  --ts-radius-xl: 1.5rem;     /* 24px */
   --radius-2xl: 2rem;      /* 32px */
-  --radius-pill: 9999px;
+  --ts-radius-pill: 9999px;
   --radius-large: 22px;
 
-  --ts-radius-sm: var(--radius-sm);
-  --ts-radius-md: var(--radius-md);
-  --ts-radius-lg: var(--radius-lg);
-  --ts-radius-xl: var(--radius-xl);
-  --ts-radius-pill: var(--radius-pill);
-  --ts-radius-card: var(--radius-lg);
+  --ts-radius-sm: var(--tiller-radius-sm);
+  --ts-radius-md: var(--tiller-radius-md);
+  --ts-radius-lg: var(--tiller-radius-lg);
+  --ts-radius-xl: var(--tiller-radius-xl);
+  --ts-radius-pill: var(--tiller-radius-pill);
+  --ts-radius-card: var(--tiller-radius-lg);
 
   /* ===========================
      ⚡ ANIMATION & TRANSITIONS
@@ -366,11 +366,11 @@
   --layout-max: 1320px;
   --layout-wide: 1440px;
   --layout-narrow: 960px;
-  --shell-width: var(--layout-max);
+  --shell-width: var(--tiller-layout-max);
   --container-gutter: clamp(1rem, 4vw, 2.5rem);
 
   --section-pad-y: clamp(2.5rem, 6vi, 5.25rem);
-  --section-padding-y: var(--section-pad-y);
+  --section-padding-y: var(--spacing-section-pad-y);
   --section-gap: clamp(1.4rem, 2.6vw, 2.6rem);
   
   --card-pad: clamp(1.125rem, 2vi, 1.625rem);
@@ -385,21 +385,21 @@
   --header-bg: rgb(255, 255, 255, 0.95);
   --header-border: rgb(13, 154, 170, 0.18);
 
-  --footer-bg: var(--slate-900);
-  --footer-text: var(--slate-100);
-  --footer-text-muted: var(--slate-400);
-  --footer-link: var(--brand-teal-400);
+  --footer-bg: var(--tiller-slate-900);
+  --footer-text: var(--tiller-slate-100);
+  --footer-text-muted: var(--tiller-slate-400);
+  --footer-link: var(--tiller-brand-teal-400);
   --footer-link-hover: var(--brand-teal-300);
   --footer-border: rgb(203, 213, 225, 0.2);
-  --ts-footer-link: var(--brand-teal-400);
+  --ts-footer-link: var(--tiller-brand-teal-400);
   --ts-footer-link-hover: var(--brand-teal-300);
-  --ts-footer-success: var(--success-100);
+  --ts-footer-success: var(--tiller-success-100);
 
   /* ===========================
      🎭 HERO SECTION
      =========================== */
   
-  --hero-bg: var(--gradient-hero);
+  --hero-bg: var(--tiller-gradient-hero);
   --hero-text: #ffffff;
   --hero-text-muted: rgb(255, 255, 255, 0.85);
 
@@ -458,41 +458,41 @@
   --bg-pattern-size: var(--ts-bg-pattern-size);
   --bg-pattern-opacity: var(--ts-bg-pattern-opacity);
 
-  --radius-md: var(--ts-radius-md);
-  --radius-lg: var(--ts-radius-lg);
-  --radius-xl: var(--ts-radius-xl);
+  --ts-radius-md: var(--ts-radius-md);
+  --ts-radius-lg: var(--ts-radius-lg);
+  --ts-radius-xl: var(--ts-radius-xl);
 
   /* ===========================
      🎨 EMERALD LEGACY SUPPORT
      Map to new teal system
      =========================== */
   
-  --emerald-600: var(--brand-teal-600);
-  --emerald-700: var(--brand-teal-700);
-  --ts-emerald: var(--brand-teal-500);
-  --ts-emerald-soft: var(--brand-teal-400);
-  --ts-emerald-deep: var(--brand-teal-700);
-  --ts-emerald-text: var(--brand-teal-900);
+  --emerald-600: var(--tiller-brand-teal-600);
+  --emerald-700: var(--tiller-brand-teal-700);
+  --ts-emerald: var(--tiller-brand-teal-500);
+  --ts-emerald-soft: var(--tiller-brand-teal-400);
+  --ts-emerald-deep: var(--tiller-brand-teal-700);
+  --ts-emerald-text: var(--tiller-brand-teal-900);
 
   /* Gold mapped to new golden system */
-  --ts-gold: var(--golden-500);
-  --ts-gold-soft: var(--golden-400);
+  --ts-gold: var(--tiller-golden-500);
+  --ts-gold-soft: var(--tiller-golden-400);
 
   /* Stone/Ink mapped to slate */
-  --stone-50: var(--slate-50);
-  --stone-100: var(--slate-100);
-  --stone-200: var(--slate-200);
-  --ink-900: var(--slate-900);
-  --ink-700: var(--slate-700);
-  --ts-stone: var(--slate-700);
-  --ts-stone-warm: var(--slate-600);
-  --ts-stone-cool: var(--slate-500);
-  --ts-ink: var(--slate-900);
+  --stone-50: var(--tiller-slate-50);
+  --stone-100: var(--tiller-slate-100);
+  --stone-200: var(--tiller-slate-200);
+  --ink-900: var(--tiller-slate-900);
+  --ink-700: var(--tiller-slate-700);
+  --ts-stone: var(--tiller-slate-700);
+  --ts-stone-warm: var(--tiller-slate-600);
+  --ts-stone-cool: var(--tiller-slate-500);
+  --ts-ink: var(--tiller-slate-900);
   --ts-white: #ffffff;
 
   /* Parchment mapped to warm surfaces */
-  --ts-parchment: var(--slate-50);
-  --ts-parchment-deep: var(--slate-100);
+  --ts-parchment: var(--tiller-slate-50);
+  --ts-parchment-deep: var(--tiller-slate-100);
 }
 
 /* ===========================
@@ -500,28 +500,28 @@
    Quick access to hybrid system
    =========================== */
 
-.gradient-hero { background: var(--gradient-hero); }
-.gradient-warm { background: var(--gradient-warm); }
-.gradient-sunrise { background: var(--gradient-sunrise); }
+.gradient-hero { background: var(--tiller-gradient-hero); }
+.gradient-warm { background: var(--tiller-gradient-warm); }
+.gradient-sunrise { background: var(--tiller-gradient-sunrise); }
 
-.shadow-soft { box-shadow: var(--shadow-md); }
-.shadow-lift { box-shadow: var(--shadow-lg); }
-.shadow-comic-sm { box-shadow: var(--shadow-comic-sm); }
-.shadow-comic-md { box-shadow: var(--shadow-comic-md); }
+.shadow-soft { box-shadow: var(--color-shadow-md); }
+.shadow-lift { box-shadow: var(--color-shadow-lg); }
+.shadow-comic-sm { box-shadow: var(--color-shadow-comic-sm); }
+.shadow-comic-md { box-shadow: var(--color-shadow-comic-md); }
 
-.glow-teal { box-shadow: var(--shadow-glow-teal); }
-.glow-warm { box-shadow: var(--shadow-glow-warm); }
+.glow-teal { box-shadow: var(--color-shadow-glow-teal); }
+.glow-warm { box-shadow: var(--color-shadow-glow-warm); }
 
 .border-accent { border: var(--ts-border-accent); }
 .border-thick { border: var(--ts-border-thick); }
 
-.text-teal { color: var(--brand-teal-600); }
-.text-warm { color: var(--sunset-500); }
-.text-golden { color: var(--golden-500); }
+.text-teal { color: var(--tiller-brand-teal-600); }
+.text-warm { color: var(--color-sunset-500); }
+.text-golden { color: var(--tiller-golden-500); }
 
-.bg-teal-soft { background: var(--brand-teal-50); }
-.bg-warm-soft { background: var(--sunset-50); }
-.bg-golden-soft { background: var(--golden-50); }
+.bg-teal-soft { background: var(--tiller-brand-teal-50); }
+.bg-warm-soft { background: var(--color-sunset-50); }
+.bg-golden-soft { background: var(--tiller-golden-50); }
 
 /* ============================================
    🎉 END OF HYBRID DESIGN SYSTEM

@@ -128,7 +128,7 @@
 
   &:hover,
   &:focus {
-   background: var(--gradient-primary, linear-gradient(90deg, #1fbf7a 0%, #d6b45b 100%));
+   background: var(--tiller-gradient-primary, linear-gradient(90deg, #1fbf7a 0%, #d6b45b 100%));
    color: #ffffff;
    border-color: var(--color-accent, #d6b45b);
    outline: none;

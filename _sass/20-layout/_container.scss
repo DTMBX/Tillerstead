@@ -217,7 +217,7 @@
   .grid-parent {
    display: grid;
    grid-template-columns: repeat(12, 1fr);
-   gap: var(--gutter);
+   gap: var(--spacing-gutter);
   }
 
   .grid-child {

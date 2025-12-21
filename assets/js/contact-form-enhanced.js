@@ -227,7 +227,7 @@
 
     try {
       // Submit form (adjust endpoint as needed)
-      const formData = new FormData(form);
+      const _formData = new FormData(form);
 
       // For now, simulate success (replace with actual submission)
       await new Promise(resolve => setTimeout(resolve, 1500));

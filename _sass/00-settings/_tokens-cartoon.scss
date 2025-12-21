@@ -66,9 +66,9 @@
      Clean, graphic, cel-animation inspired
      =========================== */
   
-  --surface-paper: var(--cartoon-off-white);
-  --surface-white: var(--cartoon-white);
-  --surface-cream: var(--cartoon-cream);
+  --surface-paper: var(--tiller-cartoon-off-white);
+  --surface-white: var(--tiller-cartoon-white);
+  --surface-cream: var(--tiller-cartoon-cream);
   --surface-blue-tint: #E3F2FD;     /* Light blue wash */
   --surface-yellow-tint: #FFF9C4;   /* Light yellow wash */
   
@@ -81,18 +81,18 @@
      Bold, readable, graphic
      =========================== */
   
-  --text-primary: var(--cartoon-black);
-  --text-secondary: var(--cartoon-gray-dark);
-  --text-muted: var(--cartoon-gray);
-  --text-on-blue: var(--cartoon-white);
-  --text-on-red: var(--cartoon-white);
-  --text-on-yellow: var(--cartoon-black);
+  --ts-color-text: var(--tiller-cartoon-black);
+  --ts-color-muted: var(--tiller-cartoon-gray-dark);
+  --text-muted: var(--tiller-cartoon-gray);
+  --text-on-blue: var(--tiller-cartoon-white);
+  --text-on-red: var(--tiller-cartoon-white);
+  --text-on-yellow: var(--tiller-cartoon-black);
   
   /* Classic thick outlines */
   --outline-thick: 4px;
   --outline-medium: 3px;
   --outline-thin: 2px;
-  --outline-color: var(--cartoon-black);
+  --outline-color: var(--tiller-cartoon-black);
 
   /* ===========================
      🎨 SEMANTIC MAPPING
@@ -100,33 +100,33 @@
      =========================== */
   
   /* Primary Brand (Blue - trustworthy, professional) */
-  --ts-color-primary: var(--cartoon-blue);
-  --ts-color-primary-hover: var(--cartoon-blue-dark);
-  --ts-color-primary-light: var(--cartoon-blue-light);
-  --ts-color-primary-surface: var(--surface-blue-tint);
+  --ts-color-primary: var(--tiller-cartoon-blue);
+  --ts-color-primary-hover: var(--tiller-cartoon-blue-dark);
+  --ts-color-primary-light: var(--tiller-cartoon-blue-light);
+  --ts-color-primary-surface: var(--tiller-surface-blue-tint);
   
   /* Secondary Brand (Red - action, energy, urgency) */
-  --ts-color-secondary: var(--cartoon-red);
-  --ts-color-secondary-hover: var(--cartoon-red-dark);
-  --ts-color-secondary-light: var(--cartoon-red-light);
+  --ts-color-secondary: var(--tiller-cartoon-red);
+  --ts-color-secondary-hover: var(--tiller-cartoon-red-dark);
+  --ts-color-secondary-light: var(--tiller-cartoon-red-light);
   
   /* Accent (Yellow - attention, highlight, value) */
-  --ts-color-accent: var(--cartoon-yellow);
-  --ts-color-accent-hover: var(--cartoon-yellow-dark);
-  --ts-color-accent-light: var(--cartoon-yellow-light);
-  --ts-color-accent-surface: var(--surface-yellow-tint);
+  --ts-color-accent: var(--tiller-cartoon-yellow);
+  --ts-color-accent-hover: var(--tiller-cartoon-yellow-dark);
+  --ts-color-accent-light: var(--tiller-cartoon-yellow-light);
+  --ts-color-accent-surface: var(--tiller-surface-yellow-tint);
   
   /* Success (Green - positive, done, fresh) */
-  --ts-color-success: var(--cartoon-green);
-  --ts-color-success-dark: var(--cartoon-green-dark);
-  --ts-color-success-light: var(--cartoon-green-light);
+  --ts-color-success: var(--tiller-cartoon-green);
+  --ts-color-success-dark: var(--tiller-cartoon-green-dark);
+  --ts-color-success-light: var(--tiller-cartoon-green-light);
   
   /* Warning/Alert (Yellow/Orange) */
-  --ts-color-warning: var(--retro-orange);
+  --ts-color-warning: var(--tiller-retro-orange);
   --ts-color-warning-light: #FFE0B2;
   
   /* Error (Red) */
-  --ts-color-error: var(--cartoon-red);
+  --ts-color-error: var(--tiller-cartoon-red);
   --ts-color-error-light: #FFEBEE;
 
   /* ===========================
@@ -137,29 +137,29 @@
   /* Sky gradient (classic cartoon backdrop) */
   --gradient-sky: linear-gradient(
     180deg,
-    var(--cartoon-blue-light) 0%,
-    var(--cartoon-blue) 100%
+    var(--tiller-cartoon-blue-light) 0%,
+    var(--tiller-cartoon-blue) 100%
   );
   
   /* Sunset gradient (dramatic, vintage) */
   --gradient-sunset: linear-gradient(
     180deg,
-    var(--cartoon-yellow) 0%,
-    var(--retro-orange) 100%
+    var(--tiller-cartoon-yellow) 0%,
+    var(--tiller-retro-orange) 100%
   );
   
   /* Bold diagonal (graphic punch) */
   --gradient-diagonal-blue: linear-gradient(
     135deg,
-    var(--cartoon-blue-light) 0%,
-    var(--cartoon-blue-dark) 100%
+    var(--tiller-cartoon-blue-light) 0%,
+    var(--tiller-cartoon-blue-dark) 100%
   );
   
   /* Bold diagonal red (energy) */
   --gradient-diagonal-red: linear-gradient(
     135deg,
-    var(--cartoon-red-light) 0%,
-    var(--cartoon-red-dark) 100%
+    var(--tiller-cartoon-red-light) 0%,
+    var(--tiller-cartoon-red-dark) 100%
   );
 
   /* ===========================
@@ -171,7 +171,7 @@
   --radius-cartoon: 8px;
   --radius-cartoon-lg: 16px;
   --radius-cartoon-xl: 24px;
-  --radius-pill: 9999px;
+  --ts-radius-pill: 9999px;
   
   /* Speech bubble specific */
   --radius-bubble: 16px 16px 16px 4px;
@@ -182,10 +182,10 @@
      =========================== */
   
   /* Classic offset shadow (animation cel style) */
-  --shadow-cel-sm: 3px 3px 0 var(--cartoon-black);
-  --shadow-cel-md: 5px 5px 0 var(--cartoon-black);
-  --shadow-cel-lg: 8px 8px 0 var(--cartoon-black);
-  --shadow-cel-xl: 12px 12px 0 var(--cartoon-black);
+  --shadow-cel-sm: 3px 3px 0 var(--tiller-cartoon-black);
+  --shadow-cel-md: 5px 5px 0 var(--tiller-cartoon-black);
+  --shadow-cel-lg: 8px 8px 0 var(--tiller-cartoon-black);
+  --shadow-cel-xl: 12px 12px 0 var(--tiller-cartoon-black);
   
   /* Soft shadow (modern touch) */
   --shadow-soft: 0 2px 8px rgb(0, 0, 0, 0.1);
@@ -204,11 +204,11 @@
   --font-mono: "Courier New", monospace;
   
   /* Sizes */
-  --text-xs: 0.75rem;     /* 12px */
-  --text-sm: 0.875rem;    /* 14px */
-  --text-base: 1rem;      /* 16px */
-  --text-lg: 1.125rem;    /* 18px */
-  --text-xl: 1.25rem;     /* 20px */
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.25rem;     /* 20px */
   --text-2xl: 1.5rem;     /* 24px */
   --text-3xl: 1.875rem;   /* 30px */
   --text-4xl: 2.25rem;    /* 36px */
@@ -271,7 +271,7 @@
   --container-md: 768px;
   --container-lg: 1024px;
   --container-xl: 1280px;
-  --container: var(--container-lg);
+  --container: var(--spacing-container-lg);
 }
 
 /* ===========================
@@ -279,31 +279,31 @@
    =========================== */
 
 /* Gradients */
-.gradient-sky { background: var(--gradient-sky); }
-.gradient-sunset { background: var(--gradient-sunset); }
-.gradient-blue { background: var(--gradient-diagonal-blue); }
-.gradient-red { background: var(--gradient-diagonal-red); }
+.gradient-sky { background: var(--tiller-gradient-sky); }
+.gradient-sunset { background: var(--tiller-gradient-sunset); }
+.gradient-blue { background: var(--tiller-gradient-diagonal-blue); }
+.gradient-red { background: var(--tiller-gradient-diagonal-red); }
 
 /* Shadows */
-.shadow-cel-sm { box-shadow: var(--shadow-cel-sm); }
-.shadow-cel-md { box-shadow: var(--shadow-cel-md); }
-.shadow-cel-lg { box-shadow: var(--shadow-cel-lg); }
-.shadow-cel-xl { box-shadow: var(--shadow-cel-xl); }
+.shadow-cel-sm { box-shadow: var(--color-shadow-cel-sm); }
+.shadow-cel-md { box-shadow: var(--color-shadow-cel-md); }
+.shadow-cel-lg { box-shadow: var(--color-shadow-cel-lg); }
+.shadow-cel-xl { box-shadow: var(--color-shadow-cel-xl); }
 
 /* Text styles */
 .text-cartoon { font-family: var(--font-display); }
 
 .text-outline {
   text-shadow:
-    -2px -2px 0 var(--outline-color),
-    2px -2px 0 var(--outline-color),
-    -2px 2px 0 var(--outline-color),
-    2px 2px 0 var(--outline-color);
+    -2px -2px 0 var(--tiller-outline-color),
+    2px -2px 0 var(--tiller-outline-color),
+    -2px 2px 0 var(--tiller-outline-color),
+    2px 2px 0 var(--tiller-outline-color);
 }
 
 /* Borders */
-.border-cartoon { border: var(--outline-medium) solid var(--outline-color); }
-.border-cartoon-thick { border: var(--outline-thick) solid var(--outline-color); }
+.border-cartoon { border: var(--tiller-outline-medium) solid var(--tiller-outline-color); }
+.border-cartoon-thick { border: var(--tiller-outline-thick) solid var(--tiller-outline-color); }
 
 /* ===========================
    🎭 SPECIAL EFFECTS
@@ -312,7 +312,7 @@
 /* Halftone pattern (Ben-Day dots, vintage comic) */
 .halftone-pattern {
   background-image: 
-    radial-gradient(circle, var(--cartoon-black) 1.5px, transparent 1.5px);
+    radial-gradient(circle, var(--tiller-cartoon-black) 1.5px, transparent 1.5px);
   background-size: 8px 8px;
   opacity: 0.1;
 }
@@ -323,8 +323,8 @@
     0deg,
     transparent,
     transparent 8px,
-    var(--cartoon-black) 8px,
-    var(--cartoon-black) 10px
+    var(--tiller-cartoon-black) 8px,
+    var(--tiller-cartoon-black) 10px
   );
   opacity: 0.1;
 }
@@ -333,8 +333,8 @@
 .starburst-bg {
   background-image: repeating-conic-gradient(
     from 0deg,
-    var(--cartoon-yellow) 0deg 5deg,
-    var(--cartoon-yellow-light) 5deg 10deg
+    var(--tiller-cartoon-yellow) 0deg 5deg,
+    var(--tiller-cartoon-yellow-light) 5deg 10deg
   );
 }
 

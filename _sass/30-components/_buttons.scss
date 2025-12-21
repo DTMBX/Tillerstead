@@ -22,9 +22,9 @@
   text-decoration: none;
   position: relative;
   white-space: nowrap;
-  transition: background var(--transition-fast), color var(--transition-fast), 
-          border-color var(--transition-fast), transform var(--transition-fast),
-          box-shadow var(--transition-fast);
+  transition: background var(--tiller-transition-fast), color var(--tiller-transition-fast), 
+          border-color var(--tiller-transition-fast), transform var(--tiller-transition-fast),
+          box-shadow var(--tiller-transition-fast);
   min-inline-size: 2.5em;
   min-block-size: 2.5em;
   user-select: none;
@@ -45,7 +45,7 @@
 .button:focus-visible {
   outline: 2.5px solid var(--ts-color-primary);
   outline-offset: 4px;
-  box-shadow: var(--focus-ring);
+  box-shadow: var(--tiller-focus-ring);
   z-index: 2;
 }
 
@@ -69,7 +69,7 @@
 .btn--primary {
   background: var(--ts-color-primary-bg);
   color: var(--ts-white);
-  box-shadow: 0 10px 24px var(--shadow-soft);
+  box-shadow: 0 10px 24px var(--color-shadow-soft);
   position: relative;
   overflow: hidden;
 }
@@ -79,7 +79,7 @@
 .btn--primary:hover:not(:disabled),
 .btn--primary:focus-visible {
   background: var(--ts-color-primary-bg-hover);
-  box-shadow: 0 12px 28px var(--shadow-soft), 0 0 0 3px rgb(13, 154, 170, 0.2);
+  box-shadow: 0 12px 28px var(--color-shadow-soft), 0 0 0 3px rgb(13, 154, 170, 0.2);
 }
 
 /* Secondary — outlined, for less prominent actions */
@@ -99,7 +99,7 @@
   background: var(--ts-color-primary-soft);
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform var(--transition-fast);
+  transition: transform var(--tiller-transition-fast);
   z-index: -1;
 }
 
@@ -125,7 +125,7 @@
   background: transparent;
   color: var(--ts-color-heading);
   border: 1.5px solid var(--ts-color-border);
-  box-shadow: 0 2px 10px var(--shadow-soft);
+  box-shadow: 0 2px 10px var(--color-shadow-soft);
   position: relative;
   overflow: hidden;
 }
@@ -136,7 +136,7 @@
 .btn--accent:focus-visible {
   border-color: var(--ts-color-primary);
   background: var(--ts-color-surface-highlight);
-  box-shadow: 0 4px 12px var(--shadow-soft);
+  box-shadow: 0 4px 12px var(--color-shadow-soft);
 }
 
 /* Ghost/Outline — minimal, for low-priority or tertiary actions */
@@ -160,7 +160,7 @@
   inset: 0;
   background: var(--ts-color-primary-soft);
   transform: scale(0);
-  transition: transform var(--transition-fast);
+  transition: transform var(--tiller-transition-fast);
   z-index: -1;
   border-radius: inherit;
 }
@@ -260,11 +260,11 @@
 /* Pulse animation for primary CTAs */
 @keyframes btn-pulse {
   0%, 100% {
-    box-shadow: 0 10px 24px var(--shadow-soft);
+    box-shadow: 0 10px 24px var(--color-shadow-soft);
   }
 
   50% {
-    box-shadow: 0 10px 24px var(--shadow-soft), 0 0 0 4px rgb(13, 154, 170, 0.15);
+    box-shadow: 0 10px 24px var(--color-shadow-soft), 0 0 0 4px rgb(13, 154, 170, 0.15);
   }
 }
 
@@ -303,7 +303,7 @@
 /* Icon animations */
 .btn-icon svg,
 .btn .btn-icon {
-  transition: transform var(--transition-fast);
+  transition: transform var(--tiller-transition-fast);
 }
 
 .btn:hover:not(:disabled) .btn-icon {

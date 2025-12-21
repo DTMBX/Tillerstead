@@ -49,7 +49,7 @@ select {
   border: 1px solid var(--ts-color-border);
   border-radius: var(--ts-radius-sm);
   box-sizing: border-box;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: border-color var(--tiller-transition-fast), box-shadow var(--tiller-transition-fast);
   min-block-size: 44px; /* WCAG/ADA minimum touch target */
 }
 

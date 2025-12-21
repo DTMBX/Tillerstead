@@ -1,0 +1,18 @@
+# Common undefined variables → Existing prefixed variables mapping
+--space-xs → --ts-spacing-xs
+--space-sm → --ts-spacing-sm
+--space-md → --ts-spacing-md
+--space-lg → --ts-spacing-lg
+--space-xl → --ts-spacing-xl
+--surface → --ts-color-surface
+--border → --ts-color-border
+--text-sm → --font-size-sm
+--text-base → --font-size-base
+--text-secondary → --ts-color-muted
+--accent → --ts-color-accent
+--ease-out → --tiller-transition-fast
+--shadow-sm → --ts-shadow-soft
+--shadow-md → --ts-shadow-soft
+--shadow-lg → --ts-shadow-lift
+--radius-lg → --ts-radius-lg
+--surface-dim → --ts-color-surface-muted

@@ -16,7 +16,7 @@
   padding: var(--space-5) var(--space-6);
   box-shadow: var(--shadow-cel-md);
   font-family: var(--font-cartoon);
-  font-size: var(--text-lg);
+  font-size: var(--font-size-lg);
   font-weight: var(--font-semibold);
   max-width: 400px;
   line-height: 1.4;
@@ -58,7 +58,7 @@
   font-weight: var(--font-black);
   font-size: clamp(2rem, 5vw, 4rem);
   color: var(--cartoon-white);
-  background: var(--cartoon-red);
+  background: var(--tiller-cartoon-red);
   border: var(--outline-thick) solid var(--cartoon-black);
   padding: var(--space-4) var(--space-8);
   text-transform: uppercase;
@@ -76,18 +76,18 @@
   );
 }
 
-.action-word.pow { background: var(--cartoon-yellow); color: var(--cartoon-black); }
-.action-word.wham { background: var(--cartoon-red); }
+.action-word.pow { background: var(--tiller-cartoon-yellow); color: var(--cartoon-black); }
+.action-word.wham { background: var(--tiller-cartoon-red); }
 .action-word.boom { background: var(--retro-orange); }
-.action-word.zap { background: var(--cartoon-blue); }
+.action-word.zap { background: var(--tiller-cartoon-blue); }
 
 /* Small action badges */
 .badge-action {
   display: inline-block;
   font-family: var(--font-display);
   font-weight: var(--font-black);
-  font-size: var(--text-sm);
-  background: var(--cartoon-yellow);
+  font-size: var(--font-size-sm);
+  background: var(--tiller-cartoon-yellow);
   color: var(--cartoon-black);
   border: var(--outline-medium) solid var(--cartoon-black);
   padding: var(--space-2) var(--space-4);
@@ -133,7 +133,7 @@
 
 /* Yellow variant */
 .card-cartoon-yellow {
-  background: var(--cartoon-yellow);
+  background: var(--tiller-cartoon-yellow);
   color: var(--text-on-yellow);
   border-color: var(--cartoon-yellow-darker);
 }
@@ -145,11 +145,11 @@
 .btn-cartoon {
   font-family: var(--font-display);
   font-weight: var(--font-black);
-  font-size: var(--text-lg);
+  font-size: var(--font-size-lg);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: var(--space-4) var(--space-8);
-  background: var(--cartoon-blue);
+  background: var(--tiller-cartoon-blue);
   color: var(--text-on-blue);
   border: var(--outline-thick) solid var(--cartoon-black);
   border-radius: var(--radius-cartoon);
@@ -173,25 +173,25 @@
 
 /* Button variants */
 .btn-cartoon-blue {
-  background: var(--cartoon-blue);
+  background: var(--tiller-cartoon-blue);
   color: var(--text-on-blue);
 }
 
 .btn-cartoon-blue:hover {
-  background: var(--cartoon-blue-dark);
+  background: var(--tiller-cartoon-blue-dark);
 }
 
 .btn-cartoon-red {
-  background: var(--cartoon-red);
+  background: var(--tiller-cartoon-red);
   color: var(--text-on-red);
 }
 
 .btn-cartoon-red:hover {
-  background: var(--cartoon-red-dark);
+  background: var(--tiller-cartoon-red-dark);
 }
 
 .btn-cartoon-yellow {
-  background: var(--cartoon-yellow);
+  background: var(--tiller-cartoon-yellow);
   color: var(--text-on-yellow);
 }
 
@@ -200,12 +200,12 @@
 }
 
 .btn-cartoon-green {
-  background: var(--cartoon-green);
+  background: var(--tiller-cartoon-green);
   color: var(--cartoon-white);
 }
 
 .btn-cartoon-green:hover {
-  background: var(--cartoon-green-dark);
+  background: var(--tiller-cartoon-green-dark);
 }
 
 /* Size variants */
@@ -215,7 +215,7 @@
 }
 
 .btn-cartoon-sm {
-  font-size: var(--text-base);
+  font-size: var(--font-size-base);
   padding: var(--space-3) var(--space-6);
   border-width: 3px;
 }
@@ -270,7 +270,7 @@
 
 .hero-cartoon-subtitle {
   font-family: var(--font-cartoon);
-  font-size: var(--text-xl);
+  font-size: var(--font-size-xl);
   color: var(--cartoon-white);
   font-weight: var(--font-semibold);
   text-shadow: 2px 2px 0 var(--cartoon-black);
@@ -289,29 +289,29 @@
   gap: var(--space-2);
   font-family: var(--font-display);
   font-weight: var(--font-black);
-  font-size: var(--text-sm);
+  font-size: var(--font-size-sm);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: var(--space-2) var(--space-4);
-  background: var(--cartoon-yellow);
+  background: var(--tiller-cartoon-yellow);
   color: var(--cartoon-black);
   border: var(--outline-medium) solid var(--cartoon-black);
-  border-radius: var(--radius-pill);
+  border-radius: var(--ts-radius-pill);
   box-shadow: var(--shadow-cel-sm);
 }
 
 .badge-cartoon-blue {
-  background: var(--cartoon-blue);
+  background: var(--tiller-cartoon-blue);
   color: var(--cartoon-white);
 }
 
 .badge-cartoon-red {
-  background: var(--cartoon-red);
+  background: var(--tiller-cartoon-red);
   color: var(--cartoon-white);
 }
 
 .badge-cartoon-green {
-  background: var(--cartoon-green);
+  background: var(--tiller-cartoon-green);
   color: var(--cartoon-white);
 }
 
@@ -327,8 +327,8 @@
 .section-eyebrow {
   font-family: var(--font-display);
   font-weight: var(--font-bold);
-  font-size: var(--text-base);
-  color: var(--cartoon-blue);
+  font-size: var(--font-size-base);
+  color: var(--tiller-cartoon-blue);
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: var(--space-3);
@@ -352,8 +352,8 @@
 
 .section-subtitle {
   font-family: var(--font-cartoon);
-  font-size: var(--text-xl);
-  color: var(--text-secondary);
+  font-size: var(--font-size-xl);
+  color: var(--ts-color-muted);
   font-weight: var(--font-semibold);
   max-width: 700px;
   margin: 0 auto var(--space-8);
@@ -370,7 +370,7 @@
   position: absolute;
   width: 80px;
   height: 80px;
-  background: var(--cartoon-yellow);
+  background: var(--tiller-cartoon-yellow);
   border: var(--outline-medium) solid var(--cartoon-black);
   clip-path: polygon(
     50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
@@ -438,7 +438,7 @@
   }
   
   .btn-cartoon {
-    font-size: var(--text-base);
+    font-size: var(--font-size-base);
     padding: var(--space-3) var(--space-6);
   }
   

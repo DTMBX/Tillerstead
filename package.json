@@ -5,6 +5,7 @@
     "Performance: Formatter and linters ensure minimal bundle size by avoiding stray assets and whitespace.",
     "Safety: Dependencies are pinned to exact versions to avoid supply-chain surprises."
   ],
+  "type": "module",
   "private": true,
   "scripts": {
     "jekyll": "ruby vendor/gems/jekyll/bin/jekyll",
