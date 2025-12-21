@@ -100,6 +100,12 @@
 
 .footer-social {
   margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  
+  .social-links__list {
+    justify-content: center;
+  }
 }
 
 .footer-address {

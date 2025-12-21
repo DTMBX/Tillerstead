@@ -1,13 +1,13 @@
 hero:
   eyebrow: "Licensed NJ HIC #13VH10808800 · TCNA 2024 Compliant"
   title: "Tile Is My Craft. Precision Is My Obsession."
-  subtitle: "Where Engineering Meets Artistry—Every Project, Every Detail"
-  summary: "I don't just install tile—I engineer assemblies that survive South Jersey's humidity, temperature swings, and decades of daily use. Because your investment deserves more than 'good enough.'"
+  subtitle: "TCNA-certified tilework and code-compliant bathroom remodeling"
+  summary: "I don't just install tile—I engineer assemblies that survive South Jersey's humidity, temperature swings, and decades of daily use. Every substrate verified. Every waterproof layer flood-tested. Every detail documented."
   primary:
-    label: "See How I Work"
+    label: "View My Work"
     url: /portfolio/
   secondary:
-    label: "Let's Talk Tile"
+    label: "Request Estimate"
     url: /contact/
   facts:
     - icon: "badge"
@@ -20,16 +20,16 @@ hero:
       label: "South Jersey"
       text: "Atlantic, Ocean, Cape May"
   highlights:
-    - "Every substrate measured to 1/8\" flatness (because tile won't forgive what you ignore)"
+    - "Substrates measured to 1/8\" flatness—because tile won't forgive what you ignore"
     - "Waterproofing flood-tested before a single tile goes down"
-    - "47 photos per project—documentation you can show your insurance or lender"
-    - "Large-format tile? 95% thinset coverage or I start over"
+    - "47+ photos per project—documentation you can show your insurance or lender"
+    - "Large-format tile with 95% thinset coverage—no voids, no hollow sounds"
 
 services:
-  eyebrow: "The Science Behind Beautiful Tile (Yeah, I'm That Guy)"
+  eyebrow: "Expert Execution—From Foundation to Finish"
   title: "Why Tile? Because It's the Only Finish That Gets Better With Age"
   summary: "Tile isn't trendy—it's timeless. It survived the Romans, it'll survive your kids. But only if it's installed with the right substrate prep, waterproofing, and mortar coverage. That's where I come in: licensed, obsessed, and slightly nerdy about deflection limits."
-  real_talk: "Real Talk: I measure substrates with a level, not my eyes. I flood-test waterproofing because hoping it doesn't leak isn't a strategy. And yes, I take 47 photos per project—because if you're investing this much, you deserve proof it was done right."
+  real_talk: "Real Talk: I measure substrates with a level, not my eyes. I flood-test waterproofing because hoping it doesn't leak isn't a strategy. And yes, I take 47+ photos per project—because if you're investing this much, you deserve proof it was done right."
   cards:
     - icon: tile
       title: "Tile That Actually Lasts (Not Just Looks Good)"
