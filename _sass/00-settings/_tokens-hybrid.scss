@@ -350,7 +350,7 @@
   --tiller-transition-fast: 160ms ease;
   --tiller-transition-med: 240ms ease;
 
-  --focus-ring: 0 0 0 3px rgb(13, 154, 170, 0.35);
+  --tiller-focus-ring: 0 0 0 3px rgb(13, 154, 170, 0.35);
 
   /* ===========================
      📐 LAYOUT & CONTAINERS
@@ -374,23 +374,23 @@
   --spacing-section-gap: clamp(1.4rem, 2.6vw, 2.6rem);
   
   --spacing-card-pad: clamp(1.125rem, 2vi, 1.625rem);
-  --gutter: clamp(1.5rem, 3.5vi, 2.5rem);
-  --grid-gap: clamp(1.5rem, 3vi, 2.5rem);
-  --header-height: 76px;
+  --spacing-gutter: clamp(1.5rem, 3.5vi, 2.5rem);
+  --spacing-grid-gap: clamp(1.5rem, 3vi, 2.5rem);
+  --tiller-header-height: 76px;
 
   /* ===========================
      🎪 HEADER & FOOTER
      =========================== */
   
-  --header-bg: rgb(255, 255, 255, 0.95);
-  --header-border: rgb(13, 154, 170, 0.18);
+  --tiller-header-bg: rgb(255, 255, 255, 0.95);
+  --tiller-header-border: rgb(13, 154, 170, 0.18);
 
-  --footer-bg: var(--tiller-slate-900);
-  --footer-text: var(--tiller-slate-100);
-  --footer-text-muted: var(--tiller-slate-400);
-  --footer-link: var(--tiller-brand-teal-400);
-  --footer-link-hover: var(--color-brand-teal-300);
-  --footer-border: rgb(203, 213, 225, 0.2);
+  --tiller-footer-bg: var(--tiller-slate-900);
+  --tiller-footer-text: var(--tiller-slate-100);
+  --tiller-footer-text-muted: var(--tiller-slate-400);
+  --tiller-footer-link: var(--tiller-brand-teal-400);
+  --tiller-footer-link-hover: var(--color-brand-teal-300);
+  --tiller-footer-border: rgb(203, 213, 225, 0.2);
   --ts-footer-link: var(--tiller-brand-teal-400);
   --ts-footer-link-hover: var(--color-brand-teal-300);
   --ts-footer-success: var(--tiller-success-100);
@@ -467,8 +467,8 @@
      Map to new teal system
      =========================== */
   
-  --emerald-600: var(--tiller-brand-teal-600);
-  --emerald-700: var(--tiller-brand-teal-700);
+  --color-emerald-600: var(--tiller-brand-teal-600);
+  --color-emerald-700: var(--tiller-brand-teal-700);
   --ts-emerald: var(--tiller-brand-teal-500);
   --ts-emerald-soft: var(--tiller-brand-teal-400);
   --ts-emerald-deep: var(--tiller-brand-teal-700);
@@ -479,11 +479,11 @@
   --ts-gold-soft: var(--tiller-golden-400);
 
   /* Stone/Ink mapped to slate */
-  --stone-50: var(--tiller-slate-50);
-  --stone-100: var(--tiller-slate-100);
-  --stone-200: var(--tiller-slate-200);
-  --ink-900: var(--tiller-slate-900);
-  --ink-700: var(--tiller-slate-700);
+  --color-stone-50: var(--tiller-slate-50);
+  --color-stone-100: var(--tiller-slate-100);
+  --color-stone-200: var(--tiller-slate-200);
+  --color-ink-900: var(--tiller-slate-900);
+  --color-ink-700: var(--tiller-slate-700);
   --ts-stone: var(--tiller-slate-700);
   --ts-stone-warm: var(--tiller-slate-600);
   --ts-stone-cool: var(--tiller-slate-500);
