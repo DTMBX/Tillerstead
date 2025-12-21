@@ -3,49 +3,60 @@
   Accessible, Responsive, Conversion-Optimized
   ============================================ */
 
-/* Base Button — semantic, accessible, and robust */
+/* Base Button — luxury micro-interactions */
 .btn,
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: var(--space-2xs);
   padding-block: clamp(0.75rem, 2vw, 0.875rem);
   padding-inline: clamp(1.25rem, 3vw, 1.75rem);
-  font-size: clamp(0.9rem, 2vw, 1rem);
-  font-weight: 600;
+  font-size: clamp(var(--text-sm), 2vw, var(--text-base));
+  font-weight: var(--weight-semibold);
   font-family: var(--font-sans);
-  line-height: 1.2;
+  line-height: var(--leading-tight);
   border: none;
   border-radius: var(--ts-radius-lg);
   cursor: pointer;
   text-decoration: none;
   position: relative;
   white-space: nowrap;
-  transition: background var(--tiller-transition-fast), color var(--tiller-transition-fast), 
-          border-color var(--tiller-transition-fast), transform var(--tiller-transition-fast),
-          box-shadow var(--tiller-transition-fast);
+  transition: 
+    background var(--duration-base) var(--ease-standard), 
+    color var(--duration-base) var(--ease-standard), 
+    border-color var(--duration-base) var(--ease-standard), 
+    transform var(--duration-quick) var(--ease-decelerate),
+    box-shadow var(--duration-base) var(--ease-standard);
   min-inline-size: 2.5em;
   min-block-size: 2.5em;
   user-select: none;
   outline: none;
   transform: translateZ(0);
   backface-visibility: hidden;
-  will-change: transform;
+  will-change: transform, box-shadow;
   
   /* Touch target minimum 44x44px */
   @media (hover: none) and (pointer: coarse) {
     min-width: 44px;
     min-height: 44px;
   }
+  
+  /* Luxury hover lift */
+  &:hover:not(:disabled) {
+    transform: translateY(-2px);
+  }
+  
+  &:active:not(:disabled) {
+    transform: translateY(0);
+    transition-duration: var(--duration-instant);
+  }
 }
 
-/* Focus ring — WCAG 2.1 AA compliant, visible on keyboard navigation */
+/* Focus ring — luxury accessible focus */
 .btn:focus-visible,
 .button:focus-visible {
-  outline: 2.5px solid var(--ts-color-primary);
-  outline-offset: 4px;
-  box-shadow: var(--tiller-focus-ring);
+  box-shadow: var(--focus-ring);
   z-index: 2;
 }
 
@@ -64,12 +75,12 @@
   Button Variants
   ========================= */
 
-/* Primary CTA — high contrast, conversion-focused */
+/* Primary CTA — luxury shadow and glow */
 .btn-primary,
 .btn--primary {
   background: var(--ts-color-primary-bg);
   color: var(--ts-white);
-  box-shadow: 0 10px 24px var(--color-shadow-soft);
+  box-shadow: var(--shadow-md);
   position: relative;
   overflow: hidden;
 }
@@ -79,7 +90,7 @@
 .btn--color-primary:hover:not(:disabled),
 .btn--color-primary:focus-visible {
   background: var(--ts-color-primary-bg-hover);
-  box-shadow: 0 12px 28px var(--color-shadow-soft), 0 0 0 3px rgb(13, 154, 170, 0.2);
+  box-shadow: var(--shadow-teal-glow);
 }
 
 /* Secondary — outlined, for less prominent actions */
