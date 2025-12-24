@@ -6,7 +6,7 @@
  */
 
 import https from 'https';
-import { spawn } from 'child_process';
+import { _spawn } from 'child_process';
 
 const REPO_OWNER = 'XTX33';
 const REPO_NAME = 'tillerstead-sandbox';

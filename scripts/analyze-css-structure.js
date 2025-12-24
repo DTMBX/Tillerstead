@@ -59,7 +59,7 @@ const folders = {
   'utilities': '40-utilities'
 };
 
-Object.entries(folders).forEach(([name, folder]) => {
+Object.entries(folders).forEach(([_name, folder]) => {
   const folderPath = path.join(sassDir, folder);
   if (fs.existsSync(folderPath)) {
     const files = fs.readdirSync(folderPath).filter(f => f.endsWith('.scss'));

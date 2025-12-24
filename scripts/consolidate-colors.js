@@ -85,7 +85,7 @@ const COLOR_MAP = {
 };
 
 // Files to process (glob patterns)
-const FILE_PATTERNS = [
+const _FILE_PATTERNS = [
   '**/*.css',
   '**/*.scss',
   '**/*.html',
