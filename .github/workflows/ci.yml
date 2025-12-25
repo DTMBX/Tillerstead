@@ -51,6 +51,9 @@ jobs:
           fi
           echo "✓ Build artifacts verified"
 
+      - name: Copy CNAME to _site (for GitHub Pages)
+        run: cp CNAME _site/CNAME
+
       - name: Upload built site
         if: success()
         uses: actions/upload-artifact@v4
@@ -63,6 +66,13 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -80,11 +90,14 @@ jobs:
             exit 1
           fi
           echo "✓ Deployment artifact verified"
+          ls -la _site/
+
+      - name: Upload artifact to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_site
-          cname: tillerstead.com
+        id: deployment
+        uses: actions/deploy-pages@v4
 
