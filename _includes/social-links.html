@@ -1,17 +1,5 @@
-{%- assign instagram_url = include.instagram | default: site.social.instagram -%}
-{%- assign facebook_url = include.facebook | default: site.social.facebook -%}
-{%- assign x_url = include.x | default: site.social.x -%}
-{%- assign linkedin_url = include.linkedin | default: site.social.linkedin -%}
-{%- assign houzz_url = include.houzz | default: site.social.houzz -%}
-{%- assign youtube_url = include.youtube | default: site.social.youtube -%}
-
-{%- assign nav_classes = 'social-links' -%}
-{%- if include.class -%}
-  {%- assign nav_classes = nav_classes | append: ' ' | append: include.class -%}
-{%- endif -%}
-
-<nav class="{{ nav_classes }}"
-     aria-label="{{ include.aria_label | default: 'Tillerstead verified social profiles – NJ HIC#13VH11744200' }}">
+{%- assign instagram_url = include.instagram | default: site.social.instagram -%}{%- assign facebook_url = include.facebook | default: site.social.facebook -%}{%- assign x_url = include.x | default: site.social.x -%}{%- assign linkedin_url = include.linkedin | default: site.social.linkedin -%}{%- assign houzz_url = include.houzz | default: site.social.houzz -%}{%- assign youtube_url = include.youtube | default: site.social.youtube -%}{%- assign nav_classes = 'social-links' -%}{%- if include.class -%}{%- assign nav_classes = nav_classes | append: ' ' | append: include.class -%}{%- endif -%}
+<nav class="{{ nav_classes }}" aria-label="{{ include.aria_label | default: 'Tillerstead verified social profiles – NJ HIC#13VH11744200' }}">
   <ul class="social-links__list" role="list">
     {%- if instagram_url and instagram_url != '' -%}
       <li class="social-links__item">
@@ -34,7 +22,5 @@
         </a>
       </li>
     {%- endif -%}
-
-
   </ul>
 </nav>
