@@ -102,9 +102,10 @@ A little prep delivers a smoother, more accurate estimate.
 
 **Next steps:**  
 - Email your **five photos** and quick measurements to [info@tillerstead.com](mailto:info@tillerstead.com?subject=Project%20Inquiry&body=Hi%20Tillerstead%2C%0AI%27m%20interested%20in...)  
-- Or visit our [Contact](/pages/contact.html) page and tap **“Start Your Project”** for a streamlined estimate.
+- Or visit our [Contact](/contact/) page and tap **“Start Your Project”** for a streamlined estimate.
 
 Whether you’re in **Egg Harbor Township, Galloway, or anywhere in Atlantic County**, our promise is the same: a calm, honest consultation and tile or bathroom work you’ll be proud to live with—built to code, built to last.
 
 **Do the work with integrity and care.** That’s the Tillerstead approach—every consultation, every project.
+
 

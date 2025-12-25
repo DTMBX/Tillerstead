@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 
 // __dirname workaround for ES modules
 const __filename = fileURLToPath(import.meta.url);
