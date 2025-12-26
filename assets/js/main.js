@@ -223,10 +223,10 @@
   const logoLinks = document.querySelectorAll('[data-logo-link]');
   logoLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-      const isHomepage = window.location.pathname === '/' || 
+      const isHomepage = window.location.pathname === '/' ||
                          window.location.pathname === '/index.html' ||
                          window.location.pathname.endsWith('/tillerstead-stone/');
-      
+
       if (isHomepage) {
         e.preventDefault();
         window.location.href = '/about/';
