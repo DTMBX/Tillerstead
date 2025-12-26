@@ -56,6 +56,8 @@
 
 .ts-logo {
   max-width: 220px;
+  transition: max-width 0.4s cubic-bezier(0.4, 0, 0.2, 1), height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
   height: auto;
   display: block;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -63,7 +65,9 @@
 
 /* Logo shrinks on scroll */
 .site-header.is-scrolled .ts-logo {
-  max-width: 140px;
+  max-width: 90px;
+  height: auto;
+}
 }
 
 .ts-logo-link:hover {
@@ -248,7 +252,7 @@
   right: 0;
   bottom: 0;
   width: min(400px, 85vw);
-  background: var(--ts-color-surface);
+  background: var(--ts-color-surface, #fff);
   box-shadow: -10px 0 60px rgba(0, 0, 0, 0.3);
   transform: translateX(100%);
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);

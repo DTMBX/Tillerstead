@@ -130,9 +130,10 @@ Testimonials include
                       <polyline points="2 4 6 8 10 4"></polyline>
                     </svg>
                   </button>
-                {% else %}
-                  {{ review.quote_html }}
                 {% endif %}
+                {% unless is_long %}
+                  {{ review.quote_html }}
+                {% endunless %}
               </div>
             </blockquote>
 

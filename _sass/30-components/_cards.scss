@@ -46,9 +46,11 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, 
-      transparent 0%, 
-      rgb(13, 154, 170, 0.02) 100%);
+      background: linear-gradient(
+        135deg,
+        transparent 0%,
+        rgb(13, 154, 170, 0.02) 100%
+      );
     opacity: 0;
     transition: opacity var(--tiller-duration-smooth) var(--tiller-ease-standard);
     pointer-events: none;
@@ -60,9 +62,13 @@
 
   /* Luxury hover lift */
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--ts-shadow-lift);
-    border-color: var(--color-border-color-teal);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow:
+      0 8px 12px rgb(0, 0, 0, 0.1),
+      0 20px 40px rgb(0, 0, 0, 0.15),
+      0 1px 3px color-mix(in srgb, var(--ts-color-primary) 30%, transparent),
+      inset 0 1px 0 rgb(255, 255, 255, 0.15);
+    border-color: color-mix(in srgb, var(--ts-color-primary) 70%, var(--ts-color-border));
   }
 
   /* Accessible focus */
@@ -217,18 +223,6 @@
 /* Interactive Card: For clickable or focusable cards */
 .card-interactive {
   cursor: pointer;
-}
-
-/* Hover State: Accessible, visually distinct, and compliant */
-.card:hover,
-.ts-card:hover {
-  transform: translateY(-4px) scale(1.01);
-  box-shadow: 
-    0 8px 12px rgb(0, 0, 0, 0.1),
-    0 20px 40px rgb(0, 0, 0, 0.15),
-    0 1px 3px color-mix(in srgb, var(--ts-color-primary) 30%, transparent),
-    inset 0 1px 0 rgb(255, 255, 255, 0.15);
-  border-color: color-mix(in srgb, var(--ts-color-primary) 70%, var(--ts-color-border));
 }
 
 /* Maintain aspect ratio for media */

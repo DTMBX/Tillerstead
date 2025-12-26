@@ -45,11 +45,12 @@
   /* Luxury hover lift */
   &:hover:not(:disabled) {
     transform: translateY(-2px);
+    animation: btn-lift 0.3s ease forwards;
   }
   
   &:active:not(:disabled) {
-    transform: translateY(0);
-    transition-duration: var(--tiller-duration-instant);
+    transform: translateY(0) scale(0.98);
+    transition: transform 0.1s ease;
   }
 }
 
@@ -245,12 +246,6 @@
   Button Animations
   ========================= */
 
-/* Hover lift animation */
-.btn:hover:not(:disabled),
-.button:hover:not(:disabled) {
-  animation: btn-lift 0.3s ease forwards;
-}
-
 @keyframes btn-lift {
   0% {
     transform: translateY(0);
@@ -259,13 +254,6 @@
   100% {
     transform: translateY(-2px);
   }
-}
-
-/* Active press animation */
-.btn:active:not(:disabled),
-.button:active:not(:disabled) {
-  transform: translateY(0) scale(0.98);
-  transition: transform 0.1s ease;
 }
 
 /* Pulse animation for primary CTAs */

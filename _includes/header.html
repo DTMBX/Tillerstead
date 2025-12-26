@@ -6,10 +6,7 @@
       <a class="site-logo" href="{{ '/' | relative_url }}" <!-- The hidden span below provides the accessible name -->
         >
         <img src="{{ '/assets/img/logo/tillerstead-logo-header.svg' | relative_url }}"
-          alt="{{ site.title | default: 'Tillerstead LLC' }}" class="site-logo-img ts-logo-img" width="160" <!-- Height
-          removed – let CSS control it -->
-        fetchpriority="high"
-        />
+          alt="Tillerstead" class="site-logo-img ts-logo ts-logo--header" width="220" height="auto" fetchpriority="high" />
         <!-- Accessible text fallback (visually hidden) -->
         <span class="site-logo-text sr-only">
           {{ site.title | default: 'Tillerstead LLC' }}

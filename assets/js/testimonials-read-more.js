@@ -29,7 +29,7 @@
           preview.style.display = 'none';
           full.style.display = 'block';
           this.setAttribute('aria-expanded', 'true');
-          this.querySelector('.ts-testimonial__read-more-text').textContent = 'Read';
+          this.querySelector('.ts-testimonial__read-more-text').textContent = 'Show less';
         }
       });
     });

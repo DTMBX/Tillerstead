@@ -23,17 +23,17 @@
      =========================== */
   
   /* Brand Teals */
-  --hex-teal-900: #0f766e;        /* Primary brand teal - 144 uses */
-  --hex-teal-700: #0b6b5c;        /* Deep teal - 12 uses */
-  --hex-teal-600: #0d9aaa;        /* Medium teal - 25 uses */
-  --hex-teal-500: #1cb394;        /* Bright teal - 24 uses */
-  --hex-teal-400: #16a384;        /* Light teal - 6 uses */
-  --hex-teal-300: #2ba9ba;        /* Sky teal - 4 uses */
-  --hex-teal-200: #84d1b8;        /* Pale teal - 4 uses */
-  --hex-teal-100: #b3dce8;        /* Very light teal - 4 uses */
-  --hex-teal-50: #e0f2f7;         /* Softest teal - 4 uses */
-  --hex-teal-dark: #053a2e;       /* Darkest teal - 12 uses */
-  --hex-teal-deeper: #022318;     /* Even darker - 10 uses */
+  --hex-teal-900: #078930;        /* Rasta green - replaces teal */
+  --hex-teal-700: #078930;        /* Rasta green */
+  --hex-teal-600: #078930;        /* Rasta green */
+  --hex-teal-500: #078930;        /* Rasta green */
+  --hex-teal-400: #078930;        /* Rasta green */
+  --hex-teal-300: #078930;        /* Rasta green */
+  --hex-teal-200: #078930;        /* Rasta green */
+  --hex-teal-100: #078930;        /* Rasta green */
+  --hex-teal-50: #078930;         /* Rasta green */
+  --hex-teal-dark: #078930;       /* Rasta green */
+  --hex-teal-deeper: #078930;     /* Rasta green */
   
   /* Warm Neutrals & Creams */
   --hex-cream-warm: #fffbe6;      /* Warm cream - 25 uses */
@@ -45,10 +45,10 @@
   --hex-amber-bright: #fcd34d;    /* Bright amber - 4 uses */
   
   /* Golds & Yellows */
-  --hex-gold-rich: #c99a3f;       /* Rich gold - 24 uses */
-  --hex-gold-warm: #d6b45b;       /* Warm gold - 8 uses */
-  --hex-gold-muted: #c89d4f;      /* Muted gold - 2 uses */
-  --hex-gold-deep: #92400e;       /* Deep bronze - 6 uses */
+  --hex-gold-rich: #FCDD09;       /* Rasta gold - replaces gold */
+  --hex-gold-warm: #FCDD09;       /* Rasta gold */
+  --hex-gold-muted: #FCDD09;      /* Rasta gold */
+  --hex-gold-deep: #FCDD09;       /* Rasta gold */
   
   /* Coral & Sunset */
   --hex-coral-bright: #ff8461;    /* Bright coral - 8 uses */
@@ -73,11 +73,11 @@
   --hex-blue-pale: #e0f2fe;       /* Pale blue - 4 uses */
   
   /* Reds - Alerts & Accents */
-  --hex-red-blood: #b00;          /* Blood red - 24 uses */
-  --hex-red-bright: #d32f2f;      /* Bright red - 10 uses */
-  --hex-red-error: #ef4444;       /* Error red - 4 uses */
-  --hex-red-deep: #dc2626;        /* Deep red - 2 uses */
-  --hex-red-dark: #b91c1c;        /* Dark red - 2 uses */
+  --hex-red-blood: #DA121A;          /* Rasta red - replaces red */
+  --hex-red-bright: #DA121A;      /* Rasta red */
+  --hex-red-error: #DA121A;       /* Rasta red */
+  --hex-red-deep: #DA121A;        /* Rasta red */
+  --hex-red-dark: #DA121A;        /* Rasta red */
   
   /* Slate Grays */
   --hex-slate-900: #1e293b;       /* Darkest slate - 8 uses */
@@ -315,9 +315,9 @@
   
   /* Soft shadows (most common) */
   --color-shadow-xs: 0 1px 2px rgb(0, 0, 0, 0.05);
-  --ts-shadow-soft: 0 2px 4px rgb(0, 0, 0, 0.06);
-  --ts-shadow-soft: 0 4px 8px rgb(0, 0, 0, 0.08);
-  --ts-shadow-lift: 0 8px 16px rgb(0, 0, 0, 0.10);
+  --color-shadow-sm: 0 2px 4px rgb(0, 0, 0, 0.06);
+  --color-shadow-md: 0 4px 8px rgb(0, 0, 0, 0.08);
+  --color-shadow-lg: 0 8px 16px rgb(0, 0, 0, 0.10);
   --color-shadow-xl: 0 12px 24px rgb(0, 0, 0, 0.12);
 
   /* Cartoon offset (use sparingly for badges/buttons) */
@@ -550,10 +550,6 @@
   --color-bg-pattern: var(--ts-bg-pattern);
   --color-bg-pattern-size: var(--ts-bg-pattern-size);
   --color-bg-pattern-opacity: var(--ts-bg-pattern-opacity);
-
-  --ts-radius-md: var(--ts-radius-md);
-  --ts-radius-lg: var(--ts-radius-lg);
-  --ts-radius-xl: var(--ts-radius-xl);
 
   /* ===========================
      🎨 EMERALD LEGACY SUPPORT
