@@ -11,35 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-<<<<<<< HEAD
-    - uses: actions/checkout@v4
-    
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.2
-        bundler-cache: true
-    
-    - name: Install dependencies
-      run: npm install
-    
-    - name: Build Jekyll site
-      run: bundle exec jekyll build
-    
-    - name: Run linter
-      run: npm run lint
-      continue-on-error: true
-    
-    - name: Validate HTML
-      run: |
-        find ./_site -name "*.html" -type f | head -5 | xargs -I {} sh -c 'echo "Checking {}"; head -20 {}'
-    
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-    
-=======
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -97,38 +68,10 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
->>>>>>> 52f5e57fd681d39db28094186257ed2981d8c848
     permissions:
       contents: read
       pages: write
       id-token: write
-<<<<<<< HEAD
-    
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    
-    steps:
-    - uses: actions/checkout@v4
-    
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.2
-        bundler-cache: true
-    
-    - name: Build Jekyll site
-      run: bundle exec jekyll build
-    
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: './_site'
-    
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
-=======
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -160,4 +103,3 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
->>>>>>> 52f5e57fd681d39db28094186257ed2981d8c848
