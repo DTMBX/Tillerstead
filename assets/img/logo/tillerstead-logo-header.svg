@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 496 136"
+     viewBox="0 0 440 104"
      preserveAspectRatio="xMidYMid meet"
      role="img"
      aria-label="Tillerstead header logo">
@@ -9,10 +9,10 @@
   </style>
   <g class="logo-mark" transform="translate(8 12)">
     <rect class="logo-tile" x="0" y="0" width="30" height="30" rx="5" />
-    <rect class="logo-tile" x="42" y="0" width="30" height="30" rx="5" />
-    <rect class="logo-tile" x="84" y="0" width="30" height="30" rx="5" />
-    <rect class="logo-tile" x="42" y="42" width="30" height="30" rx="5" />
-    <rect class="logo-tile" x="42" y="84" width="30" height="30" rx="5" />
+    <rect class="logo-tile" x="32" y="0" width="30" height="30" rx="5" />
+    <rect class="logo-tile" x="64" y="0" width="30" height="30" rx="5" />
+    <rect class="logo-tile" x="32" y="32" width="30" height="30" rx="5" />
+    <rect class="logo-tile" x="32" y="64" width="30" height="30" rx="5" />
   </g>
-  <text class="logo-word" x="150" y="78">TILLERSTEAD</text>
+  <text class="logo-word" x="130" y="68">TILLERSTEAD</text>
 </svg>

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 640 220"
+     viewBox="0 0 580 180"
      role="img"
      aria-label="Tillerstead logo">
   <style>
@@ -20,11 +20,11 @@
   <!-- shifted slightly down so stroke doesn't get clipped -->
   <g class="logo-mark" transform="translate(18 25)">
     <rect class="logo-tile" x="0"   y="0"   width="42" height="42" rx="6"/>
-    <rect class="logo-tile" x="56"  y="0"   width="42" height="42" rx="6"/>
-    <rect class="logo-tile" x="112" y="0"   width="42" height="42" rx="6"/>
-    <rect class="logo-tile" x="56"  y="56"  width="42" height="42" rx="6"/>
-    <rect class="logo-tile" x="56"  y="112" width="42" height="42" rx="6"/>
+    <rect class="logo-tile" x="45"  y="0"   width="42" height="42" rx="6"/>
+    <rect class="logo-tile" x="90"  y="0"   width="42" height="42" rx="6"/>
+    <rect class="logo-tile" x="45"  y="45"  width="42" height="42" rx="6"/>
+    <rect class="logo-tile" x="45"  y="90"  width="42" height="42" rx="6"/>
   </g>
 
-  <text class="logo-word" x="210" y="110">TILLERSTEAD</text>
+  <text class="logo-word" x="190" y="100">TILLERSTEAD</text>
 </svg>
