@@ -14,7 +14,7 @@
  * node scripts/check-contrast.js
  */
 
-import { readFileSync, writeFileSync } from 'fs';
+import { writeFileSync } from 'fs';
 import { join } from 'path';
 
 /**

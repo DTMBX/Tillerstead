@@ -25,7 +25,7 @@
     container.className = `form-message form-message--${type}`;
     container.setAttribute('role', 'status');
     container.setAttribute('aria-live', 'polite');
-    
+
     container.innerHTML = `
       <div class="form-message__content">
         <h3 class="form-message__title">${title}</h3>
@@ -49,22 +49,22 @@
 
   function validateForm(formData) {
     const errors = [];
-    
+
     if (!formData.get('name')?.trim()) {
       errors.push('Name is required');
     }
-    
+
     const email = formData.get('email');
     if (!email?.trim()) {
       errors.push('Email is required');
     } else if (!validateEmail(email)) {
       errors.push('Please enter a valid email address');
     }
-    
+
     if (!formData.get('message')?.trim()) {
       errors.push('Project details are required');
     }
-    
+
     return errors;
   }
 
@@ -122,7 +122,7 @@ Submitted: ${new Date().toLocaleString()}
     // Last resort: mailto link
     const mailtoLink = `mailto:info@tillerstead.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoLink;
-    
+
     return { success: true, method: 'mailto' };
   }
 
@@ -165,9 +165,9 @@ Submitted: ${new Date().toLocaleString()}
             FORM_CONFIG.successMessage.body,
             FORM_CONFIG.successMessage.confirmationSent
           );
-          
+
           form.insertBefore(successMsg, form.firstChild);
-          
+
           // Reset form
           form.reset();
 
@@ -183,13 +183,13 @@ Submitted: ${new Date().toLocaleString()}
         }
       } catch (error) {
         console.error('Form submission error:', error);
-        
+
         const errorMsg = showMessage(
           'error',
           FORM_CONFIG.errorMessage.title,
           FORM_CONFIG.errorMessage.body
         );
-        
+
         form.insertBefore(errorMsg, form.firstChild);
         errorMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } finally {
