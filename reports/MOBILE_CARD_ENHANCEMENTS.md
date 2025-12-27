@@ -15,22 +15,26 @@ Implemented enterprise-grade mobile card responsiveness using modern CSS feature
 
 #### 1. ✅ Progressive Enhancement (4-Tier Breakpoint System)
 
-**Desktop (> 768px)**
+##### Desktop (> 768px)
+
 - Full hover effects with transform and shadows
 - Larger padding and spacing
 - Mouse-optimized interactions
 
-**Tablet (641px - 768px)**
+##### Tablet (641px - 768px)
+
 - Balanced spacing (1.25rem gaps)
 - Medium padding (1.5rem)
 - Touch-ready but spacious
 
-**Mobile (481px - 640px)**
+##### Mobile (481px - 640px)
+
 - Single column forced layout
 - 44px minimum touch targets
 - Optimized padding
 
-**iPhone (320px - 480px)**
+##### iPhone (320px - 480px)
+
 - Compact padding (1.25rem)
 - Smaller border radius
 - Overflow prevention
@@ -57,6 +61,7 @@ Implemented enterprise-grade mobile card responsiveness using modern CSS feature
 ```
 
 **Why This Matters:**
+
 - Prevents sticky hover states on mobile
 - Provides appropriate feedback per input type
 - Follows iOS/Android UX guidelines
@@ -78,6 +83,7 @@ Implemented enterprise-grade mobile card responsiveness using modern CSS feature
 ```
 
 **Benefits:**
+
 - Cards adapt to their container, not just viewport
 - Works in sidebars, grids, any context
 - Future-proof (96%+ browser support)
@@ -98,6 +104,7 @@ Implemented enterprise-grade mobile card responsiveness using modern CSS feature
 ```
 
 **Standards Met:**
+
 - iOS HIG: 44pt minimum
 - Android Material: 48dp minimum (we use 44px = 48dp)
 - WCAG 2.5.5: Target Size (Level AAA)
@@ -105,6 +112,7 @@ Implemented enterprise-grade mobile card responsiveness using modern CSS feature
 #### 5. ✅ Accessibility Features
 
 **Reduced Motion Support:**
+
 ```scss
 @media (prefers-reduced-motion: reduce) {
   .card {
@@ -115,6 +123,7 @@ Implemented enterprise-grade mobile card responsiveness using modern CSS feature
 ```
 
 **High Contrast Mode:**
+
 ```scss
 @media (prefers-contrast: high) {
   .card {
@@ -125,6 +134,7 @@ Implemented enterprise-grade mobile card responsiveness using modern CSS feature
 ```
 
 **Focus Indicators:**
+
 ```scss
 .card:focus-within {
   outline: 3px solid var(--ts-color-primary);
@@ -133,6 +143,7 @@ Implemented enterprise-grade mobile card responsiveness using modern CSS feature
 ```
 
 **Benefits:**
+
 - Respects user motion preferences (accessibility)
 - Enhanced visibility for vision impairment
 - Keyboard navigation fully supported
@@ -145,7 +156,7 @@ Implemented enterprise-grade mobile card responsiveness using modern CSS feature
 
 **Mobile-First** → **Progressive Enhancement** → **Intrinsic Design**
 
-```
+```text
 ┌──────────────┬──────────────┬──────────────┬──────────────┐
 │   iPhone     │    Mobile    │   Tablet     │   Desktop    │
 │  320-480px   │  481-640px   │  641-768px   │    >768px    │
@@ -160,6 +171,7 @@ Implemented enterprise-grade mobile card responsiveness using modern CSS feature
 ### Grid Behavior
 
 **2-Column Cards (.cards--2col)**
+
 ```scss
 /* Base: intrinsic */
 grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
@@ -171,6 +183,7 @@ grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
 ```
 
 **3-Column Cards (.cards--3col)**
+
 ```scss
 /* Base: intrinsic */
 grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
@@ -182,6 +195,7 @@ grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
 ```
 
 **4-Column Cards (.cards--4col)**
+
 ```scss
 /* Base: intrinsic */
 grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
@@ -203,17 +217,20 @@ grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
 ## Performance Optimizations
 
 ### 1. GPU-Accelerated Transforms
+
 ```scss
 transform: translateY(-4px) scale(1.01); /* Uses GPU */
 /* NOT: top: -4px; (triggers layout) */
 ```
 
 ### 2. Optimized Transition Durations
+
 - **Desktop hover:** 0.3s (smooth, professional)
 - **Mobile active:** 0.1s (instant feedback)
 - **Reduced motion:** none (respects preference)
 
 ### 3. Efficient Painting
+
 ```scss
 will-change: transform; /* Hint to browser */
 contain: layout style paint; /* Isolation */
@@ -224,9 +241,11 @@ contain: layout style paint; /* Isolation */
 ## Overflow Prevention
 
 ### The Problem
+
 Long text or wide content breaks cards on mobile.
 
 ### The Solution
+
 ```scss
 @media (max-width: 480px) {
   .card {
@@ -248,6 +267,7 @@ Long text or wide content breaks cards on mobile.
 ## Before vs After
 
 ### Before (Issues)
+
 ```scss
 /* Old approach */
 .cards--2col {
@@ -260,6 +280,7 @@ Long text or wide content breaks cards on mobile.
 ```
 
 **Problems:**
+
 - ❌ 360px minmax too large for narrow screens
 - ❌ Hover effects activate on touch (sticky state)
 - ❌ No touch feedback
@@ -267,6 +288,7 @@ Long text or wide content breaks cards on mobile.
 - ❌ No accessibility considerations
 
 ### After (High-End)
+
 ```scss
 /* Modern approach */
 .cards--2col {
@@ -295,6 +317,7 @@ Long text or wide content breaks cards on mobile.
 ```
 
 **Benefits:**
+
 - ✅ Proper single-column layout on mobile
 - ✅ Touch vs mouse interaction separation
 - ✅ Instant visual feedback on touch
@@ -320,6 +343,7 @@ Long text or wide content breaks cards on mobile.
 ## Testing Checklist
 
 ### Device Testing
+
 - [ ] iPhone SE (375px width) - smallest modern iPhone
 - [ ] iPhone 12/13/14 (390px width) - most common
 - [ ] iPhone 16 Pro Max (430px width) - largest iPhone
@@ -327,6 +351,7 @@ Long text or wide content breaks cards on mobile.
 - [ ] Android phones (360px-412px typical)
 
 ### Interaction Testing
+
 - [ ] Touch: Cards give feedback on tap
 - [ ] Touch: No sticky hover states
 - [ ] Mouse: Hover effects work smoothly
@@ -334,6 +359,7 @@ Long text or wide content breaks cards on mobile.
 - [ ] Keyboard: Tab order logical
 
 ### Accessibility Testing
+
 - [ ] Screen reader: NVDA/JAWS announce cards properly
 - [ ] Reduced motion: Animations disabled
 - [ ] High contrast: Borders visible
@@ -341,6 +367,7 @@ Long text or wide content breaks cards on mobile.
 - [ ] Touch targets: All ≥44px
 
 ### Visual Testing
+
 - [ ] No card overflow on narrow screens
 - [ ] Single column layout on mobile
 - [ ] Proper spacing/padding
@@ -352,18 +379,21 @@ Long text or wide content breaks cards on mobile.
 ## Compliance Verification
 
 ### ✅ WCAG 2.1 Level AA
+
 - **2.5.5 Target Size (AAA):** 44px minimum touch targets
 - **1.4.10 Reflow:** No horizontal scroll at 320px
 - **1.4.12 Text Spacing:** Proper spacing maintained
 - **2.4.7 Focus Visible:** 3px outline on focus
 
 ### ✅ iOS Human Interface Guidelines
+
 - **Touch Targets:** 44pt minimum
 - **Gestures:** Standard tap behavior
 - **Motion:** Reduced motion supported
 - **Contrast:** High contrast mode supported
 
 ### ✅ Material Design (Android)
+
 - **Touch Targets:** 48dp (= 44px at 1x)
 - **Elevation:** Shadow hierarchy respected
 - **Motion:** Standard easing curves
@@ -374,6 +404,7 @@ Long text or wide content breaks cards on mobile.
 ## Next Level Enhancements (Future)
 
 ### Advanced Features
+
 1. **View Transitions API** - Smooth page transitions
 2. **Intersection Observer** - Lazy animation triggers
 3. **ResizeObserver** - Dynamic layout adjustments
@@ -381,6 +412,7 @@ Long text or wide content breaks cards on mobile.
 5. **CSS Scroll Timeline** - Scroll-driven animations
 
 ### Performance
+
 1. **content-visibility: auto** - Render only visible cards
 2. **contain: layout style** - Paint isolation
 3. **will-change: transform** - GPU optimization
@@ -391,11 +423,13 @@ Long text or wide content breaks cards on mobile.
 ## Documentation
 
 ### For Developers
+
 - Added comprehensive comments in `_cards.scss`
 - Documented all breakpoints and rationale
 - Examples of each card variant
 
 ### For Designers
+
 - Figma/Sketch files should match breakpoints
 - Touch target guidelines documented
 - Spacing system clarified

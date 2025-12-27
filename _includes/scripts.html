@@ -15,10 +15,8 @@ Loads all JavaScript modules with cache busting and proper defer/async attribute
 <script src="{{ '/assets/js/scroll-animations.js' | relative_url }}?v={{ cache_version }}" defer></script>
 <script src="{{ '/assets/js/micro-interactions.js' | relative_url }}?v={{ cache_version }}" defer></script>
 
-{% if page.layout == 'contact' or page.url contains '/contact' %}
-<!-- Professional contact form handler with proper messaging -->
+<!-- Contact form handler (loads on all pages, only activates on form) -->
 <script src="{{ '/assets/js/contact-form-handler.js' | relative_url }}?v={{ cache_version }}" defer></script>
-{% endif %}
 
 {% if jekyll.environment == 'development' %}
 <!-- Development overlay for debugging -->
