@@ -1,0 +1,47 @@
+/* Mobile layout corrections */
+@media (max-width: 768px) {
+
+    /* Force headings ABOVE content, not beside */
+    .section-header,
+    .cluster,
+    .cluster-responsive,
+    .card,
+    .card-header,
+    .service-card,
+    .feature-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .section-header>*,
+    .card-header>* {
+        width: 100%;
+    }
+
+    /* Kill multi-column squeeze */
+    .grid,
+    .grid-2col,
+    .grid-3col,
+    .grid-4col,
+    .cards,
+    .cards--2col,
+    .cards--services {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Prevent narrow text columns */
+    .card-body,
+    .service-body,
+    .content,
+    .text,
+    .copy {
+        max-width: 100%;
+    }
+
+    /* Improve tap spacing */
+    .card,
+    .service-card {
+        padding: 1.25rem;
+    }
+}
