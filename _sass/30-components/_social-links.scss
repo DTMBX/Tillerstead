@@ -1,15 +1,31 @@
 /* ============================================
   Social Links Component
   Modern, accessible social media links with hover effects
-  WCAG 2.1 AA compliant with proper focus states
+  Focus-visible ring + reduced motion support
   ============================================ */
 
 .social-links {
   --tiller-social-pill-size: 2.5rem;
   --tiller-social-gap: 0.75rem;
+
+  /* Base theme tokens */
   --tiller-social-border: var(--ts-color-border-strong, rgb(12, 40, 54, 0.2));
   --tiller-social-bg: var(--ts-color-surface-elevated, rgb(255, 255, 255, 0.9));
   --tiller-social-icon-color: var(--ts-color-heading, var(--color-navy-900));
+
+  /* Hover/focus theme tokens (override per context) */
+  --tiller-social-bg-hover: var(--ts-color-primary-soft);
+  --tiller-social-border-hover: var(--ts-color-primary);
+  --tiller-social-icon-color-hover: var(--ts-color-primary);
+
+  /* Motion/shadow tokens */
+  --tiller-social-transform-hover: translateY(-2px);
+  --tiller-social-shadow-hover: 0 8px 20px rgb(13, 154, 170, 0.15);
+
+  /* Timing tokens with fallbacks */
+  --tiller-duration-quick: var(--tiller-transition-fast, 160ms);
+  --tiller-ease-standard: ease;
+  --tiller-ease-decelerate: ease;
 
   display: inline-flex;
   align-items: center;
@@ -34,6 +50,8 @@
   padding: 0;
 }
 
+/* Single, canonical base link */
+// Canonical base link, merged with interaction states
 .social-link {
   display: inline-flex;
   align-items: center;
@@ -41,32 +59,38 @@
   width: var(--tiller-social-pill-size);
   height: var(--tiller-social-pill-size);
   border-radius: 999px;
-  border: 1.5px solid var(--tiller-social-border);
   background: var(--tiller-social-bg);
+  border: 1.5px solid var(--tiller-social-border);
   color: var(--tiller-social-icon-color);
   text-decoration: none;
-  transition:
-   background var(--tiller-transition-fast, 160ms ease),
-   border-color var(--tiller-transition-fast, 160ms ease),
-   color var(--tiller-transition-fast, 160ms ease),
-   box-shadow var(--tiller-transition-fast, 160ms ease),
-   transform var(--tiller-transition-fast, 160ms ease);
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
   outline: none;
+  transition:
+    background var(--tiller-duration-quick) var(--tiller-ease-standard),
+    border-color var(--tiller-duration-quick) var(--tiller-ease-standard),
+    color var(--tiller-duration-quick) var(--tiller-ease-standard),
+    box-shadow var(--tiller-duration-quick) var(--tiller-ease-standard),
+    transform var(--tiller-duration-quick) var(--tiller-ease-decelerate);
 
+  /* Accessible focus ring */
   &:focus-visible {
-   outline: 3px solid var(--ts-color-primary);
-   outline-offset: 3px;
+    outline: 3px solid var(--ts-color-primary);
+    outline-offset: 3px;
+  }
+
+  /* Single interaction rule (hover + focus-visible share “active” styling) */
+  &:hover,
+  &:focus-visible {
+    background: var(--tiller-social-bg-hover);
+    border-color: var(--tiller-social-border-hover);
+    color: var(--tiller-social-icon-color-hover);
+    transform: var(--tiller-social-transform-hover);
+    box-shadow: var(--tiller-social-shadow-hover);
   }
 }
 
-.social-link:hover,
-.social-link:focus-visible {
-  background: var(--ts-color-primary-soft);
-  border-color: var(--ts-color-primary);
-  color: var(--ts-color-primary);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgb(13, 154, 170, 0.15);
-}
 
 .social-icon {
   width: 1.2rem;
@@ -74,51 +98,17 @@
   display: block;
 }
 
-/* Base social link */
-.social-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--tiller-social-bg, transparent);
-  border: 1.5px solid var(--tiller-social-border, var(--ts-color-border));
-  color: var(--tiller-social-icon-color, var(--ts-color-icon));
-  transition: 
-    background var(--tiller-duration-quick) var(--tiller-ease-standard), 
-    border-color var(--tiller-duration-quick) var(--tiller-ease-standard), 
-    color var(--tiller-duration-quick) var(--tiller-ease-standard), 
-    transform var(--tiller-duration-quick) var(--tiller-ease-decelerate),
-    box-shadow var(--tiller-duration-base) var(--tiller-ease-standard);
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-
-.social-link:hover,
-.social-link:focus-visible {
-  background: var(--tiller-social-bg-hover, var(--ts-color-primary-soft));
-  border-color: var(--tiller-social-border-hover, var(--ts-color-primary));
-  color: var(--tiller-social-icon-color-hover, var(--ts-color-primary));
-  transform: scale(1.1);
-  box-shadow: 0 6px 16px var(--color-shadow-soft);
-}
-
-/* Header context: High-contrast for navigation bar */
+/* Header context: high contrast */
 .social-links--header {
   --tiller-social-border: rgb(255, 255, 255, 0.3);
   --tiller-social-bg: rgb(255, 255, 255, 0.1);
-  --tiller-social-icon-color: var(--ts-white, var(--ts-white));
-}
+  --tiller-social-icon-color: var(--ts-white, #ffffff);
 
-.social-links--header .social-link:hover,
-.social-links--header .social-link:focus-visible {
-  background: rgb(255, 255, 255, 0.25);
-  border-color: rgb(255, 255, 255, 0.6);
-  color: var(--ts-white);
-  box-shadow: 0 6px 16px rgb(255, 255, 255, 0.2);
+  --tiller-social-bg-hover: rgb(255, 255, 255, 0.25);
+  --tiller-social-border-hover: rgb(255, 255, 255, 0.6);
+  --tiller-social-icon-color-hover: var(--ts-white, #ffffff);
+
+  --tiller-social-shadow-hover: 0 6px 16px rgb(255, 255, 255, 0.2);
 }
 
 /* Drawer / mobile navigation context */
@@ -126,63 +116,62 @@
   width: 100%;
   justify-content: flex-start;
   padding: 0;
-
-  .social-links__list {
-   width: 100%;
-   justify-content: flex-start;
-  }
-
-  .social-link {
-   --tiller-social-bg: var(--ts-color-surface, var(--ts-white));
-   --tiller-social-icon-color: var(--ts-color-heading, var(--color-navy-900));
-   --tiller-social-border: var(--ts-color-border-strong, rgb(12, 40, 54, 0.2));
-  }
 }
 
-/* Footer context: Brand-compliant styling */
+.social-links--drawer .social-links__list {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.social-links--drawer .social-link {
+  --tiller-social-bg: var(--ts-color-surface, #ffffff);
+  --tiller-social-icon-color: var(--ts-color-heading, var(--color-navy-900));
+  --tiller-social-border: var(--ts-color-border-strong, rgb(12, 40, 54, 0.2));
+}
+
+/* Footer context */
 .social-links--footer {
   --tiller-social-border: rgb(255, 255, 255, 0.35);
   --tiller-social-bg: rgb(255, 255, 255, 0.1);
   --tiller-social-icon-color: rgb(255, 255, 255, 0.9);
 
-  margin-top: 1rem;
-}
+  --tiller-social-bg-hover: rgb(127, 209, 255, 0.25);
+  --tiller-social-border-hover: rgb(127, 209, 255, 0.6);
+  --tiller-social-icon-color-hover: #7fd1ff;
 
-.social-links--footer .social-link:hover,
-.social-links--footer .social-link:focus-visible {
-  background: rgb(127, 209, 255, 0.25);
-  border-color: rgb(127, 209, 255, 0.6);
-  color: #7fd1ff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgb(127, 209, 255, 0.3);
+  --tiller-social-shadow-hover: 0 6px 16px rgb(127, 209, 255, 0.3);
+  --tiller-social-transform-hover: translateY(-2px);
+
+  margin-top: 1rem;
 }
 
 /* Responsive sizing */
 @container (inline-size < 30rem) {
   .social-links {
-   --tiller-social-pill-size: 2.25rem;
-   --tiller-social-gap: 0.625rem;
+    --tiller-social-pill-size: 2.25rem;
+    --tiller-social-gap: 0.625rem;
   }
 }
 
 @media (max-width: 480px) {
   .social-links {
-   --tiller-social-pill-size: 2.25rem;
+    --tiller-social-pill-size: 2.25rem;
   }
 
   .social-icon {
-   width: 1.1rem;
-   height: 1.1rem;
+    width: 1.1rem;
+    height: 1.1rem;
   }
 }
 
-/* Reduced motion support */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .social-link {
-   transition: none;
+    transition: none;
   }
 
-  .social-link:hover {
-   transform: none;
+  .social-link:hover,
+  .social-link:focus-visible {
+    transform: none;
   }
 }

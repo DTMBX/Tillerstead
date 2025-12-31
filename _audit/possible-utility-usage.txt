@@ -65,10 +65,11 @@ C:\Users\Devon Tyler\tillerstead\instruction docs\README.md                    p
 C:\Users\Devon Tyler\tillerstead\pages\atlantic-county-nj.html                 p-
 C:\Users\Devon Tyler\tillerstead\pages\cape-may-county-nj.html                 p-
 C:\Users\Devon Tyler\tillerstead\pages\ocean-county-nj.html                    p-
+C:\Users\Devon Tyler\tillerstead\pages\plans.html                              text-
 C:\Users\Devon Tyler\tillerstead\pages\portfolio.html                          text-
 C:\Users\Devon Tyler\tillerstead\pages\pricing.html                            text-
 C:\Users\Devon Tyler\tillerstead\pages\process.html                            p-
-C:\Users\Devon Tyler\tillerstead\pages\reviews.html                            p-
+C:\Users\Devon Tyler\tillerstead\pages\process.html                            text-
 C:\Users\Devon Tyler\tillerstead\pages\success.html                            text-
 C:\Users\Devon Tyler\tillerstead\README.md                                     text-
 C:\Users\Devon Tyler\tillerstead\reports\FOOTER_AND_PATTERNS_AUDIT.md          p-

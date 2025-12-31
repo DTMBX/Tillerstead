@@ -95,7 +95,7 @@
 .btn--color-primary:focus-visible {
   background: var(--ts-color-accent);
   color: var(--hex-charcoal);
-  box-shadow: 0 8px 20px rgba(252, 221, 9, 0.3);
+  box-shadow: 0 8px 20px rgb(252, 221, 9, 0.3);
 }
 
 /* Secondary — outlined, for less prominent actions */
