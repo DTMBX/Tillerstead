@@ -29,26 +29,27 @@ license:
     - "Project Coordination and Construction Management (administrative)"
 
 business:
-	legal_name: "Tillerstead LLC"
-	trade_name: "Tillerstead"
-	owner: "Faith Frontier Ecclesiastical Trust"
-	address:
-		street: "325 East Jimmie Leeds Road, Suite 7-333"
-		city: "Galloway Township"
-		state: "NJ"
-		zip: "08205"
+  legal_name: "Tillerstead LLC"
+  trade_name: "Tillerstead"
+  owner: "Faith Frontier Ecclesiastical Trust"
+  address:
+    street: "325 East Jimmie Leeds Road, Suite 7-333"
+    city: "Galloway Township"
+    state: "NJ"
+    zip: "08205"
 
 
 
 standards:
-	tcna:
-		handbook: "TCNA 2024 Handbook for Ceramic, Glass, and Stone Tile Installation"
-		scope_notice: >
-			TCNA methods are referenced as recognized industry standards for tile
-			assemblies. Use of TCNA references does not imply certification or
-			endorsement by the Tile Council of North America.
-		references:
-			- "EJ171 – Movement Joint Guidelines"
+  tcna:
+    handbook: "TCNA 2024 Handbook for Ceramic, Glass, and Stone Tile Installation"
+    scope_notice: >
+      TCNA methods are referenced as recognized industry standards for tile
+      assemblies. Use of TCNA references does not imply certification or
+      endorsement by the Tile Council of North America.
+    references:
+      - "EJ171 – Movement Joint Guidelines"
+
 	ansi:
 		installation:
 			- "ANSI A108.01 – Substrates and Preparation"
@@ -74,7 +75,6 @@ standards:
 		- "29 CFR 1926.1153 – Respirable Crystalline Silica"
 		- "29 CFR 1926.501 – Fall Protection"
 
-
 insurance:
 	general_liability: "$1M per occurrence / $2M aggregate"
 	workers_comp: "Compliant where applicable"
@@ -83,7 +83,6 @@ insurance:
 		- "Property Damage"
 		- "Bodily Injury"
 		- "Surety Bond (where required)"
-
 
 warranty:
 	workmanship_years: 2
@@ -98,7 +97,6 @@ warranty:
 		- "Improper maintenance, misuse, or incompatible cleaning products"
 		- "Impact damage or alterations by others"
 		- "Manufacturer material defects (covered by manufacturer warranties)"
-
 
 consumer_protection:
 	three_day_rescission: >
