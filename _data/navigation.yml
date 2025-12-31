@@ -1,20 +1,35 @@
 primary:
-  - id: build
-    title: "Build Phase Guide"
-    url: "/build/"
-    match: "^/build(/|$)"
+  - id: services
+    title: "Services"
+    url: "/services/"
+    match: "^/services(/|$)"
     external: false
+    children:
+      - id: services-tile
+        title: "Tile & Waterproofing"
+        url: "/services/#tile"
+        match: "^/services/#tile$"
+        external: false
+      - id: services-remodeling
+        title: "Bath & Kitchen Remodeling"
+        url: "/services/#remodeling"
+        match: "^/services/#remodeling$"
+        external: false
+      - id: services-maintenance
+        title: "Maintenance Plans"
+        url: "/services/#maintenance"
+        match: "^/services/#maintenance$"
+        external: false
+      - id: financing
+        title: "Financing & Payments"
+        url: "/financing/"
+        match: "^/financing(/|$)"
+        external: false
 
   - id: portfolio
     title: "Our Work"
     url: "/portfolio/"
     match: "^/portfolio(/|$)"
-    external: false
-
-  - id: products
-    title: "Products"
-    url: "/recommended-products/"
-    match: "^/recommended-products(/|$)"
     external: false
 
   - id: reviews
@@ -23,96 +38,215 @@ primary:
     match: "^/reviews(/|$)"
     external: false
 
-  - id: about
-    title: "About"
-    url: "/about/"
-    match: "^/about(/|$)"
-    external: false
+  - id: resources
+    title: "Resources"
+    aria_label: "Resources for New Jersey homeowners"
+    children:
+      - id: faq
+        title: "FAQ"
+        url: "/faq/"
+        match: "^/faq(/|$)"
+        external: false
+      - id: download-guide
+        title: "Free NJ Tile Guide"
+        url: "/download/nj-tile-guide/"
+        match: "^/download(/|$)"
+        external: false
+      - id: blog
+        title: "Blog"
+        url: "/blog/"
+        match: "^/blog(/|$)"
+        external: false
+      - id: products
+        title: "Recommended Products"
+        url: "/recommended-products/"
+        match: "^/recommended-products(/|$)"
+        external: false
 
-  - id: contact
-    title: "Contact"
-    url: "/contact/"
-    match: "^/contact(/|$)"
-    external: false
-
-  - id: blog
-    title: "Blog"
-    url: "/blog/"
-    match: "^/blog(/|$)"
-    external: false
-
-  - id: financing
-    title: "Financing"
-    url: "/financing/"
-    match: "^/financing(/|$)"
-    external: false
-
-  - id: gc
-    title: "Contractors"
-    url: "/for-general-contractors/"
-    match: "^/for-general-contractors(/|$)"
-    external: false
-
-  - id: counties
+  - id: service-areas
     title: "Service Areas"
-    aria_label: "Service Areas (New Jersey licensed)"
+    aria_label: "Service Areas in South Jersey"
     children:
       - id: atlantic-county
-        title: "Atlantic County NJ"
+        title: "Atlantic County"
         url: "/atlantic-county-nj/"
         match: "^/atlantic-county-nj(/|$)"
         external: false
-
       - id: ocean-county
-        title: "Ocean County NJ"
+        title: "Ocean County"
         url: "/ocean-county-nj/"
         match: "^/ocean-county-nj(/|$)"
         external: false
-
       - id: cape-may-county
-        title: "Cape May County NJ"
+        title: "Cape May County"
         url: "/cape-may-county-nj/"
         match: "^/cape-may-county-nj(/|$)"
         external: false
 
-      - id: nj-hic-license
-        title: "NJ HIC License & Compliance"
-        url: "/nj-hic-license/"
-        match: "^/nj-hic-license(/|$)"
+  - id: company
+    title: "Company"
+    aria_label: "Company information"
+    children:
+      - id: about
+        title: "About"
+        url: "/about/"
+        match: "^/about(/|$)"
+        external: false
+      - id: contact
+        title: "Request an Estimate"
+        url: "/contact/"
+        match: "^/contact(/|$)"
+        external: false
+      - id: for-gcs
+        title: "For General Contractors"
+        url: "/for-general-contractors/"
+        match: "^/for-general-contractors(/|$)"
+        external: false
+    external: false
+    children:
+      - id: services-tile
+        title: "Tile & Waterproofing"
+        url: "services/#tile"
+        match: "^/services/#tile$"
+        external: false
+      - id: services-remodeling
+        title: "Bath & Kitchen Remodeling"
+        url: "services/#remodeling"
+        match: "^/services/#remodeling$"
+        external: false
+      - id: services-maintenance
+        title: "Maintenance Plans"
+        url: "services/#maintenance"
+        match: "^/services/#maintenance$"
+        external: false
+      - id: financing
+        title: "Financing & Payments"
+        url: "financing/"
+        match: "^/financing(/|$)"
+        external: false
+
+  - id: portfolio
+    title: "Our Work"
+    url: "portfolio/"
+    match: "^/portfolio(/|$)"
+    external: false
+
+  - id: reviews
+    title: "Reviews"
+    url: "reviews/"
+    match: "^/reviews(/|$)"
+    external: false
+
+  - id: resources
+    title: "Resources"
+    aria_label: "Resources for New Jersey homeowners"
+    children:
+      - id: faq
+        title: "FAQ"
+        url: "faq/"
+        match: "^/faq(/|$)"
+        external: false
+      - id: download-guide
+        title: "Free NJ Tile Guide"
+        url: "download/nj-tile-guide/"
+        match: "^/download(/|$)"
+        external: false
+      - id: blog
+        title: "Blog"
+        url: "blog/"
+        match: "^/blog(/|$)"
+        external: false
+      - id: products
+        title: "Recommended Products"
+        url: "recommended-products/"
+        match: "^/recommended-products(/|$)"
+        external: false
+
+  - id: service-areas
+    title: "Service Areas"
+    aria_label: "Service Areas in South Jersey"
+    children:
+      - id: atlantic-county
+        title: "Atlantic County"
+        url: "atlantic-county-nj/"
+        match: "^/atlantic-county-nj(/|$)"
+        external: false
+      - id: ocean-county
+        title: "Ocean County"
+        url: "ocean-county-nj/"
+        match: "^/ocean-county-nj(/|$)"
+        external: false
+      - id: cape-may-county
+        title: "Cape May County"
+        url: "cape-may-county-nj/"
+        match: "^/cape-may-county-nj(/|$)"
+        external: false
+
+  - id: company
+    title: "Company"
+    aria_label: "Company information"
+    children:
+      - id: about
+        title: "About"
+        url: "about/"
+        match: "^/about(/|$)"
+        external: false
+      - id: contact
+        title: "Request an Estimate"
+        url: "contact/"
+        match: "^/contact(/|$)"
+        external: false
+      - id: for-gcs
+        title: "For General Contractors"
+        url: "for-general-contractors/"
+        match: "^/for-general-contractors(/|$)"
         external: false
 
 secondary:
   - id: privacy
     title: "Privacy"
-    url: "/privacy/"
+    url: "privacy/"
     match: "^/privacy(/|$)"
     external: false
 
   - id: terms
-    title: "Terms & Conditions"
-    url: "/terms/"
+    title: "Terms"
+    url: "terms/"
     match: "^/terms(/|$)"
     external: false
 
 footer:
-  - group: "Main"
+  - group: "Start Here"
     items:
       - ref: build
       - ref: portfolio
-      - ref: products
       - ref: reviews
-      - ref: about
       - ref: contact
+<<<<<<< HEAD
       - ref: blog
       - ref: financing
       - ref: gc
+=======
+
+  - group: "Resources"
+    items:
+      - ref: faq
+      - ref: download-guide
+      - ref: blog
+      - ref: products
+      - ref: financing
+>>>>>>> cc9afaaa7f526c39fe24b77ebadb576abfdceae3
 
   - group: "Service Areas"
     items:
       - ref: atlantic-county
       - ref: ocean-county
       - ref: cape-may-county
-      - ref: nj-hic-license
+
+  - group: "Company"
+    items:
+      - ref: about
+      - ref: for-gcs
 
   - group: "Legal"
     items:

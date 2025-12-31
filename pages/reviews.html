@@ -1,55 +1,86 @@
-# _data/reviews.yml
-# Manual reviews source (Thumbtack sync disabled)
-# Expected key: site.data.reviews.reviews
+layout: default
+---
+layout: default
+title: "Reviews & Client Testimonials | Tillerstead LLC"
+description: "Verified client reviews for Tillerstead LLC, a licensed New Jersey Home Improvement Contractor (HIC) serving South Jersey. Reviews are displayed as originally posted (formatting only) and sourced from public platforms like Thumbtack."
+permalink: /reviews/
+body_class: page-reviews
+full_width: true
 
-meta:
-source: "manual"
-updated: "2025-12-31"
-note: "Reviews pulled manually from Thumbtack and client feedback. Names abbreviated as shown by platform."
+hero_eyebrow: "Verified Client Feedback"
+hero_title: "Reviews & Testimonials"
+# hero_summary intentionally omitted for clarity
+---
 
-reviews:
-- id: "thumbtack-alexandra-s-2025-08-19-drywall"
-platform: "Thumbtack"
-hired_on_platform: true
-reviewer_name: "Alexandra S."
-date: "2025-08-19"
-service: "Drywall Repair and Texturing"
-quote_html: >
-<p>It was a pleasure working with Devon to repair our closet ceiling. We chose to repair it rather than replace, and he
-  walked us through what that would look like while offering the most cost-effective option. He was professional
-  throughout. Highly recommended.</p>
-details:
-- "Scope: Ceiling repair (closet)"
-- "Work: Crack fill and patching"
-- "Property: Residential"
+<section class="ts-section ts-surface reviews-intro" aria-labelledby="reviews-heading">
+  <div class="container">
+    <header class="section-header">
+      <h1 class="heading-2" id="reviews-heading">What New Jersey clients say about working with Tillerstead</h1>
+      <p class="lead">
+        Reviews on this page come from Thumbtack, where reviewers post feedback
+        under that platform’s own verification and moderation process.
+      </p>
 
-- id: "thumbtack-alexandra-s-2025-08-19-bathroom-remodel"
-platform: "Thumbtack"
-hired_on_platform: true
-reviewer_name: "Alexandra S."
-date: "2025-08-19"
-service: "Bathroom Remodeling / Tile"
-quote_html: >
-<p>I recently hired Devon for a bathroom remodel, and my wife and I couldn’t be happier with the results. He was
-  professional, punctual, and detail-oriented from start to finish. He listened to what we wanted, offered helpful
-  suggestions, and executed everything with precision.</p>
-<p>Devon kept the work area tidy throughout the project and completed the job on time without cutting corners. It’s rare
-  to find someone who truly takes pride in their work the way he does. I’d highly recommend him.</p>
-details:
-- "Scope: Bathroom remodel"
-- "Areas: Floor and wall tile"
-- "Tile: Porcelain"
+      <div class="ts-card reviews-trust">
+        <h2 class="heading-3">Review transparency policy</h2>
+        <ul class="ts-list">
+          <li><strong>No rewriting:</strong> We do not edit wording or change meaning. Formatting only.</li>
+          <li><strong>Third-party source:</strong> Reviews are pulled from the originating platform when available.</li>
+          <li><strong>Process documentation:</strong> Where appropriate (especially tile and wet areas), we document key phases so clients understand what was built before it’s covered.</li>
+        </ul>
+        <p class="muted">
+          Reviews describe individual customer experiences. Results and timelines vary by site conditions, materials,
+          scope, and change orders.
+        </p>
+      </div>
+    </header>
+  </div>
+</section>
 
-- id: "thumbtack-maria-j-2025-05-06-tile"
-platform: "Thumbtack"
-hired_on_platform: true
-reviewer_name: "Maria J."
-date: "2025-05-06"
-service: "Tile Installation and Replacement"
-quote_html: >
-<p>I hired Devon Tyler for tile work in my home and was impressed by his patience, precision, and professionalism. He
-  took his time to get every cut right and made sure the job was solid and clean. I’d absolutely recommend him to anyone
-  looking for quality tile work done with care.</p>
-details:
-- "Scope: Tile installation"
-- "Focus: Precision cuts and clean finish"
+<section class="ts-section ts-surface" aria-labelledby="verified-reviews-heading">
+  <div class="container">
+    <header class="section-header">
+      <p class="eyebrow">Verified Reviews</p>
+      <h2 class="heading-3" id="verified-reviews-heading">Verified reviews from real South Jersey clients</h2>
+      <p class="muted">
+        Loading reviews directly from the platform to preserve original wording and recency.
+      </p>
+    </header>
+
+    <!-- SociableKIT Thumbtack Reviews widget (Option A) -->
+    <div class="sk-ww-thumbtack-reviews" data-embed-id="25638059"></div>
+    <script src="https://widgets.sociablekit.com/thumbtack-reviews/widget.js" defer></script>
+  </div>
+</section>
+
+<section class="review-cta ts-section ts-surface" aria-labelledby="more-reviews-heading">
+  <div class="container">
+    <div class="ts-card card--review">
+      <h2 class="heading-3" id="more-reviews-heading">See current ratings, badges, and project photos</h2>
+      <p>
+        For the most up-to-date reviews and project galleries, visit our Thumbtack profile.
+        You can also verify our New Jersey Home Improvement Contractor (HIC) license through NJ Consumer Affairs.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn btn--primary"
+           href="https://www.thumbtack.com/nj/absecon/tile/tillerstead-llc/service/547437618353160199"
+           target="_blank" rel="noopener"
+           aria-label="View Tillerstead LLC's Thumbtack profile (opens in new tab)">
+          View Thumbtack Profile
+        </a>
+
+        <a class="btn btn--ghost"
+           href="https://www.njconsumeraffairs.gov/hic/Pages/default.aspx"
+           target="_blank" rel="noopener"
+           aria-label="Verify New Jersey Home Improvement Contractor license (opens in new tab)">
+          Verify NJ HIC License
+        </a>
+      </div>
+
+      <p class="muted">
+        Licensed New Jersey Home Improvement Contractor (HIC): #13VH10808800.
+      </p>
+    </div>
+  </div>
+</section>
