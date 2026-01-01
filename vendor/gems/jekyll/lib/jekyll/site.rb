@@ -267,10 +267,6 @@ module Jekyll
       relative_path = relative_path.sub(%r{^/}, '')
       dest_path = File.join(@destination, relative_path)
       FileUtils.mkdir_p(File.dirname(dest_path))
-      puts "[Jekyll::Site] Writing output to: #{dest_path}"
-      if dest_path.end_with?('index.html')
-        puts "[Jekyll::Site] Final output for index.html:\n#{content[0..2000]}\n..."
-      end
       File.write(dest_path, content)
     end
 
