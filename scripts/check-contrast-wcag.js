@@ -206,7 +206,7 @@ const REPORT = {
 // EXECUTION
 // ============================================
 
-function runContrast Audit() {
+function runContrastAudit() {
   console.log('🎨 WCAG 2.1 Contrast Audit Started\n');
   
   REPORT.totalCombinations = COMMON_COMBINATIONS.length;
