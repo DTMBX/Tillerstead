@@ -6,47 +6,104 @@ permalink: /success/
 body_class: page-success
 ---
 
-<section class="section section-success" style="min-height: 70vh; display: flex; align-items: center;">
+<style>
+.section-success {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.success-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.success-content svg {
+  margin: 0 auto 2rem;
+}
+
+.success-content .lead {
+  margin: 1.5rem 0;
+}
+
+.success-content .ts-card {
+  text-align: left;
+  margin: 2rem 0;
+}
+
+.success-content ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.success-content li {
+  margin-bottom: 0.75rem;
+}
+
+.success-content .contact-info {
+  margin: 2rem 0;
+}
+
+.success-content .contact-info a {
+  white-space: nowrap;
+}
+
+.success-content .actions {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.success-content .microcopy {
+  margin-top: 2rem;
+  color: var(--ts-color-muted);
+}
+</style>
+
+<section class="section section-success">
   <div class="container">
-    <div class="success-content" style="max-width: 600px; margin: 0 auto; text-align: center;">
-      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin: 0 auto 2rem;">
+    <div class="success-content">
+      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle cx="40" cy="40" r="38" stroke="var(--ts-color-primary)" stroke-width="4" fill="var(--ts-color-primary-soft)"/>
         <path d="M25 40L35 50L55 30" stroke="var(--ts-color-primary)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
 
       <h1 class="heading-1">Thank You for Your Request</h1>
       
-      <p class="lead" style="margin: 1.5rem 0;">
+      <p class="lead">
         Your project inquiry has been successfully submitted to Tillerstead LLC.
       </p>
 
-      <div class="ts-card" style="text-align: left; margin: 2rem 0;">
+      <div class="ts-card">
         <h2 class="h3">What Happens Next</h2>
-        <ol style="margin: 1rem 0; padding-left: 1.5rem;">
-          <li style="margin-bottom: 0.75rem;">
+        <ol>
+          <li>
             <strong>Review:</strong> A licensed New Jersey HIC contractor will review your project details and photos within 24-72 hours.
           </li>
-          <li style="margin-bottom: 0.75rem;">
+          <li>
             <strong>Contact:</strong> We'll reach out by phone or email to discuss technical requirements, timing, and site access.
           </li>
-          <li style="margin-bottom: 0.75rem;">
+          <li>
             <strong>Proposal:</strong> You'll receive a detailed written estimate including scope, materials, timeline, and transparent pricing, compliant with New Jersey HIC standards.
           </li>
         </ol>
       </div>
 
-      <p style="margin: 2rem 0;">
+      <p class="contact-info">
         <strong>Questions or urgent needs?</strong><br>
-        Call or text: <a href="tel:+16098628808" style="white-space: nowrap;">(609) 862-8808</a><br>
+        Call or text: <a href="tel:+16098628808">(609) 862-8808</a><br>
         Email: <a href="mailto:info@tillerstead.com">info@tillerstead.com</a>
       </p>
 
-      <div style="margin-top: 3rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <div class="actions">
         <a href="/" class="btn btn-primary">Return to Home</a>
         <a href="/services/" class="btn btn-secondary">View Our Services</a>
       </div>
 
-      <p class="microcopy" style="margin-top: 2rem; color: var(--ts-color-muted);">
+      <p class="microcopy">
         Tillerstead LLC is a licensed New Jersey home improvement contractor (HIC #13VH10808800) specializing in TCNA-compliant tile installation, waterproofing, and remodeling.
       </p>
     </div>

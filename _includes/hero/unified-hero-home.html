@@ -1,32 +1,30 @@
-{%- comment -%}
-Unified Hero for Homepage + Tillerstead.com
-{%- endcomment -%}
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ hero_title | default: "TCNA-Compliant Tile & Remodeling" }}</title>
+</head>
 {%- assign src = include | default: page -%}
-
-{%- assign hero_title = src.title | default: page.title | default: "TCNA-Compliant Tile & Remodeling"
--%}
+{%- assign hero_title = src.title | default: page.title | default: "TCNA-Compliant Tile & Remodeling" -%}
 {%- assign hero_summary = src.summary | default: page.description | default: "ANSI A108 installation methods, ANSI A108.10 waterproofing assemblies, and deflection evaluated where applicable—planned, documented, and built to perform." -%}
 {%- assign hero_eyebrow = src.eyebrow | default: "#13VH10808800" -%}
 {%- assign hero_badge = src.badge | default: "" -%}
-
 {%- assign bullets = src.bullets | default: page.hero_bullets | default: page.services -%}
 {%- assign facts = src.facts | default: page.hero_facts -%}
-
 {%- assign image = src.hero_project | default: page.hero_project_image -%}
 {%- if image -%}
-{%- assign img_src = image.src | default: image | relative_url -%}
-{%- assign img_alt = image.alt | default: "TCNA-compliant tile installation by Tillerstead in New Jersey" -%}
-{%- assign img_caption = image.caption -%}
+  {%- assign img_src = image.src | default: image | relative_url -%}
+  {%- assign img_alt = image.alt | default: "TCNA-compliant tile installation by Tillerstead in New Jersey" -%}
+  {%- assign img_caption = image.caption -%}
 {%- endif -%}
-
 {%- assign actions = src.actions | default:
 [
-{ "url": "/contact/", "label": "Request Free Estimate", "style": "primary" },
-{ "url": "/portfolio/", "label": "See Completed Projects", "style": "ghost" }
+  { "url": "/contact/", "label": "Request Free Estimate", "style": "primary" },
+  { "url": "/portfolio/", "label": "See Completed Projects", "style": "ghost" }
 ]
 -%}
-
+<body>
 <section class="ts-hero ts-hero--home{% unless image %} ts-hero--no-image{% endunless %}" aria-labelledby="hero-title">
   <div class="ts-hero__inner">
 
@@ -80,7 +78,7 @@ Unified Hero for Homepage + Tillerstead.com
     <aside class="ts-hero__aside" aria-label="Featured project and credentials">
 
       <figure class="ts-hero__project">
-        <img src="{{ img_src }}" alt="{{ img_alt }}" width="600" height="800" loading="eager" fetchpriority="high"
+        <img src="{{ img_src }}" alt="{{ img_alt }}" width="600" height="800" loading="eager"
           decoding="async">
         {% if img_caption %}
         <figcaption>{{ img_caption }}</figcaption>
@@ -129,4 +127,6 @@ Unified Hero for Homepage + Tillerstead.com
     {% endif %}
 
   </div>
-</section>
+  </section>
+</body>
+</html>

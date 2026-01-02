@@ -1,20 +1,18 @@
 
 file                                                                           token
 ----                                                                           -----
-C:\Users\Devon Tyler\tillerstead\_includes\blog-highlights.html                text-
-C:\Users\Devon Tyler\tillerstead\_includes\compliance.html                     text-
-C:\Users\Devon Tyler\tillerstead\_includes\cta-section.html                    text-
-C:\Users\Devon Tyler\tillerstead\_includes\head.html                           p-
-C:\Users\Devon Tyler\tillerstead\_includes\logo-sprite-inline.html             text-
-C:\Users\Devon Tyler\tillerstead\_includes\portfolio-highlights.html           text-
-C:\Users\Devon Tyler\tillerstead\_includes\reviews-highlights.html             text-
+C:\Users\Devon Tyler\tillerstead\_includes\components\ts-icon-sprite.html      p-
+C:\Users\Devon Tyler\tillerstead\_includes\content\blog-highlights.html        text-
+C:\Users\Devon Tyler\tillerstead\_includes\content\portfolio-highlights.html   text-
+C:\Users\Devon Tyler\tillerstead\_includes\content\reviews-highlights.html     text-
+C:\Users\Devon Tyler\tillerstead\_includes\content\ts-plans.html               text-
+C:\Users\Devon Tyler\tillerstead\_includes\content\ts-portfolio.html           text-
+C:\Users\Devon Tyler\tillerstead\_includes\content\ts-services.html            text-
+C:\Users\Devon Tyler\tillerstead\_includes\features\faq-section.html           text-
+C:\Users\Devon Tyler\tillerstead\_includes\hero\unified-hero.html              text-
+C:\Users\Devon Tyler\tillerstead\_includes\layout\head.html                    p-
+C:\Users\Devon Tyler\tillerstead\_includes\layout\logo-sprite-inline.html      text-
 C:\Users\Devon Tyler\tillerstead\_includes\sections\process.html               text-
-C:\Users\Devon Tyler\tillerstead\_includes\ts-icon-sprite.html                 p-
-C:\Users\Devon Tyler\tillerstead\_includes\ts-plans.html                       text-
-C:\Users\Devon Tyler\tillerstead\_includes\ts-portfolio.html                   text-
-C:\Users\Devon Tyler\tillerstead\_includes\ts-services.html                    text-
-C:\Users\Devon Tyler\tillerstead\_includes\ts-testimonials.html                text-
-C:\Users\Devon Tyler\tillerstead\_includes\unified-hero.html                   text-
 C:\Users\Devon Tyler\tillerstead\_layouts\default.html                         p-
 C:\Users\Devon Tyler\tillerstead\_layouts\post.html                            text-
 C:\Users\Devon Tyler\tillerstead\.ai\CODEX.md                                  text-
@@ -22,10 +20,23 @@ C:\Users\Devon Tyler\tillerstead\.ai\COMPLIANCE.md                             p
 C:\Users\Devon Tyler\tillerstead\.ai\COPILOT.md                                text-
 C:\Users\Devon Tyler\tillerstead\.ai\GPT.md                                    md:
 C:\Users\Devon Tyler\tillerstead\.ai\GPT.md                                    text-
+C:\Users\Devon Tyler\tillerstead\.ai\SCRIPT_CLASSES.md                         p-
 C:\Users\Devon Tyler\tillerstead\.github\instructions\build-troubleshooting.md p-
 C:\Users\Devon Tyler\tillerstead\.github\instructions\README.md                py-
 C:\Users\Devon Tyler\tillerstead\404.html                                      text-
-C:\Users\Devon Tyler\tillerstead\AUDIT_TOOLS.md                                p-
+C:\Users\Devon Tyler\tillerstead\BUILD_PHASE_REFACTORING.md                    text-
+C:\Users\Devon Tyler\tillerstead\CLEANUP_COMPLETE.md                           py-
+C:\Users\Devon Tyler\tillerstead\CSS_AND_SCRIPTS_MODERNIZATION.md              lg:
+C:\Users\Devon Tyler\tillerstead\CSS_AND_SCRIPTS_MODERNIZATION.md              px-
+C:\Users\Devon Tyler\tillerstead\CSS_AND_SCRIPTS_MODERNIZATION.md              py-
+C:\Users\Devon Tyler\tillerstead\CSS_AND_SCRIPTS_MODERNIZATION.md              text-
+C:\Users\Devon Tyler\tillerstead\CSS_ARCHITECTURE.md                           2xl:
+C:\Users\Devon Tyler\tillerstead\CSS_ARCHITECTURE.md                           lg:
+C:\Users\Devon Tyler\tillerstead\CSS_ARCHITECTURE.md                           md:
+C:\Users\Devon Tyler\tillerstead\CSS_ARCHITECTURE.md                           px-
+C:\Users\Devon Tyler\tillerstead\CSS_ARCHITECTURE.md                           sm:
+C:\Users\Devon Tyler\tillerstead\CSS_ARCHITECTURE.md                           text-
+C:\Users\Devon Tyler\tillerstead\CSS_ARCHITECTURE.md                           xl:
 C:\Users\Devon Tyler\tillerstead\DESIGN_SYSTEM.md                              2xl:
 C:\Users\Devon Tyler\tillerstead\DESIGN_SYSTEM.md                              lg:
 C:\Users\Devon Tyler\tillerstead\DESIGN_SYSTEM.md                              md:
@@ -63,12 +74,15 @@ C:\Users\Devon Tyler\tillerstead\dist\QUICK_REFERENCE.md                       p
 C:\Users\Devon Tyler\tillerstead\dist\SCRIPTS_GUIDE.md                         p-
 C:\Users\Devon Tyler\tillerstead\dist\TILLERSTEAD_404_COMPREHENSIVE_FIX.md     p-
 C:\Users\Devon Tyler\tillerstead\dist\TILLERSTEAD_DEPLOYMENT_STATUS.md         p-
-C:\Users\Devon Tyler\tillerstead\DOCUMENTATION_AUDIT.md                        p-
 C:\Users\Devon Tyler\tillerstead\icon-demo.html                                p-
 C:\Users\Devon Tyler\tillerstead\index.html                                    text-
+C:\Users\Devon Tyler\tillerstead\INDEX.md                                      py-
 C:\Users\Devon Tyler\tillerstead\instruction docs\curbless-shower-rebuild.md   p-
 C:\Users\Devon Tyler\tillerstead\instruction docs\README.md                    p-
 C:\Users\Devon Tyler\tillerstead\pages\atlantic-county-nj.html                 p-
+C:\Users\Devon Tyler\tillerstead\pages\build.backup\curbs-curbless.md          p-
+C:\Users\Devon Tyler\tillerstead\pages\build.backup\index.md                   p-
+C:\Users\Devon Tyler\tillerstead\pages\build\curbs-curbless.md                 p-
 C:\Users\Devon Tyler\tillerstead\pages\build\index.md                          p-
 C:\Users\Devon Tyler\tillerstead\pages\cape-may-county-nj.html                 p-
 C:\Users\Devon Tyler\tillerstead\pages\ocean-county-nj.html                    p-
@@ -80,8 +94,11 @@ C:\Users\Devon Tyler\tillerstead\pages\process.html                            t
 C:\Users\Devon Tyler\tillerstead\pages\reviews.html                            p-
 C:\Users\Devon Tyler\tillerstead\pages\services.html                           p-
 C:\Users\Devon Tyler\tillerstead\pages\success.html                            text-
+C:\Users\Devon Tyler\tillerstead\PROJECT_COMPLETION_FINAL.md                   lg:
+C:\Users\Devon Tyler\tillerstead\PROJECT_COMPLETION_FINAL.md                   py-
 C:\Users\Devon Tyler\tillerstead\README.md                                     text-
-C:\Users\Devon Tyler\tillerstead\REMEDIATION_STATUS.md                         md:
+C:\Users\Devon Tyler\tillerstead\REFACTORING_COMPLETE_SUMMARY.md               py-
+C:\Users\Devon Tyler\tillerstead\REPO_CLEANUP_SUMMARY.md                       py-
 C:\Users\Devon Tyler\tillerstead\reports\FOOTER_AND_PATTERNS_AUDIT.md          p-
 C:\Users\Devon Tyler\tillerstead\reports\FOOTER_AND_PATTERNS_AUDIT.md          px-
 C:\Users\Devon Tyler\tillerstead\reports\MOBILE_CARD_ENHANCEMENTS.md           px-

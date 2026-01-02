@@ -1,0 +1,90 @@
+
+> lint
+> npm run lint:js && npm run lint:css
+
+
+> lint:js
+> eslint .
+
+
+C:\Users\Devon Tyler\tillerstead\scripts\check-contrast-wcag.js
+  22:10  warning  'readFileSync' is defined but never used. Allowed unused vars must match /^_/u  no-unused-vars
+  22:39  warning  'readdirSync' is defined but never used. Allowed unused vars must match /^_/u   no-unused-vars
+  23:16  warning  'extname' is defined but never used. Allowed unused vars must match /^_/u       no-unused-vars
+
+C:\Users\Devon Tyler\tillerstead\scripts\check-links.js
+  13:17  error  Parsing error: Unterminated string constant
+
+C:\Users\Devon Tyler\tillerstead\scripts\compliance-audit.js
+    5:3   error    Trailing spaces not allowed                                                           no-trailing-spaces
+    9:3   error    Trailing spaces not allowed                                                           no-trailing-spaces
+   16:3   error    Trailing spaces not allowed                                                           no-trailing-spaces
+   19:3   error    Trailing spaces not allowed                                                           no-trailing-spaces
+   26:16  warning  'extname' is defined but never used. Allowed unused vars must match /^_/u             no-unused-vars
+   32:7   warning  'PAGES_DIR' is assigned a value but never used. Allowed unused vars must match /^_/u  no-unused-vars
+   33:7   warning  'POSTS_DIR' is assigned a value but never used. Allowed unused vars must match /^_/u  no-unused-vars
+  122:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  125:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  129:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  143:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  148:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  152:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  167:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  180:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  185:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  189:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  205:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  212:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  219:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  241:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  254:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  256:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  261:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  266:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  274:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  284:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  298:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  311:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  314:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  317:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  319:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  323:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  334:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  337:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  347:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  350:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  353:53  error    Trailing spaces not allowed                                                           no-trailing-spaces
+  356:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  367:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  384:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  396:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  398:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  402:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  411:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  413:30  error    Trailing spaces not allowed                                                           no-trailing-spaces
+  416:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  424:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  432:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  446:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  458:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  460:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  470:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  478:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  483:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  486:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  491:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  494:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  497:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  516:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  530:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  537:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  545:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  551:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  578:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  582:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  596:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+  601:1   error    Trailing spaces not allowed                                                           no-trailing-spaces
+
+Γ£û 72 problems (66 errors, 6 warnings)
+  65 errors and 0 warnings potentially fixable with the `--fix` option.
+

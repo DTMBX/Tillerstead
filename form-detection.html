@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Netlify Forms Detection</title>
+  <link rel="stylesheet" href="form-detection.css">
 </head>
-<body style="display:none;">
+<body>
   <!-- This form allows Netlify to detect and enable Forms feature -->
   <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="contact" />
-    <input name="bot-field" />
-    <input name="name" required />
-    <input name="email" type="email" required />
-    <input name="phone" type="tel" />
-    <textarea name="message" required></textarea>
+    <label for="bot-field" class="visually-hidden">Leave this field blank</label>
+    <input id="bot-field" name="bot-field" placeholder="Leave blank" title="Leave blank" />
+    <label for="name">Name</label>
+    <input id="name" name="name" required placeholder="Your name" title="Your name" />
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" required title="Your email address" placeholder="Your email address" />
+    <label for="phone">Phone</label>
+    <input id="phone" name="phone" type="tel" title="Your phone number" placeholder="Your phone number (optional)" />
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required title="Your message" placeholder="Your message"></textarea>
     <button type="submit">Submit</button>
   </form>
 </body>

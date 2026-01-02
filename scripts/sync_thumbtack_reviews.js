@@ -4,7 +4,8 @@
 /* eslint-env node */
 /**
  * Sync live Thumbtack reviews into _data/reviews.yml.
- * Run locally with: `node scripts/sync_thumbtack_reviews.js`
+ * Run locally with:
+ode scripts/sync_thumbtack_reviews.js`
  * Requires network access and overwrites the reviews array with the latest
  * data scraped from the public Thumbtack service page.
  */

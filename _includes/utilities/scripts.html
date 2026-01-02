@@ -18,6 +18,11 @@ Loads all JavaScript modules with cache busting and proper defer/async attribute
 <!-- Contact form handler (loads on all pages, only activates on form) -->
 <script src="{{ '/assets/js/contact-form-handler.js' | relative_url }}?v={{ cache_version }}" defer></script>
 
+<!-- Build Phase Calculators (conditionally loaded) -->
+{% if page.url contains '/pages/build/' %}
+<script src="{{ '/assets/js/build-calculators.js' | relative_url }}?v={{ cache_version }}" defer></script>
+{% endif %}
+
 {% if jekyll.environment == 'development' %}
 <!-- Development overlay for debugging -->
 <script src="{{ '/assets/js/dev-overlay.js' | relative_url }}?v={{ cache_version }}" defer></script>

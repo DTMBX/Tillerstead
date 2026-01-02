@@ -2,18 +2,18 @@
 
 /**
  * check-contrast-wcag.js — Comprehensive WCAG 2.1 Contrast Checker
- * 
+ *
  * Purpose:
  * Validates all color combinations throughout the site against WCAG 2.1 AAA standards.
  * Extracts colors from CSS, checks combinations, and reports failures.
- * 
+ *
  * Standards:
  * - WCAG 2.1 Level AAA: 7:1 normal text, 4.5:1 large text (18px+ bold or 24px+)
  * - WCAG 2.1 Level AA: 4.5:1 normal text, 3:1 large text
- * 
+ *
  * Usage:
  * node scripts/check-contrast-wcag.js
- * 
+ *
  * Output:
  * - contrast-audit-report.json
  * - contrast-audit-report.md
@@ -57,14 +57,14 @@ function getLuminance([r, g, b]) {
 function getContrastRatio(color1, color2) {
   const rgb1 = hexToRgb(color1);
   const rgb2 = hexToRgb(color2);
-  
+
   if (!rgb1 || !rgb2) return null;
-  
+
   const l1 = getLuminance(rgb1);
   const l2 = getLuminance(rgb2);
   const lighter = Math.max(l1, l2);
   const darker = Math.min(l1, l2);
-  
+
   return parseFloat(((lighter + 0.05) / (darker + 0.05)).toFixed(2));
 }
 
@@ -99,7 +99,7 @@ const BRAND_COLORS = {
   'teal-200': '#a8f4b8',
   'teal-100': '#d5fae3',
   'teal-50': '#eefbf5',
-  
+
   // Reds
   'red-900': '#5d0608',
   'red-800': '#8b0a0e',
@@ -111,7 +111,7 @@ const BRAND_COLORS = {
   'red-200': '#fed9dc',
   'red-100': '#fee9eb',
   'red-50': '#fef5f5',
-  
+
   // Golds
   'gold-900': '#8b7500',
   'gold-800': '#b89900',
@@ -123,7 +123,7 @@ const BRAND_COLORS = {
   'gold-200': '#fffde7',
   'gold-100': '#fffff0',
   'gold-50': '#fffff7',
-  
+
   // Charcoals
   'charcoal-900': '#0f0f0f',
   'charcoal-800': '#1a1a1a',
@@ -135,13 +135,13 @@ const BRAND_COLORS = {
   'charcoal-200': '#ababab',
   'charcoal-100': '#d4d4d4',
   'charcoal-50': '#ebebeb',
-  
+
   // Creams
   'cream-100': '#f9f7f4',
   'cream-75': '#faf8f5',
   'cream-50': '#fcfaf7',
   'cream-25': '#fdfcfa',
-  
+
   // Pure
   'white': '#ffffff',
   'black': '#000000'
@@ -153,37 +153,37 @@ const COMMON_COMBINATIONS = [
   { fg: 'teal-700', bg: 'white', label: 'Primary on White' },
   { fg: 'teal-700', bg: 'cream-100', label: 'Primary on Cream (Avoid - Below AA)' },
   { fg: 'teal-800', bg: 'white', label: 'Primary Dark on White' },
-  
+
   // Accent on light backgrounds
   { fg: 'red-600', bg: 'white', label: 'Accent on White' },
   { fg: 'red-600', bg: 'cream-100', label: 'Accent on Cream' },
   { fg: 'red-700', bg: 'white', label: 'Accent Dark on White' },
-  
+
   // Highlight on light backgrounds (using correct dark gold for text)
   { fg: 'gold-700', bg: 'white', label: 'Dark Gold Text on White' },
   { fg: 'gold-600', bg: 'white', label: 'Logo Gold (Highlight Only - Fails)' },
   { fg: 'gold-700', bg: 'cream-100', label: 'Dark Gold on Cream' },
-  
+
   // Text on light backgrounds
   { fg: 'charcoal-800', bg: 'white', label: 'Text on White' },
   { fg: 'charcoal-800', bg: 'cream-100', label: 'Text on Cream' },
   { fg: 'charcoal-600', bg: 'white', label: 'Muted Text on White' },
-  
+
   // White text on dark backgrounds
   { fg: 'white', bg: 'teal-700', label: 'White on Primary' },
   { fg: 'white', bg: 'teal-800', label: 'White on Primary Dark' },
   { fg: 'white', bg: 'red-600', label: 'White on Accent' },
   { fg: 'white', bg: 'charcoal-800', label: 'White on Dark' },
-  
+
   // Button states
   { fg: 'white', bg: 'teal-700', label: 'Button Primary' },
   { fg: 'white', bg: 'red-600', label: 'Button Accent' },
   { fg: 'teal-700', bg: 'white', label: 'Button Secondary (Fixed - White BG)' },
-  
+
   // Hover states
   { fg: 'white', bg: 'teal-800', label: 'Primary Hover' },
   { fg: 'white', bg: 'red-700', label: 'Accent Hover' },
-  
+
   // Links
   { fg: 'teal-700', bg: 'white', label: 'Link Default' },
   { fg: 'teal-800', bg: 'white', label: 'Link Hover' },
@@ -209,22 +209,22 @@ const REPORT = {
 
 function runContrastAudit() {
   console.log('🎨 WCAG 2.1 Contrast Audit Started\n');
-  
+
   REPORT.totalCombinations = COMMON_COMBINATIONS.length;
-  
+
   COMMON_COMBINATIONS.forEach(combo => {
     const fgColor = BRAND_COLORS[combo.fg];
     const bgColor = BRAND_COLORS[combo.bg];
-    
+
     if (!fgColor || !bgColor) {
       console.warn(`⚠️  Color not found: ${combo.fg} or ${combo.bg}`);
       return;
     }
-    
+
     const ratio = getContrastRatio(fgColor, bgColor);
     const wcagLevel = getWCAGLevel(ratio, false);
     const wcagLevelLarge = getWCAGLevel(ratio, true);
-    
+
     const result = {
       combination: combo.label,
       foreground: {
@@ -242,7 +242,7 @@ function runContrastAudit() {
       },
       status: wcagLevel === 'AAA' ? 'PASS' : wcagLevel === 'AA' ? 'WARNING' : 'FAIL'
     };
-    
+
     if (result.status === 'PASS') {
       REPORT.passAAA++;
       console.log(`✅ ${combo.label}: ${ratio}:1 (AAA)`);
@@ -253,21 +253,21 @@ function runContrastAudit() {
       REPORT.failures++;
       console.log(`❌ ${combo.label}: ${ratio}:1 (FAIL)`);
     }
-    
+
     REPORT.results.push(result);
   });
-  
+
   // Write JSON report
   writeFileSync(
     join(ROOT, 'contrast-audit-report.json'),
     JSON.stringify(REPORT, null, 2)
   );
-  
+
   // Write Markdown report
   let markdown = `# WCAG 2.1 Contrast Audit Report
 
-**Generated:** ${new Date().toISOString()}  
-**Target Level:** AAA (7:1 normal text, 4.5:1 large text)  
+**Generated:** ${new Date().toISOString()}
+**Target Level:** AAA (7:1 normal text, 4.5:1 large text)
 **Total Combinations Tested:** ${REPORT.totalCombinations}
 
 ## Summary
@@ -281,12 +281,12 @@ function runContrastAudit() {
 ## Compliance by Combination
 
 `;
-  
+
   // Group by status
   const passed = REPORT.results.filter(r => r.status === 'PASS');
   const warned = REPORT.results.filter(r => r.status === 'WARNING');
   const failed = REPORT.results.filter(r => r.status === 'FAIL');
-  
+
   if (passed.length > 0) {
     markdown += `\n### ✅ AAA Compliant (${passed.length})\n\n`;
     passed.forEach(result => {
@@ -295,7 +295,7 @@ function runContrastAudit() {
       markdown += `  - Background: ${result.background.hex}\n`;
     });
   }
-  
+
   if (warned.length > 0) {
     markdown += `\n### ⚠️  AA Compliant Only (${warned.length})\n\n`;
     warned.forEach(result => {
@@ -304,15 +304,15 @@ function runContrastAudit() {
       markdown += `  - Large Text: ${result.wcagCompliance.largeText} (requires 4.5:1)\n`;
     });
   }
-  
+
   if (failed.length > 0) {
     markdown += `\n### ❌ Non-Compliant (${failed.length})\n\n`;
     failed.forEach(result => {
       markdown += `- **${result.combination}**: ${result.contrastRatio}:1 ⚠️\n`;
-      markdown += `  - Recommendation: Adjust colors or use different combination\n`;
+      markdown += '  - Recommendation: Adjust colors or use different combination\n';
     });
   }
-  
+
   markdown += `\n## Reference
 
 - WCAG 2.1 Level AA: 4.5:1 (normal), 3:1 (large)
@@ -326,7 +326,7 @@ function runContrastAudit() {
 - Light: #43d779
 
 ### Red (Accent)
-- Dark: #da121a  
+- Dark: #da121a
 - Light: #fc6b73
 
 ### Gold (Highlight)
@@ -337,20 +337,20 @@ function runContrastAudit() {
 - Dark: #1a1a1a
 - Light: #ffffff
 `;
-  
+
   writeFileSync(
     join(ROOT, 'contrast-audit-report.md'),
     markdown
   );
-  
+
   // Print summary
-  console.log(`\n📊 Summary:`);
+  console.log('\n📊 Summary:');
   console.log(`   AAA Compliant: ${REPORT.passAAA}/${REPORT.totalCombinations}`);
   console.log(`   AA Only: ${REPORT.passAA}`);
   console.log(`   Failures: ${REPORT.failures}`);
-  console.log(`\n📄 Reports written to:`);
-  console.log(`   - contrast-audit-report.json`);
-  console.log(`   - contrast-audit-report.md\n`);
+  console.log('\n📄 Reports written to:');
+  console.log('   - contrast-audit-report.json');
+  console.log('   - contrast-audit-report.md\n');
 }
 
 runContrastAudit();
