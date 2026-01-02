@@ -3,6 +3,7 @@ file                                                                           t
 ----                                                                           -----
 C:\Users\Devon Tyler\tillerstead\_includes\components\ts-icon-sprite.html      p-
 C:\Users\Devon Tyler\tillerstead\_includes\content\blog-highlights.html        text-
+C:\Users\Devon Tyler\tillerstead\_includes\content\build-sidenav.html          text-
 C:\Users\Devon Tyler\tillerstead\_includes\content\portfolio-highlights.html   text-
 C:\Users\Devon Tyler\tillerstead\_includes\content\reviews-highlights.html     text-
 C:\Users\Devon Tyler\tillerstead\_includes\content\ts-plans.html               text-
@@ -13,6 +14,7 @@ C:\Users\Devon Tyler\tillerstead\_includes\hero\unified-hero.html              t
 C:\Users\Devon Tyler\tillerstead\_includes\layout\head.html                    p-
 C:\Users\Devon Tyler\tillerstead\_includes\layout\logo-sprite-inline.html      text-
 C:\Users\Devon Tyler\tillerstead\_includes\sections\process.html               text-
+C:\Users\Devon Tyler\tillerstead\_layouts\build-page.html                      text-
 C:\Users\Devon Tyler\tillerstead\_layouts\default.html                         p-
 C:\Users\Devon Tyler\tillerstead\_layouts\post.html                            text-
 C:\Users\Devon Tyler\tillerstead\.ai\CODEX.md                                  text-
