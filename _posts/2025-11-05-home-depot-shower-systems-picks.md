@@ -25,7 +25,7 @@ Below, we break down the **Good–Better–Best** options, with technical specif
 **Advantages:**  
 ✅ Widely available at Home Depot  
 ✅ Flexible for irregular layouts  
-✅ Cost-effective and fast to apply  
+✅ Cost-effective and fast to apply
 
 **Risks:**  
 ⚠️ Most failures result from thin coats or missed corners—inspect with a wet-film gauge.  
@@ -42,7 +42,7 @@ Below, we break down the **Good–Better–Best** options, with technical specif
 **Advantages:**  
 ✅ Waterproofing is right at the surface—no wicking into backer  
 ✅ Easy to **flood test** per code before tiling  
-✅ Proven in both DIY and pro installs  
+✅ Proven in both DIY and pro installs
 
 **Risks:**  
 ⚠️ Overlap seams per manufacturer spec (typically 2" minimum—see TCNA B422).  
@@ -60,7 +60,7 @@ Below, we break down the **Good–Better–Best** options, with technical specif
 **Advantages:**  
 ✅ Ultra-flat, stable planes for **large-format tile**  
 ✅ Minimal exposed fasteners in wet zones when detailed per manufacturer  
-✅ Faster, cleaner, and lighter than cement board  
+✅ Faster, cleaner, and lighter than cement board
 
 **Risks:**  
 ⚠️ Use only **manufacturer-approved fasteners, washers, tapes, sealants, and drains**—mixing brands voids warranties and code compliance.  
@@ -94,4 +94,3 @@ Send your shower photos and goals to **<info@tillerstead.com>**, or visit the [C
 ---
 
 _Do the work with integrity and care. That’s the Tillerstead way._
-

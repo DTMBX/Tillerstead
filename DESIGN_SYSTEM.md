@@ -1,6 +1,7 @@
 # 🎨 Tillerstead Modern Design System v2
 
 ## Overview
+
 A cohesive, modern design system built from the Tillerstead logo colors. Professional, bold, and dynamic with smooth animations and accessibility at the core.
 
 ---
@@ -12,18 +13,21 @@ All colors derived from the Tillerstead logo for perfect brand consistency.
 ### Primary Brand Colors
 
 **Teal (#078930)** - Trust, Expertise, Tile Industry Standard
+
 - Used for primary actions, buttons, links, and brand identity
 - Teal-700: Main brand color (logo tile)
 - Teal-800: Darker shade for emphasis
 - Teal-50 to Teal-400: Lighter variations for backgrounds, hover states
 
 **Red (#DA121A)** - Energy, Confidence, Calls-to-Action
+
 - Accent color for important actions and highlights
 - Used for emphasis, warnings, and secondary CTAs
 - Red-600: Main accent (logo text)
 - Red-100 to Red-500: Supporting variations
 
 **Gold (#FCDD09)** - Luxury, Highlights, Attention
+
 - Used sparingly for highlights and premium features
 - Can reference tile grout/detailing
 - Gold-600: Main highlight (logo stroke)
@@ -32,18 +36,21 @@ All colors derived from the Tillerstead logo for perfect brand consistency.
 ### Neutral Colors
 
 **Charcoal (#1a1a1a)** - Text, Structure, Depth
+
 - Dark text and backgrounds
 - Multiple shades for hierarchy
 - Charcoal-800: Main text color
 - Charcoal-50 to Charcoal-300: Light backgrounds and borders
 
 **Cream (#f9f7f4)** - Warmth, Substrate Reference
+
 - Warm off-white backgrounds
 - References bathroom substrate/tile base
 - Cream-100: Primary soft background
 - Cream-25 to Cream-75: Subtle variations
 
 **White (#ffffff)** - Clean, Professional
+
 - Primary background
 - Card and container fill
 - Maximum contrast support
@@ -53,10 +60,12 @@ All colors derived from the Tillerstead logo for perfect brand consistency.
 ## ✨ Typography
 
 **Font Family**: Inter, Manrope, system-ui
+
 - Modern, professional, accessible
 - Used throughout for consistency
 
 **Font Weights**:
+
 - Light (300): Subtle text, labels
 - Regular (400): Body text
 - Medium (500): Subheadings, emphasis
@@ -83,6 +92,7 @@ All spacing uses a consistent 4px base unit for harmony:
 ## 🎯 Border Radius
 
 **Use case guide:**
+
 - `--radius-none` (0): Harsh edges
 - `--radius-xs` (4px): Minimal rounding
 - `--radius-sm` (6px): Subtle buttons
@@ -97,20 +107,20 @@ All spacing uses a consistent 4px base unit for harmony:
 
 ### Keyframe Animations Available
 
-| Animation | Purpose | Duration | Easing |
-|-----------|---------|----------|--------|
-| `fadeIn` | Entrance | 300ms | easing-out |
-| `slideInUp` | Vertical entrance | 300ms | easing-out |
-| `slideInDown` | Reverse entrance | 300ms | easing-out |
-| `slideInLeft` | Horizontal entrance | 300ms | easing-out |
-| `slideInRight` | Horizontal entrance | 300ms | easing-out |
-| `scaleIn` | Emphasis entrance | 300ms | easing-out |
-| `bounceIn` | Playful entrance | 300ms | bounce |
-| `float` | Subtle floating | 3s | ease-in-out |
-| `glow` | Attention pulse | 2s | ease-in-out |
-| `pulse` | Opacity pulse | 2s | ease-in-out |
-| `rotate` | Loading spinner | varies | linear |
-| `wave` | Cascading motion | varies | ease-in-out |
+| Animation      | Purpose             | Duration | Easing      |
+| -------------- | ------------------- | -------- | ----------- |
+| `fadeIn`       | Entrance            | 300ms    | easing-out  |
+| `slideInUp`    | Vertical entrance   | 300ms    | easing-out  |
+| `slideInDown`  | Reverse entrance    | 300ms    | easing-out  |
+| `slideInLeft`  | Horizontal entrance | 300ms    | easing-out  |
+| `slideInRight` | Horizontal entrance | 300ms    | easing-out  |
+| `scaleIn`      | Emphasis entrance   | 300ms    | easing-out  |
+| `bounceIn`     | Playful entrance    | 300ms    | bounce      |
+| `float`        | Subtle floating     | 3s       | ease-in-out |
+| `glow`         | Attention pulse     | 2s       | ease-in-out |
+| `pulse`        | Opacity pulse       | 2s       | ease-in-out |
+| `rotate`       | Loading spinner     | varies   | linear      |
+| `wave`         | Cascading motion    | varies   | ease-in-out |
 
 ### Animation Durations
 
@@ -173,34 +183,42 @@ All spacing uses a consistent 4px base unit for harmony:
 ### Buttons
 
 **Primary (Teal)**
+
 ```html
 <button class="btn btn--primary">Click Me</button>
 ```
+
 - Background: Teal-700
 - Text: White
 - Hover: Teal-800 with shadow
 - Animation: Lift on hover, scale on active
 
 **Secondary (Outline)**
+
 ```html
 <button class="btn btn--secondary">Alternative</button>
 ```
+
 - Background: Transparent
 - Border: Teal-700
 - Hover: Light teal background
 
 **Accent (Red)**
+
 ```html
 <button class="btn btn--accent">Important</button>
 ```
+
 - Background: Red-600
 - Text: White
 - Hover: Red-700 with red glow
 
 **Ghost (Minimal)**
+
 ```html
 <button class="btn btn--ghost">Subtle</button>
 ```
+
 - Background: Transparent
 - Border: Light gray
 - Hover: Soft background
@@ -260,22 +278,26 @@ Used for depth and elevation:
 ## ♿ Accessibility
 
 ### Keyboard Navigation
+
 - All interactive elements focus-visible with teal outline
 - Tab order logical and intuitive
 - No keyboard traps
 
 ### Color Contrast
+
 - WCAG 2.1 AAA compliant throughout
 - Teal-700 on white: 8.2:1 contrast
 - Red-600 on white: 6.3:1 contrast
 - All text at minimum 4.5:1 (normal) or 3:1 (large)
 
 ### Motion
+
 - Respects `prefers-reduced-motion` preference
 - All animations disabled for users preferring reduced motion
 - No auto-playing animations
 
 ### High Contrast Mode
+
 - Enhanced borders and visibility
 - Proper color contrast maintained
 - Clear focus indicators
@@ -287,6 +309,7 @@ Used for depth and elevation:
 ### When to Use Animations
 
 ✅ **Use for:**
+
 - Page entrance/exit
 - Hover states on interactive elements
 - Loading states
@@ -295,6 +318,7 @@ Used for depth and elevation:
 - Micro-interactions (button press, toggle)
 
 ❌ **Avoid:**
+
 - Distracting background animations
 - Auto-playing carousel effects
 - Animations longer than 500ms (unless entrance)

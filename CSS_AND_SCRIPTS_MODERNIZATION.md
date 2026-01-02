@@ -13,6 +13,7 @@
 **File:** `_sass/00-settings/theme-globals.scss` (8.4 KB)
 
 **Central control for ALL design decisions:**
+
 - Colors (primary, secondary, neutral, semantic)
 - Spacing (8px-based scale: xs→4xl)
 - Typography (fonts, sizes, weights, line-heights)
@@ -22,6 +23,7 @@
 - Z-index scale (stacking context)
 
 **How it works:**
+
 ```scss
 // Change once, updates everywhere
 $color-primary: #1a5c3a;
@@ -29,10 +31,10 @@ $spacing-lg: 24px;
 $font-size-base: 16px;
 
 // Use in any component
-.button { 
-  background: $color-primary;  // Uses global var
-  padding: $spacing-lg;        // Uses global var
-  font-size: $font-size-base;  // Uses global var
+.button {
+  background: $color-primary; // Uses global var
+  padding: $spacing-lg; // Uses global var
+  font-size: $font-size-base; // Uses global var
 }
 ```
 
@@ -41,7 +43,7 @@ $font-size-base: 16px;
 ✅ Instant global theme updates  
 ✅ Consistent design system  
 ✅ Professional organization  
-✅ Easy for teams to maintain  
+✅ Easy for teams to maintain
 
 ---
 
@@ -69,17 +71,18 @@ scripts/
 
 **Classification System:**
 
-| Class | Risk | Review | Use For |
-|-------|------|--------|---------|
-| A | High | Required | Client-facing, pricing, compliance |
-| B | Medium | Recommended | Build, automation, data transforms |
-| C | Low | Optional | Education, visualization, demos |
+| Class | Risk   | Review      | Use For                            |
+| ----- | ------ | ----------- | ---------------------------------- |
+| A     | High   | Required    | Client-facing, pricing, compliance |
+| B     | Medium | Recommended | Build, automation, data transforms |
+| C     | Low    | Optional    | Education, visualization, demos    |
 
 ---
 
 ### 3. 📚 Comprehensive Documentation
 
 #### CSS Architecture Guide
+
 **File:** `CSS_ARCHITECTURE.md` (12.2 KB)
 
 - Complete global theme variable reference
@@ -90,6 +93,7 @@ scripts/
 - Quick reference tables
 
 #### Script Governance Guide
+
 **File:** `SCRIPT_GOVERNANCE.md` (13.1 KB)
 
 - Script classification system
@@ -108,15 +112,21 @@ scripts/
 
 ```scss
 // Edit: _sass/00-settings/theme-globals.scss
-$color-primary: #FF6600;  // New color
+$color-primary: #ff6600; // New color
 
 // Rebuild
 npm run build:css
 
 // All components automatically update!
-.button { background: $color-primary; }      // Now orange
-.link { color: $color-primary; }             // Now orange
-.heading { color: $color-primary; }          // Now orange
+.button {
+  background: $color-primary;
+} // Now orange
+.link {
+  color: $color-primary;
+} // Now orange
+.heading {
+  color: $color-primary;
+} // Now orange
 ```
 
 ### Add Spacing Consistently
@@ -124,9 +134,9 @@ npm run build:css
 ```scss
 // Use pre-defined spacing scale
 .card {
-  padding: $spacing-xl;           // 32px (pre-calculated)
-  margin-bottom: $spacing-lg;     // 24px
-  gap: $spacing-md;               // 16px
+  padding: $spacing-xl; // 32px (pre-calculated)
+  margin-bottom: $spacing-lg; // 24px
+  gap: $spacing-md; // 16px
 }
 
 // All spacing is 8px-based → perfectly aligned
@@ -145,7 +155,7 @@ npm run build:css
   border-radius: $radius-md;
   box-shadow: $shadow-md;
   transition: all $transition-base;
-  
+
   &:hover {
     background: $color-primary;
     color: $text-inverse;
@@ -168,17 +178,17 @@ npm run build:css
  * ROLLBACK: git checkout assets/img/
  */
 
-const imageOptimizer = require('image-min');
-const fs = require('fs');
+const imageOptimizer = require("image-min");
+const fs = require("fs");
 
-console.log('🖼️  Optimizing images...');
+console.log("🖼️  Optimizing images...");
 
 try {
   // Process images
-  const files = imageOptimizer(['assets/img/**/*.jpg']);
+  const files = imageOptimizer(["assets/img/**/*.jpg"]);
   console.log(`✅ Optimized ${files.length} images`);
 } catch (error) {
-  console.error('❌ Optimization failed:', error.message);
+  console.error("❌ Optimization failed:", error.message);
   process.exit(1);
 }
 ```
@@ -188,6 +198,7 @@ try {
 ## File Directory Map
 
 ### SCSS Organization
+
 ```
 _sass/
 ├── 00-settings/
@@ -214,6 +225,7 @@ _sass/
 ```
 
 ### CSS Assets
+
 ```
 assets/css/
 ├── main.scss                   Main import file
@@ -222,6 +234,7 @@ assets/css/
 ```
 
 ### Scripts
+
 ```
 scripts/
 ├── class-a-regulated/          Client-impacting
@@ -239,6 +252,7 @@ scripts/
 ### Quick Lookup
 
 **Colors:**
+
 ```scss
 $color-primary, $color-secondary, $color-accent
 $color-success, $color-warning, $color-error
@@ -246,12 +260,14 @@ $text-primary, $text-secondary, $text-inverse
 ```
 
 **Spacing:**
+
 ```scss
 $spacing-xs, $spacing-sm, $spacing-md, $spacing-lg
 $spacing-xl, $spacing-2xl, $spacing-3xl, $spacing-4xl
 ```
 
 **Typography:**
+
 ```scss
 $font-size-xs through $font-size-6xl
 $font-weight-light through $font-weight-extrabold
@@ -259,6 +275,7 @@ $line-height-tight through $line-height-loose
 ```
 
 **Effects:**
+
 ```scss
 $radius-sm, $radius-md, $radius-lg, $radius-full
 $shadow-sm through $shadow-2xl
@@ -270,44 +287,50 @@ $transition-fast, $transition-base, $transition-slow
 ## Workflow Improvements
 
 ### Before This Update
-❌ Colors hardcoded throughout (_sass/)  
+
+❌ Colors hardcoded throughout (\_sass/)  
 ❌ Spacing values scattered  
 ❌ No central theme control  
 ❌ Scripts unsorted (70+ files)  
 ❌ Script types mixed  
-❌ No governance system  
+❌ No governance system
 
 ### After This Update
+
 ✅ Global theme file controls all colors/spacing  
 ✅ One source of truth for design  
 ✅ Easy global updates  
 ✅ Scripts organized by class (A/B/C)  
 ✅ Risk-based governance  
-✅ Compliance built-in  
+✅ Compliance built-in
 
 ---
 
 ## Building & Testing
 
 ### Build CSS
+
 ```bash
 npm run build:css
 # Compiles _sass/ → assets/css/main.css
 ```
 
 ### Watch CSS Changes
+
 ```bash
 npm run watch:css
 # Auto-rebuilds on SCSS changes
 ```
 
 ### Test Contrast
+
 ```bash
 npm run test:contrast
 # Verify WCAG AA standards
 ```
 
 ### Audit CSS
+
 ```bash
 npm run audit:css
 # Find unused styles
@@ -318,12 +341,14 @@ npm run audit:css
 ## Implementation Checklist
 
 ### Global Theme Setup
+
 - [x] Created `theme-globals.scss` with all variables
 - [x] Added comprehensive documentation
 - [x] Updated `main.scss` to import theme-globals first
 - [x] Created CSS_ARCHITECTURE.md guide
 
 ### Script Organization
+
 - [x] Created class-a-regulated/ directory
 - [x] Created class-b-technical/ directory
 - [x] Created class-c-educational/ directory
@@ -332,6 +357,7 @@ npm run audit:css
 - [x] Created SCRIPT_GOVERNANCE.md guide
 
 ### Documentation
+
 - [x] CSS_ARCHITECTURE.md (12.2 KB)
 - [x] SCRIPT_GOVERNANCE.md (13.1 KB)
 - [x] Quick start examples
@@ -342,42 +368,45 @@ npm run audit:css
 
 ## Key Metrics
 
-| Metric | Value |
-|--------|-------|
-| Global theme variables | 80+ |
-| Color definitions | 25+ |
-| Spacing scale values | 8 |
-| Typography variables | 30+ |
-| Effect variables (shadows, radius, etc) | 20+ |
-| Script classes | 3 (A, B, C) |
-| Risk levels | 4 (R0-R3) |
-| Documentation pages | 2 |
-| Documentation size | 25+ KB |
+| Metric                                  | Value       |
+| --------------------------------------- | ----------- |
+| Global theme variables                  | 80+         |
+| Color definitions                       | 25+         |
+| Spacing scale values                    | 8           |
+| Typography variables                    | 30+         |
+| Effect variables (shadows, radius, etc) | 20+         |
+| Script classes                          | 3 (A, B, C) |
+| Risk levels                             | 4 (R0-R3)   |
+| Documentation pages                     | 2           |
+| Documentation size                      | 25+ KB      |
 
 ---
 
 ## Benefits Summary
 
 ### For Developers
+
 ✅ **Easier to use** — Find variables by category  
 ✅ **Faster to build** — Copy-paste from examples  
 ✅ **Safer to change** — Global updates, no mistakes  
 ✅ **Better organized** — Scripts by risk level  
-✅ **Clearer governance** — Compliance built-in  
+✅ **Clearer governance** — Compliance built-in
 
 ### For Team
+
 ✅ **Consistent** — Everyone uses same system  
 ✅ **Maintainable** — One place to update design  
 ✅ **Professional** — Enterprise-level organization  
 ✅ **Scalable** — Room to grow  
-✅ **Documented** — Complete guides  
+✅ **Documented** — Complete guides
 
 ### For Projects
+
 ✅ **Faster** — Reusable components  
 ✅ **Cheaper** — Less custom work  
 ✅ **Quality** — Design system enforcement  
 ✅ **Compliant** — Governance built-in  
-✅ **Auditable** — Full decision trails  
+✅ **Auditable** — Full decision trails
 
 ---
 
@@ -426,17 +455,17 @@ npm run audit:css
 
 ## Files Delivered
 
-| File | Size | Purpose |
-|------|------|---------|
-| `_sass/00-settings/theme-globals.scss` | 8.4 KB | Global theme (colors, spacing, typography) |
-| `CSS_ARCHITECTURE.md` | 12.2 KB | CSS system documentation & reference |
-| `SCRIPT_GOVERNANCE.md` | 13.1 KB | Script classification & governance |
-| `scripts/class-a-regulated/` | Folder | Client-impacting scripts |
-| `scripts/class-b-technical/` | Folder | Build & automation scripts |
-| `scripts/class-c-educational/` | Folder | Educational scripts |
-| `scripts/utilities/` | Folder | Shared utilities |
-| `scripts/templates/` | Folder | Script templates |
-| Updated `assets/css/main.scss` | - | Now imports theme-globals first |
+| File                                   | Size    | Purpose                                    |
+| -------------------------------------- | ------- | ------------------------------------------ |
+| `_sass/00-settings/theme-globals.scss` | 8.4 KB  | Global theme (colors, spacing, typography) |
+| `CSS_ARCHITECTURE.md`                  | 12.2 KB | CSS system documentation & reference       |
+| `SCRIPT_GOVERNANCE.md`                 | 13.1 KB | Script classification & governance         |
+| `scripts/class-a-regulated/`           | Folder  | Client-impacting scripts                   |
+| `scripts/class-b-technical/`           | Folder  | Build & automation scripts                 |
+| `scripts/class-c-educational/`         | Folder  | Educational scripts                        |
+| `scripts/utilities/`                   | Folder  | Shared utilities                           |
+| `scripts/templates/`                   | Folder  | Script templates                           |
+| Updated `assets/css/main.scss`         | -       | Now imports theme-globals first            |
 
 ---
 
@@ -445,7 +474,7 @@ npm run audit:css
 ✅ **Complete**  
 ✅ **Tested**  
 ✅ **Documented**  
-✅ **Ready to use**  
+✅ **Ready to use**
 
 ---
 

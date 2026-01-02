@@ -6,13 +6,13 @@ on:
   pull_request:
     branches: [main, develop]
   schedule:
-    - cron: '0 0 * * 0'  # Weekly validation
+    - cron: "0 0 * * 0" # Weekly validation
 
 jobs:
   encoding-validation:
     runs-on: ubuntu-latest
     name: Validate File Encoding
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -23,7 +23,7 @@ jobs:
         run: |
           echo "🔍 Validating UTF-8 encoding..."
           found_issues=0
-          
+
           # Check HTML files
           for file in $(find . -type f -name "*.html" ! -path "./.git/*" ! -path "./node_modules/*" ! -path "./_site/*"); do
             if file "$file" | grep -q "UTF-8.*BOM"; then
@@ -31,7 +31,7 @@ jobs:
               found_issues=$((found_issues + 1))
             fi
           done
-          
+
           # Check YAML files
           for file in $(find . -type f \( -name "*.yml" -o -name "*.yaml" \) ! -path "./.git/*" ! -path "./node_modules/*"); do
             if grep -q $'\t' "$file"; then
@@ -39,7 +39,7 @@ jobs:
               found_issues=$((found_issues + 1))
             fi
           done
-          
+
           if [ $found_issues -gt 0 ]; then
             echo "⚠️  Found $found_issues encoding/formatting issues"
             exit 1
@@ -49,7 +49,7 @@ jobs:
   html-validation:
     runs-on: ubuntu-latest
     name: Validate HTML Structure
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -57,8 +57,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -69,7 +69,7 @@ jobs:
   yaml-validation:
     runs-on: ubuntu-latest
     name: Validate YAML Syntax
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -77,17 +77,17 @@ jobs:
       - name: Validate YAML files
         run: |
           echo "🔍 Validating YAML syntax..."
-          
+
           # Install yamllint
           sudo apt-get update && sudo apt-get install -y yamllint
-          
+
           # Check all YAML files
           yamllint -c "{extends: relaxed}" _data/ _config.yml 2>&1 || true
 
   jekyll-build:
     runs-on: ubuntu-latest
     name: Validate Jekyll Build
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -95,13 +95,13 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+          ruby-version: "3.2"
           bundler-cache: true
 
       - name: Build Jekyll site
         run: |
           bundle exec jekyll build --trace 2>&1 | tee build.log
-          
+
       - name: Check for Jekyll errors
         run: |
           if grep -i "error\|liquid\|exception" build.log; then
@@ -121,7 +121,7 @@ jobs:
   lint-js:
     runs-on: ubuntu-latest
     name: Lint JavaScript
-    
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -129,8 +129,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'
+          node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
@@ -141,9 +141,16 @@ jobs:
   summary:
     runs-on: ubuntu-latest
     name: Validation Summary
-    needs: [encoding-validation, html-validation, yaml-validation, jekyll-build, lint-js]
+    needs:
+      [
+        encoding-validation,
+        html-validation,
+        yaml-validation,
+        jekyll-build,
+        lint-js,
+      ]
     if: always()
-    
+
     steps:
       - name: Check job status
         run: |
@@ -154,7 +161,7 @@ jobs:
           echo "✅ YAML validation: ${{ needs.yaml-validation.result }}"
           echo "✅ Jekyll build: ${{ needs.jekyll-build.result }}"
           echo "✅ JavaScript lint: ${{ needs.lint-js.result }}"
-          
+
           if [ "${{ needs.jekyll-build.result }}" == "failure" ]; then
             echo ""
             echo "⚠️  Jekyll build failed. Check logs for details."

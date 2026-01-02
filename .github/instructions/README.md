@@ -21,20 +21,20 @@
 
 ### ❌ **DEPRECATED FILES** (Superseded by `/.ai/`)
 
-| Legacy File | Migrated To | Status |
-|-------------|-------------|--------|
-| `tcna-nj-hic-trade-expert.md` | [`/.ai/DOMAIN.md`](../../.ai/DOMAIN.md) | Deprecated |
-| `copy-voice-persuasion-strategy.md` | [`/.ai/STYLE.md`](../../.ai/STYLE.md) | Deprecated |
+| Legacy File                         | Migrated To                                         | Status     |
+| ----------------------------------- | --------------------------------------------------- | ---------- |
+| `tcna-nj-hic-trade-expert.md`       | [`/.ai/DOMAIN.md`](../../.ai/DOMAIN.md)             | Deprecated |
+| `copy-voice-persuasion-strategy.md` | [`/.ai/STYLE.md`](../../.ai/STYLE.md)               | Deprecated |
 | `quality-standards.instructions.md` | [`/.ai/OUTPUT_RULES.md`](../../.ai/OUTPUT_RULES.md) | Deprecated |
 
 > **Do not update or reference these files.** They are retained for historical context only. All technical, legal, and operational changes must be made in the `/.ai/` structure.
 
 ### ✅ **SUPPLEMENTAL FILES** (Active, Reference `/.ai/`)
 
-| File | Purpose | References |
-|------|---------|------------|
-| `QA_CHECKLIST.md` | Manual QA procedures | [`/.ai/OUTPUT_RULES.md`](../../.ai/OUTPUT_RULES.md) |
-| `accessibility-tools.md` | Accessibility tooling & context | [`/.ai/OUTPUT_RULES.md`](../../.ai/OUTPUT_RULES.md) |
+| File                       | Purpose                         | References                                                                                 |
+| -------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------ |
+| `QA_CHECKLIST.md`          | Manual QA procedures            | [`/.ai/OUTPUT_RULES.md`](../../.ai/OUTPUT_RULES.md)                                        |
+| `accessibility-tools.md`   | Accessibility tooling & context | [`/.ai/OUTPUT_RULES.md`](../../.ai/OUTPUT_RULES.md)                                        |
 | `build-troubleshooting.md` | Troubleshooting & build process | [`/.ai/OUTPUT_RULES.md`](../../.ai/OUTPUT_RULES.md), [`/.ai/CODEX.md`](../../.ai/CODEX.md) |
 
 > **Supplemental files** provide human-driven QA and troubleshooting. They must reference and comply with the centralized `/.ai/` rules.
@@ -44,12 +44,14 @@
 ## Why Centralize Governance?
 
 The legacy system suffered from:
+
 - **Duplication:** Redundant or conflicting rules across files
 - **Ambiguity:** No clear hierarchy or precedence
 - **Gaps:** Incomplete or tool-specific guidance
 - **Maintenance risk:** Updates required in multiple places
 
 **The `/.ai/` structure delivers:**
+
 - **Single source of truth:** All rules, standards, and procedures in one place
 - **Explicit hierarchy:** SYSTEM.md → domain/quality/compliance → tool adapters
 - **Technical authority:** TCNA/New Jersey HIC standards, legal compliance, and accessibility
@@ -60,12 +62,14 @@ The legacy system suffered from:
 ## Contributor Guidance
 
 ### Human Developers
+
 1. **Start with [`/.ai/README.md`](../../.ai/README.md)** for governance and standards.
 2. **Ignore deprecated files**—do not reference or update legacy instructions.
 3. **Use supplemental files** for manual QA and troubleshooting, ensuring all procedures align with `/.ai/` rules.
 4. **Make all technical, legal, and copy changes in `/.ai/`**.
 
 ### AI Tool Configuration
+
 - **GitHub Copilot:** Use [`/.ai/COPILOT.md`](../../.ai/COPILOT.md)
 - **ChatGPT:** Use [`/.ai/GPT.md`](../../.ai/GPT.md)
 - **Autonomous Agents:** Use [`/.ai/CODEX.md`](../../.ai/CODEX.md)

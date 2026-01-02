@@ -11,11 +11,13 @@
 ### 1. ✅ Removed "| Tillerstead LLC" from Main Heading
 
 **Before:**
+
 ```
 TCNA-Compliant Tile, Waterproofing & Remodeling | Tillerstead LLC
 ```
 
 **After:**
+
 ```
 TCNA-Compliant Tile, Waterproofing & Remodeling
 ```
@@ -27,11 +29,13 @@ TCNA-Compliant Tile, Waterproofing & Remodeling
 ### 2. ✅ Removed "Licensed" from New Jersey HIC Badge Text
 
 **Before:**
+
 ```
 New Jersey licensed HIC #13VH10808800
 ```
 
 **After:**
+
 ```
 New Jersey HIC #13VH10808800
 ```
@@ -43,15 +47,18 @@ New Jersey HIC #13VH10808800
 ### 3. ✅ Changed Logo from Stacked to Mark-Only
 
 **Before:**
+
 - Used `logo-stacked` (full vertical logo with text)
 - Same as header logo (redundant)
 
 **After:**
+
 - Uses `logo-mark` (tile pattern only, no text)
 - Different from header, creates visual hierarchy
 - More compact for mobile display
 
-**Why:** 
+**Why:**
+
 - Reduces visual repetition
 - Tile mark is iconic and recognizable
 - Better suited for hero section (logo in header already has text)
@@ -62,19 +69,23 @@ New Jersey HIC #13VH10808800
 ## Files Modified
 
 ### 1. `index.html` (Homepage)
+
 ```diff
 - title: TCNA-Compliant Tile, Waterproofing & Remodeling | Tillerstead LLC
 + title: TCNA-Compliant Tile, Waterproofing & Remodeling
 ```
 
 ### 2. `_includes/unified-hero-home.html`
+
 **Logo change:**
+
 ```diff
 - symbol="logo-stacked"
 + symbol="logo-mark"
 ```
 
 **License text:**
+
 ```diff
 - <strong>New Jersey licensed HIC #13VH10808800</strong>
 + <strong>New Jersey HIC #13VH10808800</strong>
@@ -87,12 +98,14 @@ New Jersey HIC #13VH10808800
 ### Mobile Display (iPhone 16 Pro Max)
 
 **Before Issues:**
+
 - Long heading with pipe separator was wordy
 - "Licensed" redundantly emphasized
 - Stacked logo same as header (no differentiation)
 - Too much vertical space consumed
 
 **After Improvements:**
+
 - ✅ Clean, concise heading
 - ✅ Streamlined license badge
 - ✅ Distinct hero logo (mark vs full logo)
@@ -112,6 +125,7 @@ From `_includes/logo-sprite-inline.html`:
 5. **`logo-horizontal-mono`** - Monochrome horizontal
 
 **Decision:** Use `logo-mark` in hero because:
+
 - Unique to hero section
 - Compact and iconic
 - Complements (doesn't duplicate) header logo
@@ -122,6 +136,7 @@ From `_includes/logo-sprite-inline.html`:
 ## Mobile Optimization Notes
 
 ### Current Hero Structure
+
 ```
 ┌─────────────────────────┐
 │   [Tile Mark Logo]      │  ← Changed to logo-mark
@@ -141,6 +156,7 @@ From `_includes/logo-sprite-inline.html`:
 ```
 
 ### Benefits
+
 - Cleaner visual flow
 - Less text to read on small screens
 - Logo variety creates interest
@@ -151,6 +167,7 @@ From `_includes/logo-sprite-inline.html`:
 ## SEO Impact
 
 ### Page Title
+
 - **Old:** `TCNA-Compliant Tile, Waterproofing & Remodeling | Tillerstead LLC`
 - **New:** `TCNA-Compliant Tile, Waterproofing & Remodeling`
 
@@ -195,6 +212,7 @@ From `_includes/logo-sprite-inline.html`:
 ## Compliance Notes
 
 All changes maintain:
+
 - ✅ WCAG 2.1 AA accessibility
 - ✅ Semantic HTML structure
 - ✅ New Jersey HIC disclosure requirements
@@ -210,6 +228,7 @@ All changes maintain:
 ---
 
 **See Also:**
+
 - `DEPLOYMENT_TESTING_GUIDE.md` - Deployment instructions
 - `reports/MOBILE_FIXES_SUMMARY.md` - Previous mobile fixes
 - `reports/CONTRAST_FIX_SUMMARY.md` - Contrast audit

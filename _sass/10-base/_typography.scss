@@ -4,7 +4,8 @@
   ============================================ */
 
 /* Headings — Luxury typography hierarchy */
-h1, .h1 {
+h1,
+.h1 {
   font-size: var(--font-heading-1);
   font-family: var(--font-heading);
   font-weight: var(--font-weight-bold);
@@ -15,7 +16,8 @@ h1, .h1 {
   margin-bottom: var(--ts-spacing-lg);
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: var(--font-heading-2);
   font-family: var(--font-heading);
   font-weight: var(--font-weight-bold);
@@ -26,7 +28,8 @@ h2, .h2 {
   margin-bottom: var(--ts-spacing-md);
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: var(--font-heading-3);
   font-family: var(--font-heading);
   font-weight: var(--font-weight-semibold);
@@ -37,7 +40,8 @@ h3, .h3 {
   margin-bottom: var(--ts-spacing-sm);
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: var(--font-heading-4);
   font-family: var(--font-heading);
   font-weight: var(--font-weight-semibold);
@@ -47,7 +51,8 @@ h4, .h4 {
   margin-bottom: var(--ts-spacing-sm);
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: var(--font-size-xl);
   font-family: var(--font-heading);
   font-weight: var(--font-weight-semibold);
@@ -57,7 +62,8 @@ h5, .h5 {
   margin-bottom: var(--ts-spacing-sm);
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: var(--font-size-lg);
   font-family: var(--font-heading);
   font-weight: var(--font-weight-semibold);
@@ -76,6 +82,11 @@ p {
   line-height: var(--tiller-leading-relaxed);
   max-width: 65ch;
   font-size: var(--font-size-base);
+}
+
+/* Wide container: expand paragraph width on desktop for better use of screen */
+.container-wide p {
+  max-width: 80ch;
 }
 
 /* Lead/Intro Text — Persuasive, conversion-focused */
@@ -125,24 +136,26 @@ small {
 .eyebrow--dark {
   position: relative;
   padding: 0.5rem 1.25rem;
-  background: linear-gradient(135deg, 
-    var(--ts-color-heading) 0%, 
-    rgb(0, 0, 0, 0.95) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--ts-color-heading) 0%,
+    rgb(0, 0, 0, 0.95) 100%
+  );
   color: var(--color-golden-400);
   border-radius: var(--ts-radius-sm);
-  box-shadow: 
+  box-shadow:
     0 2px 8px rgb(0, 0, 0, 0.15),
     0 4px 16px rgb(0, 0, 0, 0.1),
     inset 0 1px 0 rgb(255, 255, 255, 0.1);
   text-shadow: 0 1px 2px rgb(0, 0, 0, 0.3);
   letter-spacing: 0.12em;
   font-weight: 700;
-  
+
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
-    background: url('/assets/img/patterns/tile-crosshatch.svg');
+    background: url("/assets/img/patterns/tile-crosshatch.svg");
     background-size: 60px 60px;
     opacity: 0.08;
     border-radius: inherit;
@@ -266,23 +279,49 @@ pre code {
 }
 
 /* Text Alignment Utilities */
-.text-left   { text-align: left; }
-.text-center { text-align: center; }
-.text-right  { text-align: right; }
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
 
 /* Font Weight Utilities */
-.font-light     { font-weight: 300; }
-.font-normal    { font-weight: 400; }
-.font-medium    { font-weight: 500; }
-.font-semibold  { font-weight: 600; }
-.font-bold      { font-weight: 700; }
+.font-light {
+  font-weight: 300;
+}
+.font-normal {
+  font-weight: 400;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.font-bold {
+  font-weight: 700;
+}
 
 /* Text Color Utilities — Use tokens for compliance and clarity */
-.text-primary  { color: var(--ts-color-primary); }
-.text-accent   { color: var(--ts-color-accent); }
-.text-heading  { color: var(--ts-color-heading); }
-.text-body     { color: var(--ts-color-text); }
-.text-muted    { color: var(--ts-color-muted); }
+.text-primary {
+  color: var(--ts-color-primary);
+}
+.text-accent {
+  color: var(--ts-color-accent);
+}
+.text-heading {
+  color: var(--ts-color-heading);
+}
+.text-body {
+  color: var(--ts-color-text);
+}
+.text-muted {
+  color: var(--ts-color-muted);
+}
 
 /* Responsive Typography — Fluid clamp() in design tokens
   h1, .h1 → clamp(2.25rem, 5vi + 1rem, 3.75rem)

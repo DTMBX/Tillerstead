@@ -6,73 +6,97 @@
 :root {
   /* Dark background system - stone/slate inspired */
   --ts-color-bg: #0f0f0f;
-  --ts-color-surface: linear-gradient(135deg, #1a1a1a 0%, #242424 50%, #1e1e1e 100%);
-  --ts-color-surface-muted: linear-gradient(135deg, #252525 0%, #2f2f2f 50%, #282828 100%);
-  --ts-color-surface-elevated: linear-gradient(135deg, #2a2a2a 0%, #353535 50%, #2d2d2d 100%);
-  --ts-color-surface-highlight: linear-gradient(135deg, #303030 0%, #3a3a3a 50%, #333333 100%);
-  
+  --ts-color-surface: linear-gradient(
+    135deg,
+    #1a1a1a 0%,
+    #242424 50%,
+    #1e1e1e 100%
+  );
+  --ts-color-surface-muted: linear-gradient(
+    135deg,
+    #252525 0%,
+    #2f2f2f 50%,
+    #282828 100%
+  );
+  --ts-color-surface-elevated: linear-gradient(
+    135deg,
+    #2a2a2a 0%,
+    #353535 50%,
+    #2d2d2d 100%
+  );
+  --ts-color-surface-highlight: linear-gradient(
+    135deg,
+    #303030 0%,
+    #3a3a3a 50%,
+    #333333 100%
+  );
+
   /* Solid fallbacks */
   --ts-color-surface-solid: #1e1e1e;
   --ts-color-surface-muted-solid: #282828;
   --ts-color-surface-elevated-solid: #2d2d2d;
-  
+
   /* Tinted surfaces */
   --ts-color-surface-tinted-teal: rgb(7, 137, 48, 0.08);
   --ts-color-surface-tinted-warm: rgb(252, 221, 9, 0.06);
   --ts-color-surface-tinted-gold: rgb(252, 221, 9, 0.06);
-  
+
   /* Text colors */
   --ts-color-text: #e8e8e8;
   --ts-color-heading: #ffffff;
   --ts-color-muted: #9a9a9a;
   --ts-color-text-subtle: #787878;
-  
+
   /* Brand colors - brighter for dark mode */
   --ts-color-primary: #0a9f3a;
   --ts-color-primary-hover: #0eb844;
   --ts-color-primary-light: #1cd45f;
   --ts-color-primary-soft: rgb(10, 159, 58, 0.15);
-  
+
   --ts-color-accent: #fde74c;
   --ts-color-accent-hover: #fff176;
   --ts-color-accent-strong: #d4b507;
-  
+
   --ts-color-secondary: #ff9d7d;
   --ts-color-secondary-soft: rgb(255, 157, 125, 0.12);
-  
+
   /* Borders */
   --ts-color-border: rgb(255, 255, 255, 0.08);
   --ts-color-border-strong: rgb(255, 255, 255, 0.15);
   --ts-color-divider: rgb(255, 255, 255, 0.05);
-  
+
   --ts-border-thin: 1px solid rgb(255, 255, 255, 0.08);
   --ts-border-medium: 2px solid rgb(255, 255, 255, 0.15);
   --ts-border-thick: 3px solid rgb(255, 255, 255, 0.25);
-  
+
   /* Shadows */
-  --ts-shadow-soft: 0 4px 12px rgb(0, 0, 0, 0.6), 0 0 0 1px rgb(255, 255, 255, 0.04), inset 0 1px 0 rgb(255, 255, 255, 0.03);
-  --ts-shadow-lift: 0 8px 24px rgb(0, 0, 0, 0.7), 0 0 0 1px rgb(255, 255, 255, 0.06), inset 0 1px 0 rgb(255, 255, 255, 0.05);
+  --ts-shadow-soft:
+    0 4px 12px rgb(0, 0, 0, 0.6), 0 0 0 1px rgb(255, 255, 255, 0.04),
+    inset 0 1px 0 rgb(255, 255, 255, 0.03);
+  --ts-shadow-lift:
+    0 8px 24px rgb(0, 0, 0, 0.7), 0 0 0 1px rgb(255, 255, 255, 0.06),
+    inset 0 1px 0 rgb(255, 255, 255, 0.05);
   --ts-shadow-header: 0 2px 8px rgb(0, 0, 0, 0.5);
   --ts-shadow-header-scrolled: 0 4px 16px rgb(0, 0, 0, 0.6);
-  
+
   /* State colors */
   --ts-color-success: #1fbf7a;
   --ts-color-success-bg: rgb(31, 191, 122, 0.12);
   --ts-color-success-text: #4ade80;
-  
+
   --ts-color-warning: #fbbf24;
   --ts-color-warning-bg: rgb(251, 191, 36, 0.12);
   --ts-color-warning-text: #fde047;
-  
+
   --ts-color-error: #ff5757;
   --ts-color-error-bg: rgb(255, 87, 87, 0.12);
   --ts-color-error-text: #ff8787;
-  
+
   /* Text on colored backgrounds */
   --ts-text-on-primary: #ffffff;
   --ts-text-on-secondary: #ffffff;
   --ts-text-on-accent: #1a1a1a;
-  
+
   /* Gradients - stone mountain aesthetic */
   --color-gradient-hero: linear-gradient(
     165deg,
@@ -81,18 +105,22 @@
     #1a1a1a 60%,
     #0f0f0f 100%
   );
-  
+
   --color-gradient-warm: linear-gradient(
     135deg,
     #2a2a2a 0%,
     #353535 50%,
     #2d2d2d 100%
   );
-  
+
   /* Header - darker stone with blend */
-  --tiller-header-bg: linear-gradient(180deg, rgb(15, 15, 15, 0.98) 0%, rgb(20, 20, 20, 0.95) 100%);
+  --tiller-header-bg: linear-gradient(
+    180deg,
+    rgb(15, 15, 15, 0.98) 0%,
+    rgb(20, 20, 20, 0.95) 100%
+  );
   --tiller-header-border: rgb(255, 255, 255, 0.08);
-  
+
   /* Footer - blend to dark green */
   --tiller-footer-bg: linear-gradient(180deg, #0a0a0a 0%, #065a24 100%);
   --tiller-footer-text: #e8e8e8;
@@ -114,10 +142,15 @@
 .ts-process__step,
 .ts-deliver__card,
 .ts-deliver__intro {
-  background: linear-gradient(135deg, #1e1e1e 0%, #282828 50%, #242424 100%) !important;
+  background: linear-gradient(
+    135deg,
+    #1e1e1e 0%,
+    #282828 50%,
+    #242424 100%
+  ) !important;
   border: 1px solid rgb(255, 255, 255, 0.08) !important;
   border-radius: 16px !important;
-  box-shadow: 
+  box-shadow:
     0 4px 12px rgb(0, 0, 0, 0.6),
     0 0 0 1px rgb(255, 255, 255, 0.04),
     inset 0 1px 0 rgb(255, 255, 255, 0.03) !important;
@@ -129,9 +162,14 @@
 .trade-note-card:hover,
 .ts-testimonial:hover,
 .ts-process__step:hover {
-  background: linear-gradient(135deg, #252525 0%, #2f2f2f 50%, #282828 100%) !important;
+  background: linear-gradient(
+    135deg,
+    #252525 0%,
+    #2f2f2f 50%,
+    #282828 100%
+  ) !important;
   border-color: rgb(10, 159, 58, 0.3) !important;
-  box-shadow: 
+  box-shadow:
     0 8px 24px rgb(0, 0, 0, 0.7),
     0 0 0 1px rgb(10, 159, 58, 0.15),
     inset 0 1px 0 rgb(255, 255, 255, 0.05) !important;
@@ -149,7 +187,11 @@
 .eyebrow,
 .kicker,
 .section-eyebrow {
-  background: linear-gradient(135deg, rgb(30, 30, 30, 0.6) 0%, rgb(40, 40, 40, 0.4) 100%) !important;
+  background: linear-gradient(
+    135deg,
+    rgb(30, 30, 30, 0.6) 0%,
+    rgb(40, 40, 40, 0.4) 100%
+  ) !important;
   padding: 1rem 2rem !important;
   border-radius: 12px !important;
   border: 1px solid rgb(255, 255, 255, 0.06) !important;
@@ -167,7 +209,13 @@
 .ts-hero,
 .hero,
 .page-hero {
-  background: linear-gradient(165deg, #0a9f3a 0%, #065a24 30%, #1a1a1a 60%, #0f0f0f 100%) !important;
+  background: linear-gradient(
+    165deg,
+    #0a9f3a 0%,
+    #065a24 30%,
+    #1a1a1a 60%,
+    #0f0f0f 100%
+  ) !important;
   position: relative;
   border-radius: 0 0 24px 24px !important;
   overflow: hidden;
@@ -179,7 +227,7 @@
 }
 
 .ts-hero::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -195,7 +243,11 @@
 .header,
 .ts-header,
 .site-header {
-  background: linear-gradient(180deg, rgb(15, 15, 15, 0.98) 0%, rgb(20, 20, 20, 0.95) 100%) !important;
+  background: linear-gradient(
+    180deg,
+    rgb(15, 15, 15, 0.98) 0%,
+    rgb(20, 20, 20, 0.95) 100%
+  ) !important;
   border-bottom: 1px solid rgb(255, 255, 255, 0.08) !important;
   backdrop-filter: blur(12px) !important;
 }
@@ -225,7 +277,7 @@
 
 .footer::before,
 .ts-footer::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -100px;
   left: 0;
@@ -241,14 +293,19 @@
 .cta-section,
 .ts-cta,
 .cta-estimate {
-  background: linear-gradient(165deg, #0a9f3a 0%, #078930 50%, #065a24 100%) !important;
+  background: linear-gradient(
+    165deg,
+    #0a9f3a 0%,
+    #078930 50%,
+    #065a24 100%
+  ) !important;
   border-radius: 24px 24px 0 0 !important;
   margin-top: 4rem;
   position: relative;
 }
 
 .cta-section::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50px;
   left: 0;
@@ -263,7 +320,12 @@
 .card-title,
 .ts-card h3,
 .ts-card h4,
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #ffffff !important;
 }
 
@@ -295,7 +357,12 @@ body.page-home .breadcrumbs {
 .ts-hero__fact,
 .card-featured,
 .card--primary {
-  background: linear-gradient(135deg, #2a2a2a 0%, #353535 50%, #2d2d2d 100%) !important;
+  background: linear-gradient(
+    135deg,
+    #2a2a2a 0%,
+    #353535 50%,
+    #2d2d2d 100%
+  ) !important;
   border: 1px solid rgb(10, 159, 58, 0.2) !important;
   border-radius: 12px !important;
 }

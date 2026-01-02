@@ -64,9 +64,13 @@
   box-shadow:
     0 2px 8px rgb(0, 0, 0, 0.04),
     0 4px 16px rgb(0, 0, 0, 0.02);
-  transition: transform var(--tiller-duration-base, 180ms) var(--tiller-ease-standard, ease),
-    box-shadow var(--tiller-duration-base, 180ms) var(--tiller-ease-standard, ease),
-    border-color var(--tiller-duration-base, 180ms) var(--tiller-ease-standard, ease);
+  transition:
+    transform var(--tiller-duration-base, 180ms)
+      var(--tiller-ease-standard, ease),
+    box-shadow var(--tiller-duration-base, 180ms)
+      var(--tiller-ease-standard, ease),
+    border-color var(--tiller-duration-base, 180ms)
+      var(--tiller-ease-standard, ease);
 }
 
 .ts-process__step:hover {
@@ -108,9 +112,11 @@
   width: 3.25rem;
   height: 3.25rem;
   border-radius: 999px;
-  background: linear-gradient(135deg,
-      var(--ts-color-primary, #0d9aaa) 0%,
-      var(--ts-color-primary-strong, #0b6b5c) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--ts-color-primary, #0d9aaa) 0%,
+    var(--ts-color-primary-strong, #0b6b5c) 100%
+  );
   box-shadow: 0 4px 12px rgb(13, 154, 170, 0.25);
   flex-shrink: 0;
 }

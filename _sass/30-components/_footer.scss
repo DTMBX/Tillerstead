@@ -13,13 +13,13 @@
   color: rgb(255, 255, 255, 0.9);
   position: relative;
   overflow: hidden;
-  
+
   /* Cross hatch SVG tile pattern overlay */
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
-    background-image: url('/assets/img/patterns/tile-crosshatch.svg');
+    background-image: url("/assets/img/patterns/tile-crosshatch.svg");
     background-size: 120px 120px;
     background-repeat: repeat;
     background-position: center;
@@ -27,10 +27,10 @@
     pointer-events: none;
     z-index: 0;
   }
-  
+
   /* Subtle glow overlay */
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     background: radial-gradient(
@@ -74,7 +74,9 @@
 .ts-logo--footer {
   max-width: 180px;
   filter: brightness(1.1);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   color: inherit; /* Inherit white from parent for mono variant */
 }
 
@@ -94,7 +96,12 @@
 .footer-license {
   font-size: 0.875rem;
   font-weight: 500;
-  color: rgb(255, 255, 255, 0.85); /* WCAG 2.1 AA compliant - increased from 0.7 */
+  color: rgb(
+    255,
+    255,
+    255,
+    0.85
+  ); /* WCAG 2.1 AA compliant - increased from 0.7 */
   padding: 0.375rem 0.875rem;
   background: rgb(255, 255, 255, 0.08);
   border: 1px solid rgb(255, 255, 255, 0.15);
@@ -106,7 +113,7 @@
   margin-top: 0.5rem;
   display: flex;
   justify-content: center;
-  
+
   .social-links__list {
     justify-content: center;
   }
@@ -116,7 +123,12 @@
   font-style: normal;
   font-size: 0.9375rem;
   line-height: 1.6;
-  color: rgb(255, 255, 255, 0.85); /* WCAG 2.1 AA compliant - increased from 0.7 */
+  color: rgb(
+    255,
+    255,
+    255,
+    0.85
+  ); /* WCAG 2.1 AA compliant - increased from 0.7 */
   margin-top: 1rem;
 }
 
@@ -190,7 +202,12 @@
 
 .footer-link {
   font-size: 0.9375rem;
-  color: rgb(255, 255, 255, 0.85); /* WCAG 2.1 AA compliant - increased from 0.7 */
+  color: rgb(
+    255,
+    255,
+    255,
+    0.85
+  ); /* WCAG 2.1 AA compliant - increased from 0.7 */
   text-decoration: none;
   transition: all 0.2s ease;
   display: inline-block;
@@ -198,7 +215,7 @@
 }
 
 .footer-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -2px;
   left: 0;
@@ -236,7 +253,12 @@
 
 .footer-copyright {
   font-size: 0.875rem;
-  color: rgb(255, 255, 255, 0.75); /* WCAG 2.1 AA compliant - increased from 0.6 */
+  color: rgb(
+    255,
+    255,
+    255,
+    0.75
+  ); /* WCAG 2.1 AA compliant - increased from 0.6 */
   margin: 0;
 }
 
@@ -249,7 +271,12 @@
 }
 
 .footer-compliance {
-  color: rgb(255, 255, 255, 0.75); /* WCAG 2.1 AA compliant - increased from 0.6 */
+  color: rgb(
+    255,
+    255,
+    255,
+    0.75
+  ); /* WCAG 2.1 AA compliant - increased from 0.6 */
   font-weight: 500;
 }
 
@@ -261,19 +288,19 @@
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-  
+
   .footer-nav--left,
   .footer-nav--right {
     grid-column: 1;
     text-align: center;
     align-items: center;
   }
-  
+
   .footer-brand {
     grid-column: 1;
     order: -1;
   }
-  
+
   .footer-nav {
     flex-direction: row;
     justify-content: center;
@@ -286,35 +313,35 @@
   .footer-main {
     padding: 3rem 0 2rem;
   }
-  
+
   .footer-inner {
     gap: 2.5rem;
   }
-  
+
   .footer-nav {
     flex-direction: column;
     gap: 2rem;
   }
-  
+
   .footer-nav-column {
     text-align: center;
   }
-  
+
   .footer-contact {
     flex-direction: column;
     gap: 0.5rem;
   }
-  
+
   .footer-contact .footer-separator {
     display: none;
   }
-  
+
   .footer-bottom-inner {
     flex-direction: column;
     text-align: center;
     gap: 1rem;
   }
-  
+
   .footer-legal-links {
     justify-content: center;
   }
@@ -325,11 +352,11 @@
   .ts-logo--footer {
     max-width: 150px;
   }
-  
+
   .footer-tagline {
     font-size: 0.875rem;
   }
-  
+
   .footer-license {
     font-size: 0.8125rem;
   }
@@ -348,7 +375,7 @@
   .footer-link::after {
     height: 2px;
   }
-  
+
   .footer-bottom {
     border-top-width: 2px;
   }
@@ -360,12 +387,12 @@
     background: var(--ts-white) !important;
     color: var(--ts-color-ink) !important;
   }
-  
+
   .site-footer::before,
   .site-footer::after {
     display: none;
   }
-  
+
   .footer-social {
     display: none;
   }

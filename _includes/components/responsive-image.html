@@ -1,21 +1,13 @@
-/**
- * Performance Optimization Helper
- * Creates responsive image markup with WebP support
- * 
- * Usage in templates:
- * {% include components/responsive-image.html
- *    src="portfolio/bathroom.jpg"
- *    alt="Modern bathroom remodel"
- *    sizes="(max-width: 768px) 100vw, 50vw"
- * %}
- */
+/** * Performance Optimization Helper * Creates responsive image markup with
+WebP support * * Usage in templates: * {% include
+components/responsive-image.html * src="portfolio/bathroom.jpg" * alt="Modern
+bathroom remodel" * sizes="(max-width: 768px) 100vw, 50vw" * %} */
 
 <!-- Responsive Picture Element with WebP Support -->
-{% assign img_base = include.src | remove: '.jpg' | remove: '.jpeg' | remove: '.png' %}
-{% assign img_alt = include.alt | default: "" %}
-{% assign img_sizes = include.sizes | default: "100vw" %}
-{% assign img_class = include.class | default: "" %}
-{% assign img_loading = include.loading | default: "lazy" %}
+{% assign img_base = include.src | remove: '.jpg' | remove: '.jpeg' | remove:
+'.png' %} {% assign img_alt = include.alt | default: "" %} {% assign img_sizes =
+include.sizes | default: "100vw" %} {% assign img_class = include.class |
+default: "" %} {% assign img_loading = include.loading | default: "lazy" %}
 
 <picture class="responsive-image {{ img_class }}">
   <!-- WebP sources for modern browsers -->
@@ -29,7 +21,7 @@
     "
     sizes="{{ img_sizes }}"
   />
-  
+
   <!-- Fallback for browsers without WebP support -->
   <img
     src="/assets/img/{{ include.src }}"
@@ -45,4 +37,3 @@
     class="responsive-img"
   />
 </picture>
-

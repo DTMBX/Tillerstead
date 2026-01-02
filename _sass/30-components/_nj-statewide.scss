@@ -6,7 +6,7 @@
 .nj-statewide {
   padding-block: var(--spacing-section-pad-y, clamp(2.5rem, 6vb, 5.25rem));
   padding-inline: 0;
-  border-block-start: 1px solid rgb(255, 255, 255, 0.10);
+  border-block-start: 1px solid rgb(255, 255, 255, 0.1);
   container-type: inline-size;
 }
 
@@ -19,30 +19,35 @@
 .nj-kicker {
   font-size: 12px;
   letter-spacing: 0.2px;
-  color: rgb(255, 255, 255, 0.70);
+  color: rgb(255, 255, 255, 0.7);
   display: inline-block;
   padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgb(255, 255, 255, 0.10);
+  border: 1px solid rgb(255, 255, 255, 0.1);
   background: rgb(255, 255, 255, 0.02);
 }
 
 .nj-head {
   h2 {
-   margin: 12px 0 8px;
-   font-size: clamp(22px, 2.8vw, 34px);
-   letter-spacing: -0.5px;
+    margin: 12px 0 8px;
+    font-size: clamp(22px, 2.8vw, 34px);
+    letter-spacing: -0.5px;
 
-   /* TCNA/New Jersey HIC-compliant headline styling for clarity and authority */
-   font-family: var(--font-sans, 'Inter', Arial, sans-serif);
-   font-weight: 700;
-   color: var(--color-primary, var(--ts-white));
+    /* TCNA/New Jersey HIC-compliant headline styling for clarity and authority */
+    font-family: var(--font-sans, "Inter", Arial, sans-serif);
+    font-weight: 700;
+    color: var(--color-primary, var(--ts-white));
   }
 }
 
 .nj-lead {
   margin: 0;
-  color: rgb(255, 255, 255, 0.85); /* Improved contrast for accessibility (WCAG 2.1 AA) */
+  color: rgb(
+    255,
+    255,
+    255,
+    0.85
+  ); /* Improved contrast for accessibility (WCAG 2.1 AA) */
   max-width: 70ch;
   font-size: 1.08rem;
   line-height: 1.6;
@@ -57,38 +62,42 @@
 
 @container (inline-size > 48rem) {
   .nj-grid {
-   grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .nj-card {
-  border: 1px solid rgb(255, 255, 255, 0.10);
+  border: 1px solid rgb(255, 255, 255, 0.1);
   border-radius: 18px;
   padding: 16px;
-  background: linear-gradient(180deg, rgb(255, 255, 255, 0.04), rgb(255, 255, 255, 0.02));
-  box-shadow: var(--color-shadow-soft, 0 2px 8px rgb(0,0,0,0.04));
+  background: linear-gradient(
+    180deg,
+    rgb(255, 255, 255, 0.04),
+    rgb(255, 255, 255, 0.02)
+  );
+  box-shadow: var(--color-shadow-soft, 0 2px 8px rgb(0, 0, 0, 0.04));
 
   h3 {
-   margin: 0 0 8px;
-   font-size: 16px;
-   font-family: var(--font-sans, 'Inter', Arial, sans-serif);
-   font-weight: 650;
-   color: var(--color-accent, var(--color-golden-500));
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-family: var(--font-sans, "Inter", Arial, sans-serif);
+    font-weight: 650;
+    color: var(--color-accent, var(--color-golden-500));
 
-   /* Emphasize technical authority and service area */
+    /* Emphasize technical authority and service area */
   }
 
   p,
   li {
-   color: rgb(255, 255, 255, 0.80); /* Improved contrast */
-   font-size: 15px;
-   line-height: 1.5;
+    color: rgb(255, 255, 255, 0.8); /* Improved contrast */
+    font-size: 15px;
+    line-height: 1.5;
   }
 
   ul {
-   margin: 10px 0 0;
-   padding-left: 18px;
-   list-style-type: disc;
+    margin: 10px 0 0;
+    padding-left: 18px;
+    list-style-type: disc;
   }
 }
 
@@ -118,25 +127,35 @@
   justify-content: center;
   padding: 10px 14px;
   border-radius: 999px;
-  border: 1px solid rgb(255, 255, 255, 0.10);
+  border: 1px solid rgb(255, 255, 255, 0.1);
   text-decoration: none;
   background: rgb(255, 255, 255, 0.03);
   font-weight: 650;
   font-size: 14px;
   color: var(--color-primary, var(--ts-white));
-  transition: background 0.18s, border-color 0.18s, color 0.18s;
+  transition:
+    background 0.18s,
+    border-color 0.18s,
+    color 0.18s;
 
   &:hover,
   &:focus {
-   background: var(--tiller-gradient-primary, linear-gradient(90deg, #1fbf7a 0%, var(--color-golden-500) 100%));
-   color: var(--ts-white);
-   border-color: var(--color-accent, var(--color-golden-500));
-   outline: none;
+    background: var(
+      --tiller-gradient-primary,
+      linear-gradient(90deg, #1fbf7a 0%, var(--color-golden-500) 100%)
+    );
+    color: var(--ts-white);
+    border-color: var(--color-accent, var(--color-golden-500));
+    outline: none;
   }
 
   &.nj-primary {
-   border-color: rgb(31, 191, 122, 0.55);
-   background: linear-gradient(180deg, rgb(31, 191, 122, 0.20), rgb(31, 191, 122, 0.08));
-   color: var(--ts-white);
+    border-color: rgb(31, 191, 122, 0.55);
+    background: linear-gradient(
+      180deg,
+      rgb(31, 191, 122, 0.2),
+      rgb(31, 191, 122, 0.08)
+    );
+    color: var(--ts-white);
   }
 }

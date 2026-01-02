@@ -85,7 +85,9 @@ select.is-invalid {
 }
 
 @keyframes btn-spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Button success state */
@@ -96,8 +98,13 @@ select.is-invalid {
 }
 
 @keyframes btn-success-flash {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 /* Notification system */

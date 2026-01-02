@@ -16,6 +16,7 @@
 **File:** `_sass\00-settings\_luxury-refinements.scss:141`
 
 **Code:**
+
 ```scss
 --overlay-light: rgb(255, 255, 255, 0.7);
 ```
@@ -31,6 +32,7 @@
 **File:** `_sass\30-components\_footer.scss:145`
 
 **Code:**
+
 ```scss
 color: rgb(255, 255, 255, 0.5); /* WCAG 2.1 compliant - increased from 0.3 */
 ```
@@ -43,50 +45,50 @@ color: rgb(255, 255, 255, 0.5); /* WCAG 2.1 compliant - increased from 0.3 */
 
 ## ⚠️ Warnings
 
-| Type | File:Line | Note |
-|------|-----------|------|
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:117` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:118` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:119` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:123` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:132` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:133` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:137` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:152` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:153` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:154` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:155` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:156` | Using !important may override contrast fixes |
-| Hardcoded Color | `_sass\00-settings\_dark-theme-experiment.scss:157` | Consider using CSS variable for maintainability |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:157` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:158` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:159` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:160` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:161` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:170` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:172` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:178` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:198` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:199` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:200` | Using !important may override contrast fixes |
-| Hardcoded Color | `_sass\00-settings\_dark-theme-experiment.scss:206` | Consider using CSS variable for maintainability |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:206` | Using !important may override contrast fixes |
-| Hardcoded Color | `_sass\00-settings\_dark-theme-experiment.scss:212` | Consider using CSS variable for maintainability |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:212` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:221` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:222` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:244` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:245` | Using !important may override contrast fixes |
-| Hardcoded Color | `_sass\00-settings\_dark-theme-experiment.scss:267` | Consider using CSS variable for maintainability |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:267` | Using !important may override contrast fixes |
-| Hardcoded Color | `_sass\00-settings\_dark-theme-experiment.scss:275` | Consider using CSS variable for maintainability |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:275` | Using !important may override contrast fixes |
-| Hardcoded Color | `_sass\00-settings\_dark-theme-experiment.scss:281` | Consider using CSS variable for maintainability |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:281` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:289` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:298` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:299` | Using !important may override contrast fixes |
-| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:300` | Using !important may override contrast fixes |
+| Type                | File:Line                                           | Note                                            |
+| ------------------- | --------------------------------------------------- | ----------------------------------------------- |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:117` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:118` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:119` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:123` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:132` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:133` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:137` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:152` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:153` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:154` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:155` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:156` | Using !important may override contrast fixes    |
+| Hardcoded Color     | `_sass\00-settings\_dark-theme-experiment.scss:157` | Consider using CSS variable for maintainability |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:157` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:158` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:159` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:160` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:161` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:170` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:172` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:178` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:198` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:199` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:200` | Using !important may override contrast fixes    |
+| Hardcoded Color     | `_sass\00-settings\_dark-theme-experiment.scss:206` | Consider using CSS variable for maintainability |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:206` | Using !important may override contrast fixes    |
+| Hardcoded Color     | `_sass\00-settings\_dark-theme-experiment.scss:212` | Consider using CSS variable for maintainability |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:212` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:221` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:222` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:244` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:245` | Using !important may override contrast fixes    |
+| Hardcoded Color     | `_sass\00-settings\_dark-theme-experiment.scss:267` | Consider using CSS variable for maintainability |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:267` | Using !important may override contrast fixes    |
+| Hardcoded Color     | `_sass\00-settings\_dark-theme-experiment.scss:275` | Consider using CSS variable for maintainability |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:275` | Using !important may override contrast fixes    |
+| Hardcoded Color     | `_sass\00-settings\_dark-theme-experiment.scss:281` | Consider using CSS variable for maintainability |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:281` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:289` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:298` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:299` | Using !important may override contrast fixes    |
+| Dark Theme Override | `_sass\00-settings\_dark-theme-experiment.scss:300` | Using !important may override contrast fixes    |
 
 ---
 

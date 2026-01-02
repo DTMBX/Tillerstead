@@ -4,18 +4,18 @@
  * Run: node scripts/optimize-images.js
  */
 
-import sharp from 'sharp';
-import { glob } from 'glob';
-import path from 'path';
-import fs from 'fs/promises';
+import sharp from "sharp";
+import { glob } from "glob";
+import path from "path";
+import fs from "fs/promises";
 
-const INPUT_DIR = 'assets/img/';
-const OUTPUT_DIR = 'assets/img/optimized/';
+const INPUT_DIR = "assets/img/";
+const OUTPUT_DIR = "assets/img/optimized/";
 const SIZES = {
   small: 400,
   medium: 800,
   large: 1200,
-  xlarge: 1920
+  xlarge: 1920,
 };
 
 async function ensureDir(dir) {
@@ -28,12 +28,12 @@ async function ensureDir(dir) {
 
 async function optimizeImage(imagePath) {
   const ext = path.extname(imagePath).toLowerCase();
-  if (!['.jpg', '.jpeg', '.png'].includes(ext)) {
+  if (![".jpg", ".jpeg", ".png"].includes(ext)) {
     return;
   }
 
   const filename = path.basename(imagePath, ext);
-  const relativePath = path.dirname(imagePath).replace(INPUT_DIR, '');
+  const relativePath = path.dirname(imagePath).replace(INPUT_DIR, "");
   const outputPath = path.join(OUTPUT_DIR, relativePath);
 
   await ensureDir(outputPath);
@@ -42,7 +42,9 @@ async function optimizeImage(imagePath) {
   const image = sharp(imagePath);
   const metadata = await image.metadata();
 
-  console.log(`Processing: ${filename}${ext} (${metadata.width}x${metadata.height})`);
+  console.log(
+    `Processing: ${filename}${ext} (${metadata.width}x${metadata.height})`,
+  );
 
   // Generate WebP versions at different sizes
   for (const [sizeName, width] of Object.entries(SIZES)) {
@@ -52,11 +54,11 @@ async function optimizeImage(imagePath) {
       await sharp(imagePath)
         .resize(width, null, {
           withoutEnlargement: true,
-          fit: 'inside'
+          fit: "inside",
         })
         .webp({
-          quality: sizeName === 'small' ? 75 : 85,
-          effort: 6
+          quality: sizeName === "small" ? 75 : 85,
+          effort: 6,
         })
         .toFile(outputFile);
 
@@ -66,19 +68,17 @@ async function optimizeImage(imagePath) {
 
   // Generate original size WebP
   const originalWebP = path.join(outputPath, `${filename}.webp`);
-  await sharp(imagePath)
-    .webp({ quality: 90, effort: 6 })
-    .toFile(originalWebP);
+  await sharp(imagePath).webp({ quality: 90, effort: 6 }).toFile(originalWebP);
 
   console.log(`  ✓ Original: ${metadata.width}w → WebP`);
 }
 
 async function main() {
-  console.log('🎨 Tillerstead Image Optimization');
-  console.log('================================\n');
+  console.log("🎨 Tillerstead Image Optimization");
+  console.log("================================\n");
 
   const images = await glob(`${INPUT_DIR}**/*.{jpg,jpeg,png}`, {
-    ignore: ['**/node_modules/**', '**/optimized/**']
+    ignore: ["**/node_modules/**", "**/optimized/**"],
   });
 
   console.log(`Found ${images.length} images to optimize\n`);
@@ -91,11 +91,11 @@ async function main() {
     }
   }
 
-  console.log('\n✅ Image optimization complete!');
-  console.log('\nNext steps:');
-  console.log('1. Update image references to use WebP format');
-  console.log('2. Add <picture> elements with fallbacks');
-  console.log('3. Test image loading on slow connections');
+  console.log("\n✅ Image optimization complete!");
+  console.log("\nNext steps:");
+  console.log("1. Update image references to use WebP format");
+  console.log("2. Add <picture> elements with fallbacks");
+  console.log("3. Test image loading on slow connections");
 }
 
 main().catch(console.error);

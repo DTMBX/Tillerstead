@@ -171,7 +171,7 @@ testimonials:
   eyebrow: "Verified Client Feedback"
   title: "Real Reviews from Real South Jersey Homeowners"
   limit: 3
-  reviews: null  # uses site.data.reviews.reviews by default
+  reviews: null # uses site.data.reviews.reviews by default
 
 cta:
   eyebrow: "Start with a Written Scope"

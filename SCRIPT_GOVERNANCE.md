@@ -21,6 +21,7 @@ All scripts are organized by **risk classification** and **operational scope**. 
 Scripts that affect clients, pricing, compliance, or legal obligations.
 
 **Examples:**
+
 - Estimators
 - Intake forms
 - Contract generators
@@ -30,6 +31,7 @@ Scripts that affect clients, pricing, compliance, or legal obligations.
 **Directory:** `scripts/class-a-regulated/`
 
 **Rules:**
+
 - ✅ Must reference `/.ai/COMPLIANCE.md`
 - ✅ Must include disclaimers
 - ✅ Must log assumptions
@@ -37,18 +39,19 @@ Scripts that affect clients, pricing, compliance, or legal obligations.
 - ✅ Must be human-reviewed before merge
 
 **Template:**
+
 ```javascript
 /**
  * CLASS A - REGULATED
  * PURPOSE: [What this does]
  * RISK: Client-facing, pricing-sensitive
- * 
+ *
  * COMPLIANCE NOTES:
  * - References: COMPLIANCE.md, DOMAIN.md
  * - Disclaimers: Must include
  * - Assumptions logged: Yes
  * - Destructive: No auto-execute
- * 
+ *
  * REVIEW REQUIRED: Yes
  */
 
@@ -64,6 +67,7 @@ Scripts that affect clients, pricing, compliance, or legal obligations.
 Scripts for build automation, CI/CD, linting, and data transforms.
 
 **Examples:**
+
 - Build scripts
 - CI pipelines
 - Lint rules
@@ -75,6 +79,7 @@ Scripts for build automation, CI/CD, linting, and data transforms.
 **Directory:** `scripts/class-b-technical/`
 
 **Rules:**
+
 - ✅ Must be deterministic (same input = same output)
 - ✅ Must include rollback path
 - ✅ Must NOT touch client data
@@ -82,17 +87,18 @@ Scripts for build automation, CI/CD, linting, and data transforms.
 - ✅ Must include error handling
 
 **Template:**
+
 ```javascript
 /**
  * CLASS B - TECHNICAL
  * PURPOSE: [Build/automation task]
  * RISK: Build failure, asset processing
- * 
+ *
  * SIDE EFFECTS:
  * - Modifies: [which files]
  * - Deletes: [what gets deleted]
  * - Creates: [what gets created]
- * 
+ *
  * ROLLBACK: [How to revert]
  * ERROR HANDLING: Yes
  * LOGGING: Detailed
@@ -110,6 +116,7 @@ Scripts for build automation, CI/CD, linting, and data transforms.
 Scripts for explainers, interactive demos, visualizations, learning modules.
 
 **Examples:**
+
 - Explainer animations
 - Interactive diagrams
 - Learning modules
@@ -119,22 +126,24 @@ Scripts for explainers, interactive demos, visualizations, learning modules.
 **Directory:** `scripts/class-c-educational/`
 
 **Rules:**
+
 - ✅ Must avoid guarantees
 - ✅ Must include "educational only" language
 - ✅ Must NOT simulate inspections or approvals
 - ✅ Must NOT replace professional judgment
 
 **Template:**
+
 ```javascript
 /**
  * CLASS C - EDUCATIONAL
  * PURPOSE: [Explainer/visualization]
  * RISK: Educational content only
- * 
+ *
  * DISCLAIMER: This is educational content and does not constitute
  * professional advice, inspection, or approval. Users should consult
  * professionals for actual decisions.
- * 
+ *
  * NOT FOR: Professional use, real decisions, inspections, approvals
  */
 
@@ -150,6 +159,7 @@ Scripts for explainers, interactive demos, visualizations, learning modules.
 Shared helpers, functions, and utilities used across multiple scripts.
 
 **Examples:**
+
 - Color conversion utilities
 - File helpers
 - Logging utilities
@@ -157,6 +167,7 @@ Shared helpers, functions, and utilities used across multiple scripts.
 - API wrappers
 
 **Organization:**
+
 ```
 utilities/
 ├── colors.js          Color manipulation
@@ -175,6 +186,7 @@ utilities/
 Boilerplate templates for creating new scripts of each class.
 
 **Contents:**
+
 ```
 templates/
 ├── class-a-template.js      Regulated script template
@@ -190,21 +202,25 @@ templates/
 **Every change must be graded by risk level:**
 
 ### R0 — Copy edits, comments
+
 - **Review:** None
 - **Testing:** None
 - **Approval:** Self
 
 ### R1 — Styling, animation, layout
+
 - **Review:** Optional
 - **Testing:** Manual
 - **Approval:** Self
 
 ### R2 — Logic, calculations, data flows
+
 - **Review:** Recommended
 - **Testing:** Automated
 - **Approval:** Peer review
 
 ### R3 — Legal, pricing, compliance, contracts
+
 - **Review:** Required
 - **Testing:** Full + legal
 - **Approval:** Owner + legal
@@ -223,6 +239,7 @@ All non-obvious decisions must be logged, especially:
 - Design decisions affecting scope
 
 **Format:**
+
 ```markdown
 ## Decision: [Title]
 
@@ -232,7 +249,7 @@ All non-obvious decisions must be logged, especially:
 **Decision:** [What we chose]  
 **Standards Referenced:** [TCNA, ANSI, NJ law, etc.]  
 **Risks Acknowledged:** [What could go wrong]  
-**Author:** [Who made this decision]  
+**Author:** [Who made this decision]
 ```
 
 ---
@@ -242,6 +259,7 @@ All non-obvious decisions must be logged, especially:
 **Status:** Inventory in progress
 
 ### Build & CI Scripts (Class B)
+
 - `ts-00-bootstrap.ps1` → `class-b-technical/`
 - `ts-10-audit.ps1` → `class-b-technical/`
 - `ts-20-fix-jekyll-config.ps1` → `class-b-technical/`
@@ -249,20 +267,24 @@ All non-obvious decisions must be logged, especially:
 - `build-css.js` → `class-b-technical/`
 
 ### Image & Asset Processing (Class B)
+
 - `optimize-images.js` → `class-b-technical/`
 - `convert-images-to-webp.js` → `class-b-technical/`
 - `analyze-css-structure.js` → `class-b-technical/`
 
 ### Utilities (Utility Class)
+
 - `slugify.js` → `utilities/`
 - `consolidate-colors.js` → `utilities/`
 - `check-contrast.js` → `utilities/`
 
 ### Educational/Visualization (Class C)
+
 - `design-icon-placement.mjs` → `class-c-educational/`
 - `render-guide-pdf.mjs` → `class-c-educational/`
 
 ### To Review/Classify
+
 - `compliance-audit.js` → Class B (audit) or Class A (compliance)?
 - `find-unused-css.js` → Class B (analysis)
 - `verify-deployment.js` → Class B (verification)
@@ -297,12 +319,12 @@ nano scripts/class-b-technical/my-new-script.js
  * CLASS B - TECHNICAL
  * PURPOSE: [What this does]
  * RISK: [Risk assessment]
- * 
+ *
  * SIDE EFFECTS:
  * - Modifies: [files]
  * - Creates: [files]
  * - Deletes: [files]
- * 
+ *
  * ROLLBACK: [How to revert]
  * ERROR HANDLING: Yes
  */
@@ -382,6 +404,7 @@ node scripts/class-b-technical/build-site.js --dry-run
 ## Documentation Requirements
 
 ### Class A Scripts
+
 - [ ] Purpose statement
 - [ ] Compliance references
 - [ ] Assumptions logged
@@ -390,6 +413,7 @@ node scripts/class-b-technical/build-site.js --dry-run
 - [ ] Owner approval needed
 
 ### Class B Scripts
+
 - [ ] Purpose statement
 - [ ] Side effects documented
 - [ ] Rollback procedure
@@ -398,6 +422,7 @@ node scripts/class-b-technical/build-site.js --dry-run
 - [ ] Test cases
 
 ### Class C Scripts
+
 - [ ] Purpose statement
 - [ ] Educational disclaimers
 - [ ] What it does/doesn't do
@@ -405,6 +430,7 @@ node scripts/class-b-technical/build-site.js --dry-run
 - [ ] User education section
 
 ### Utilities
+
 - [ ] Function signature
 - [ ] Parameters documented
 - [ ] Return value documented
@@ -418,6 +444,7 @@ node scripts/class-b-technical/build-site.js --dry-run
 Before committing any script:
 
 ### Class A (Required)
+
 - [ ] References COMPLIANCE.md
 - [ ] Includes legal disclaimer
 - [ ] Assumptions documented
@@ -426,6 +453,7 @@ Before committing any script:
 - [ ] Legal implications considered
 
 ### Class B (Recommended)
+
 - [ ] Deterministic (same input = same output)
 - [ ] Rollback path tested
 - [ ] No client data modified
@@ -434,6 +462,7 @@ Before committing any script:
 - [ ] Logging adequate
 
 ### Class C (Suggested)
+
 - [ ] No guarantee language
 - [ ] Educational disclaimer present
 - [ ] Doesn't simulate approvals
@@ -508,6 +537,7 @@ scripts/
 ## Examples
 
 ### Class A Example
+
 ```javascript
 /**
  * CLASS A - REGULATED
@@ -515,15 +545,15 @@ scripts/
  * RISK: Client-facing, financial, compliance-sensitive
  */
 
-const fs = require('fs');
-const { logDecision } = require('../utilities/logging');
+const fs = require("fs");
+const { logDecision } = require("../utilities/logging");
 
 // Log decision context
 logDecision({
   date: new Date().toISOString(),
-  decision: 'Use TCNA material standards for estimates',
-  standards: ['TCNA 2024', 'ANSI A108', 'ANSI A118'],
-  risks: 'Overestimation leads to bad projects'
+  decision: "Use TCNA material standards for estimates",
+  standards: ["TCNA 2024", "ANSI A108", "ANSI A118"],
+  risks: "Overestimation leads to bad projects",
 });
 
 // Include disclaimer
@@ -539,6 +569,7 @@ console.log(DISCLAIMER);
 ```
 
 ### Class B Example
+
 ```javascript
 /**
  * CLASS B - TECHNICAL
@@ -546,20 +577,20 @@ console.log(DISCLAIMER);
  * RISK: Build failure, styling issues
  */
 
-const sassBuilder = require('node-sass');
-const fs = require('fs');
+const sassBuilder = require("node-sass");
+const fs = require("fs");
 
-console.log('Building CSS...');
+console.log("Building CSS...");
 
 try {
   const result = sassBuilder.renderSync({
-    file: './assets/css/main.scss'
+    file: "./assets/css/main.scss",
   });
-  
-  fs.writeFileSync('./assets/css/main.css', result.css);
-  console.log('✅ CSS built successfully');
+
+  fs.writeFileSync("./assets/css/main.css", result.css);
+  console.log("✅ CSS built successfully");
 } catch (error) {
-  console.error('❌ Build failed:', error.message);
+  console.error("❌ Build failed:", error.message);
   process.exit(1);
 }
 
@@ -567,6 +598,7 @@ try {
 ```
 
 ### Class C Example
+
 ```javascript
 /**
  * CLASS C - EDUCATIONAL

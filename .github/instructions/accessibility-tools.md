@@ -17,9 +17,10 @@ Tillerstead.com is engineered for WCAG 2.1 AA accessibility and New Jersey HIC l
 
 All body text uses the `--color-text` token, calibrated for 4.5:1 contrast on light and dark surfaces per WCAG 2.1 AA ([TCNA 2024 §5.3.2](https://www.tcnatile.com/)). Secondary and accent tokens are validated for readability on parchment and overlay backgrounds. No runtime color mutation is permitted.
 
-**Manual Verification:**  
-- Normal text: ≥4.5:1 contrast ratio  
-- Large text (≥18.66px or ≥14px bold): ≥3.0:1  
+**Manual Verification:**
+
+- Normal text: ≥4.5:1 contrast ratio
+- Large text (≥18.66px or ≥14px bold): ≥3.0:1
 - Use [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) for all new color tokens.
 
 ---
@@ -27,6 +28,7 @@ All body text uses the `--color-text` token, calibrated for 4.5:1 contrast on li
 ## 2. Deprecated Systems (Historical)
 
 The following systems are fully removed for compliance and performance:
+
 - `auto-contrast.js` (dynamic brand color correction)
 - `contrast.js` (mix-based contrast calculation)
 - High Contrast UI toggle and keyboard shortcut
@@ -47,6 +49,7 @@ Focus states use `:focus-visible` with a 3px emerald outline and offset, ensurin
 ### Features
 
 A browser-based audit dashboard for structural and SEO checks:
+
 - **SEO summary:** Title length, meta description, canonical URL, OG image
 - **Accessibility checks:** `<h1>` presence, `alt` attributes, color contrast
 - **Export:** Copy summary as JSON for documentation or compliance logs
@@ -56,23 +59,24 @@ A browser-based audit dashboard for structural and SEO checks:
 - **URL Parameter:** Append `?audit=1`  
   `https://tillerstead.com/?audit=1`
 - **Keyboard Shortcut:** `Alt + Shift + A` (reloads with audit enabled)
-- **Persistence:**  
+- **Persistence:**
   ```js
-  localStorage.setItem('ts:audit', '1');
+  localStorage.setItem("ts:audit", "1");
   location.reload();
   ```
 
 ### Panel UI
 
 A fixed, bottom-right panel with:
-- **Accessibility Checks:**  
-  - Single `<h1>` present  
-  - All `<img>` tags have descriptive `alt`  
+
+- **Accessibility Checks:**
+  - Single `<h1>` present
+  - All `<img>` tags have descriptive `alt`
   - Color contrast spot-checked
-- **SEO Summary:**  
-  - Title: `"Page Title | Tillerstead LLC"` (length: 42)  
-  - Description: `"Tillerstead LLC provides..."` (length: 154)  
-  - Canonical: Present ✓  
+- **SEO Summary:**
+  - Title: `"Page Title | Tillerstead LLC"` (length: 42)
+  - Description: `"Tillerstead LLC provides..."` (length: 154)
+  - Canonical: Present ✓
   - OG Image: `/assets/img/og.jpg`
 - **Copy JSON:**  
   Exports summary for compliance documentation.
@@ -132,9 +136,9 @@ File: index.html
 
 ## Keyboard Shortcuts
 
-| Shortcut           | Action             | Use Case                                 |
-|--------------------|--------------------|------------------------------------------|
-| **Alt + Shift + A**| Toggle Audit Panel | Fast SEO/accessibility structural check  |
+| Shortcut            | Action             | Use Case                                |
+| ------------------- | ------------------ | --------------------------------------- |
+| **Alt + Shift + A** | Toggle Audit Panel | Fast SEO/accessibility structural check |
 
 ---
 
@@ -159,6 +163,7 @@ File: index.html
 ```powershell
 pwsh -ExecutionPolicy Bypass -File scripts/dev-audit.ps1
 ```
+
 - Fix flagged issues:
   - Add missing alt attributes
   - Ensure title/description lengths are SEO-compliant
@@ -182,14 +187,14 @@ A: Yes, via the audit panel’s JSON export (structural/SEO only).
 ## Next Steps
 
 - **Developers:** Reference this guide in PRs to confirm semantic structure, contrast, and legal compliance.
-- **CI/CD:** Use linting and the audit script before deploy.  
-- **For all changes:** Validate against HTMLHint, ESLint, and Jekyll build.  
+- **CI/CD:** Use linting and the audit script before deploy.
+- **For all changes:** Validate against HTMLHint, ESLint, and Jekyll build.
 - **If in doubt:** Reference `/.ai/` for authoritative rules.
 
 ---
 
-> **Citations:**  
-> - [TCNA Handbook 2024](https://www.tcnatile.com/)  
-> - [New Jersey HIC Law](https://www.njconsumeraffairs.gov/hic/Pages/default.aspx)  
+> **Citations:**
+>
+> - [TCNA Handbook 2024](https://www.tcnatile.com/)
+> - [New Jersey HIC Law](https://www.njconsumeraffairs.gov/hic/Pages/default.aspx)
 > - [WCAG 2.1 AA](https://www.w3.org/WAI/WCAG21/quickref/)
-

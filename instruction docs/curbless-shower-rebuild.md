@@ -36,10 +36,11 @@ This document provides a field-ready sequence for constructing a true curbless (
 - **Perimeter elevation (inches):** `perimeter_height_in = drain_flange_height_in + drop_in`
 - **Average mortar-bed thickness (inches):** `avg_thickness_in = (drain_thickness_in + perimeter_thickness_in) ÷ 2`
 
-**Variables**  
-- `distance_to_drain_ft`: longest run from entry to drain center (ft)  
-- `slope_rate_in_per_ft`: commonly 0.25 in./ft.; adjust only when permitted by design professional  
-- `drain_flange_height_in`: finished height at drain connection (including membrane build)  
+**Variables**
+
+- `distance_to_drain_ft`: longest run from entry to drain center (ft)
+- `slope_rate_in_per_ft`: commonly 0.25 in./ft.; adjust only when permitted by design professional
+- `drain_flange_height_in`: finished height at drain connection (including membrane build)
 - `perimeter_thickness_in`: planned mortar height at the farthest point
 
 > Calculators must flag that outputs are preliminary; adjust for framing deflection, tile thickness, and manufacturer minimums before installation.
@@ -47,12 +48,12 @@ This document provides a field-ready sequence for constructing a true curbless (
 ### Distance-to-drop reference (1/4 in. per ft.)
 
 | Distance to drain (ft) | Required drop (in.) |
-| --- | --- |
-| 1 | 0.25 |
-| 2 | 0.50 |
-| 3 | 0.75 |
-| 4 | 1.00 |
-| 5 | 1.25 |
+| ---------------------- | ------------------- |
+| 1                      | 0.25                |
+| 2                      | 0.50                |
+| 3                      | 0.75                |
+| 4                      | 1.00                |
+| 5                      | 1.25                |
 
 ## Common failure conditions
 

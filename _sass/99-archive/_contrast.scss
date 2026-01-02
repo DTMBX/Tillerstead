@@ -19,11 +19,7 @@
 
 // Convert hex color to RGB map (0-255)
 @function hex-to-rgb($hex) {
-  @return (
-   red: red($hex),
-   green: green($hex),
-   blue: blue($hex)
-  );
+  @return (red: red($hex), green: green($hex), blue: blue($hex));
 }
 
 // Convert 8-bit RGB channel to linear RGB (0-1)
@@ -31,7 +27,7 @@
   $channel: math.div($channel, 255);
 
   @if $channel <= 0.03928 {
-   @return math.div($channel, 12.92);
+    @return math.div($channel, 12.92);
   }
 
   @return math.pow(math.div($channel + 0.055, 1.055), 2.4);
@@ -73,7 +69,11 @@
 }
 
 // Auto-selects optimal text color (light/dark) for background
-@function auto-text-color($background, $light: var(--ts-white), $dark: #1c231f) {
+@function auto-text-color(
+  $background,
+  $light: var(--ts-white),
+  $dark: #1c231f
+) {
   $light-contrast: contrast-ratio($light, $background);
   $dark-contrast: contrast-ratio($dark, $background);
 
@@ -81,51 +81,74 @@
 }
 
 // Returns accessible text color meeting minimum contrast (default AA)
-@function accessible-text-color($background, $min-contrast: 4.5, $light: var(--ts-white), $dark: #1c231f) {
+@function accessible-text-color(
+  $background,
+  $min-contrast: 4.5,
+  $light: var(--ts-white),
+  $dark: #1c231f
+) {
   $light-contrast: contrast-ratio($light, $background);
   $dark-contrast: contrast-ratio($dark, $background);
 
   @if $light-contrast >= $min-contrast and $dark-contrast >= $min-contrast {
-   @return if($light-contrast > $dark-contrast, $light, $dark);
+    @return if($light-contrast > $dark-contrast, $light, $dark);
   } @else if $light-contrast >= $min-contrast {
-   @return $light;
+    @return $light;
   } @else if $dark-contrast >= $min-contrast {
-   @return $dark;
+    @return $dark;
   } @else {
-   @warn "Non-compliant: Neither text color meets minimum contrast #{$min-contrast}:1 on background #{$background}. Light: #{$light-contrast}, Dark: #{$dark-contrast}";
-   @return if($light-contrast > $dark-contrast, $light, $dark);
+    @warn "Non-compliant: Neither text color meets minimum contrast #{$min-contrast}:1 on background #{$background}. Light: #{$light-contrast}, Dark: #{$dark-contrast}";
+    @return if($light-contrast > $dark-contrast, $light, $dark);
   }
 }
 
 // Lighten color until it meets minimum contrast (for dark backgrounds)
-@function lighten-until-contrast($color, $background, $min-contrast: 4.5, $max-iterations: 20) {
+@function lighten-until-contrast(
+  $color,
+  $background,
+  $min-contrast: 4.5,
+  $max-iterations: 20
+) {
   $result: $color;
   $iteration: 0;
 
-  @while contrast-ratio($result, $background) < $min-contrast and $iteration < $max-iterations {
-   $result: lighten($result, 5%);
-   $iteration: $iteration + 1;
+  @while contrast-ratio($result, $background) <
+    $min-contrast and
+    $iteration <
+    $max-iterations
+  {
+    $result: lighten($result, 5%);
+    $iteration: $iteration + 1;
   }
 
   @if $iteration >= $max-iterations {
-   @warn "Contrast adjustment failed: #{$color} on #{$background} did not reach #{$min-contrast}:1 after #{$max-iterations} steps.";
+    @warn "Contrast adjustment failed: #{$color} on #{$background} did not reach #{$min-contrast}:1 after #{$max-iterations} steps.";
   }
 
   @return $result;
 }
 
 // Darken color until it meets minimum contrast (for light backgrounds)
-@function darken-until-contrast($color, $background, $min-contrast: 4.5, $max-iterations: 20) {
+@function darken-until-contrast(
+  $color,
+  $background,
+  $min-contrast: 4.5,
+  $max-iterations: 20
+) {
   $result: $color;
   $iteration: 0;
 
-  @while contrast-ratio($result, $background) < $min-contrast and $iteration < $max-iterations {
-   $result: darken($result, 5%);
-   $iteration: $iteration + 1;
+  @while contrast-ratio($result, $background) <
+    $min-contrast and
+    $iteration <
+    $max-iterations
+  {
+    $result: darken($result, 5%);
+    $iteration: $iteration + 1;
   }
 
   @if $iteration >= $max-iterations {
-   @warn "Contrast adjustment failed: #{$color} on #{$background} did not reach #{$min-contrast}:1 after #{$max-iterations} steps.";
+    @warn "Contrast adjustment failed: #{$color} on #{$background} did not reach #{$min-contrast}:1 after #{$max-iterations} steps.";
   }
 
   @return $result;
@@ -136,15 +159,15 @@
   $current-contrast: contrast-ratio($color, $background);
 
   @if $current-contrast >= $min-contrast {
-   @return $color;
+    @return $color;
   }
 
   $bg-luminance: luminance($background);
 
   @if $bg-luminance > 0.5 {
-   @return darken-until-contrast($color, $background, $min-contrast);
+    @return darken-until-contrast($color, $background, $min-contrast);
   } @else {
-   @return lighten-until-contrast($color, $background, $min-contrast);
+    @return lighten-until-contrast($color, $background, $min-contrast);
   }
 }
 

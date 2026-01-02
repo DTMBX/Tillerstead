@@ -3,244 +3,278 @@
   Copy these HTML examples into your templates
 -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Joyful Animations Components</title>
-  <link rel="stylesheet" href="assets/css/main.css">
-  <style>
-    .component-demo {
-      padding: 2rem;
-      margin: 2rem 0;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #f9f7f4;
-    }
-    .component-demo h3 {
-      margin-top: 0;
-      color: #078930;
-    }
-    .demo-content {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Joyful Animations Components</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      .component-demo {
+        padding: 2rem;
+        margin: 2rem 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #f9f7f4;
+      }
+      .component-demo h3 {
+        margin-top: 0;
+        color: #078930;
+      }
+      .demo-content {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="text-align: center; margin: 3rem 0">
+        🎉 Tillerstead Joyful Animations
+      </h1>
 
-<div class="container">
-  <h1 style="text-align: center; margin: 3rem 0;">
-    🎉 Tillerstead Joyful Animations
-  </h1>
+      <!-- ===== PROGRESS BARS ===== -->
+      <section class="component-demo">
+        <h3>📊 Progress Bars</h3>
 
-  <!-- ===== PROGRESS BARS ===== -->
-  <section class="component-demo">
-    <h3>📊 Progress Bars</h3>
-    
-    <h4>Standard Progress</h4>
-    <div class="progress-bar" style="max-width: 400px;">
-      <div class="progress-fill" style="width: 45%;"></div>
-    </div>
-
-    <h4 style="margin-top: 1.5rem;">With Shimmer Effect</h4>
-    <div class="progress-bar" style="max-width: 400px;">
-      <div class="progress-fill shimmer" style="width: 65%;"></div>
-    </div>
-
-    <h4 style="margin-top: 1.5rem;">Success State</h4>
-    <div class="progress-bar progress-success" style="max-width: 400px;">
-      <div class="progress-fill" style="width: 100%;"></div>
-    </div>
-
-    <h4 style="margin-top: 1.5rem;">Labeled Progress</h4>
-    <div class="progress-labeled" style="max-width: 400px;">
-      <div class="progress-labeled-bar">
-        <div class="progress-bar" style="flex: 1;">
-          <div class="progress-fill" style="width: 75%;"></div>
+        <h4>Standard Progress</h4>
+        <div class="progress-bar" style="max-width: 400px">
+          <div class="progress-fill" style="width: 45%"></div>
         </div>
-        <span class="progress-labeled-value">75%</span>
-      </div>
-    </div>
 
-    <h4 style="margin-top: 1.5rem;">Segmented Progress (Multi-Step)</h4>
-    <div class="progress-segmented" style="max-width: 400px;">
-      <div class="progress-segment completed"></div>
-      <div class="progress-segment completed"></div>
-      <div class="progress-segment active"></div>
-      <div class="progress-segment pending"></div>
-    </div>
-  </section>
+        <h4 style="margin-top: 1.5rem">With Shimmer Effect</h4>
+        <div class="progress-bar" style="max-width: 400px">
+          <div class="progress-fill shimmer" style="width: 65%"></div>
+        </div>
 
-  <!-- ===== ENTRANCE ANIMATIONS ===== -->
-  <section class="component-demo">
-    <h3>🎬 Entrance Animations</h3>
-    <p>These animate on page load. Reload to see again.</p>
-    
-    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-      <div class="bounce-enter" style="padding: 1rem; background: white; border-radius: 8px;">
-        <strong>Bounce Enter</strong>
-      </div>
-      
-      <div class="bounce-enter bounce-enter-delay-1" style="padding: 1rem; background: white; border-radius: 8px;">
-        <strong>Staggered 1</strong>
-      </div>
-      
-      <div class="bounce-enter bounce-enter-delay-2" style="padding: 1rem; background: white; border-radius: 8px;">
-        <strong>Staggered 2</strong>
-      </div>
-      
-      <div class="bounce-enter bounce-enter-delay-3" style="padding: 1rem; background: white; border-radius: 8px;">
-        <strong>Staggered 3</strong>
-      </div>
-    </div>
-  </section>
+        <h4 style="margin-top: 1.5rem">Success State</h4>
+        <div class="progress-bar progress-success" style="max-width: 400px">
+          <div class="progress-fill" style="width: 100%"></div>
+        </div>
 
-  <!-- ===== BUTTON ANIMATIONS ===== -->
-  <section class="component-demo">
-    <h3>🔘 Button Animations</h3>
-    <p>Hover over buttons to see animations.</p>
-    
-    <div class="demo-content">
-      <button class="btn btn-primary btn-joy">
-        Joy Button (Bounce)
-      </button>
-
-      <button class="btn btn-primary cta-primary-joy">
-        CTA Primary (Heartbeat)
-      </button>
-
-      <button class="btn btn-secondary jump-hover">
-        Jump Hover
-      </button>
-
-      <button class="btn btn-accent wiggle">
-        Wiggle (Attention)
-      </button>
-
-      <button class="btn btn-ghost scale-on-tap">
-        Scale on Tap
-      </button>
-    </div>
-  </section>
-
-  <!-- ===== FEEDBACK & SUCCESS ===== -->
-  <section class="component-demo">
-    <h3>✅ Feedback & Success States</h3>
-    
-    <div class="demo-content">
-      <div class="success-check"></div>
-      
-      <div class="spinner-joy"></div>
-      
-      <div class="dots-loader">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== MICRO-INTERACTIONS ===== -->
-  <section class="component-demo">
-    <h3>💫 Micro-Interactions</h3>
-    <p>Hover or interact to see effects.</p>
-    
-    <div class="demo-content">
-      <span style="padding: 0.5rem 1rem; background: white; border-radius: 8px; display: inline-block;" class="cta-pulse">
-        Gentle Pulse
-      </span>
-
-      <span style="padding: 0.5rem 1rem; background: white; border-radius: 8px; display: inline-block;" class="cta-pulse-gentle">
-        Very Gentle Pulse
-      </span>
-    </div>
-  </section>
-
-  <!-- ===== FORM EXAMPLE ===== -->
-  <section class="component-demo">
-    <h3>📝 Form with Progress</h3>
-    
-    <form id="demoForm" class="stack" style="max-width: 500px;">
-      <div>
-        <label for="projectName">Project Name</label>
-        <input type="text" id="projectName" placeholder="Enter project name" />
-      </div>
-
-      <div>
-        <label for="scope">Project Scope</label>
-        <select id="scope">
-          <option>Select scope...</option>
-          <option>Bathroom Remodel</option>
-          <option>Kitchen Backsplash</option>
-          <option>Shower Installation</option>
-        </select>
-      </div>
-
-      <div>
-        <label for="message">Project Details</label>
-        <textarea id="message" placeholder="Tell us about your project..." rows="4"></textarea>
-      </div>
-
-      <div style="margin-top: 1rem;">
-        <div class="progress-labeled" style="margin-bottom: 1rem;">
+        <h4 style="margin-top: 1.5rem">Labeled Progress</h4>
+        <div class="progress-labeled" style="max-width: 400px">
           <div class="progress-labeled-bar">
-            <div class="progress-bar" style="flex: 1;">
-              <div class="progress-fill" id="formProgress" style="width: 0%;"></div>
+            <div class="progress-bar" style="flex: 1">
+              <div class="progress-fill" style="width: 75%"></div>
             </div>
-            <span class="progress-labeled-value" id="formPercent">0%</span>
+            <span class="progress-labeled-value">75%</span>
           </div>
         </div>
-      </div>
 
-      <div class="btn-group">
-        <button type="reset" class="btn btn-secondary">Clear</button>
-        <button type="submit" class="btn btn-primary btn-joy">Submit Project</button>
-      </div>
-    </form>
+        <h4 style="margin-top: 1.5rem">Segmented Progress (Multi-Step)</h4>
+        <div class="progress-segmented" style="max-width: 400px">
+          <div class="progress-segment completed"></div>
+          <div class="progress-segment completed"></div>
+          <div class="progress-segment active"></div>
+          <div class="progress-segment pending"></div>
+        </div>
+      </section>
 
-    <div id="formSuccess" style="display: none; text-align: center; margin-top: 2rem;">
-      <div class="success-check" style="margin: 0 auto 1rem;"></div>
-      <p style="font-size: 1.1rem; color: #078930; font-weight: 600;">
-        Thank you! We'll be in touch soon.
-      </p>
+      <!-- ===== ENTRANCE ANIMATIONS ===== -->
+      <section class="component-demo">
+        <h3>🎬 Entrance Animations</h3>
+        <p>These animate on page load. Reload to see again.</p>
+
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap">
+          <div
+            class="bounce-enter"
+            style="padding: 1rem; background: white; border-radius: 8px"
+          >
+            <strong>Bounce Enter</strong>
+          </div>
+
+          <div
+            class="bounce-enter bounce-enter-delay-1"
+            style="padding: 1rem; background: white; border-radius: 8px"
+          >
+            <strong>Staggered 1</strong>
+          </div>
+
+          <div
+            class="bounce-enter bounce-enter-delay-2"
+            style="padding: 1rem; background: white; border-radius: 8px"
+          >
+            <strong>Staggered 2</strong>
+          </div>
+
+          <div
+            class="bounce-enter bounce-enter-delay-3"
+            style="padding: 1rem; background: white; border-radius: 8px"
+          >
+            <strong>Staggered 3</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== BUTTON ANIMATIONS ===== -->
+      <section class="component-demo">
+        <h3>🔘 Button Animations</h3>
+        <p>Hover over buttons to see animations.</p>
+
+        <div class="demo-content">
+          <button class="btn btn-primary btn-joy">Joy Button (Bounce)</button>
+
+          <button class="btn btn-primary cta-primary-joy">
+            CTA Primary (Heartbeat)
+          </button>
+
+          <button class="btn btn-secondary jump-hover">Jump Hover</button>
+
+          <button class="btn btn-accent wiggle">Wiggle (Attention)</button>
+
+          <button class="btn btn-ghost scale-on-tap">Scale on Tap</button>
+        </div>
+      </section>
+
+      <!-- ===== FEEDBACK & SUCCESS ===== -->
+      <section class="component-demo">
+        <h3>✅ Feedback & Success States</h3>
+
+        <div class="demo-content">
+          <div class="success-check"></div>
+
+          <div class="spinner-joy"></div>
+
+          <div class="dots-loader">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MICRO-INTERACTIONS ===== -->
+      <section class="component-demo">
+        <h3>💫 Micro-Interactions</h3>
+        <p>Hover or interact to see effects.</p>
+
+        <div class="demo-content">
+          <span
+            style="
+              padding: 0.5rem 1rem;
+              background: white;
+              border-radius: 8px;
+              display: inline-block;
+            "
+            class="cta-pulse"
+          >
+            Gentle Pulse
+          </span>
+
+          <span
+            style="
+              padding: 0.5rem 1rem;
+              background: white;
+              border-radius: 8px;
+              display: inline-block;
+            "
+            class="cta-pulse-gentle"
+          >
+            Very Gentle Pulse
+          </span>
+        </div>
+      </section>
+
+      <!-- ===== FORM EXAMPLE ===== -->
+      <section class="component-demo">
+        <h3>📝 Form with Progress</h3>
+
+        <form id="demoForm" class="stack" style="max-width: 500px">
+          <div>
+            <label for="projectName">Project Name</label>
+            <input
+              type="text"
+              id="projectName"
+              placeholder="Enter project name"
+            />
+          </div>
+
+          <div>
+            <label for="scope">Project Scope</label>
+            <select id="scope">
+              <option>Select scope...</option>
+              <option>Bathroom Remodel</option>
+              <option>Kitchen Backsplash</option>
+              <option>Shower Installation</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message">Project Details</label>
+            <textarea
+              id="message"
+              placeholder="Tell us about your project..."
+              rows="4"
+            ></textarea>
+          </div>
+
+          <div style="margin-top: 1rem">
+            <div class="progress-labeled" style="margin-bottom: 1rem">
+              <div class="progress-labeled-bar">
+                <div class="progress-bar" style="flex: 1">
+                  <div
+                    class="progress-fill"
+                    id="formProgress"
+                    style="width: 0%"
+                  ></div>
+                </div>
+                <span class="progress-labeled-value" id="formPercent">0%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="btn-group">
+            <button type="reset" class="btn btn-secondary">Clear</button>
+            <button type="submit" class="btn btn-primary btn-joy">
+              Submit Project
+            </button>
+          </div>
+        </form>
+
+        <div
+          id="formSuccess"
+          style="display: none; text-align: center; margin-top: 2rem"
+        >
+          <div class="success-check" style="margin: 0 auto 1rem"></div>
+          <p style="font-size: 1.1rem; color: #078930; font-weight: 600">
+            Thank you! We'll be in touch soon.
+          </p>
+        </div>
+      </section>
     </div>
-  </section>
 
-</div>
+    <script>
+      // Form progress tracking
+      const form = document.getElementById("demoForm");
+      const formInputs = form.querySelectorAll("input, select, textarea");
+      const formProgress = document.getElementById("formProgress");
+      const formPercent = document.getElementById("formPercent");
 
-<script>
-  // Form progress tracking
-  const form = document.getElementById('demoForm');
-  const formInputs = form.querySelectorAll('input, select, textarea');
-  const formProgress = document.getElementById('formProgress');
-  const formPercent = document.getElementById('formPercent');
+      function updateProgress() {
+        let filled = 0;
+        formInputs.forEach((input) => {
+          if (input.value) filled++;
+        });
+        const percent = Math.round((filled / formInputs.length) * 100);
+        formProgress.style.width = percent + "%";
+        formPercent.textContent = percent + "%";
+      }
 
-  function updateProgress() {
-    let filled = 0;
-    formInputs.forEach(input => {
-      if (input.value) filled++;
-    });
-    const percent = Math.round((filled / formInputs.length) * 100);
-    formProgress.style.width = percent + '%';
-    formPercent.textContent = percent + '%';
-  }
+      formInputs.forEach((input) => {
+        input.addEventListener("input", updateProgress);
+        input.addEventListener("change", updateProgress);
+      });
 
-  formInputs.forEach(input => {
-    input.addEventListener('input', updateProgress);
-    input.addEventListener('change', updateProgress);
-  });
-
-  // Form submission
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    form.style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
-  });
-</script>
-
-</body>
+      // Form submission
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        form.style.display = "none";
+        document.getElementById("formSuccess").style.display = "block";
+      });
+    </script>
+  </body>
 </html>

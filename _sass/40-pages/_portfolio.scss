@@ -30,19 +30,19 @@
   color: var(--ts-color-muted);
   cursor: pointer;
   transition: all 0.2s var(--tiller-transition-fast);
-  
+
   &:hover {
     border-color: var(--ts-color-accent);
     color: var(--ts-color-accent);
     transform: translateY(-2px);
     box-shadow: var(--ts-shadow-soft);
   }
-  
+
   &:focus-visible {
     outline: 2px solid var(--ts-color-accent);
     outline-offset: 2px;
   }
-  
+
   &.is-active {
     background: var(--ts-color-accent);
     border-color: var(--ts-color-accent);
@@ -72,7 +72,7 @@
   aspect-ratio: 4 / 3;
   overflow: hidden;
   background: var(--ts-color-surface-muted);
-  
+
   picture,
   img {
     display: block;
@@ -86,7 +86,7 @@
   padding: var(--ts-spacing-lg);
   background: var(--ts-color-surface);
   border-top: 1px solid var(--ts-color-border);
-  
+
   p {
     margin: 0;
     color: var(--ts-color-muted);
@@ -131,17 +131,17 @@
   font-weight: bold;
   cursor: pointer;
   transition: all 0.2s var(--tiller-transition-fast);
-  
+
   &:hover {
     background: var(--ts-color-primary-strong);
     transform: scale(1.05);
   }
-  
+
   &:focus-visible {
     outline: 2px solid var(--ts-color-accent);
     outline-offset: 2px;
   }
-  
+
   &:active {
     transform: scale(0.95);
   }
@@ -166,18 +166,18 @@
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.2s var(--tiller-transition-fast);
-  
+
   &:hover {
     background: var(--ts-color-accent);
     transform: scale(1.2);
   }
-  
+
   &.is-active {
     width: 24px;
     background: var(--ts-color-accent);
     border-radius: 5px;
   }
-  
+
   &:focus-visible {
     outline: 2px solid var(--ts-color-accent);
     outline-offset: 2px;
@@ -194,11 +194,11 @@
 .trade-notes .section-header {
   text-align: center;
   margin-bottom: var(--ts-spacing-xl);
-  
+
   .heading-2 {
     margin-bottom: var(--ts-spacing-sm);
   }
-  
+
   .lead {
     color: var(--ts-color-muted);
   }
@@ -209,11 +209,11 @@
   grid-template-columns: 1fr;
   gap: var(--ts-spacing-lg);
   margin-bottom: var(--ts-spacing-xl);
-  
+
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   @media (min-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -226,18 +226,18 @@
   border-radius: var(--ts-radius-lg);
   box-shadow: var(--ts-shadow-soft);
   transition: all 0.2s var(--tiller-transition-fast);
-  
+
   &:hover {
     transform: translateY(-4px);
     box-shadow: var(--ts-shadow-soft);
     border-color: var(--ts-color-accent);
   }
-  
+
   .heading-4 {
     margin-bottom: var(--ts-spacing-sm);
     color: var(--ts-color-primary);
   }
-  
+
   p {
     margin: 0;
     color: var(--ts-color-muted);
@@ -250,7 +250,7 @@
   margin-top: var(--ts-spacing-xl);
   padding-top: var(--ts-spacing-lg);
   border-top: 1px solid var(--ts-color-border);
-  
+
   em {
     font-size: var(--font-size-lg);
     font-style: italic;
@@ -273,36 +273,36 @@
   .filters {
     gap: var(--ts-spacing-xs);
   }
-  
+
   .chip {
     padding: var(--ts-spacing-xs) var(--ts-spacing-sm);
     font-size: var(--font-size-xs);
   }
-  
+
   .slide-caption {
     padding: var(--ts-spacing-md);
   }
-  
+
   .slider-footer {
     flex-direction: column;
     gap: var(--ts-spacing-sm);
     padding: var(--ts-spacing-md);
   }
-  
+
   .slide-meta {
     font-size: var(--font-size-xs);
   }
-  
+
   .slider-arrow {
     width: 36px;
     height: 36px;
     font-size: 20px;
   }
-  
+
   .trade-notes-grid {
     gap: var(--ts-spacing-md);
   }
-  
+
   .trade-note-card {
     padding: var(--ts-spacing-md);
   }
@@ -316,7 +316,7 @@
   .trade-note-card {
     transition: none;
   }
-  
+
   .chip:hover,
   .slider-arrow:hover,
   .slider-dot:hover,
@@ -333,7 +333,7 @@
   .portfolio-actions {
     display: none;
   }
-  
+
   .gallery-slider {
     box-shadow: none;
     border: 1px solid var(--ts-color-border);

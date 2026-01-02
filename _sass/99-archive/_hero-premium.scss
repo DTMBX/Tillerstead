@@ -16,10 +16,10 @@
     #fafbfc 50%,
     #f5f7fa 100%
   );
-  
+
   /* SVG tile pattern background */
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230d9aaa' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -28,10 +28,10 @@
     pointer-events: none;
     z-index: 0;
   }
-  
+
   /* Subtle gradient overlay */
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     background: radial-gradient(
@@ -129,12 +129,13 @@
   color: var(--ts-color-heading);
   margin: 0;
   animation-delay: 0.2s;
-  
+
   /* Subtle gradient for depth */
   background: linear-gradient(
     135deg,
     var(--ts-color-heading) 0%,
-    color-mix(in srgb, var(--ts-color-heading) 80%, var(--ts-color-primary) 20%) 100%
+    color-mix(in srgb, var(--ts-color-heading) 80%, var(--ts-color-primary) 20%)
+      100%
   );
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -198,22 +199,28 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgb(13, 154, 170, 0.12);
   border-radius: 12px;
-  box-shadow: 
+  box-shadow:
     0 2px 8px rgb(0, 0, 0, 0.04),
     0 4px 16px rgb(0, 0, 0, 0.02);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   animation: fade-in-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) backwards;
 }
 
-.ts-hero__fact:nth-child(1) { animation-delay: 0.5s; }
-.ts-hero__fact:nth-child(2) { animation-delay: 0.6s; }
-.ts-hero__fact:nth-child(3) { animation-delay: 0.7s; }
+.ts-hero__fact:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.ts-hero__fact:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.ts-hero__fact:nth-child(3) {
+  animation-delay: 0.7s;
+}
 
 .ts-hero__fact:hover,
 .hero__feature:hover {
   transform: translateY(-4px);
   border-color: rgb(13, 154, 170, 0.3);
-  box-shadow: 
+  box-shadow:
     0 8px 20px rgb(0, 0, 0, 0.08),
     0 12px 32px rgb(0, 0, 0, 0.04);
 }
@@ -226,7 +233,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--ts-color-primary) 0%, color-mix(in srgb, var(--ts-color-primary) 80%, var(--ts-color-ink)) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--ts-color-primary) 0%,
+    color-mix(in srgb, var(--ts-color-primary) 80%, var(--ts-color-ink)) 100%
+  );
   color: var(--ts-white);
   border-radius: 10px;
   box-shadow: 0 4px 12px rgb(13, 154, 170, 0.25);
@@ -265,7 +276,7 @@
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 
+  box-shadow:
     0 10px 40px rgb(0, 0, 0, 0.1),
     0 20px 60px rgb(0, 0, 0, 0.05);
   animation: fade-in 1s cubic-bezier(0.4, 0, 0.2, 1) 0.3s backwards;
@@ -300,12 +311,12 @@
     var(--color-brand-teal-950) 100%
   );
   color: var(--ts-white);
-  
+
   /* Different tile pattern for dark version */
   &::before {
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
-  
+
   &::after {
     background: radial-gradient(
       ellipse at 50% 20%,
@@ -356,7 +367,7 @@
   .hero {
     padding-block: clamp(4rem, 10vb, 6rem) clamp(2.5rem, 6vb, 4rem);
   }
-  
+
   .ts-hero__facts,
   .hero__features {
     grid-template-columns: 1fr;
@@ -369,13 +380,13 @@
   .hero__headline {
     font-size: clamp(2rem, 8vw, 3rem);
   }
-  
+
   .ts-hero__actions,
   .hero__actions {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .ts-hero__actions > *,
   .hero__actions > * {
     width: 100%;
@@ -392,7 +403,7 @@
   .hero__visual {
     animation: none !important;
   }
-  
+
   .ts-hero__fact-icon,
   .hero__feature-icon {
     transition: none !important;
@@ -406,7 +417,7 @@
     padding-block: 2rem;
     background: var(--ts-white) !important;
   }
-  
+
   .ts-hero::before,
   .ts-hero::after,
   .hero::before,

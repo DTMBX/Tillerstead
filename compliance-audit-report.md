@@ -6,14 +6,14 @@
 
 ## Summary
 
-| Category | Status |
-|----------|--------|
-| TCNA 2024 | PASS |
-| NJ HIC | PASS |
-| WCAG 2.1 | PASS |
-| Build Phase | PASS |
-| Metadata | FAIL |
-| Color Contrast | FAIL |
+| Category       | Status |
+| -------------- | ------ |
+| TCNA 2024      | PASS   |
+| NJ HIC         | PASS   |
+| WCAG 2.1       | PASS   |
+| Build Phase    | PASS   |
+| Metadata       | FAIL   |
+| Color Contrast | FAIL   |
 
 **Total Checks:** 27
 **Passed:** 4
@@ -22,18 +22,20 @@
 
 ## Detailed Findings
 
-
 ### TCNA 2024 Handbook Compliance
+
 **Status:** PASS
 
 ✅ No issues found
 
 ### undefined
+
 **Status:** PASS
 
 ✅ No issues found
 
 ### WCAG 2.1 Accessibility
+
 **Status:** PASS
 
 #### Issues
@@ -42,6 +44,7 @@
 - **WARNING**: CSS may be missing visible focus indicators
 
 ### undefined
+
 **Status:** PASS
 
 #### Issues
@@ -62,6 +65,7 @@
 - **INFO**: Consider adding links to related Build Phase guides (pages/build/waterproofing-systems.md)
 
 ### undefined
+
 **Status:** FAIL
 
 #### Issues
@@ -75,6 +79,7 @@
 - **WARNING**: No JSON-LD structured data found
 
 ### undefined
+
 **Status:** FAIL
 
 #### Issues

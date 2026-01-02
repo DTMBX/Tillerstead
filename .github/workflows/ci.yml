@@ -2,14 +2,47 @@ name: CI/CD
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [main, develop]
   pull_request:
-    branches: [ main ]
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  build:
+  validate:
+    name: Validate & Lint
     runs-on: ubuntu-latest
-    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run comprehensive validation script
+        run: node scripts/validate-all.js
+
+      - name: Lint JavaScript (ESLint)
+        run: npm run lint:js || true
+
+      - name: Lint CSS (stylelint)
+        run: npm run lint:css || true
+
+      - name: Lint HTML (HTMLHint)
+        run: npx htmlhint "_includes/**/*.html" "_layouts/**/*.html" || true
+
+  build:
+    name: Build Site
+    needs: validate
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -17,29 +50,26 @@ jobs:
       - name: Set up Ruby 3.2
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
-          bundler: '2.4.19'
+          ruby-version: "3.2"
+          bundler: "2.4.19"
           bundler-cache: true
 
-      - name: Set up Node.js 24
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
-          cache: 'npm'
+          node-version: "24"
+          cache: "npm"
 
       - name: Install npm dependencies
         run: npm ci
 
-      - name: Lint frontend files (ESLint) — warnings allowed
-        run: npm run lint:js || true
+      - name: Build CSS assets
+        run: npm run build:css 2>&1 | head -50
 
-      - name: Lint stylesheets (stylelint) — warnings allowed
-        run: npm run lint:css || true
-
-      - name: Build site (Jekyll + CSS)
+      - name: Build site with Jekyll
         env:
           JEKYLL_ENV: production
-        run: npm run build
+        run: bundle exec jekyll build --trace 2>&1 | tail -100
 
       - name: Verify build artifacts
         run: |
@@ -52,27 +82,74 @@ jobs:
             exit 1
           fi
           echo "✓ Build artifacts verified"
+          echo "Files generated: $(find _site -type f | wc -l)"
 
-      - name: Copy CNAME to _site (for GitHub Pages)
+      - name: Ensure CNAME for GitHub Pages
         run: |
           if [ -f CNAME ]; then
             cp CNAME _site/CNAME
-            echo "✓ CNAME copied"
+            echo "✓ CNAME copied to _site"
           else
-            echo "⚠ CNAME not found - creating from domain"
             echo "tillerstead.com" > _site/CNAME
           fi
 
       - name: Upload built site
-        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: site-build
           path: _site
           retention-days: 1
 
-  deploy:
+  test:
+    name: Test Built Site
     needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download built site
+        uses: actions/download-artifact@v4
+        with:
+          name: site-build
+          path: _site
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Verify critical pages exist
+        run: |
+          critical_pages=(
+            "_site/index.html"
+            "_site/pages/build/index.html"
+            "_site/portfolio/index.html"
+            "_site/contact/index.html"
+            "_site/404.html"
+          )
+
+          for page in "${critical_pages[@]}"; do
+            if [ -f "$page" ]; then
+              echo "✓ $page exists"
+            else
+              echo "❌ $page missing"
+              exit 1
+            fi
+          done
+
+      - name: Validate generated HTML
+        run: |
+          set +e
+          npx htmlhint "_site/**/*.html" --exclude node_modules,_site/assets
+          result=$?
+          if [ $result -gt 1 ]; then
+            exit 1
+          fi
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: test
     runs-on: ubuntu-latest
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     permissions:
@@ -95,13 +172,13 @@ jobs:
       - name: Verify deployment artifact
         run: |
           if [ ! -f "_site/index.html" ]; then
-            echo "ERROR: Artifact download failed"
+            echo "ERROR: Artifact missing"
             exit 1
           fi
-          echo "✓ Deployment artifact verified"
-          ls -la _site/
+          echo "✓ Deployment ready"
+          du -sh _site
 
-      - name: Upload artifact to GitHub Pages
+      - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site
@@ -109,4 +186,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-

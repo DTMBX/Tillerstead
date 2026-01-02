@@ -24,7 +24,7 @@
 
 /* Tail */
 .speech-bubble-cartoon::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -22px;
   left: 40px;
@@ -36,7 +36,7 @@
 }
 
 .speech-bubble-cartoon::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -14px;
   left: 44px;
@@ -66,20 +66,52 @@
   transform: rotate(-5deg) skew(-5deg);
   box-shadow: var(--color-shadow-cel-lg);
   position: relative;
-  
+
   /* Classic comic book jagged edges */
   clip-path: polygon(
-    2% 0%, 15% 5%, 30% 0%, 45% 3%, 60% 0%, 75% 5%, 88% 0%, 100% 5%,
-    95% 20%, 100% 35%, 95% 50%, 100% 65%, 95% 80%, 100% 95%,
-    85% 100%, 70% 95%, 55% 100%, 40% 95%, 25% 100%, 10% 95%, 0% 100%,
-    5% 85%, 0% 70%, 5% 55%, 0% 40%, 5% 25%, 0% 10%
+    2% 0%,
+    15% 5%,
+    30% 0%,
+    45% 3%,
+    60% 0%,
+    75% 5%,
+    88% 0%,
+    100% 5%,
+    95% 20%,
+    100% 35%,
+    95% 50%,
+    100% 65%,
+    95% 80%,
+    100% 95%,
+    85% 100%,
+    70% 95%,
+    55% 100%,
+    40% 95%,
+    25% 100%,
+    10% 95%,
+    0% 100%,
+    5% 85%,
+    0% 70%,
+    5% 55%,
+    0% 40%,
+    5% 25%,
+    0% 10%
   );
 }
 
-.action-word.pow { background: var(--tiller-cartoon-yellow); color: var(--color-cartoon-black); }
-.action-word.wham { background: var(--tiller-cartoon-red); }
-.action-word.boom { background: var(--tiller-retro-orange); }
-.action-word.zap { background: var(--tiller-cartoon-blue); }
+.action-word.pow {
+  background: var(--tiller-cartoon-yellow);
+  color: var(--color-cartoon-black);
+}
+.action-word.wham {
+  background: var(--tiller-cartoon-red);
+}
+.action-word.boom {
+  background: var(--tiller-retro-orange);
+}
+.action-word.zap {
+  background: var(--tiller-cartoon-blue);
+}
 
 /* Small action badges */
 .badge-action {
@@ -234,7 +266,7 @@
 
 /* Cloud decoration */
 .hero-cartoon::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 20%;
   right: 10%;
@@ -244,7 +276,7 @@
   border: var(--tiller-outline-medium) solid var(--color-cartoon-black);
   border-radius: 50%;
   opacity: 0.6;
-  box-shadow: 
+  box-shadow:
     -100px 0 0 -20px var(--color-cartoon-white),
     100px 0 0 -20px var(--color-cartoon-white);
 }
@@ -258,7 +290,7 @@
   letter-spacing: 0.02em;
   line-height: 1;
   margin-bottom: var(--spacing-space-6);
-  
+
   /* Classic cartoon text outline */
   text-shadow:
     -3px -3px 0 var(--color-cartoon-black),
@@ -373,8 +405,16 @@
   background: var(--tiller-cartoon-yellow);
   border: var(--tiller-outline-medium) solid var(--color-cartoon-black);
   clip-path: polygon(
-    50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
-    50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
   );
   box-shadow: var(--color-shadow-cel-sm);
 }
@@ -422,10 +462,19 @@
 }
 
 @keyframes shake {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-5deg); }
-  50% { transform: rotate(5deg); }
-  75% { transform: rotate(-5deg); }
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
 }
 
 /* ===========================
@@ -436,16 +485,16 @@
   .card-cartoon {
     padding: var(--spacing-space-5);
   }
-  
+
   .btn-cartoon {
     font-size: var(--font-size-base);
     padding: var(--spacing-space-3) var(--spacing-space-6);
   }
-  
+
   .hero-cartoon {
     padding: var(--spacing-space-16) var(--spacing-space-4);
   }
-  
+
   .action-word {
     font-size: clamp(1.5rem, 8vw, 3rem);
     padding: var(--spacing-space-3) var(--spacing-space-6);
@@ -457,7 +506,8 @@
    =========================== */
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
 
@@ -467,7 +517,8 @@
 }
 
 @keyframes wiggle {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0deg);
   }
 

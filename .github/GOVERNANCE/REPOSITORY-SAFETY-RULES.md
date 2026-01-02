@@ -29,6 +29,7 @@ sandbox (test 3x) → verify → manual promotion → stone (production)
    - Manual QA on mobile + desktop
 
 2. **Verify before promotion:**
+
    ```powershell
    cd tillerstead-sandbox
    npm run build
@@ -37,6 +38,7 @@ sandbox (test 3x) → verify → manual promotion → stone (production)
    ```
 
 3. **Promote to stone (manual only):**
+
    ```powershell
    # From sandbox directory
    git remote add stone git@github.com:xtx33/tillerstead-stone.git
@@ -79,11 +81,13 @@ stone   → production repo (manual promotion only)
 ```
 
 **Check remotes:**
+
 ```powershell
 git remote -v
 ```
 
 **Expected output (sandbox):**
+
 ```
 origin  git@github.com:xtx33/tillerstead-sandbox.git (fetch)
 origin  git@github.com:xtx33/tillerstead-sandbox.git (push)
@@ -105,12 +109,14 @@ stone   git@github.com:xtx33/tillerstead-stone.git (push)
 ### 2. Local Git Hooks
 
 Pre-commit hooks warn/block based on repo type:
+
 - **Sandbox:** Warn, allow
 - **Stone:** Block, require explicit override
 
 ### 3. PowerShell Guards (Optional)
 
 Helper scripts that check:
+
 ```powershell
 # Safe push wrapper
 function Safe-Push {
@@ -131,6 +137,7 @@ function Safe-Push {
 ### 4. Copilot CLI Context Awareness
 
 When working in terminal:
+
 - Tool always checks current working directory
 - Warns if operations target stone repos
 - Suggests sandbox-first workflow
@@ -178,10 +185,10 @@ Before every stone promotion:
 
 ## Repo Naming Convention
 
-| Type | Pattern | Purpose | Domain |
-|------|---------|---------|--------|
+| Type    | Pattern     | Purpose              | Domain        |
+| ------- | ----------- | -------------------- | ------------- |
 | Sandbox | `*-sandbox` | Development, testing | Local/preview |
-| Stone | `*-stone` | Production, stable | Live DNS |
+| Stone   | `*-stone`   | Production, stable   | Live DNS      |
 
 ---
 

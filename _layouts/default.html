@@ -1,48 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-  <title>{{ page.title | default: site.title }}</title>
-  {% include layout/head.html %}
-</head>
-<body class="site-body ts-page ts-theme {{ page.body_class }}">
-  <a class="skip-link" href="#main" tabindex="0">Skip to main content</a>
-  {% include layout/logo-sprite-inline.html %}
-  {% include layout/header.html %}
-  <main id="main" class="site-main ts-section ts-surface" tabindex="-1">
-    {%- unless page.is_home or page.url == '/' or page.url == '/index.html' or page.show_breadcrumbs == false or page.hide_breadcrumbs -%}
-      {% include components/ts-breadcrumbs.html %}
-    {%- endunless -%}
-    {%- unless page.hide_hero -%}
-      {% include hero/page-hero.html %}
-    {%- endunless -%}
-    {%- if page.is_home or page.full_width -%}
-      {{ content }}
-    {%- else -%}
-      <article class="page-content section" itemscope itemtype="https://schema.org/WebPage">
-        <meta itemprop="name" content="{{ page.title | default: site.title }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta
+      name="theme-color"
+      content="#ffffff"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#000000"
+      media="(prefers-color-scheme: dark)"
+    />
+    <title>{{ page.title | default: site.title }}</title>
+    {% include layout/head.html %}
+  </head>
+  <body class="site-body ts-page ts-theme {{ page.body_class }}">
+    <a class="skip-link" href="#main" tabindex="0">Skip to main content</a>
+    {% include layout/logo-sprite-inline.html %} {% include layout/header.html
+    %}
+    <main id="main" class="site-main ts-section ts-surface" tabindex="-1">
+      {%- unless page.is_home or page.url == '/' or page.url == '/index.html' or
+      page.show_breadcrumbs == false or page.hide_breadcrumbs -%} {% include
+      components/ts-breadcrumbs.html %} {%- endunless -%} {%- unless
+      page.hide_hero -%} {% include hero/page-hero.html %} {%- endunless -%} {%-
+      if page.is_home or page.full_width -%} {{ content }} {%- else -%}
+      <article
+        class="page-content section"
+        itemscope
+        itemtype="https://schema.org/WebPage"
+      >
+        <meta
+          itemprop="name"
+          content="{{ page.title | default: site.title }}"
+        />
         {%- if page.description -%}
-          <meta itemprop="description" content="{{ page.description }}">
+        <meta itemprop="description" content="{{ page.description }}" />
         {%- endif -%}
-        <div class="container">
-          {{ content }}
-        </div>
+        <div class="container container-wide">{{ content }}</div>
       </article>
+      {%- endif -%}
+    </main>
+    {% include layout/footer.html %} {% include utilities/scripts.html %} {%
+    include schema/schema-local-business.html %} {%- if page.include_faq_schema
+    -%} {% include schema/schema-faq.html %} {%- endif -%} {%- if
+    page.structured_data -%}
+    <script type="application/ld+json">
+      {{ page.structured_data | jsonify }}
+    </script>
     {%- endif -%}
-  </main>
-  {% include layout/footer.html %}
-  {% include utilities/scripts.html %}
-  {% include schema/schema-local-business.html %}
-  {%- if page.include_faq_schema -%}
-    {% include schema/schema-faq.html %}
-  {%- endif -%}
-  {%- if page.structured_data -%}
-    <script type="application/ld+json">{{ page.structured_data | jsonify }}</script>
-  {%- endif -%}
-</body>
+  </body>
 </html>
-

@@ -4,32 +4,33 @@ Use this template for each flood test. Attach photos and inspector sign-offs as 
 
 ## Test record
 
-- **Project:** ______________________________
-- **Location/Room:** ________________________
-- **Date:** ____ / ____ / ______
-- **Conducted by:** _________________________
-- **Witness (if required):** ________________
+- **Project:** **\*\***\*\***\*\***\_\_**\*\***\*\***\*\***
+- **Location/Room:** \***\*\*\*\*\***\_\_\_\_\***\*\*\*\*\***
+- **Date:** \_**\_ / \_\_** / **\_\_**
+- **Conducted by:** \***\*\*\*\*\*\*\***\_\***\*\*\*\*\*\*\***
+- **Witness (if required):** **\*\***\_\_\_\_**\*\***
 
-| Item | Entry |
-| --- | --- |
-| Drain type / model | __________________________ |
-| Waterproofing system | ________________________ |
-| Fill start time | _____________________________ |
-| Fill stop time | ______________________________ |
-| Holding period (hrs) | ________________________ |
-| Waterline reference points | __________________ |
-| Water depth at start (in.) | __________________ |
-| Water depth at finish (in.) | _________________ |
-| Temperature / ambient notes | ________________ |
-| Photo references | ____________________________ |
-| Observations / comments | _____________________ |
-| Result (pass/fail) | __________________________ |
+| Item                        | Entry                                            |
+| --------------------------- | ------------------------------------------------ |
+| Drain type / model          | \***\*\*\*\*\*\*\***\_\_\***\*\*\*\*\*\*\***     |
+| Waterproofing system        | \***\*\*\*\*\***\_\_\_\_\***\*\*\*\*\***         |
+| Fill start time             | **\*\***\*\***\*\***\_**\*\***\*\***\*\***       |
+| Fill stop time              | **\*\***\*\***\*\***\_\_**\*\***\*\***\*\***     |
+| Holding period (hrs)        | \***\*\*\*\*\***\_\_\_\_\***\*\*\*\*\***         |
+| Waterline reference points  | **\*\*\*\***\_\_**\*\*\*\***                     |
+| Water depth at start (in.)  | **\*\*\*\***\_\_**\*\*\*\***                     |
+| Water depth at finish (in.) | **\*\*\*\***\_**\*\*\*\***                       |
+| Temperature / ambient notes | **\*\***\_\_\_\_**\*\***                         |
+| Photo references            | \***\*\*\*\*\*\*\***\_\_\_\_\***\*\*\*\*\*\*\*** |
+| Observations / comments     | \***\*\*\*\*\***\_\***\*\*\*\*\***               |
+| Result (pass/fail)          | \***\*\*\*\*\*\*\***\_\_\***\*\*\*\*\*\*\***     |
 
 **Corrective actions (if any):**
+
 ```
 _________________________________________________
 ```
 
 **Retest required?** ☐ Yes ☐ No
 
-Signature: _______________________  Date: ____ / ____ / ______
+Signature: \***\*\*\*\*\***\_\_\_\***\*\*\*\*\*** Date: \_**\_ / \_\_** / **\_\_**

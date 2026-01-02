@@ -16,13 +16,13 @@ _None_
 
 ## Medium Priority (3)
 
-- 🟡 Hardcoded colors found: _sass\99-archive\_contrast.scss: 8 hardcoded colors
-- 🟡 Potential broken links: _site/index.html: /assets/img/tillerstead-work/bathrooms/bathroom-accent-wall-and-shower.jpg; _site/index.html: /services/#tile; _site/index.html: /services/#bathrooms
+- 🟡 Hardcoded colors found: \_sass\99-archive_contrast.scss: 8 hardcoded colors
+- 🟡 Potential broken links: \_site/index.html: /assets/img/tillerstead-work/bathrooms/bathroom-accent-wall-and-shower.jpg; \_site/index.html: /services/#tile; \_site/index.html: /services/#bathrooms
 - 🟡 CSS file is 146.43KB (>100KB)
 
 ## Low Priority (1)
 
-- 🔵 Non-kebab-case files: _sass/README.md
+- 🔵 Non-kebab-case files: \_sass/README.md
 
 ## Fixed in This Run (0)
 
@@ -34,12 +34,13 @@ _None_
 
 ### Immediate Actions
 
-
 ### Short-term (This Week)
+
 - Review medium priority issues
 - Plan fixes for next sprint
 
 ### Long-term (This Month)
+
 - Address low priority issues as time permits
 - Implement automated monitoring
 

@@ -16,62 +16,62 @@
      🎨 CLASSIC CARTOON PALETTE
      Bold primaries inspired by vintage American animation
      =========================== */
-  
+
   /* Primary: Cartoon Blue (Bugs Bunny sky, classic backdrop) */
-  --color-cartoon-blue-light: #87CEEB;    /* Sky blue */
-  --color-cartoon-blue: #4A90E2;          /* Primary blue */
-  --color-cartoon-blue-dark: #2E5C8A;     /* Deep blue */
-  --color-cartoon-blue-deeper: #1A3A5C;   /* Navy accent */
-  
+  --color-cartoon-blue-light: #87ceeb; /* Sky blue */
+  --color-cartoon-blue: #4a90e2; /* Primary blue */
+  --color-cartoon-blue-dark: #2e5c8a; /* Deep blue */
+  --color-cartoon-blue-deeper: #1a3a5c; /* Navy accent */
+
   /* Secondary: Fire Engine Red (Looney Tunes energy) */
-  --color-cartoon-red-light: #FF6B6B;     /* Light red */
-  --color-cartoon-red: #DA121A;           /* Rasta red */
-  --color-cartoon-red-dark: #C1292E;      /* Deep red */
-  --color-cartoon-red-darker: #8B1E23;    /* Burgundy */
-  
+  --color-cartoon-red-light: #ff6b6b; /* Light red */
+  --color-cartoon-red: #da121a; /* Rasta red */
+  --color-cartoon-red-dark: #c1292e; /* Deep red */
+  --color-cartoon-red-darker: #8b1e23; /* Burgundy */
+
   /* Accent: Golden Yellow (Tweety Bird, classic highlight) */
-  --color-cartoon-yellow-light: #FFE066;  /* Light yellow */
-  --color-cartoon-yellow: #FCDD09;        /* Rasta gold */
-  --color-cartoon-yellow-dark: #FCDD09;   /* Rasta gold (dark) */
-  --color-cartoon-yellow-darker: #FCDD09; /* Rasta gold (deep) */
-  
+  --color-cartoon-yellow-light: #ffe066; /* Light yellow */
+  --color-cartoon-yellow: #fcdd09; /* Rasta gold */
+  --color-cartoon-yellow-dark: #fcdd09; /* Rasta gold (dark) */
+  --color-cartoon-yellow-darker: #fcdd09; /* Rasta gold (deep) */
+
   /* Support: Grass Green (Fresh, classic cartoon grass) */
-  --color-cartoon-green-light: #90EE90;   /* Light green */
-  --color-cartoon-green: #078930;         /* Rasta green */
-  --color-cartoon-green-dark: #078930;    /* Rasta green (dark) */
-  
+  --color-cartoon-green-light: #90ee90; /* Light green */
+  --color-cartoon-green: #078930; /* Rasta green */
+  --color-cartoon-green-dark: #078930; /* Rasta green (dark) */
+
   /* Support: Inky Black (Outline, text, graphic punch) */
-  --color-cartoon-black: var(--ts-color-heading);         /* True cartoon black */
-  --color-cartoon-gray-dark: #2C3E50;     /* Charcoal */
-  --color-cartoon-gray: var(--color-slate-600);          /* Medium gray */
-  --color-cartoon-gray-light: #95A5A6;    /* Light gray */
-  
+  --color-cartoon-black: var(--ts-color-heading); /* True cartoon black */
+  --color-cartoon-gray-dark: #2c3e50; /* Charcoal */
+  --color-cartoon-gray: var(--color-slate-600); /* Medium gray */
+  --color-cartoon-gray-light: #95a5a6; /* Light gray */
+
   /* Support: Pure White (Highlights, backgrounds) */
-  --color-cartoon-white: var(--ts-white);         /* Pure white */
-  --color-cartoon-off-white: #F8F9FA;     /* Slightly off */
-  --color-cartoon-cream: #FFF8DC;         /* Cream/cornsilk */
+  --color-cartoon-white: var(--ts-white); /* Pure white */
+  --color-cartoon-off-white: #f8f9fa; /* Slightly off */
+  --color-cartoon-cream: #fff8dc; /* Cream/cornsilk */
 
   /* ===========================
      🎭 VINTAGE TV COLORS
      Inspired by mid-century color TV palettes
      =========================== */
-  
-  --color-retro-orange: #FF6F00;          /* 60s orange */
-  --color-retro-teal: #00897B;            /* 70s teal */
-  --color-retro-purple: #7B1FA2;          /* Rare accent */
-  --color-retro-pink: #E91E63;            /* Rare highlight */
+
+  --color-retro-orange: #ff6f00; /* 60s orange */
+  --color-retro-teal: #00897b; /* 70s teal */
+  --color-retro-purple: #7b1fa2; /* Rare accent */
+  --color-retro-pink: #e91e63; /* Rare highlight */
 
   /* ===========================
      📺 SURFACE SYSTEM
      Clean, graphic, cel-animation inspired
      =========================== */
-  
+
   --color-surface-paper: var(--tiller-cartoon-off-white);
   --color-surface-white: var(--tiller-cartoon-white);
   --color-surface-cream: var(--tiller-cartoon-cream);
-  --color-surface-blue-tint: #E3F2FD;     /* Light blue wash */
-  --color-surface-yellow-tint: #FFF9C4;   /* Light yellow wash */
-  
+  --color-surface-blue-tint: #e3f2fd; /* Light blue wash */
+  --color-surface-yellow-tint: #fff9c4; /* Light yellow wash */
+
   /* Shadows (animation cel style) */
   --color-shadow-cartoon: rgb(0, 0, 0, 0.25);
   --color-shadow-cartoon-soft: rgb(0, 0, 0, 0.15);
@@ -80,14 +80,14 @@
      ✍️ TEXT & OUTLINES
      Bold, readable, graphic
      =========================== */
-  
+
   --ts-color-text: var(--tiller-cartoon-black);
   --ts-color-muted: var(--tiller-cartoon-gray-dark);
   --font-text-muted: var(--tiller-cartoon-gray);
   --font-text-on-blue: var(--tiller-cartoon-white);
   --font-text-on-red: var(--tiller-cartoon-white);
   --font-text-on-yellow: var(--tiller-cartoon-black);
-  
+
   /* Classic thick outlines */
   --tiller-outline-thick: 4px;
   --tiller-outline-medium: 3px;
@@ -98,63 +98,63 @@
      🎨 SEMANTIC MAPPING
      American cartoon color psychology
      =========================== */
-  
+
   /* Primary Brand (Blue - trustworthy, professional) */
   --ts-color-primary: var(--tiller-cartoon-blue);
   --ts-color-primary-hover: var(--tiller-cartoon-blue-dark);
   --ts-color-primary-light: var(--tiller-cartoon-blue-light);
   --ts-color-primary-surface: var(--tiller-surface-blue-tint);
-  
+
   /* Secondary Brand (Red - action, energy, urgency) */
   --ts-color-secondary: var(--tiller-cartoon-red);
   --ts-color-secondary-hover: var(--tiller-cartoon-red-dark);
   --ts-color-secondary-light: var(--tiller-cartoon-red-light);
-  
+
   /* Accent (Yellow - attention, highlight, value) */
   --ts-color-accent: var(--tiller-cartoon-yellow);
   --ts-color-accent-hover: var(--tiller-cartoon-yellow-dark);
   --ts-color-accent-light: var(--tiller-cartoon-yellow-light);
   --ts-color-accent-surface: var(--tiller-surface-yellow-tint);
-  
+
   /* Success (Green - positive, done, fresh) */
   --ts-color-success: var(--tiller-cartoon-green);
   --ts-color-success-dark: var(--tiller-cartoon-green-dark);
   --ts-color-success-light: var(--tiller-cartoon-green-light);
-  
+
   /* Warning/Alert (Yellow/Orange) */
   --ts-color-warning: var(--tiller-retro-orange);
-  --ts-color-warning-light: #FFE0B2;
-  
+  --ts-color-warning-light: #ffe0b2;
+
   /* Error (Red) */
   --ts-color-error: var(--tiller-cartoon-red);
-  --ts-color-error-light: #FFEBEE;
+  --ts-color-error-light: #ffebee;
 
   /* ===========================
      🎪 CARTOON GRADIENTS
      Simple, bold, graphic
      =========================== */
-  
+
   /* Sky gradient (classic cartoon backdrop) */
   --color-gradient-sky: linear-gradient(
     180deg,
     var(--tiller-cartoon-blue-light) 0%,
     var(--tiller-cartoon-blue) 100%
   );
-  
+
   /* Sunset gradient (dramatic, vintage) */
   --color-gradient-sunset: linear-gradient(
     180deg,
     var(--tiller-cartoon-yellow) 0%,
     var(--tiller-retro-orange) 100%
   );
-  
+
   /* Bold diagonal (graphic punch) */
   --color-gradient-diagonal-blue: linear-gradient(
     135deg,
     var(--tiller-cartoon-blue-light) 0%,
     var(--tiller-cartoon-blue-dark) 100%
   );
-  
+
   /* Bold diagonal red (energy) */
   --color-gradient-diagonal-red: linear-gradient(
     135deg,
@@ -166,13 +166,13 @@
      📐 CLASSIC CARTOON SHAPES
      Clean geometry, bold outlines
      =========================== */
-  
+
   /* Border radius (rounded but not too soft) */
   --tiller-radius-cartoon: 8px;
   --tiller-radius-cartoon-lg: 16px;
   --tiller-radius-cartoon-xl: 24px;
   --ts-radius-pill: 9999px;
-  
+
   /* Speech bubble specific */
   --tiller-radius-bubble: 16px 16px 16px 4px;
 
@@ -180,13 +180,13 @@
      ✨ CARTOON SHADOWS
      Bold, offset, cel-animation style
      =========================== */
-  
+
   /* Classic offset shadow (animation cel style) */
   --color-shadow-cel-sm: 3px 3px 0 var(--tiller-cartoon-black);
   --color-shadow-cel-md: 5px 5px 0 var(--tiller-cartoon-black);
   --color-shadow-cel-lg: 8px 8px 0 var(--tiller-cartoon-black);
   --color-shadow-cel-xl: 12px 12px 0 var(--tiller-cartoon-black);
-  
+
   /* Soft shadow (modern touch) */
   --color-shadow-soft: 0 2px 8px rgb(0, 0, 0, 0.1);
   --color-shadow-medium: 0 4px 16px rgb(0, 0, 0, 0.15);
@@ -196,26 +196,26 @@
      ✍️ TYPOGRAPHY SYSTEM
      Bold, readable, cartoon energy
      =========================== */
-  
+
   /* Fonts */
   --font-display: "Bangers", "Impact", "Arial Black", sans-serif;
   --font-cartoon: "Patrick Hand", "Comic Sans MS", cursive;
   --font-body: "Inter", -apple-system, system-ui, sans-serif;
   --font-mono: "Courier New", monospace;
-  
+
   /* Sizes */
-  --font-size-xs: 0.75rem;     /* 12px */
-  --font-size-sm: 0.875rem;    /* 14px */
-  --font-size-base: 1rem;      /* 16px */
-  --font-size-lg: 1.125rem;    /* 18px */
-  --font-size-xl: 1.25rem;     /* 20px */
-  --font-text-2xl: 1.5rem;     /* 24px */
-  --font-text-3xl: 1.875rem;   /* 30px */
-  --font-text-4xl: 2.25rem;    /* 36px */
-  --font-text-5xl: 3rem;       /* 48px */
-  --font-text-6xl: 3.75rem;    /* 60px */
-  --font-text-7xl: 4.5rem;     /* 72px */
-  
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-text-2xl: 1.5rem; /* 24px */
+  --font-text-3xl: 1.875rem; /* 30px */
+  --font-text-4xl: 2.25rem; /* 36px */
+  --font-text-5xl: 3rem; /* 48px */
+  --font-text-6xl: 3.75rem; /* 60px */
+  --font-text-7xl: 4.5rem; /* 72px */
+
   /* Weights */
   --font-normal: 400;
   --font-medium: 500;
@@ -227,11 +227,11 @@
      🎬 ANIMATION TIMING
      Snappy, bouncy, cartoon physics
      =========================== */
-  
-  --tiller-ease-cartoon: cubic-bezier(0.68, -0.55, 0.265, 1.55);  /* Bounce */
-  --tiller-ease-snap: cubic-bezier(0.4, 0, 0.6, 1);               /* Snappy */
-  --tiller-ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);             /* Smooth */
-  
+
+  --tiller-ease-cartoon: cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Bounce */
+  --tiller-ease-snap: cubic-bezier(0.4, 0, 0.6, 1); /* Snappy */
+  --tiller-ease-smooth: cubic-bezier(0.4, 0, 0.2, 1); /* Smooth */
+
   --tiller-duration-snap: 150ms;
   --tiller-duration-normal: 250ms;
   --tiller-duration-slow: 400ms;
@@ -240,23 +240,23 @@
      📏 SPACING SCALE
      Consistent rhythm
      =========================== */
-  
-  --spacing-space-1: 0.25rem;   /* 4px */
-  --spacing-space-2: 0.5rem;    /* 8px */
-  --spacing-space-3: 0.75rem;   /* 12px */
-  --spacing-space-4: 1rem;      /* 16px */
-  --spacing-space-5: 1.25rem;   /* 20px */
-  --spacing-space-6: 1.5rem;    /* 24px */
-  --spacing-space-8: 2rem;      /* 32px */
-  --spacing-space-10: 2.5rem;   /* 40px */
-  --spacing-space-12: 3rem;     /* 48px */
-  --spacing-space-16: 4rem;     /* 64px */
-  --spacing-space-20: 5rem;     /* 80px */
+
+  --spacing-space-1: 0.25rem; /* 4px */
+  --spacing-space-2: 0.5rem; /* 8px */
+  --spacing-space-3: 0.75rem; /* 12px */
+  --spacing-space-4: 1rem; /* 16px */
+  --spacing-space-5: 1.25rem; /* 20px */
+  --spacing-space-6: 1.5rem; /* 24px */
+  --spacing-space-8: 2rem; /* 32px */
+  --spacing-space-10: 2.5rem; /* 40px */
+  --spacing-space-12: 3rem; /* 48px */
+  --spacing-space-16: 4rem; /* 64px */
+  --spacing-space-20: 5rem; /* 80px */
 
   /* ===========================
      📐 Z-INDEX SCALE
      =========================== */
-  
+
   --z-base: 0;
   --z-dropdown: 1000;
   --z-sticky: 1100;
@@ -266,7 +266,7 @@
   /* ===========================
      📦 CONTAINER WIDTHS
      =========================== */
-  
+
   --tiller-container-sm: 640px;
   --tiller-container-md: 768px;
   --tiller-container-lg: 1024px;
@@ -279,19 +279,37 @@
    =========================== */
 
 /* Gradients */
-.gradient-sky { background: var(--tiller-gradient-sky); }
-.gradient-sunset { background: var(--tiller-gradient-sunset); }
-.gradient-blue { background: var(--tiller-gradient-diagonal-blue); }
-.gradient-red { background: var(--tiller-gradient-diagonal-red); }
+.gradient-sky {
+  background: var(--tiller-gradient-sky);
+}
+.gradient-sunset {
+  background: var(--tiller-gradient-sunset);
+}
+.gradient-blue {
+  background: var(--tiller-gradient-diagonal-blue);
+}
+.gradient-red {
+  background: var(--tiller-gradient-diagonal-red);
+}
 
 /* Shadows */
-.shadow-cel-sm { box-shadow: var(--color-shadow-cel-sm); }
-.shadow-cel-md { box-shadow: var(--color-shadow-cel-md); }
-.shadow-cel-lg { box-shadow: var(--color-shadow-cel-lg); }
-.shadow-cel-xl { box-shadow: var(--color-shadow-cel-xl); }
+.shadow-cel-sm {
+  box-shadow: var(--color-shadow-cel-sm);
+}
+.shadow-cel-md {
+  box-shadow: var(--color-shadow-cel-md);
+}
+.shadow-cel-lg {
+  box-shadow: var(--color-shadow-cel-lg);
+}
+.shadow-cel-xl {
+  box-shadow: var(--color-shadow-cel-xl);
+}
 
 /* Text styles */
-.text-cartoon { font-family: var(--font-display); }
+.text-cartoon {
+  font-family: var(--font-display);
+}
 
 .text-outline {
   text-shadow:
@@ -302,8 +320,12 @@
 }
 
 /* Borders */
-.border-cartoon { border: var(--tiller-outline-medium) solid var(--tiller-outline-color); }
-.border-cartoon-thick { border: var(--tiller-outline-thick) solid var(--tiller-outline-color); }
+.border-cartoon {
+  border: var(--tiller-outline-medium) solid var(--tiller-outline-color);
+}
+.border-cartoon-thick {
+  border: var(--tiller-outline-thick) solid var(--tiller-outline-color);
+}
 
 /* ===========================
    🎭 SPECIAL EFFECTS
@@ -311,8 +333,11 @@
 
 /* Halftone pattern (Ben-Day dots, vintage comic) */
 .halftone-pattern {
-  background-image: 
-    radial-gradient(circle, var(--tiller-cartoon-black) 1.5px, transparent 1.5px);
+  background-image: radial-gradient(
+    circle,
+    var(--tiller-cartoon-black) 1.5px,
+    transparent 1.5px
+  );
   background-size: 8px 8px;
   opacity: 0.1;
 }

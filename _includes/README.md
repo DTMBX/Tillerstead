@@ -1,4 +1,4 @@
-# _includes/ Directory Reference
+# \_includes/ Directory Reference
 
 **Organized for clarity.** All 30 active includes organized into 8 logical categories.
 
@@ -27,15 +27,16 @@ _includes/
 
 **Core HTML structure and layout wrappers.**
 
-| File | Purpose |
-|------|---------|
-| `head.html` | Meta tags, SEO, fonts, stylesheets |
-| `header.html` | Navigation header |
-| `footer.html` | Site footer |
-| `logo-header.html` | Logo in header variant |
-| `logo-sprite-inline.html` | Inline SVG sprite injection |
+| File                      | Purpose                            |
+| ------------------------- | ---------------------------------- |
+| `head.html`               | Meta tags, SEO, fonts, stylesheets |
+| `header.html`             | Navigation header                  |
+| `footer.html`             | Site footer                        |
+| `logo-header.html`        | Logo in header variant             |
+| `logo-sprite-inline.html` | Inline SVG sprite injection        |
 
 **Usage:**
+
 ```liquid
 {% include layout/head.html %}
 {% include layout/header.html %}
@@ -48,13 +49,14 @@ _includes/
 
 **Full-width hero sections with images, overlays, and text.**
 
-| File | Purpose |
-|------|---------|
-| `page-hero.html` | Generic page hero |
-| `unified-hero.html` | Unified design hero |
+| File                     | Purpose                |
+| ------------------------ | ---------------------- |
+| `page-hero.html`         | Generic page hero      |
+| `unified-hero.html`      | Unified design hero    |
 | `unified-hero-home.html` | Home page hero variant |
 
 **Usage:**
+
 ```liquid
 {% include hero/page-hero.html %}
 {% include hero/unified-hero-home.html %}
@@ -66,12 +68,13 @@ _includes/
 
 **JSON-LD schema.org markup for SEO.**
 
-| File | Purpose |
-|------|---------|
-| `schema-faq.html` | FAQ rich results |
+| File                         | Purpose            |
+| ---------------------------- | ------------------ |
+| `schema-faq.html`            | FAQ rich results   |
 | `schema-local-business.html` | LocalBusiness data |
 
 **Usage:**
+
 ```liquid
 {% include schema/schema-local-business.html %}
 {% if page.include_faq_schema %}
@@ -85,17 +88,18 @@ _includes/
 
 **Specialized components for specific features.**
 
-| File | Purpose |
-|------|---------|
-| `faq-section.html` | Reusable FAQ renderer (YAML-driven) |
-| `build-phase-cta.html` | Build Phase guide CTA |
-| `contact-options.html` | Contact method options |
-| `cta-estimate.html` | Estimate request CTA |
+| File                   | Purpose                             |
+| ---------------------- | ----------------------------------- |
+| `faq-section.html`     | Reusable FAQ renderer (YAML-driven) |
+| `build-phase-cta.html` | Build Phase guide CTA               |
+| `contact-options.html` | Contact method options              |
+| `cta-estimate.html`    | Estimate request CTA                |
 
 **Usage:**
+
 ```liquid
-{% include features/faq-section.html 
-  items=site.data.home-faq 
+{% include features/faq-section.html
+  items=site.data.home-faq
   title="FAQs"
   schema=true %}
 {% include features/build-phase-cta.html %}
@@ -107,17 +111,18 @@ _includes/
 
 **Building blocks for layouts and pages.**
 
-| File | Purpose |
-|------|---------|
-| `ts-breadcrumbs.html` | Breadcrumb navigation |
-| `ts-icon.html` | Icon component |
-| `ts-icon-sprite.html` | Icon system |
-| `trust-bar.html` | Trust indicators & badges |
-| `social-links.html` | Social media links |
+| File                    | Purpose                        |
+| ----------------------- | ------------------------------ |
+| `ts-breadcrumbs.html`   | Breadcrumb navigation          |
+| `ts-icon.html`          | Icon component                 |
+| `ts-icon-sprite.html`   | Icon system                    |
+| `trust-bar.html`        | Trust indicators & badges      |
+| `social-links.html`     | Social media links             |
 | `responsive-image.html` | Lazy-loaded, responsive images |
-| `pattern-showcase.html` | Pattern library display |
+| `pattern-showcase.html` | Pattern library display        |
 
 **Usage:**
+
 ```liquid
 {% include components/ts-breadcrumbs.html %}
 {% include components/responsive-image.html src=image alt="..." %}
@@ -130,18 +135,19 @@ _includes/
 
 **Render dynamic content from YAML data files.**
 
-| File | Purpose |
-|------|---------|
-| `ts-services.html` | Services grid |
-| `ts-service-card.html` | Individual service card |
-| `ts-portfolio.html` | Portfolio gallery |
-| `portfolio-highlights.html` | Featured projects |
-| `ts-process.html` | Process timeline |
-| `ts-plans.html` | Pricing plans |
-| `reviews-highlights.html` | Customer testimonials |
-| `blog-highlights.html` | Recent blog posts |
+| File                        | Purpose                 |
+| --------------------------- | ----------------------- |
+| `ts-services.html`          | Services grid           |
+| `ts-service-card.html`      | Individual service card |
+| `ts-portfolio.html`         | Portfolio gallery       |
+| `portfolio-highlights.html` | Featured projects       |
+| `ts-process.html`           | Process timeline        |
+| `ts-plans.html`             | Pricing plans           |
+| `reviews-highlights.html`   | Customer testimonials   |
+| `blog-highlights.html`      | Recent blog posts       |
 
 **Usage:**
+
 ```liquid
 {% include content/ts-services.html %}
 {% include content/reviews-highlights.html limit=3 %}
@@ -154,11 +160,12 @@ _includes/
 
 **Utility includes for scripts, helpers, etc.**
 
-| File | Purpose |
-|------|---------|
+| File           | Purpose                         |
+| -------------- | ------------------------------- |
 | `scripts.html` | Script loading & initialization |
 
 **Usage:**
+
 ```liquid
 {% include utilities/scripts.html %}
 ```
@@ -169,12 +176,13 @@ _includes/
 
 **Form elements and contact forms.**
 
-| File | Purpose |
-|------|---------|
-| `contact.html` | Contact form |
+| File                | Purpose               |
+| ------------------- | --------------------- |
+| `contact.html`      | Contact form          |
 | `contact-long.html` | Extended contact form |
 
 **Usage:**
+
 ```liquid
 {% include forms/contact.html %}
 ```
@@ -185,16 +193,17 @@ _includes/
 
 **Complete page sections (may include multiple includes).**
 
-| File | Purpose |
-|------|---------|
-| `hero.html` | Hero section |
-| `services.html` | Services section |
-| `process.html` | Process section |
-| `portfolio.html` | Portfolio section |
-| `testimonials.html` | Testimonials section |
-| `cta.html` | Call-to-action section |
+| File                | Purpose                |
+| ------------------- | ---------------------- |
+| `hero.html`         | Hero section           |
+| `services.html`     | Services section       |
+| `process.html`      | Process section        |
+| `portfolio.html`    | Portfolio section      |
+| `testimonials.html` | Testimonials section   |
+| `cta.html`          | Call-to-action section |
 
 **Usage:**
+
 ```liquid
 {% include sections/hero.html %}
 {% include sections/services.html %}
@@ -238,19 +247,22 @@ _includes/
 ## 📝 Include Syntax
 
 ### Basic Include
+
 ```liquid
 {% include layout/header.html %}
 ```
 
 ### With Parameters
+
 ```liquid
-{% include components/responsive-image.html 
-  src="/assets/img/image.jpg" 
+{% include components/responsive-image.html
+  src="/assets/img/image.jpg"
   alt="Description"
   class="hero-image" %}
 ```
 
 ### Conditional
+
 ```liquid
 {% if page.show_hero %}
   {% include hero/page-hero.html %}
@@ -258,30 +270,28 @@ _includes/
 ```
 
 ### From Data
+
 ```liquid
 {% include content/ts-services.html services=site.data.services %}
 ```
 
 ---
 
-## 🎯 Include Loading Order (In _layouts/default.html)
+## 🎯 Include Loading Order (In \_layouts/default.html)
 
 ```html
 <head>
   {% include layout/head.html %}
 </head>
 <body>
-  {% include layout/logo-sprite-inline.html %}
-  {% include layout/header.html %}
-  
+  {% include layout/logo-sprite-inline.html %} {% include layout/header.html %}
+
   <main>
     <!-- Page content here -->
   </main>
-  
-  {% include layout/footer.html %}
-  
-  {% include utilities/scripts.html %}
-  {% include schema/schema-local-business.html %}
+
+  {% include layout/footer.html %} {% include utilities/scripts.html %} {%
+  include schema/schema-local-business.html %}
 </body>
 ```
 
@@ -289,18 +299,18 @@ _includes/
 
 ## 📊 Statistics
 
-| Category | Files | Purpose |
-|----------|-------|---------|
-| layout | 5 | Page structure |
-| hero | 3 | Hero sections |
-| schema | 2 | SEO markup |
-| features | 4 | Feature components |
-| components | 7 | UI elements |
-| content | 8 | Content rendering |
-| utilities | 1 | Helpers |
-| forms | 2 | Forms |
-| sections | 6 | Full sections |
-| **TOTAL** | **38** | **All production includes** |
+| Category   | Files  | Purpose                     |
+| ---------- | ------ | --------------------------- |
+| layout     | 5      | Page structure              |
+| hero       | 3      | Hero sections               |
+| schema     | 2      | SEO markup                  |
+| features   | 4      | Feature components          |
+| components | 7      | UI elements                 |
+| content    | 8      | Content rendering           |
+| utilities  | 1      | Helpers                     |
+| forms      | 2      | Forms                       |
+| sections   | 6      | Full sections               |
+| **TOTAL**  | **38** | **All production includes** |
 
 ---
 
@@ -309,12 +319,14 @@ _includes/
 ### When to Create a New Include
 
 ✅ **DO create an include when:**
+
 - The component is reused 2+ times
 - The component is self-contained
 - The component has clear purpose
 - The component can be parameterized
 
 ❌ **DON'T create an include when:**
+
 - It's only used once
 - It's a tiny wrapper
 - It's tightly coupled to one page

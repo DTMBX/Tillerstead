@@ -16,11 +16,16 @@
   padding-inline: clamp(1rem, 4vi, 1.75rem);
 }
 
-/* Container variants for specific content widths */
-.container-narrow   { max-inline-size: 800px; }
-.container-wide     { max-inline-size: 1400px; }
+/* Wide container for better desktop readability */
+.container-wide {
+  max-inline-size: 1280px;
+}
 
-.container-full     {
+/* Container variants for specific content widths */
+.container-narrow {
+  max-inline-size: 800px;
+}
+.container-full {
   inline-size: 100%;
   max-inline-size: 100%;
   padding-inline: clamp(1rem, 4vi, 1.75rem);
@@ -40,7 +45,7 @@
   inline-size: 100%;
   padding-block: var(--spacing-section-pad-y, clamp(2.5rem, 6vi, 5.25rem));
   border-radius: var(--ts-radius-lg); /* 33px rounded corners for sections */
-  
+
   /* Center standalone sections */
   &:only-child,
   &.section--standalone {
@@ -57,20 +62,24 @@
 }
 
 /* Section variants for theme and elevation */
-.section-compact   { padding-block: clamp(2rem, 4vi, 3.5rem); }
+.section-compact {
+  padding-block: clamp(2rem, 4vi, 3.5rem);
+}
 
-.section-primary   {
+.section-primary {
   background: var(--ts-gradient-primary);
   color: var(--ts-white);
 }
-.section-muted     { background: var(--ts-color-surface-muted); }
+.section-muted {
+  background: var(--ts-color-surface-muted);
+}
 
-.section-elevated  {
+.section-elevated {
   background: var(--ts-color-surface-elevated);
   box-shadow: 0 2px 16px rgb(0, 0, 0, 0.06);
 }
 
-.section-gradient  {
+.section-gradient {
   position: relative;
   isolation: isolate;
   background: var(--ts-gradient-surface);
@@ -88,9 +97,15 @@
 }
 
 /* Flow utility: vertical spacing between children */
-.flow > * + * { margin-block-start: var(--spacing-flow-space, var(--ts-spacing-md)); }
-.flow-sm      { --flow-space: var(--ts-spacing-sm); }
-.flow-md      { --flow-space: var(--ts-spacing-md); }
+.flow > * + * {
+  margin-block-start: var(--spacing-flow-space, var(--ts-spacing-md));
+}
+.flow-sm {
+  --flow-space: var(--ts-spacing-sm);
+}
+.flow-md {
+  --flow-space: var(--ts-spacing-md);
+}
 
 /* Stack: vertical flex layout with gap control */
 .stack {
@@ -98,9 +113,15 @@
   flex-direction: column;
   gap: var(--spacing-stack-gap, var(--ts-spacing-md));
 }
-.stack-sm { --stack-gap: var(--ts-spacing-sm); }
-.stack-md { --stack-gap: var(--ts-spacing-md); }
-.stack-lg { --stack-gap: var(--ts-spacing-lg); }
+.stack-sm {
+  --stack-gap: var(--ts-spacing-sm);
+}
+.stack-md {
+  --stack-gap: var(--ts-spacing-md);
+}
+.stack-lg {
+  --stack-gap: var(--ts-spacing-lg);
+}
 
 /* Cluster: horizontal flex layout for distributed items */
 .cluster {
@@ -109,12 +130,24 @@
   gap: var(--spacing-cluster-gap, var(--ts-spacing-sm));
   align-items: center;
 }
-.cluster-md { --cluster-gap: var(--ts-spacing-md); }
-.cluster-lg { --cluster-gap: var(--ts-spacing-lg); }
-.cluster-xl { --cluster-gap: var(--ts-spacing-xl); }
-.cluster-center   { justify-content: center; }
-.cluster-between  { justify-content: space-between; }
-.cluster-end      { justify-content: flex-end; }
+.cluster-md {
+  --cluster-gap: var(--ts-spacing-md);
+}
+.cluster-lg {
+  --cluster-gap: var(--ts-spacing-lg);
+}
+.cluster-xl {
+  --cluster-gap: var(--ts-spacing-xl);
+}
+.cluster-center {
+  justify-content: center;
+}
+.cluster-between {
+  justify-content: space-between;
+}
+.cluster-end {
+  justify-content: flex-end;
+}
 
 /* Switcher: responsive grid for feature/CTA layouts */
 .switcher {
@@ -146,15 +179,18 @@
 .grid-auto {
   display: grid;
   gap: var(--spacing-grid-gap, clamp(1.5rem, 3vi, 2.5rem));
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--spacing-grid-min, 18rem)), 1fr));
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, var(--spacing-grid-min, 18rem)), 1fr)
+  );
 }
 
 /* Adaptive card layout using container queries (TCNA 2024: responsive design) */
 @container main (inline-size > 48rem) {
   .card-adaptive {
-   display: grid;
-   grid-template-columns: auto 1fr;
-   gap: 1.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
   }
 }
 
@@ -166,7 +202,9 @@
   justify-content: center;
   padding-block: var(--spacing-section-padding-y, 4rem);
 }
-.cover-half { min-height: 50vh; }
+.cover-half {
+  min-height: 50vh;
+}
 
 /* Center content both vertically and horizontally */
 .center-content {
@@ -176,34 +214,62 @@
 }
 
 /* Aspect ratio utilities for media compliance */
-.aspect-video    { aspect-ratio: 16 / 9; }
-.aspect-square   { aspect-ratio: 1 / 1; }
-.aspect-wide     { aspect-ratio: 21 / 9; }
-.aspect-portrait { aspect-ratio: 3 / 4; }
+.aspect-video {
+  aspect-ratio: 16 / 9;
+}
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+.aspect-wide {
+  aspect-ratio: 21 / 9;
+}
+.aspect-portrait {
+  aspect-ratio: 3 / 4;
+}
 
 /* Max-width utility classes for content constraint */
-.max-w-xs   { max-width: 20rem !important; }
-.max-w-sm   { max-width: 24rem !important; }
-.max-w-md   { max-width: 28rem !important; }
-.max-w-lg   { max-width: 32rem !important; }
-.max-w-xl   { max-width: 36rem !important; }
-.max-w-2xl  { max-width: 42rem !important; }
-.max-w-3xl  { max-width: 48rem !important; }
-.max-w-4xl  { max-width: 56rem !important; }
-.max-w-5xl  { max-width: 64rem !important; }
-.max-w-full { max-width: 100% !important; }
+.max-w-xs {
+  max-width: 20rem !important;
+}
+.max-w-sm {
+  max-width: 24rem !important;
+}
+.max-w-md {
+  max-width: 28rem !important;
+}
+.max-w-lg {
+  max-width: 32rem !important;
+}
+.max-w-xl {
+  max-width: 36rem !important;
+}
+.max-w-2xl {
+  max-width: 42rem !important;
+}
+.max-w-3xl {
+  max-width: 48rem !important;
+}
+.max-w-4xl {
+  max-width: 56rem !important;
+}
+.max-w-5xl {
+  max-width: 64rem !important;
+}
+.max-w-full {
+  max-width: 100% !important;
+}
 
 /* Modern viewport-relative units for padding and spacing */
 @supports (padding: 1vi) {
   .container,
   .ts-container,
   .shell {
-   padding-inline: clamp(1rem, 4vi, 1.75rem);
+    padding-inline: clamp(1rem, 4vi, 1.75rem);
   }
 
   .section,
   .ts-section {
-   padding-block: clamp(2.5rem, 6vb, 5.25rem);
+    padding-block: clamp(2.5rem, 6vb, 5.25rem);
   }
 }
 
@@ -223,15 +289,15 @@
 /* Subgrid support for advanced grid layouts (where supported) */
 @supports (grid-template-columns: subgrid) {
   .grid-parent {
-   display: grid;
-   grid-template-columns: repeat(12, 1fr);
-   gap: var(--spacing-gutter);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: var(--spacing-gutter);
   }
 
   .grid-child {
-   grid-column: span 12;
-   display: grid;
-   grid-template-columns: subgrid;
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: subgrid;
   }
 }
 
@@ -239,17 +305,51 @@
 @media (max-width: 920px) {
   .stack,
   .cluster {
-   gap: var(--spacing-stack-gap-mobile, var(--ts-spacing-sm));
+    gap: var(--spacing-stack-gap-mobile, var(--ts-spacing-sm));
   }
 
   .hide-mobile {
-   display: none !important;
+    display: none !important;
   }
 }
 
 /* Desktop-only visibility using container queries */
 @container (inline-size > 40rem) {
   .hide-desktop {
-   display: none !important;
+    display: none !important;
+  }
+}
+
+/* ========== DESKTOP FULL-WIDTH OPTIMIZATION ========== */
+/* For screens 1024px and wider, expand containers for better readability */
+/* This applies site-wide without requiring class changes on every element */
+@media (min-width: 1280px) {
+  /* Expand primary containers for better horizontal space utilization */
+  .container:not(.container-narrow):not(.container-full) {
+    max-inline-size: 1280px;
+  }
+
+  /* Also apply to .shell elements for consistency */
+  .shell:not(.container-narrow) {
+    max-inline-size: 1280px;
+  }
+
+  /* Expand text in wider containers for optimal reading */
+  .container:not(.container-narrow) p,
+  .shell:not(.container-narrow) p {
+    max-width: 80ch;
+  }
+
+  /* Expand section-inner containers */
+  .section-inner:not(.container-narrow),
+  .ts-section-inner:not(.container-narrow) {
+    max-inline-size: 1280px;
+  }
+
+  /* Expand article content areas */
+  article p,
+  .page-content p,
+  .post-body p {
+    max-width: 80ch;
   }
 }

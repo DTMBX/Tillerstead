@@ -40,6 +40,7 @@ Tillerstead animations are **intentional, purposeful, and respectful of user tim
 ### 1. **Progress Bars**
 
 **When to Use:**
+
 - Form submissions
 - File uploads
 - Page load states
@@ -83,6 +84,7 @@ Tillerstead animations are **intentional, purposeful, and respectful of user tim
 ```
 
 **Design Notes:**
+
 - Height: 6px (accessible, not too prominent)
 - Radius: 3px (matches button/container aesthetic)
 - Shimmer effect: Use sparingly (distracting if always on)
@@ -91,6 +93,7 @@ Tillerstead animations are **intentional, purposeful, and respectful of user tim
 ### 2. **Entrance Animations**
 
 **When to Use:**
+
 - Page load
 - Modal/dialog open
 - List items appearing
@@ -110,30 +113,36 @@ Tillerstead animations are **intentional, purposeful, and respectful of user tim
 ```
 
 **Timing:**
+
 - `bounce-enter`: 0.6s (elastic curve for playfulness)
 - Delays: 0.1s–0.5s increments (staggered effect)
 
 ### 3. **Micro-Interactions**
 
 #### Wiggle (Attention)
+
 ```html
 <!-- Attention-grabbing on hover -->
 <button class="wiggle">Important Action</button>
 ```
+
 - Use for: Secondary CTAs, alerts, badges
 - Duration: 0.4s–0.5s
 - Effect: Gentle rotation left/right
 
 #### Jump (Delight)
+
 ```html
 <!-- Cute bounce on hover -->
 <a href="#" class="jump-hover">Click me!</a>
 ```
+
 - Use for: Playful elements, secondary navigation
 - Duration: 0.6s
 - Effect: Up bounce then settle
 
 #### Heartbeat Pulse (CTA Emphasis)
+
 ```html
 <!-- Gentle pulse for important actions -->
 <button class="btn btn-primary cta-pulse">Get Started</button>
@@ -141,15 +150,18 @@ Tillerstead animations are **intentional, purposeful, and respectful of user tim
 <!-- Gentler version for less prominent CTAs -->
 <a href="#" class="cta-pulse-gentle">Learn More</a>
 ```
+
 - Use for: Primary calls-to-action
 - Duration: 1.2s–2s (slow and breathing)
 - Effect: Scale up slightly, then down
 
 #### Scale on Tap (Feedback)
+
 ```html
 <!-- Visual feedback for interactive elements -->
 <button class="scale-on-tap">Tap me</button>
 ```
+
 - Use for: All clickable elements
 - Duration: 0.15s (immediate feedback)
 - Effect: Scale to 96% on active
@@ -157,14 +169,17 @@ Tillerstead animations are **intentional, purposeful, and respectful of user tim
 ### 4. **Feedback & Success States**
 
 #### Success Checkmark
+
 ```html
 <div class="success-check"></div>
 ```
+
 - Use for: Form validation, task completion
 - Animation: Bounce entrance + color
 - Effect: Celebratory without noise
 
 #### Loading Spinners
+
 ```html
 <!-- Friendly spinning loader -->
 <div class="spinner-joy"></div>
@@ -176,6 +191,7 @@ Tillerstead animations are **intentional, purposeful, and respectful of user tim
   <span></span>
 </div>
 ```
+
 - Duration: 0.8s (smooth, not frantic)
 - Use for: Background tasks, file processing
 - Note: Spinning never stops, so use for actual async work
@@ -183,21 +199,21 @@ Tillerstead animations are **intentional, purposeful, and respectful of user tim
 ### 5. **Button Animations**
 
 #### Joy Button (Hover Bounce)
+
 ```html
-<button class="btn btn-primary btn-joy">
-  Submit Form
-</button>
+<button class="btn btn-primary btn-joy">Submit Form</button>
 ```
+
 - Effect: Bounces on hover + ripple on click
 - Use for: All CTAs with high intent
 - Ripple: Optional visual feedback
 
 #### Primary Joy with Heartbeat
+
 ```html
-<button class="btn btn-primary cta-primary-joy">
-  Start Project
-</button>
+<button class="btn btn-primary cta-primary-joy">Start Project</button>
 ```
+
 - Effect: Pulses gently until hovered (then stops)
 - Use for: Above-the-fold primary CTAs
 - Benefit: Draws attention without being annoying
@@ -205,9 +221,11 @@ Tillerstead animations are **intentional, purposeful, and respectful of user tim
 ### 6. **Form Animations**
 
 #### Input Focus
+
 ```html
 <input type="text" placeholder="Your email" />
 ```
+
 - Animation: Bounce entrance on focus
 - Duration: 0.3s
 - Effect: Celebrates user interaction
@@ -215,9 +233,11 @@ Tillerstead animations are **intentional, purposeful, and respectful of user tim
 ### 7. **Celebration Effects**
 
 #### Confetti
+
 ```html
 <div class="confetti">Success!</div>
 ```
+
 - Use for: Major milestones (project complete, success)
 - Animation: Particles scatter upward and fade
 - Note: Usually triggered by JavaScript on completion
@@ -280,26 +300,27 @@ Do you respect prefers-reduced-motion?
 
 ### Timing Reference
 
-| Speed | Duration | Use Case |
-|-------|----------|----------|
-| **Instant** | 0.01ms | Disabled (reduced-motion only) |
-| **Flash** | 0.15s | Micro-interactions (button tap) |
-| **Quick** | 0.3s | Entrance, focus, simple feedback |
-| **Base** | 0.6s | Progress fill, standard animations |
-| **Slow** | 0.8–1.2s | Continuous loops (spinner, pulse) |
-| **Extra** | 1.5s+ | Long-duration loops (heartbeat) |
+| Speed       | Duration | Use Case                           |
+| ----------- | -------- | ---------------------------------- |
+| **Instant** | 0.01ms   | Disabled (reduced-motion only)     |
+| **Flash**   | 0.15s    | Micro-interactions (button tap)    |
+| **Quick**   | 0.3s     | Entrance, focus, simple feedback   |
+| **Base**    | 0.6s     | Progress fill, standard animations |
+| **Slow**    | 0.8–1.2s | Continuous loops (spinner, pulse)  |
+| **Extra**   | 1.5s+    | Long-duration loops (heartbeat)    |
 
 ### Easing Curves
 
 ```scss
---easing-in: cubic-bezier(0.4, 0, 1, 1);          /* Accelerate */
---easing-out: cubic-bezier(0, 0, 0.2, 1);        /* Decelerate (natural) */
---easing-in-out: cubic-bezier(0.4, 0, 0.2, 1);   /* Smooth in-out */
+--easing-in: cubic-bezier(0.4, 0, 1, 1); /* Accelerate */
+--easing-out: cubic-bezier(0, 0, 0.2, 1); /* Decelerate (natural) */
+--easing-in-out: cubic-bezier(0.4, 0, 0.2, 1); /* Smooth in-out */
 --easing-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55); /* Playful */
 --easing-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy */
 ```
 
 **Recommendations:**
+
 - `easing-out`: Default for entrances (feels natural)
 - `easing-bounce`: Playful elements (buttons, wobbles)
 - `easing-elastic`: Celebratory moments (success)
@@ -307,10 +328,12 @@ Do you respect prefers-reduced-motion?
 ### GPU-Accelerated Properties
 
 **Safe to animate:**
+
 - `transform: translate()`, `rotate()`, `scale()`
 - `opacity`
 
 **Avoid animating:**
+
 - `width`, `height`
 - `top`, `left`, `margin`, `padding`
 - `box-shadow` (use sparingly with short duration)
@@ -322,16 +345,17 @@ Do you respect prefers-reduced-motion?
 ### Adding to Existing Components
 
 #### Progress Bar in Form
+
 ```html
 <form class="form-with-progress">
   <fieldset>
     <legend>Project Details</legend>
-    
+
     <!-- Progress indicator -->
     <div class="progress-bar" id="formProgress">
       <div class="progress-fill"></div>
     </div>
-    
+
     <!-- Form fields -->
     <input type="text" placeholder="Project name" />
     <!-- ... -->
@@ -339,26 +363,27 @@ Do you respect prefers-reduced-motion?
 </form>
 
 <script>
-  document.addEventListener('input', (e) => {
-    const form = e.target.closest('form');
+  document.addEventListener("input", (e) => {
+    const form = e.target.closest("form");
     if (!form) return;
-    
-    const filled = form.querySelectorAll('input:valid').length;
-    const total = form.querySelectorAll('input').length;
+
+    const filled = form.querySelectorAll("input:valid").length;
+    const total = form.querySelectorAll("input").length;
     const percent = Math.round((filled / total) * 100);
-    
-    form.querySelector('.progress-fill').style.width = percent + '%';
+
+    form.querySelector(".progress-fill").style.width = percent + "%";
   });
 </script>
 ```
 
 #### CTA with Pulse
+
 ```html
 <section class="cta-section">
   <div class="container">
     <h2>Ready to Start Your Project?</h2>
     <p>Let's bring your vision to life with TCNA-compliant tile work.</p>
-    
+
     <!-- Primary CTA with heartbeat -->
     <button class="btn btn-lg btn-primary cta-primary-joy">
       Get Your Free Estimate
@@ -368,11 +393,12 @@ Do you respect prefers-reduced-motion?
 ```
 
 #### Success Feedback
+
 ```html
 <form id="contactForm" class="contact-form">
   <!-- Form fields -->
   <button type="submit">Send Message</button>
-  
+
   <!-- Success message (initially hidden) -->
   <div class="form-success" style="display: none;">
     <div class="success-check"></div>
@@ -381,15 +407,17 @@ Do you respect prefers-reduced-motion?
 </form>
 
 <script>
-  document.getElementById('contactForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    // Submit form...
-    
-    // Show success
-    e.target.style.display = 'none';
-    e.target.nextElementSibling.style.display = 'block';
-  });
+  document
+    .getElementById("contactForm")
+    .addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      // Submit form...
+
+      // Show success
+      e.target.style.display = "none";
+      e.target.nextElementSibling.style.display = "block";
+    });
 </script>
 ```
 
@@ -413,6 +441,7 @@ All animations automatically disable when user has set `prefers-reduced-motion: 
 ```
 
 **Testing:**
+
 - macOS: System Preferences → Accessibility → Display → Reduce motion
 - Windows: Settings → Ease of Access → Display → Show animations
 - Chrome DevTools: Rendering → Emulate CSS media feature prefers-reduced-motion
@@ -420,6 +449,7 @@ All animations automatically disable when user has set `prefers-reduced-motion: 
 ### Color Contrast
 
 All animations maintain WCAG AAA contrast:
+
 - Progress bars: Teal (#078930) on cream is 7:1 ratio
 - Success states: Green (#1dc055) on white is 5.5:1 ratio
 - Spinners: Teal colors meet requirements
@@ -484,11 +514,11 @@ Animations are disabled on small screens (max-width: 640px) to improve performan
 
   <form id="step3">
     <h2 class="bounce-enter">Step 3: Project Details</h2>
-    
+
     <fieldset>
       <!-- Form fields -->
     </fieldset>
-    
+
     <div class="btn-group btn-group-between">
       <button class="btn btn-secondary">← Back</button>
       <button type="submit" class="btn btn-primary btn-joy">Next →</button>
@@ -502,21 +532,25 @@ Animations are disabled on small screens (max-width: 640px) to improve performan
 ```html
 <div class="upload-zone">
   <input type="file" id="fileUpload" hidden />
-  
+
   <!-- Before upload -->
   <div class="upload-prompt" id="uploadPrompt">
     <p>Drag files here or click to select</p>
   </div>
-  
+
   <!-- During upload -->
   <div class="upload-progress" id="uploadProgress" style="display: none;">
     <p id="fileName"></p>
     <div class="progress-bar">
-      <div class="progress-fill shimmer" id="uploadBar" style="width: 0%;"></div>
+      <div
+        class="progress-fill shimmer"
+        id="uploadBar"
+        style="width: 0%;"
+      ></div>
     </div>
     <p id="uploadPercent">0%</p>
   </div>
-  
+
   <!-- After upload -->
   <div class="upload-success" id="uploadSuccess" style="display: none;">
     <div class="success-check"></div>
@@ -525,26 +559,27 @@ Animations are disabled on small screens (max-width: 640px) to improve performan
 </div>
 
 <script>
-  document.getElementById('fileUpload').addEventListener('change', (e) => {
+  document.getElementById("fileUpload").addEventListener("change", (e) => {
     const file = e.target.files[0];
-    document.getElementById('uploadPrompt').style.display = 'none';
-    document.getElementById('uploadProgress').style.display = 'block';
-    document.getElementById('fileName').textContent = file.name;
-    
+    document.getElementById("uploadPrompt").style.display = "none";
+    document.getElementById("uploadProgress").style.display = "block";
+    document.getElementById("fileName").textContent = file.name;
+
     // Simulate upload
     let percent = 0;
     const interval = setInterval(() => {
       percent += Math.random() * 40;
       if (percent > 100) percent = 100;
-      
-      document.getElementById('uploadBar').style.width = percent + '%';
-      document.getElementById('uploadPercent').textContent = Math.round(percent) + '%';
-      
+
+      document.getElementById("uploadBar").style.width = percent + "%";
+      document.getElementById("uploadPercent").textContent =
+        Math.round(percent) + "%";
+
       if (percent === 100) {
         clearInterval(interval);
         setTimeout(() => {
-          document.getElementById('uploadProgress').style.display = 'none';
-          document.getElementById('uploadSuccess').style.display = 'block';
+          document.getElementById("uploadProgress").style.display = "none";
+          document.getElementById("uploadSuccess").style.display = "block";
         }, 300);
       }
     }, 200);
@@ -557,20 +592,20 @@ Animations are disabled on small screens (max-width: 640px) to improve performan
 ```html
 <section class="services-grid">
   <h2>Our Services</h2>
-  
+
   <div class="grid-3col animate-stagger">
     <article class="card service-card bounce-enter bounce-enter-delay-1">
       <h3>Bathroom Remodeling</h3>
       <p>TCNA-compliant installations with waterproofing.</p>
       <a href="#" class="btn btn-secondary jump-hover">Learn More</a>
     </article>
-    
+
     <article class="card service-card bounce-enter bounce-enter-delay-2">
       <h3>Kitchen Tile</h3>
       <p>Custom backsplashes and countertops.</p>
       <a href="#" class="btn btn-secondary jump-hover">Learn More</a>
     </article>
-    
+
     <article class="card service-card bounce-enter bounce-enter-delay-3">
       <h3>Shower Enclosures</h3>
       <p>Waterproof, leak-proof, tested installations.</p>
@@ -595,13 +630,13 @@ Animations reinforce Tillerstead's brand voice:
 
 ### Animation Moments in Customer Journey
 
-| Stage | Animation | Purpose |
-|-------|-----------|---------|
-| **Awareness** | Entrance, pulse CTA | Attract attention (not annoying) |
-| **Consideration** | Progress bar, smooth transitions | Guide through content |
-| **Decision** | Heartbeat pulse on primary CTA | Subtle invitation to act |
-| **Action** | Loading spinner, success check | Confirm action received |
-| **Confirmation** | Bounce entrance on success message | Celebrate together |
+| Stage             | Animation                          | Purpose                          |
+| ----------------- | ---------------------------------- | -------------------------------- |
+| **Awareness**     | Entrance, pulse CTA                | Attract attention (not annoying) |
+| **Consideration** | Progress bar, smooth transitions   | Guide through content            |
+| **Decision**      | Heartbeat pulse on primary CTA     | Subtle invitation to act         |
+| **Action**        | Loading spinner, success check     | Confirm action received          |
+| **Confirmation**  | Bounce entrance on success message | Celebrate together               |
 
 ---
 
@@ -631,6 +666,7 @@ Before adding a new animation, verify:
 ## 📞 Questions?
 
 This animation system was designed to balance delight with purpose. When in doubt:
+
 - Prefer subtlety over flashiness
 - Respect user's time and motion preferences
 - Test on real devices and real networks

@@ -13,7 +13,7 @@
  */
 
 (() => {
-  'use strict';
+  "use strict";
 
   /**
    * Calculates relative luminance of an RGB color.
@@ -23,11 +23,9 @@
    * @returns {number} Relative luminance (0-1)
    */
   function luminance(r, g, b) {
-    const a = [r, g, b].map(v => {
+    const a = [r, g, b].map((v) => {
       v /= 255;
-      return v <= 0.03928
-        ? v / 12.92
-        : Math.pow((v + 0.055) / 1.055, 2.4);
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
     });
     return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2];
   }
@@ -51,18 +49,23 @@
    * @returns {Array|null}
    */
   function parseColor(color) {
-    const ctx = document.createElement('canvas').getContext('2d');
+    const ctx = document.createElement("canvas").getContext("2d");
     ctx.fillStyle = color;
     const computed = ctx.fillStyle;
     // Now ctx.fillStyle is always in rgb(r, g, b) or #rrggbb
-    if (computed.startsWith('#')) {
+    if (computed.startsWith("#")) {
       let hex = computed.slice(1);
-      if (hex.length === 3) hex = hex.split('').map(x => x + x).join('');
+      if (hex.length === 3)
+        hex = hex
+          .split("")
+          .map((x) => x + x)
+          .join("");
       const num = parseInt(hex, 16);
       return [(num >> 16) & 255, (num >> 8) & 255, num & 255];
     }
     const match = computed.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-    if (match) return [parseInt(match[1]), parseInt(match[2]), parseInt(match[3])];
+    if (match)
+      return [parseInt(match[1]), parseInt(match[2]), parseInt(match[3])];
     return null;
   }
 
@@ -79,20 +82,20 @@
     const black = [0, 0, 0];
     const contrastWhite = contrastRatio(rgb, white);
     const _contrastBlack = contrastRatio(rgb, black);
-    el.style.color = contrastWhite >= 4.5 ? '#fff' : '#111';
+    el.style.color = contrastWhite >= 4.5 ? "#fff" : "#111";
   }
 
   /**
    * Applies auto-contrast to all elements with [data-auto-contrast]
    */
   function applyAutoContrast() {
-    document.querySelectorAll('[data-auto-contrast]').forEach(setAutoContrast);
+    document.querySelectorAll("[data-auto-contrast]").forEach(setAutoContrast);
   }
 
   // Expose for use in theme scripts and dynamic content
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     window.autoContrast = applyAutoContrast;
     // Run on DOMContentLoaded for static content
-    document.addEventListener('DOMContentLoaded', applyAutoContrast);
+    document.addEventListener("DOMContentLoaded", applyAutoContrast);
   }
 })();

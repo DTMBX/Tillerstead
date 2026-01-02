@@ -7,6 +7,7 @@ This guide explains how to set up and use **Ollama with Qwen 2.5** for local AI-
 **Ollama** is a tool that lets you run large language models (LLMs) locally on your machine without cloud services. **Qwen 2.5** is Alibaba's high-performance open-source language model.
 
 **Benefits:**
+
 - 🔒 Privacy: Your data stays on your machine
 - ⚡ Speed: No network latency
 - 💰 Free: No API costs
@@ -18,11 +19,13 @@ This guide explains how to set up and use **Ollama with Qwen 2.5** for local AI-
 ### 1. Download & Install Ollama
 
 **macOS/Linux/Windows:**
+
 - Visit https://ollama.ai
 - Download the installer for your OS
 - Follow the installation wizard
 
 **Verify installation:**
+
 ```bash
 ollama --version
 ```
@@ -30,12 +33,14 @@ ollama --version
 ### 2. Start Ollama Service
 
 **macOS:**
+
 ```bash
 # Ollama runs as a background service
 # Check System Preferences > General > Login Items to verify it's set to start on boot
 ```
 
 **Linux:**
+
 ```bash
 # Start the service
 systemctl start ollama
@@ -45,6 +50,7 @@ systemctl enable ollama
 ```
 
 **Windows:**
+
 - Open Ollama from your Start Menu
 - It runs in the system tray
 - Check that it shows a green dot (running)
@@ -63,6 +69,7 @@ ollama pull qwen2.5:14b
 ```
 
 **Download Sizes:**
+
 - `qwen2.5:3b` = 1.7 GB (fast, basic tasks)
 - `qwen2.5:7b` = 3.3 GB (recommended, balanced)
 - `qwen2.5:14b` = 8.4 GB (best quality, slower)
@@ -114,14 +121,14 @@ curl http://localhost:11434/api/generate -d '{
 
 ```javascript
 async function queryQwen(prompt) {
-  const response = await fetch('http://localhost:11434/api/generate', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+  const response = await fetch("http://localhost:11434/api/generate", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      model: 'qwen2.5:7b',
+      model: "qwen2.5:7b",
       prompt: prompt,
-      stream: false
-    })
+      stream: false,
+    }),
   });
 
   const data = await response.json();
@@ -142,6 +149,7 @@ bash scripts/setup-ollama-qwen.sh
 ```
 
 This script:
+
 - ✅ Checks if Ollama is installed
 - ✅ Verifies Ollama is running
 - ✅ Pulls both qwen2.5:7b and qwen2.5:3b
@@ -154,6 +162,7 @@ This script:
 ```
 
 **Options:**
+
 ```powershell
 # Skip downloading models (if already installed)
 .\scripts\setup-ollama-qwen.ps1 -SkipPull
@@ -165,6 +174,7 @@ This script:
 ## Use Cases for Tillerstead
 
 ### 1. Content Generation
+
 ```bash
 ollama run qwen2.5:7b \
   "Write a concise explanation of waterproofing systems for homeowners. \
@@ -172,6 +182,7 @@ ollama run qwen2.5:7b \
 ```
 
 ### 2. FAQ Answers
+
 ```bash
 ollama run qwen2.5:7b \
   "Create an FAQ about tile installation based on TCNA standards. \
@@ -179,6 +190,7 @@ ollama run qwen2.5:7b \
 ```
 
 ### 3. Build Phase Guides
+
 ```bash
 ollama run qwen2.5:7b \
   "Write a New Jersey HIC compliance checklist for bathroom remodels. \
@@ -186,6 +198,7 @@ ollama run qwen2.5:7b \
 ```
 
 ### 4. Service Area Descriptions
+
 ```bash
 ollama run qwen2.5:7b \
   "Write a service area page for Tillerstead describing Atlantic County, NJ. \
@@ -193,6 +206,7 @@ ollama run qwen2.5:7b \
 ```
 
 ### 5. Blog Post Ideas
+
 ```bash
 ollama run qwen2.5:7b \
   "Generate 5 blog post ideas for a TCNA-compliant tile contractor. \
@@ -205,11 +219,11 @@ ollama run qwen2.5:7b \
 
 **Qwen 2.5 System Requirements:**
 
-| Model | VRAM | RAM | Speed |
-|-------|------|-----|-------|
-| 3b | 2 GB | 4 GB | Very Fast |
-| 7b | 4-6 GB | 8 GB | Fast |
-| 14b | 10-12 GB | 16+ GB | Moderate |
+| Model | VRAM     | RAM    | Speed     |
+| ----- | -------- | ------ | --------- |
+| 3b    | 2 GB     | 4 GB   | Very Fast |
+| 7b    | 4-6 GB   | 8 GB   | Fast      |
+| 14b   | 10-12 GB | 16+ GB | Moderate  |
 
 ### Optimization
 
@@ -250,6 +264,7 @@ curl http://localhost:11434/api/generate -d '{
 ### "Connection refused" when running ollama commands
 
 **Solution:** Start Ollama service
+
 ```bash
 # macOS/Linux: Ensure service is running
 systemctl status ollama
@@ -260,6 +275,7 @@ systemctl status ollama
 ### Model runs very slowly
 
 **Solution:** Use smaller model or check system resources
+
 ```bash
 # Use 3B model instead of 7B
 ollama run qwen2.5:3b
@@ -272,6 +288,7 @@ ollama run qwen2.5:3b
 ### Model produces low-quality output
 
 **Solution:** Improve the prompt
+
 ```bash
 # Bad: "Tell me about tile"
 # Good: "Explain ANSI A118.10 waterproofing standards for tile installation"
@@ -283,6 +300,7 @@ ollama run qwen2.5:3b
 ### GPU not being used
 
 **Solution:** Install GPU drivers
+
 - NVIDIA: https://www.nvidia.com/Download/index.aspx
 - AMD: https://www.amd.com/en/support
 - After installation, Ollama will auto-detect
@@ -292,7 +310,7 @@ ollama run qwen2.5:3b
 Create a file `prompts/tillerstead-guide.txt`:
 
 ```
-You are a TCNA-compliant tile installation expert for Tillerstead LLC, 
+You are a TCNA-compliant tile installation expert for Tillerstead LLC,
 a licensed New Jersey HIC contractor. You have deep knowledge of:
 - TCNA 2024 Handbook standards
 - ANSI A108/A118/A136.1 specifications
@@ -309,6 +327,7 @@ When answering, always:
 ```
 
 Then use:
+
 ```bash
 ollama run qwen2.5:7b < prompts/tillerstead-guide.txt
 ```

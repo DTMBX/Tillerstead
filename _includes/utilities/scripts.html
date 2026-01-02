@@ -1,29 +1,52 @@
-{% comment %}
-JavaScript Assets - Core and feature-specific scripts
-Loads all JavaScript modules with cache busting and proper defer/async attributes
-{% endcomment %}
-
-{% assign cache_version = site.cache_version | default: '2025-11-23.1' %}
+{% comment %} JavaScript Assets - Core and feature-specific scripts Loads all
+JavaScript modules with cache busting and proper defer/async attributes {%
+endcomment %} {% assign cache_version = site.cache_version | default:
+'2025-11-23.1' %}
 
 <!-- Core JavaScript -->
-<script src="{{ '/assets/js/main.js' | relative_url }}?v={{ cache_version }}" defer></script>
-<script src="{{ '/assets/js/nav.js' | relative_url }}?v={{ cache_version }}" defer></script>
+<script
+  src="{{ '/assets/js/main.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
+<script
+  src="{{ '/assets/js/nav.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
 
 <!-- Feature-specific scripts -->
-<script src="{{ '/assets/js/header-premium.js' | relative_url }}?v={{ cache_version }}" defer></script>
-<script src="{{ '/assets/js/lazy-loading.js' | relative_url }}?v={{ cache_version }}" defer></script>
-<script src="{{ '/assets/js/scroll-animations.js' | relative_url }}?v={{ cache_version }}" defer></script>
-<script src="{{ '/assets/js/micro-interactions.js' | relative_url }}?v={{ cache_version }}" defer></script>
+<script
+  src="{{ '/assets/js/header-premium.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
+<script
+  src="{{ '/assets/js/lazy-loading.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
+<script
+  src="{{ '/assets/js/scroll-animations.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
+<script
+  src="{{ '/assets/js/micro-interactions.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
 
 <!-- Contact form handler (loads on all pages, only activates on form) -->
-<script src="{{ '/assets/js/contact-form-handler.js' | relative_url }}?v={{ cache_version }}" defer></script>
+<script
+  src="{{ '/assets/js/contact-form-handler.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
 
 <!-- Build Phase Calculators (conditionally loaded) -->
 {% if page.url contains '/pages/build/' %}
-<script src="{{ '/assets/js/build-calculators.js' | relative_url }}?v={{ cache_version }}" defer></script>
-{% endif %}
-
-{% if jekyll.environment == 'development' %}
+<script
+  src="{{ '/assets/js/build-calculators.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
+{% endif %} {% if jekyll.environment == 'development' %}
 <!-- Development overlay for debugging -->
-<script src="{{ '/assets/js/dev-overlay.js' | relative_url }}?v={{ cache_version }}" defer></script>
+<script
+  src="{{ '/assets/js/dev-overlay.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
 {% endif %}

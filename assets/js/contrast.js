@@ -24,29 +24,30 @@
  */
 
 (function () {
-  'use strict';
+  "use strict";
 
   /**
    * Utility: Parse CSS color to RGB array.
    * Supports hex, rgb(a), and named colors.
    */
   function parseColor(color) {
-    const ctx = document.createElement('canvas').getContext('2d');
+    const ctx = document.createElement("canvas").getContext("2d");
     ctx.fillStyle = color;
     const computed = ctx.fillStyle;
     // Now ctx.fillStyle is always in rgb(a) or hex
-    if (computed.startsWith('#')) {
+    if (computed.startsWith("#")) {
       let hex = computed.slice(1);
-      if (hex.length === 3) hex = hex.split('').map(x => x + x).join('');
+      if (hex.length === 3)
+        hex = hex
+          .split("")
+          .map((x) => x + x)
+          .join("");
       const num = parseInt(hex, 16);
-      return [
-        (num >> 16) & 255,
-        (num >> 8) & 255,
-        num & 255
-      ];
+      return [(num >> 16) & 255, (num >> 8) & 255, num & 255];
     }
     const match = computed.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
-    if (match) return [parseInt(match[1]), parseInt(match[2]), parseInt(match[3])];
+    if (match)
+      return [parseInt(match[1]), parseInt(match[2]), parseInt(match[3])];
     // Fallback: white
     return [255, 255, 255];
   }
@@ -55,11 +56,9 @@
    * Utility: Relative luminance (WCAG 2.1)
    */
   function luminance([r, g, b]) {
-    const a = [r, g, b].map(v => {
+    const a = [r, g, b].map((v) => {
       v /= 255;
-      return v <= 0.03928
-        ? v / 12.92
-        : Math.pow((v + 0.055) / 1.055, 2.4);
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
     });
     return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2];
   }
@@ -77,18 +76,22 @@
    * Main: Apply optimal contrast to all .c-contrast elements.
    */
   function applyContrast() {
-    document.querySelectorAll('.c-contrast').forEach(el => {
+    document.querySelectorAll(".c-contrast").forEach((el) => {
       // Get computed background color (walk up if transparent)
       let bg = window.getComputedStyle(el).backgroundColor;
       let parent = el;
-      while ((bg === 'rgba(0, 0, 0, 0)' || bg === 'transparent') && parent.parentElement) {
+      while (
+        (bg === "rgba(0, 0, 0, 0)" || bg === "transparent") &&
+        parent.parentElement
+      ) {
         parent = parent.parentElement;
         bg = window.getComputedStyle(parent).backgroundColor;
       }
       const bgRgb = parseColor(bg);
 
       // Test both black and white text
-      const black = [0, 0, 0], white = [255, 255, 255];
+      const black = [0, 0, 0],
+        white = [255, 255, 255];
       const contrastBlack = contrast(bgRgb, black);
       const contrastWhite = contrast(bgRgb, white);
 
@@ -96,20 +99,23 @@
       let _chosen, chosenStr;
       if (contrastBlack >= 4.5 && contrastBlack >= contrastWhite) {
         _chosen = black;
-        chosenStr = '#000';
+        chosenStr = "#000";
       } else if (contrastWhite >= 4.5) {
         _chosen = white;
-        chosenStr = '#fff';
+        chosenStr = "#fff";
       } else {
         // Fallback: pick higher contrast, even if not compliant
         _chosen = contrastBlack > contrastWhite ? black : white;
-        chosenStr = contrastBlack > contrastWhite ? '#000' : '#fff';
+        chosenStr = contrastBlack > contrastWhite ? "#000" : "#fff";
       }
 
       // Apply as inline style for specificity and legal traceability
       el.style.color = chosenStr;
-      el.setAttribute('data-contrast-applied', 'true');
-      el.setAttribute('aria-label', 'High-contrast text for accessibility compliance');
+      el.setAttribute("data-contrast-applied", "true");
+      el.setAttribute(
+        "aria-label",
+        "High-contrast text for accessibility compliance",
+      );
     });
   }
 
@@ -117,8 +123,10 @@
   window.applyContrast = applyContrast;
 
   // Initial run on DOMContentLoaded
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', applyContrast, { once: true });
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", applyContrast, {
+      once: true,
+    });
   } else {
     applyContrast();
   }

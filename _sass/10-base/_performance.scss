@@ -41,13 +41,13 @@ img {
   .btn,
   .card,
   .ts-card {
-   will-change: transform;
+    will-change: transform;
   }
 
   .btn:hover,
   .card:hover,
   .ts-card:hover {
-   will-change: auto;
+    will-change: auto;
   }
 }
 

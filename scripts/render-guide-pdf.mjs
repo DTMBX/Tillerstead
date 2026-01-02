@@ -17,10 +17,10 @@ await page.goto(url, { waitUntil: "networkidle" });
 await page.waitForTimeout(500);
 
 await page.pdf({
-    path: out,
-    format: "Letter",
-    printBackground: true,
-    margin: { top: "0.5in", right: "0.5in", bottom: "0.5in", left: "0.5in" }
+  path: out,
+  format: "Letter",
+  printBackground: true,
+  margin: { top: "0.5in", right: "0.5in", bottom: "0.5in", left: "0.5in" },
 });
 
 await browser.close();

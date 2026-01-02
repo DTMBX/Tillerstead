@@ -6,57 +6,51 @@
 
 /* 00 - Settings: Design Tokens & Variables */
 /* ⭐ GLOBAL THEME - Edit here to change all colors/spacing */
-@import "00-settings/theme-globals";
+@use "00-settings/entry" as *;
 
 /* Legacy settings (being consolidated into theme-globals) */
-@import "00-settings/tokens-modern";
-@import "00-settings/dark-theme-experiment";
-@import "00-settings/luxury-refinements";
-@import "00-settings/patterns";
-@import "00-settings/micro-interactions";
-@import "00-settings/typography-system";
-@import "00-settings/spacing-system";
 
 /* 10 - Base: Accessibility, Typography, Performance */
-@import "10-base/animations";
-@import "10-base/reset";
-@import "10-base/typography";
-@import "10-base/performance";
-@import "10-base/mobile-first-utilities";
+@use "10-base/animations" as *;
+@use "10-base/reset" as *;
+@use "10-base/typography" as *;
+@use "10-base/performance" as *;
+@use "10-base/mobile-first-utilities" as *;
 
 /* 20 - Layout: Responsive Grid & Container System */
-@import "20-layout/container";
-@import "20-layout/grid";
-@import "20-layout/mobile";
-@import "20-layout/tillerstead-theme";
+@use "20-layout/container" as *;
+@use "20-layout/grid" as *;
+@use "20-layout/mobile" as *;
+@use "20-layout/tillerstead-theme" as *;
 
 /* 30 - Components: TCNA-Standard UI Elements */
-@import "30-components/modern-components";
-@import "30-components/buttons";
-@import "30-components/cards";
-@import "30-components/plans";
-@import "30-components/forms";
-@import "30-components/form-enhancements";
-@import "30-components/logo";
-@import "30-components/header-premium";
-@import "30-components/nav-enhancements";
-@import "30-components/footer";
-@import "30-components/hero";
-@import "30-components/animations";
-@import "30-components/breadcrumbs";
-@import "30-components/social-links";
-@import "30-components/icons";
-@import "30-components/process";
-@import "30-components/process-mobile";
-@import "30-components/nj-statewide";
-@import "30-components/home";
-@import "30-components/deliver";
-@import "30-components/patterns-complimentary";
+@use "30-components/modern-components" as *;
+@use "30-components/buttons" as *;
+@use "30-components/cards" as *;
+@use "30-components/plans" as *;
+@use "30-components/forms" as *;
+@use "30-components/form-enhancements" as *;
+@use "30-components/logo" as *;
+@use "30-components/header-premium" as *;
+@use "30-components/nav-enhancements" as *;
+@use "30-components/footer" as *;
+@use "30-components/hero" as *;
+@use "30-components/animations" as *;
+@use "30-components/breadcrumbs" as *;
+@use "30-components/peace-of-mind" as *;
+@use "30-components/social-links" as *;
+@use "30-components/icons" as *;
+@use "30-components/process" as *;
+@use "30-components/process-mobile" as *;
+@use "30-components/nj-statewide" as *;
+@use "30-components/home" as *;
+@use "30-components/deliver" as *;
+@use "30-components/patterns-complimentary" as *;
 
 /* 40 - Pages: Page-Specific Styles */
-@import "40-pages/portfolio";
-@import "page-financing";
+@use "40-pages/portfolio" as *;
+@use "page-financing" as *;
 
 /* 40 - Utilities: Helpers for Compliance & Accessibility */
-@import "40-utilities/helpers";
-@import "mobile-overrides";
+@use "40-utilities/helpers" as *;
+@use "mobile-overrides" as *;

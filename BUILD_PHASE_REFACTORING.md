@@ -9,12 +9,14 @@ This refactoring integrates the **Build Phase guides** throughout the site and i
 ### 1. **New Include Components** (`_includes/`)
 
 #### `faq-section.html`
+
 A reusable FAQ component that renders structured FAQ sections with optional schema.org markup for SEO.
 
 **Usage:**
+
 ```liquid
-{% include features/faq-section.html 
-  title="Your FAQ Title" 
+{% include features/faq-section.html
+  title="Your FAQ Title"
   eyebrow="Optional eyebrow text"
   description="Optional description"
   schema=true
@@ -24,6 +26,7 @@ A reusable FAQ component that renders structured FAQ sections with optional sche
 ```
 
 **Features:**
+
 - Renders FAQs from YAML data files
 - Automatic schema.org FAQPage markup for rich results
 - Customizable title, description, background color
@@ -35,10 +38,13 @@ A reusable FAQ component that renders structured FAQ sections with optional sche
 Navigation component for Build Phase chapter pages with prev/next links and hub access.
 
 **Usage:**
+
 ```liquid
+
 ```
 
 **Features:**
+
 - Automatically detects current chapter
 - Displays previous/next chapter links
 - Link back to Build Phase hub
@@ -49,14 +55,17 @@ Navigation component for Build Phase chapter pages with prev/next links and hub 
 ---
 
 #### `build-phase-cta.html`
+
 Call-to-action section promoting the Build Phase guides on other pages.
 
 **Usage:**
+
 ```liquid
 {% include features/build-phase-cta.html %}
 ```
 
 **Features:**
+
 - Two-column layout (text + chapter list)
 - Numbered chapter preview
 - Primary button CTA
@@ -68,7 +77,9 @@ Call-to-action section promoting the Build Phase guides on other pages.
 ### 2. **New Data Files** (`_data/`)
 
 #### `build-faq.yml`
+
 10 frequently asked questions about the Build Phase, covering:
+
 - What the Build Phase is
 - Who should read it
 - Standards referenced
@@ -77,6 +88,7 @@ Call-to-action section promoting the Build Phase guides on other pages.
 - Update frequency
 
 **Structure:**
+
 ```yaml
 - question: "Your question?"
   answer: "Your answer text. Supports plain text and Markdown."
@@ -87,7 +99,9 @@ Call-to-action section promoting the Build Phase guides on other pages.
 ---
 
 #### `home-faq.yml`
+
 6 FAQs for the home page, covering:
+
 - Waterproofing systems
 - Flood testing
 - Service areas
@@ -106,9 +120,10 @@ Call-to-action section promoting the Build Phase guides on other pages.
 Once the Jekyll build is fixed, add these includes to:
 
 1. **Home Page** (`index.html`)
+
    ```liquid
-   {% include features/faq-section.html 
-     title="Built to TCNA Standards, Licensed in NJ" 
+   {% include features/faq-section.html
+     title="Built to TCNA Standards, Licensed in NJ"
      eyebrow="Standards & Compliance"
      description="We follow the Tile Council of North America (TCNA) Handbook..."
      schema=true
@@ -118,24 +133,29 @@ Once the Jekyll build is fixed, add these includes to:
    ```
 
 2. **Services Page** (`pages/services.html`)
+
    ```liquid
    {% include features/build-phase-cta.html %}
    ```
 
 3. **Portfolio Page** (`pages/portfolio.html`)
+
    ```liquid
    {% include features/build-phase-cta.html %}
    ```
 
 4. **Build Phase Chapters** (`pages/build/*.md`)
+
    ```liquid
+
    ```
-   *(Add at the end of each chapter file before final footer)*
+
+   _(Add at the end of each chapter file before final footer)_
 
 5. **Build Phase Hub** (`pages/build/index.md`)
    ```liquid
-   {% include features/faq-section.html 
-     title="Build Phase FAQs" 
+   {% include features/faq-section.html
+     title="Build Phase FAQs"
      eyebrow="Common Questions"
      description="Answers to the questions we hear most often..."
      schema=true
@@ -148,6 +168,7 @@ Once the Jekyll build is fixed, add these includes to:
 ## Technical Details
 
 ### File Structure
+
 ```
 _includes/
   ├── faq-section.html          (1.9 KB)
@@ -159,7 +180,9 @@ _data/
 ```
 
 ### CSS Variables Used
+
 All components use design tokens from `_sass/base/_tokens.scss`:
+
 - `--spacing-*` (lg, md, sm)
 - `--color-primary`, `--color-secondary`
 - `--text-primary`, `--text-secondary`
@@ -167,6 +190,7 @@ All components use design tokens from `_sass/base/_tokens.scss`:
 - `--radius-md`, `--radius-sm`
 
 ### Accessibility Features
+
 - Semantic HTML5 (`<section>`, `<details>`, `<nav>`)
 - ARIA labels and roles
 - Color contrast ≥ 4.5:1
@@ -174,6 +198,7 @@ All components use design tokens from `_sass/base/_tokens.scss`:
 - Schema.org markup for search engines
 
 ### Browser Support
+
 - Modern browsers (Chrome, Firefox, Safari, Edge)
 - Responsive design (mobile-first, 320px+)
 - Progressive enhancement (works without JavaScript)
@@ -183,6 +208,7 @@ All components use design tokens from `_sass/base/_tokens.scss`:
 ## SEO Benefits
 
 ### Schema.org Structured Data
+
 Both FAQ components automatically generate `FAQPage` schema when `schema=true`:
 
 ```json
@@ -200,6 +226,7 @@ Both FAQ components automatically generate `FAQPage` schema when `schema=true`:
 ```
 
 **Benefits:**
+
 - Google Rich Results eligibility
 - Increased CTR (FAQ rich results show in search)
 - Better SEO for long-tail questions
@@ -224,6 +251,7 @@ Once the Jekyll build error is resolved:
 **Current Issue:** Jekyll build fails with YAML parsing error (pre-existing).
 
 **To Debug:**
+
 ```bash
 bundle clean --force
 bundle install
@@ -236,12 +264,12 @@ The new components are ready to use once the build system is fixed.
 
 ## File Inventory
 
-| File | Type | Size | Purpose |
-|------|------|------|---------|
-| `_includes/faq-section.html` | Include | 1.9 KB | Reusable FAQ renderer with schema |
-| `_includes/build-phase-cta.html` | Include | 3.5 KB | Build Phase promotion CTA |
-| `_data/build-faq.yml` | Data | 3.1 KB | 10 Q&A pairs about Build Phase |
-| `_data/home-faq.yml` | Data | 1.3 KB | 6 Q&A pairs for home page |
+| File                             | Type    | Size   | Purpose                           |
+| -------------------------------- | ------- | ------ | --------------------------------- |
+| `_includes/faq-section.html`     | Include | 1.9 KB | Reusable FAQ renderer with schema |
+| `_includes/build-phase-cta.html` | Include | 3.5 KB | Build Phase promotion CTA         |
+| `_data/build-faq.yml`            | Data    | 3.1 KB | 10 Q&A pairs about Build Phase    |
+| `_data/home-faq.yml`             | Data    | 1.3 KB | 6 Q&A pairs for home page         |
 
 **Total:** 13.2 KB of new code, zero breaking changes to existing files.
 
@@ -250,19 +278,23 @@ The new components are ready to use once the build system is fixed.
 ## Customization Guide
 
 ### Changing FAQ Content
+
 Edit the YAML files:
+
 ```yaml
 - question: "New question?"
   answer: "New answer text."
 ```
 
 YAML rules:
+
 - Questions and answers must be quoted if they contain `:` or `"`
-- Escape internal quotes: `\"` 
+- Escape internal quotes: `\"`
 - Use `>` for multi-line answers (will fold into single paragraph)
 - Use `|` for multi-line answers (preserves line breaks)
 
 ### Styling Customization
+
 All styles use CSS variables. To customize:
 
 1. **Colors:** Update `--color-primary` in `_sass/base/_tokens.scss`
@@ -272,9 +304,11 @@ All styles use CSS variables. To customize:
 No hardcoded colors or dimensions—pure variable-driven design.
 
 ### Adding New FAQ Sections
+
 Create a new YAML file in `_data/`, then include it:
+
 ```liquid
-{% include features/faq-section.html 
+{% include features/faq-section.html
   items=site.data.your-new-faq
   title="Your Title"
   schema=true
@@ -295,5 +329,3 @@ Create a new YAML file in `_data/`, then include it:
 
 **Created:** 2026-01-01  
 **Last Updated:** 2026-01-01
-
-

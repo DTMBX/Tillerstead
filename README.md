@@ -104,7 +104,7 @@ Tillerstead LLC is a New Jersey-licensed home improvement contractor (New Jersey
 
 - **Metadata:** Defaults in `_config.yml`—keep titles, descriptions, and keywords specific to South Jersey property services.
 - **Semantic HTML:** Required in all layouts/includes for accessibility (see STYLE.md).
-- **Alt text:** All images require descriptive, context-specific alt text (see _data/compliance.yml).
+- **Alt text:** All images require descriptive, context-specific alt text (see \_data/compliance.yml).
 - **WebP:** Use WebP for optimal performance.
 
 ---
@@ -152,13 +152,13 @@ MIT License. See [`LICENSE`](LICENSE) for details.
 
 ---
 
-**References:**  
-- [TCNA Handbook 2024](https://www.tcnatile.com/handbook/)  
-- [New Jersey Consumer Fraud Act](https://www.njconsumeraffairs.gov/Statutes/consumerfraudact.pdf)  
+**References:**
+
+- [TCNA Handbook 2024](https://www.tcnatile.com/handbook/)
+- [New Jersey Consumer Fraud Act](https://www.njconsumeraffairs.gov/Statutes/consumerfraudact.pdf)
 - [Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/)
 
 ---
 
 > **For all technical, legal, and compliance questions, consult the `.ai/` directory and `_data/compliance.yml`.**  
 > **All site changes are subject to automated linting, accessibility, and regulatory review.**
-

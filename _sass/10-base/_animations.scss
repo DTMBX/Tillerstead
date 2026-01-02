@@ -1,9 +1,15 @@
 /* ============================================
    ✨ TILLERSTEAD ANIMATIONS & TRANSITIONS
    Modern, Smooth, Purposeful Motion Design
+   
+   Performance Optimizations:
+   - GPU acceleration via transform & opacity
+   - Reduced motion support (accessibility)
+   - Optimized easing curves for smoothness
+   - Efficient stagger patterns
    ============================================ */
 
-@import '../00-settings/tokens-modern';
+@use "../00-settings/tokens-modern" as *;
 
 /* ========================================
    🎯 KEYFRAME ANIMATIONS
@@ -77,7 +83,8 @@
 }
 
 @keyframes scalePulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -115,7 +122,8 @@
 
 /* Float - Subtle floating motion */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   50% {
@@ -125,7 +133,8 @@
 
 /* Glow - Emphasis effect */
 @keyframes glow {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 0 0 0 rgba(7, 137, 48, 0.4);
   }
   50% {
@@ -135,7 +144,8 @@
 
 /* Pulse - Attention grabber */
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -155,7 +165,8 @@
 
 /* Wave - Tilework effect */
 @keyframes wave {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0px);
   }
   25% {
@@ -219,12 +230,30 @@
   opacity: 0;
 }
 
-.animate-stagger > *:nth-child(1) { animation-delay: 0ms; opacity: 1; }
-.animate-stagger > *:nth-child(2) { animation-delay: 75ms; opacity: 1; }
-.animate-stagger > *:nth-child(3) { animation-delay: 150ms; opacity: 1; }
-.animate-stagger > *:nth-child(4) { animation-delay: 225ms; opacity: 1; }
-.animate-stagger > *:nth-child(5) { animation-delay: 300ms; opacity: 1; }
-.animate-stagger > *:nth-child(n+6) { animation-delay: 375ms; opacity: 1; }
+.animate-stagger > *:nth-child(1) {
+  animation-delay: 0ms;
+  opacity: 1;
+}
+.animate-stagger > *:nth-child(2) {
+  animation-delay: 75ms;
+  opacity: 1;
+}
+.animate-stagger > *:nth-child(3) {
+  animation-delay: 150ms;
+  opacity: 1;
+}
+.animate-stagger > *:nth-child(4) {
+  animation-delay: 225ms;
+  opacity: 1;
+}
+.animate-stagger > *:nth-child(5) {
+  animation-delay: 300ms;
+  opacity: 1;
+}
+.animate-stagger > *:nth-child(n + 6) {
+  animation-delay: 375ms;
+  opacity: 1;
+}
 
 /* ========================================
    🎯 INTERACTIVE TRANSITIONS
@@ -232,12 +261,16 @@
 
 /* Standard button/link transition */
 .transition-hover {
-  transition: var(--transition-fast);
-  
+  transition:
+    color var(--duration-base) var(--easing-in-out),
+    background-color var(--duration-base) var(--easing-in-out),
+    transform var(--duration-fast) var(--easing-out),
+    box-shadow var(--duration-fast) var(--easing-out);
+
   &:hover {
     color: var(--color-primary);
   }
-  
+
   &:active {
     transform: scale(0.98);
   }
@@ -245,9 +278,10 @@
 
 /* Smooth color transition */
 .transition-color {
-  transition: color var(--duration-base) var(--easing-in-out),
-              background-color var(--duration-base) var(--easing-in-out),
-              border-color var(--duration-base) var(--easing-in-out);
+  transition:
+    color var(--duration-base) var(--easing-in-out),
+    background-color var(--duration-base) var(--easing-in-out),
+    border-color var(--duration-base) var(--easing-in-out);
 }
 
 /* Smooth transform transition */
@@ -262,9 +296,10 @@
 
 /* Combined transition for elevation effects */
 .transition-elevation {
-  transition: box-shadow var(--duration-fast) var(--easing-out),
-              transform var(--duration-fast) var(--easing-out);
-  
+  transition:
+    box-shadow var(--duration-fast) var(--easing-out),
+    transform var(--duration-fast) var(--easing-out);
+
   &:hover {
     box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
@@ -275,19 +310,25 @@
    🔘 BUTTON & LINK ANIMATIONS
    ======================================== */
 
-button, a, [role="button"] {
+button,
+a,
+[role="button"] {
   &:not([class*="btn--disabled"]):not([aria-disabled="true"]) {
-    transition: var(--transition-fast);
+    transition:
+      transform var(--duration-fast) var(--easing-out),
+      box-shadow var(--duration-fast) var(--easing-out),
+      background-color var(--duration-base) var(--easing-in-out),
+      color var(--duration-base) var(--easing-in-out);
     position: relative;
-    
+
     &:hover {
       transform: translateY(-1px);
     }
-    
+
     &:active {
       transform: translateY(0);
     }
-    
+
     /* Focus visible ring animation */
     &:focus-visible {
       outline: 2px solid var(--color-primary);
@@ -302,7 +343,7 @@ button, a, [role="button"] {
   &:hover {
     box-shadow: 0 0 0 4px rgba(7, 137, 48, 0.1);
   }
-  
+
   &:active {
     box-shadow: 0 0 0 2px rgba(7, 137, 48, 0.05);
   }
@@ -320,9 +361,12 @@ button, a, [role="button"] {
    ======================================== */
 
 /* Card hover lift effect */
-.card, [class*="card--"] {
-  transition: var(--transition-base);
-  
+.card,
+[class*="card--"] {
+  transition:
+    transform var(--duration-base) var(--easing-in-out),
+    box-shadow var(--duration-base) var(--easing-in-out);
+
   &:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lg);
@@ -340,9 +384,14 @@ a:hover img,
 }
 
 /* Smooth input focus states */
-input, textarea, select {
-  transition: var(--transition-base);
-  
+input,
+textarea,
+select {
+  transition:
+    border-color var(--duration-base) var(--easing-in-out),
+    box-shadow var(--duration-base) var(--easing-in-out),
+    background-color var(--duration-base) var(--easing-in-out);
+
   &:focus {
     border-color: var(--color-primary);
     box-shadow: var(--shadow-teal-sm);
@@ -359,7 +408,7 @@ input, textarea, select {
     opacity: 0;
     animation: slideInUp var(--duration-base) var(--easing-out) forwards;
   }
-  
+
   @for $i from 1 through 10 {
     li:nth-child(#{$i}) {
       animation-delay: #{($i - 1) * 50ms};
@@ -373,7 +422,7 @@ input, textarea, select {
     opacity: 0;
     animation: scaleIn var(--duration-base) var(--easing-out) forwards;
   }
-  
+
   @for $i from 1 through 12 {
     > *:nth-child(#{$i}) {
       animation-delay: #{($i - 1) * 30ms};
@@ -386,14 +435,15 @@ input, textarea, select {
    ======================================== */
 
 /* Fade page sections in */
-main, [role="main"] {
+main,
+[role="main"] {
   animation: fadeIn var(--duration-slow) var(--easing-out);
 }
 
 /* Section entrance with slide */
 section {
   opacity: 0;
-  
+
   &:in-viewport {
     animation: slideInUp var(--duration-base) var(--easing-out) forwards;
   }
@@ -403,13 +453,42 @@ section {
    ⚡ PERFORMANCE OPTIMIZATION
    ======================================== */
 
-/* Use transform & opacity for performance */
+/* GPU acceleration: Use transform & opacity only */
+.gpu-accelerate {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimized hover states - avoid expensive properties */
+.perf-optimized {
+  transition:
+    transform var(--duration-fast) var(--easing-out),
+    opacity var(--duration-base) var(--easing-in-out);
+
+  &:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+  }
+}
+
+/* Will-change for animation optimization (use sparingly) */
+.will-animate {
+  will-change: transform, opacity;
+}
+
+/* Remove will-change after animation completes */
+.animate-complete {
+  will-change: auto;
+}
+
+/* Reduce motion respect with faster timings for users who can handle motion */
 @media (prefers-reduced-motion: no-preference) {
-  /* These are GPU-accelerated and smooth */
-  .gpu-accelerate {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
+  /* Smooth animations enabled for users who can handle them */
+  .animate-fade-in,
+  .animate-slide-in-up,
+  .animate-scale-in {
+    will-change: opacity, transform;
   }
 }
 
@@ -420,5 +499,6 @@ section {
   *::after {
     animation: none !important;
     transition: none !important;
+    will-change: auto !important;
   }
 }

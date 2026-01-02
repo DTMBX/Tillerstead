@@ -5,10 +5,10 @@
 
 /* ========== Breakpoint Variables ========== */
 :root {
-  --breakpoint-sm: 640px;   /* Small tablets */
-  --breakpoint-md: 768px;   /* Tablets */
-  --breakpoint-lg: 1024px;  /* Small desktops */
-  --breakpoint-xl: 1280px;  /* Large desktops */
+  --breakpoint-sm: 640px; /* Small tablets */
+  --breakpoint-md: 768px; /* Tablets */
+  --breakpoint-lg: 1024px; /* Small desktops */
+  --breakpoint-xl: 1280px; /* Large desktops */
   --breakpoint-2xl: 1536px; /* Extra large */
 }
 
@@ -69,69 +69,82 @@ body {
 /* ========== Mobile-First Typography ========== */
 
 /* Mobile base */
-h1, .heading-1 {
+h1,
+.heading-1 {
   font-size: 1.75rem;
   line-height: 1.2;
   margin-block-end: 1rem;
 }
 
-h2, .heading-2 {
+h2,
+.heading-2 {
   font-size: 1.5rem;
   line-height: 1.25;
   margin-block-end: 0.875rem;
 }
 
-h3, .heading-3 {
+h3,
+.heading-3 {
   font-size: 1.25rem;
   line-height: 1.3;
   margin-block-end: 0.75rem;
 }
 
-h4, .heading-4 {
+h4,
+.heading-4 {
   font-size: 1.125rem;
   line-height: 1.4;
 }
 
-h5, .heading-5 {
+h5,
+.heading-5 {
   font-size: 1rem;
   line-height: 1.4;
 }
 
-h6, .heading-6 {
+h6,
+.heading-6 {
   font-size: 0.875rem;
   line-height: 1.4;
 }
 
 /* Scale up typography for tablets */
 @media (min-width: 768px) {
-  h1, .heading-1 {
+  h1,
+  .heading-1 {
     font-size: 2.25rem;
   }
 
-  h2, .heading-2 {
+  h2,
+  .heading-2 {
     font-size: 1.875rem;
   }
 
-  h3, .heading-3 {
+  h3,
+  .heading-3 {
     font-size: 1.5rem;
   }
 
-  h4, .heading-4 {
+  h4,
+  .heading-4 {
     font-size: 1.25rem;
   }
 }
 
 /* Scale up typography for desktops */
 @media (min-width: 1024px) {
-  h1, .heading-1 {
+  h1,
+  .heading-1 {
     font-size: 2.5rem;
   }
 
-  h2, .heading-2 {
+  h2,
+  .heading-2 {
     font-size: 2rem;
   }
 
-  h3, .heading-3 {
+  h3,
+  .heading-3 {
     font-size: 1.75rem;
   }
 }

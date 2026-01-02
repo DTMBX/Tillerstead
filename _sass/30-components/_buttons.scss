@@ -22,10 +22,10 @@
   text-decoration: none;
   position: relative;
   white-space: nowrap;
-  transition: 
-    background var(--tiller-duration-base) var(--tiller-ease-standard), 
-    color var(--tiller-duration-base) var(--tiller-ease-standard), 
-    border-color var(--tiller-duration-base) var(--tiller-ease-standard), 
+  transition:
+    background var(--tiller-duration-base) var(--tiller-ease-standard),
+    color var(--tiller-duration-base) var(--tiller-ease-standard),
+    border-color var(--tiller-duration-base) var(--tiller-ease-standard),
     transform var(--tiller-duration-quick) var(--tiller-ease-decelerate),
     box-shadow var(--tiller-duration-base) var(--tiller-ease-standard);
   min-inline-size: 2.5em;
@@ -35,7 +35,7 @@
   transform: translateZ(0);
   backface-visibility: hidden;
   will-change: transform, box-shadow;
-  
+
   /* Touch target minimum 44x44px */
   @media (hover: none) and (pointer: coarse) {
     min-width: 44px;
@@ -112,7 +112,7 @@
 .btn-secondary::before,
 .btn--secondary::before,
 .btn--color-secondary::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: var(--ts-color-primary-soft);
@@ -195,7 +195,7 @@
 .btn--tiller-ghost::before,
 .btn-outline::before,
 .btn.ghost::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: var(--ts-color-primary-soft);
@@ -301,12 +301,15 @@
 
 /* Pulse animation for primary CTAs */
 @keyframes btn-pulse {
-  0%, 100% {
+  0%,
+  100% {
     box-shadow: 0 10px 24px var(--color-shadow-soft);
   }
 
   50% {
-    box-shadow: 0 10px 24px var(--color-shadow-soft), 0 0 0 4px rgb(13, 154, 170, 0.15);
+    box-shadow:
+      0 10px 24px var(--color-shadow-soft),
+      0 0 0 4px rgb(13, 154, 170, 0.15);
   }
 }
 
@@ -327,7 +330,7 @@
 }
 
 .btn-shimmer::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -364,7 +367,8 @@
 }
 
 @keyframes icon-bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
 
@@ -381,7 +385,7 @@
 }
 
 .btn-loading::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 16px;
   height: 16px;
@@ -428,24 +432,24 @@
 @container (inline-size < 30rem) {
   .btn:not(.btn-icon-only),
   .button:not(.btn-icon-only) {
-   inline-size: 100%;
+    inline-size: 100%;
   }
 
   .btn-group,
   .btn-row {
-   flex-direction: column;
-   inline-size: 100%;
+    flex-direction: column;
+    inline-size: 100%;
   }
 
   .btn-group > .btn,
   .btn-group > .button,
   .btn-row > .btn,
   .btn-row > .button {
-   width: 100%;
+    width: 100%;
   }
 
   .btn-grid {
-   grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -453,32 +457,32 @@
 @media (max-width: 640px) {
   .btn-group:not(.btn-group--inline),
   .btn-row:not(.btn-row--inline) {
-   flex-direction: column;
-   width: 100%;
+    flex-direction: column;
+    width: 100%;
   }
 
   .btn-group:not(.btn-group--inline) > .btn,
   .btn-group:not(.btn-group--inline) > .button,
   .btn-row:not(.btn-row--inline) > .btn,
   .btn-row:not(.btn-row--inline) > .button {
-   width: 100%;
+    width: 100%;
   }
 
   .btn-grid {
-   grid-template-columns: 1fr;
-   gap: 0.875rem;
+    grid-template-columns: 1fr;
+    gap: 0.875rem;
   }
 }
 
 /* Tablet: 2-column grid */
 @media (min-width: 641px) and (max-width: 920px) {
   .btn-grid {
-   grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .btn-grid > .btn:last-child:nth-child(odd),
   .btn-grid > .button:last-child:nth-child(odd) {
-   grid-column: 1 / -1;
+    grid-column: 1 / -1;
   }
 }
 
@@ -581,16 +585,16 @@
 @media (prefers-reduced-motion: reduce) {
   .btn,
   .button {
-   transition: none !important;
-   will-change: auto;
+    transition: none !important;
+    will-change: auto;
   }
 
   .btn:hover,
   .button:hover,
   .btn:focus-visible,
   .button:focus-visible {
-   transform: none !important;
-   box-shadow: none !important;
+    transform: none !important;
+    box-shadow: none !important;
   }
 }
 

@@ -14,7 +14,10 @@
 .ts-plans__grid {
   display: grid;
   gap: var(--ts-spacing-lg);
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); // Responsive, no media query
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(100%, 18rem), 1fr)
+  ); // Responsive, no media query
 }
 
 .ts-plan-card {
@@ -27,7 +30,9 @@
   gap: var(--ts-spacing-md);
   box-shadow: var(--ts-shadow-soft);
   min-width: 0;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
   outline: none;
 
   &:focus-within,

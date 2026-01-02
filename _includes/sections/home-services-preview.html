@@ -1,14 +1,16 @@
-{%- comment -%}
-Homepage Services Preview Include
-Displays 4 service cards highlighting key offerings
-Usage: {% include sections/home-services-preview.html %}
-{%- endcomment -%}
+{%- comment -%} Homepage Services Preview Include Displays 4 service cards
+highlighting key offerings Usage: {% include sections/home-services-preview.html
+%} {%- endcomment -%} {%- assign eyebrow = include.eyebrow | default:
+"Professional Excellence" -%} {%- assign title = include.title | default: "How
+We Build: The Tillerstead Approach" -%} {%- assign summary = include.summary |
+default: "We don't just install tile—we follow a Build Phase methodology that
+mirrors how properly permitted bathroom projects unfold. Codes & Permits.
+Substrate Prep. Waterproofing. Installation. Verification. Documentation." -%}
 
-{%- assign eyebrow = include.eyebrow | default: "Professional Excellence" -%}
-{%- assign title = include.title | default: "How We Build: The Tillerstead Approach" -%}
-{%- assign summary = include.summary | default: "We don't just install tile—we follow a Build Phase methodology that mirrors how properly permitted bathroom projects unfold. Codes & Permits. Substrate Prep. Waterproofing. Installation. Verification. Documentation." -%}
-
-<section class="ts-section ts-services-preview" aria-labelledby="services-preview-title">
+<section
+  class="ts-section ts-services-preview"
+  aria-labelledby="services-preview-title"
+>
   <div class="container">
     <header class="section-header text-center">
       <span class="eyebrow">{{ eyebrow }}</span>
@@ -20,9 +22,15 @@ Usage: {% include sections/home-services-preview.html %}
       <article class="card card--service">
         <h3 class="heading-4">Build Phase Guides</h3>
         <p>
-          Understand the complete construction process through 8 educational guides—from permits to flood testing. Each guide explains what's happening, why it matters, and what you should expect.
+          Understand the complete construction process through 8 educational
+          guides—from permits to flood testing. Each guide explains what's
+          happening, why it matters, and what you should expect.
         </p>
-        <a href="{{ '/pages/build/' | relative_url }}" class="btn btn--ghost" aria-label="Read Build Phase guides">
+        <a
+          href="{{ '/pages/build/' | relative_url }}"
+          class="btn btn--ghost"
+          aria-label="Read Build Phase guides"
+        >
           Explore Guides
         </a>
       </article>
@@ -30,9 +38,15 @@ Usage: {% include sections/home-services-preview.html %}
       <article class="card card--service">
         <h3 class="heading-4">Tile Installation</h3>
         <p>
-          Large-format tile, mosaics, and heated floor systems installed with method-driven prep: substrate flatness, appropriate mortar selection, and complete waterproofing assemblies.
+          Large-format tile, mosaics, and heated floor systems installed with
+          method-driven prep: substrate flatness, appropriate mortar selection,
+          and complete waterproofing assemblies.
         </p>
-        <a href="{{ '/pages/build/tile-installation-standards/' | relative_url }}" class="btn btn--ghost" aria-label="Learn about tile installation">
+        <a
+          href="{{ '/pages/build/tile-installation-standards/' | relative_url }}"
+          class="btn btn--ghost"
+          aria-label="Learn about tile installation"
+        >
           Learn More
         </a>
       </article>
@@ -40,9 +54,15 @@ Usage: {% include sections/home-services-preview.html %}
       <article class="card card--service">
         <h3 class="heading-4">Waterproofing Systems</h3>
         <p>
-          Shower and wet-area waterproofing built as complete systems. We detail transitions, penetrations, and drains per standards, then verify with flood testing before tile conceals it.
+          Shower and wet-area waterproofing built as complete systems. We detail
+          transitions, penetrations, and drains per standards, then verify with
+          flood testing before tile conceals it.
         </p>
-        <a href="{{ '/pages/build/waterproofing-systems/' | relative_url }}" class="btn btn--ghost" aria-label="Learn about waterproofing">
+        <a
+          href="{{ '/pages/build/waterproofing-systems/' | relative_url }}"
+          class="btn btn--ghost"
+          aria-label="Learn about waterproofing"
+        >
           Learn More
         </a>
       </article>
@@ -50,9 +70,15 @@ Usage: {% include sections/home-services-preview.html %}
       <article class="card card--service">
         <h3 class="heading-4">Substrate Prep</h3>
         <p>
-          We evaluate structure, plan waterproofing, verify substrate flatness, and test before finishes are applied. This is where the Build Phase difference shows.
+          We evaluate structure, plan waterproofing, verify substrate flatness,
+          and test before finishes are applied. This is where the Build Phase
+          difference shows.
         </p>
-        <a href="{{ '/pages/build/shower-pans-slopes-drains/' | relative_url }}" class="btn btn--ghost" aria-label="Learn about substrate prep">
+        <a
+          href="{{ '/pages/build/shower-pans-slopes-drains/' | relative_url }}"
+          class="btn btn--ghost"
+          aria-label="Learn about substrate prep"
+        >
           Learn More
         </a>
       </article>

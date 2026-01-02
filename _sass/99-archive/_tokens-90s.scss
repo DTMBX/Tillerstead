@@ -17,7 +17,7 @@
      🌈 90s VIBRANT CORE PALETTE
      Electric, optimistic, memorable
      =========================== */
-  
+
   /* Primary: Electric Teal (90s MTV vibes) */
   --color-neon-teal-50: #e0f2fe;
   --color-neon-teal-100: #b3e5fc;
@@ -25,7 +25,7 @@
   --color-neon-teal-500: #0097a7;
   --color-neon-teal-600: #00838f;
   --color-neon-teal-700: #006064;
-  
+
   /* Secondary: Sunset Orange (Nickelodeon energy) */
   --color-sunset-orange-50: #fff3e0;
   --color-sunset-orange-100: #ffe0b2;
@@ -33,7 +33,7 @@
   --color-sunset-orange-500: #ff9800;
   --color-sunset-orange-600: #fb8c00;
   --color-sunset-orange-700: #f57c00;
-  
+
   /* Accent: Hot Pink (Saved by the Bell aesthetic) */
   --color-hot-pink-50: #fce4ec;
   --color-hot-pink-100: #f8bbd0;
@@ -41,7 +41,7 @@
   --color-hot-pink-500: #e91e63;
   --color-hot-pink-600: #d81b60;
   --color-hot-pink-700: #c2185b;
-  
+
   /* Support: Lime Green (Fresh Prince vibes) */
   --color-lime-green-50: #f1f8e9;
   --color-lime-green-100: #dcedc8;
@@ -49,7 +49,7 @@
   --color-lime-green-500: #8bc34a;
   --color-lime-green-600: #7cb342;
   --color-lime-green-700: #689f38;
-  
+
   /* Support: Electric Purple (90s tech aesthetic) */
   --color-electric-purple-50: #f3e5f5;
   --color-electric-purple-100: #e1bee7;
@@ -57,7 +57,7 @@
   --color-electric-purple-500: #9c27b0;
   --color-electric-purple-600: #8e24aa;
   --color-electric-purple-700: #7b1fa2;
-  
+
   /* Support: Cyber Yellow (Caution tape chic) */
   --color-cyber-yellow-50: #fffde7;
   --color-cyber-yellow-100: #fff9c4;
@@ -70,7 +70,7 @@
      📐 REFINED NEUTRALS
      Clean backdrop for vibrant accents
      =========================== */
-  
+
   --color-cool-gray-50: var(--color-slate-50);
   --color-cool-gray-100: var(--color-slate-100);
   --color-cool-gray-200: var(--color-slate-200);
@@ -86,18 +86,21 @@
      🎨 COMIC BOOK SYSTEM
      Halftone dots, speech bubbles, POW effects!
      =========================== */
-  
-  --color-comic-dot-pattern: 
-    radial-gradient(circle at 50% 50%, var(--color-neon-teal-500) 1px, transparent 1px);
+
+  --color-comic-dot-pattern: radial-gradient(
+    circle at 50% 50%,
+    var(--color-neon-teal-500) 1px,
+    transparent 1px
+  );
   --color-comic-outline-thick: 3px;
   --color-comic-outline-medium: 2px;
   --color-comic-outline-thin: 1px;
-  
+
   /* Speech bubble colors */
   --color-bubble-bg: var(--ts-white);
   --color-bubble-border: var(--tiller-cool-gray-900);
   --color-bubble-shadow: rgb(0, 0, 0, 0.25);
-  
+
   /* Comic action effects */
   --color-pow-yellow: var(--tiller-cyber-yellow-500);
   --color-boom-orange: var(--color-sunset-orange-500);
@@ -107,7 +110,7 @@
      🌟 GRADIENT SYSTEMS
      90s-inspired but modern execution
      =========================== */
-  
+
   /* Sunrise gradient (optimistic, energetic) */
   --color-gradient-sunrise: linear-gradient(
     135deg,
@@ -115,7 +118,7 @@
     var(--color-hot-pink-500) 50%,
     var(--tiller-electric-purple-600) 100%
   );
-  
+
   /* Ocean gradient (trustworthy, professional) */
   --color-gradient-ocean: linear-gradient(
     135deg,
@@ -123,7 +126,7 @@
     var(--color-neon-teal-600) 50%,
     var(--tiller-electric-purple-700) 100%
   );
-  
+
   /* Retro gradient (90s throwback) */
   --color-gradient-retro: linear-gradient(
     90deg,
@@ -133,7 +136,7 @@
     var(--color-lime-green-500) 75%,
     var(--color-neon-teal-500) 100%
   );
-  
+
   /* Neon glow gradient (eye-catching) */
   --color-gradient-neon: linear-gradient(
     45deg,
@@ -147,35 +150,35 @@
      🎯 SEMANTIC COLOR MAPPING
      Vibrant but professional application
      =========================== */
-  
+
   /* Primary Brand (Teal - trustworthy tile expert) */
   --ts-color-primary: var(--color-neon-teal-600);
   --ts-color-primary-hover: var(--color-neon-teal-700);
   --ts-color-primary-light: var(--color-neon-teal-400);
   --ts-color-primary-soft: var(--color-neon-teal-50);
-  
+
   /* Secondary Brand (Orange - energetic, warm) */
   --ts-color-secondary: var(--color-sunset-orange-500);
   --ts-color-secondary-hover: var(--color-sunset-orange-600);
   --ts-color-secondary-light: var(--color-sunset-orange-400);
   --ts-color-secondary-soft: var(--color-sunset-orange-50);
-  
+
   /* Accent (Pink - memorable, fun) */
   --ts-color-accent: var(--color-hot-pink-500);
   --ts-color-accent-hover: var(--color-hot-pink-600);
   --ts-color-accent-light: var(--color-hot-pink-400);
   --ts-color-accent-soft: var(--color-hot-pink-50);
-  
+
   /* Success (Lime - positive, fresh) */
   --ts-color-success: var(--color-lime-green-600);
   --ts-color-success-bg: var(--color-lime-green-50);
   --ts-color-success-text: var(--color-lime-green-700);
-  
+
   /* Warning (Yellow - attention without alarm) */
   --ts-color-warning: var(--tiller-cyber-yellow-600);
   --ts-color-warning-bg: var(--tiller-cyber-yellow-50);
   --ts-color-warning-text: #7c5e10;
-  
+
   /* Error (Hot Pink - visible but not scary) */
   --ts-color-error: #d81b60;
   --ts-color-error-bg: var(--color-hot-pink-50);
@@ -185,104 +188,98 @@
      📄 SURFACE SYSTEM
      Clean, modern, lets colors pop
      =========================== */
-  
+
   --ts-surface-base: var(--tiller-cool-gray-50);
   --ts-surface-raised: var(--ts-white);
   --ts-surface-overlay: rgb(255, 255, 255, 0.95);
   --ts-surface-tinted-teal: rgb(0, 151, 167, 0.05);
   --ts-surface-tinted-orange: rgb(255, 152, 0, 0.05);
   --ts-surface-tinted-pink: rgb(233, 30, 99, 0.05);
-  
+
   /* ===========================
      ✍️ TEXT SYSTEM
      High contrast for readability
      =========================== */
-  
+
   --ts-text-primary: var(--tiller-cool-gray-900);
   --ts-text-secondary: var(--tiller-cool-gray-700);
   --ts-text-muted: var(--tiller-cool-gray-500);
   --ts-text-on-color: var(--ts-white);
   --ts-text-on-light: var(--tiller-cool-gray-900);
-  
+
   /* ===========================
      🖌️ BORDER & OUTLINE SYSTEM
      Comic book inspired
      =========================== */
-  
+
   --ts-border-thin: 1px solid var(--tiller-cool-gray-200);
   --ts-border-medium: 2px solid var(--tiller-cool-gray-300);
   --ts-border-thick: 3px solid var(--tiller-cool-gray-900);
   --ts-border-comic: 3px solid var(--tiller-cool-gray-900);
   --ts-border-accent: 2px solid var(--color-neon-teal-500);
-  
+
   /* ===========================
      ✨ SHADOW SYSTEM
      Depth with personality
      =========================== */
-  
+
   /* Soft shadows (subtle elevation) */
   --color-shadow-xs: 0 1px 3px rgb(0, 0, 0, 0.08);
-  --ts-shadow-soft: 0 2px 6px rgb(0, 0, 0, 0.10);
+  --ts-shadow-soft: 0 2px 6px rgb(0, 0, 0, 0.1);
   --ts-shadow-soft: 0 4px 12px rgb(0, 0, 0, 0.12);
-  
+
   /* Comic shadows (bold, graphic) */
-  --color-shadow-comic-sm: 
-    3px 3px 0 var(--tiller-cool-gray-900);
-  --color-shadow-comic-md: 
-    5px 5px 0 var(--tiller-cool-gray-900);
-  --color-shadow-comic-lg: 
-    8px 8px 0 var(--tiller-cool-gray-900);
-  
+  --color-shadow-comic-sm: 3px 3px 0 var(--tiller-cool-gray-900);
+  --color-shadow-comic-md: 5px 5px 0 var(--tiller-cool-gray-900);
+  --color-shadow-comic-lg: 8px 8px 0 var(--tiller-cool-gray-900);
+
   /* Colored glow shadows (90s neon effect) */
-  --color-shadow-glow-teal: 
-    0 0 20px rgb(0, 151, 167, 0.4),
-    0 0 40px rgb(0, 151, 167, 0.2);
-  --color-shadow-glow-pink: 
-    0 0 20px rgb(233, 30, 99, 0.4),
-    0 0 40px rgb(233, 30, 99, 0.2);
-  --color-shadow-glow-orange: 
-    0 0 20px rgb(255, 152, 0, 0.4),
-    0 0 40px rgb(255, 152, 0, 0.2);
+  --color-shadow-glow-teal:
+    0 0 20px rgb(0, 151, 167, 0.4), 0 0 40px rgb(0, 151, 167, 0.2);
+  --color-shadow-glow-pink:
+    0 0 20px rgb(233, 30, 99, 0.4), 0 0 40px rgb(233, 30, 99, 0.2);
+  --color-shadow-glow-orange:
+    0 0 20px rgb(255, 152, 0, 0.4), 0 0 40px rgb(255, 152, 0, 0.2);
 
   /* ===========================
      📏 SPACING SCALE
      Consistent rhythm
      =========================== */
-  
-  --spacing-space-1: 0.25rem;   /* 4px */
-  --spacing-space-2: 0.5rem;    /* 8px */
-  --spacing-space-3: 0.75rem;   /* 12px */
-  --spacing-space-4: 1rem;      /* 16px */
-  --spacing-space-5: 1.25rem;   /* 20px */
-  --spacing-space-6: 1.5rem;    /* 24px */
-  --spacing-space-8: 2rem;      /* 32px */
-  --spacing-space-10: 2.5rem;   /* 40px */
-  --spacing-space-12: 3rem;     /* 48px */
-  --spacing-space-16: 4rem;     /* 64px */
-  --spacing-space-20: 5rem;     /* 80px */
-  --spacing-space-24: 6rem;     /* 96px */
+
+  --spacing-space-1: 0.25rem; /* 4px */
+  --spacing-space-2: 0.5rem; /* 8px */
+  --spacing-space-3: 0.75rem; /* 12px */
+  --spacing-space-4: 1rem; /* 16px */
+  --spacing-space-5: 1.25rem; /* 20px */
+  --spacing-space-6: 1.5rem; /* 24px */
+  --spacing-space-8: 2rem; /* 32px */
+  --spacing-space-10: 2.5rem; /* 40px */
+  --spacing-space-12: 3rem; /* 48px */
+  --spacing-space-16: 4rem; /* 64px */
+  --spacing-space-20: 5rem; /* 80px */
+  --spacing-space-24: 6rem; /* 96px */
 
   /* ===========================
      🎭 TYPOGRAPHY TOKENS
      Bold, readable, playful
      =========================== */
-  
+
   --font-display: "Fredoka", "Comic Sans MS", "Arial Rounded", sans-serif;
   --font-body: "Inter", -apple-system, system-ui, sans-serif;
   --font-mono: "Fira Code", "Courier New", monospace;
-  
-  --font-size-xs: 0.75rem;     /* 12px */
-  --font-size-sm: 0.875rem;    /* 14px */
-  --font-size-base: 1rem;      /* 16px */
-  --font-size-lg: 1.125rem;    /* 18px */
-  --font-size-xl: 1.25rem;     /* 20px */
-  --font-text-2xl: 1.5rem;     /* 24px */
-  --font-text-3xl: 1.875rem;   /* 30px */
-  --font-text-4xl: 2.25rem;    /* 36px */
-  --font-text-5xl: 3rem;       /* 48px */
-  --font-text-6xl: 3.75rem;    /* 60px */
-  --font-text-7xl: 4.5rem;     /* 72px */
-  
+
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-text-2xl: 1.5rem; /* 24px */
+  --font-text-3xl: 1.875rem; /* 30px */
+  --font-text-4xl: 2.25rem; /* 36px */
+  --font-text-5xl: 3rem; /* 48px */
+  --font-text-6xl: 3.75rem; /* 60px */
+  --font-text-7xl: 4.5rem; /* 72px */
+
   /* Font weights */
   --font-normal: 400;
   --font-medium: 500;
@@ -294,11 +291,11 @@
      🎪 ANIMATION TOKENS
      Bouncy, playful, smooth
      =========================== */
-  
+
   --tiller-ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   --tiller-ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --tiller-ease-snappy: cubic-bezier(0.4, 0, 0.6, 1);
-  
+
   --tiller-duration-fast: 150ms;
   --tiller-duration-normal: 300ms;
   --tiller-duration-slow: 500ms;
@@ -308,15 +305,15 @@
      🎨 BORDER RADIUS
      Friendly, approachable curves
      =========================== */
-  
-  --ts-radius-sm: 0.25rem;   /* 4px */
-  --ts-radius-md: 0.5rem;    /* 8px */
-  --ts-radius-lg: 0.75rem;   /* 12px */
-  --ts-radius-xl: 1rem;      /* 16px */
-  --tiller-radius-2xl: 1.5rem;   /* 24px */
-  --tiller-radius-3xl: 2rem;     /* 32px */
-  --tiller-radius-full: 9999px;  /* Pill */
-  
+
+  --ts-radius-sm: 0.25rem; /* 4px */
+  --ts-radius-md: 0.5rem; /* 8px */
+  --ts-radius-lg: 0.75rem; /* 12px */
+  --ts-radius-xl: 1rem; /* 16px */
+  --tiller-radius-2xl: 1.5rem; /* 24px */
+  --tiller-radius-3xl: 2rem; /* 32px */
+  --tiller-radius-full: 9999px; /* Pill */
+
   /* Comic bubble radius */
   --tiller-radius-bubble: 1.5rem 1.5rem 1.5rem 0.25rem;
 
@@ -324,7 +321,7 @@
      📐 Z-INDEX SCALE
      Predictable layering
      =========================== */
-  
+
   --z-base: 0;
   --z-dropdown: 1000;
   --z-sticky: 1100;
@@ -338,13 +335,13 @@
      🎯 CONTAINER WIDTHS
      Responsive, readable
      =========================== */
-  
+
   --tiller-container-sm: 640px;
   --tiller-container-md: 768px;
   --tiller-container-lg: 1024px;
   --tiller-container-xl: 1280px;
   --tiller-container-2xl: 1536px;
-  
+
   --spacing-container: var(--spacing-container-lg);
   --tiller-container-narrow: var(--spacing-container-md);
   --tiller-container-wide: var(--spacing-container-xl);
@@ -362,12 +359,12 @@
     --ts-text-primary: var(--tiller-cool-gray-50);
     --ts-text-secondary: var(--tiller-cool-gray-300);
     --ts-text-muted: var(--tiller-cool-gray-400);
-    
+
     /* Vibrant colors stay vibrant in dark mode! */
     --ts-color-primary: var(--color-neon-teal-400);
     --ts-color-secondary: var(--color-sunset-orange-400);
     --ts-color-accent: var(--color-hot-pink-400);
-    
+
     /* Comic shadows inverse */
     --color-shadow-comic-sm: -3px -3px 0 var(--tiller-cool-gray-100);
     --color-shadow-comic-md: -5px -5px 0 var(--tiller-cool-gray-100);
@@ -380,21 +377,45 @@
    Quick access to system
    =========================== */
 
-.gradient-sunrise { background: var(--tiller-gradient-sunrise); }
-.gradient-ocean { background: var(--tiller-gradient-ocean); }
-.gradient-retro { background: var(--tiller-gradient-retro); }
-.gradient-neon { background: var(--tiller-gradient-neon); }
+.gradient-sunrise {
+  background: var(--tiller-gradient-sunrise);
+}
+.gradient-ocean {
+  background: var(--tiller-gradient-ocean);
+}
+.gradient-retro {
+  background: var(--tiller-gradient-retro);
+}
+.gradient-neon {
+  background: var(--tiller-gradient-neon);
+}
 
-.shadow-comic-sm { box-shadow: var(--color-shadow-comic-sm); }
-.shadow-comic-md { box-shadow: var(--color-shadow-comic-md); }
-.shadow-comic-lg { box-shadow: var(--color-shadow-comic-lg); }
+.shadow-comic-sm {
+  box-shadow: var(--color-shadow-comic-sm);
+}
+.shadow-comic-md {
+  box-shadow: var(--color-shadow-comic-md);
+}
+.shadow-comic-lg {
+  box-shadow: var(--color-shadow-comic-lg);
+}
 
-.glow-teal { box-shadow: var(--color-shadow-glow-teal); }
-.glow-pink { box-shadow: var(--color-shadow-glow-pink); }
-.glow-orange { box-shadow: var(--color-shadow-glow-orange); }
+.glow-teal {
+  box-shadow: var(--color-shadow-glow-teal);
+}
+.glow-pink {
+  box-shadow: var(--color-shadow-glow-pink);
+}
+.glow-orange {
+  box-shadow: var(--color-shadow-glow-orange);
+}
 
-.border-comic { border: var(--ts-border-comic); }
-.border-accent { border: var(--ts-border-accent); }
+.border-comic {
+  border: var(--ts-border-comic);
+}
+.border-accent {
+  border: var(--ts-border-accent);
+}
 
 /* ===========================
    💫 SPECIAL EFFECTS
@@ -403,11 +424,21 @@
 
 /* Halftone dot pattern */
 .halftone-bg {
-  background-image: 
-    radial-gradient(circle at 25% 25%, var(--color-neon-teal-500) 2px, transparent 2px),
-    radial-gradient(circle at 75% 75%, var(--color-sunset-orange-500) 2px, transparent 2px);
+  background-image:
+    radial-gradient(
+      circle at 25% 25%,
+      var(--color-neon-teal-500) 2px,
+      transparent 2px
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      var(--color-sunset-orange-500) 2px,
+      transparent 2px
+    );
   background-size: 20px 20px;
-  background-position: 0 0, 10px 10px;
+  background-position:
+    0 0,
+    10px 10px;
 }
 
 /* Comic book speed lines */
@@ -424,7 +455,7 @@
 /* Neon text effect */
 .text-neon {
   color: var(--tiller-cyber-yellow-500);
-  text-shadow: 
+  text-shadow:
     0 0 10px rgb(255, 235, 59, 0.8),
     0 0 20px rgb(255, 235, 59, 0.6),
     0 0 30px rgb(255, 235, 59, 0.4);

@@ -21,11 +21,13 @@ The Tillerstead repository now includes automated encoding validation and CI/CD 
 ```
 
 Output:
+
 ```
 ✅ All files validated successfully!
 ```
 
 Or lists specific issues:
+
 ```
 ⚠️  Found 3 files with issues:
   📄 C:\...\pages\index.html
@@ -40,6 +42,7 @@ Or lists specific issues:
 ```
 
 This will:
+
 - Remove UTF-8 BOMs from all files
 - Normalize all files to UTF-8 without BOM
 - Preserve content integrity
@@ -67,20 +70,21 @@ Saves JSON report to `reports/encoding-audit-YYYYMMDD-HHMMSS.json`
 **File:** `.github/workflows/encoding-validation.yml`
 
 Runs automatically on:
+
 - Push to `main` or `develop`
 - Pull requests to `main` or `develop`
 - Weekly schedule (Sundays at 00:00 UTC)
 
 ### Jobs Executed
 
-| Job | Purpose | Trigger |
-|-----|---------|---------|
+| Job                   | Purpose                          | Trigger    |
+| --------------------- | -------------------------------- | ---------- |
 | `encoding-validation` | Check UTF-8 encoding, tabs, BOMs | Every push |
-| `html-validation` | Run HTMLHint on all HTML files | Every push |
-| `yaml-validation` | Validate YAML syntax | Every push |
-| `jekyll-build` | Full Jekyll site build | Every push |
-| `lint-js` | ESLint JavaScript validation | Every push |
-| `summary` | Report overall status | Every push |
+| `html-validation`     | Run HTMLHint on all HTML files   | Every push |
+| `yaml-validation`     | Validate YAML syntax             | Every push |
+| `jekyll-build`        | Full Jekyll site build           | Every push |
+| `lint-js`             | ESLint JavaScript validation     | Every push |
+| `summary`             | Report overall status            | Every push |
 
 ### Viewing Results
 
@@ -125,6 +129,7 @@ git commit --no-verify
 **Problem:** File was saved with UTF-8 BOM by an editor (e.g., Notepad, older VS Code settings)
 
 **Fix:**
+
 ```powershell
 ./scripts/encoding-fix.ps1 -Fix
 ```
@@ -138,11 +143,13 @@ git commit --no-verify
 **Problem:** YAML files have tabs instead of spaces (YAML spec requires spaces)
 
 **Symptoms:**
+
 ```
 Jekyll build fails with: "mapping values are not allowed here"
 ```
 
 **Fix:**
+
 ```powershell
 ./scripts/encoding-fix.ps1 -Fix
 ```
@@ -156,6 +163,7 @@ Jekyll build fails with: "mapping values are not allowed here"
 **Problem:** Unclosed or malformed HTML entities (e.g., `&nbsp` without semicolon)
 
 **Symptoms:**
+
 ```
 HTMLHint warning: "Bad entity" or characters render incorrectly
 ```
@@ -171,6 +179,7 @@ HTMLHint warning: "Bad entity" or characters render incorrectly
 **Problem:** Liquid syntax errors or YAML front matter issues
 
 **Symptoms:**
+
 ```
 jekyll build fails with: "Liquid syntax error" or "mapping values not allowed"
 ```
@@ -178,6 +187,7 @@ jekyll build fails with: "Liquid syntax error" or "mapping values not allowed"
 **Fix:**
 
 1. Check the build log:
+
 ```powershell
 bundle exec jekyll build --trace
 ```
@@ -224,8 +234,8 @@ on:
     branches: [main, develop]
     # Add to skip certain paths:
     paths-ignore:
-      - 'docs/**'
-      - '.github/**'
+      - "docs/**"
+      - ".github/**"
 ```
 
 ---
@@ -257,6 +267,7 @@ Get-ChildItem reports/encoding-audit-*.json | Sort-Object LastWriteTime -Descend
 ### For Developers
 
 1. **Before Committing:**
+
    ```powershell
    ./scripts/encoding-fix.ps1 -Validate
    ```
@@ -285,6 +296,7 @@ Get-ChildItem reports/encoding-audit-*.json | Sort-Object LastWriteTime -Descend
 **Error:** `PowerShell is disabled`
 
 **Fix:**
+
 ```powershell
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
@@ -294,6 +306,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 **Error:** `pre-commit hook not running`
 
 **Fix:**
+
 ```bash
 git config core.hooksPath .githooks
 chmod +x .githooks/pre-commit  # On Unix/Linux/Mac
@@ -304,6 +317,7 @@ chmod +x .githooks/pre-commit  # On Unix/Linux/Mac
 **Cause:** Different file encodings on local machine vs. CI runner
 
 **Fix:**
+
 1. Run `./scripts/encoding-fix.ps1 -Fix` locally
 2. Commit changes
 3. Push to trigger CI
@@ -322,6 +336,7 @@ chmod +x .githooks/pre-commit  # On Unix/Linux/Mac
 ## Questions?
 
 Check:
+
 1. This guide (you're reading it!)
 2. GitHub Actions logs
 3. `.github/workflows/encoding-validation.yml`

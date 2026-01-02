@@ -95,7 +95,7 @@ Implemented enterprise-grade mobile card responsiveness using modern CSS feature
   .card a,
   .card button {
     min-height: 44px; /* iOS minimum */
-    min-width: 44px;  /* Touch accuracy */
+    min-width: 44px; /* Touch accuracy */
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -251,9 +251,9 @@ Long text or wide content breaks cards on mobile.
   .card {
     /* Triple defense */
     overflow-wrap: break-word; /* Break long words */
-    word-wrap: break-word;     /* Legacy support */
-    hyphens: auto;             /* Smart hyphenation */
-    
+    word-wrap: break-word; /* Legacy support */
+    hyphens: auto; /* Smart hyphenation */
+
     /* Container constraints */
     max-width: 100%;
     width: 100%;
@@ -328,13 +328,13 @@ Long text or wide content breaks cards on mobile.
 
 ## Browser Support
 
-| Feature | Chrome | Safari | Firefox | Edge | Mobile |
-|---------|--------|--------|---------|------|--------|
-| Container Queries | 105+ | 16+ | 110+ | 105+ | iOS 16+ |
-| hover: hover | 38+ | 9+ | 64+ | 12+ | All |
-| pointer: coarse | 41+ | 9+ | 64+ | 12+ | All |
-| prefers-reduced-motion | 74+ | 10.1+ | 63+ | 79+ | iOS 11+ |
-| prefers-contrast | 96+ | 14.1+ | 101+ | 96+ | iOS 15+ |
+| Feature                | Chrome | Safari | Firefox | Edge | Mobile  |
+| ---------------------- | ------ | ------ | ------- | ---- | ------- |
+| Container Queries      | 105+   | 16+    | 110+    | 105+ | iOS 16+ |
+| hover: hover           | 38+    | 9+     | 64+     | 12+  | All     |
+| pointer: coarse        | 41+    | 9+     | 64+     | 12+  | All     |
+| prefers-reduced-motion | 74+    | 10.1+  | 63+     | 79+  | iOS 11+ |
+| prefers-contrast       | 96+    | 14.1+  | 101+    | 96+  | iOS 15+ |
 
 **Overall Support:** 95%+ of users
 

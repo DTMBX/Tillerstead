@@ -1,0 +1,12 @@
+/* ====================================================================
+   00-SETTINGS ENTRY MODULE
+   Exposes the global token set via @forward so the root stylesheet can
+   @use a single namespace and avoid the deprecated @import cascade.
+   ==================================================================== */
+
+@forward "theme-globals";
+@forward "spacing-system";
+@forward "tokens-modern";
+@forward "dark-theme-experiment";
+@forward "luxury-refinements";
+@forward "patterns";

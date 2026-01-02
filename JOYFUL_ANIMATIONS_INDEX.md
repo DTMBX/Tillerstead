@@ -9,6 +9,7 @@
 ## 📚 Documentation Index
 
 ### **Start Here**
+
 If you're new to the animation system, start in this order:
 
 1. **This File** — Overview and navigation (you are here)
@@ -17,6 +18,7 @@ If you're new to the animation system, start in this order:
 4. **JOYFUL_ANIMATIONS_GUIDE.md** — Complete design system documentation
 
 ### **For Quick Implementation**
+
 - **JOYFUL_ANIMATIONS_QUICKSTART.md** — 6 ready-to-use code examples
   - Form with progress tracking
   - Multi-step process indicator
@@ -26,6 +28,7 @@ If you're new to the animation system, start in this order:
   - Loading states
 
 ### **For Complete Understanding**
+
 - **JOYFUL_ANIMATIONS_GUIDE.md** — Full system documentation
   - Philosophy & approach
   - Detailed component specs
@@ -36,12 +39,14 @@ If you're new to the animation system, start in this order:
   - Real-world examples
 
 ### **For Visual Reference**
+
 - **joyful-animations-demo.html** — Interactive demo page
   - All components demonstrated
   - Works with live interactions
   - Use for testing and reference
 
 ### **For Project Overview**
+
 - **JOYFUL_ANIMATIONS_SUMMARY.md** — Implementation summary
   - What was delivered
   - Key features
@@ -86,6 +91,7 @@ tillerstead/
 ### Animation Types
 
 **Progress Bars**
+
 - `.progress-bar` — Container
 - `.progress-fill` — Fill bar
 - `.progress-fill.shimmer` — Add shimmer effect
@@ -94,6 +100,7 @@ tillerstead/
 - `.progress-segmented` — Multi-step indicator
 
 **Button Animations**
+
 - `.btn-joy` — Bounce hover + ripple click
 - `.cta-primary-joy` — Heartbeat pulse
 - `.jump-hover` — Cute jump
@@ -102,35 +109,43 @@ tillerstead/
 - `.cta-pulse` — Heartbeat (any element)
 
 **Feedback**
+
 - `.success-check` — Success checkmark
 - `.spinner-joy` — Spinning loader
 - `.dots-loader` — Bouncing dots
 
 **Entrance**
+
 - `.bounce-enter` — Bounce entrance
 - `.bounce-enter-delay-1` through `.bounce-enter-delay-5` — Stagger delays
 
 ### Timing Quick Ref
 
-| Speed | Duration | Use |
-|-------|----------|-----|
-| Flash | 0.15s | Micro-interactions |
-| Quick | 0.3s | Entrance, focus |
-| Base | 0.6s | Progress, standard |
-| Slow | 0.8–1.2s | Loops (spinner) |
-| Extra | 1.5s+ | Long loops (heartbeat) |
+| Speed | Duration | Use                    |
+| ----- | -------- | ---------------------- |
+| Flash | 0.15s    | Micro-interactions     |
+| Quick | 0.3s     | Entrance, focus        |
+| Base  | 0.6s     | Progress, standard     |
+| Slow  | 0.8–1.2s | Loops (spinner)        |
+| Extra | 1.5s+    | Long loops (heartbeat) |
 
 ### Customization
 
 ```scss
 /* Change progress bar color */
-.progress-bar { --pg-color: var(--color-accent); }
+.progress-bar {
+  --pg-color: var(--color-accent);
+}
 
 /* Change animation speed */
-.progress-bar { --pg-duration: 0.3s; }
+.progress-bar {
+  --pg-duration: 0.3s;
+}
 
 /* Change height */
-.progress-bar { --pg-height: 8px; }
+.progress-bar {
+  --pg-height: 8px;
+}
 ```
 
 ---
@@ -138,12 +153,15 @@ tillerstead/
 ## 🚀 Implementation Roadmap
 
 ### Phase 1: Immediate (High Impact)
+
 ```html
 <!-- Add to hero/above-the-fold CTAs -->
 <button class="btn btn-primary cta-primary-joy">Get Started</button>
 
 <!-- Add to form submissions -->
-<div class="progress-bar"><div class="progress-fill" style="width: 45%;"></div></div>
+<div class="progress-bar">
+  <div class="progress-fill" style="width: 45%;"></div>
+</div>
 
 <!-- Add to success messages -->
 <div class="success-check"></div>
@@ -153,6 +171,7 @@ tillerstead/
 ```
 
 ### Phase 2: Short-term (Enhanced UX)
+
 ```html
 <!-- Multi-step forms -->
 <div class="progress-segmented">...</div>
@@ -168,6 +187,7 @@ tillerstead/
 ```
 
 ### Phase 3: Long-term (Refinement)
+
 - Customize animation durations
 - Add micro-interactions throughout
 - A/B test impact on conversion
@@ -193,9 +213,11 @@ tillerstead/
 ## 🎨 Design Principles
 
 ### Core Philosophy
+
 "Joyful without noise. Playful but professional. Delightful micro-interactions that respect user time."
 
 ### When to Use Animations
+
 ✓ Progress feedback (show work happening)  
 ✓ Success celebration (confirm completion)  
 ✓ CTA emphasis (guide attention)  
@@ -203,6 +225,7 @@ tillerstead/
 ✓ Loading feedback (indicate activity)
 
 ### When to Avoid
+
 ✗ Every interaction (overwhelming)  
 ✗ Long durations (feels slow)  
 ✗ Multiple overlapping (confusing)  
@@ -210,9 +233,11 @@ tillerstead/
 ✗ Without purpose (distracting)
 
 ### Brand Alignment
+
 Tillerstead voice: "Detailed, Honest, Professional with Personality"
 
 Animations should:
+
 - Be intentional and purposeful
 - Show expertise through polish
 - Celebrate together with users
@@ -224,6 +249,7 @@ Animations should:
 ## 📊 System Specs
 
 ### Animation Library
+
 - **11 Keyframe Animations** — Bounce, wiggle, spin, pulse, etc.
 - **40+ CSS Classes** — Progressive enhancement
 - **Customizable Tokens** — Colors, durations, sizing
@@ -231,6 +257,7 @@ Animations should:
 - **Mobile Optimized** — Disabled on small screens
 
 ### Technical Details
+
 - **GPU Accelerated** — transform, opacity only
 - **60 FPS Target** — Smooth on modern devices
 - **No Layout Thrashing** — Efficient properties
@@ -238,6 +265,7 @@ Animations should:
 - **Keyboard Safe** — Navigation unaffected
 
 ### Browser Support
+
 - Chrome/Edge ✓
 - Firefox ✓
 - Safari ✓
@@ -248,21 +276,25 @@ Animations should:
 ## 🔧 Troubleshooting
 
 **Q: Animations not working**
+
 - Check that CSS is compiled: `npm run build:css`
 - Verify in browser DevTools that styles loaded
 - Check browser console for errors
 
 **Q: Animations feel jitchy**
+
 - Use DevTools Performance tab to check frame drops
 - Test on different device/network
 - Disable other animations to isolate issue
 
 **Q: Prefers-reduced-motion not working**
+
 - Clear browser cache and reload
 - Check macOS/Windows accessibility settings
 - The @media rule is auto-included in compiled CSS
 
 **Q: Mobile animations too choppy**
+
 - They should auto-disable on screens < 640px
 - Check if CSS compiled with latest SCSS
 - Test on real device (DevTools emulation differs)
@@ -294,16 +326,19 @@ A: Yes, optimized for mobile (disabled < 640px for performance).
 ## 🎓 Learning Resources
 
 ### For Understanding Animation Design
+
 - **JOYFUL_ANIMATIONS_GUIDE.md** — Comprehensive guide
 - **joyful-animations-demo.html** — See animations in action
-- **_joyful-animations.scss** — Source code with comments
+- **\_joyful-animations.scss** — Source code with comments
 
 ### For Implementation
+
 - **JOYFUL_ANIMATIONS_QUICKSTART.md** — Copy-paste examples
 - **Real-world examples in guide** — Complete working samples
 - **Demo page** — Test and reference
 
 ### For Best Practices
+
 - Check "TCNA Brand Alignment" section in main guide
 - Review "Design Consultation" notes in source SCSS
 - Follow "Do's and Don'ts" in documentation
@@ -325,12 +360,14 @@ Track these to measure animation impact:
 ## 🔄 Maintenance
 
 ### Updating Animations
+
 1. Edit `_sass/30-components/_joyful-animations.scss`
 2. Run `npm run build:css` to compile
 3. Test in browser
 4. Update documentation if behavior changes
 
 ### Adding New Animations
+
 1. Follow existing naming conventions
 2. Add keyframes with comments
 3. Add CSS class for the animation
@@ -338,6 +375,7 @@ Track these to measure animation impact:
 5. Add example to demo page
 
 ### Keeping Current
+
 - Review quarterly for compatibility
 - Update for new browser features
 - Test on new devices
@@ -347,13 +385,13 @@ Track these to measure animation impact:
 
 ## 📝 Document Versions
 
-| Document | Version | Last Updated | Purpose |
-|----------|---------|--------------|---------|
-| JOYFUL_ANIMATIONS_INDEX.md | 1.0 | 2026-01-02 | Navigation & quick ref |
-| JOYFUL_ANIMATIONS_QUICKSTART.md | 1.0 | 2026-01-02 | Implementation guide |
-| JOYFUL_ANIMATIONS_GUIDE.md | 1.0 | 2026-01-02 | Complete reference |
-| JOYFUL_ANIMATIONS_SUMMARY.md | 1.0 | 2026-01-02 | Project overview |
-| _joyful-animations.scss | 1.0 | 2026-01-02 | Source code |
+| Document                        | Version | Last Updated | Purpose                |
+| ------------------------------- | ------- | ------------ | ---------------------- |
+| JOYFUL_ANIMATIONS_INDEX.md      | 1.0     | 2026-01-02   | Navigation & quick ref |
+| JOYFUL_ANIMATIONS_QUICKSTART.md | 1.0     | 2026-01-02   | Implementation guide   |
+| JOYFUL_ANIMATIONS_GUIDE.md      | 1.0     | 2026-01-02   | Complete reference     |
+| JOYFUL_ANIMATIONS_SUMMARY.md    | 1.0     | 2026-01-02   | Project overview       |
+| \_joyful-animations.scss        | 1.0     | 2026-01-02   | Source code            |
 
 ---
 
@@ -371,7 +409,7 @@ Track these to measure animation impact:
 → Open joyful-animations-demo.html
 
 **...customize animations**
-→ Edit _sass/30-components/_joyful-animations.scss
+→ Edit \_sass/30-components/\_joyful-animations.scss
 
 **...get project overview**
 → Read JOYFUL_ANIMATIONS_SUMMARY.md
@@ -386,7 +424,7 @@ Track these to measure animation impact:
 
 ## 🎉 You're Ready!
 
-Everything you need is here. Pick an animation, copy the code, integrate it into your page, and test. 
+Everything you need is here. Pick an animation, copy the code, integrate it into your page, and test.
 
 **Questions?** See the documentation or refer to the source code comments.
 

@@ -32,8 +32,9 @@ We specify mortars that meet or exceed:
 - **ANSI A118.4** — Modified thin-set mortars
 - **ANSI A118.15** — High-performance mortars for demanding applications
 
-**Preferred mortars:**  
-- *LATICRETE® 4-XLT*, *MAPEI® Ultraflex LFT*, *Custom® ProLite®*
+**Preferred mortars:**
+
+- _LATICRETE® 4-XLT_, _MAPEI® Ultraflex LFT_, _Custom® ProLite®_
 - **Extended open time** for precise layout
 - **Non-sag/medium-bed** properties to support heavy tiles
 
@@ -52,6 +53,7 @@ Coverage is critical:
 - No voids >2 in²; none within 2″ of tile edges
 
 **Our method:**
+
 1. Select trowel size to match tile back (typically 1/2"×1/2" or Euro-notch)
 2. Apply mortar with **parallel ridges** (one direction)
 3. **Back-butter** all large tiles to fill depressions
@@ -78,6 +80,5 @@ Precision is non-negotiable with large-format tile. Whether it’s a porcelain f
 
 ---
 
-*Do the work with integrity and care.  
-Tillerstead LLC—where standards aren’t optional.*
-
+_Do the work with integrity and care.  
+Tillerstead LLC—where standards aren’t optional._

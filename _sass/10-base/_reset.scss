@@ -17,12 +17,12 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizelegibility;
-  
+
   /* Respect user motion preferences */
   @media (prefers-reduced-motion: reduce) {
     scroll-behavior: auto;
   }
-  
+
   @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
   }
@@ -53,10 +53,18 @@ body.nav-open {
 }
 
 /* Headings: semantic, accessible, and visually distinct (TCNA 2024 §4.1.2) */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 0 0.75em;
   padding: 0;
-  font-family: var(--font-heading, var(--font-sans, system-ui, Arial, sans-serif));
+  font-family: var(
+    --font-heading,
+    var(--font-sans, system-ui, Arial, sans-serif)
+  );
   font-weight: 600;
   line-height: var(--font-line-height-tight, 1.15);
   color: var(--ts-color-heading, var(--ts-color-heading));
@@ -69,7 +77,8 @@ p {
 }
 
 /* Lists: accessible indentation and spacing */
-ul, ol {
+ul,
+ol {
   margin: 0 0 1rem;
   padding-left: 1.5rem;
 }
@@ -97,7 +106,10 @@ a {
   text-decoration-thickness: from-font;
   text-underline-offset: 0.18em;
   text-decoration-color: color-mix(in srgb, currentcolor 38%, transparent);
-  transition: var(--tiller-transition-fast, color 0.18s cubic-bezier(.4,0,.2,1));
+  transition: var(
+    --tiller-transition-fast,
+    color 0.18s cubic-bezier(0.4, 0, 0.2, 1)
+  );
 }
 
 a:hover,
@@ -193,9 +205,9 @@ table {
   *,
   *::before,
   *::after {
-   animation-duration: 0.01ms !important;
-   animation-iteration-count: 1 !important;
-   transition-duration: 0.01ms !important;
-   scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

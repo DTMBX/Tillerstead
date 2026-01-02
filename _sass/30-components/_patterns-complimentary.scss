@@ -10,10 +10,10 @@
 }
 
 @mixin tile-crosshatch-pattern-before($opacity: 0.6) {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
-  background-image: url('/assets/img/patterns/tile-crosshatch.svg');
+  background-image: url("/assets/img/patterns/tile-crosshatch.svg");
   background-size: 120px 120px;
   background-repeat: repeat;
   background-position: center;
@@ -27,7 +27,7 @@
 .hero,
 .page-hero {
   @include tile-crosshatch-pattern(0.5);
-  
+
   &::before {
     @include tile-crosshatch-pattern-before(0.5);
   }
@@ -50,7 +50,7 @@
 /* Home hero - higher opacity for light backgrounds */
 .page-home .ts-hero {
   @include tile-crosshatch-pattern(0.4);
-  
+
   &::before {
     @include tile-crosshatch-pattern-before(0.4);
   }
@@ -88,7 +88,7 @@
 /* Services section - light pattern */
 .ts-services {
   @include tile-crosshatch-pattern(0.1);
-  
+
   &::before {
     @include tile-crosshatch-pattern-before(0.1);
   }
@@ -106,7 +106,7 @@
 .ts-portfolio,
 .portfolio-section {
   @include tile-crosshatch-pattern(0.08);
-  
+
   &::before {
     @include tile-crosshatch-pattern-before(0.08);
   }
@@ -123,7 +123,7 @@
 /* Testimonials section - light pattern */
 .ts-testimonials {
   @include tile-crosshatch-pattern(0.1);
-  
+
   &::before {
     @include tile-crosshatch-pattern-before(0.1);
   }
@@ -140,7 +140,7 @@
 .ts-process,
 .process-section {
   @include tile-crosshatch-pattern(0.08);
-  
+
   &::before {
     @include tile-crosshatch-pattern-before(0.08);
   }
@@ -159,7 +159,7 @@
 .cta-section,
 .section-cta {
   @include tile-crosshatch-pattern(0.12);
-  
+
   &::before {
     @include tile-crosshatch-pattern-before(0.12);
   }
@@ -184,9 +184,9 @@
 /* ========== Header Enhancement ========== */
 .site-header {
   position: relative;
-  
+
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -207,7 +207,7 @@
   /* Already styled with cross-hatch pattern in _footer.scss */
 
   /* This ensures pattern sizing is consistent */
-  
+
   &::before {
     background-size: 120px 120px;
     background-repeat: repeat;
@@ -235,7 +235,7 @@
   .ts-hero::before {
     opacity: 0.8;
   }
-  
+
   .ts-services::before,
   .ts-portfolio::before,
   .ts-testimonials::before {
@@ -263,7 +263,7 @@
   .ts-hero::before {
     opacity: 0.7;
   }
-  
+
   .ts-services::before,
   .ts-testimonials::before {
     opacity: 0.15;

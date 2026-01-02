@@ -22,6 +22,7 @@ This document historically provided technical and regulatory guidance for AI age
 ## 2024-2025 Key Compliance Updates
 
 ### Large Format Tile (LFT)
+
 - **Definition**: ≥15" on any side (TCNA 2024)
 - **Coverage**: 95% thinset (ANSI A108.5-2024)
 - **Mortar**: Modified, ISO 13007 C2 minimum
@@ -29,17 +30,20 @@ This document historically provided technical and regulatory guidance for AI age
 - **Substrate flatness**: 1/8" in 10' (rectified)
 
 ### Gauged Porcelain Tile Panels (GPTP)
+
 - **Thickness**: 3–6mm, up to 5'×10'
 - **Mortar**: ANSI A118.15, polymer-modified
 - **Trowel**: 1/2" × 1/2" square notch minimum
 
 ### Waterproofing
+
 - **Membranes**: ANSI A118.10 compliant (sheet or liquid)
 - **Crack isolation**: Recommended for all floors
 - **Cure times**: 24–72 hours (per product)
 - **Shower pan**: IRC P2709, waterproofing 3" above showerhead rough-in
 
 ### Substrate & Underlayment
+
 - **Deflection**: L/360 (floors)
 - **Concrete**: 28-day cure minimum
 - **CBU**: Required in wet areas, 1/2" thickness
@@ -90,7 +94,7 @@ This document historically provided technical and regulatory guidance for AI age
 - **List multiple product options (NJ suppliers)**
 - **Use professional, accessible language**
 - **Distinguish Tillerstead’s technical edge:**
-   - TCNA-literate, New Jersey HIC-compliant, modern methods, zero shortcuts
+  - TCNA-literate, New Jersey HIC-compliant, modern methods, zero shortcuts
 
 ## Red Flags
 
@@ -114,4 +118,3 @@ This document historically provided technical and regulatory guidance for AI age
 **For current, authoritative instructions, see [/.ai/DOMAIN.md](../../.ai/DOMAIN.md) and the centralized `.ai/` directory. All AI outputs must comply with the latest standards, file naming, accessibility, and legal requirements as defined in `/.ai/OUTPUT_RULES.md` and `/.ai/STYLE.md`.**
 
 _Last updated: December 2024. Source: TCNA Handbook 2024, ANSI A108/A118/A137, New Jersey HIC Regulations._
-

@@ -9,15 +9,18 @@
 ## Homepage Not Updating After Edits
 
 ### Problem
+
 You’ve modified source files, but the homepage remains unchanged after refresh.
 
 ### Root Cause
+
 Jekyll is a **static site generator**—all changes to:
+
 - HTML, Liquid templates (`_includes/`, `_layouts/`)
 - SCSS/CSS (`_sass/`, `assets/css/`)
 - Data (`_data/`)
 - Configuration (`_config.yml`)
-require a full rebuild to propagate.
+  require a full rebuild to propagate.
 
 ### Solution
 
@@ -43,16 +46,18 @@ npm run dev
    - Outputs accessible, standards-compliant HTML to `_site/`
    - Copies assets to `_site/assets/`
 
-3. **Result:**  
+3. **Result:**
    - `_site/` contains the latest, production-ready site
 
 #### Common Pitfalls
 
 **Avoid:**
+
 - Editing files and refreshing the browser without rebuilding
 - Modifying files directly in `_site/` (these are overwritten on build)
 
 **Do:**
+
 - Edit only source files
 - Run `npm run build` after changes
 - Confirm updates in `_site/`
@@ -86,6 +91,7 @@ npm run dev
 #### CI/CD Pipeline
 
 On push to `main`, GitHub Actions:
+
 1. Runs all linters (ESLint, HTMLHint)
 2. Compiles CSS
 3. Builds Jekyll site
@@ -98,6 +104,7 @@ On push to `main`, GitHub Actions:
 ## CSS Not Updating
 
 ### Symptoms
+
 - SCSS changes not reflected in browser
 - Outdated styles persist
 
@@ -117,6 +124,7 @@ npm run build
 #### Cache Busting
 
 If styles still don’t update:
+
 - **Chrome/Edge:** Ctrl+Shift+R (Cmd+Shift+R on Mac)
 - **Firefox:** Ctrl+F5
 - **Safari:** Cmd+Option+R
@@ -126,6 +134,7 @@ If styles still don’t update:
 ## Jekyll Template or Config Changes Not Showing
 
 ### Check:
+
 - `_includes/` (partials)
 - `_layouts/` (layouts)
 - `_config.yml` (site config)
@@ -146,11 +155,15 @@ npm run dev
 ### SVG Logos
 
 SVGs are aggressively cached. To update:
+
 1. **Hard refresh** (Ctrl+Shift+R)
 2. **Clear browser cache**
 3. **Add version query string** (temporary):
    ```html
-   <img src="/assets/img/logo.svg?v=2" alt="Tillerstead logo: TCNA-compliant tilework">
+   <img
+     src="/assets/img/logo.svg?v=2"
+     alt="Tillerstead logo: TCNA-compliant tilework"
+   />
    ```
 
 ### PNG Generation
@@ -161,8 +174,9 @@ To generate high-quality PNGs from SVGs:
 node scripts/generate-png-logos.js
 ```
 
-**Dependencies:**  
-- ImageMagick (recommended):  
+**Dependencies:**
+
+- ImageMagick (recommended):
   ```bash
   sudo apt-get update && sudo apt-get install -y imagemagick
   ```
@@ -228,7 +242,7 @@ diff assets/css/main.css _site/assets/css/main.css
   - `npx htmlhint '**/*.html'`
   - `npx eslint .`
   - Jekyll build (`bundle exec jekyll build`)
-- Meet performance targets:  
+- Meet performance targets:
   - LCP < 2.5s, TTI < 3s, CLS < 0.1 (see OUTPUT_RULES.md)
 
 ---
@@ -244,4 +258,3 @@ diff assets/css/main.css _site/assets/css/main.css
 
 **Tillerstead: TCNA-literate, New Jersey HIC-compliant, and committed to technical excellence.**  
 Every build, every pixel—no shortcuts, no technical debt.
-

@@ -36,4 +36,3 @@ Tillerstead LLC is a New Jersey-licensed home improvement contractor specializin
 ---
 
 ## Repository Structure
-

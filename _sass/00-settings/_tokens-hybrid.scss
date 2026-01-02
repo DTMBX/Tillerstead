@@ -21,96 +21,96 @@
      🎨 CORE HEX COLOR LIBRARY
      Consolidated repeated colors
      =========================== */
-  
+
   /* Brand Teals */
-  --hex-teal-900: #078930;        /* Rasta green - replaces teal */
-  --hex-teal-700: #078930;        /* Rasta green */
-  --hex-teal-600: #078930;        /* Rasta green */
-  --hex-teal-500: #078930;        /* Rasta green */
-  --hex-teal-400: #078930;        /* Rasta green */
-  --hex-teal-300: #078930;        /* Rasta green */
-  --hex-teal-200: #078930;        /* Rasta green */
-  --hex-teal-100: #078930;        /* Rasta green */
-  --hex-teal-50: #078930;         /* Rasta green */
-  --hex-teal-dark: #078930;       /* Rasta green */
-  --hex-teal-deeper: #078930;     /* Rasta green */
-  
+  --hex-teal-900: #078930; /* Rasta green - replaces teal */
+  --hex-teal-700: #078930; /* Rasta green */
+  --hex-teal-600: #078930; /* Rasta green */
+  --hex-teal-500: #078930; /* Rasta green */
+  --hex-teal-400: #078930; /* Rasta green */
+  --hex-teal-300: #078930; /* Rasta green */
+  --hex-teal-200: #078930; /* Rasta green */
+  --hex-teal-100: #078930; /* Rasta green */
+  --hex-teal-50: #078930; /* Rasta green */
+  --hex-teal-dark: #078930; /* Rasta green */
+  --hex-teal-deeper: #078930; /* Rasta green */
+
   /* Warm Neutrals & Creams */
-  --hex-cream-warm: #fffbe6;      /* Warm cream - 25 uses */
-  --hex-cream-light: #fffbeb;     /* Light cream - 12 uses */
-  --hex-cream-soft: #f9f5eb;      /* Soft cream - 10 uses */
-  --hex-cream-muted: #f0ead8;     /* Muted cream - 4 uses */
-  --hex-amber-pale: #fef3c7;      /* Pale amber - 6 uses */
-  --hex-amber-light: #fff9c4;     /* Light amber - 10 uses */
-  --hex-amber-bright: #fcd34d;    /* Bright amber - 4 uses */
-  
+  --hex-cream-warm: #fffbe6; /* Warm cream - 25 uses */
+  --hex-cream-light: #fffbeb; /* Light cream - 12 uses */
+  --hex-cream-soft: #f9f5eb; /* Soft cream - 10 uses */
+  --hex-cream-muted: #f0ead8; /* Muted cream - 4 uses */
+  --hex-amber-pale: #fef3c7; /* Pale amber - 6 uses */
+  --hex-amber-light: #fff9c4; /* Light amber - 10 uses */
+  --hex-amber-bright: #fcd34d; /* Bright amber - 4 uses */
+
   /* Golds & Yellows */
-  --hex-gold-rich: #FCDD09;       /* Rasta gold - replaces gold */
-  --hex-gold-warm: #FCDD09;       /* Rasta gold */
-  --hex-gold-muted: #FCDD09;      /* Rasta gold */
-  --hex-gold-deep: #FCDD09;       /* Rasta gold */
-  
+  --hex-gold-rich: #fcdd09; /* Rasta gold - replaces gold */
+  --hex-gold-warm: #fcdd09; /* Rasta gold */
+  --hex-gold-muted: #fcdd09; /* Rasta gold */
+  --hex-gold-deep: #fcdd09; /* Rasta gold */
+
   /* Coral & Sunset */
-  --hex-coral-bright: #ff8461;    /* Bright coral - 8 uses */
-  --hex-coral-medium: #e86f4e;    /* Medium coral - 4 uses */
-  --hex-coral-deep: #c85a3d;      /* Deep coral - 4 uses */
-  --hex-coral-light: #ff9d7d;     /* Light coral - 4 uses */
-  --hex-coral-pale: #ffe4dc;      /* Pale coral - 4 uses */
-  --hex-coral-softest: #fff5f2;   /* Softest coral - 4 uses */
-  
+  --hex-coral-bright: #ff8461; /* Bright coral - 8 uses */
+  --hex-coral-medium: #e86f4e; /* Medium coral - 4 uses */
+  --hex-coral-deep: #c85a3d; /* Deep coral - 4 uses */
+  --hex-coral-light: #ff9d7d; /* Light coral - 4 uses */
+  --hex-coral-pale: #ffe4dc; /* Pale coral - 4 uses */
+  --hex-coral-softest: #fff5f2; /* Softest coral - 4 uses */
+
   /* Greens - Success & Nature */
-  --hex-green-mint: #ecfdf5;      /* Mint green - 8 uses */
-  --hex-green-light: #d1fae5;     /* Light green - 6 uses */
-  --hex-green-bright: var(--color-success-500);    /* Bright green - 4 uses */
-  --hex-green-teal: #1fbf7a;      /* Teal green - 4 uses */
-  --hex-green-forest: #0b5a34;    /* Forest green - 4 uses */
-  
+  --hex-green-mint: #ecfdf5; /* Mint green - 8 uses */
+  --hex-green-light: #d1fae5; /* Light green - 6 uses */
+  --hex-green-bright: var(--color-success-500); /* Bright green - 4 uses */
+  --hex-green-teal: #1fbf7a; /* Teal green - 4 uses */
+  --hex-green-forest: #0b5a34; /* Forest green - 4 uses */
+
   /* Blues */
-  --hex-blue-navy: var(--color-navy-800);       /* Navy blue - 24 uses */
-  --hex-blue-deep: var(--color-navy-600);       /* Deep blue - 8 uses */
-  --hex-blue-bright: #4A90E2;     /* Bright blue - 10 uses */
-  --hex-blue-sky: #7fd1ff;        /* Sky blue - 4 uses */
-  --hex-blue-pale: #e0f2fe;       /* Pale blue - 4 uses */
-  
+  --hex-blue-navy: var(--color-navy-800); /* Navy blue - 24 uses */
+  --hex-blue-deep: var(--color-navy-600); /* Deep blue - 8 uses */
+  --hex-blue-bright: #4a90e2; /* Bright blue - 10 uses */
+  --hex-blue-sky: #7fd1ff; /* Sky blue - 4 uses */
+  --hex-blue-pale: #e0f2fe; /* Pale blue - 4 uses */
+
   /* Reds - Alerts & Accents */
-  --hex-red-blood: #DA121A;          /* Rasta red - replaces red */
-  --hex-red-bright: #DA121A;      /* Rasta red */
-  --hex-red-error: #DA121A;       /* Rasta red */
-  --hex-red-deep: #DA121A;        /* Rasta red */
-  --hex-red-dark: #DA121A;        /* Rasta red */
-  
+  --hex-red-blood: #da121a; /* Rasta red - replaces red */
+  --hex-red-bright: #da121a; /* Rasta red */
+  --hex-red-error: #da121a; /* Rasta red */
+  --hex-red-deep: #da121a; /* Rasta red */
+  --hex-red-dark: #da121a; /* Rasta red */
+
   /* Slate Grays */
-  --hex-slate-900: var(--color-slate-800);       /* Darkest slate - 8 uses */
-  --hex-slate-700: var(--color-slate-700);       /* Dark slate - 4 uses */
-  --hex-slate-600: var(--color-slate-600);       /* Medium slate - 5 uses */
-  --hex-slate-500: var(--color-slate-500);       /* Mid slate - 9 uses */
-  --hex-slate-400: var(--color-slate-400);       /* Light slate - 3 uses */
-  --hex-slate-300: var(--color-slate-300);       /* Lighter slate - 3 uses */
-  --hex-slate-200: var(--color-slate-200);       /* Very light slate - 12 uses */
-  --hex-slate-100: var(--color-slate-100);       /* Almost white slate - 5 uses */
-  --hex-slate-50: var(--color-slate-50);        /* Lightest slate - 9 uses */
-  
+  --hex-slate-900: var(--color-slate-800); /* Darkest slate - 8 uses */
+  --hex-slate-700: var(--color-slate-700); /* Dark slate - 4 uses */
+  --hex-slate-600: var(--color-slate-600); /* Medium slate - 5 uses */
+  --hex-slate-500: var(--color-slate-500); /* Mid slate - 9 uses */
+  --hex-slate-400: var(--color-slate-400); /* Light slate - 3 uses */
+  --hex-slate-300: var(--color-slate-300); /* Lighter slate - 3 uses */
+  --hex-slate-200: var(--color-slate-200); /* Very light slate - 12 uses */
+  --hex-slate-100: var(--color-slate-100); /* Almost white slate - 5 uses */
+  --hex-slate-50: var(--color-slate-50); /* Lightest slate - 9 uses */
+
   /* Dark Neutrals */
-  --hex-charcoal: var(--ts-color-heading);        /* Charcoal - 38 uses */
-  --hex-charcoal-green: #1c231f;  /* Charcoal with green - 18 uses */
-  --hex-charcoal-deep: #0f1713;   /* Deep charcoal - 4 uses */
-  --hex-charcoal-blue: var(--color-navy-900);   /* Blue charcoal - 6 uses */
-  --hex-gray-dark: #3a413c;       /* Dark gray - 6 uses */
-  --hex-gray-medium: #58615c;     /* Medium gray - 4 uses */
-  
+  --hex-charcoal: var(--ts-color-heading); /* Charcoal - 38 uses */
+  --hex-charcoal-green: #1c231f; /* Charcoal with green - 18 uses */
+  --hex-charcoal-deep: #0f1713; /* Deep charcoal - 4 uses */
+  --hex-charcoal-blue: var(--color-navy-900); /* Blue charcoal - 6 uses */
+  --hex-gray-dark: #3a413c; /* Dark gray - 6 uses */
+  --hex-gray-medium: #58615c; /* Medium gray - 4 uses */
+
   /* Pure & Near-Pure */
-  --hex-white: var(--ts-white);           /* Pure white - 90 uses */
-  --hex-white-alt: var(--ts-white);          /* White short - 17 uses */
-  --hex-black: var(--ts-color-ink);           /* Pure black - 7 uses */
-  --hex-black-alt: var(--ts-color-ink);          /* Black short - 2 uses */
-  --hex-off-white: #f8f9fa;       /* Off white - 10 uses */
-  --hex-snow: #fafbfc;            /* Snow white - 6 uses */
+  --hex-white: var(--ts-white); /* Pure white - 90 uses */
+  --hex-white-alt: var(--ts-white); /* White short - 17 uses */
+  --hex-black: var(--ts-color-ink); /* Pure black - 7 uses */
+  --hex-black-alt: var(--ts-color-ink); /* Black short - 2 uses */
+  --hex-off-white: #f8f9fa; /* Off white - 10 uses */
+  --hex-snow: #fafbfc; /* Snow white - 6 uses */
 
   /* ===========================
      🎯 PRIMARY BRAND COLORS
      Professional + Trustworthy
      =========================== */
-  
+
   /* Tile Professional Teal - Main brand identity */
   --color-brand-teal-50: var(--hex-teal-50);
   --color-brand-teal-100: var(--hex-teal-100);
@@ -124,7 +124,7 @@
      🌅 NOSTALGIC WARMTH
      Sunset tones - approachable, memorable
      =========================== */
-  
+
   /* Sunset Coral (not too orange, not too pink) */
   --color-sunset-50: var(--hex-coral-softest);
   --color-sunset-100: var(--hex-coral-pale);
@@ -145,7 +145,7 @@
      🎪 STRATEGIC ENERGY POPS
      Use sparingly for impact
      =========================== */
-  
+
   /* Success Green (fresh, positive) */
   --color-success-50: var(--hex-green-mint);
   --color-success-100: var(--hex-green-light);
@@ -169,7 +169,7 @@
      📐 REFINED NEUTRALS
      Clean, professional foundation
      =========================== */
-  
+
   --color-slate-50: var(--hex-slate-50);
   --color-slate-100: var(--hex-slate-100);
   --color-slate-200: var(--hex-slate-200);
@@ -180,7 +180,7 @@
   --color-slate-700: var(--hex-slate-700);
   --color-slate-800: var(--hex-slate-900);
   --color-slate-900: var(--hex-charcoal);
-  
+
   /* Pure colors */
   --ts-white: #ffffff;
   --ts-black: var(--hex-black);
@@ -233,7 +233,7 @@
   /* ===========================
      📄 SURFACES & BACKGROUNDS
      =========================== */
-  
+
   --ts-color-bg: var(--color-slate-50);
   --ts-color-surface: var(--ts-white);
   --ts-color-surface-muted: var(--color-slate-100);
@@ -246,7 +246,7 @@
   /* ===========================
      ✍️ TEXT COLORS
      =========================== */
-  
+
   --ts-color-text: var(--color-slate-900);
   --ts-color-heading: var(--color-slate-900);
   --ts-color-muted: var(--color-slate-600);
@@ -259,7 +259,7 @@
   /* ===========================
      🖌️ BORDERS & DIVIDERS
      =========================== */
-  
+
   --ts-color-border: var(--color-slate-200);
   --ts-color-border-strong: var(--color-slate-300);
   --ts-color-divider: var(--color-slate-200);
@@ -272,7 +272,7 @@
      🌅 GRADIENT SYSTEMS
      Subtle, professional, memorable
      =========================== */
-  
+
   /* Hero gradient (professional depth) */
   --color-gradient-hero: linear-gradient(
     135deg,
@@ -312,12 +312,12 @@
      ✨ SHADOWS & DEPTH
      Modern but approachable
      =========================== */
-  
+
   /* Soft shadows (most common) */
   --color-shadow-xs: 0 1px 2px rgb(0, 0, 0, 0.05);
   --color-shadow-sm: 0 2px 4px rgb(0, 0, 0, 0.06);
   --color-shadow-md: 0 4px 8px rgb(0, 0, 0, 0.08);
-  --color-shadow-lg: 0 8px 16px rgb(0, 0, 0, 0.10);
+  --color-shadow-lg: 0 8px 16px rgb(0, 0, 0, 0.1);
   --color-shadow-xl: 0 12px 24px rgb(0, 0, 0, 0.12);
 
   /* Cartoon offset (use sparingly for badges/buttons) */
@@ -343,12 +343,15 @@
      🎭 TYPOGRAPHY
      Modern, readable, accessible
      =========================== */
-  
-  --font-heading: "Montserrat", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --font-heading:
+    "Montserrat", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-sans: var(--font-body);
   --font-display: var(--font-heading);
-  --font-mono: "IBM Plex Mono", sfmono-regular, menlo, monaco, consolas, "Liberation Mono", monospace;
+  --font-mono:
+    "IBM Plex Mono", sfmono-regular, menlo, monaco, consolas, "Liberation Mono",
+    monospace;
 
   --font-size-xs: 0.78rem;
   --font-size-sm: 0.92rem;
@@ -381,25 +384,25 @@
      📏 SPACING SCALE
      Consistent 8px base grid
      =========================== */
-  
-  --ts-spacing-xs: 0.5rem;    /* 8px */
-  --ts-spacing-sm: 0.75rem;   /* 12px */
-  --ts-spacing-md: 1.25rem;   /* 20px */
-  --ts-spacing-lg: 2rem;      /* 32px */
-  --ts-spacing-xl: 3rem;      /* 48px */
-  --ts-spacing-2xl: 4rem;     /* 64px */
-  --ts-spacing-3xl: 5rem;     /* 80px */
-  --ts-spacing-4xl: 6rem;     /* 96px */
-  --ts-spacing-5xl: 8rem;     /* 128px */
 
-  --spacing-space-1: 0.25rem;   /* 4px */
-  --spacing-space-2: 0.5rem;    /* 8px */
-  --spacing-space-3: 0.75rem;   /* 12px */
-  --spacing-space-4: 1rem;      /* 16px */
-  --spacing-space-5: 1.25rem;   /* 20px */
-  --spacing-space-6: 1.5rem;    /* 24px */
-  --spacing-space-7: 2rem;      /* 32px */
-  --spacing-space-8: 2.5rem;    /* 40px */
+  --ts-spacing-xs: 0.5rem; /* 8px */
+  --ts-spacing-sm: 0.75rem; /* 12px */
+  --ts-spacing-md: 1.25rem; /* 20px */
+  --ts-spacing-lg: 2rem; /* 32px */
+  --ts-spacing-xl: 3rem; /* 48px */
+  --ts-spacing-2xl: 4rem; /* 64px */
+  --ts-spacing-3xl: 5rem; /* 80px */
+  --ts-spacing-4xl: 6rem; /* 96px */
+  --ts-spacing-5xl: 8rem; /* 128px */
+
+  --spacing-space-1: 0.25rem; /* 4px */
+  --spacing-space-2: 0.5rem; /* 8px */
+  --spacing-space-3: 0.75rem; /* 12px */
+  --spacing-space-4: 1rem; /* 16px */
+  --spacing-space-5: 1.25rem; /* 20px */
+  --spacing-space-6: 1.5rem; /* 24px */
+  --spacing-space-7: 2rem; /* 32px */
+  --spacing-space-8: 2.5rem; /* 40px */
 
   --spacing-hero-padding-mobile: clamp(3rem, 5vw, 4rem);
   --spacing-hero-padding-desktop: clamp(4rem, 8vw, 6rem);
@@ -410,12 +413,12 @@
      🎨 BORDER RADIUS
      Friendly but professional
      =========================== */
-  
-  --ts-radius-sm: 0.375rem;   /* 6px - small elements like badges */
-  --ts-radius-md: 1.125rem;   /* 18px - medium elements */
-  --ts-radius-lg: 2.0625rem;  /* 33px - large containers/sections */
-  --ts-radius-xl: 2.0625rem;  /* 33px - extra large (same as lg for consistency) */
-  --tiller-radius-2xl: 2.0625rem;      /* 33px */
+
+  --ts-radius-sm: 0.375rem; /* 6px - small elements like badges */
+  --ts-radius-md: 1.125rem; /* 18px - medium elements */
+  --ts-radius-lg: 2.0625rem; /* 33px - large containers/sections */
+  --ts-radius-xl: 2.0625rem; /* 33px - extra large (same as lg for consistency) */
+  --tiller-radius-2xl: 2.0625rem; /* 33px */
   --ts-radius-pill: 9999px;
   --tiller-radius-large: 33px;
   --ts-radius-card: var(--ts-radius-lg); /* 33px */
@@ -424,7 +427,7 @@
      ⚡ ANIMATION & TRANSITIONS
      Smooth, snappy, professional
      =========================== */
-  
+
   --tiller-ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --tiller-ease-snappy: cubic-bezier(0.4, 0, 0.6, 1);
   --tiller-ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -441,7 +444,7 @@
   /* ===========================
      📐 LAYOUT & CONTAINERS
      =========================== */
-  
+
   --spacing-container: 1100px;
   --tiller-container-sm: 640px;
   --tiller-container-md: 768px;
@@ -458,7 +461,7 @@
   --spacing-section-pad-y: clamp(2.5rem, 6vi, 5.25rem);
   --spacing-section-padding-y: var(--spacing-section-pad-y);
   --spacing-section-gap: clamp(1.4rem, 2.6vw, 2.6rem);
-  
+
   --spacing-card-pad: clamp(1.125rem, 2vi, 1.625rem);
   --spacing-gutter: clamp(1.5rem, 3.5vi, 2.5rem);
   --spacing-grid-gap: clamp(1.5rem, 3vi, 2.5rem);
@@ -467,7 +470,7 @@
   /* ===========================
      🎪 HEADER & FOOTER
      =========================== */
-  
+
   --tiller-header-bg: rgb(255, 255, 255, 0.95);
   --tiller-header-border: rgb(13, 154, 170, 0.18);
 
@@ -484,7 +487,7 @@
   /* ===========================
      🎭 HERO SECTION
      =========================== */
-  
+
   --spacing-hero-bg: var(--tiller-gradient-hero);
   --spacing-hero-text: var(--ts-white);
   --spacing-hero-text-muted: rgb(255, 255, 255, 0.85);
@@ -493,7 +496,7 @@
      📦 BACKGROUND PATTERNS
      Subtle, professional texture
      =========================== */
-  
+
   --ts-bg-pattern: none;
   --ts-bg-pattern-size: 220px 220px;
   --ts-bg-pattern-opacity: 0;
@@ -502,7 +505,7 @@
   /* ===========================
      🎯 Z-INDEX SCALE
      =========================== */
-  
+
   --z-base: 0;
   --z-dropdown: 1000;
   --z-sticky: 1100;
@@ -516,7 +519,7 @@
      🔄 LEGACY ALIASES
      For backward compatibility
      =========================== */
-  
+
   --color-bg: var(--ts-color-bg);
   --color-surface: var(--ts-color-surface);
   --color-surface-muted: var(--ts-color-surface-muted);
@@ -548,7 +551,7 @@
      🎨 EMERALD LEGACY SUPPORT
      Map to new teal system
      =========================== */
-  
+
   --color-emerald-600: var(--color-brand-teal-600);
   --color-emerald-700: var(--color-brand-teal-700);
   --ts-emerald: var(--color-brand-teal-500);
@@ -581,28 +584,62 @@
    Quick access to hybrid system
    =========================== */
 
-.gradient-hero { background: var(--tiller-gradient-hero); }
-.gradient-warm { background: var(--tiller-gradient-warm); }
-.gradient-sunrise { background: var(--tiller-gradient-sunrise); }
+.gradient-hero {
+  background: var(--tiller-gradient-hero);
+}
+.gradient-warm {
+  background: var(--tiller-gradient-warm);
+}
+.gradient-sunrise {
+  background: var(--tiller-gradient-sunrise);
+}
 
-.shadow-soft { box-shadow: var(--color-shadow-md); }
-.shadow-lift { box-shadow: var(--color-shadow-lg); }
-.shadow-comic-sm { box-shadow: var(--color-shadow-comic-sm); }
-.shadow-comic-md { box-shadow: var(--color-shadow-comic-md); }
+.shadow-soft {
+  box-shadow: var(--color-shadow-md);
+}
+.shadow-lift {
+  box-shadow: var(--color-shadow-lg);
+}
+.shadow-comic-sm {
+  box-shadow: var(--color-shadow-comic-sm);
+}
+.shadow-comic-md {
+  box-shadow: var(--color-shadow-comic-md);
+}
 
-.glow-teal { box-shadow: var(--color-shadow-glow-teal); }
-.glow-warm { box-shadow: var(--color-shadow-glow-warm); }
+.glow-teal {
+  box-shadow: var(--color-shadow-glow-teal);
+}
+.glow-warm {
+  box-shadow: var(--color-shadow-glow-warm);
+}
 
-.border-accent { border: var(--ts-border-accent); }
-.border-thick { border: var(--ts-border-thick); }
+.border-accent {
+  border: var(--ts-border-accent);
+}
+.border-thick {
+  border: var(--ts-border-thick);
+}
 
-.text-teal { color: var(--tiller-brand-teal-600); }
-.text-warm { color: var(--color-sunset-500); }
-.text-golden { color: var(--tiller-golden-500); }
+.text-teal {
+  color: var(--tiller-brand-teal-600);
+}
+.text-warm {
+  color: var(--color-sunset-500);
+}
+.text-golden {
+  color: var(--tiller-golden-500);
+}
 
-.bg-teal-soft { background: var(--tiller-brand-teal-50); }
-.bg-warm-soft { background: var(--color-sunset-50); }
-.bg-golden-soft { background: var(--tiller-golden-50); }
+.bg-teal-soft {
+  background: var(--tiller-brand-teal-50);
+}
+.bg-warm-soft {
+  background: var(--color-sunset-50);
+}
+.bg-golden-soft {
+  background: var(--tiller-golden-50);
+}
 
 /* ============================================
    🎉 END OF HYBRID DESIGN SYSTEM

@@ -49,28 +49,32 @@ Build failed: (<unknown>): could not find expected ':' while scanning a simple k
 Since Jekyll build was broken and couldn't generate the pages:
 
 ### Step 1: Fixed Markdown Link
+
 - Changed link in `pages/build/index.md` line 80
 - From: `/pages/build/common-failures/`
 - To: `/pages/build/common-build-failures/`
 - Reason: File is named `common-build-failures.md` with that permalink
 
 ### Step 2: Created Static HTML Pages
+
 Created 9 static HTML files in `_site/pages/build/`:
 
-| File | Title | Purpose |
-|------|-------|---------|
-| index.html | Build Phase Hub | Navigation & overview |
-| nj-codes-permits.html | Step 1: Codes, Permits & Inspections | Legal requirements |
-| shower-pans-slopes-drains.html | Step 2: Shower Pans & Slopes | Water management |
-| waterproofing-systems.html | Step 3: Waterproofing | Protection layers |
-| curbs-curbless.html | Step 4: Curbs & Curbless | Entry containment |
-| framing-benches-niches.html | Step 5: Framing | Structural prep |
-| tile-installation-standards.html | Step 6: Tile Installation | Bonding & coverage |
-| flood-testing.html | Step 7: Flood Testing | Verification |
-| common-build-failures.html | Step 8: Failures & Red Flags | Problem prevention |
+| File                             | Title                                | Purpose               |
+| -------------------------------- | ------------------------------------ | --------------------- |
+| index.html                       | Build Phase Hub                      | Navigation & overview |
+| nj-codes-permits.html            | Step 1: Codes, Permits & Inspections | Legal requirements    |
+| shower-pans-slopes-drains.html   | Step 2: Shower Pans & Slopes         | Water management      |
+| waterproofing-systems.html       | Step 3: Waterproofing                | Protection layers     |
+| curbs-curbless.html              | Step 4: Curbs & Curbless             | Entry containment     |
+| framing-benches-niches.html      | Step 5: Framing                      | Structural prep       |
+| tile-installation-standards.html | Step 6: Tile Installation            | Bonding & coverage    |
+| flood-testing.html               | Step 7: Flood Testing                | Verification          |
+| common-build-failures.html       | Step 8: Failures & Red Flags         | Problem prevention    |
 
 ### Step 3: SEO & Metadata
+
 Each HTML page includes:
+
 - Valid meta tags (description, viewport)
 - Canonical URLs (for SEO)
 - Open Graph tags (for social sharing)
@@ -97,12 +101,12 @@ All 9 Build Phase guides are accessible at:
 
 ## Commits Pushed
 
-| Commit | Message | Status |
-|--------|---------|--------|
+| Commit  | Message                                             | Status    |
+| ------- | --------------------------------------------------- | --------- |
 | 828675e | feat: Complete Tillerstead repository modernization | ✅ Pushed |
-| 2ecfe27 | fix: regenerate package-lock.json | ✅ Pushed |
-| 0ecb5b6 | docs: add package-lock.json fix documentation | ✅ Pushed |
-| 5874d95 | fix: correct Build Phase link in index.md | ✅ Pushed |
+| 2ecfe27 | fix: regenerate package-lock.json                   | ✅ Pushed |
+| 0ecb5b6 | docs: add package-lock.json fix documentation       | ✅ Pushed |
+| 5874d95 | fix: correct Build Phase link in index.md           | ✅ Pushed |
 
 ---
 
@@ -112,7 +116,7 @@ All 9 Build Phase guides are accessible at:
 **Build Pages:** ✅ ALL LIVE  
 **Links:** ✅ ALL WORKING  
 **SEO:** ✅ COMPLETE  
-**Deployment:** ✅ READY  
+**Deployment:** ✅ READY
 
 ---
 
@@ -129,16 +133,18 @@ All 9 Build Phase guides are accessible at:
 ### Why Static HTML Instead of Jekyll?
 
 The Jekyll build was failing with a YAML parsing error that:
+
 - Couldn't be traced to a specific file
 - Was unrelated to the recent refactoring
 - Prevented the entire site from building
 
 **Solution trade-off:**
+
 - ✅ Static HTML pages bypass Jekyll completely
 - ✅ Pages are guaranteed to load
 - ✅ No dependency on Jekyll build process
 - ✅ Can be served immediately by GitHub Pages / Netlify
-- ⚠️  Won't use Jekyll layouts (but can be added later if Jekyll is fixed)
+- ⚠️ Won't use Jekyll layouts (but can be added later if Jekyll is fixed)
 
 ### Future Improvement
 

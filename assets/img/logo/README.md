@@ -18,6 +18,7 @@ This directory contains all official Tillerstead LLC branding assets optimized f
 ```
 
 Available symbols:
+
 - `logo-mark` / `logo-mark-mono` – Icon only
 - `logo-full` / `logo-full-mono` – Full horizontal logo
 - `logo-stacked` / `logo-stacked-mono` – Vertical stacked
@@ -38,33 +39,33 @@ Available symbols:
 
 - **`tillerstead-logo-full.svg`**  
   Complete logo with tagline and New Jersey HIC license  
-  *Use: Marketing materials, hero sections*
+  _Use: Marketing materials, hero sections_
 
 - **`tillerstead-logo-stacked.svg`**  
   Vertical/stacked version for narrow spaces  
-  *Use: Sidebars, mobile layouts, vertical banners*
+  _Use: Sidebars, mobile layouts, vertical banners_
 
 ### Icon/Mark Logos
 
 - **`tillerstead-logo-mark.svg`**  
   Standalone tile "T" mark  
-  *Use: Favicons, app icons, social media avatars*
+  _Use: Favicons, app icons, social media avatars_
 
 - **`tillerstead-logo-mark-with-word.svg`**  
   Compact lockup with wordmark  
-  *Use: Inline contexts, compact headers*
+  _Use: Inline contexts, compact headers_
 
 ### Inverse/Dark Theme
 
 - **`tillerstead-inverse.svg`**  
   Light-on-dark inverse logo  
-  *Use: Dark backgrounds, footer, overlays*
+  _Use: Dark backgrounds, footer, overlays_
 
 ### Favicon
 
 - **`tillerstead-favicon.svg`**  
   Optimized favicon base mark  
-  *Use: Browser tabs, bookmarks*
+  _Use: Browser tabs, bookmarks_
 
 ---
 
@@ -74,6 +75,7 @@ Available symbols:
 Complete SVG symbol sprite with all logo variants.
 
 **Benefits:**
+
 - Single HTTP request (cached)
 - CSS variable theming
 - Consistent rendering
@@ -87,11 +89,11 @@ Complete SVG symbol sprite with all logo variants.
 
 ### Minimum Sizes
 
-| Logo Type | Minimum Width |
-|-----------|---------------|
-| Mark Only | 48px |
-| Full Logo | 180px |
-| Stacked Logo | 120px |
+| Logo Type    | Minimum Width |
+| ------------ | ------------- |
+| Mark Only    | 48px          |
+| Full Logo    | 180px         |
+| Stacked Logo | 120px         |
 
 ### Color Specifications
 
@@ -109,18 +111,22 @@ See [/.ai/STYLE.md](/.ai/STYLE.md) for official brand standards.
 ## 🚀 Performance
 
 All SVG files are:
+
 - Optimized and minified
 - Accessible (ARIA labels included)
 - Responsive (viewBox-based scaling)
 - Cacheable (immutable URLs)
 
 **Sprite preload** (in `_includes/head.html`):
+
 ```html
-<link rel="preload" 
-      as="image" 
-      href="/assets/img/logo/tillerstead-logo-sprite.svg" 
-      type="image/svg+xml" 
-      fetchpriority="high">
+<link
+  rel="preload"
+  as="image"
+  href="/assets/img/logo/tillerstead-logo-sprite.svg"
+  type="image/svg+xml"
+  fetchpriority="high"
+/>
 ```
 
 ---
@@ -135,4 +141,3 @@ All SVG files are:
 
 **New Jersey HIC**: #13VH10808800  
 **Last Updated**: 2025-12-26
-

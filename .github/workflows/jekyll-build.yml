@@ -16,15 +16,15 @@ jobs:
       - name: Set Up Ruby (TCNA/New Jersey HIC Standards)
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
-          bundler: '2.4.19'
+          ruby-version: "3.2"
+          bundler: "2.4.19"
           bundler-cache: true
 
       - name: Set Up Node.js (Linting & Asset Pipeline)
         uses: actions/setup-node@v4
         with:
-          node-version: '24'
-          cache: 'npm'
+          node-version: "24"
+          cache: "npm"
 
       - name: Install Node.js Dependencies
         run: npm ci
@@ -51,6 +51,3 @@ jobs:
 
       - name: Check for Broken Internal Links (No Dead Ends)
         run: node scripts/check-links.js
-
-
-

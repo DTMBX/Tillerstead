@@ -46,7 +46,9 @@
     "deploy:skip-tests": "pwsh -File deploy-to-stone.ps1 -SkipTests",
     "images:webp": "node scripts/convert-images-to-webp.js",
     "slugify": "node scripts/slugify.js",
-    "sync:thumbtack": "node scripts/sync_thumbtack_reviews.js"
+    "sync:thumbtack": "node scripts/sync_thumbtack_reviews.js",
+    "validate": "node scripts/validate-all.js",
+    "fix:encoding": "node scripts/fix-encoding.js"
   },
   "devDependencies": {
     "@hint/configuration-development": "^8.3.20",
@@ -76,6 +78,7 @@
     "node": ">=18.0.0"
   },
   "dependencies": {
+    "bootstrap": "^5.3.8",
     "commander": "^14.0.2"
   }
 }

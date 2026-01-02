@@ -9,7 +9,7 @@
 }
 
 .ts-hero--pattern-hexagon-tile {
-  background-image: url('/assets/img/patterns/hexagon-tile.svg');
+  background-image: url("/assets/img/patterns/hexagon-tile.svg");
   background-size: 120px 104px;
   background-repeat: repeat;
 }
@@ -27,7 +27,7 @@
 }
 
 .ts-hero--pattern-moroccan-tile {
-  background-image: url('/assets/img/patterns/moroccan-tile.svg');
+  background-image: url("/assets/img/patterns/moroccan-tile.svg");
   background-size: 100px 100px;
   background-repeat: repeat;
 }
@@ -37,7 +37,7 @@
 }
 
 .ts-hero--pattern-subway-tile {
-  background-image: url('/assets/img/patterns/subway-tile.svg');
+  background-image: url("/assets/img/patterns/subway-tile.svg");
   background-size: 180px 120px;
   background-repeat: repeat;
 }
@@ -74,8 +74,13 @@
 
 /* Animated pattern (optional) */
 @keyframes pattern-float {
-  0%, 100% { background-position: 0 0; }
-  50% { background-position: 20px 20px; }
+  0%,
+  100% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 20px 20px;
+  }
 }
 
 .pattern-animated {

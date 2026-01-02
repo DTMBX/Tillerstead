@@ -59,18 +59,22 @@ _sass/
 ## 🎨 Design System
 
 ### Color Strategy
+
 - **Primary**: Trustworthy teal (professional tile expert)
 - **Accents**: Warm sunset tones (nostalgic, approachable)
 - **Highlights**: Strategic pops of energy (memorable moments)
 - **Foundation**: Clean neutrals (readable, accessible)
 
 ### Typography
+
 - **Headlines**: Bold, confident, memorable
 - **Body**: Clean, readable, professional
 - **Accents**: Playful touches for personality
 
 ### Patterns
+
 Sacred geometric SVG patterns for subtle visual interest:
+
 - `pattern-sacred-geometry` - Hero backgrounds
 - `pattern-tile-crosshatch` - Alternating sections
 - `pattern-subtle-dots` - Cards & components
@@ -78,6 +82,7 @@ Sacred geometric SVG patterns for subtle visual interest:
 ## 🔧 Build Process
 
 All SCSS files are compiled via:
+
 ```bash
 npm run build:css
 ```
@@ -104,6 +109,7 @@ Main entry point: `assets/css/main.scss`
 ## 🎯 Active Design System
 
 **tokens-hybrid.scss** is the current active design system combining:
+
 - Professional credibility
 - Nostalgic warmth
 - Memorable personality
@@ -111,6 +117,7 @@ Main entry point: `assets/css/main.scss`
 ## 📦 Archived Files
 
 Files in `99-archive/` are previous iterations kept for reference:
+
 - Alternative theme variations
 - Experimental components
 - Deprecated utilities

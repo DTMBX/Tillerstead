@@ -9,24 +9,76 @@ hero_summary: >
 permalink: /portfolio/
 ---
 
-{% include content/ts-portfolio.html %}
+{% include content/ts-portfolio.html %} {% assign projects =
+site.data.portfolio.projects | default: [] %} {% assign total_projects =
+projects | size | plus: 0 %} {% assign fallback_src =
+'/assets/img/tillerstead-work/bathrooms/after-lft-vanity-wall.jpg' |
+relative_url %} {% assign fallback_alt = 'Large-format tile bathroom
+installation by Tillerstead LLC. Installed per TCNA standards with proper
+substrate prep, waterproofing, and expansion joints.' %} {% assign
+fallback_caption = 'All work meets TCNA and New Jersey HIC standards—precision
+installation, code-compliant waterproofing, and built for durability.' %}
 
-{% assign projects = site.data.portfolio.projects | default: [] %}
-{% assign total_projects = projects | size | plus: 0 %}
-{% assign fallback_src = '/assets/img/tillerstead-work/bathrooms/after-lft-vanity-wall.jpg' | relative_url %}
-{% assign fallback_alt = 'Large-format tile bathroom installation by Tillerstead LLC. Installed per TCNA standards with proper substrate prep, waterproofing, and expansion joints.' %}
-{% assign fallback_caption = 'All work meets TCNA and New Jersey HIC standards—precision installation, code-compliant waterproofing, and built for durability.' %}
-
-<section class="ts-section ts-surface portfolio-page" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cdefs%3E%3Cpattern id=\'tile-grid\' x=\'0\' y=\'0\' width=\'60\' height=\'60\' patternUnits=\'userSpaceOnUse\'%3E%3Cpath d=\'M30 0v60M0 30h60\' stroke=\'%23e0e7ed\' stroke-width=\'0.5\' fill=\'none\' opacity=\'0.3\'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'url(%23tile-grid)\'/%3E%3C/svg%3E');">
+<section
+  class="ts-section ts-surface portfolio-page"
+  style="
+    background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='tile-grid' x='0' y='0' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Cpath d='M30 0v60M0 30h60' stroke='%23e0e7ed' stroke-width='0.5' fill='none' opacity='0.3'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23tile-grid)'/%3E%3C/svg%3E&quot;);
+  "
+>
   <div class="container">
+    <!-- Peace of Mind Assurance -->
+    {% include components/ts-peace-of-mind.html %}
+
     <!-- Filters -->
     <div class="filters" role="tablist" aria-label="Portfolio filters">
-      <button class="chip is-active" role="tab" aria-selected="true" data-filter="all">All</button>
-      <button class="chip" role="tab" aria-selected="false" data-filter="showers">Showers</button>
-      <button class="chip" role="tab" aria-selected="false" data-filter="backsplashes">Backsplashes</button>
-      <button class="chip" role="tab" aria-selected="false" data-filter="floors">Floors</button>
-      <button class="chip" role="tab" aria-selected="false" data-filter="remodels">Remodels</button>
-      <button class="chip" role="tab" aria-selected="false" data-filter="repairs">Repairs</button>
+      <button
+        class="chip is-active"
+        role="tab"
+        aria-selected="true"
+        data-filter="all"
+      >
+        All
+      </button>
+      <button
+        class="chip"
+        role="tab"
+        aria-selected="false"
+        data-filter="showers"
+      >
+        Showers
+      </button>
+      <button
+        class="chip"
+        role="tab"
+        aria-selected="false"
+        data-filter="backsplashes"
+      >
+        Backsplashes
+      </button>
+      <button
+        class="chip"
+        role="tab"
+        aria-selected="false"
+        data-filter="floors"
+      >
+        Floors
+      </button>
+      <button
+        class="chip"
+        role="tab"
+        aria-selected="false"
+        data-filter="remodels"
+      >
+        Remodels
+      </button>
+      <button
+        class="chip"
+        role="tab"
+        aria-selected="false"
+        data-filter="repairs"
+      >
+        Repairs
+      </button>
     </div>
 
     <!-- Slider -->
@@ -34,14 +86,16 @@ permalink: /portfolio/
       <figure class="slide">
         <div class="slide-media">
           <picture id="slide-picture">
-            <source id="slide-source-webp" type="image/webp">
-            <img id="slide-image"
-                 src="{{ fallback_src }}"
-                 alt="{{ fallback_alt | escape }}"
-                 width="1280"
-                 height="960"
-                 loading="lazy"
-                 decoding="async">
+            <source id="slide-source-webp" type="image/webp" />
+            <img
+              id="slide-image"
+              src="{{ fallback_src }}"
+              alt="{{ fallback_alt | escape }}"
+              width="1280"
+              height="960"
+              loading="lazy"
+              decoding="async"
+            />
           </picture>
         </div>
         <figcaption class="slide-caption">
@@ -51,16 +105,25 @@ permalink: /portfolio/
 
       <div class="slider-footer">
         <span class="slide-meta" id="slide-meta">
-          {% if total_projects == 0 %}
-            All work
-          {% else %}
-            All work · 1 of {{ total_projects }}
-          {% endif %}
+          {% if total_projects == 0 %} All work {% else %} All work · 1 of {{
+          total_projects }} {% endif %}
         </span>
 
         <div class="slider-controls" aria-label="Slide controls">
-          <button type="button" class="slider-arrow prev" aria-label="Previous photo">‹</button>
-          <button type="button" class="slider-arrow next" aria-label="Next photo">›</button>
+          <button
+            type="button"
+            class="slider-arrow prev"
+            aria-label="Previous photo"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            class="slider-arrow next"
+            aria-label="Next photo"
+          >
+            ›
+          </button>
         </div>
       </div>
 
@@ -71,241 +134,271 @@ permalink: /portfolio/
     <section class="trade-notes" aria-labelledby="trade-notes-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="trade-notes-title" class="heading-2 text-primary">Trade Notes</h2>
+          <h2 id="trade-notes-title" class="heading-2 text-primary">
+            Trade Notes
+          </h2>
           <p class="lead">How technical planning delivers lasting results</p>
         </header>
-        
+
         <div class="trade-notes-grid">
           <article class="trade-note-card">
             <h3 class="heading-4">Layout Centered on Sightline</h3>
-            <p>Tile layouts are planned from the primary sightline, not arbitrary edges. This ensures balanced cuts and eliminates unsightly slivers in visible areas. (TCNA Handbook, Layout Guidelines)</p>
+            <p>
+              Tile layouts are planned from the primary sightline, not arbitrary
+              edges. This ensures balanced cuts and eliminates unsightly slivers
+              in visible areas. (TCNA Handbook, Layout Guidelines)
+            </p>
           </article>
 
           <article class="trade-note-card">
             <h3 class="heading-4">Cuts Pushed to Secondary Areas</h3>
-            <p>Partial tiles are reserved for corners and low-visibility zones. The main field features full or near-full modules for a professional, symmetrical finish.</p>
+            <p>
+              Partial tiles are reserved for corners and low-visibility zones.
+              The main field features full or near-full modules for a
+              professional, symmetrical finish.
+            </p>
           </article>
 
           <article class="trade-note-card">
             <h3 class="heading-4">Substrate Corrected Before Tile</h3>
-            <p>All substrates are flattened and leveled to TCNA tolerances before tile installation. Large-format tile exposes every flaw—prep is non-negotiable.</p>
+            <p>
+              All substrates are flattened and leveled to TCNA tolerances before
+              tile installation. Large-format tile exposes every flaw—prep is
+              non-negotiable.
+            </p>
           </article>
 
           <article class="trade-note-card">
             <h3 class="heading-4">Movement Joints at Perimeter</h3>
-            <p>Expansion and movement joints are installed at all perimeters and changes of plane, per TCNA EJ171. This prevents cracking and ensures long-term durability.</p>
+            <p>
+              Expansion and movement joints are installed at all perimeters and
+              changes of plane, per TCNA EJ171. This prevents cracking and
+              ensures long-term durability.
+            </p>
           </article>
         </div>
-        
+
         <p class="trade-notes-footer">
-          <em>Anyone can install tile. Technical planning and code compliance make it last.</em>
+          <em
+            >Anyone can install tile. Technical planning and code compliance
+            make it last.</em
+          >
         </p>
       </div>
     </section>
 
     <section class="portfolio-actions">
       <div class="btn-row">
-        <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Request a TCNA-Compliant Estimate</a>
-        <a class="btn btn-ghost" href="tel:+16098628808" aria-label="Call Tillerstead LLC at (609) 862-8808">Call (609) 862-8808</a>
+        <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}"
+          >Request a TCNA-Compliant Estimate</a
+        >
+        <a
+          class="btn btn-ghost"
+          href="tel:+16098628808"
+          aria-label="Call Tillerstead LLC at (609) 862-8808"
+          >Call (609) 862-8808</a
+        >
       </div>
     </section>
   </div>
 </section>
 
 <script>
-/* Image data – shared with slider and initial markup via _data/portfolio.yml */
-const PROJECTS = {{ projects | jsonify | replace: '</', '<\/') }};
+  /* Image data – shared with slider and initial markup via _data/portfolio.yml */
+  const PROJECTS = {{ projects | jsonify | replace: '</', '<\/') }};
 </script>
 
 <script>
-(function () {
-  const $ = (s, c = document) => c.querySelector(s);
-  const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
+  (function () {
+    const $ = (s, c = document) => c.querySelector(s);
+    const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
 
-  const base = "{{ '/assets/img/' | relative_url }}";
+    const base = "{{ '/assets/img/' | relative_url }}";
 
-  const slider = $('#gallery-slider');
-  const imgEl = $('#slide-image');
-  const captionEl = $('#slide-caption-text');
-  const metaEl = $('#slide-meta');
-  const dotsEl = $('#slider-dots');
-  const prevBtn = $('.slider-arrow.prev');
-  const nextBtn = $('.slider-arrow.next');
-  const chips = $$('.chip');
+    const slider = $("#gallery-slider");
+    const imgEl = $("#slide-image");
+    const captionEl = $("#slide-caption-text");
+    const metaEl = $("#slide-meta");
+    const dotsEl = $("#slider-dots");
+    const prevBtn = $(".slider-arrow.prev");
+    const nextBtn = $(".slider-arrow.next");
+    const chips = $$(".chip");
 
-  const tagLabels = {
-    all: 'All work',
-    showers: 'Showers & Wet Areas',
-    backsplashes: 'Backsplashes',
-    floors: 'Floors & Large-Format Tile',
-    remodels: 'Remodels & Full Bath Scopes',
-    repairs: 'Repairs & Code Corrections'
-  };
+    const tagLabels = {
+      all: "All work",
+      showers: "Showers & Wet Areas",
+      backsplashes: "Backsplashes",
+      floors: "Floors & Large-Format Tile",
+      remodels: "Remodels & Full Bath Scopes",
+      repairs: "Repairs & Code Corrections",
+    };
 
-  let currentFilter = 'all';
-  let slides = [];
-  let index = 0;
-  let autoplayId = null;
-  const AUTOPLAY_MS = 3200;
+    let currentFilter = "all";
+    let slides = [];
+    let index = 0;
+    let autoplayId = null;
+    const AUTOPLAY_MS = 3200;
 
-  function setFilter(filter) {
-    currentFilter = filter || 'all';
-    slides = currentFilter === 'all'
-      ? PROJECTS.slice()
-      : PROJECTS.filter(p => (p.tags || []).includes(currentFilter));
+    function setFilter(filter) {
+      currentFilter = filter || "all";
+      slides =
+        currentFilter === "all"
+          ? PROJECTS.slice()
+          : PROJECTS.filter((p) => (p.tags || []).includes(currentFilter));
 
-    if (!slides.length) {
-      slider.setAttribute('aria-busy', 'true');
-      imgEl.src = "{{ fallback_src }}";
-      imgEl.alt = "{{ fallback_alt | escape }}";
-      captionEl.textContent = "{{ fallback_caption }}";
-      metaEl.textContent = tagLabels[currentFilter] || 'All work';
-      dotsEl.innerHTML = '';
-      return;
+      if (!slides.length) {
+        slider.setAttribute("aria-busy", "true");
+        imgEl.src = "{{ fallback_src }}";
+        imgEl.alt = "{{ fallback_alt | escape }}";
+        captionEl.textContent = "{{ fallback_caption }}";
+        metaEl.textContent = tagLabels[currentFilter] || "All work";
+        dotsEl.innerHTML = "";
+        return;
+      }
+      slider.removeAttribute("aria-busy");
+      index = 0;
+      syncChips();
+      buildDots();
+      showSlide(0);
+      restartAutoplay();
+      updateUrlFilter();
     }
-    slider.removeAttribute('aria-busy');
-    index = 0;
-    syncChips();
-    buildDots();
-    showSlide(0);
-    restartAutoplay();
-    updateUrlFilter();
-  }
 
-  function syncChips() {
-    chips.forEach(chip => {
-      const active = chip.dataset.filter === currentFilter;
-      chip.classList.toggle('is-active', active);
-      chip.setAttribute('aria-selected', active ? 'true' : 'false');
-    });
-  }
-
-  function buildDots() {
-    dotsEl.innerHTML = '';
-    slides.forEach((_, i) => {
-      const dot = document.createElement('button');
-      dot.type = 'button';
-      dot.className = 'slider-dot';
-      dot.dataset.index = i;
-      dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-      dot.addEventListener('click', () => {
-        showSlide(i);
-        restartAutoplay();
+    function syncChips() {
+      chips.forEach((chip) => {
+        const active = chip.dataset.filter === currentFilter;
+        chip.classList.toggle("is-active", active);
+        chip.setAttribute("aria-selected", active ? "true" : "false");
       });
-      dotsEl.appendChild(dot);
-    });
-  }
-
-  function preloadNext() {
-    if (!slides.length) return;
-    const nextIdx = (index + 1) % slides.length;
-    const nextSlide = slides[nextIdx];
-    if (nextSlide && nextSlide.file) {
-      const img = new window.Image();
-      img.src = base + nextSlide.file;
     }
-  }
 
-  function showSlide(newIndex) {
-    if (!slides.length) return;
-    index = (newIndex + slides.length) % slides.length;
-    const slide = slides[index];
-    const sourceEl = document.getElementById('slide-source-webp');
-    const hasWebp = !!slide.file_webp;
-    if (sourceEl) {
-      if (hasWebp) {
-        sourceEl.srcset = base + slide.file_webp;
-      } else {
-        sourceEl.removeAttribute('srcset');
+    function buildDots() {
+      dotsEl.innerHTML = "";
+      slides.forEach((_, i) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "slider-dot";
+        dot.dataset.index = i;
+        dot.setAttribute("aria-label", `Go to slide ${i + 1}`);
+        dot.addEventListener("click", () => {
+          showSlide(i);
+          restartAutoplay();
+        });
+        dotsEl.appendChild(dot);
+      });
+    }
+
+    function preloadNext() {
+      if (!slides.length) return;
+      const nextIdx = (index + 1) % slides.length;
+      const nextSlide = slides[nextIdx];
+      if (nextSlide && nextSlide.file) {
+        const img = new window.Image();
+        img.src = base + nextSlide.file;
       }
     }
-    imgEl.src = base + slide.file;
-    imgEl.alt = slide.alt || 'Project photo by Tillerstead LLC, installed per TCNA/New Jersey HIC standards.';
-    captionEl.textContent = slide.caption || '';
-    metaEl.textContent = `${tagLabels[currentFilter] || 'All work'} · ${index + 1} of ${slides.length}`;
 
-    $$('.slider-dot', dotsEl).forEach(dot => {
-      dot.classList.toggle('is-active', Number(dot.dataset.index) === index);
-    });
+    function showSlide(newIndex) {
+      if (!slides.length) return;
+      index = (newIndex + slides.length) % slides.length;
+      const slide = slides[index];
+      const sourceEl = document.getElementById("slide-source-webp");
+      const hasWebp = !!slide.file_webp;
+      if (sourceEl) {
+        if (hasWebp) {
+          sourceEl.srcset = base + slide.file_webp;
+        } else {
+          sourceEl.removeAttribute("srcset");
+        }
+      }
+      imgEl.src = base + slide.file;
+      imgEl.alt =
+        slide.alt ||
+        "Project photo by Tillerstead LLC, installed per TCNA/New Jersey HIC standards.";
+      captionEl.textContent = slide.caption || "";
+      metaEl.textContent = `${tagLabels[currentFilter] || "All work"} · ${index + 1} of ${slides.length}`;
 
-    preloadNext();
-  }
+      $$(".slider-dot", dotsEl).forEach((dot) => {
+        dot.classList.toggle("is-active", Number(dot.dataset.index) === index);
+      });
 
-  function nextSlide() {
-    showSlide(index + 1);
-  }
-
-  function prevSlide() {
-    showSlide(index - 1);
-  }
-
-  function startAutoplay() {
-    if (autoplayId || slides.length <= 1) return;
-    autoplayId = setInterval(nextSlide, AUTOPLAY_MS);
-  }
-
-  function stopAutoplay() {
-    if (!autoplayId) return;
-    clearInterval(autoplayId);
-    autoplayId = null;
-  }
-
-  function restartAutoplay() {
-    stopAutoplay();
-    startAutoplay();
-  }
-
-  function updateUrlFilter() {
-    const url = new URL(window.location);
-    if (currentFilter === 'all') {
-      url.searchParams.delete('filter');
-    } else {
-      url.searchParams.set('filter', currentFilter);
+      preloadNext();
     }
-    history.replaceState(null, '', url);
-  }
 
-  // Event listeners
-  nextBtn.addEventListener('click', () => {
-    nextSlide();
-    restartAutoplay();
-  });
+    function nextSlide() {
+      showSlide(index + 1);
+    }
 
-  prevBtn.addEventListener('click', () => {
-    prevSlide();
-    restartAutoplay();
-  });
+    function prevSlide() {
+      showSlide(index - 1);
+    }
 
-  slider.addEventListener('mouseenter', stopAutoplay);
-  slider.addEventListener('mouseleave', startAutoplay);
-  slider.addEventListener('focusin', stopAutoplay);
-  slider.addEventListener('focusout', startAutoplay);
+    function startAutoplay() {
+      if (autoplayId || slides.length <= 1) return;
+      autoplayId = setInterval(nextSlide, AUTOPLAY_MS);
+    }
 
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowRight') {
+    function stopAutoplay() {
+      if (!autoplayId) return;
+      clearInterval(autoplayId);
+      autoplayId = null;
+    }
+
+    function restartAutoplay() {
+      stopAutoplay();
+      startAutoplay();
+    }
+
+    function updateUrlFilter() {
+      const url = new URL(window.location);
+      if (currentFilter === "all") {
+        url.searchParams.delete("filter");
+      } else {
+        url.searchParams.set("filter", currentFilter);
+      }
+      history.replaceState(null, "", url);
+    }
+
+    // Event listeners
+    nextBtn.addEventListener("click", () => {
       nextSlide();
       restartAutoplay();
-    } else if (e.key === 'ArrowLeft') {
+    });
+
+    prevBtn.addEventListener("click", () => {
       prevSlide();
       restartAutoplay();
-    }
-  });
+    });
 
-  chips.forEach(chip => {
-    if (!chip.dataset.filter) {
-      chip.dataset.filter = (chip.textContent || '').toLowerCase();
-    }
-    chip.addEventListener('click', () => setFilter(chip.dataset.filter));
-  });
+    slider.addEventListener("mouseenter", stopAutoplay);
+    slider.addEventListener("mouseleave", startAutoplay);
+    slider.addEventListener("focusin", stopAutoplay);
+    slider.addEventListener("focusout", startAutoplay);
 
-  // Initial filter from URL or hash
-  const params = new URL(window.location).searchParams;
-  const initialFilter =
-    params.get('filter') ||
-    (window.location.hash || '').replace('#', '') ||
-    'all';
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") {
+        nextSlide();
+        restartAutoplay();
+      } else if (e.key === "ArrowLeft") {
+        prevSlide();
+        restartAutoplay();
+      }
+    });
 
-  setFilter(initialFilter);
-})();
+    chips.forEach((chip) => {
+      if (!chip.dataset.filter) {
+        chip.dataset.filter = (chip.textContent || "").toLowerCase();
+      }
+      chip.addEventListener("click", () => setFilter(chip.dataset.filter));
+    });
+
+    // Initial filter from URL or hash
+    const params = new URL(window.location).searchParams;
+    const initialFilter =
+      params.get("filter") ||
+      (window.location.hash || "").replace("#", "") ||
+      "all";
+
+    setFilter(initialFilter);
+  })();
 </script>
-

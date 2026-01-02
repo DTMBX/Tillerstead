@@ -1,68 +1,90 @@
-{% comment %}
-Homepage Reviews Highlights Include
-- Renders top N reviews from _data/reviews.yml as trust cards
-- Params: limit (default 3), eyebrow, title, summary, cta_url, cta_label
-- Optional IDs: section_id (default: home-reviews), heading_id (default: section_id + '-title')
-Usage: {% include content/reviews-highlights.html limit=3 %}
-{% endcomment %}
-{% assign all = site.data.reviews.reviews | default: [] %}
-{% assign limit = include.limit | default: 3 %}
-{% assign items = all | slice: 0, limit %}
-{% assign section_id = include.section_id | default: 'home-reviews' %}
-{% assign heading_id = include.heading_id | default: section_id | append: '-title' %}
+{% comment %} Homepage Reviews Highlights Include - Renders top N reviews from
+_data/reviews.yml as trust cards - Params: limit (default 3), eyebrow, title,
+summary, cta_url, cta_label - Optional IDs: section_id (default: home-reviews),
+heading_id (default: section_id + '-title') Usage: {% include
+content/reviews-highlights.html limit=3 %} {% endcomment %} {% assign all =
+site.data.reviews.reviews | default: [] %} {% assign limit = include.limit |
+default: 3 %} {% assign items = all | slice: 0, limit %} {% assign section_id =
+include.section_id | default: 'home-reviews' %} {% assign heading_id =
+include.heading_id | default: section_id | append: '-title' %}
 <section class="ts-section section reviews" aria-labelledby="{{ heading_id }}">
   <div class="container">
     <header class="section-header text-center">
-      <span class="eyebrow eyebrow--dark">{{ include.eyebrow | default: 'Verified Client Feedback' }}</span>
+      <span class="eyebrow eyebrow--dark"
+        >{{ include.eyebrow | default: 'Verified Client Feedback' }}</span
+      >
       <h2 id="{{ heading_id }}" class="heading-2">
         {{ include.title | default: 'South Jersey Tile & Bath Reviews' }}
       </h2>
       <p class="lead">
-        {{ include.summary | default: 'Clients consistently point to disciplined workmanship, clear communication, and well-managed job sites. Tile and bath projects are executed using TCNA-recognized methods and ANSI A108 installation practices, including appropriate surface preparation, trowel selection, coverage checks during installation, and professionally designed waterproofing assemblies where required—fully aligned with New Jersey HIC standards.' }}
+        {{ include.summary | default: 'Clients consistently point to disciplined
+        workmanship, clear communication, and well-managed job sites. Tile and
+        bath projects are executed using TCNA-recognized methods and ANSI A108
+        installation practices, including appropriate surface preparation,
+        trowel selection, coverage checks during installation, and
+        professionally designed waterproofing assemblies where required—fully
+        aligned with New Jersey HIC standards.' }}
       </p>
     </header>
 
     {% if items and items.size > 0 %}
-      <ul class="cards cards--3col" role="list" aria-label="Highlighted client reviews">
-        {% for r in items %}
-          {% assign stars = r.rating | default: 5 %}
-          <li>
-            <article class="card card--review" itemscope itemtype="https://schema.org/Review" aria-label="Review from {{ r.author | default: 'Client' | escape }}">
-              <div class="card-rating" aria-label="{{ stars }} out of 5 stars" role="img">
-                {% for i in (1..5) %}
-                  <span class="star{% if i <= stars %} star--filled{% endif %}" aria-hidden="true">{% if i <= stars %}★{% else %}☆{% endif %}</span>
-                {% endfor %}
-              </div>
-              <meta itemprop="reviewRating" content="{{ stars }}">
-              {% if r.quote_html %}
-                <div class="card-quote" itemprop="reviewBody">
-                  {{ r.quote_html }}
-                </div>
-              {% endif %}
-              <p class="card-author">
-                {% if r.author %}
-                  <strong id="review--name-{{ forloop.index }}" itemprop="author">{{ r.author | escape }}</strong>
-                {% endif %}
-                {% if r.job_type %}
-                  <span class="card-role"> · {{ r.job_type | escape }}</span>
-                {% elsif r.source %}
-                  <span class="card-role"> · {{ r.source | escape }}</span>
-                {% endif %}
-                {% if r.date %}
-                  <span class="card-date"> · {{ r.date | date: "%b %Y" }}</span>
-                {% endif %}
-              </p>
-            </article>
-          </li>
-        {% endfor %}
-      </ul>
+    <ul
+      class="cards cards--3col"
+      role="list"
+      aria-label="Highlighted client reviews"
+    >
+      {% for r in items %} {% assign stars = r.rating | default: 5 %}
+      <li>
+        <article
+          class="card card--review"
+          itemscope
+          itemtype="https://schema.org/Review"
+          aria-label="Review from {{ r.author | default: 'Client' | escape }}"
+        >
+          <div
+            class="card-rating"
+            aria-label="{{ stars }} out of 5 stars"
+            role="img"
+          >
+            {% for i in (1..5) %}
+            <span
+              class="star{% if i <= stars %} star--filled{% endif %}"
+              aria-hidden="true"
+              >{% if i <= stars %}★{% else %}☆{% endif %}</span
+            >
+            {% endfor %}
+          </div>
+          <meta itemprop="reviewRating" content="{{ stars }}" />
+          {% if r.quote_html %}
+          <div class="card-quote" itemprop="reviewBody">{{ r.quote_html }}</div>
+          {% endif %}
+          <p class="card-author">
+            {% if r.author %}
+            <strong id="review--name-{{ forloop.index }}" itemprop="author"
+              >{{ r.author | escape }}</strong
+            >
+            {% endif %} {% if r.job_type %}
+            <span class="card-role"> · {{ r.job_type | escape }}</span>
+            {% elsif r.source %}
+            <span class="card-role"> · {{ r.source | escape }}</span>
+            {% endif %} {% if r.date %}
+            <span class="card-date"> · {{ r.date | date: "%b %Y" }}</span>
+            {% endif %}
+          </p>
+        </article>
+      </li>
+      {% endfor %}
+    </ul>
     {% endif %}
 
     <div class="section-action text-center">
-      <a href="{{ include.cta_url | default: '/reviews/' | relative_url }}" class="btn btn--ghost" aria-label="Read more client reviews">
+      <a
+        href="{{ include.cta_url | default: '/reviews/' | relative_url }}"
+        class="btn btn--ghost"
+        aria-label="Read more client reviews"
+      >
         {{ include.cta_label | default: 'Read More Client Reviews →' }}
       </a>
     </div>
   </div>
 </section>
-

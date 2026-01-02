@@ -6,14 +6,13 @@
 
 ## Summary
 
-| Status | Count |
-|--------|-------|
-| ✅ Pass AAA | 4 |
-| ⚠️  Pass AA Only | 15 |
-| ❌ Fail | 4 |
+| Status          | Count |
+| --------------- | ----- |
+| ✅ Pass AAA     | 4     |
+| ⚠️ Pass AA Only | 15    |
+| ❌ Fail         | 4     |
 
 ## Compliance by Combination
-
 
 ### ✅ AAA Compliant (4)
 
@@ -30,7 +29,7 @@
   - Foreground: #ffffff
   - Background: #1a1a1a
 
-### ⚠️  AA Compliant Only (15)
+### ⚠️ AA Compliant Only (15)
 
 - **Primary on White**: 4.54:1
   - Normal Text: AA (requires 7:1)
@@ -98,17 +97,21 @@
 ## Brand Colors
 
 ### Teal (Primary)
+
 - Dark: #078930
 - Light: #43d779
 
 ### Red (Accent)
+
 - Dark: #da121a
 - Light: #fc6b73
 
 ### Gold (Highlight)
+
 - Dark: #fcdd09
 - Light: #fffbcc
 
 ### Neutral
+
 - Dark: #1a1a1a
 - Light: #ffffff
