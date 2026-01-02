@@ -1,112 +1,143 @@
-<!DOCTYPE html>
-<footer class="site-footer ts-footer" itemscope itemtype="https://schema.org/HomeAndConstructionBusiness"
-  itemid="{{ site.url }}/#contractor">
-  <!-- Structured‑data meta tags (Micro‑data) -->
+{%- comment -%}
+Site Footer Include - Tillerstead
+Displays the main site footer with navigation, branding, and legal links
+Usage: {% include layout/footer.html %}
+{%- endcomment -%}
+
+{%- assign nav = site.data.navigation -%}
+{%- assign company = site.company -%}
+
+<footer class="site-footer ts-footer" itemscope itemtype="https://schema.org/HomeAndConstructionBusiness" itemid="{{ site.url }}/#contractor" role="contentinfo">
+
+  {%- comment -%} Structured Data (Microdata) {%- endcomment -%}
   <meta itemprop="name" content="Tillerstead LLC">
   <meta itemprop="url" content="{{ site.url }}/">
-  <meta itemprop="priceRange" content="$$"> <!-- optional: adjust to your preferred format -->
-  <meta itemprop="telephone" content="{{ site.company.phone_link }}">
-  <meta itemprop="email" content="{{ site.company.email }}">
-  <meta itemprop="description"
-    content="TCNA‑compliant tile, stone, and waterproofing installations. Serving Atlantic, Ocean, and Cape May counties with licensed, insured craftsmanship and clear scopes.">
-  <meta itemprop="areaServed" content="Atlantic County, New Jersey; Ocean County, New Jersey; Cape May County, New Jersey">
-  <meta itemprop="sameAs" content="https://www.instagram.com/tillerstead">
-  <meta itemprop="sameAs" content="https://www.facebook.com/share/17ZQCR2zdZ/">
-  <meta itemprop="sameAs" content="https://x.com/tillerstead">
+  <meta itemprop="priceRange" content="$$">
+  <meta itemprop="telephone" content="{{ company.phone_link }}">
+  <meta itemprop="email" content="{{ company.email }}">
+  <meta itemprop="description" content="TCNA-compliant tile, stone, and waterproofing installations. Serving Atlantic, Ocean, and Cape May counties with licensed, insured craftsmanship.">
+  <meta itemprop="areaServed" content="Atlantic County, NJ; Ocean County, NJ; Cape May County, NJ">
+  {% if site.social.links %}
+    {% for link in site.social.links %}
+  <meta itemprop="sameAs" content="{{ link }}">
+    {% endfor %}
+  {% endif %}
 
-  <!-- Main Footer Content -->
+  {%- comment -%} Main Footer Content {%- endcomment -%}
   <div class="footer-main">
-    <div class="footer-inner">
+    <div class="container">
+      <div class="footer-grid">
 
-      <!-- Left Navigation -->
-      <nav class="footer-nav footer-nav--left" aria-label="Footer navigation left">
-        <div class="footer-nav-column">
-          <h3 class="footer-nav-title">Services</h3>
+        {%- comment -%} Build Guides Column {%- endcomment -%}
+        <nav class="footer-nav-column" aria-labelledby="footer-build-title">
+          <h3 id="footer-build-title" class="footer-nav-title">Build Guides</h3>
           <ul class="footer-list">
-            <li><a href="{{ '/services/' | relative_url }}#tile" class="footer-link">Tile Installation</a></li>
-            <li><a href="{{ '/services/' | relative_url }}#stone" class="footer-link">Natural Stone</a></li>
-            <li><a href="{{ '/services/' | relative_url }}#waterproofing" class="footer-link">Waterproofing</a></li>
+            <li><a href="{{ '/pages/build/nj-codes-permits/' | relative_url }}" class="footer-link">Codes & Permits</a></li>
+            <li><a href="{{ '/pages/build/waterproofing-systems/' | relative_url }}" class="footer-link">Waterproofing</a></li>
+            <li><a href="{{ '/pages/build/tile-installation-standards/' | relative_url }}" class="footer-link">Tile Installation</a></li>
+            <li><a href="{{ '/pages/build/' | relative_url }}" class="footer-link">All 8 Phases →</a></li>
           </ul>
-        </div>
+        </nav>
 
-        <div class="footer-nav-column">
-          <h3 class="footer-nav-title">Company</h3>
+        {%- comment -%} Learn Column {%- endcomment -%}
+        <nav class="footer-nav-column" aria-labelledby="footer-learn-title">
+          <h3 id="footer-learn-title" class="footer-nav-title">Learn</h3>
           <ul class="footer-list">
-            <li><a href="{{ '/portfolio/' | relative_url }}" class="footer-link">Portfolio</a></li>
-            <li><a href="{{ '/about/' | relative_url }}" class="footer-link">About</a></li>
-            <li><a href="{{ '/reviews/' | relative_url }}" class="footer-link">Reviews</a></li>
+            <li><a href="{{ '/faq/' | relative_url }}" class="footer-link">FAQ</a></li>
+            <li><a href="{{ '/blog/' | relative_url }}" class="footer-link">Articles</a></li>
+            <li><a href="{{ '/recommended-products/' | relative_url }}" class="footer-link">Materials</a></li>
+            <li><a href="{{ '/download/nj-tile-guide/' | relative_url }}" class="footer-link">Free Tile Guide</a></li>
           </ul>
+        </nav>
+
+        {%- comment -%} Center Branding {%- endcomment -%}
+        <div class="footer-brand">
+          {% include layout/logo-header.html
+             symbol="logo-mark"
+             variant="mono"
+             link_class="ts-logo-link ts-logo-link--footer"
+             svg_class="ts-logo ts-logo--footer"
+          %}
+
+          <p class="footer-tagline">TCNA-Compliant Tile & Stone</p>
+          <p class="footer-license">NJ HIC #{{ company.hic }}</p>
+
+          <div class="footer-social">
+            {% include components/social-links.html
+               class="social-links--footer"
+               aria_label="Follow Tillerstead"
+            %}
+          </div>
+
+          <address class="footer-address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <span itemprop="streetAddress">{{ company.address_line }}</span><br>
+            <span itemprop="addressLocality">{{ company.address_city }}</span>,
+            <span itemprop="addressRegion">{{ company.address_region }}</span>
+            <span itemprop="postalCode">{{ company.address_postal_code }}</span>
+          </address>
+
+          <div class="footer-contact">
+            <a href="tel:{{ company.phone_link }}" class="footer-phone" itemprop="telephone">
+              {{ company.phone_display }}
+            </a>
+            <span class="footer-separator" aria-hidden="true">•</span>
+            <a href="mailto:{{ company.email }}" class="footer-email" itemprop="email">
+              {{ company.email }}
+            </a>
+          </div>
         </div>
-      </nav>
 
-      <!-- Center Branding -->
-      <div class="footer-brand">
-        {% include layout/logo-header.html symbol="logo-mark" variant="mono" link_class="ts-logo-link ts-logo-link--footer" svg_class="ts-logo ts-logo--footer" %}
-
-        <p class="footer-tagline">TCNA‑Certified Tile &amp; Stone Installation</p>
-        <p class="footer-license">New Jersey HIC License #{{ site.company.hic }}</p>
-
-        <div class="footer-social">
-          {% include components/social-links.html class="social-links--footer"
-          aria_label="Tillerstead social profiles" %}
-        </div>
-
-        <address class="footer-address" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-          <span itemprop="streetAddress">{{ site.company.address_line }}</span>
-          <span itemprop="addressLocality">{{ site.company.address_city }}</span>,
-          <span itemprop="addressRegion">{{ site.company.address_region }}</span>
-          <span itemprop="postalCode">{{ site.company.address_postal_code }}</span>
-        </address>
-<p class="trust-line">
-  <small>
-    Licensed New Jersey HIC #13VH10808800 • Serving Atlantic, Ocean & Cape May Counties • 3-Day Rescission Right
-  </small>
-</p>
-        <div class="footer-contact">
-          <a href="tel:{{ site.company.phone_link }}" class="footer-phone" itemprop="telephone">{{
-            site.company.phone_display }}</a>
-          <span class="footer-separator">•</span>
-          <a href="mailto:{{ site.company.email }}" class="footer-email" itemprop="email">{{ site.company.email }}</a>
-        </div>
-      </div>
-
-      <!-- Right Navigation -->
-      <nav class="footer-nav footer-nav--right" aria-label="Footer navigation right">
-        <div class="footer-nav-column">
-          <h3 class="footer-nav-title">Service Areas</h3>
+        {%- comment -%} Service Areas Column {%- endcomment -%}
+        <nav class="footer-nav-column" aria-labelledby="footer-areas-title">
+          <h3 id="footer-areas-title" class="footer-nav-title">Service Areas</h3>
           <ul class="footer-list">
             <li><a href="{{ '/atlantic-county-nj/' | relative_url }}" class="footer-link">Atlantic County</a></li>
             <li><a href="{{ '/ocean-county-nj/' | relative_url }}" class="footer-link">Ocean County</a></li>
             <li><a href="{{ '/cape-may-county-nj/' | relative_url }}" class="footer-link">Cape May County</a></li>
           </ul>
-        </div>
+        </nav>
 
-        <div class="footer-nav-column">
-          <h3 class="footer-nav-title">Resources</h3>
+        {%- comment -%} Company Column {%- endcomment -%}
+        <nav class="footer-nav-column" aria-labelledby="footer-company-title">
+          <h3 id="footer-company-title" class="footer-nav-title">Company</h3>
           <ul class="footer-list">
-            <li><a href="{{ '/blog/' | relative_url }}" class="footer-link">Blog</a></li>
-            <li><a href="{{ '/contact/' | relative_url }}" class="footer-link">Contact</a></li>
+            <li><a href="{{ '/about/' | relative_url }}" class="footer-link">About</a></li>
+            <li><a href="{{ '/portfolio/' | relative_url }}" class="footer-link">Portfolio</a></li>
+            <li><a href="{{ '/reviews/' | relative_url }}" class="footer-link">Reviews</a></li>
+            <li><a href="{{ '/contact/' | relative_url }}" class="footer-link">Get an Estimate</a></li>
           </ul>
-        </div>
-      </nav>
+        </nav>
 
-    </div>
-  </div>
-
-  <!-- Footer Bottom -->
-  <div class="footer-bottom">
-    <div class="footer-bottom-inner">
-      <p class="footer-copyright">
-        &copy; {{ 'now' | date: '%Y' }} Tillerstead LLC. All rights reserved.
-      </p>
-
-      <div class="footer-legal-links">
-        <a href="{{ '/privacy/' | relative_url }}" class="footer-link">Privacy</a>
-        <span class="footer-separator">•</span>
-        <a href="{{ '/terms/' | relative_url }}" class="footer-link">Terms</a>
-        <span class="footer-separator">•</span>
-        <span class="footer-compliance">Fully Insured • TCNA Compliant</span>
       </div>
     </div>
   </div>
+
+  {%- comment -%} Trust Line {%- endcomment -%}
+  <div class="footer-trust">
+    <div class="container">
+      <p class="trust-line">
+        Licensed NJ HIC #{{ company.hic }} • Serving Atlantic, Ocean & Cape May Counties • 3-Day Rescission Right • Fully Insured
+      </p>
+    </div>
+  </div>
+
+  {%- comment -%} Footer Bottom {%- endcomment -%}
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p class="footer-copyright">
+          &copy; {{ 'now' | date: '%Y' }} Tillerstead LLC. All rights reserved.
+        </p>
+
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="{{ '/privacy/' | relative_url }}" class="footer-link">Privacy</a>
+          <span class="footer-separator" aria-hidden="true">•</span>
+          <a href="{{ '/terms/' | relative_url }}" class="footer-link">Terms</a>
+          <span class="footer-separator" aria-hidden="true">•</span>
+          <span class="footer-compliance">TCNA Compliant</span>
+        </nav>
+      </div>
+    </div>
+  </div>
+
 </footer>
