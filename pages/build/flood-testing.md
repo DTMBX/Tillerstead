@@ -7,6 +7,7 @@ build_phase: 7
 build_title: "Flood Testing & Verification"
 build_order: 7
 toc: true
+schema_type: HowTo
 ---
 
 # Flood Testing & Pre-Tile Verification
