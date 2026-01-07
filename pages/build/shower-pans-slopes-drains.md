@@ -7,6 +7,7 @@ build_phase: 2
 build_title: "Shower Pans, Slopes & Drains"
 build_order: 2
 toc: true
+schema_type: HowTo
 ---
 
 # Shower Pans, Slopes & Drains
