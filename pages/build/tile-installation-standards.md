@@ -1,8 +1,12 @@
 ---
 layout: build-page
-title: "Tile Installation Standards - Step 6"
-description: "TCNA and ANSI A118 tile installation standards: substrate prep, mortar selection, coverage, and movement joints."
-permalink: /pages/build/tile-installation-standards/
+title: "Build Phase 6: Tile Installation Standards"
+description: "ANSI A108/A118 tile installation standards covering substrate prep, mortar selection, coverage, and movement joints."
+permalink: /build/tile-installation-standards/
+build_phase: 6
+build_title: "Tile Installation Standards"
+build_order: 6
+toc: true
 ---
 
 # Tile Installation & Coverage Standards
