@@ -127,8 +127,8 @@ title: "Recommended Tile & Waterproofing Products"
           {% capture meta_line %} {% if p.type %}{{ p.type }}{% endif %} {% if
           p.specs %}{% if p.type %} · {% endif %}{{ p.specs }}{% endif %} {% if
           p.brand %}{% if p.type or p.specs %} · {% endif %}{{ p.brand }}{%
-          endif %} {% endcapture %} {% if meta_line | strip != "" %}
-          <p class="product-meta">{{ meta_line | strip }}</p>
+          endif %} {% endcapture %} {% assign meta_line_trim = meta_line | strip %}{% if meta_line_trim != "" %}
+          <p class="product-meta">{{ meta_line_trim }}</p>
           {% endif %} {% if p.best_for %}
           <p class="product-tag"><strong>Best for:</strong> {{ p.best_for }}</p>
           {% endif %} {% if p.description %}
@@ -242,3 +242,4 @@ title: "Recommended Tile & Waterproofing Products"
     {% endif %}
   </div>
 </main>
+

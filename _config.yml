@@ -159,6 +159,11 @@ exclude:
 keep_files:
   - "CNAME"
   - "assets/"
+
+
   - _backup/
-  - *.bak
+  - "*.bak"
+
+  - "**/*.bak"
+  - "pages/recommended-products.html.bak"
 
