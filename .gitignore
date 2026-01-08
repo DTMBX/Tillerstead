@@ -52,3 +52,7 @@ coverage/
 Gemfile.lock
 .aider*
 _backup/
+
+# local backups
+*.bak.*
+
