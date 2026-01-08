@@ -51,3 +51,4 @@ coverage/
 .ai/
 Gemfile.lock
 .aider*
+_backup/
