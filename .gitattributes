@@ -24,3 +24,8 @@
 *.ico binary
 *.svg binary
 *.pdf binary
+# YAML / workflows: always LF
+*.yml  text eol=lf
+.github/workflows/* text eol=lf
+# JSON usually fine as LF too
+
