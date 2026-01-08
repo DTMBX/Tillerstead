@@ -141,6 +141,12 @@ forms:
 # Exclusions
 # ----------------------------
 exclude:
+  - tools
+  - _audit
+  - vendor/bundle
+  - vendor
+  - node_modules
+  - root-archive
   - "_backup/"
   - "**/*.bak"
   - "*.bak"
@@ -166,3 +172,4 @@ exclude:
 keep_files:
   - "CNAME"
   - "assets/"
+

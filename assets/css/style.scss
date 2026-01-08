@@ -1,62 +1,21 @@
 ---
 ---
 
-// ...existing code...
-/* ============================================
-   Tillerstead Main Stylesheet
-   TCNA-Compliant, Modular CSS Architecture
-   Modern + Professional + Dynamic
-   ============================================ */
+:root { color-scheme: dark; }
 
-/* 00 - Settings: Design Tokens & Variables */
-/* ⭐ GLOBAL THEME - Edit here to change all colors/spacing */
-@use "00-settings/entry" as *;
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+.wrap { max-width: 1100px; margin: 0 auto; padding: 16px; }
 
-/* Legacy settings (being consolidated into theme-globals) */
+.skip { position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+.skip:focus { position:static; width:auto; height:auto; padding:8px 12px; display:inline-block; }
 
-/* 10 - Base: Accessibility, Typography, Performance */
-@use "10-base/animations" as *;
-@use "10-base/reset" as *;
-@use "10-base/typography" as *;
-@use "10-base/performance" as *;
-@use "10-base/mobile-first-utilities" as *;
+.site-header, .site-footer { border-color: rgba(255,255,255,.12); }
+.site-header { border-bottom: 1px solid rgba(255,255,255,.12); }
+.site-footer { border-top: 1px solid rgba(255,255,255,.12); }
 
-/* 20 - Layout: Responsive Grid & Container System */
-@use "20-layout/container" as *;
-@use "20-layout/grid" as *;
-@use "20-layout/mobile" as *;
-@use "20-layout/tillerstead-theme" as *;
+.brand { font-weight: 700; text-decoration: none; color: inherit; }
+.nav a { margin-left: 12px; text-decoration: none; color: inherit; opacity: .85; }
+.nav a:hover { opacity: 1; }
 
-/* 30 - Components: TCNA-Standard UI Elements */
-@use "30-components/modern-components" as *;
-@use "30-components/buttons" as *;
-@use "30-components/cards" as *;
-@use "30-components/plans" as *;
-@use "30-components/forms" as *;
-@use "30-components/form-enhancements" as *;
-@use "30-components/logo" as *;
-@use "30-components/header-premium" as *;
-@use "30-components/nav-enhancements" as *;
-@use "30-components/footer" as *;
-@use "30-components/hero" as *;
-@use "30-components/animations" as *;
-@use "30-components/breadcrumbs" as *;
-@use "30-components/peace-of-mind" as *;
-@use "30-components/build-page" as *;
-@use "30-components/social-links" as *;
-@use "30-components/icons" as *;
-@use "30-components/process" as *;
-@use "30-components/process-mobile" as *;
-@use "30-components/nj-statewide" as *;
-@use "30-components/home" as *;
-@use "30-components/deliver" as *;
-@use "30-components/patterns-complimentary" as *;
-
-/* 40 - Pages: Page-Specific Styles */
-@use "40-pages/portfolio" as *;
-@use "page-financing" as *;
-
-/* 40 - Utilities: Helpers for Compliance & Accessibility */
-@use "40-utilities/helpers" as *;
-@use "mobile-overrides" as *;
-
+.site-main { padding: 24px 0; }
+.muted { opacity: .7; font-size: .9rem; }
