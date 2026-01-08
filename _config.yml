@@ -141,8 +141,9 @@ forms:
 # Exclusions
 # ----------------------------
 exclude:
-  - *.bak*
-  - **/*.bak*
+  - .sass-cache
+  - "*.bak*"
+  - "**/*.bak*"
   - vendor/**
   - root-archive/**
   - tools
