@@ -8,7 +8,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "jekyll": "ruby vendor/gems/jekyll/bin/jekyll",
+    "jekyll": "bundle exec jekyll",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint .",
     "lint:html": "npx htmlhint \"_site/**/*.html\" || true",

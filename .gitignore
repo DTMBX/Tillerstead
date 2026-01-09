@@ -12,7 +12,6 @@ _site/
 .bundle/
 vendor/
 vendor/bundle/
-Gemfile.lock
 
 # --- Node ---
 node_modules/
