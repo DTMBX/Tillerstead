@@ -3,6 +3,9 @@
   <head>
     <title>{{ page.title | default: site.title }}</title>
     {% include layout/head.html %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/root-vars.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/tokens-hybrid.css' | relative_url }}">
   </head>
   <body class="{{ page.body_class | default: '' }}">
     <a class="skip" href="#main">Skip to content</a>
