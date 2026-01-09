@@ -16,7 +16,9 @@ Usage:
 Set-StrictMode -Version Latest
 
 $script:CommandCenterRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
-$script:CommandDatabasePath = Join-Path $script:CommandCenterRoot "command-database.json"
+$script:CommandCenterScriptsRoot = Split-Path -Parent $script:CommandCenterRoot
+$script:CommandCenterRepoRoot = Split-Path -Parent $script:CommandCenterScriptsRoot
+$script:CommandDatabasePath = Join-Path $script:CommandCenterRepoRoot "data/command-db.json"
 
 function Get-CommandDatabase {
     if (-not (Test-Path $script:CommandDatabasePath)) {
@@ -55,6 +57,18 @@ function Test-CommandDatabase {
     return $issues
 }
 
+function Write-AvailableCommands {
+    param(
+        [Parameter(Mandatory = $true)]
+        [object[]]$Commands
+    )
+
+    $available = $Commands | Where-Object { $_.name } | ForEach-Object { $_.name } | Sort-Object
+    if ($available.Count -gt 0) {
+        Write-Host "Available commands: $($available -join ', ')" -ForegroundColor Yellow
+    }
+}
+
 function Get-CommandFromDb {
     param(
         [Parameter(Mandatory = $true)]
@@ -62,12 +76,27 @@ function Get-CommandFromDb {
     )
 
     $db = Get-CommandDatabase
+    if ([string]::IsNullOrWhiteSpace($Name)) {
+        Write-AvailableCommands -Commands $db.commands
+        throw "Command name is required."
+    }
+
     $entry = $db.commands | Where-Object { $_.name -eq $Name } | Select-Object -First 1
     if (-not $entry) {
+        Write-AvailableCommands -Commands $db.commands
         throw "Command '$Name' not found in database."
     }
 
     return $entry
+}
+
+function get-command-from-db {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string]$Name
+    )
+
+    return Get-CommandFromDb -Name $Name
 }
 
 function Resolve-CommandStrings {
@@ -173,7 +202,7 @@ function Invoke-CommandSet {
     Invoke-MassExecute -Commands $commands -ContinueOnError:$ContinueOnError -DryRun:$DryRun -RequireConfirmation:$RequireConfirmation -LogPath $LogPath
 }
 
-function Invoke-CommandByName {
+function invoke-command-from-db {
     param(
         [Parameter(Mandatory = $true)]
         [string]$Name,
@@ -183,8 +212,8 @@ function Invoke-CommandByName {
         [string]$LogPath = (Join-Path $script:CommandCenterRoot "command-center.log")
     )
 
-    $command = Get-CommandFromDb -Name $Name
-    Invoke-MassExecute -Commands @($command.command) -ContinueOnError:$ContinueOnError -DryRun:$DryRun -RequireConfirmation:$RequireConfirmation -LogPath $LogPath
+    $commands = Resolve-CommandStrings -Names @($Name)
+    Invoke-MassExecute -Commands $commands -ContinueOnError:$ContinueOnError -DryRun:$DryRun -RequireConfirmation:$RequireConfirmation -LogPath $LogPath
 }
 
 function Show-CommandCenter {
@@ -241,7 +270,7 @@ function Show-CommandCenter {
     }
 
     $commandIndex = $selection - $sets.Count
-    Invoke-CommandByName -Name $commands[$commandIndex].name
+    invoke-command-from-db -Name $commands[$commandIndex].name
 }
 
 function Monitor-DiskSpace {
