@@ -54,6 +54,7 @@
     "_site/",
     "*.min.js",
     "dist/",
-    "coverage/"
+    "coverage/",
+    "assets/**/*.js" // Ignore built/minified assets
   ]
 }

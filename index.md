@@ -1,10 +1,10 @@
 ---
-layout: home
-title: "Tile & Waterproofing Experts | South Jersey Contractor | Tillerstead"
+layout: default
+title: Home
+permalink: /
 meta_title: "Tile & Waterproofing Experts in South Jersey | Tillerstead"
 meta_description: "Tillerstead, a licensed NJ HIC contractor, offers TCNA-compliant tile showers, waterproofing, and bathroom remodeling services in Atlantic, Ocean, and Cape May Counties. We prioritize technical excellence over shortcuts, ensuring transparent pricing and long-lasting results."
 description: "Tillerstead, a licensed NJ HIC contractor, specializes in TCNA-compliant tile showers, waterproofing, and bathroom remodeling. Serving Atlantic, Ocean, and Cape May Counties, we adhere to TCNA Handbook and New Jersey HIC law, providing transparent pricing, technical precision, and results that stand the test of time."
-permalink: /
 body_class: page-home
 is_home: true
 show_breadcrumbs: false

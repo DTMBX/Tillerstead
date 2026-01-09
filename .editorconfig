@@ -12,3 +12,25 @@ end_of_line = crlf
 [*.{png,jpg,jpeg,webp,gif,ico,svg,pdf}]
 trim_trailing_whitespace = false
 insert_final_newline = false
+
+[*.md]
+trim_trailing_whitespace = false
+insert_final_newline = true
+
+[*.yml]
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.json]
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.scss]
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true

@@ -13,7 +13,7 @@ license:
   issuer: "New Jersey Division of Consumer Affairs"
   type: "Home Improvement Contractor"
   verified: true
-  last_verified: "2024-06-01"
+  last_verified: "2026-01-01"
   scope_notice: >
     Licensure is held as a New Jersey Home Improvement Contractor. References to
     technical standards apply only to tile and stone assemblies and related
@@ -30,7 +30,7 @@ license:
 
 business:
   legal_name: "Tillerstead LLC"
-  trade_name: "Tillerstead"
+  trade_name: "DEVON TYLER"
   owner: "Faith Frontier Ecclesiastical Trust"
   address:
     street: "325 East Jimmie Leeds Road, Suite 7-333"
@@ -125,4 +125,4 @@ hic_license_status: "Active"
 hic_license_issuer: "New Jersey Division of Consumer Affairs"
 hic_license_type: "Home Improvement Contractor"
 hic_license_verified: true
-hic_license_last_verified: "2024-06-01"
+hic_license_last_verified: "2026-01-01"

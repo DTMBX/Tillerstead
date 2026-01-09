@@ -37,7 +37,16 @@
 // @use "30-components/modern-components" as *;
 // @use "30-components/patterns-complimentary" as *;
 
+@use "40-pages/atlantic";
+@use "40-pages/contact";
+@use "40-pages/nj-tile-guide";
+@use "40-pages/cape-may";
 @use "40-pages/portfolio";
+@use "40-pages/success";
+@use "40-pages/pricing";
+@use "40-pages/ocean-county";
+@use "40-pages/faq";
+@use "40-pages/design-showcase";
 @use "40-utilities/helpers";
 @use "mobile-overrides";
 @use "page-download";

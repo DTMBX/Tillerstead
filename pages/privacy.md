@@ -1,22 +1,19 @@
 ---
 layout: default
-title: Privacy Policy | Tillerstead LLC
+title: "Privacy Policy | Tillerstead LLC"
 permalink: /privacy/
-description: How Tillerstead LLC collects, uses, and safeguards information shared through our website, contact forms, and service communications. NJ HIC #13VH10808800.
+description: "How Tillerstead LLC collects, uses, and safeguards information shared through our website, contact forms, and service communications. NJ HIC #13VH10808800."
 body_class: page-legal
-hero_eyebrow: Legal
-hero_title: Privacy Policy
-hero_summary: >
-  How Tillerstead LLC collects, uses, and protects information shared through our website,
-  contact forms, and service communications. We collect only what we need to respond,
-  schedule, and perform contracted work.
+hero_eyebrow: "Legal"
+hero_title: "Privacy Policy"
+hero_summary: "How Tillerstead LLC collects, uses, and protects information shared through our website, contact forms, and service communications. We collect only what we need to respond, schedule, and perform contracted work."
 hero_kpis:
   - label: "Data use"
-    text: "Collected only to respond, schedule, estimate, and support contracted services"
+    text: "Collected only to respond, schedule, estimate, and support contracted services."
   - label: "Sharing"
-    text: "Not sold; shared only with service providers needed to operate the site or deliver service"
+    text: "Not sold; shared only with service providers needed to operate the site or deliver service."
   - label: "Control"
-    text: "You may request access, correction, or deletion where feasible"
+    text: "You may request access, correction, or deletion where feasible."
 ---
 
 ## Privacy Policy
@@ -140,7 +137,7 @@ We may update this policy from time to time. The “Last updated” date reflect
 **Tillerstead LLC**  
 NJ HIC #13VH10808800  
 325 E. Jimmie Leeds Road, Suite 7-333  
-Galloway, NJ 08205
+Galloway Township, NJ 08205
 
 Email: <info@tillerstead.com>  
 Phone: (609) 862-8808

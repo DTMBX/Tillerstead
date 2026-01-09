@@ -1,0 +1,36 @@
+.ts-faq {
+    margin-bottom: 2.5rem;
+
+    .faq {
+        margin-top: 1.5rem;
+    }
+
+    .faq-item {
+        margin-bottom: 1.25rem;
+        border-radius: 0.25rem;
+        background: #fff;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+        border: 1px solid #e0e7ed;
+        overflow: hidden;
+
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            padding: 1rem 1.25rem;
+            background: #f8fafc;
+            outline: none;
+            transition: background 0.2s;
+
+            &:hover,
+            &:focus {
+                background: #e0e7ed;
+            }
+        }
+
+        .faq-body {
+            padding: 1rem 1.25rem;
+            border-top: 1px solid #e0e7ed;
+            background: #fff;
+        }
+    }
+}

@@ -1,43 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
----
-layout: default
----
-
-<section class="ts-section ts-build-content">
-  <div class="container container-wide">
-    <div class="build-content-grid">
-      <aside class="build-content-sidebar" aria-label="Build phase navigation">
-        {% include content/build-sidenav.html %}
-      </aside>
-
-      <div class="build-content-main">
-        {% if page.build_title or page.description %}
-          <header class="section-header" aria-label="Build guide overview">
-            {% if page.build_title %}
-              <p class="eyebrow">{{ page.build_title }}</p>
-            {% endif %}
-            {% if page.description %}
-              <p class="lead">{{ page.description }}</p>
-            {% endif %}
-          </header>
-        {% endif %}
-
-        {% include components/toc.html %}
-
-        <article class="prose">
-          {{ content }}
-        </article>
-
-        {% include content/build-prev-next.html %}
+<head>
+  {% include head.html %}
+</head>
+<body class="ts-build-page">
+  {% include header.html %}
+  <main class="ts-section ts-build-content" aria-labelledby="build-guide-heading">
+    <div class="container container-wide">
+      <div class="build-content-grid">
+        <aside class="build-content-sidebar" aria-label="Build phase navigation">
+          {% include content/build-sidenav.html %}
+        </aside>
+        <div class="build-content-main">
+          {% if page.build_title or page.description %}
+            <header class="section-header" id="build-guide-heading">
+              {% if page.build_title %}
+                <p class="eyebrow">{{ page.build_title }}</p>
+              {% endif %}
+              {% if page.description %}
+                <p class="lead">{{ page.description }}</p>
+              {% endif %}
+            </header>
+          {% endif %}
+          {% include components/toc.html %}
+          <article class="prose">
+            {{ content }}
+          </article>
+          {% include content/build-prev-next.html %}
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
-{% assign schema_kind = page.schema_type | default: "HowTo" %}
-{% if schema_kind == "HowTo" %}
-  {% include schema/schema-howto.html %}
-{% else %}
-  {% include schema/schema-techarticle.html %}
-{% endif %}
+  </main>
+  {% include footer.html %}
+</body>
+</html>

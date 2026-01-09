@@ -1,15 +1,13 @@
-# --- OS / Editor ---
+# OS / Editor
 .DS_Store
 Thumbs.db
+desktop.ini
 .vscode/
 .idea/
-.gemini/
-gha-creds-*.json
-desktop.ini
-.idea/
 .history/
+.gemini/
 
-# --- Ruby / Jekyll ---
+# Ruby / Jekyll
 _site/
 .jekyll-cache/
 .jekyll-metadata
@@ -19,25 +17,26 @@ vendor/
 vendor/bundle/
 Gemfile.lock
 
-# --- Node ---
+# Node
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# --- Build artifacts that should not be tracked ---
+# Build artifacts
 assets/css/style.css
 assets/css/style.css.map
+assets/css/*.css
 convert-pattern.js
-_archive/
 dist/
 build/
+_archive/
 
-# --- Coverage and test output ---
+# Coverage and test output
 coverage/
 *.lcov
 
-# --- Backups / temp ---
+# Backups / temp
 _backup/
 _tmp/
 .backups/
@@ -52,23 +51,16 @@ _tmp/
 *.tmp
 *~
 
-# --- Local audits / logs ---
+# Local audits / logs
 reports/
 *.log
 
-# --- Custom: Exclude AI and Copilot instruction artifacts ---
+# AI/Copilot artifacts
 .ai/
 .aider*
 
-# --- Script "keep" copies ---
+# Script "keep" copies
 *.bak_keep_*
 
-# --- Vendor folder should not be tracked ---
+# Vendor
 vendor/
-
-# build + generated outputs
-_site/
-vendor/
-
-assets/css/style.css
-assets/css/*.css

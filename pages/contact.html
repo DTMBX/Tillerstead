@@ -1,46 +1,38 @@
 ---
 layout: default
-title: Contact | Request a Written Estimate
+title: "Contact | Request a Written Estimate"
 permalink: /contact/
-description: "Request a written estimate from Tillerstead LLC. Licensed NJ HIC #13VH10808800. Tile, shower waterproofing systems, and bathroom remodeling across Atlantic, Ocean & Cape May Counties."
+description: "Request a written estimate from Tillerstead LLC. Licensed NJ HIC #13VH10808800. Tile, shower waterproofing
+systems, and bathroom remodeling across Atlantic, Ocean & Cape May Counties."
 body_class: page-contact
 hero_eyebrow: "Get a Written Proposal"
 hero_title: "Request a Scope Review & Estimate"
-hero_summary: "Share your goals and a few site photos. We'll respond with next steps and, when appropriate, a written proposal outlining scope, materials, verification steps, and pricing. Licensed NJ HIC contractor serving South Jersey."
+hero_summary: "Share your goals and a few site photos. We'll respond with next steps and, when appropriate, a written
+proposal outlining scope, materials, verification steps, and pricing. Licensed NJ HIC contractor serving South Jersey."
 hero_primary_url: "tel:+16098628808"
 hero_primary_label: "Call or Text: (609) 862-8808"
 hero_secondary_url: "mailto:info@tillerstead.com"
 hero_secondary_label: "Email Us"
 hero_kpis:
-  - label: "Licensed & Insured"
-    text: "NJ HIC #13VH10808800 · Certificates available on request"
-  - label: "Best Fit Projects"
-    text: "Tile, shower waterproofing assemblies, bathroom remodeling"
-  - label: "Service Area"
-    text: "Atlantic · Ocean · Cape May (statewide considered)"
+- label: "Licensed & Insured"
+text: "NJ HIC #13VH10808800 · Certificates available on request"
+- label: "Best Fit Projects"
+text: "Tile, shower waterproofing assemblies, bathroom remodeling"
+- label: "Service Area"
+text: "Atlantic · Ocean · Cape May (statewide considered)"
 ---
-
-<section
-  class="section section-form"
-  aria-labelledby="contact-heading"
-  style="
-    background-image: url(&quot;data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='tile-grid' x='0' y='0' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Cpath d='M30 0v60M0 30h60' stroke='%23e0e7ed' stroke-width='0.5' fill='none' opacity='0.3'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23tile-grid)'/%3E%3C/svg%3E&quot;);
-  "
->
+<section class="section section-form contact-bg" aria-labelledby="contact-heading">
   <div class="container contact-shell">
     <header class="contact-header">
       <h2 id="contact-heading">Tell Us About Your Project</h2>
-
       <p class="lead" id="form-intro">
         The fastest way to get an accurate estimate is a clear scope and a few
         photos. We specialize in tile installations and shower/wet-area systems
         built as complete assemblies—planned, verified, and documented so your
         project holds up over time.
       </p>
-
       <!-- Peace of Mind Assurance -->
       {% include components/ts-peace-of-mind.html %}
-
       <div class="contact-steps" aria-label="Estimate process">
         <h3>What Happens Next</h3>
         <ol>
@@ -59,7 +51,6 @@ hero_kpis:
           </li>
         </ol>
       </div>
-
       <div class="what-you-can-expect" aria-label="What to expect">
         <h3>What You Can Expect</h3>
         <ul>
@@ -171,32 +162,3 @@ hero_kpis:
     </div>
   </div>
 </section>
-
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "@id": "{{ site.url }}/contact/#page",
-    "url": "{{ site.url }}/contact/",
-    "about": {
-      "@type": "HomeAndConstructionBusiness",
-      "name": "Tillerstead LLC",
-      "telephone": "{{ site.company.phone_link }}",
-      "areaServed": [
-        "Atlantic County, New Jersey",
-        "Ocean County, New Jersey",
-        "Cape May County, New Jersey"
-      ],
-      "license": "New Jersey HIC #13VH10808800"
-    },
-    "mainEntity": {
-      "@type": "Action",
-      "name": "Request a Written Estimate",
-      "target": "{{ site.url }}/contact/",
-      "result": {
-        "@type": "Thing",
-        "name": "Written Proposal"
-      }
-    }
-  }
-</script>
