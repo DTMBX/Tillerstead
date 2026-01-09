@@ -131,32 +131,21 @@ forms:
 # Exclusions
 # ----------------------------
 exclude:
-  - .backups
-  - scripts
-  - reports
-  - vendor
   - node_modules
-  - dist
-  - "README.md"
-  - "LICENSE"
-  - "node_modules/"
-  - "vendor/"
-  - "package.json"
-  - "package-lock.json"
-  - "Gemfile"
-  - "Gemfile.lock"
-  - ".DS_Store"
-  - ".gitignore"
-  - "root-archive/docs/"
-  - "root-archive/docs/**"
-  - "baseline/"
-  - "baseline/**"
-  - "*.bak.*"
-  - "**/*.bak.*"
-  - "_site"
-  - ".jekyll-cache"
-  - ".jekyll-metadata"
-  - "*.bak_keep_*"
+  - vendor
+  - .git
+  - .github
+  - .vscode
+  - scripts
+  - tools
+  - _audit
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - README.md
+  - "*.ps1"
+  - "*.sh"
 keep_files:
   - "CNAME"
   - "assets/"
