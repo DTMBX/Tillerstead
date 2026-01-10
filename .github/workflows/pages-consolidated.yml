@@ -32,7 +32,7 @@ jobs:
 
       - name: Install Node dependencies
         run: npm ci
-        if: exists('package.json')
+        if: ${{ exists('package.json') }}
 
       - name: Build site
         run: |
