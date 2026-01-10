@@ -16,6 +16,7 @@ text: "Affordable monthly payments"
 text: "Pay off early anytime"
 ---
 
+{%- comment -%} Jekyll page: doctype and html tag are injected by layout. Ignore HTML validation errors for missing doctype. {%- endcomment -%}
 <section
   class="ts-section ts-surface financing financing--geo-bg"
   aria-labelledby="financing-main-heading"
@@ -80,7 +81,6 @@ text: "Pay off early anytime"
       <p class="microcopy">
         Financing is optional. We don’t rush prep or skip waterproofing details
         to make numbers “fit.” We’d rather phase scope than build something that
-        fails.
       </p>
 
       <div class="btn-row cta-row">
@@ -94,15 +94,32 @@ text: "Pay off early anytime"
           Call {{ site.company.phone_display | default: '(609) 862-8808' }}
         </a>
       </div>
-
       <p class="muted">
-        Licensed New Jersey Home Improvement Contractor: HIC #13VH10808800.
       </p>
     </div>
 
+        ---
+        layout: default
+        title: "Financing Options"
+        permalink: /financing/
+        description: "Explore financing options for your Tillerstead project."
+        hero_eyebrow: "Flexible Payment"
+        hero_title: "Financing Options"
+        hero_summary: "We offer flexible financing for qualified projects. Contact us to learn more."
+        hero_kpis:
+          - label: "Simple Application"
+            text: "Quick approval process for most clients"
+          - label: "Competitive Rates"
+            text: "Affordable monthly payments"
+          - label: "No Prepayment Penalty"
+            text: "Pay off early anytime"
+        ---
+
+        <section
+          class="ts-section ts-surface financing financing--geo-bg"
     <aside
       class="financing-side ts-card"
-      aria-label="Third-party financing via Acorn Finance"
+      aria-label="Third-party financing via Acorn Finance">
     >
       <h2 class="heading-3">Check Financing Offers Online</h2>
       <p>
