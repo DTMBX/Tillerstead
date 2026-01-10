@@ -20,6 +20,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -31,6 +32,7 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -42,6 +44,7 @@
     opacity: 0;
     transform: translateY(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -53,6 +56,7 @@
     opacity: 0;
     transform: translateX(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -64,6 +68,7 @@
     opacity: 0;
     transform: translateX(20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -76,6 +81,7 @@
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -87,6 +93,7 @@
   100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
@@ -98,13 +105,16 @@
     opacity: 0;
     transform: scale(0.3);
   }
+
   50% {
     opacity: 1;
     transform: scale(1.05);
   }
+
   70% {
     transform: scale(0.9);
   }
+
   100% {
     transform: scale(1);
   }
@@ -115,6 +125,7 @@
   0% {
     background-position: -1000px 0;
   }
+
   100% {
     background-position: 1000px 0;
   }
@@ -124,8 +135,9 @@
 @keyframes float {
   0%,
   100% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -135,10 +147,11 @@
 @keyframes glow {
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(7, 137, 48, 0.4);
+    box-shadow: 0 0 0 0 rgb(7, 137, 48, 0.4);
   }
+
   50% {
-    box-shadow: 0 0 0 10px rgba(7, 137, 48, 0);
+    box-shadow: 0 0 0 10px rgb(7, 137, 48, 0);
   }
 }
 
@@ -148,6 +161,7 @@
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.7;
   }
@@ -158,6 +172,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -167,14 +182,17 @@
 @keyframes wave {
   0%,
   100% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
+
   25% {
     transform: translateY(-5px);
   }
+
   50% {
     transform: translateY(-10px);
   }
+
   75% {
     transform: translateY(-5px);
   }
@@ -234,22 +252,27 @@
   animation-delay: 0ms;
   opacity: 1;
 }
+
 .animate-stagger > *:nth-child(2) {
   animation-delay: 75ms;
   opacity: 1;
 }
+
 .animate-stagger > *:nth-child(3) {
   animation-delay: 150ms;
   opacity: 1;
 }
+
 .animate-stagger > *:nth-child(4) {
   animation-delay: 225ms;
   opacity: 1;
 }
+
 .animate-stagger > *:nth-child(5) {
   animation-delay: 300ms;
   opacity: 1;
 }
+
 .animate-stagger > *:nth-child(n + 6) {
   animation-delay: 375ms;
   opacity: 1;
@@ -313,7 +336,7 @@
 button,
 a,
 [role="button"] {
-  &:not([class*="btn--disabled"]):not([aria-disabled="true"]) {
+  &:not([class*="btn--disabled"], [aria-disabled="true"]) {
     transition:
       transform var(--duration-fast) var(--easing-out),
       box-shadow var(--duration-fast) var(--easing-out),
@@ -341,18 +364,18 @@ a,
 /* Primary button with accent glow */
 .btn--primary {
   &:hover {
-    box-shadow: 0 0 0 4px rgba(7, 137, 48, 0.1);
+    box-shadow: 0 0 0 4px rgb(7, 137, 48, 0.1);
   }
 
   &:active {
-    box-shadow: 0 0 0 2px rgba(7, 137, 48, 0.05);
+    box-shadow: 0 0 0 2px rgb(7, 137, 48, 0.05);
   }
 }
 
 /* Accent button with red glow */
 .btn--accent {
   &:hover {
-    box-shadow: 0 0 0 4px rgba(218, 18, 26, 0.1);
+    box-shadow: 0 0 0 4px rgb(218, 18, 26, 0.1);
   }
 }
 

@@ -238,7 +238,7 @@
   background: linear-gradient(
     90deg,
     var(--pg-color) 0%,
-    rgba(7, 137, 48, 0.8) 50%,
+    rgb(7, 137, 48, 0.8) 50%,
     var(--pg-color) 100%
   );
   background-size: 200% 100%;
@@ -316,7 +316,7 @@
     background: linear-gradient(
       90deg,
       var(--pg-color) 0%,
-      rgba(7, 137, 48, 0.7) 100%
+      rgb(7, 137, 48, 0.7) 100%
     );
     background-size: 200% 100%;
     animation: shimmerWave 1.2s infinite;
@@ -338,15 +338,19 @@
 .bounce-enter-delay-1 {
   animation-delay: 0.1s;
 }
+
 .bounce-enter-delay-2 {
   animation-delay: 0.2s;
 }
+
 .bounce-enter-delay-3 {
   animation-delay: 0.3s;
 }
+
 .bounce-enter-delay-4 {
   animation-delay: 0.4s;
 }
+
 .bounce-enter-delay-5 {
   animation-delay: 0.5s;
 }
@@ -449,9 +453,11 @@
     &:nth-child(1) {
       animation-delay: 0s;
     }
+
     &:nth-child(2) {
       animation-delay: 0.2s;
     }
+
     &:nth-child(3) {
       animation-delay: 0.4s;
     }
@@ -628,6 +634,7 @@ input:valid {
 .animate-none {
   animation: none !important;
 }
+
 .transition-none {
   transition: none !important;
 }

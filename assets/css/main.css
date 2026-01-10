@@ -1,11 +1,12 @@
 /* Error: It's not clear which file to import. Found:
- *   _sass\30-components\_animations.scss
- *   _sass\30-components\animations.scss
+ *   _sass\00-settings\_patterns.scss
+ *   _sass\00-settings\patterns.scss
  *    ,
- * 38 | @use "30-components/animations" as *;
- *    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ * 12 | @forward "patterns";
+ *    | ^^^^^^^^^^^^^^^^^^^
  *    '
- *   assets\css\main.scss 38:1  root stylesheet */
+ *   00-settings\_entry.scss 12:1  @use
+ *   assets\css\main.scss 9:1      root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -15,5 +16,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: It's not clear which file to import. Found:\a   _sass\\30-components\\_animations.scss\a   _sass\\30-components\\animations.scss\a    \2577 \a 38 \2502  @use \"30-components/animations\" as *;\a    \2502  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   assets\\css\\main.scss 38:1  root stylesheet";
+  content: "Error: It's not clear which file to import. Found:\a   _sass\\00-settings\\_patterns.scss\a   _sass\\00-settings\\patterns.scss\a    \2577 \a 12 \2502  @forward \"patterns\";\d\a    \2502  ^^^^^^^^^^^^^^^^^^^\a    \2575 \a   00-settings\\_entry.scss 12:1  @use\a   assets\\css\\main.scss 9:1      root stylesheet";
 }

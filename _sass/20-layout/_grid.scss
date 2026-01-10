@@ -16,6 +16,7 @@
     --spacing-grid-gap,
     clamp(1rem, 3vw, 1.6rem)
   ); // Uses design token or fallback
+
   width: 100%;
   box-sizing: border-box;
   min-width: 0;

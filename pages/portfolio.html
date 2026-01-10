@@ -1,26 +1,33 @@
 ---
 layout: default
-title: "Portfolio | Tillerstead LLC"
-description: "Portfolio of code-compliant tile, bath, and finish work by Tillerstead LLC. All projects meet TCNA
-standards and New Jersey HIC requirements: waterproofing, substrate prep, and precision installation."
+title: Portfolio | Tillerstead LLC
+description: >-
+  Portfolio of code-compliant tile, bath, and finish work by Tillerstead LLC.
+  All projects meet TCNA standards and New Jersey HIC requirements:
+  waterproofing, substrate prep, and precision installation.
 body_class: page-portfolio
-hero_eyebrow: "Portfolio"
-hero_title: "Recent Tile & Finish Work Across South Jersey"
-hero_summary: "Completed waterproof showers, floors, and backsplashes for New Jersey general contractors. All assemblies
-follow TCNA methods and New Jersey HIC law—no shortcuts, no guesswork."
+hero_eyebrow: Portfolio
+hero_title: Recent Tile & Finish Work Across South Jersey
+hero_summary: >-
+  Completed waterproof showers, floors, and backsplashes for New Jersey general
+  contractors. All assemblies follow TCNA methods and New Jersey HIC law—no
+  shortcuts, no guesswork.
 permalink: /portfolio/
 ---
 
-{% include content/ts-portfolio.html %}
 
-{% assign projects = site.data.portfolio.projects %}
-{% if projects == nil %}{% assign projects = "" | split: "," %}{% endif %}
 
-{%- assign total_projects = projects | size | plus: 0 -%}
 
-{%- assign fallback_src = '/assets/img/tillerstead-work/bathrooms/after-lft-vanity-wall.jpg' | relative_url -%}
-{%- assign fallback_alt = 'Large-format tile bathroom installation by Tillerstead LLC. Installed per TCNA standards with proper substrate prep, waterproofing, and expansion joints.' -%}
-{%- assign fallback_caption = 'All work meets TCNA and New Jersey HIC standards—precision installation, code-compliant waterproofing, and built for durability.' -%}
+{% include content/ts-portfolio.html %} {% assign projects =
+site.data.portfolio.projects %} {% if projects == nil %}{% assign projects = ""
+| split: "," %}{% endif %} {%- assign total_projects = projects | size | plus: 0
+-%} {%- assign fallback_src =
+'/assets/img/tillerstead-work/bathrooms/after-lft-vanity-wall.jpg' |
+relative_url -%} {%- assign fallback_alt = 'Large-format tile bathroom
+installation by Tillerstead LLC. Installed per TCNA standards with proper
+substrate prep, waterproofing, and expansion joints.' -%} {%- assign
+fallback_caption = 'All work meets TCNA and New Jersey HIC standards—precision
+installation, code-compliant waterproofing, and built for durability.' -%}
 
 <section class="ts-section ts-surface portfolio-page">
   <div class="container">
@@ -29,12 +36,54 @@ permalink: /portfolio/
 
     <!-- Filters -->
     <div class="filters" role="tablist" aria-label="Portfolio filters">
-      <button class="chip is-active" role="tab" aria-selected="true" data-filter="all">All</button>
-      <button class="chip" role="tab" aria-selected="false" data-filter="showers">Showers</button>
-      <button class="chip" role="tab" aria-selected="false" data-filter="backsplashes">Backsplashes</button>
-      <button class="chip" role="tab" aria-selected="false" data-filter="floors">Floors</button>
-      <button class="chip" role="tab" aria-selected="false" data-filter="remodels">Remodels</button>
-      <button class="chip" role="tab" aria-selected="false" data-filter="repairs">Repairs</button>
+      <button
+        class="chip is-active"
+        role="tab"
+        aria-selected="true"
+        data-filter="all"
+      >
+        All
+      </button>
+      <button
+        class="chip"
+        role="tab"
+        aria-selected="false"
+        data-filter="showers"
+      >
+        Showers
+      </button>
+      <button
+        class="chip"
+        role="tab"
+        aria-selected="false"
+        data-filter="backsplashes"
+      >
+        Backsplashes
+      </button>
+      <button
+        class="chip"
+        role="tab"
+        aria-selected="false"
+        data-filter="floors"
+      >
+        Floors
+      </button>
+      <button
+        class="chip"
+        role="tab"
+        aria-selected="false"
+        data-filter="remodels"
+      >
+        Remodels
+      </button>
+      <button
+        class="chip"
+        role="tab"
+        aria-selected="false"
+        data-filter="repairs"
+      >
+        Repairs
+      </button>
     </div>
 
     <!-- Slider -->
@@ -61,16 +110,25 @@ permalink: /portfolio/
 
       <div class="slider-footer">
         <span class="slide-meta" id="slide-meta">
-          {% if total_projects == 0 %}
-            All work
-          {% else %}
-            All work · 1 of {{ total_projects }}
-          {% endif %}
+          {% if total_projects == 0 %} All work {% else %} All work · 1 of {{
+          total_projects }} {% endif %}
         </span>
 
         <div class="slider-controls" aria-label="Slide controls">
-          <button type="button" class="slider-arrow prev" aria-label="Previous photo">‹</button>
-          <button type="button" class="slider-arrow next" aria-label="Next photo">›</button>
+          <button
+            type="button"
+            class="slider-arrow prev"
+            aria-label="Previous photo"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            class="slider-arrow next"
+            aria-label="Next photo"
+          >
+            ›
+          </button>
         </div>
       </div>
 
@@ -81,7 +139,9 @@ permalink: /portfolio/
     <section class="trade-notes" aria-labelledby="trade-notes-title">
       <div class="container">
         <header class="section-header">
-          <h2 id="trade-notes-title" class="heading-2 text-primary">Trade Notes</h2>
+          <h2 id="trade-notes-title" class="heading-2 text-primary">
+            Trade Notes
+          </h2>
           <p class="lead">How technical planning delivers lasting results</p>
         </header>
 
@@ -89,7 +149,8 @@ permalink: /portfolio/
           <article class="trade-note-card">
             <h3 class="heading-4">Layout Centered on Sightline</h3>
             <p>
-              Tile layouts are planned from the primary sightline, not arbitrary edges. This ensures balanced cuts and eliminates unsightly slivers
+              Tile layouts are planned from the primary sightline, not arbitrary
+              edges. This ensures balanced cuts and eliminates unsightly slivers
               in visible areas. (TCNA Handbook, Layout Guidelines)
             </p>
           </article>
@@ -97,15 +158,17 @@ permalink: /portfolio/
           <article class="trade-note-card">
             <h3 class="heading-4">Cuts Pushed to Secondary Areas</h3>
             <p>
-              Partial tiles are reserved for corners and low-visibility zones. The main field features full or near-full modules for a professional,
-              symmetrical finish.
+              Partial tiles are reserved for corners and low-visibility zones.
+              The main field features full or near-full modules for a
+              professional, symmetrical finish.
             </p>
           </article>
 
           <article class="trade-note-card">
             <h3 class="heading-4">Substrate Corrected Before Tile</h3>
             <p>
-              All substrates are flattened and leveled to TCNA tolerances before tile installation. Large-format tile exposes every flaw—prep is
+              All substrates are flattened and leveled to TCNA tolerances before
+              tile installation. Large-format tile exposes every flaw—prep is
               non-negotiable.
             </p>
           </article>
@@ -113,24 +176,34 @@ permalink: /portfolio/
           <article class="trade-note-card">
             <h3 class="heading-4">Movement Joints at Perimeter</h3>
             <p>
-              Expansion and movement joints are installed at all perimeters and changes of plane, per TCNA EJ171. This prevents cracking and ensures
-              long-term durability.
+              Expansion and movement joints are installed at all perimeters and
+              changes of plane, per TCNA EJ171. This prevents cracking and
+              ensures long-term durability.
             </p>
           </article>
         </div>
 
         <p class="trade-notes-footer">
-          <em>Anyone can install tile. Technical planning and code compliance make it last.</em>
+          <em
+            >Anyone can install tile. Technical planning and code compliance
+            make it last.</em
+          >
         </p>
       </div>
     </section>
 
     <section class="portfolio-actions">
       <div class="btn-row">
-        <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Get a Code-Compliant Tile Consultation & Estimate</a>
-        <a class="btn btn-ghost" href="tel:+16098628808" aria-label="Call Tillerstead LLC at (609) 862-8808">Call (609) 862-8808</a>
+        <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}"
+          >Get a Code-Compliant Tile Consultation & Estimate</a
+        >
+        <a
+          class="btn btn-ghost"
+          href="tel:+16098628808"
+          aria-label="Call Tillerstead LLC at (609) 862-8808"
+          >Call (609) 862-8808</a
+        >
       </div>
     </section>
   </div>
 </section>
-

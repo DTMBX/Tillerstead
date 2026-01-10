@@ -2,6 +2,8 @@ function Get-CommandGroups {
     $commandGroups = [ordered]@{
         "Sync + Build" = @(
             "git pull --rebase",
+            "npm run lint:autofix",
+            "node scripts/jekyll-html-formatter.js",
             "bundle exec jekyll build"
         )
         "Backups" = @(
@@ -36,7 +38,7 @@ function Invoke-LoggedCommand {
         }
 
         if ($exitCode -ne 0) {
-            throw "Command exited with code $exitCode: $Command"
+            throw "Command exited with code ${exitCode}: $Command"
         }
     } catch {
         Write-Error "Failure while running: $Command"

@@ -1,6 +1,7 @@
 /* Tillerstead root CSS variables and base selectors (for direct CSS import) */
 :root {
   color-scheme: light;
+
   /* ...existing color and spacing variables from root-vars.css... */
   --hex-teal-900: #0b1f3b;
   --hex-teal-700: #123b6f;

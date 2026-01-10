@@ -1,19 +1,15 @@
 <!-- filepath: c:\web-dev\github-repos\Tillerstead.com\pages\design-showcase.html -->
----
-layout: default
-body_class: "page-design-showcase"
-description: "A visual guide to tile sizes, patterns, and layout options for residential and commercial projects. Custom
-tile selections, wet-area waterproofing assemblies built with published methods and documented for South Jersey homes.
-NJ HIC #13VH10808800."
-hero_eyebrow: "Design"
-hero_summary: "A guide to tile sizing, pattern options, and realistic layout planning. Includes notes on mortar
-coverage, grout widths, and substrate requirements for different installations."
-hero_title: "Tile Sizes, Patterns & Layouts"
-title: "Tile Design Showcase | Patterns, Layouts & Ideas | South Jersey"
----
-
-{% comment %} The default layout includes head.html, header.html, and page-hero.html. Design showcase content lives
-here. {% endcomment %}
+--- layout: default body_class: "page-design-showcase" description: "A visual
+guide to tile sizes, patterns, and layout options for residential and commercial
+projects. Custom tile selections, wet-area waterproofing assemblies built with
+published methods and documented for South Jersey homes. NJ HIC #13VH10808800."
+hero_eyebrow: "Design" hero_summary: "A guide to tile sizing, pattern options,
+and realistic layout planning. Includes notes on mortar coverage, grout widths,
+and substrate requirements for different installations." hero_title: "Tile
+Sizes, Patterns & Layouts" title: "Tile Design Showcase | Patterns, Layouts &
+Ideas | South Jersey" --- {% comment %} The default layout includes head.html,
+header.html, and page-hero.html. Design showcase content lives here. {%
+endcomment %}
 
 <script type="application/ld+json">
   {
@@ -61,10 +57,15 @@ here. {% endcomment %}
 {% include pattern-showcase.html %}
 
 <!-- Design Philosophy / How We Decide -->
-<section class="ts-section ts-section--muted section" aria-labelledby="philosophy-heading">
+<section
+  class="ts-section ts-section--muted section"
+  aria-labelledby="philosophy-heading"
+>
   <div class="ts-section-inner container">
     <header class="ts-section-header">
-      <p class="ts-eyebrow">{{ site.data.design_showcase.philosophy.eyebrow }}</p>
+      <p class="ts-eyebrow">
+        {{ site.data.design_showcase.philosophy.eyebrow }}
+      </p>
       <h2 id="philosophy-heading" class="ts-section-title">
         {{ site.data.design_showcase.philosophy.title }}
       </h2>
@@ -112,7 +113,11 @@ here. {% endcomment %}
       </p>
       <p class="section-cta">
         {% for btn in site.data.design_showcase.details.cta_buttons %}
-        <a href="{{ btn.url | relative_url }}" class="{{ btn.class }}" aria-label="{{ btn.aria }}">
+        <a
+          href="{{ btn.url | relative_url }}"
+          class="{{ btn.class }}"
+          aria-label="{{ btn.aria }}"
+        >
           {{ btn.label }}
         </a>
         {% endfor %}
@@ -120,4 +125,3 @@ here. {% endcomment %}
     </div>
   </div>
 </section>
-

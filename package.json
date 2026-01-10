@@ -10,6 +10,8 @@
   "scripts": {
     "jekyll": "bundle exec jekyll",
     "lint": "npm run lint:js && npm run lint:css",
+    "lint:all": "node scripts/lint-and-parse.js",
+    "lint:autofix": "node scripts/lint-parse-autofix.cjs",
     "lint:js": "eslint .",
     "lint:html": "npx htmlhint \"_site/**/*.html\" || true",
     "lint:css": "stylelint \"**/*.{css,scss}\"",

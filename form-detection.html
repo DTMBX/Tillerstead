@@ -37,7 +37,9 @@
       label {
         font-weight: 600;
       }
-      input, textarea, button {
+      input,
+      textarea,
+      button {
         font-size: 1rem;
       }
       button {
@@ -49,7 +51,8 @@
         cursor: pointer;
         font-weight: 600;
       }
-      button:hover, button:focus {
+      button:hover,
+      button:focus {
         background: #2563eb;
       }
     </style>
@@ -65,16 +68,53 @@
       aria-label="Contact form for Netlify detection"
     >
       <input type="hidden" name="form-name" value="contact" />
-      <label for="bot-field" class="visually-hidden">Leave this field blank</label>
-      <input id="bot-field" name="bot-field" placeholder="Leave blank" title="Leave blank" tabindex="-1" autocomplete="off" />
+      <label for="bot-field" class="visually-hidden"
+        >Leave this field blank</label
+      >
+      <input
+        id="bot-field"
+        name="bot-field"
+        placeholder="Leave blank"
+        title="Leave blank"
+        tabindex="-1"
+        autocomplete="off"
+      />
       <label for="name">Name</label>
-      <input id="name" name="name" required placeholder="Your name" title="Your name" autocomplete="off" />
+      <input
+        id="name"
+        name="name"
+        required
+        placeholder="Your name"
+        title="Your name"
+        autocomplete="off"
+      />
       <label for="email">Email</label>
-      <input id="email" name="email" type="email" required title="Your email address" placeholder="Your email address" autocomplete="off" />
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+        title="Your email address"
+        placeholder="Your email address"
+        autocomplete="off"
+      />
       <label for="phone">Phone</label>
-      <input id="phone" name="phone" type="tel" title="Your phone number" placeholder="Your phone number (optional)" autocomplete="off" />
+      <input
+        id="phone"
+        name="phone"
+        type="tel"
+        title="Your phone number"
+        placeholder="Your phone number (optional)"
+        autocomplete="off"
+      />
       <label for="message">Message</label>
-      <textarea id="message" name="message" required title="Your message" placeholder="Your message"></textarea>
+      <textarea
+        id="message"
+        name="message"
+        required
+        title="Your message"
+        placeholder="Your message"
+      ></textarea>
       <button type="submit">Submit</button>
     </form>
   </body>

@@ -25,6 +25,7 @@
 .container-narrow {
   max-inline-size: 800px;
 }
+
 .container-full {
   inline-size: 100%;
   max-inline-size: 100%;
@@ -70,6 +71,7 @@
   background: var(--ts-gradient-primary);
   color: var(--ts-white);
 }
+
 .section-muted {
   background: var(--ts-color-surface-muted);
 }
@@ -100,9 +102,11 @@
 .flow > * + * {
   margin-block-start: var(--spacing-flow-space, var(--ts-spacing-md));
 }
+
 .flow-sm {
   --flow-space: var(--ts-spacing-sm);
 }
+
 .flow-md {
   --flow-space: var(--ts-spacing-md);
 }
@@ -113,12 +117,15 @@
   flex-direction: column;
   gap: var(--spacing-stack-gap, var(--ts-spacing-md));
 }
+
 .stack-sm {
   --stack-gap: var(--ts-spacing-sm);
 }
+
 .stack-md {
   --stack-gap: var(--ts-spacing-md);
 }
+
 .stack-lg {
   --stack-gap: var(--ts-spacing-lg);
 }
@@ -130,21 +137,27 @@
   gap: var(--spacing-cluster-gap, var(--ts-spacing-sm));
   align-items: center;
 }
+
 .cluster-md {
   --cluster-gap: var(--ts-spacing-md);
 }
+
 .cluster-lg {
   --cluster-gap: var(--ts-spacing-lg);
 }
+
 .cluster-xl {
   --cluster-gap: var(--ts-spacing-xl);
 }
+
 .cluster-center {
   justify-content: center;
 }
+
 .cluster-between {
   justify-content: space-between;
 }
+
 .cluster-end {
   justify-content: flex-end;
 }
@@ -202,6 +215,7 @@
   justify-content: center;
   padding-block: var(--spacing-section-padding-y, 4rem);
 }
+
 .cover-half {
   min-height: 50vh;
 }
@@ -217,12 +231,15 @@
 .aspect-video {
   aspect-ratio: 16 / 9;
 }
+
 .aspect-square {
   aspect-ratio: 1 / 1;
 }
+
 .aspect-wide {
   aspect-ratio: 21 / 9;
 }
+
 .aspect-portrait {
   aspect-ratio: 3 / 4;
 }
@@ -231,30 +248,39 @@
 .max-w-xs {
   max-width: 20rem !important;
 }
+
 .max-w-sm {
   max-width: 24rem !important;
 }
+
 .max-w-md {
   max-width: 28rem !important;
 }
+
 .max-w-lg {
   max-width: 32rem !important;
 }
+
 .max-w-xl {
   max-width: 36rem !important;
 }
+
 .max-w-2xl {
   max-width: 42rem !important;
 }
+
 .max-w-3xl {
   max-width: 48rem !important;
 }
+
 .max-w-4xl {
   max-width: 56rem !important;
 }
+
 .max-w-5xl {
   max-width: 64rem !important;
 }
+
 .max-w-full {
   max-width: 100% !important;
 }
@@ -321,11 +347,13 @@
 }
 
 /* ========== DESKTOP FULL-WIDTH OPTIMIZATION ========== */
+
 /* For screens 1024px and wider, expand containers for better readability */
+
 /* This applies site-wide without requiring class changes on every element */
 @media (min-width: 1280px) {
   /* Expand primary containers for better horizontal space utilization */
-  .container:not(.container-narrow):not(.container-full) {
+  .container:not(.container-narrow, .container-full) {
     max-inline-size: 1280px;
   }
 

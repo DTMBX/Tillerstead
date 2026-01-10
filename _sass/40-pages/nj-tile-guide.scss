@@ -60,7 +60,7 @@
       border: 1px solid var(--ts-color-border);
       border-radius: 16px;
       padding: 2rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 20px rgb(0, 0, 0, 0.08);
       position: sticky;
       top: 120px;
   }
@@ -87,7 +87,7 @@
 
   .download-card-title {
       font-size: 1.25rem;
-      margin: 0 0 0.5rem 0;
+      margin: 0 0 0.5rem;
   }
 
   .download-card-subtitle {
@@ -121,7 +121,7 @@
   .download-form .form-input:focus {
       outline: none;
       border-color: var(--ts-color-primary);
-      box-shadow: 0 0 0 3px rgba(13, 154, 170, 0.1);
+      box-shadow: 0 0 0 3px rgb(13, 154, 170, 0.1);
   }
 
   .form-group--checkbox {
@@ -161,7 +161,7 @@
   .download-trust p {
       font-size: 0.875rem;
       font-weight: 600;
-      margin: 0 0 0.75rem 0;
+      margin: 0 0 0.75rem;
   }
 
   .trust-list {

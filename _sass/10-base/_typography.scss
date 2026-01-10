@@ -282,9 +282,11 @@ pre code {
 .text-left {
   text-align: left;
 }
+
 .text-center {
   text-align: center;
 }
+
 .text-right {
   text-align: right;
 }
@@ -293,15 +295,19 @@ pre code {
 .font-light {
   font-weight: 300;
 }
+
 .font-normal {
   font-weight: 400;
 }
+
 .font-medium {
   font-weight: 500;
 }
+
 .font-semibold {
   font-weight: 600;
 }
+
 .font-bold {
   font-weight: 700;
 }
@@ -310,15 +316,19 @@ pre code {
 .text-primary {
   color: var(--ts-color-primary);
 }
+
 .text-accent {
   color: var(--ts-color-accent);
 }
+
 .text-heading {
   color: var(--ts-color-heading);
 }
+
 .text-body {
   color: var(--ts-color-text);
 }
+
 .text-muted {
   color: var(--ts-color-muted);
 }

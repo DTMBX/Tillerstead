@@ -71,21 +71,27 @@
 .ts-icon--primary {
   color: var(--color-primary);
 }
+
 .ts-icon--accent {
   color: var(--color-accent);
 }
+
 .ts-icon--navy {
   color: var(--color-navy-900);
 }
+
 .ts-icon--success {
   color: var(--color-success);
 }
+
 .ts-icon--warning {
   color: var(--color-warning);
 }
+
 .ts-icon--danger {
   color: var(--color-danger);
 }
+
 .ts-icon--muted {
   color: var(--color-slate-400);
 }
@@ -107,6 +113,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
