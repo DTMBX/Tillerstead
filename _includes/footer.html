@@ -5,12 +5,13 @@
 {% assign secondary_nav = site.data.navigation.secondary %}
 
 <footer>
-  <img src="/assets/img/logo/4k-logo.png" alt="Tillerstead Logo" class="footer-logo">
+  <img src="/assets/img/logo/optimized-logo.png" alt="Tillerstead Logo" class="footer-logo">
   <p class="footer-tagline">{{ site.tagline }}</p>
   <p class="footer-license">NJ HIC #{{ site.company.hic }}</p>
   <address class="footer-address">
     {{ site.company.address_line }}<br />
     {{ site.company.address_city }}, {{ site.company.address_region }} {{ site.company.address_postal_code }}
   </address>
+  {% include navigation/main-nav.html %}
 </footer>
 

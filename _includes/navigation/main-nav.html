@@ -1,0 +1,43 @@
+<!-- Main Navigation Component -->
+<nav class="main-nav" aria-label="Main Navigation">
+  <ul class="nav-list">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/services.html">Services</a></li>
+    <li><a href="/portfolio.html">Portfolio</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Mobile Navigation -->
+<div class="mobile-nav">
+  <button class="nav-toggle" aria-label="Open navigation menu">☰</button>
+  <div id="mobile-nav" class="mobile-nav-shell">
+    <button class="nav-close" aria-label="Close navigation menu">✖</button>
+    <ul class="mobile-nav-list">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/services.html">Services</a></li>
+      <li><a href="/portfolio.html">Portfolio</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.querySelector('.nav-toggle');
+    const closeBtn = document.querySelector('.nav-close');
+    const mobileNav = document.querySelector('#mobile-nav');
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.add('nav-open');
+      mobileNav.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      document.body.classList.remove('nav-open');
+      mobileNav.style.display = 'none';
+    });
+  });
+</script>
