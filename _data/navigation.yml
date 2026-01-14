@@ -1,4 +1,3 @@
-
 primary:
   - id: services
     title: "Services"
@@ -134,3 +133,34 @@ footer:
     items:
       - ref: privacy
       - ref: terms
+  - id: main-navigation
+    title: "Main Navigation"
+    children:
+      - title: "Home"
+        url: "/"
+      - title: "About"
+        url: "/about.html"
+      - title: "Services"
+        url: "/services.html"
+      - title: "Portfolio"
+        url: "/portfolio.html"
+      - title: "Contact"
+        url: "/contact.html"
+      - title: "Build Guide"
+        children:
+          - title: "Codes, Permits & Inspections"
+            url: "/build/nj-codes-permits/"
+          - title: "Shower Pans, Slopes & Drains"
+            url: "/build/shower-pans-slopes-drains/"
+          - title: "Waterproofing Systems"
+            url: "/build/waterproofing-systems/"
+          - title: "Curbs & Curbless Showers"
+            url: "/build/curbs-curbless/"
+          - title: "Benches, Seats & Niches"
+            url: "/build/framing-benches-niches/"
+          - title: "Tile Installation Standards"
+            url: "/build/tile-installation-standards/"
+          - title: "Flood Testing & Verification"
+            url: "/build/flood-testing/"
+          - title: "Common Failures & Red Flags"
+            url: "/build/common-build-failures/"

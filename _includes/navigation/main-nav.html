@@ -1,11 +1,20 @@
 <!-- Main Navigation Component -->
 <nav class="main-nav" aria-label="Main Navigation">
   <ul class="nav-list">
-    <li><a href="/">Home</a></li>
-    <li><a href="/about.html">About</a></li>
-    <li><a href="/services.html">Services</a></li>
-    <li><a href="/portfolio.html">Portfolio</a></li>
-    <li><a href="/contact.html">Contact</a></li>
+    {% for item in site.data.navigation %}
+      <li class="nav-item">
+        <a href="{{ item.url }}">{{ item.title }}</a>
+        {% if item.children %}
+          <ul class="sub-nav-list">
+            {% for child in item.children %}
+              <li class="sub-nav-item">
+                <a href="{{ child.url }}">{{ child.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </li>
+    {% endfor %}
   </ul>
 </nav>
 
