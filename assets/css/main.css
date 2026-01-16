@@ -1,50 +1,79 @@
-@charset "UTF-8";
-/* ============================================
-  Tillerstead Main Stylesheet
-  TCNA-Compliant, Modular CSS Architecture
-  Modern + Professional + Dynamic
-  ============================================ */
-/* 00 - Settings: Design Tokens & Variables */
-@import "00-settings/entry.css";
-/* 10 - Base: Accessibility, Typography, Performance */
-@import "10-base/animations.css";
-@import "10-base/reset.css";
-@import "10-base/typography.css";
-@import "10-base/performance.css";
-@import "10-base/mobile-first-utilities.css";
-/* 20 - Layout: Responsive Grid & Container System */
-@import "20-layout/container.css";
-@import "20-layout/grid.css";
-@import "20-layout/mobile.css";
-@import "20-layout/tillerstead-theme.css";
-/* 30 - Components: TCNA-Standard UI Elements */
-@import "30-components/modern-components.css";
-@import "30-components/buttons.css";
-@import "30-components/cards.css";
-@import "30-components/plans.css";
-@import "30-components/forms.css";
-@import "30-components/form-enhancements.css";
-@import "30-components/logo.css";
-@import "30-components/header-premium.css";
-@import "30-components/nav-enhancements.css";
-@import "30-components/footer.css";
-@import "30-components/hero.css";
-@import "30-components/animations.css";
-@import "30-components/breadcrumbs.css";
-@import "30-components/peace-of-mind.css";
-@import "30-components/social-links.css";
-@import "30-components/icons.css";
-@import "30-components/process.css";
-@import "30-components/process-mobile.css";
-@import "30-components/nj-statewide.css";
-@import "30-components/home.css";
-@import "30-components/deliver.css";
-@import "30-components/patterns-complimentary.css";
-/* 40 - Pages: Page-Specific Styles */
-@import "40-pages/portfolio.css";
-@import "page-financing.css";
-/* 40 - Utilities: Helpers for Compliance & Accessibility */
-@import "40-utilities/helpers.css";
-@import "mobile-overrides.css";
+/* --- Header Logo --- */
+.nav-logo {
+  display: block;
+  max-width: 180px;  /* Initial max width for larger screens */
+  max-height: 60px;  /* Initial max height for larger screens */
+  width: auto;
+  height: auto;
+  margin-right: var(--tiller-spacing-lg);  /* Spacing between logo and navigation */
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);  /* Subtle shadow for depth */
+  background: var(--tiller-bg-color);
+  object-fit: contain;
+  padding: var(--tiller-spacing-sm);
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover */
+}
 
-/* Use only variables from root-vars.css and tokens-hybrid.css. No variable redefinitions here. */
+.nav-logo:hover {
+  transform: scale(1.05);  /* Slightly enlarge the logo on hover */
+}
+
+.nav-logo:focus {
+  outline: 3px solid var(--tiller-color-highlight); /* Visible focus state */
+}
+
+/* --- Footer Logo --- */
+.footer-logo {
+  max-width: 100px;  /* Adjust max width for footer logo */
+  height: auto;
+  margin-top: var(--tiller-spacing-sm);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);  /* Subtle shadow for footer logo */
+  background: var(--tiller-bg-color);
+  object-fit: contain;
+  padding: var(--tiller-spacing-xs);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);  /* Slightly enlarge the footer logo on hover */
+}
+
+.footer-logo:focus {
+  outline: 3px solid var(--tiller-color-highlight); /* Visible focus state */
+}
+
+/* --- Responsive Logo Sizing for Header and Footer --- */
+
+/* Mobile responsiveness for logos */
+@media (max-width: 900px) {
+  /* Header Logo */
+  .nav-logo {
+    max-width: 120px;  /* Smaller logo for tablets and small desktops */
+    margin-right: var(--tiller-spacing-md);  /* Adjust spacing */
+  }
+  
+  /* Footer Logo */
+  .footer-logo {
+    max-width: 80px;  /* Smaller logo for mobile footer */
+  }
+}
+
+@media (max-width: 600px) {
+  /* Header Logo */
+  .nav-logo {
+    max-width: 90px;  /* Even smaller logo for mobile devices */
+    margin-bottom: var(--tiller-spacing-xs);  /* Adjust spacing */
+  }
+
+  /* Footer Logo */
+  .footer-logo {
+    max-width: 64px;  /* Even smaller logo for mobile footer */
+  }
+}

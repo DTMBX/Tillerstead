@@ -1,29 +1,22 @@
 <!-- Main Navigation Component -->
-
 <nav class="main-nav" aria-label="Main Navigation">
   <ul class="nav-list">
     {% for item in site.data.navigation.primary %}
-      {% if item.url %}
-        <li class="nav-item">
-          <a href="{{ item.url }}">{{ item.title }}</a>
-          {% if item.children %}
-            <ul class="sub-nav-list">
-              {% for child in item.children %}
-                <li class="sub-nav-item">
-                  <a href="{{ child.url }}">{{ child.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-        </li>
-      {% endif %}
-      {% if item.children and not item.url %}
+    <li class="nav-item {% if item.children %} has-children {% endif %}">
+      <a href="{{ item.url }}" aria-haspopup="{{ item.children | default: false }}" aria-expanded="false">
+        {{ item.title }}
+      </a>
+
+      {% if item.children %}
+      <ul class="sub-nav-list" aria-label="Submenu for {{ item.title }}">
         {% for child in item.children %}
-          <li class="nav-item">
-            <a href="{{ child.url }}">{{ child.title }}</a>
-          </li>
+        <li class="sub-nav-item">
+          <a href="{{ child.url }}">{{ child.title }}</a>
+        </li>
         {% endfor %}
+      </ul>
       {% endif %}
+    </li>
     {% endfor %}
   </ul>
 </nav>
@@ -31,37 +24,51 @@
 <!-- Mobile Navigation -->
 <div class="mobile-nav">
   <button class="nav-toggle" aria-label="Open navigation menu">☰</button>
-  <div id="mobile-nav" class="mobile-nav-shell">
+  <div id="mobile-nav" class="mobile-nav-shell" aria-hidden="true">
     <button class="nav-close" aria-label="Close navigation menu">✖</button>
     <ul class="mobile-nav-list">
       {% for item in site.data.navigation.primary %}
-        {% if item.url %}
-          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-        {% endif %}
+      <li class="mobile-nav-item">
+        <a href="{{ item.url }}">{{ item.title }}</a>
         {% if item.children %}
+        <ul class="mobile-sub-nav-list">
           {% for child in item.children %}
-            <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+          <li class="mobile-sub-nav-item">
+            <a href="{{ child.url }}">{{ child.title }}</a>
+          </li>
           {% endfor %}
+        </ul>
         {% endif %}
+      </li>
       {% endfor %}
     </ul>
   </div>
 </div>
 
+<!-- JavaScript for Mobile Navigation Toggle -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const toggle = document.querySelector('.nav-toggle');
-    const closeBtn = document.querySelector('.nav-close');
+    const toggleButton = document.querySelector('.nav-toggle');
+    const closeButton = document.querySelector('.nav-close');
     const mobileNav = document.querySelector('#mobile-nav');
+    const body = document.body;
 
-    toggle.addEventListener('click', () => {
-      document.body.classList.add('nav-open');
-      mobileNav.style.display = 'block';
-    });
+    // Function to toggle mobile navigation
+    const toggleMobileNav = () => {
+      const isOpen = mobileNav.style.display === 'block';
+      if (isOpen) {
+        body.classList.remove('nav-open');
+        mobileNav.style.display = 'none';
+      } else {
+        body.classList.add('nav-open');
+        mobileNav.style.display = 'block';
+      }
+    };
 
-    closeBtn.addEventListener('click', () => {
-      document.body.classList.remove('nav-open');
-      mobileNav.style.display = 'none';
-    });
+    // Event listener for opening mobile menu
+    toggleButton.addEventListener('click', toggleMobileNav);
+
+    // Event listener for closing mobile menu
+    closeButton.addEventListener('click', toggleMobileNav);
   });
 </script>
