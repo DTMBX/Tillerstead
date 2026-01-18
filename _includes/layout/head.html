@@ -13,6 +13,8 @@
 
 <!-- Core & Utility CSS: Load variables first, then base, then layout, then components, then page/utilities -->
 <link rel="stylesheet" href="{{ '/assets/css/root-vars.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/tile-patterns.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/tile-integrations.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/nav-drawer.css' | relative_url }}">
 <link rel="stylesheet" href="{{ '/assets/css/navigation.css' | relative_url }}">
@@ -24,6 +26,20 @@
 
 <!-- Logo sprite -->
 {% include components/logo-sprite-inline.html %}
+
+<!-- Page-specific stylesheets -->
+{% if page.stylesheets %}
+  {% for stylesheet in page.stylesheets %}
+  <link rel="stylesheet" href="{{ stylesheet | relative_url }}">
+  {% endfor %}
+{% endif %}
+
+<!-- Page-specific scripts -->
+{% if page.scripts %}
+  {% for script in page.scripts %}
+  <script src="{{ script | relative_url }}" defer></script>
+  {% endfor %}
+{% endif %}
 
 <!-- Page-specific styles/scripts can be added below -->
 {% if page.extra_head %}{{ page.extra_head }}{% endif %}

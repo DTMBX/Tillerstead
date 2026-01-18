@@ -24,7 +24,7 @@ body_class: page-reviews
 
     <div class="reviews-grid">
       {% for review in site.data.reviews.reviews %}
-      <article class="review-card" itemscope itemtype="https://schema.org/Review">
+      <article class="review-card ts-tile-framed" itemscope itemtype="https://schema.org/Review">
         <div class="review-card__header">
           <div class="review-card__rating" aria-label="{{ review.rating }} out of {{ review.rating_max }} stars">
             {% for i in (1..review.rating) %}
