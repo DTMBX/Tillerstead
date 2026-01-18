@@ -6,11 +6,11 @@ HIC-licensed.' %} {% assign services = include.services | default: page.services
 | default: site.data.services.services %} {% assign services_gallery =
 include.gallery | default: page.services_gallery %} {% assign section_id =
 include.section_id | default: 'ts-services' %} {% assign heading_id =
-include.heading_id | default: section_id | append: '-title' %} {% comment %}
+include.heading_id | default: section_id | append: '-title' %} {%- comment -%}
 CORE CAPABILITIES section for Tillerstead homepage. Supports: - String format:
 "paint|Title|Description|/url|Tagline|Details" - Object format: { "icon": "...",
 "title": "...", "description": "...", "url": "...", "tagline": "...", "details":
-"..." } {% endcomment %}
+"..." } {%- endcomment -%}
 
 <section
   class="ts-services ts-section ts-services-bg"
@@ -31,27 +31,27 @@ CORE CAPABILITIES section for Tillerstead homepage. Supports: - String format:
 
     {% if services and services != empty %}
     <ul class="ts-services__grid" role="list">
-      {% for raw in services %} {% assign service_tagline = raw.tagline %} {%
-      assign service_details = raw.details | default: raw.points %} {% if raw
-      contains '|' %} {% assign parts = raw | split: '|' %} {% assign
-      service_icon_key = parts[0] | strip %} {% assign service_title =
-      parts[1] | strip %} {% assign service_description= parts[2] | strip %}
-      {% assign service_url = parts[3] | strip %} {% if parts.size > 4 %}
-      {% assign service_tagline = parts[4] | strip %} {% endif %} {% if
-      parts.size > 5 %} {% assign service_details = parts[5] | strip %}
-      {% endif %} {% else %} {% assign service_icon_key = raw.icon %} {%
-      assign service_title = raw.title %} {% assign service_description=
-      raw.description %} {% assign service_url = raw.url %} {% endif %} {%
-      assign service_details_list = service_details %} {% if
-      service_details_list and service_details_list contains '|' %} {% assign
-      service_details_list = service_details_list | split: '|' %} {% elsif
-      service_details_list and service_details_list contains ';' %} {% assign
-      service_details_list = service_details_list | split: ';' %} {% elsif
-      service_details_list and service_details_list contains ',' %} {% assign
-      service_details_list = service_details_list | split: ',' %} {% endif %}
+      {% for raw in services %} {%- assign service_tagline = raw.tagline -%} {%-
+      assign service_details = raw.details | default: raw.points -%} {%- if raw
+      contains '|' -%} {%- assign parts = raw | split: '|' -%} {%- assign
+      service_icon_key = parts[0] | strip -%} {%- assign service_title =
+      parts[1] | strip -%} {%- assign service_description= parts[2] | strip -%}
+      {%- assign service_url = parts[3] | strip -%} {%- if parts.size &gt; 4 -%}
+      {%- assign service_tagline = parts[4] | strip -%} {%- endif -%} {%- if
+      parts.size &gt; 5 -%} {%- assign service_details = parts[5] | strip -%}
+      {%- endif -%} {%- else -%} {%- assign service_icon_key = raw.icon -%} {%-
+      assign service_title = raw.title -%} {%- assign service_description=
+      raw.description -%} {%- assign service_url = raw.url -%} {%- endif -%} {%-
+      assign service_details_list = service_details -%} {%- if
+      service_details_list and service_details_list contains '|' -%} {%- assign
+      service_details_list = service_details_list | split: '|' -%} {%- elsif
+      service_details_list and service_details_list contains ';' -%} {%- assign
+      service_details_list = service_details_list | split: ';' -%} {%- elsif
+      service_details_list and service_details_list contains ',' -%} {%- assign
+      service_details_list = service_details_list | split: ',' -%} {%- endif -%}
 
       <li class="fade-in-scroll">
-        {% include components/service-card.html icon=service_icon_key
+        {% include components/ts-service-card.html icon=service_icon_key
         title=service_title description=service_description
         tagline=service_tagline details=service_details_list url=service_url %}
       </li>
@@ -86,8 +86,16 @@ CORE CAPABILITIES section for Tillerstead homepage. Supports: - String format:
           <img
             src="{{ photo.src | relative_url }}"
             alt="{{ photo.alt | default: 'Detail of TCNA-compliant tile installation in New Jersey' }}"
-            {% if photo.width and photo.height %}width="{{ photo.width }}"
-            height="{{ photo.height }}"{% endif %}
+            {%
+            if
+            photo.width
+            and
+            photo.height
+            %}width="{{ photo.width }}"
+            height="{{ photo.height }}"
+            {%
+            endif
+            %}
             loading="lazy"
             decoding="async"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -172,3 +180,4 @@ CORE CAPABILITIES section for Tillerstead homepage. Supports: - String format:
     {% endif %}
   </div>
 </section>
+

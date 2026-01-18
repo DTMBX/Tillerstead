@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  {% include head.html %}
-  {% include schema-combined.js %}
+  {% include layout/head.html %}
+  {% include schema/schema-combined.js %}
 
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:description" content="{{ page.description }}" />
@@ -18,8 +18,8 @@
 </head>
 
 <body class="ts-body">
-  {% include header.html %}
-  {% include breadcrumbs.html %}
+  {% include layout/header.html %}
+  {% include navigation/breadcrumbs.html %}
 
   <main class="ts-section ts-main-content" role="main">
     <div class="container container-wide shell">
@@ -72,7 +72,7 @@
     </div>
   </main>
 
-  {% include footer.html %}
+  {% include layout/footer.html %}
 </body>
 
 </html>

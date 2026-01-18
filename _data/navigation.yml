@@ -40,6 +40,12 @@ primary:
       - id: tile-standards
         title: "Tile Standards (TCNA)"
         url: "/build/tile-installation-standards/"
+      - id: flood-testing
+        title: "Flood Testing"
+        url: "/build/flood-testing/"
+      - id: common-failures
+        title: "Common Build Failures"
+        url: "/build/common-build-failures/"
 
   - id: reviews
     title: "Reviews"
@@ -93,6 +99,14 @@ footer:
         url: "/build/waterproofing-systems/"
       - title: "Curbless Showers"
         url: "/build/curbs-curbless/"
+      - title: "Benches & Niches"
+        url: "/build/framing-benches-niches/"
+      - title: "Tile Standards (TCNA)"
+        url: "/build/tile-installation-standards/"
+      - title: "Flood Testing"
+        url: "/build/flood-testing/"
+      - title: "Common Build Failures"
+        url: "/build/common-build-failures/"
   - group: "Learn"
     items:
       - title: "FAQ"

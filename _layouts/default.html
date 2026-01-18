@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  {% include head.html %}
-  {% include schema-combined.js %}
+  {% include layout/head.html %}
+  {% include schema/schema-combined.js %}
   <meta property="og:title" content="{{ page.title }}" />
   <meta property="og:description" content="{{ page.description }}" />
   <meta property="og:image" content="{{ page.featured_image | absolute_url }}" />
@@ -19,7 +19,7 @@
   {% endif %}
   {% if page.url == "/contact/" %}
 
-  {% include contact-page.html %}
+  {% include forms/contact-page.html %}
   {% endif %}
 
   {% if page.permalink == "/success/" %}
@@ -78,9 +78,9 @@
   <!-- Skip Link for Accessibility -->
   <a href="#main-content" class="skip-link">Skip to content</a>
 
-  {% include header.html %}
+  {% include layout/header.html %}
 
-  {% include ts-breadcrumbs.html %}
+  {% include navigation/ts-breadcrumbs.html %}
 
   <main class="ts-section ts-main-content" role="main" id="main-content">
     <div class="container container-wide">
@@ -88,7 +88,7 @@
     </div>
   </main>
 
-  {% include footer.html %}
+  {% include layout/footer.html %}
 </body>
 
 </html>
