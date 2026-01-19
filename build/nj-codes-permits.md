@@ -7,7 +7,6 @@ permalink: /build/nj-codes-permits/
 description: "Why permits exist, how inspections work, and what New Jersey actually requires for bathroom and shower projects."
 build_title: "Codes, Permits & Inspections"
 order: 1
-toc: true
 schema_type: HowTo
 ---
 

@@ -7,7 +7,6 @@ permalink: /build/framing-benches-niches/
 description: "Structural planning for benches and niches before waterproofing and tile, based on TCNA methods."
 build_title: "Benches, Seats & Niches"
 order: 5
-toc: true
 schema_type: HowTo
 ---
 

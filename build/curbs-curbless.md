@@ -7,7 +7,6 @@ permalink: /build/curbs-curbless/
 description: "How showers contain water at the entry, including curbed and curbless designs permitted in New Jersey."
 build_title: "Curbs & Curbless Showers"
 order: 4
-toc: true
 schema_type: HowTo
 ---
 

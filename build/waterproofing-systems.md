@@ -7,7 +7,6 @@ permalink: /build/waterproofing-systems/
 description: "TCNA-compliant waterproofing systems, surface-applied vs. traditional methods, and why continuity matters."
 build_title: "Waterproofing Systems"
 order: 3
-toc: true
 schema_type: HowTo
 ---
 

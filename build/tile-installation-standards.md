@@ -7,7 +7,6 @@ permalink: /build/tile-installation-standards/
 description: "ANSI A108/A118 tile installation standards covering substrate prep, mortar selection, coverage, and movement joints."
 build_title: "Tile Installation Standards"
 order: 6
-toc: true
 schema_type: HowTo
 ---
 

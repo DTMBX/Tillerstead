@@ -1,0 +1,161 @@
+# Tillerstead Standards Reference
+# ================================
+# 
+# Standards referenced in calculator formulas and product compliance.
+# This file provides context for standards citations, NOT the standards themselves.
+#
+# IMPORTANT: Tillerstead does not republish copyrighted standard text.
+# These are reference entries with links to official publishers.
+#
+# Last updated: 2026-01-19
+
+metadata:
+  updated: "2026-01-19"
+  maintainer: "Tillerstead LLC"
+  disclaimer: >
+    Standards referenced here are maintained by their respective organizations.
+    Tillerstead does not claim authorship or republish copyrighted content.
+    Always consult the current version from the official publisher.
+
+# ============================================
+# ANSI STANDARDS (Tile Installation)
+# ============================================
+ansi_standards:
+  - id: "A108"
+    full_name: "ANSI A108 - American National Standard Specifications for the Installation of Ceramic Tile"
+    governs: "Ceramic tile installation methods and requirements"
+    publisher: "ANSI/TCA"
+    official_source: "https://tcnatile.com/ansi/"
+    relevant_sections:
+      - "A108.01 - General requirements"
+      - "A108.17 - Installation of tile on waterproof membranes"
+      - "A108.13 - Installation with crack isolation membrane"
+    used_in_calculators:
+      - "mortar calculator (coverage requirements)"
+      - "waterproofing calculator (installation standards)"
+
+  - id: "A118.1"
+    full_name: "ANSI A118.1 - Standard Specification for Dry-Set Cement Mortar"
+    governs: "Unmodified (dry-set) thinset mortar specifications"
+    publisher: "ANSI/TCA"
+    official_source: "https://tcnatile.com/ansi/"
+    notes: >
+      Required for bonding sheet membranes like Schluter KERDI.
+      Unmodified mortars cure by chemical reaction with water, not by drying.
+    used_in_calculators:
+      - "mortar calculator"
+      - "waterproofing calculator (KERDI thinset requirement)"
+
+  - id: "A118.4"
+    full_name: "ANSI A118.4 - Standard Specification for Modified Dry-Set Cement Mortar"
+    governs: "Latex-modified (polymer-modified) thinset specifications"
+    publisher: "ANSI/TCA"
+    official_source: "https://tcnatile.com/ansi/"
+    notes: >
+      Modified mortars provide improved bond strength and flexibility.
+      Common for floor installations and exterior applications.
+    used_in_calculators:
+      - "mortar calculator"
+
+  - id: "A118.10"
+    full_name: "ANSI A118.10 - Standard Specification for Load Bearing, Bonded, Waterproof Membranes"
+    governs: "Waterproof membrane performance for tile installations"
+    publisher: "ANSI/TCA"
+    official_source: "https://tcnatile.com/ansi/"
+    requirements:
+      - "Membrane must support tile weight without delamination"
+      - "Must remain waterproof under typical service conditions"
+    notes: >
+      Products claiming ANSI A118.10 compliance have been tested for waterproofing.
+      Both liquid and sheet membranes can meet this standard.
+    used_in_calculators:
+      - "waterproofing calculator"
+
+  - id: "A118.12"
+    full_name: "ANSI A118.12 - Standard Specification for Crack Isolation Membranes"
+    governs: "Crack isolation membrane performance"
+    publisher: "ANSI/TCA"
+    official_source: "https://tcnatile.com/ansi/"
+    requirements:
+      - "Must isolate tiles from in-plane substrate cracks up to 1/8\" (3mm)"
+    notes: >
+      Many waterproofing membranes also meet crack isolation requirements.
+      RedGard, AquaDefense, and Hydro Ban meet both A118.10 and A118.12.
+    used_in_calculators:
+      - "waterproofing calculator"
+
+# ============================================
+# TCNA HANDBOOK
+# ============================================
+tcna:
+  - id: "handbook"
+    full_name: "TCNA Handbook for Ceramic, Glass, and Stone Tile Installation"
+    governs: "Industry-standard installation methods and material selection"
+    publisher: "Tile Council of North America"
+    official_source: "https://tcnatile.com/product/tcna-handbook/"
+    notes: >
+      The authoritative reference for tile installation methods.
+      Contains numbered methods (e.g., W244, F125) for specific substrates and applications.
+      Updated annually.
+    used_in_calculators:
+      - "mortar calculator (trowel selection guidance)"
+      - "grout calculator (joint width recommendations)"
+      - "waterproofing calculator (wet area requirements)"
+
+# ============================================
+# PLUMBING CODES
+# ============================================
+plumbing_codes:
+  - id: "IPC"
+    full_name: "International Plumbing Code"
+    governs: "Plumbing system installation including shower pan requirements"
+    publisher: "International Code Council"
+    official_source: "https://codes.iccsafe.org/"
+    relevant_sections:
+      - "Section 417.5.2 - Shower compartment slope requirements"
+    requirements:
+      - "Minimum 1/4\" per foot slope to drain"
+    notes: >
+      New Jersey adopts IPC with local amendments.
+      Always check local jurisdiction for specific requirements.
+    used_in_calculators:
+      - "slope calculator"
+
+# ============================================
+# ASTM STANDARDS
+# ============================================
+astm_standards:
+  - id: "C1708"
+    full_name: "ASTM C1708 - Standard Guide for Self-Leveling Mortars"
+    governs: "Self-leveling underlayment specifications and testing"
+    publisher: "ASTM International"
+    official_source: "https://www.astm.org/c1708-22.html"
+    notes: >
+      Defines requirements for self-leveling mortars including flow,
+      compressive strength, and adhesion.
+    used_in_calculators:
+      - "leveling calculator"
+
+# ============================================
+# HOW STANDARDS ARE USED IN CALCULATORS
+# ============================================
+calculator_compliance_notes:
+  mortar_calculator: >
+    Trowel selection follows TCNA recommendations based on tile size.
+    Coverage requirements per ANSI A108: minimum 80% dry areas, 95% wet areas.
+    Back-buttering recommended per TCNA for large-format tile.
+  
+  grout_calculator: >
+    Joint width recommendations per TCNA: minimum 3× tile facial variation.
+    Sanded vs. unsanded guidance from TCNA FAQ.
+    Formula is mathematical (joint volume calculation), not standard-mandated.
+  
+  waterproofing_calculator: >
+    Products listed claim ANSI A118.10 and/or A118.12 compliance.
+    Coverage rates from manufacturer TDS, not from ANSI standard.
+    ANSI standard defines performance, not coverage rates.
+  
+  slope_calculator: >
+    Minimum slope from IPC Section 417.5.2 (1/4\" per foot).
+    Recommended slope (5/16\" per foot) is industry best practice, not code.
+    Local codes may vary - verify with local jurisdiction.

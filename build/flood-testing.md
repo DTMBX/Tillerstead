@@ -7,7 +7,6 @@ permalink: /build/flood-testing/
 description: "ASTM D5957 flood testing methods used to verify waterproofing before tile conceals the system."
 build_title: "Flood Testing & Verification"
 order: 7
-toc: true
 schema_type: HowTo
 ---
 

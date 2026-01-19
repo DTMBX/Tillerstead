@@ -7,7 +7,6 @@ permalink: /build/shower-pans-slopes-drains/
 description: "How showers manage water before tile—proper slope, pan construction, and drainage according to TCNA standards."
 build_title: "Shower Pans, Slopes & Drains"
 order: 2
-toc: true
 schema_type: HowTo
 ---
 

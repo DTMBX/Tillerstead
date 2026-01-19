@@ -32,6 +32,7 @@
     "build:full": "npm run build:css && npm run build:logos && npm run jekyll -- build",
     "build:logos": "node scripts/generate-png-logos.js",
     "test": "npm run test:e2e",
+    "test:tools": "node --experimental-vm-modules tests/tools/formula-library.test.js",
     "test:e2e": "npm run build && npx playwright test --config=playwright.config.js",
     "test:headed": "npx playwright test --headed",
     "test:ui": "npx playwright test --ui",
