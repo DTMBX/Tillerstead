@@ -1,0 +1,103 @@
+<!-- PROJECT OUTPUT / EXPORT SECTION -->
+<section class="tools-section" id="project-output" aria-labelledby="project-output-title">
+  <div class="container">
+    <header class="tools-section__header">
+      <h2 id="project-output-title" class="tools-section__title">Generate Project Packet</h2>
+      <p class="tools-section__desc">Create a copy-ready scope summary and material estimates.</p>
+    </header>
+
+    <div class="tools-card">
+      <fieldset class="output-options">
+        <legend class="sr-only">Include in output</legend>
+        <div class="form-grid form-grid--2col">
+          <label class="form-checkbox">
+            <input type="checkbox" id="output-scope" checked>
+            <span class="form-checkbox__text">Scope summary</span>
+          </label>
+          <label class="form-checkbox">
+            <input type="checkbox" id="output-measurements" checked>
+            <span class="form-checkbox__text">Measurements table</span>
+          </label>
+          <label class="form-checkbox">
+            <input type="checkbox" id="output-tile" checked>
+            <span class="form-checkbox__text">Tile quantities</span>
+          </label>
+          <label class="form-checkbox">
+            <input type="checkbox" id="output-mortar" checked>
+            <span class="form-checkbox__text">Mortar/grout estimates</span>
+          </label>
+          <label class="form-checkbox">
+            <input type="checkbox" id="output-assumptions" checked>
+            <span class="form-checkbox__text">Assumptions & notes</span>
+          </label>
+          <label class="form-checkbox">
+            <input type="checkbox" id="output-disclaimers" checked>
+            <span class="form-checkbox__text">Disclaimers</span>
+          </label>
+          <label class="form-checkbox pro-only">
+            <input type="checkbox" id="output-audit">
+            <span class="form-checkbox__text">Measurement audit trail</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="button" class="btn btn--primary" id="generate-output-btn">
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+          </svg>
+          Generate Output
+        </button>
+      </div>
+
+      <!-- Output Preview -->
+      <div class="output-preview" id="output-preview" hidden>
+        <div class="output-preview__header">
+          <h3>Output Preview</h3>
+          <div class="output-preview__actions">
+            <button type="button" class="btn btn--sm btn--secondary" id="copy-output-btn" aria-label="Copy to clipboard" title="Copy to clipboard">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+              </svg>
+              Copy
+            </button>
+            <button type="button" class="btn btn--sm btn--secondary" id="print-output-btn" aria-label="Print / Save as PDF" title="Print or save as PDF">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>
+              </svg>
+              Print / Save as PDF
+            </button>
+            <button type="button" class="btn btn--sm btn--secondary" id="download-doc-btn" aria-label="Download as Word document" title="Download as .doc file">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Download .doc
+            </button>
+          </div>
+        </div>
+        <div class="output-preview__content" id="output-content"></div>
+      </div>
+    </div>
+
+    <!-- Import/Export JSON (Pro Only) -->
+    <div class="tools-card tools-card--secondary pro-only">
+      <h3 class="tools-card__title">Save & Load Project Data</h3>
+      <div class="form-actions">
+        <button type="button" class="btn btn--secondary" id="export-json-btn" aria-label="Export project as JSON" title="Export project data">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/>
+          </svg>
+          Export JSON
+        </button>
+        <label class="btn btn--secondary">
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Import JSON
+          <input type="file" id="import-json-input" accept=".json" class="sr-only">
+        </label>
+      </div>
+      <p class="tools-card__note">Projects auto-save to your browser. Use export to back up or transfer between devices.</p>
+    </div>
+  </div>
+</section>
