@@ -5,21 +5,55 @@
     <!-- Logo Section -->
     <div class="footer-logo-section">
       <a href="/" aria-label="Tillerstead Home">
-        <img src="/assets/img/logo/4k-logo.png" alt="Tillerstead LLC - Professional Tile and Stone Installation" class="footer-logo" width="200" height="200" loading="lazy">
+        <img src="/assets/img/logo/4k-logo.png" alt="Tillerstead LLC - Professional Tile and Stone Installation" class="footer-logo footer-logo--large" width="300" height="300" loading="lazy">
       </a>
       <p class="footer-tagline">Expert Tile & Stone Installation — South Jersey</p>
     </div>
 
-    <!-- Footer Navigation Sections (skip Legal - it's in footer-bottom) -->
-    <nav class="footer-sections" aria-label="Footer navigation">
-      {% for group in footer_groups %}{% unless group.group == "Legal" %}
-      <section class="footer-group" aria-labelledby="{{ footer_uid }}-footer-group-{{ forloop.index }}">
-        <h3 class="footer-group-title" id="{{ footer_uid }}-footer-group-{{ forloop.index }}">{{ group.group }}</h3>
-        <ul class="footer-list" role="list">{% for item in group.items %}
+    <!-- Footer Navigation - Custom Layout -->
+    <nav class="footer-nav-grid" aria-label="Footer navigation">
+      <!-- Service Areas - Top Row (wide, horizontal) -->
+      {% for group in footer_groups %}{% if group.group == "Service Areas" %}
+      <section class="footer-group footer-group--service-areas" aria-labelledby="{{ footer_uid }}-footer-service-areas">
+        <h3 class="footer-group-title" id="{{ footer_uid }}-footer-service-areas">{{ group.group }}</h3>
+        <ul class="footer-list footer-list--horizontal" role="list">{% for item in group.items %}
           <li><a href="{{ item.url }}">{{ item.title }}</a></li>{% endfor %}
         </ul>
       </section>
-      {% endunless %}{% endfor %}
+      {% endif %}{% endfor %}
+
+      <!-- Bottom Row: Learn | Build Guides | Company -->
+      <div class="footer-columns">
+        <!-- Learn (left) -->
+        {% for group in footer_groups %}{% if group.group == "Learn" %}
+        <section class="footer-group footer-group--learn" aria-labelledby="{{ footer_uid }}-footer-learn">
+          <h3 class="footer-group-title" id="{{ footer_uid }}-footer-learn">{{ group.group }}</h3>
+          <ul class="footer-list" role="list">{% for item in group.items %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>{% endfor %}
+          </ul>
+        </section>
+        {% endif %}{% endfor %}
+
+        <!-- Build Guides (center, largest) -->
+        {% for group in footer_groups %}{% if group.group == "Build Guides" %}
+        <section class="footer-group footer-group--build-guides" aria-labelledby="{{ footer_uid }}-footer-build-guides">
+          <h3 class="footer-group-title" id="{{ footer_uid }}-footer-build-guides">{{ group.group }}</h3>
+          <ul class="footer-list footer-list--two-col" role="list">{% for item in group.items %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>{% endfor %}
+          </ul>
+        </section>
+        {% endif %}{% endfor %}
+
+        <!-- Company (right) -->
+        {% for group in footer_groups %}{% if group.group == "Company" %}
+        <section class="footer-group footer-group--company" aria-labelledby="{{ footer_uid }}-footer-company">
+          <h3 class="footer-group-title" id="{{ footer_uid }}-footer-company">{{ group.group }}</h3>
+          <ul class="footer-list" role="list">{% for item in group.items %}
+            <li><a href="{{ item.url }}">{{ item.title }}</a></li>{% endfor %}
+          </ul>
+        </section>
+        {% endif %}{% endfor %}
+      </div>
     </nav>
 
     <!-- Contact Section -->
