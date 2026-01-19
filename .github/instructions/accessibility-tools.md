@@ -196,6 +196,6 @@ A: Yes, via the audit panel’s JSON export (structural/SEO only).
 > **Citations:**
 >
 > - [TCNA Handbook 2024](https://www.tcnatile.com/)
-> - [New Jersey HIC Law](https://www.njconsumeraffairs.gov/hic/Pages/default.aspx)
+> - [New Jersey HIC Law](https://newjersey.mylicense.com/verification/)
 > - [WCAG 2.1 AA](https://www.w3.org/WAI/WCAG21/quickref/)
 

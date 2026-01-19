@@ -2,9 +2,9 @@
 layout: default
 title: Home
 permalink: /
-meta_title: "NJ Tile & Waterproofing Contractor | Tillerstead LLC | South Jersey"
-meta_description: "Licensed NJ HIC contractor (#13VH10808800) specializing in TCNA-compliant tile showers, waterproofing systems & bathroom remodeling. 5-Star rated. Free estimates in Atlantic, Ocean & Cape May Counties."
-description: "Standards-based tile installation and waterproofing for South Jersey homeowners. Licensed NJ HIC #13VH10808800."
+meta_title: "Expert Tile & Waterproofing Contractor in South Jersey | Tillerstead LLC"
+meta_description: "South Jersey's trusted tile installation & waterproofing experts. Licensed NJ HIC #13VH10808800. TCNA-compliant showers, bathroom remodeling & leak-proof systems. 5-Star rated. Free estimates in Atlantic, Ocean & Cape May Counties."
+description: "Professional tile installation and waterproofing services for South Jersey homeowners. Expert craftsmanship, industry-leading warranties, and TCNA-compliant methods. Licensed NJ HIC #13VH10808800."
 body_class: page-home
 is_home: true
 schema_type: LocalBusiness
@@ -24,7 +24,12 @@ preload_assets:
 robots: index, follow
 og_type: website
 og_image: /assets/images/og-home.webp
+og_title: "South Jersey's Premier Tile & Waterproofing Experts | Tillerstead LLC"
+og_description: "Transform your bathroom with leak-proof tile showers & expert waterproofing. Licensed, insured & 5-star rated. Serving Atlantic, Ocean & Cape May Counties."
 twitter_card: summary_large_image
+twitter_title: "Expert Tile & Waterproofing in South Jersey | Tillerstead LLC"
+twitter_description: "TCNA-compliant tile installation & waterproofing. Licensed NJ contractor with 5-star reviews. Free estimates!"
+keywords: "tile contractor South Jersey, waterproofing contractor NJ, bathroom remodeling Atlantic County, tile shower installation, TCNA certified, Ocean County tile installer, Cape May bathroom contractor"
 ---
 
 {%- comment -%}
@@ -37,8 +42,8 @@ twitter_card: summary_large_image
   - Lazy loading for below-fold content
   - Structured data for rich snippets
   - Core Web Vitals optimized (LCP, FID, CLS)
+
   
-  Conversion Psychology Flow (AIDA Model):
   1. Hero - ATTENTION: Bold value prop + social proof + urgency
   2. Trust Bar - INTEREST: Instant credibility (license, 5-star reviews)
   3. Services - INTEREST: Solution-focused offerings

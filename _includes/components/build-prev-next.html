@@ -1,4 +1,5 @@
 {% assign build_pages = site.build | where_exp: "p", "p.build_order" | sort: "build_order" %}
+
 {% assign idx = nil %}
 
 {% for p in build_pages %}

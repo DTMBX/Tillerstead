@@ -227,7 +227,7 @@ The inspector will:
 * **Call early** — Don't wait until demo day to ask about permits
 * **Be specific** — Describe exactly what you're changing (shower size, drain location, electrical additions)
 * **Get it in writing** — Ask for permit requirements via email if possible
-* **Verify contractor licensing** — Ask for their NJ HIC number and check it at [NJ Consumer Affairs](https://www.njconsumeraffairs.gov/hic/)
+* **Verify contractor licensing** — Ask for their NJ HIC number and check it at [NJ DCA License Verification](https://newjersey.mylicense.com/verification/)
 
 ### During the Project
 
@@ -366,7 +366,7 @@ Clear answers early prevent delays and redesigns later.
 |----------|---------|------|
 | NJ DCA Codes & Standards | Official code information | [nj.gov/dca/codes](https://www.nj.gov/dca/divisions/codes/) |
 | NJ UCC Regulations | Full text of N.J.A.C. 5:23 | [nj.gov/dca/codes/codreg](https://www.nj.gov/dca/divisions/codes/codreg/) |
-| NJ Consumer Affairs HIC Lookup | Verify contractor licensing | [njconsumeraffairs.gov](https://www.njconsumeraffairs.gov/hic/) |
+| NJ DCA License Verification | Verify contractor licensing | [newjersey.mylicense.com](https://newjersey.mylicense.com/verification/) |
 | TCNA Handbook | Tile installation methods | [tcnatile.com](https://www.tcnatile.com/products/handbook.html) |
 | TCNA ANSI Standards FAQ | Overview of tile standards | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
 | NTCA | Contractor certifications & standards | [tile-assn.com](https://www.tile-assn.com/) |

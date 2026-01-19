@@ -335,7 +335,7 @@ Before signing a contract:
 |----------|-------|------|
 | TCNA Handbook | Failure analysis & methods | [tcnatile.com](https://www.tcnatile.com/products/handbook.html) |
 | ANSI Standards | Technical specifications | [tcnatile.com/faqs](https://www.tcnatile.com/faqs/ansi-standards.html) |
-| NJ Consumer Affairs | Verify contractor licensing | [njconsumeraffairs.gov](https://www.njconsumeraffairs.gov/hic/) |
+| NJ DCA License Verification | Verify contractor licensing | [newjersey.mylicense.com](https://newjersey.mylicense.com/verification/) |
 | NTCA | Certified contractor finder | [tile-assn.com](https://www.tile-assn.com/) |
 | NJ DCA Codes | Building code requirements | [nj.gov/dca/codes](https://www.nj.gov/dca/divisions/codes/) |
 

@@ -3,5 +3,17 @@
     // Reference: .ai/COMPLIANCE.md (accessibility), .ai/OUTPUT_RULES.md (clarity, no redundancy)
     "accessibility.signals.noInlayHints": {
         "sound": "off"
+    },
+    // Exclude Jekyll includes/partials from HTML document validation (they're fragments, not full documents)
+    "htmlhint.documentSelector": [
+        {
+            "language": "html",
+            "pattern": "!**/_includes/**"
+        }
+    ],
+    "html.validate.scripts": true,
+    "html.validate.styles": true,
+    "files.associations": {
+        "_includes/**/*.html": "html"
     }
 }
