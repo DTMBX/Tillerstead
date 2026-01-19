@@ -78,12 +78,23 @@ body_class: page-tools
 <main class="tools-page tools-main" data-tools-mode="pro">
   {% include tools/tools-nav.html %}
   
-  <!-- Expand/Collapse Controls -->
+  <!-- Featured: Estimate Builder -->
+  {% include tools/estimate-builder.html %}
+  
+  <!-- Calculator App Grid -->
   <section class="tools-section">
     <div class="container">
+      
+      <!-- Expand/Collapse Controls (contextually placed above calculators) -->
       <div class="calc-controls">
-        <div class="auto-calc-indicator">
-          <span>Auto-Calculate</span>
+        <div class="calc-controls__header">
+          <h2 class="calc-controls__title">Project Calculators</h2>
+          <div class="auto-calc-indicator">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+            </svg>
+            <span>Auto-Calculate</span>
+          </div>
         </div>
         <div class="calc-controls__actions">
           <button type="button" class="calc-controls__btn" id="expand-all-btn" aria-label="Expand all calculators">
@@ -100,15 +111,7 @@ body_class: page-tools
           </button>
         </div>
       </div>
-    </div>
-  </section>
-  
-  <!-- Featured: Estimate Builder -->
-  {% include tools/estimate-builder.html %}
-  
-  <!-- Calculator App Grid -->
-  <section class="tools-section">
-    <div class="container">
+      
       <div class="tools-app-grid">
         
         <!-- Group: Material Calculators -->
