@@ -117,18 +117,5 @@ projects:
     ar: "4/3"
     priority: 2
 
-  - id: hardwood-stain
-    title: "Hardwood Refinishing"
-    tags: ["floors", "remodeling"]
-    file: "/assets/img/concepts/treat-sand-stain-hardwood-floor-room.webp"
-    file_fallback: "/assets/img/concepts/treat-sand-stain-hardwood-floor-room.jpg"
-    alt: "Hardwood floor sanding and staining in progress"
-    caption: >
-      Hardwood refinishing: sanding, staining, and sealing for restored beauty.
-      Proper prep and product selection ensure durable results.
-    location: "South Jersey"
-    ar: "4/3"
-    priority: 1
-
 meta:
   compliance_note: "NJ HIC #13VH10808800 · Tile assemblies follow TCNA 2024 methods and applicable ANSI A108/A118 standards."
