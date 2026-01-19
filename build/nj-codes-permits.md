@@ -1,5 +1,5 @@
 ---
-layout: build-page
+layout: default
 title: "Phase 1: Codes, Permits & Inspections"
 permalink: /build/nj-codes-permits/
 description: "Why permits exist, how inspections work, and what New Jersey actually requires for bathroom and shower projects."

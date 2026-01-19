@@ -1,5 +1,5 @@
 ---
-layout: build-page
+layout: default
 title: "Phase 3: Waterproofing Systems"
 permalink: /build/waterproofing-systems/
 description: "TCNA-compliant waterproofing systems, surface-applied vs. traditional methods, and why continuity matters."

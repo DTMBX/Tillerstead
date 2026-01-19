@@ -1,5 +1,5 @@
 ---
-layout: build-page
+layout: default
 title: "Curbs & Curbless Showers"
 permalink: /build/curbs-curbless/
 order: 4

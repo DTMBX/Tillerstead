@@ -1,5 +1,5 @@
 ---
-layout: build-page
+layout: default
 title: "Tile Installation Standards"
 permalink: /build/tile-installation-standards/
 order: 6

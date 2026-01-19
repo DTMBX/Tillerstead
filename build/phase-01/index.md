@@ -1,5 +1,5 @@
 ---
-layout: build-page
+layout: default
 title: "Codes, Permits & Inspections"
 permalink: /build/nj-codes-permits/
 order: 1

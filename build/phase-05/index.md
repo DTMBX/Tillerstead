@@ -1,5 +1,5 @@
 ---
-layout: build-page
+layout: default
 title: "Benches, Seats & Niches"
 permalink: /build/framing-benches-niches/
 order: 5

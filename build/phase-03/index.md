@@ -1,5 +1,5 @@
 ---
-layout: build-page
+layout: default
 title: "Waterproofing Systems"
 permalink: /build/waterproofing-systems/
 order: 3

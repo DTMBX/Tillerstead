@@ -1,5 +1,5 @@
 ---
-layout: build-page
+layout: default
 title: "Common Failures & Red Flags"
 permalink: /build/common-build-failures/
 order: 8

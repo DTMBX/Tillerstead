@@ -1,5 +1,5 @@
 ---
-layout: build-page
+layout: default
 title: "Phase 7: Flood Testing & Verification"
 permalink: /build/flood-testing/
 description: "ASTM D5957 flood testing methods used to verify waterproofing before tile conceals the system."

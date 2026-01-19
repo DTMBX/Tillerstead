@@ -1,5 +1,5 @@
 ---
-layout: build-page
+layout: default
 title: "Shower Pans, Slopes & Drains"
 permalink: /build/shower-pans-slopes-drains/
 order: 2
