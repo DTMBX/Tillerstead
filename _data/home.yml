@@ -3,7 +3,8 @@
 # NJ HIC #13VH10808800
 
 hero:
-  eyebrow: "Licensed New Jersey HIC #13VH10808800 · Standards-Driven Work"
+  eyebrow: "Licensed New Jersey HIC #13VH10808800"
+  eyebrow_line2: "Standards-Driven Work"
   title: "Tile, Waterproofing & Bathroom Remodeling Built the Right Way"
   subtitle: "Measured. Verified. Documented."
   summary: >
@@ -98,7 +99,7 @@ services:
 
 process:
   eyebrow: "A Clear Sequence You Can Understand"
-  title: "Transparent Workflow, Written Scope, Verified Steps"
+  title: "Transparent Workflow.<br>Written Scope.<br>Verified Steps."
   summary: >
     A bathroom remodel runs smoothly when decisions are made early and the build follows a defined order.
     We keep scope clear, document key phases, and confirm readiness before moving forward.

@@ -52,6 +52,11 @@ primary:
     url: "/reviews/"
     match: "^/reviews(/|$)"
 
+  - id: tools
+    title: "Tools"
+    url: "/tools/"
+    match: "^/tools(/|$)"
+
   # --- About dropdown (merged Company + About) ---
   - id: about
     title: "About"
@@ -89,6 +94,22 @@ secondary:
     url: "/terms/"
 
 footer:
+  - group: "Service Areas"
+    items:
+      - title: "Atlantic County"
+        url: "/atlantic-county-nj/"
+      - title: "Ocean County"
+        url: "/ocean-county-nj/"
+      - title: "Cape May County"
+        url: "/cape-may-county-nj/"
+  - group: "Learn"
+    items:
+      - title: "FAQ"
+        url: "/faq/"
+      - title: "Products"
+        url: "/products/"
+      - title: "Blog"
+        url: "/blog/"
   - group: "Build Guides"
     items:
       - title: "Codes & Permits"
@@ -107,22 +128,6 @@ footer:
         url: "/build/flood-testing/"
       - title: "Common Build Failures"
         url: "/build/common-build-failures/"
-  - group: "Learn"
-    items:
-      - title: "FAQ"
-        url: "/faq/"
-      - title: "Products"
-        url: "/products/"
-      - title: "Blog"
-        url: "/blog/"
-  - group: "Service Areas"
-    items:
-      - title: "Atlantic County"
-        url: "/atlantic-county-nj/"
-      - title: "Ocean County"
-        url: "/ocean-county-nj/"
-      - title: "Cape May County"
-        url: "/cape-may-county-nj/"
   - group: "Company"
     items:
       - title: "About"

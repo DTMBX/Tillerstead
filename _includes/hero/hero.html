@@ -11,7 +11,7 @@
   <div class="container">
     <div class="hero-grid">
       <div class="hero-text">
-        <p class="hero-eyebrow">{{ hero.eyebrow }}</p>
+        <p class="hero-eyebrow">{{ hero.eyebrow }}{% if hero.eyebrow_line2 %}<br>{{ hero.eyebrow_line2 }}{% endif %}</p>
         <h1 id="hero-title" class="hero-title">{{ hero.title }}</h1>
         <p class="hero-subtitle">{{ hero.subtitle }}</p>
         <p class="hero-summary">{{ hero.summary }}</p>
