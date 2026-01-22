@@ -56,6 +56,13 @@
         </div>
       </div>
 
+      {% include components/c-sqft-helper.html
+        title="Sq Ft Helper"
+        enableHeight=true
+        targetFloor="#cost-sqft"
+        targetWall="#cost-tile-area"
+        note="Use floor area for bathroom size. Use wall area for surrounds/backsplashes, then adjust for openings and partial-height walls." %}
+
       <!-- Scope Options -->
       <fieldset class="form-fieldset">
         <legend class="form-fieldset__legend">What's Included?</legend>

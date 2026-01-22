@@ -39,6 +39,32 @@ endcomment %} {% assign cache_version = site.cache_version | default:
   defer
 ></script>
 
+<!-- Mobile App Features (PWA enhancements) -->
+<script
+  src="{{ '/assets/js/haptics.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
+<script
+  src="{{ '/assets/js/mobile-app.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
+<script
+  src="{{ '/assets/js/pwa-features.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
+<script
+  src="{{ '/assets/js/gestures.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
+<script
+  src="{{ '/assets/js/app-shell.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
+<script
+  src="{{ '/assets/js/mobile-personality.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
+
 <!-- Build Phase Calculators (conditionally loaded) -->
 {% if page.url contains '/build/' %}
 <script

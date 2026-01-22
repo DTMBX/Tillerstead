@@ -81,6 +81,22 @@ body_class: page-tools
 
 <main class="tools-page tools-main" data-tools-mode="pro">
   {% include tools/tools-nav.html %}
+
+  <!-- Needs Attention (validation summary) -->
+  <section class="needs-attention" id="needs-attention" hidden aria-label="Needs attention">
+    <div class="container">
+      <h2 class="needs-attention__title">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="8" x2="12" y2="12" />
+          <line x1="12" y1="16" x2="12.01" y2="16" />
+        </svg>
+        Needs Attention
+        <span id="needs-attention-badge" class="tools-badge tools-badge--gold" hidden>0</span>
+      </h2>
+      <ul class="needs-attention__list" id="needs-attention-list"></ul>
+    </div>
+  </section>
   
   <!-- Featured: Estimate Builder -->
   {% include tools/estimate-builder.html %}
@@ -127,7 +143,7 @@ body_class: page-tools
         
         <!-- Tile Calculator Card -->
         <article class="calc-app-card" id="tile-calc-card" data-calculator="tile">
-          <header class="calc-app-card__header" role="button" tabindex="0" aria-expanded="false" aria-controls="tile-calc-body">
+          <div class="calc-app-card__header" role="button" tabindex="0" aria-expanded="false" aria-controls="tile-calc-body">
             <div class="calc-app-card__icon">🧱</div>
             <div class="calc-app-card__title-group">
               <h3 class="calc-app-card__title">Tile Quantity</h3>
@@ -138,7 +154,7 @@ body_class: page-tools
                 <polyline points="6 9 12 15 18 9"/>
               </svg>
             </div>
-          </header>
+          </div>
           <div class="calc-app-card__preview" id="tile-calc-preview">
             <span class="calc-app-card__preview-label">Result:</span>
             <span class="calc-app-card__preview-empty">Enter values to calculate</span>
@@ -150,7 +166,7 @@ body_class: page-tools
         
         <!-- Mortar Calculator Card -->
         <article class="calc-app-card" id="mortar-calc-card" data-calculator="mortar">
-          <header class="calc-app-card__header" role="button" tabindex="0" aria-expanded="false" aria-controls="mortar-calc-body">
+          <div class="calc-app-card__header" role="button" tabindex="0" aria-expanded="false" aria-controls="mortar-calc-body">
             <div class="calc-app-card__icon calc-app-card__icon--svg">
               <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
                 <path d="M18.5 2.5L22 6l-1.5 1.5-3.5-3.5L18.5 2.5zM3 21l1.5-5.5L16 4l3.5 3.5L8 19l-5 2zm3.5-3.5l8-8-1-1-8 8 1 1z"/>
@@ -165,7 +181,7 @@ body_class: page-tools
                 <polyline points="6 9 12 15 18 9"/>
               </svg>
             </div>
-          </header>
+          </div>
           <div class="calc-app-card__preview" id="mortar-calc-preview">
             <span class="calc-app-card__preview-label">Result:</span>
             <span class="calc-app-card__preview-empty">Enter values to calculate</span>
@@ -177,7 +193,7 @@ body_class: page-tools
         
         <!-- Grout Calculator Card -->
         <article class="calc-app-card" id="grout-calc-card" data-calculator="grout">
-          <header class="calc-app-card__header" role="button" tabindex="0" aria-expanded="false" aria-controls="grout-calc-body">
+          <div class="calc-app-card__header" role="button" tabindex="0" aria-expanded="false" aria-controls="grout-calc-body">
             <div class="calc-app-card__icon calc-app-card__icon--svg">
               <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28" aria-hidden="true">
                 <path d="M4 4h16v3H4V4zm0 5h16v2H4V9zm2 4h12l-1 7H7l-1-7zm3 2v3h2v-3H9zm4 0v3h2v-3h-2z"/>
@@ -192,7 +208,7 @@ body_class: page-tools
                 <polyline points="6 9 12 15 18 9"/>
               </svg>
             </div>
-          </header>
+          </div>
           <div class="calc-app-card__preview" id="grout-calc-preview">
             <span class="calc-app-card__preview-label">Result:</span>
             <span class="calc-app-card__preview-empty">Enter values to calculate</span>
@@ -204,7 +220,7 @@ body_class: page-tools
         
         <!-- Leveling Calculator Card -->
         <article class="calc-app-card" id="leveling-calc-card" data-calculator="leveling">
-          <header class="calc-app-card__header" role="button" tabindex="0" aria-expanded="false" aria-controls="leveling-calc-body">
+          <div class="calc-app-card__header" role="button" tabindex="0" aria-expanded="false" aria-controls="leveling-calc-body">
             <div class="calc-app-card__icon">📏</div>
             <div class="calc-app-card__title-group">
               <h3 class="calc-app-card__title">Self-Leveling</h3>
@@ -215,7 +231,7 @@ body_class: page-tools
                 <polyline points="6 9 12 15 18 9"/>
               </svg>
             </div>
-          </header>
+          </div>
           <div class="calc-app-card__preview" id="leveling-calc-preview">
             <span class="calc-app-card__preview-label">Result:</span>
             <span class="calc-app-card__preview-empty">Enter values to calculate</span>
@@ -234,7 +250,7 @@ body_class: page-tools
         
         <!-- Slope Calculator Card -->
         <article class="calc-app-card" id="slope-calc-card" data-calculator="slope">
-          <header class="calc-app-card__header" role="button" tabindex="0" aria-expanded="false" aria-controls="slope-calc-body">
+          <div class="calc-app-card__header" role="button" tabindex="0" aria-expanded="false" aria-controls="slope-calc-body">
             <div class="calc-app-card__icon">📐</div>
             <div class="calc-app-card__title-group">
               <h3 class="calc-app-card__title">Shower Slope</h3>
@@ -245,7 +261,7 @@ body_class: page-tools
                 <polyline points="6 9 12 15 18 9"/>
               </svg>
             </div>
-          </header>
+          </div>
           <div class="calc-app-card__preview" id="slope-calc-preview">
             <span class="calc-app-card__preview-label">Result:</span>
             <span class="calc-app-card__preview-empty">Enter values to calculate</span>
@@ -257,7 +273,7 @@ body_class: page-tools
         
         <!-- Waterproof Calculator Card -->
         <article class="calc-app-card" id="waterproof-calc-card" data-calculator="waterproof">
-          <header class="calc-app-card__header" role="button" tabindex="0" aria-expanded="false" aria-controls="waterproof-calc-body">
+          <div class="calc-app-card__header" role="button" tabindex="0" aria-expanded="false" aria-controls="waterproof-calc-body">
             <div class="calc-app-card__icon">💧</div>
             <div class="calc-app-card__title-group">
               <h3 class="calc-app-card__title">Waterproofing <span class="badge">TCNA</span></h3>
@@ -268,7 +284,7 @@ body_class: page-tools
                 <polyline points="6 9 12 15 18 9"/>
               </svg>
             </div>
-          </header>
+          </div>
           <div class="calc-app-card__preview" id="waterproof-calc-preview">
             <span class="calc-app-card__preview-label">Result:</span>
             <span class="calc-app-card__preview-empty">Enter values to calculate</span>
@@ -280,7 +296,7 @@ body_class: page-tools
         
         <!-- Labor Calculator Card -->
         <article class="calc-app-card" id="labor-calc-card" data-calculator="labor">
-          <header class="calc-app-card__header" role="button" tabindex="0" aria-expanded="false" aria-controls="labor-calc-body">
+          <div class="calc-app-card__header" role="button" tabindex="0" aria-expanded="false" aria-controls="labor-calc-body">
             <div class="calc-app-card__icon">⏱️</div>
             <div class="calc-app-card__title-group">
               <h3 class="calc-app-card__title">Labor Estimate</h3>
@@ -291,7 +307,7 @@ body_class: page-tools
                 <polyline points="6 9 12 15 18 9"/>
               </svg>
             </div>
-          </header>
+          </div>
           <div class="calc-app-card__preview" id="labor-calc-preview">
             <span class="calc-app-card__preview-label">Result:</span>
             <span class="calc-app-card__preview-empty">Enter values to calculate</span>

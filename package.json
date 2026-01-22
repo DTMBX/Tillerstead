@@ -28,6 +28,7 @@
     "build": "npm run build:css && npm run jekyll -- build",
     "postbuild": "node scripts/post-build-link.js",
     "serve": "http-server _site -p 4000 -c-1",
+    "serve:test": "http-server _site -p 4173 -c-1",
     "build:site": "npm run build",
     "build:full": "npm run build:css && npm run build:logos && npm run jekyll -- build",
     "build:logos": "node scripts/generate-png-logos.js",
