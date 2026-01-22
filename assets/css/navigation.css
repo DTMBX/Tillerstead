@@ -829,8 +829,10 @@ body.nav-open .mobile-nav__toggle {
 }
 
 .mobile-nav__link:focus-visible {
-  outline: none;
+  outline: 2px solid var(--tiller-color-highlight, #2a7fff);
+  outline-offset: -2px;
   background: rgb(201 162 39 / 10%);
+  box-shadow: 0 0 0 4px rgb(42 127 255 / 20%);
 }
 
 .mobile-nav__link[aria-current="page"] {
@@ -1159,6 +1161,13 @@ body.nav-open .mobile-nav__toggle {
   .ts-header__container {
     padding: 0.625rem clamp(1rem, 4vw, 2rem);
   }
+
+  .ts-header__logo.logo-image,
+  .ts-header__logo .logo-image {
+    height: 72px;
+    min-height: 64px;
+    max-height: 72px;
+  }
   
   /* Branding stays on left on mobile */
   .ts-header__branding {
@@ -1360,7 +1369,7 @@ body.nav-open {
 }
 
 .trust-bar .container {
-  max-width: var(--tiller-max-width);
+  max-width: none;
   margin: 0 auto;
   display: flex;
   justify-content: center;

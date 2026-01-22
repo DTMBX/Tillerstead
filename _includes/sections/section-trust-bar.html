@@ -8,7 +8,7 @@
 {%- assign trust = include.data -%}
 
 <section class="trust-bar" aria-label="{{ trust.aria_label | default: 'Credentials and protections' }}">
-  <div class="container">
+  <div class="container container--wide">
     <ul class="trust-bar__list" role="list">
       {% for item in trust.items %}
       <li class="trust-bar__item">

@@ -33,6 +33,8 @@ _archive/
 # Coverage and test output
 coverage/
 *.lcov
+playwright-report/
+test-results/
 
 # Playwright output (do not commit)
 playwright-report/

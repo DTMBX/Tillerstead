@@ -217,6 +217,34 @@
   }
 }
 
+/* ===== TRUST BAR - Wrap and reduce overflow on smaller screens ===== */
+@media (max-width: 1023px) {
+  /* Higher specificity so this beats later-loaded navigation.css */
+  .trust-bar .trust-bar__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .trust-bar {
+    padding: 0.75rem 0;
+  }
+
+  .trust-bar .trust-bar__item {
+    font-size: 0.9375rem;
+  }
+}
+
+/* ===== COARSE POINTER (Tablet/handheld/console-like) ===== */
+@media (max-width: 1023px) {
+  html[data-pointer="coarse"] .btn {
+    min-height: 48px;
+    padding: 12px 18px;
+  }
+}
+
 /* ===== NAVIGATION DRAWER - Mobile Optimization ===== */
 @media (max-width: 768px) {
   .nav-drawer {

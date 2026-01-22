@@ -116,11 +116,137 @@
 }
 
 .hero-3d .hero__content,
-.hero-3d .crosshatch-hero__content {
+.hero-3d .crosshatch-hero__content,
+.hero-3d .ts-hero__inner {
   position: relative;
   z-index: 2;
   transform: translateZ(64px);
   filter: drop-shadow(0 12px 36px rgb(0 0 0 / 40%));
+}
+
+/* ===== TS HERO (Homepage unified hero) ===== */
+.ts-hero--home {
+  padding: clamp(2.75rem, 5vw, 5rem) 0;
+}
+
+.ts-hero--home .ts-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+}
+
+.ts-hero--home .ts-hero__title {
+  font-size: clamp(2rem, 3.2vw, 3.5rem);
+  line-height: 1.1;
+  max-width: 24ch;
+  margin: 0 0 1rem;
+}
+
+.ts-hero--home .ts-hero__lede {
+  max-width: 70ch;
+}
+
+.ts-hero--home .ts-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1rem;
+  margin-top: 1.5rem;
+}
+
+.ts-hero--home .ts-hero__bullets {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1.25rem;
+}
+
+.ts-hero--home .ts-hero__bullet strong {
+  display: block;
+}
+
+.ts-hero--home .ts-hero__bullet span {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--tiller-text-secondary, rgb(255 255 255 / 85%));
+}
+
+.ts-hero--home .ts-hero__project {
+  margin: 0;
+}
+
+.ts-hero--home .ts-hero__project img {
+  width: 100%;
+  height: auto;
+  border-radius: clamp(16px, 2vw, 28px);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 35%);
+}
+
+.ts-hero--home .ts-hero__facts {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.ts-hero--home .ts-hero__fact {
+  background: var(--tiller-bg-stone, #222524);
+  border: 1px solid rgb(201 162 39 / 18%);
+  border-radius: 20px;
+  padding: 1rem 1.25rem;
+}
+
+.ts-hero--home .ts-hero__fact-label {
+  margin: 0;
+  font-weight: 700;
+}
+
+.ts-hero--home .ts-hero__fact-body {
+  margin: 0.25rem 0 0;
+  color: var(--tiller-text-secondary, rgb(255 255 255 / 85%));
+}
+
+.ts-hero--home .ts-hero__review-link {
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 1023px) {
+  .ts-hero--home .ts-hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .ts-hero--home .ts-hero__project img {
+    max-height: 420px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .ts-hero--home {
+    padding: 2.5rem 0;
+  }
+
+  .ts-hero--home .ts-hero__actions {
+    flex-direction: column;
+  }
+
+  .ts-hero--home .ts-hero__actions .btn,
+  .ts-hero--home .ts-hero__review-link .btn {
+    width: 100%;
+  }
+
+  .ts-hero--home .ts-hero__bullets {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .ts-hero--home .ts-hero__project img {
+    max-height: 320px;
+  }
 }
 
 .hero-3d .hero__crosshatch-pattern,
