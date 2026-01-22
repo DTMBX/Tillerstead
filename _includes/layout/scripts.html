@@ -46,6 +46,14 @@ endcomment %} {% assign cache_version = site.cache_version | default:
   defer
 ></script>
 {% endif %}
+
+<!-- Legacy Tools (Estimate Builder + Export) -->
+{% if page.url contains '/tools/legacy/' %}
+<script
+  src="{{ '/assets/js/tools.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
+{% endif %}
 <!-- Table of contents builder -->
 <script>
 (function () {

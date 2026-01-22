@@ -4613,56 +4613,82 @@ ${options.includeDisclaimers ? generateDocxDisclaimersSection() : ''}
     document.addEventListener('input', debounce(handleInput, 200));
 
     // Form submission prevention
-    document.getElementById('estimate-form').addEventListener('submit', e => e.preventDefault());
+    const estimateForm = document.getElementById('estimate-form');
+    if (estimateForm) {
+      estimateForm.addEventListener('submit', e => e.preventDefault());
+    }
 
     // Calculator buttons
-    document.getElementById('calc-tile-btn').addEventListener('click', calculateTile);
-    document.getElementById('calc-mortar-btn').addEventListener('click', calculateMortar);
-    document.getElementById('calc-grout-btn').addEventListener('click', calculateGroutQuantity);
-    document.getElementById('calc-level-btn').addEventListener('click', calculateLeveling);
+    const calcTileBtn = document.getElementById('calc-tile-btn');
+    if (calcTileBtn) calcTileBtn.addEventListener('click', calculateTile);
+    const calcMortarBtn = document.getElementById('calc-mortar-btn');
+    if (calcMortarBtn) calcMortarBtn.addEventListener('click', calculateMortar);
+    const calcGroutBtn = document.getElementById('calc-grout-btn');
+    if (calcGroutBtn) calcGroutBtn.addEventListener('click', calculateGroutQuantity);
+    const calcLevelBtn = document.getElementById('calc-level-btn');
+    if (calcLevelBtn) calcLevelBtn.addEventListener('click', calculateLeveling);
 
     // Output buttons
-    document.getElementById('generate-scope-btn').addEventListener('click', () => {
-      const errors = validateProject();
-      showValidationErrors(errors);
-      if (errors.length === 0) {
-        showOutputPreview();
-      }
-    });
-    document.getElementById('generate-output-btn').addEventListener('click', showOutputPreview);
-    document.getElementById('copy-output-btn').addEventListener('click', copyOutput);
-    document.getElementById('print-output-btn').addEventListener('click', printOutput);
-    document.getElementById('download-doc-btn').addEventListener('click', downloadDoc);
-    document.getElementById('download-txt-btn').addEventListener('click', downloadTxt);
-    document.getElementById('download-pdf-btn').addEventListener('click', downloadPdfBuildGuide);
+    const generateScopeBtn = document.getElementById('generate-scope-btn');
+    if (generateScopeBtn) {
+      generateScopeBtn.addEventListener('click', () => {
+        const errors = validateProject();
+        showValidationErrors(errors);
+        if (errors.length === 0) {
+          showOutputPreview();
+        }
+      });
+    }
+    const generateOutputBtn = document.getElementById('generate-output-btn');
+    if (generateOutputBtn) generateOutputBtn.addEventListener('click', showOutputPreview);
+    const copyOutputBtn = document.getElementById('copy-output-btn');
+    if (copyOutputBtn) copyOutputBtn.addEventListener('click', copyOutput);
+    const printOutputBtn = document.getElementById('print-output-btn');
+    if (printOutputBtn) printOutputBtn.addEventListener('click', printOutput);
+    const downloadDocBtn = document.getElementById('download-doc-btn');
+    if (downloadDocBtn) downloadDocBtn.addEventListener('click', downloadDoc);
+    const downloadTxtBtn = document.getElementById('download-txt-btn');
+    if (downloadTxtBtn) downloadTxtBtn.addEventListener('click', downloadTxt);
+    const downloadPdfBtn = document.getElementById('download-pdf-btn');
+    if (downloadPdfBtn) downloadPdfBtn.addEventListener('click', downloadPdfBuildGuide);
 
     // Save/Load buttons
-    document.getElementById('save-project-btn').addEventListener('click', () => {
-      saveToStorage();
-      showToast('Project saved!');
-    });
-    document.getElementById('reset-project-btn').addEventListener('click', resetProject);
+    const saveProjectBtn = document.getElementById('save-project-btn');
+    if (saveProjectBtn) {
+      saveProjectBtn.addEventListener('click', () => {
+        saveToStorage();
+        showToast('Project saved!');
+      });
+    }
+    const resetProjectBtn = document.getElementById('reset-project-btn');
+    if (resetProjectBtn) resetProjectBtn.addEventListener('click', resetProject);
 
     // Add room button
-    document.getElementById('add-room-btn').addEventListener('click', () => {
-      createRoomCard();
-    });
+    const addRoomBtn = document.getElementById('add-room-btn');
+    if (addRoomBtn) {
+      addRoomBtn.addEventListener('click', () => {
+        createRoomCard();
+      });
+    }
 
     // Keyboard navigation for sticky nav
-    document.querySelector('.tools-nav__list').addEventListener('keydown', e => {
-      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-        const links = Array.from(document.querySelectorAll('.tools-nav__link'));
-        const current = document.activeElement;
-        const idx = links.indexOf(current);
-        if (idx > -1) {
-          e.preventDefault();
-          const next = e.key === 'ArrowRight' 
-            ? links[(idx + 1) % links.length]
-            : links[(idx - 1 + links.length) % links.length];
-          next.focus();
+    const navList = document.querySelector('.tools-nav__list');
+    if (navList) {
+      navList.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          const links = Array.from(document.querySelectorAll('.tools-nav__link'));
+          const current = document.activeElement;
+          const idx = links.indexOf(current);
+          if (idx > -1) {
+            e.preventDefault();
+            const next = e.key === 'ArrowRight'
+              ? links[(idx + 1) % links.length]
+              : links[(idx - 1 + links.length) % links.length];
+            next.focus();
+          }
         }
-      }
-    });
+      });
+    }
   }
 
   /**
