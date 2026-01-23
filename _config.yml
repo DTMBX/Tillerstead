@@ -272,6 +272,7 @@ exclude:
   - scripts
   - tools/
   - _audit
+  - docs/
   - package.json
   - package-lock.json
   - README.md
