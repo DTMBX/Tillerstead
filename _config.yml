@@ -20,16 +20,57 @@ timezone: "America/New_York"
 # Build settings
 # ----------------------------
 permalink: pretty
+encoding: utf-8
+markdown: kramdown
+highlighter: rouge
+
+# Incremental builds (disable for production, enable for dev)
+incremental: false
+
+# Verbose errors
+strict_front_matter: false
+
+# Performance optimizations
+profile: false  # Set to true to profile build performance
+quiet: false
+safe: false  # Allow plugins
+
+# Source and destination
+source: .
+destination: ./_site
 
 # ----------------------------
 # Plugins
 # ----------------------------
 plugins:
-  - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
+
+# Feed settings
+feed:
+  posts_limit: 20
+  excerpt_only: false
+
+# Sitemap settings
+sitemap:
+  priority: 1.0
+  changefreq: weekly
+  lastmod: true
+
+# SEO tag settings
+seo:
+  type: LocalBusiness
+  links:
+    - https://tillerstead.com
+    - https://www.instagram.com/tillerstead
+    - https://www.facebook.com/share/17ZQCR2zdZ/
+    - https://x.com/tillerstead
+
+# Pagination
+paginate: 10
+paginate_path: "/blog/page:num/"
 
 # ----------------------------
 # Markdown / Kramdown
@@ -37,6 +78,13 @@ plugins:
 kramdown:
   auto_ids: true
   toc_levels: 2..3
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+  smart_quotes: ["apos", "apos", "quot", "quot"]
 
 # ----------------------------
 # Collections

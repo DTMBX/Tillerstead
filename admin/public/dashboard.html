@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin Dashboard - Tillerstead</title>
   <link rel="stylesheet" href="/admin-styles.css">
+  <link rel="stylesheet" href="/admin-premium.css">
 </head>
 <body>
   <!-- Sidebar Navigation -->
@@ -34,6 +35,18 @@
       <a href="#toggles" class="nav-item" data-view="toggles">
         <span class="nav-icon">🎛️</span>
         <span class="nav-label">Feature Toggles</span>
+      </a>
+      <a href="/users" class="nav-item">
+        <span class="nav-icon">👥</span>
+        <span class="nav-label">Users</span>
+      </a>
+      <a href="/security" class="nav-item">
+        <span class="nav-icon">🔐</span>
+        <span class="nav-label">Security</span>
+      </a>
+      <a href="/health" class="nav-item">
+        <span class="nav-icon">📊</span>
+        <span class="nav-label">System Health</span>
       </a>
     </nav>
 
@@ -274,5 +287,6 @@
   <div id="toast-container"></div>
 
   <script src="/admin-app.js"></script>
+  <script src="/admin-premium.js"></script>
 </body>
 </html>

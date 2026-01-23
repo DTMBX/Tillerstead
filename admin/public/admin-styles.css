@@ -50,7 +50,7 @@ body {
 
 .sidebar-header {
   padding: 24px 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
 }
 
 .sidebar-header h1 {
@@ -80,12 +80,12 @@ body {
 }
 
 .nav-item:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgb(255 255 255 / 5%);
   color: white;
 }
 
 .nav-item.active {
-  background: rgba(102, 126, 234, 0.1);
+  background: rgb(102 126 234 / 10%);
   color: white;
   border-left-color: var(--primary);
 }
@@ -104,7 +104,7 @@ body {
 
 .sidebar-footer {
   padding: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgb(255 255 255 / 10%);
 }
 
 .user-info {
@@ -116,9 +116,9 @@ body {
 .btn-logout {
   width: 100%;
   padding: 10px;
-  background: rgba(239, 68, 68, 0.2);
+  background: rgb(239 68 68 / 20%);
   color: #fca5a5;
-  border: 1px solid rgba(239, 68, 68, 0.3);
+  border: 1px solid rgb(239 68 68 / 30%);
   border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
@@ -127,7 +127,7 @@ body {
 }
 
 .btn-logout:hover {
-  background: rgba(239, 68, 68, 0.3);
+  background: rgb(239 68 68 / 30%);
   color: white;
 }
 
@@ -184,13 +184,13 @@ body {
   background: white;
   border-radius: 12px;
   padding: 28px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 12%);
 }
 
 .card-icon {
@@ -238,7 +238,7 @@ body {
   background: white;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
 }
 
 .stat-card h4 {
@@ -301,7 +301,7 @@ body {
   border-radius: 12px;
   padding: 24px;
   margin-bottom: 24px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
 }
 
 .section-header {
@@ -369,7 +369,7 @@ body {
   background: white;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
   max-height: 70vh;
   overflow-y: auto;
 }
@@ -404,7 +404,7 @@ body {
   background: white;
   border-radius: 12px;
   padding: 24px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
 }
 
 .editor-header {
@@ -427,7 +427,7 @@ body {
   padding: 16px;
   border: 1px solid var(--gray-300);
   border-radius: 8px;
-  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-family: Monaco, Menlo, 'Ubuntu Mono', monospace;
   font-size: 13px;
   line-height: 1.6;
   resize: vertical;
@@ -455,7 +455,7 @@ body {
   background: white;
   border-radius: 12px;
   padding: 24px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
 }
 
 .toggle-header {
@@ -485,7 +485,7 @@ body {
 }
 
 .switch input {
-  opacity: 0;
+  opacity: 0%;
   width: 0;
   height: 0;
 }
@@ -502,7 +502,7 @@ body {
   border-radius: 28px;
 }
 
-.slider:before {
+.slider::before {
   position: absolute;
   content: "";
   height: 20px;
@@ -518,7 +518,7 @@ input:checked + .slider {
   background-color: var(--success);
 }
 
-input:checked + .slider:before {
+input:checked + .slider::before {
   transform: translateX(24px);
 }
 
@@ -568,7 +568,7 @@ input:checked + .slider:before {
   background: white;
   padding: 16px 20px;
   border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 15%);
   display: flex;
   align-items: center;
   gap: 12px;
@@ -579,11 +579,12 @@ input:checked + .slider:before {
 @keyframes slideIn {
   from {
     transform: translateX(400px);
-    opacity: 0;
+    opacity: 0%;
   }
+
   to {
     transform: translateX(0);
-    opacity: 1;
+    opacity: 100%;
   }
 }
 

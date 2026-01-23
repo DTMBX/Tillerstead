@@ -9,6 +9,12 @@ endcomment %} {% assign cache_version = site.cache_version | default:
   src="{{ '/assets/js/main.js' | relative_url }}?v={{ cache_version }}"
 ></script>
 
+<!-- Premium UX Enhancements -->
+<script
+  src="{{ '/assets/js/premium-ux.js' | relative_url }}?v={{ cache_version }}"
+  defer
+></script>
+
 <!-- Premium Animation Engine (vanilla, performance-focused) -->
 <script
   src="{{ '/assets/js/animation-engine.js' | relative_url }}?v={{ cache_version }}"

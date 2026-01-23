@@ -69,12 +69,13 @@
 <!-- Resource Hints: Preload critical CSS (render-blocking) -->
 <link rel="preload" href="{{ '/assets/css/root-vars.css' | relative_url }}" as="style" />
 <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" />
-{% if page.url == '/' or page.url == '/index.html' %}
+{% if page.url == '/' %}
 <link rel="preload" href="{{ '/assets/css/pages/home.css' | relative_url }}" as="style" />
 {% endif %}
 
 <!-- Core & Utility CSS: Load variables first, then base, then layout, then components, then page/utilities -->
 <link rel="stylesheet" href="{{ '/assets/css/root-vars.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/design-system.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/mobile-optimizations.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/mobile-premium.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/mobile-app.css' | relative_url }}" />
@@ -94,9 +95,11 @@
 <link rel="stylesheet" href="{{ '/assets/css/professional-features.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/carousel-premium.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/form-premium.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/components/service-cards.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/components/forms.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/page-theme.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/card-grid-bg.css' | relative_url }}" />
-{% if page.layout == 'build-page' or page.build_guide %}
+{% if page.layout == 'build-page' %}
 <link rel="stylesheet" href="{{ '/assets/css/build-guide.css' | relative_url }}" />
 {% endif %}
 
@@ -115,7 +118,7 @@
 {% endif %}
 
 <!-- Prefetch secondary pages for instant navigation -->
-{% if page.url == '/' or page.url == '/index.html' %}
+{% if page.url == '/' %}
 <link rel="prefetch" href="{{ '/portfolio/' | relative_url }}" as="document" />
 <link rel="prefetch" href="{{ '/contact/' | relative_url }}" as="document" />
 <link rel="prefetch" href="{{ '/services/' | relative_url }}" as="document" />
