@@ -7,19 +7,6 @@
 {%- else -%}
   {%- assign show_breadcrumbs = true -%}
 {%- endif -%}
-<<<<<<< HEAD
-
-{%- capture build_content -%}
-  {% comment %} Build Guide Hero - opt-in via front matter build_guide: true {% endcomment %}
-  {% if page.build_guide %}{{ build_hero }}{% endif %}
-
-  <div class="contractor-credentials mt-2 scroll-fade-in" style="text-align:center;">
-    <span class="badge badge--trust" title="Licensed NJ Contractor">NJ HIC #13VH10808800</span>
-    <span class="badge badge--compliance" title="TCNA Compliant">TCNA-Compliant Methods</span>
-    <span class="badge badge--reviews" title="5-Star Reviews">★ 5.0 Google & Thumbtack</span>
-  </div>
-
-=======
 {%- capture build_content -%}
   {% comment %} Build Guide Hero - opt-in via front matter build_guide: true {% endcomment %}
   {% if page.build_guide %}{{ build_hero }}{% endif %}
@@ -35,11 +22,13 @@
     <a href="tel:+16098628808" class="btn btn--ghost btn--lg">Call (609) 862-8808</a>
   </div>
 
-=======
->>>>>>> 6f26b33d (x)
+  <div class="contractor-credentials mt-2 scroll-fade-in" style="text-align:center;">
+    <span class="badge badge--trust" title="Licensed NJ Contractor">NJ HIC #13VH10808800</span>
+    <span class="badge badge--compliance" title="TCNA Compliant">TCNA-Compliant Methods</span>
+    <span class="badge badge--reviews" title="5-Star Reviews">★ 5.0 Google & Thumbtack</span>
+  </div>
+
   {{ build_cta }}
 {%- endcapture -%}
 
-{% include layout/page-shell.html
-   body=build_content
-   show_breadcrumbs=show_breadcrumbs %}
+{% include layout/page-shell.html body=build_content show_breadcrumbs=show_breadcrumbs %}
