@@ -1,0 +1,405 @@
+---
+layout: default
+title: SEI MVP Demo | SweatEquity Insurance
+description: Interactive demo of safe-driver rewarded auto insurance dashboard
+robots: noindex, nofollow
+permalink: /ventures/sei/app/
+---
+
+<div class="sei-app bg-gray-900 text-white min-h-screen">
+  
+  <!-- App Header -->
+  <header class="sei-app-header bg-gray-800 border-b border-gray-700 sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex items-center mr-8">
+            <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+              </svg>
+            </div>
+            <span class="text-xl font-bold">SweatEquity <span class="text-blue-400">Insurance</span></span>
+          </div>
+          
+          <nav class="hidden md:flex space-x-6 text-sm">
+            <a href="#dashboard" class="text-blue-400 font-semibold">Dashboard</a>
+            <a href="#driving-score" class="text-gray-400 hover:text-white">Driving Score</a>
+            <a href="#fund-transparency" class="text-gray-400 hover:text-white">Fund Transparency</a>
+            <a href="#claims" class="text-gray-400 hover:text-white">Claims</a>
+          </nav>
+        </div>
+        
+        <div class="flex items-center gap-4">
+          <div class="hidden md:block text-right text-sm">
+            <div class="text-gray-400">Demo User</div>
+            <div class="font-semibold">Sarah Johnson</div>
+          </div>
+          <div class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Demo Disclaimer Banner -->
+  <div class="bg-yellow-900 bg-opacity-20 border-b border-yellow-700">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex items-center justify-center">
+        <svg class="w-5 h-5 text-yellow-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span class="text-sm text-yellow-200">
+          <strong>DEMO MODE:</strong> This is a demonstration with simulated data. Product not available for purchase. Not insurance advice.
+        </span>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main Dashboard -->
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-7xl mx-auto">
+      
+      <!-- Top Stats Row -->
+      <div class="grid md:grid-cols-4 gap-6 mb-8">
+        
+        <!-- Safe Driving Score -->
+        <div class="bg-gray-800 border border-gray-700 rounded-xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm text-gray-400">Safe Driving Score</span>
+            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div class="text-4xl font-bold text-green-400 mb-2">92</div>
+          <div class="text-xs text-gray-400">↑ +3 this month</div>
+          <div class="mt-4 h-2 bg-gray-700 rounded-full overflow-hidden">
+            <div class="h-full bg-green-400" style="width: 92%"></div>
+          </div>
+        </div>
+        
+        <!-- Monthly Premium -->
+        <div class="bg-gray-800 border border-gray-700 rounded-xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm text-gray-400">Monthly Premium</span>
+            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div class="text-4xl font-bold mb-2">$89</div>
+          <div class="text-xs text-green-400">↓ $12 lower than avg</div>
+        </div>
+        
+        <!-- Member Benefit Balance -->
+        <div class="bg-gray-800 border border-gray-700 rounded-xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm text-gray-400">Benefit Ledger</span>
+            <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2zM10 8.5a.5.5 0 11-1 0 .5.5 0 011 0zm5 5a.5.5 0 11-1 0 .5.5 0 011 0z"></path>
+            </svg>
+          </div>
+          <div class="text-4xl font-bold text-purple-400 mb-2">$1,247</div>
+          <div class="text-xs text-gray-400">12 months accrued</div>
+        </div>
+        
+        <!-- Days Claim-Free -->
+        <div class="bg-gray-800 border border-gray-700 rounded-xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-sm text-gray-400">Claim-Free Days</span>
+            <svg class="w-5 h-5 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <div class="text-4xl font-bold text-yellow-400 mb-2">437</div>
+          <div class="text-xs text-gray-400">Since Jan 2025</div>
+        </div>
+        
+      </div>
+      
+      <!-- Main Content Grid -->
+      <div class="grid lg:grid-cols-3 gap-8">
+        
+        <!-- Left Column - Driving Score Details -->
+        <div class="lg:col-span-2 space-y-8">
+          
+          <!-- Safe Driving Score Breakdown -->
+          <section id="driving-score" class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+            <h2 class="text-2xl font-bold mb-6">Safe Driving Score Breakdown</h2>
+            
+            <div class="space-y-6">
+              
+              <!-- Speed Compliance -->
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-semibold">Speed Compliance</span>
+                  <span class="text-lg font-bold text-green-400">98%</span>
+                </div>
+                <div class="h-3 bg-gray-700 rounded-full overflow-hidden">
+                  <div class="h-full bg-green-400" style="width: 98%"></div>
+                </div>
+                <p class="text-xs text-gray-400 mt-1">Only 2 speeding instances last month (5+ mph over limit)</p>
+              </div>
+              
+              <!-- Braking Behavior -->
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-semibold">Smooth Braking</span>
+                  <span class="text-lg font-bold text-yellow-400">87%</span>
+                </div>
+                <div class="h-3 bg-gray-700 rounded-full overflow-hidden">
+                  <div class="h-full bg-yellow-400" style="width: 87%"></div>
+                </div>
+                <p class="text-xs text-gray-400 mt-1">12 harsh braking events detected (improve following distance)</p>
+              </div>
+              
+              <!-- Night Driving -->
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-semibold">Day Driving Preference</span>
+                  <span class="text-lg font-bold text-green-400">94%</span>
+                </div>
+                <div class="h-3 bg-gray-700 rounded-full overflow-hidden">
+                  <div class="h-full bg-green-400" style="width: 94%"></div>
+                </div>
+                <p class="text-xs text-gray-400 mt-1">6% of trips after 10pm (lower risk)</p>
+              </div>
+              
+              <!-- Mileage -->
+              <div>
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-semibold">Low Mileage</span>
+                  <span class="text-lg font-bold text-green-400">92%</span>
+                </div>
+                <div class="h-3 bg-gray-700 rounded-full overflow-hidden">
+                  <div class="h-full bg-green-400" style="width: 92%"></div>
+                </div>
+                <p class="text-xs text-gray-400 mt-1">650 miles/month average (below 800 mile threshold)</p>
+              </div>
+              
+            </div>
+            
+            <div class="mt-8 p-4 bg-blue-900 bg-opacity-30 border border-blue-700 rounded-lg">
+              <div class="flex items-start">
+                <svg class="w-5 h-5 text-blue-400 mr-3 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <div class="text-sm text-blue-200">
+                  <strong>Improvement Tip:</strong> Increase your following distance by 1-2 seconds to reduce harsh braking events. 
+                  This could boost your score to 95+ and increase your member benefit accrual by ~$8/month.
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <!-- Fund Transparency Dashboard -->
+          <section id="fund-transparency" class="bg-gray-800 border border-gray-700 rounded-xl p-8">
+            <h2 class="text-2xl font-bold mb-6">Transparent Fund Allocation</h2>
+            
+            <div class="mb-6">
+              <div class="text-sm text-gray-400 mb-2">Your $89 Premium Breakdown</div>
+              <div class="space-y-3">
+                
+                <div class="flex items-center">
+                  <div class="w-24 text-sm font-semibold">Risk Pool</div>
+                  <div class="flex-1 h-8 bg-gray-700 rounded-lg overflow-hidden flex items-center">
+                    <div class="h-full bg-blue-500 flex items-center px-3" style="width: 65%">
+                      <span class="text-xs font-bold">$57.85 (65%)</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="flex items-center">
+                  <div class="w-24 text-sm font-semibold">Member Benefit</div>
+                  <div class="flex-1 h-8 bg-gray-700 rounded-lg overflow-hidden flex items-center">
+                    <div class="h-full bg-green-500 flex items-center px-3" style="width: 15%">
+                      <span class="text-xs font-bold">$13.35 (15%)</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="flex items-center">
+                  <div class="w-24 text-sm font-semibold">Operating</div>
+                  <div class="flex-1 h-8 bg-gray-700 rounded-lg overflow-hidden flex items-center">
+                    <div class="h-full bg-yellow-500 flex items-center px-3" style="width: 12%">
+                      <span class="text-xs font-bold">$10.68 (12%)</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="flex items-center">
+                  <div class="w-24 text-sm font-semibold">Reinsurance</div>
+                  <div class="flex-1 h-8 bg-gray-700 rounded-lg overflow-hidden flex items-center">
+                    <div class="h-full bg-purple-500 flex items-center px-3" style="width: 8%">
+                      <span class="text-xs font-bold">$7.12 (8%)</span>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 mt-8">
+              
+              <div class="bg-gray-700 rounded-lg p-4">
+                <div class="text-xs text-gray-400 mb-1">Total Premiums Collected (Pool)</div>
+                <div class="text-2xl font-bold text-blue-400">$2.3M</div>
+                <div class="text-xs text-gray-400 mt-1">Across all members</div>
+              </div>
+              
+              <div class="bg-gray-700 rounded-lg p-4">
+                <div class="text-xs text-gray-400 mb-1">Claims Paid (YTD)</div>
+                <div class="text-2xl font-bold text-red-400">$1.1M</div>
+                <div class="text-xs text-gray-400 mt-1">48% loss ratio</div>
+              </div>
+              
+              <div class="bg-gray-700 rounded-lg p-4">
+                <div class="text-xs text-gray-400 mb-1">Reserve Balance</div>
+                <div class="text-2xl font-bold text-yellow-400">$850K</div>
+                <div class="text-xs text-gray-400 mt-1">For future claims</div>
+              </div>
+              
+              <div class="bg-gray-700 rounded-lg p-4">
+                <div class="text-xs text-gray-400 mb-1">Member Benefits Accrued</div>
+                <div class="text-2xl font-bold text-green-400">$345K</div>
+                <div class="text-xs text-gray-400 mt-1">Across all members</div>
+              </div>
+              
+            </div>
+            
+            <div class="mt-6 p-4 bg-gray-700 rounded-lg">
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-300">Export Court-Ready Financial Statement</span>
+                <button class="px-4 py-2 bg-blue-600 hover:bg-blue-700 rounded text-sm font-semibold transition">
+                  Download PDF
+                </button>
+              </div>
+            </div>
+          </section>
+          
+        </div>
+        
+        <!-- Right Column - Recent Activity & Claims -->
+        <div class="space-y-8">
+          
+          <!-- Member Benefit Ledger -->
+          <section class="bg-gray-800 border border-gray-700 rounded-xl p-6">
+            <h3 class="text-lg font-bold mb-4">Member Benefit Ledger</h3>
+            
+            <div class="mb-6 p-4 bg-green-900 bg-opacity-30 border border-green-700 rounded-lg">
+              <div class="text-sm text-gray-400 mb-1">Current Balance</div>
+              <div class="text-3xl font-bold text-green-400">$1,247.35</div>
+              <div class="text-xs text-gray-400 mt-1">12 months of accrual</div>
+            </div>
+            
+            <div class="space-y-3">
+              <div class="text-xs font-semibold text-gray-400 mb-2">Recent Transactions</div>
+              
+              <div class="flex items-center justify-between py-2 border-b border-gray-700">
+                <div>
+                  <div class="text-sm font-semibold">Jan 2026 Accrual</div>
+                  <div class="text-xs text-gray-400">Score: 92 (Excellent)</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-sm font-bold text-green-400">+$127.50</div>
+                  <div class="text-xs text-gray-400">Jan 20</div>
+                </div>
+              </div>
+              
+              <div class="flex items-center justify-between py-2 border-b border-gray-700">
+                <div>
+                  <div class="text-sm font-semibold">Dec 2025 Accrual</div>
+                  <div class="text-xs text-gray-400">Score: 89 (Good)</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-sm font-bold text-green-400">+$118.25</div>
+                  <div class="text-xs text-gray-400">Dec 20</div>
+                </div>
+              </div>
+              
+              <div class="flex items-center justify-between py-2 border-b border-gray-700">
+                <div>
+                  <div class="text-sm font-semibold">Nov 2025 Accrual</div>
+                  <div class="text-xs text-gray-400">Score: 91 (Excellent)</div>
+                </div>
+                <div class="text-right">
+                  <div class="text-sm font-bold text-green-400">+$124.10</div>
+                  <div class="text-xs text-gray-400">Nov 20</div>
+                </div>
+              </div>
+              
+            </div>
+            
+            <div class="mt-6 p-3 bg-yellow-900 bg-opacity-20 border border-yellow-700 rounded text-xs text-yellow-200">
+              <strong>Disclaimer:</strong> Member benefit accrual is NOT a guaranteed return and is NOT an investment. 
+              Accrual amounts depend on program economics, claims experience, and regulatory compliance mode.
+            </div>
+          </section>
+          
+          <!-- Claims Status -->
+          <section id="claims" class="bg-gray-800 border border-gray-700 rounded-xl p-6">
+            <h3 class="text-lg font-bold mb-4">Claims History</h3>
+            
+            <div class="text-center py-8">
+              <svg class="w-16 h-16 text-green-400 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              <div class="text-xl font-bold text-green-400 mb-2">No Claims Filed</div>
+              <p class="text-sm text-gray-400">You've been claim-free for 437 days!</p>
+            </div>
+            
+            <button class="w-full py-3 bg-red-900 hover:bg-red-800 border border-red-700 rounded-lg font-semibold transition">
+              File New Claim
+            </button>
+          </section>
+          
+          <!-- Compliance Mode Indicator -->
+          <section class="bg-purple-900 bg-opacity-30 border border-purple-700 rounded-xl p-6">
+            <h3 class="text-sm font-bold mb-3 text-purple-300">Compliance Mode</h3>
+            <div class="text-xs text-gray-300 space-y-2">
+              <div class="flex items-center justify-between">
+                <span>State:</span>
+                <span class="font-semibold">New Jersey (Demo)</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Mode:</span>
+                <span class="font-semibold text-yellow-400">Beta Testing</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span>Ledger Type:</span>
+                <span class="font-semibold text-green-400">Benefit Accrual</span>
+              </div>
+            </div>
+            <div class="mt-4 p-3 bg-gray-800 rounded text-xs">
+              Product not approved for commercial sale. Demo only. All data simulated.
+            </div>
+          </section>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </main>
+  
+  <!-- Exit Demo Footer -->
+  <footer class="bg-gray-800 border-t border-gray-700 py-8 mt-12">
+    <div class="container mx-auto px-4 text-center">
+      <div class="mb-4">
+        <a href="/ventures/sei" class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+          </svg>
+          Exit Demo - Back to SEI Product Page
+        </a>
+      </div>
+      <p class="text-xs text-gray-400">
+        SweatEquity Insurance (SEI) is a technology demonstration under development. Product not available for purchase. 
+        Not insurance advice. © 2026 Tillerstead Ventures LLC.
+      </p>
+    </div>
+  </footer>
+  
+</div>

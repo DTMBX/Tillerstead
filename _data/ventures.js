@@ -135,6 +135,36 @@ const venturesData = {
         churnRate: 4.2,
         averageContractValue: 200
       }
+    },
+    {
+      id: 'sei-mvp-development',
+      category: 'tech',
+      title: 'SweatEquity Insurance (SEI) MVP',
+      description: 'Safe-driver rewarded auto insurance model with transparent fund allocation and compliance-first architecture',
+      investment: 150000,
+      equityStake: 100,
+      projectedValuation: 5000000,
+      status: 'in-progress',
+      progress: 35,
+      details: {
+        product: 'SweatEquity Insurance',
+        founded: 2026,
+        employees: 3,
+        developmentStage: 'MVP Beta',
+        targetLaunch: 'Q4 2026',
+        pilotState: 'NJ',
+        betaMembers: 0,
+        targetBetaMembers: 500,
+        techStack: 'Next.js, FastAPI, PostgreSQL, Redis',
+        complianceStatus: 'Pre-filing',
+        ipProtection: 'Proprietary algorithms server-side only'
+      },
+      milestones: [
+        { name: 'MVP Core Features', date: '2026-03-01', status: 'in-progress' },
+        { name: 'Actuarial Modeling', date: '2026-06-01', status: 'pending' },
+        { name: 'State Regulatory Filing', date: '2026-09-01', status: 'pending' },
+        { name: 'Beta Launch (NJ)', date: '2026-12-01', status: 'pending' }
+      ]
     }
   ],
   
