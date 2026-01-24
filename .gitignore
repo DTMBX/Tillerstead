@@ -4,22 +4,21 @@ _site/
 .jekyll-metadata
 .sass-cache/
 
-# Dependencies
-node_modules/
-vendor/
+# Ruby
 .bundle/
+vendor/
 Gemfile.lock
 
-# Visual Studio (LOCKED FILES)
+# Visual Studio (CAUSES ERRORS)
 .vs/
 *.vsidx
 *.sln
 *.slnx
 
-# MCP Agents (build artifacts)
+# MCP Agents
 .mcp-agents/
 
-# Build directories
+# Build artifacts
 dist/
 build/
 reports/
@@ -29,14 +28,12 @@ playwright-report/
 # Backups
 _backup*/
 
+# Dependencies
+node_modules/
+
 # OS
 .DS_Store
 Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-*.sublime-*
 
 # Logs
 *.log
