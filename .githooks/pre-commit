@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+set -eu
+
+echo ""
+echo "[pre-commit] Tillerstead checks..."
+
+# Fast gate: quick audits (full build gate runs on pre-push)
+if command -v pwsh >/dev/null 2>&1; then
+  pwsh -NoProfile -ExecutionPolicy Bypass -File "./scripts/audit-site.ps1" -Fast
+else
+  powershell -NoProfile -ExecutionPolicy Bypass -File "./scripts/audit-site.ps1" -Fast
+fi
+
+# Optional: quick CSS build (keep it fast)
+if command -v node >/dev/null 2>&1 && [ -f "./scripts/build-css.js" ]; then
+  node "./scripts/build-css.js"
+fi
+
+echo "[pre-commit] OK"
+echo ""
