@@ -5,8 +5,8 @@
 - **Build Command**: `bundle exec jekyll build` (Jekyll 3.10.0)
 - **Publish Directory**: `_site/`
 - **Domain Strategy**: 
-  - Primary: xtx396.com (Netlify deployment)
-  - Forwarding: tillerstead.com → xtx396.com (with masking at registrar level)
+  - Primary: tillerstead.com (Netlify deployment)
+  - Alias: xtx396.com (alternate domain)
 
 ## Steps to Complete Deployment
 
@@ -23,18 +23,20 @@ You've already run Steps 1-3 of the deployment wizard. Your site should be build
    - Click "Domain Management" in the side menu
    - Click "Add custom domain"
 
-3. **Add xtx396.com**
-   - Enter: `xtx396.com`
+3. **Add tillerstead.com**
+   - Enter: `tillerstead.com`
    - Click "Verify"
    - Netlify will check if you own the domain
 
-4. **Add www subdomain** (optional but recommended)
+4. **Add domain aliases** (optional but recommended)
    - Click "Add domain alias"
-   - Enter: `www.xtx396.com`
+   - Enter: `www.tillerstead.com`
+   - Click "Add domain alias" again
+   - Enter: `xtx396.com`
 
 ### Step 3: Configure DNS at Registrar
 
-You need to update DNS records at your domain registrar (where you purchased xtx396.com).
+You need to update DNS records at your domain registrar (where you purchased tillerstead.com).
 
 **Option A: Netlify DNS (Recommended)**
 1. In Netlify, click "Set up Netlify DNS"
@@ -46,7 +48,7 @@ You need to update DNS records at your domain registrar (where you purchased xtx
 **Option B: Manual DNS Records**
 If you want to keep your current DNS provider:
 
-1. Log into your registrar's DNS management
+1. Log into your registrar's DNS management for **tillerstead.com**
 2. Add these records:
 
    ```
@@ -61,7 +63,15 @@ If you want to keep your current DNS provider:
    TTL: 3600
    ```
 
-3. Save changes and wait 1-24 hours for propagation
+3. For **xtx396.com** (alias domain), add:
+   ```
+   Type: CNAME
+   Name: @ (or use ALIAS/ANAME if supported)
+   Value: tillerstead.com
+   TTL: 3600
+   ```
+
+4. Save changes and wait 1-24 hours for propagation
 
 ### Step 4: Enable HTTPS
 
@@ -74,48 +84,41 @@ Once DNS is configured and propagating:
 5. Netlify will automatically provision a free Let's Encrypt SSL certificate
 6. Enable "Force HTTPS" toggle
 
-### Step 5: Configure tillerstead.com Forwarding
+### Step 5: Verify Domain Aliases
 
-Since tillerstead.com is taken on Netlify, set up domain forwarding at your registrar:
+Since tillerstead.com is now your primary domain on Netlify:
 
-1. Log into tillerstead.com registrar
-2. Find "Domain Forwarding" or "URL Redirect" settings
-3. Configure:
-   - **From**: tillerstead.com
-   - **To**: https://xtx396.com
-   - **Type**: 301 Permanent Redirect
-   - **Frame/Mask**: Enabled (hides xtx396.com in browser)
-   - **Title**: "Tillerstead - Premium Tile Installation & Home Improvement | NJ HIC #13VH12345678"
-   - **Description**: "Expert tile installation, bathroom remodeling, and custom tile design in NJ. Licensed & insured (NJ HIC #13VH12345678). Serving Ocean, Atlantic & Cape May counties."
-   - **Keywords**: "tile installation nj, bathroom remodeling, custom tile design, ocean county tile, nj home improvement"
+1. Verify in Netlify Dashboard → Domain Management that you see:
+   - **Primary domain**: tillerstead.com
+   - **Aliases**: www.tillerstead.com, xtx396.com
 
-**Note**: Masking settings vary by registrar:
-- GoDaddy: "Forward with masking"
-- Namecheap: "URL Frame"
-- Google Domains: "Forward path" with "Permanent redirect" + "Forward to same path"
+2. All aliases automatically redirect to the primary domain (tillerstead.com)
+
+3. No additional forwarding configuration needed at registrar level
 
 ### Step 6: Test Deployment
 
 Once DNS propagates:
 
-1. **Test xtx396.com**:
-   - Visit https://xtx396.com
+1. **Test tillerstead.com** (primary):
+   - Visit https://tillerstead.com
    - Verify HTTPS (green lock icon)
    - Test navigation (services, products, contact form)
    - Check mobile responsiveness
 
-2. **Test www.xtx396.com** (if configured):
-   - Should redirect to https://xtx396.com
+2. **Test www.tillerstead.com**:
+   - Should redirect to https://tillerstead.com
 
-3. **Test tillerstead.com forwarding**:
-   - Visit https://tillerstead.com
-   - Should show xtx396.com content with tillerstead.com in URL (if masking enabled)
+3. **Test xtx396.com** (alias):
+   - Visit https://xtx396.com
+   - Should redirect to https://tillerstead.com
+   - Verify URL changes to tillerstead.com in browser
 
 4. **Test Jekyll features**:
    - Blog posts loading
-   - Sitemap: https://xtx396.com/sitemap.xml
-   - Robots.txt: https://xtx396.com/robots.txt
-   - PWA manifest: https://xtx396.com/manifest.webmanifest
+   - Sitemap: https://tillerstead.com/sitemap.xml
+   - Robots.txt: https://tillerstead.com/robots.txt
+   - PWA manifest: https://tillerstead.com/manifest.webmanifest
 
 5. **Test Ventures section**:
    - /ventures/ → investor portal
@@ -155,14 +158,15 @@ Your _redirects file should already be in place from previous work. Verify it's 
 
 ## Deployment Checklist
 
-- [ ] Netlify site building successfully
-- [ ] Custom domain (xtx396.com) added in Netlify
+- [x] Netlify site building successfully
+- [x] Custom domain (tillerstead.com) added in Netlify as primary
+- [x] Domain aliases (www.tillerstead.com, xtx396.com) configured
 - [ ] DNS records configured at registrar
 - [ ] DNS propagation complete (24-48 hours)
 - [ ] HTTPS certificate provisioned
 - [ ] Force HTTPS enabled
-- [ ] tillerstead.com forwarding configured with masking
-- [ ] All pages loading correctly
+- [ ] All pages loading correctly on tillerstead.com
+- [ ] xtx396.com redirects to tillerstead.com
 - [ ] Mobile responsiveness verified
 - [ ] Forms working (if applicable)
 - [ ] SEO meta tags verified
@@ -249,5 +253,5 @@ After deployment:
 ---
 
 **Last Updated**: January 23, 2026  
-**Deployment Target**: xtx396.com (primary) + tillerstead.com (forwarding with masking)  
-**Current Status**: DNS configuration pending
+**Deployment Target**: tillerstead.com (primary) + xtx396.com (alias)  
+**Current Status**: Domain configured in Netlify, DNS configuration pending
