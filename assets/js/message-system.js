@@ -172,50 +172,65 @@
   }
   
   /**
-   * Auto-detect and style existing "Scheduling January" messages
+   * Get dynamic scheduling text (always 2-4 weeks out)
    */
-  function enhanceSchedulingMessages() {
-    // Find any text containing "Scheduling"
-    const walker = document.createTreeWalker(
-      document.body,
-      NodeFilter.SHOW_TEXT,
-      null,
-      false
-    );
+  function getSchedulingText() {
+    const now = new Date();
+    const twoWeeks = new Date(now.getTime() + (14 * 24 * 60 * 60 * 1000));
+    const fourWeeks = new Date(now.getTime() + (28 * 24 * 60 * 60 * 1000));
     
-    const schedulingTexts = [];
-    let node;
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+                        'July', 'August', 'September', 'October', 'November', 'December'];
     
-    while (node = walker.nextNode()) {
-      if (node.textContent.includes('Scheduling January') || 
-          node.textContent.includes('Scheduling') && node.textContent.includes('projects')) {
-        schedulingTexts.push(node);
-      }
+    const twoWeeksMonth = monthNames[twoWeeks.getMonth()];
+    const fourWeeksMonth = monthNames[fourWeeks.getMonth()];
+    
+    // If same month, show "Scheduling [Month] projects"
+    if (twoWeeksMonth === fourWeeksMonth) {
+      return `Scheduling ${twoWeeksMonth} projects now`;
     }
-    
-    schedulingTexts.forEach(textNode => {
-      const parent = textNode.parentElement;
-      if (parent && !parent.classList.contains('notification-banner')) {
-        parent.classList.add('scheduling-banner');
-        parent.setAttribute('role', 'status');
-        parent.setAttribute('aria-live', 'polite');
-      }
-    });
+    // If different months, show range
+    return `Scheduling ${twoWeeksMonth}-${fourWeeksMonth} projects now`;
   }
+  
+  /**
+   * Show narrow scheduling bar (header element)
+   */
+  window.showSchedulingBar = function() {
+    // Remove existing bar
+    const existing = document.querySelector('.scheduling-bar');
+    if (existing) existing.remove();
+    
+    const bar = document.createElement('div');
+    bar.className = 'scheduling-bar';
+    bar.setAttribute('role', 'status');
+    bar.setAttribute('aria-live', 'polite');
+    bar.textContent = getSchedulingText();
+    
+    // Add close button
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'scheduling-bar__close';
+    closeBtn.setAttribute('aria-label', 'Close scheduling bar');
+    closeBtn.textContent = '✕';
+    closeBtn.addEventListener('click', () => {
+      bar.style.animation = 'slideUpBar 0.3s ease-out forwards';
+      setTimeout(() => bar.remove(), 300);
+      sessionStorage.setItem('schedulingBarClosed', 'true');
+    });
+    
+    bar.appendChild(closeBtn);
+    document.body.appendChild(bar);
+  };
   
   /**
    * Initialize on page load
    */
   function init() {
-    // Enhance existing messages
-    enhanceSchedulingMessages();
-    
-    // Show welcome banner if first visit
-    if (!sessionStorage.getItem('welcomeShown')) {
+    // Show scheduling bar if not closed this session
+    if (!sessionStorage.getItem('schedulingBarClosed')) {
       setTimeout(() => {
-        showBanner('🎉 Scheduling January 2026 projects now', 15000);
-        sessionStorage.setItem('welcomeShown', 'true');
-      }, 1000);
+        showSchedulingBar();
+      }, 800); // Slight delay for smooth entrance
     }
     
     // Add keyboard shortcut to enable sounds (Ctrl+Shift+S)

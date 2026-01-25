@@ -478,3 +478,15 @@
   0% { left: -100%; }
   100% { left: 100%; }
 }
+
+/* Slide up animation for closing scheduling bar */
+@keyframes slideUpBar {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,384 @@
+/* ============================================================
+   POPUP & BADGE FIXES - Stylish Restraints & Proper Sizing
+   Fixes broken popups, removes duplicates, optimizes layout
+   ============================================================ */
+
+/* ===== REMOVE OLD BROKEN SCHEDULING BANNER ===== */
+.notification-banner,
+.scheduling-banner {
+  display: none !important; /* Hide the huge blocking banner */
+}
+
+/* ===== NEW NARROW SCHEDULING BAR (Header Element) ===== */
+.scheduling-bar {
+  position: sticky !important;
+  top: 60px !important; /* Below header */
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  z-index: 999 !important;
+  
+  /* Narrow design */
+  height: 36px !important;
+  padding: 0 1rem !important;
+  
+  /* Styling */
+  background: linear-gradient(90deg, 
+    rgba(0, 163, 92, 0.95) 0%, 
+    rgba(0, 107, 61, 0.95) 100%) !important;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.6) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  
+  /* Content centering */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  /* Typography */
+  color: #ffffff !important;
+  font-size: 0.875rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.03em !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+  
+  /* Smooth entrance */
+  animation: slideDownBar 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s backwards !important;
+}
+
+@keyframes slideDownBar {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Scheduling bar icon */
+.scheduling-bar::before {
+  content: '📅';
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Dismiss button (optional) */
+.scheduling-bar__close {
+  position: absolute !important;
+  right: 1rem !important;
+  width: 24px !important;
+  height: 24px !important;
+  background: transparent !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border-radius: 50% !important;
+  color: #ffffff !important;
+  font-size: 0.75rem !important;
+  cursor: pointer !important;
+  opacity: 0.7 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.scheduling-bar__close:hover {
+  opacity: 1 !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .scheduling-bar {
+    top: 60px !important; /* Below mobile header */
+    height: 32px !important;
+    font-size: 0.75rem !important;
+    padding: 0 0.75rem !important;
+  }
+  
+  .scheduling-bar::before {
+    font-size: 0.875rem !important;
+  }
+}
+
+/* ===== LICENSED & INSURED BADGE - FIXED POPUP ===== */
+.license-badge,
+.credential-badge,
+[class*="nj-hic"],
+[class*="licensed"] {
+  position: relative !important;
+  display: inline-block !important;
+  
+  /* Remove duplicate containers */
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* The actual badge button */
+.license-badge__button,
+.credential-badge__button {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  padding: 0.75rem 1.25rem !important;
+  background: linear-gradient(135deg, #004d2b 0%, #006b3d 100%) !important;
+  color: #ffd700 !important;
+  border: 3px solid #ffd700 !important;
+  border-radius: 50px !important;
+  font-size: 0.875rem !important;
+  font-weight: 900 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  box-shadow: 0 4px 12px rgba(0, 163, 92, 0.3) !important;
+}
+
+.license-badge__button:hover {
+  transform: translateY(-2px) scale(1.05) !important;
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5) !important;
+}
+
+/* Popup/tooltip on hover - FIXED SIZE & POSITION */
+.license-badge__popup,
+.credential-popup {
+  /* Remove from flow */
+  position: absolute !important;
+  top: calc(100% + 12px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) scale(0.9) !important;
+  
+  /* Fixed size - no more huge popups */
+  width: 280px !important;
+  max-width: 90vw !important;
+  
+  /* Styling */
+  background: #ffffff !important;
+  border: 3px solid #00a35c !important;
+  border-radius: 16px !important;
+  padding: 1.25rem !important;
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(0, 163, 92, 0.1) !important;
+  
+  /* Hidden by default */
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  
+  /* Z-index */
+  z-index: 10000 !important;
+  
+  /* Smooth transition */
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+/* Arrow pointer */
+.license-badge__popup::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -10px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 10px solid transparent !important;
+  border-right: 10px solid transparent !important;
+  border-bottom: 10px solid #00a35c !important;
+}
+
+/* Show popup on hover */
+.license-badge:hover .license-badge__popup,
+.credential-badge:hover .credential-popup {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) scale(1) !important;
+}
+
+/* Popup content */
+.license-badge__popup-title {
+  color: #006b3d !important;
+  font-size: 1.125rem !important;
+  font-weight: 900 !important;
+  margin-bottom: 0.75rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+}
+
+.license-badge__popup-title::before {
+  content: '✓' !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 28px !important;
+  height: 28px !important;
+  background: #00a35c !important;
+  color: #ffffff !important;
+  border-radius: 50% !important;
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  flex-shrink: 0 !important;
+}
+
+.license-badge__popup-content {
+  color: #1a1a1a !important;
+  font-size: 0.875rem !important;
+  font-weight: 600 !important;
+  line-height: 1.6 !important;
+}
+
+.license-badge__popup-number {
+  display: block !important;
+  margin-top: 0.75rem !important;
+  padding: 0.5rem 0.75rem !important;
+  background: rgba(0, 163, 92, 0.1) !important;
+  border-left: 4px solid #00a35c !important;
+  border-radius: 4px !important;
+  font-family: 'Courier New', monospace !important;
+  font-size: 0.8125rem !important;
+  font-weight: 700 !important;
+  color: #006b3d !important;
+  word-break: break-all !important;
+}
+
+/* Close button in popup */
+.license-badge__popup-close {
+  position: absolute !important;
+  top: 0.75rem !important;
+  right: 0.75rem !important;
+  width: 28px !important;
+  height: 28px !important;
+  background: transparent !important;
+  border: 2px solid #006b3d !important;
+  border-radius: 50% !important;
+  color: #006b3d !important;
+  font-size: 1rem !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.2s ease !important;
+}
+
+.license-badge__popup-close:hover {
+  background: #006b3d !important;
+  color: #ffffff !important;
+  transform: rotate(90deg) !important;
+}
+
+/* Mobile popup positioning */
+@media (max-width: 768px) {
+  .license-badge__popup,
+  .credential-popup {
+    /* Fixed to bottom on mobile */
+    position: fixed !important;
+    top: auto !important;
+    bottom: 80px !important;
+    left: 10px !important;
+    right: 10px !important;
+    width: auto !important;
+    max-width: none !important;
+    transform: translateY(20px) scale(0.95) !important;
+  }
+  
+  .license-badge__popup::before {
+    display: none !important; /* No arrow on mobile */
+  }
+  
+  .license-badge:hover .license-badge__popup,
+  .credential-badge:hover .credential-popup {
+    transform: translateY(0) scale(1) !important;
+  }
+}
+
+/* ===== REMOVE DUPLICATE BORDERS/CONTAINERS ===== */
+.credential-wrapper .credential-wrapper,
+.badge-container .badge-container,
+.license-outer .license-inner {
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Remove nested badge duplicates */
+.license-badge .license-badge,
+.credential-badge .credential-badge {
+  display: contents !important;
+}
+
+/* ===== FOOTER BADGES - COMPACT LAYOUT ===== */
+footer .license-badge,
+footer .credential-badge,
+.footer-credentials {
+  display: inline-block !important;
+  margin: 0.5rem !important;
+}
+
+footer .license-badge__button {
+  font-size: 0.8125rem !important;
+  padding: 0.625rem 1rem !important;
+}
+
+/* ===== PREVENT POPUP OVERFLOW ===== */
+.license-badge__popup,
+.credential-popup {
+  max-height: 80vh !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Scrollbar styling */
+.license-badge__popup::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.license-badge__popup::-webkit-scrollbar-track {
+  background: rgba(0, 163, 92, 0.1) !important;
+  border-radius: 3px !important;
+}
+
+.license-badge__popup::-webkit-scrollbar-thumb {
+  background: #00a35c !important;
+  border-radius: 3px !important;
+}
+
+/* ===== ACCESSIBILITY ===== */
+.license-badge__button:focus,
+.credential-badge__button:focus {
+  outline: 3px solid #ffd700 !important;
+  outline-offset: 4px !important;
+}
+
+.license-badge__popup[aria-hidden="false"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) scale(1) !important;
+}
+
+/* ===== TOUCH DEVICE OPTIMIZATION ===== */
+@media (hover: none) and (pointer: coarse) {
+  /* On touch devices, tap to toggle popup */
+  .license-badge__popup,
+  .credential-popup {
+    /* Tap anywhere outside to close */
+    touch-action: manipulation !important;
+  }
+  
+  /* Show on active state */
+  .license-badge:active .license-badge__popup,
+  .credential-badge:active .credential-popup {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+/* ===== Z-INDEX MANAGEMENT ===== */
+.scheduling-bar { z-index: 999 !important; }
+.license-badge__popup { z-index: 10000 !important; }
+.credential-popup { z-index: 10000 !important; }
+
+/* Ensure popups appear above everything except toasts */
+.toast,
+.message { z-index: 10001 !important; }
