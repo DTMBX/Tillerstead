@@ -1,0 +1,66 @@
+/* ============================================================
+   NAV & HERO TEXT VISIBILITY FIX
+   Minimal fix for unreadable text - does NOT touch layout
+   ============================================================ */
+
+/* Desktop nav links - ensure white text is visible */
+.desktop-nav__link,
+.desktop-nav__trigger {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+}
+
+.desktop-nav__link:hover,
+.desktop-nav__trigger:hover {
+  color: #ffd700 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Dropdown arrow visibility */
+.dropdown-arrow {
+  stroke: #ffffff !important;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5)) !important;
+}
+
+/* Dropdown menu items - dark text on white */
+.desktop-nav__dropdown a {
+  color: #0a0a0a !important;
+  font-weight: 600 !important;
+}
+
+.desktop-nav__dropdown a:hover {
+  color: #ffffff !important;
+  background: #00a35c !important;
+}
+
+/* Hero heading - ensure black text is visible */
+.hero h1,
+.hero-section h1,
+.ts-hero h1 {
+  color: #0a0a0a !important;
+  font-weight: 900 !important;
+  text-shadow: 0 2px 6px rgba(255,255,255,0.8) !important;
+}
+
+/* Hero lead text - black on light background */
+.hero .lead,
+.hero-section .lead,
+.ts-hero .lead {
+  color: #0a0a0a !important;
+  font-weight: 800 !important;
+  background: rgba(255,255,255,0.7) !important;
+  padding: 0.75rem 1.25rem !important;
+  border-radius: 8px !important;
+  border-left: 5px solid #00a35c !important;
+  text-shadow: 0 1px 3px rgba(255,255,255,0.6) !important;
+}
+
+/* Hero paragraphs - dark text */
+.hero p,
+.hero-section p,
+.ts-hero p {
+  color: #1a1a1a !important;
+  font-weight: 600 !important;
+  text-shadow: 0 1px 2px rgba(255,255,255,0.5) !important;
+}
