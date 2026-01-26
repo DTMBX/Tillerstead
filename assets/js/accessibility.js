@@ -1322,8 +1322,10 @@
       });
 
       if (issues.length > 0) {
-        // // // // // // // // // // // // // // // console.warn('[A11Y] Heading structure issues:'); // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED
-        issues.forEach(issue => // // // // // // // // // // // // // // // console.warn(`  - ${issue}`) // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED);
+        // console.warn('[A11Y] Heading structure issues:');
+        issues.forEach(issue => {
+          // console.warn(`  - ${issue}`);
+        });
       }
     }
   }
