@@ -254,7 +254,7 @@ if (require.main === module) {
   const tool = new SiteRepairTool();
   const args = process.argv.slice(2);
 
-  tool.scan().then(fixes => {
+  tool.scan().then(_fixes => {
     if (args.includes('--fix')) {
       tool.autoFix();
     }

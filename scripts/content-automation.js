@@ -3,7 +3,7 @@
 /**
  * Content Publishing Automation System
  * Automates the workflow from draft → review → publish → distribute
- * 
+ *
  * Usage: node scripts/content-automation.js <command> [options]
  */
 
@@ -20,14 +20,14 @@ const CONFIG = {
   draftPath: path.join(__dirname, '../_drafts'),
   schedulePath: path.join(__dirname, '../_schedule'),
   templatesPath: path.join(__dirname, '../_templates'),
-  
+
   // Social media templates
   socialPlatforms: ['facebook', 'twitter', 'linkedin', 'instagram'],
-  
+
   // Publishing schedule (every other week on Mondays)
   publishDays: [1], // Monday = 1
   publishTime: '09:00',
-  
+
   // Analytics
   analyticsPath: path.join(__dirname, '../_reports/analytics'),
 };
@@ -45,27 +45,27 @@ Object.values(CONFIG).forEach(dir => {
  * Content Publishing Automation
  */
 class ContentAutomation {
-  
+
   /**
    * Generate content schedule for next N weeks
    */
   static generateSchedule(weeks = 12) {
     console.log(`\n📅 Generating ${weeks}-week publishing schedule...\n`);
-    
+
     const schedule = [];
     const today = new Date();
     let currentDate = new Date(today);
-    
+
     // Find next Monday
     while (currentDate.getDay() !== 1) {
       currentDate.setDate(currentDate.getDate() + 1);
     }
-    
+
     // Generate schedule for alternating weeks (every other Monday)
     for (let i = 0; i < weeks; i++) {
       const publishDate = new Date(currentDate);
       publishDate.setDate(currentDate.getDate() + (i * 14)); // Every 2 weeks
-      
+
       schedule.push({
         week: i + 1,
         date: publishDate.toISOString().split('T')[0],
@@ -75,21 +75,21 @@ class ContentAutomation {
         status: 'scheduled'
       });
     }
-    
+
     // Save schedule
     const schedulePath = path.join(CONFIG.schedulePath, 'publishing-schedule.json');
     fs.writeFileSync(schedulePath, JSON.stringify(schedule, null, 2));
-    
+
     console.log('✅ Schedule generated:\n');
     schedule.forEach(item => {
       console.log(`Week ${item.week}: ${item.date} - ${item.contentType}`);
     });
-    
+
     console.log(`\n📄 Schedule saved to: ${schedulePath}\n`);
-    
+
     return schedule;
   }
-  
+
   /**
    * Get content type for week (rotating: blog, case study, video)
    */
@@ -100,42 +100,42 @@ class ContentAutomation {
     if (cycle === 5) return 'Video + Blog Post';
     return 'Blog Post';
   }
-  
+
   /**
    * Create content from template
    */
   static createFromTemplate(type, title, slug) {
     console.log(`\n📝 Creating ${type} from template...\n`);
-    
+
     const templates = {
       'blog': this.getBlogTemplate(),
       'case-study': this.getCaseStudyTemplate(),
       'video-script': this.getVideoTemplate()
     };
-    
+
     const template = templates[type];
     if (!template) {
       console.error(`❌ Unknown template type: ${type}`);
       return;
     }
-    
+
     const date = new Date().toISOString().split('T')[0];
     const filename = `${date}-${slug}.md`;
     const filepath = path.join(CONFIG.draftPath, filename);
-    
+
     const content = template
       .replace(/\{\{TITLE\}\}/g, title)
       .replace(/\{\{DATE\}\}/g, date)
       .replace(/\{\{SLUG\}\}/g, slug);
-    
+
     fs.writeFileSync(filepath, content);
-    
+
     console.log(`✅ Created: ${filename}`);
     console.log(`📂 Location: ${filepath}\n`);
-    
+
     return filepath;
   }
-  
+
   /**
    * Get blog post template with Tyler's voice and TCNA compliance
    */
@@ -339,7 +339,7 @@ We're Tillerstead LLC—fully licensed, insured, and we've been [doing this work
 *Last Updated: {{DATE}}*
 `;
   }
-  
+
   /**
    * Get case study template
    */
@@ -428,7 +428,7 @@ featured: true
 **Project completed [DATE] | Licensed NJ HIC #13VH10808800**
 `;
   }
-  
+
   /**
    * Get video script template
    */
@@ -462,47 +462,47 @@ featured: true
 **CTA:**
 `;
   }
-  
+
   /**
    * Generate social media posts for content
    */
   static generateSocialPosts(contentFile) {
     console.log(`\n📱 Generating social media posts...\n`);
-    
+
     // Read content file
     const content = fs.readFileSync(contentFile, 'utf8');
     const frontmatter = this.parseFrontmatter(content);
-    
+
     const posts = {
       facebook: this.generateFacebookPost(frontmatter),
       twitter: this.generateTwitterPost(frontmatter),
       linkedin: this.generateLinkedInPost(frontmatter),
       instagram: this.generateInstagramPost(frontmatter)
     };
-    
+
     // Save to file
     const slug = path.basename(contentFile, '.md').replace(/^\d{4}-\d{2}-\d{2}-/, '');
     const socialPath = path.join(CONFIG.schedulePath, `social-${slug}.json`);
     fs.writeFileSync(socialPath, JSON.stringify(posts, null, 2));
-    
+
     console.log('✅ Social media posts generated:\n');
     Object.entries(posts).forEach(([platform, post]) => {
       console.log(`${platform.toUpperCase()}:`);
       console.log(post.text.substring(0, 100) + '...\n');
     });
-    
+
     console.log(`📄 Saved to: ${socialPath}\n`);
-    
+
     return posts;
   }
-  
+
   /**
    * Parse frontmatter from markdown
    */
   static parseFrontmatter(content) {
     const match = content.match(/^---\n([\s\S]+?)\n---/);
     if (!match) return {};
-    
+
     const fm = {};
     match[1].split('\n').forEach(line => {
       const [key, ...valueParts] = line.split(':');
@@ -510,10 +510,10 @@ featured: true
         fm[key.trim()] = valueParts.join(':').trim().replace(/^["']|["']$/g, '');
       }
     });
-    
+
     return fm;
   }
-  
+
   /**
    * Generate Facebook post
    */
@@ -532,7 +532,7 @@ Learn more and get expert insights on our blog 👇
       cta: 'Learn More'
     };
   }
-  
+
   /**
    * Generate Twitter post
    */
@@ -551,7 +551,7 @@ Read more ↓
       image: frontmatter.image
     };
   }
-  
+
   /**
    * Generate LinkedIn post
    */
@@ -574,7 +574,7 @@ Read the full article and learn how TCNA-compliant installation protects your in
       image: frontmatter.image
     };
   }
-  
+
   /**
    * Generate Instagram post caption
    */
@@ -598,13 +598,13 @@ Link in bio for full article ☝️
       carousel: true
     };
   }
-  
+
   /**
    * Generate email newsletter
    */
   static generateNewsletter(contentFiles) {
     console.log(`\n📧 Generating email newsletter...\n`);
-    
+
     const newsletter = {
       subject: '',
       preheader: '',
@@ -612,11 +612,11 @@ Link in bio for full article ☝️
       articles: [],
       footer: this.getEmailFooter()
     };
-    
+
     contentFiles.forEach(file => {
       const content = fs.readFileSync(file, 'utf8');
       const fm = this.parseFrontmatter(content);
-      
+
       newsletter.articles.push({
         title: fm.title,
         description: fm.description || fm.meta_description,
@@ -625,25 +625,25 @@ Link in bio for full article ☝️
         cta: 'Read More'
       });
     });
-    
+
     // Generate subject based on main article
     if (newsletter.articles.length > 0) {
       newsletter.subject = `New: ${newsletter.articles[0].title}`;
       newsletter.preheader = newsletter.articles[0].description.substring(0, 100);
     }
-    
+
     // Save newsletter
     const newsletterPath = path.join(CONFIG.schedulePath, `newsletter-${newsletter.date}.json`);
     fs.writeFileSync(newsletterPath, JSON.stringify(newsletter, null, 2));
-    
+
     console.log('✅ Newsletter generated');
     console.log(`Subject: ${newsletter.subject}`);
     console.log(`Articles: ${newsletter.articles.length}`);
     console.log(`📄 Saved to: ${newsletterPath}\n`);
-    
+
     return newsletter;
   }
-  
+
   /**
    * Get email footer template
    */
@@ -658,7 +658,7 @@ Link in bio for full article ☝️
       unsubscribe: 'https://tillerstead.com/unsubscribe'
     };
   }
-  
+
   /**
    * Create publishing checklist
    */
@@ -777,18 +777,18 @@ Link in bio for full article ☝️
 
 *Generated by Content Automation System*
 `;
-    
+
     const checklistPath = path.join(
-      CONFIG.schedulePath, 
+      CONFIG.schedulePath,
       `checklist-${path.basename(contentFile, '.md')}.md`
     );
-    
+
     fs.writeFileSync(checklistPath, checklist);
     console.log(`✅ Publishing checklist created: ${checklistPath}\n`);
-    
+
     return checklistPath;
   }
-  
+
   /**
    * Generate analytics report template
    */
@@ -905,11 +905,11 @@ Link in bio for full article ☝️
 
 *Report generated: [DATE]*
 `;
-    
+
     const reportPath = path.join(CONFIG.analyticsPath, `content-report-template.md`);
     fs.writeFileSync(reportPath, report);
     console.log(`✅ Analytics report template created: ${reportPath}\n`);
-    
+
     return reportPath;
   }
 }
@@ -924,7 +924,7 @@ const commands = {
   newsletter: (...files) => ContentAutomation.generateNewsletter(files),
   checklist: (file) => ContentAutomation.createPublishingChecklist(file),
   analytics: () => ContentAutomation.createAnalyticsReport(),
-  
+
   help: () => {
     console.log(`
 📋 Content Automation System - Commands

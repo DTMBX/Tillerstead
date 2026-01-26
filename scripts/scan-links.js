@@ -13,7 +13,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 const REPO_ROOT = path.join(__dirname, '..');
 
@@ -359,7 +358,7 @@ function generateStats(linkData) {
       try {
         const url = new URL(link.href);
         domains[url.hostname] = (domains[url.hostname] || 0) + 1;
-      } catch (e) {
+      } catch (_e) {
         // Invalid URL
       }
     });

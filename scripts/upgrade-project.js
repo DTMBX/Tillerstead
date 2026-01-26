@@ -96,7 +96,7 @@ async function upgradeSass() {
           }
         }
       }
-    } catch (err) {
+    } catch (_err) {
       // Directory might not exist or other error
     }
   }
@@ -285,7 +285,7 @@ async function upgradeDependencies() {
   let pkgData;
   try {
     pkgData = JSON.parse(await fs.readFile(pkgPath, 'utf8'));
-  } catch (err) {
+  } catch (_err) {
     console.error(
       "Failed to read package.json. Ensure you're running in the project root.",
     );
@@ -318,7 +318,7 @@ async function upgradeDependencies() {
               const data = await res.json();
               latestVersion = data['dist-tags']?.latest;
             }
-          } catch (error) {
+          } catch (_error) {
             // Ignore fetch errors
           }
           if (!latestVersion) latestVersion = '1.68.0'; // fallback to a known recent version if fetch fails

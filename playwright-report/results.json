@@ -131,7 +131,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -144,7 +144,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:14.233Z",
+                      "startTime": "2026-01-26T23:15:23.859Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -170,10 +170,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 5,
+                      "workerIndex": 4,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 3,
+                      "duration": 30,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -186,7 +186,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:16.880Z",
+                      "startTime": "2026-01-26T23:15:31.615Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -215,7 +215,7 @@
                       "workerIndex": 8,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 9,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -228,7 +228,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:19.477Z",
+                      "startTime": "2026-01-26T23:15:37.693Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -257,7 +257,7 @@
                       "workerIndex": 11,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -270,7 +270,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:21.923Z",
+                      "startTime": "2026-01-26T23:15:41.862Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -299,7 +299,7 @@
                       "workerIndex": 14,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 17,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -312,7 +312,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:27.820Z",
+                      "startTime": "2026-01-26T23:15:51.585Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -338,10 +338,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 16,
+                      "workerIndex": 17,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 19,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -354,7 +354,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:36.014Z",
+                      "startTime": "2026-01-26T23:15:55.036Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -380,10 +380,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 19,
+                      "workerIndex": 20,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 5,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -396,7 +396,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:43.616Z",
+                      "startTime": "2026-01-26T23:15:58.267Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -425,7 +425,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 7,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -438,7 +438,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:14.177Z",
+                      "startTime": "2026-01-26T23:15:23.950Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -464,10 +464,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 4,
+                      "workerIndex": 5,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -480,7 +480,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:16.814Z",
+                      "startTime": "2026-01-26T23:15:31.131Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -506,10 +506,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 6,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -522,7 +522,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:19.416Z",
+                      "startTime": "2026-01-26T23:15:37.132Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -551,7 +551,7 @@
                       "workerIndex": 9,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -564,7 +564,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:21.862Z",
+                      "startTime": "2026-01-26T23:15:41.490Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -590,10 +590,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 13,
+                      "workerIndex": 12,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 14,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -606,7 +606,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:28.030Z",
+                      "startTime": "2026-01-26T23:15:51.387Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -632,10 +632,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 17,
+                      "workerIndex": 16,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 9,
+                      "duration": 7,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -648,7 +648,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:36.322Z",
+                      "startTime": "2026-01-26T23:15:54.803Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -674,10 +674,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 20,
+                      "workerIndex": 19,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -690,7 +690,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:43.968Z",
+                      "startTime": "2026-01-26T23:15:58.001Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -719,7 +719,7 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 10,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -732,7 +732,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:14.183Z",
+                      "startTime": "2026-01-26T23:15:23.822Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -761,7 +761,7 @@
                       "workerIndex": 3,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 13,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -774,7 +774,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:16.812Z",
+                      "startTime": "2026-01-26T23:15:31.601Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -800,10 +800,10 @@
                   "projectName": "chromium-tablet",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 7,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 10,
+                      "duration": 35,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -816,7 +816,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:19.398Z",
+                      "startTime": "2026-01-26T23:15:37.402Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -845,7 +845,7 @@
                       "workerIndex": 10,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -858,7 +858,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:21.792Z",
+                      "startTime": "2026-01-26T23:15:41.743Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -884,10 +884,10 @@
                   "projectName": "chromium-tablet",
                   "results": [
                     {
-                      "workerIndex": 12,
+                      "workerIndex": 13,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 39,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -900,7 +900,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:27.359Z",
+                      "startTime": "2026-01-26T23:15:51.376Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -929,7 +929,7 @@
                       "workerIndex": 15,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 9,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -942,7 +942,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:35.490Z",
+                      "startTime": "2026-01-26T23:15:54.760Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -971,7 +971,7 @@
                       "workerIndex": 18,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 7,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -984,7 +984,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:43.303Z",
+                      "startTime": "2026-01-26T23:15:57.980Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1018,10 +1018,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 22,
+                      "workerIndex": 23,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 5,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1034,7 +1034,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:46.273Z",
+                      "startTime": "2026-01-26T23:16:01.620Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1060,10 +1060,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 25,
+                      "workerIndex": 26,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 5,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1076,7 +1076,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:48.720Z",
+                      "startTime": "2026-01-26T23:16:05.085Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1102,10 +1102,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 28,
+                      "workerIndex": 29,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1118,7 +1118,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:51.688Z",
+                      "startTime": "2026-01-26T23:16:08.454Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1144,10 +1144,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 31,
+                      "workerIndex": 32,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 5,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1160,7 +1160,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:54.375Z",
+                      "startTime": "2026-01-26T23:16:12.251Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1186,7 +1186,7 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 34,
+                      "workerIndex": 35,
                       "parallelIndex": 0,
                       "status": "failed",
                       "duration": 5,
@@ -1202,7 +1202,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:57.143Z",
+                      "startTime": "2026-01-26T23:16:16.127Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1228,10 +1228,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 37,
+                      "workerIndex": 38,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1244,7 +1244,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:59.929Z",
+                      "startTime": "2026-01-26T23:16:19.445Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1270,7 +1270,7 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 39,
+                      "workerIndex": 41,
                       "parallelIndex": 0,
                       "status": "failed",
                       "duration": 5,
@@ -1286,7 +1286,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:02.753Z",
+                      "startTime": "2026-01-26T23:16:22.901Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1312,10 +1312,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 42,
+                      "workerIndex": 44,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 7,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1328,7 +1328,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:06.240Z",
+                      "startTime": "2026-01-26T23:16:26.478Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1354,7 +1354,7 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 45,
+                      "workerIndex": 47,
                       "parallelIndex": 0,
                       "status": "failed",
                       "duration": 5,
@@ -1370,7 +1370,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:09.375Z",
+                      "startTime": "2026-01-26T23:16:29.859Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1396,10 +1396,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 48,
+                      "workerIndex": 50,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 11,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1412,7 +1412,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:13.165Z",
+                      "startTime": "2026-01-26T23:16:33.732Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1438,10 +1438,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 52,
+                      "workerIndex": 53,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 9,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1454,7 +1454,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:16.274Z",
+                      "startTime": "2026-01-26T23:16:40.950Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1480,10 +1480,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 23,
+                      "workerIndex": 22,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 3,
+                      "duration": 5,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1496,7 +1496,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:46.471Z",
+                      "startTime": "2026-01-26T23:16:01.279Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1522,7 +1522,7 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 26,
+                      "workerIndex": 25,
                       "parallelIndex": 1,
                       "status": "failed",
                       "duration": 4,
@@ -1538,7 +1538,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:48.930Z",
+                      "startTime": "2026-01-26T23:16:04.724Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1564,10 +1564,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 29,
+                      "workerIndex": 27,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1580,7 +1580,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:51.863Z",
+                      "startTime": "2026-01-26T23:16:07.980Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1606,10 +1606,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 32,
+                      "workerIndex": 31,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1622,7 +1622,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:54.527Z",
+                      "startTime": "2026-01-26T23:16:11.743Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1648,10 +1648,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 35,
+                      "workerIndex": 33,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 7,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1664,7 +1664,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:57.363Z",
+                      "startTime": "2026-01-26T23:16:15.653Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1690,10 +1690,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 38,
+                      "workerIndex": 36,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 11,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1706,7 +1706,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:00.274Z",
+                      "startTime": "2026-01-26T23:16:18.897Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1732,7 +1732,7 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 41,
+                      "workerIndex": 39,
                       "parallelIndex": 1,
                       "status": "failed",
                       "duration": 5,
@@ -1748,7 +1748,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:03.091Z",
+                      "startTime": "2026-01-26T23:16:22.382Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1774,10 +1774,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 44,
+                      "workerIndex": 42,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 7,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1790,7 +1790,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:06.608Z",
+                      "startTime": "2026-01-26T23:16:25.810Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1816,10 +1816,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 47,
+                      "workerIndex": 45,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 5,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1832,7 +1832,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:09.660Z",
+                      "startTime": "2026-01-26T23:16:29.248Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1858,10 +1858,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 50,
+                      "workerIndex": 48,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 9,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1874,7 +1874,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:13.376Z",
+                      "startTime": "2026-01-26T23:16:32.878Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1900,10 +1900,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 53,
+                      "workerIndex": 51,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1916,7 +1916,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:16.577Z",
+                      "startTime": "2026-01-26T23:16:40.089Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1945,7 +1945,7 @@
                       "workerIndex": 21,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 7,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -1958,7 +1958,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:46.147Z",
+                      "startTime": "2026-01-26T23:16:01.231Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1987,7 +1987,7 @@
                       "workerIndex": 24,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2000,7 +2000,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:48.530Z",
+                      "startTime": "2026-01-26T23:16:04.724Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2026,10 +2026,10 @@
                   "projectName": "chromium-tablet",
                   "results": [
                     {
-                      "workerIndex": 27,
+                      "workerIndex": 28,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 9,
+                      "duration": 7,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2042,7 +2042,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:51.415Z",
+                      "startTime": "2026-01-26T23:16:07.966Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2071,7 +2071,7 @@
                       "workerIndex": 30,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 5,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2084,7 +2084,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:54.182Z",
+                      "startTime": "2026-01-26T23:16:11.784Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2110,10 +2110,10 @@
                   "projectName": "chromium-tablet",
                   "results": [
                     {
-                      "workerIndex": 33,
+                      "workerIndex": 34,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2126,7 +2126,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:57.048Z",
+                      "startTime": "2026-01-26T23:16:15.681Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2152,10 +2152,10 @@
                   "projectName": "chromium-tablet",
                   "results": [
                     {
-                      "workerIndex": 36,
+                      "workerIndex": 37,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 10,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2168,7 +2168,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:49:59.916Z",
+                      "startTime": "2026-01-26T23:16:18.969Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2197,7 +2197,7 @@
                       "workerIndex": 40,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 7,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2210,7 +2210,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:02.803Z",
+                      "startTime": "2026-01-26T23:16:22.473Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2239,7 +2239,7 @@
                       "workerIndex": 43,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2252,7 +2252,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:06.299Z",
+                      "startTime": "2026-01-26T23:16:26.075Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2294,7 +2294,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:09.405Z",
+                      "startTime": "2026-01-26T23:16:29.433Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2336,7 +2336,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:13.125Z",
+                      "startTime": "2026-01-26T23:16:33.050Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2362,10 +2362,10 @@
                   "projectName": "chromium-tablet",
                   "results": [
                     {
-                      "workerIndex": 51,
+                      "workerIndex": 52,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 7,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2378,7 +2378,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:16.339Z",
+                      "startTime": "2026-01-26T23:16:40.319Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2412,10 +2412,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 54,
+                      "workerIndex": 56,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 8,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2428,7 +2428,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:19.548Z",
+                      "startTime": "2026-01-26T23:16:45.203Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2454,10 +2454,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 57,
+                      "workerIndex": 59,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2470,7 +2470,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:22.898Z",
+                      "startTime": "2026-01-26T23:16:49.681Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2496,10 +2496,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 56,
+                      "workerIndex": 54,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 7,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2512,7 +2512,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:19.833Z",
+                      "startTime": "2026-01-26T23:16:44.315Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2538,10 +2538,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 59,
+                      "workerIndex": 57,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 7,
+                      "duration": 10,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2554,7 +2554,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:23.208Z",
+                      "startTime": "2026-01-26T23:16:48.580Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2583,7 +2583,7 @@
                       "workerIndex": 55,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 10,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2596,7 +2596,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:19.614Z",
+                      "startTime": "2026-01-26T23:16:44.499Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2625,7 +2625,7 @@
                       "workerIndex": 58,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 7,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2638,7 +2638,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:22.970Z",
+                      "startTime": "2026-01-26T23:16:48.787Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2672,7 +2672,7 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 60,
+                      "workerIndex": 62,
                       "parallelIndex": 0,
                       "status": "failed",
                       "duration": 6,
@@ -2688,7 +2688,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:26.380Z",
+                      "startTime": "2026-01-26T23:16:57.454Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2714,10 +2714,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 63,
+                      "workerIndex": 65,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 8,
+                      "duration": 7,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2730,7 +2730,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:29.354Z",
+                      "startTime": "2026-01-26T23:17:01.330Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2756,10 +2756,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 66,
+                      "workerIndex": 68,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2772,7 +2772,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:33.381Z",
+                      "startTime": "2026-01-26T23:17:05.181Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2798,10 +2798,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 69,
+                      "workerIndex": 71,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2814,7 +2814,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:36.881Z",
+                      "startTime": "2026-01-26T23:17:08.942Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2840,10 +2840,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 72,
+                      "workerIndex": 74,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 7,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2856,7 +2856,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:41.216Z",
+                      "startTime": "2026-01-26T23:17:12.853Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2882,10 +2882,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 62,
+                      "workerIndex": 60,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 7,
+                      "duration": 16,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2898,7 +2898,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:26.756Z",
+                      "startTime": "2026-01-26T23:16:56.308Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2924,10 +2924,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 65,
+                      "workerIndex": 64,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2940,7 +2940,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:29.638Z",
+                      "startTime": "2026-01-26T23:17:00.219Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2966,10 +2966,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 68,
+                      "workerIndex": 67,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -2982,7 +2982,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:33.692Z",
+                      "startTime": "2026-01-26T23:17:03.972Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3008,10 +3008,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 71,
+                      "workerIndex": 70,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 7,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -3024,7 +3024,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:37.084Z",
+                      "startTime": "2026-01-26T23:17:07.737Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3050,10 +3050,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 74,
+                      "workerIndex": 73,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 40,
+                      "duration": 5,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -3066,7 +3066,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:41.476Z",
+                      "startTime": "2026-01-26T23:17:11.662Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3095,7 +3095,7 @@
                       "workerIndex": 61,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 8,
+                      "duration": 9,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -3108,7 +3108,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:26.522Z",
+                      "startTime": "2026-01-26T23:16:56.259Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3134,10 +3134,10 @@
                   "projectName": "chromium-tablet",
                   "results": [
                     {
-                      "workerIndex": 64,
+                      "workerIndex": 63,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -3150,7 +3150,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:29.447Z",
+                      "startTime": "2026-01-26T23:17:00.186Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3176,10 +3176,10 @@
                   "projectName": "chromium-tablet",
                   "results": [
                     {
-                      "workerIndex": 67,
+                      "workerIndex": 66,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 4,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -3192,7 +3192,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:33.452Z",
+                      "startTime": "2026-01-26T23:17:03.923Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3218,7 +3218,7 @@
                   "projectName": "chromium-tablet",
                   "results": [
                     {
-                      "workerIndex": 70,
+                      "workerIndex": 69,
                       "parallelIndex": 2,
                       "status": "failed",
                       "duration": 10,
@@ -3234,7 +3234,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:36.908Z",
+                      "startTime": "2026-01-26T23:17:07.717Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3260,10 +3260,10 @@
                   "projectName": "chromium-tablet",
                   "results": [
                     {
-                      "workerIndex": 73,
+                      "workerIndex": 72,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 6,
+                      "duration": 7,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -3276,7 +3276,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:41.251Z",
+                      "startTime": "2026-01-26T23:17:11.559Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3310,10 +3310,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 75,
+                      "workerIndex": 77,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 22,
+                      "duration": 29,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -3326,7 +3326,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:48.954Z",
+                      "startTime": "2026-01-26T23:17:17.451Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3352,10 +3352,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 77,
+                      "workerIndex": 76,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 22,
+                      "duration": 74,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -3368,7 +3368,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:49.552Z",
+                      "startTime": "2026-01-26T23:17:15.684Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3394,10 +3394,10 @@
                   "projectName": "chromium-tablet",
                   "results": [
                     {
-                      "workerIndex": 76,
+                      "workerIndex": 75,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 21,
+                      "duration": 10,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -3410,7 +3410,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:48.971Z",
+                      "startTime": "2026-01-26T23:17:15.518Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3444,10 +3444,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 78,
+                      "workerIndex": 80,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 140,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -3460,7 +3460,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:55.532Z",
+                      "startTime": "2026-01-26T23:17:23.751Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3486,10 +3486,10 @@
                   "projectName": "chromium-desktop",
                   "results": [
                     {
-                      "workerIndex": 82,
+                      "workerIndex": 83,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 44,
+                      "duration": 4,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -3502,7 +3502,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:51:10.688Z",
+                      "startTime": "2026-01-26T23:17:28.591Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3528,10 +3528,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 80,
+                      "workerIndex": 79,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 89,
+                      "duration": 9,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -3544,7 +3544,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:55.738Z",
+                      "startTime": "2026-01-26T23:17:21.699Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3570,10 +3570,10 @@
                   "projectName": "chromium-mobile",
                   "results": [
                     {
-                      "workerIndex": 83,
+                      "workerIndex": 82,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 65,
+                      "duration": 6,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\webkit-2248\\Playwright.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -3586,7 +3586,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:51:10.403Z",
+                      "startTime": "2026-01-26T23:17:27.216Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3612,10 +3612,10 @@
                   "projectName": "chromium-tablet",
                   "results": [
                     {
-                      "workerIndex": 79,
+                      "workerIndex": 78,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 5,
+                      "duration": 13,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -3628,7 +3628,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:50:55.454Z",
+                      "startTime": "2026-01-26T23:17:21.449Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3657,7 +3657,7 @@
                       "workerIndex": 81,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 57,
+                      "duration": 8,
                       "error": {
                         "message": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝",
                         "stack": "Error: browserType.launch: Executable doesn't exist at C:\\Users\\Devon Tyler\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1208\\chrome-headless-shell-win64\\chrome-headless-shell.exe\n╔═════════════════════════════════════════════════════════════════════════╗\n║ Looks like Playwright Test or Playwright was just installed or updated. ║\n║ Please run the following command to download new browsers:              ║\n║                                                                         ║\n║     npx playwright install                                              ║\n║                                                                         ║\n║ <3 Playwright Team                                                      ║\n╚═════════════════════════════════════════════════════════════════════════╝"
@@ -3670,7 +3670,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-01-26T22:51:09.117Z",
+                      "startTime": "2026-01-26T23:17:26.849Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -3690,8 +3690,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-01-26T22:49:11.268Z",
-    "duration": 121427.43,
+    "startTime": "2026-01-26T23:15:16.726Z",
+    "duration": 131990.214,
     "expected": 0,
     "skipped": 0,
     "unexpected": 84,

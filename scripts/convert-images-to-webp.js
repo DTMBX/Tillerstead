@@ -32,7 +32,7 @@ import process from 'node:process';
 let sharp;
 try {
   sharp = (await import('sharp')).default;
-} catch (e) {
+} catch (_e) {
   console.error(
     '\n[ERROR] sharp not installed. Run: npm install --save-dev sharp\n',
   );

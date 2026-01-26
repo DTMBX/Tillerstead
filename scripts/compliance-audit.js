@@ -208,14 +208,14 @@ function auditNJHICCompliance() {
         if (content.includes(licenseNum)) licenseFound++;
         if (content.includes('HIC') || content.includes('Home Improvement'))
           disclaimersFound++;
-      } catch (e) {
+      } catch {
         // File not found
       }
     });
-  } catch (e) {
+  } catch (_e) {
     findings.push({
       level: 'error',
-      message: 'Could not audit NJ HIC compliance: ' + e.message,
+      message: 'Could not audit NJ HIC compliance: ' + _e.message,
     });
   }
 

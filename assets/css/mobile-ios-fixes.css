@@ -238,7 +238,6 @@
     z-index: 999 !important;
     background: rgb(26 26 26 / 95%) !important;
     backdrop-filter: blur(10px) !important;
-    backdrop-filter: blur(10px) !important;
     padding: 0.5rem 0 !important;
     padding-bottom: env(safe-area-inset-bottom) !important; /* iOS notch */
   }

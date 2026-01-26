@@ -655,27 +655,22 @@ select:focus {
 
 .blur-sm {
   backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
 }
 
 .blur-md {
-  backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
 }
 
 .blur-lg {
   backdrop-filter: blur(16px);
-  backdrop-filter: blur(16px);
 }
 
 .blur-xl {
-  backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
 }
 
 .glass {
   background: rgb(255 255 255 / 10%);
-  backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgb(255 255 255 / 20%);
   border-radius: 12px;
@@ -683,7 +678,6 @@ select:focus {
 
 .glass-light {
   background: rgb(255 255 255 / 5%);
-  backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border: 1px solid rgb(255 255 255 / 10%);
 }
@@ -695,7 +689,6 @@ select:focus {
   rgb(255 255 255 / 5%) 100%
   );
   backdrop-filter: blur(20px) saturate(180%);
-  backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgb(255 255 255 / 15%);
   border-radius: 16px;
   box-shadow:
@@ -705,7 +698,6 @@ select:focus {
 
 .glass-dark {
   background: rgb(0 0 0 / 40%);
-  backdrop-filter: blur(12px) saturate(150%);
   backdrop-filter: blur(12px) saturate(150%);
   border: 1px solid rgb(255 255 255 / 8%);
   border-radius: 12px;

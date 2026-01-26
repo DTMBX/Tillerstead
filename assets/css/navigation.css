@@ -387,7 +387,6 @@
   z-index: 100000;
   background: rgb(0 0 0 / 0%);
   backdrop-filter: blur(0);
-  backdrop-filter: blur(0);
   transform: translateZ(0);
   opacity: 0%;
   visibility: hidden;
@@ -405,7 +404,6 @@
   visibility: visible;
   pointer-events: auto;
   background: rgb(0 0 0 / 60%);
-  backdrop-filter: blur(20px) saturate(180%);
   backdrop-filter: blur(20px) saturate(180%);
 }
 
@@ -441,7 +439,6 @@ body.nav-open .mobile-nav__toggle {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   min-width: 48px;
   min-height: 48px;
-  backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 

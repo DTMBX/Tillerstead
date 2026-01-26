@@ -212,7 +212,7 @@ class Validator {
         },
       );
       this.log('success', 'HTML validation passed');
-    } catch (err) {
+    } catch (_err) {
       this.log('warning', 'HTML hints found (non-critical)');
     }
   }

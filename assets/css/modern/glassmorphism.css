@@ -10,7 +10,6 @@
 .glass {
   background: var(--glass-bg-medium);
   backdrop-filter: blur(var(--glass-blur-md)) saturate(180%);
-  backdrop-filter: blur(var(--glass-blur-md)) saturate(180%);
   border: 1px solid var(--glass-border-light);
   box-shadow: var(--shadow-glass);
 }
@@ -18,13 +17,11 @@
 .glass-light {
   background: var(--glass-bg-light);
   backdrop-filter: blur(var(--glass-blur-sm)) saturate(150%);
-  backdrop-filter: blur(var(--glass-blur-sm)) saturate(150%);
   border: 1px solid var(--glass-border-light);
 }
 
 .glass-strong {
   background: var(--glass-bg-strong);
-  backdrop-filter: blur(var(--glass-blur-lg)) saturate(200%);
   backdrop-filter: blur(var(--glass-blur-lg)) saturate(200%);
   border: 1px solid var(--glass-border-medium);
   box-shadow: var(--shadow-glass);
@@ -32,7 +29,6 @@
 
 .glass-dark {
   background: var(--glass-bg-dark);
-  backdrop-filter: blur(var(--glass-blur-md)) saturate(180%);
   backdrop-filter: blur(var(--glass-blur-md)) saturate(180%);
   border: 1px solid rgb(255 255 255 / 10%);
   color: var(--color-neutral-50);
@@ -44,7 +40,6 @@
 
 .glass-card {
   background: var(--glass-bg-medium);
-  backdrop-filter: blur(var(--glass-blur-md)) saturate(180%);
   backdrop-filter: blur(var(--glass-blur-md)) saturate(180%);
   border: 1px solid var(--glass-border-light);
   border-radius: var(--radius-xl);
@@ -67,7 +62,6 @@
 .glass-nav {
   background: var(--glass-bg-medium);
   backdrop-filter: blur(var(--glass-blur-lg)) saturate(180%);
-  backdrop-filter: blur(var(--glass-blur-lg)) saturate(180%);
   border-bottom: 1px solid var(--glass-border-light);
   box-shadow: 0 4px 24px rgb(0 0 0 / 8%);
   position: sticky;
@@ -82,7 +76,6 @@
 .glass-modal {
   background: var(--glass-bg-strong);
   backdrop-filter: blur(var(--glass-blur-xl)) saturate(200%);
-  backdrop-filter: blur(var(--glass-blur-xl)) saturate(200%);
   border: 1px solid var(--glass-border-medium);
   border-radius: var(--radius-2xl);
   padding: var(--space-8);
@@ -95,7 +88,6 @@
 .glass-overlay {
   background: rgb(15 23 42 / 60%);
   backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
   position: fixed;
   inset: 0;
   z-index: var(--z-modal-backdrop);
@@ -107,7 +99,6 @@
 
 .glass-btn {
   background: var(--glass-bg-light);
-  backdrop-filter: blur(var(--glass-blur-sm)) saturate(150%);
   backdrop-filter: blur(var(--glass-blur-sm)) saturate(150%);
   border: 1px solid var(--glass-border-light);
   border-radius: var(--radius-lg);
@@ -136,7 +127,6 @@
 .glass-badge {
   background: var(--glass-bg-light);
   backdrop-filter: blur(var(--glass-blur-sm));
-  backdrop-filter: blur(var(--glass-blur-sm));
   border: 1px solid var(--glass-border-light);
   border-radius: var(--radius-full);
   padding: var(--space-1) var(--space-3);
@@ -153,7 +143,6 @@
 
 .glass-input {
   background: var(--glass-bg-light);
-  backdrop-filter: blur(var(--glass-blur-sm));
   backdrop-filter: blur(var(--glass-blur-sm));
   border: 1px solid var(--glass-border-light);
   border-radius: var(--radius-lg);
@@ -243,7 +232,6 @@
 .glass-gradient-border {
   position: relative;
   background: var(--glass-bg-medium);
-  backdrop-filter: blur(var(--glass-blur-md));
   backdrop-filter: blur(var(--glass-blur-md));
   border-radius: var(--radius-xl);
 }

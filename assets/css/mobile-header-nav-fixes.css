@@ -173,7 +173,6 @@
     background: rgb(0 0 0 / 60%) !important;
     z-index: -1 !important;
     backdrop-filter: blur(4px) !important;
-    backdrop-filter: blur(4px) !important;
   }
   
   /* Nav header */

@@ -89,7 +89,7 @@ try {
     stdio: 'inherit'
   });
   console.log('\n✅ Stylelint auto-fix complete');
-} catch (error) {
+} catch (_error) {
   console.log('\n⚠️  Stylelint completed with some unfixable warnings (expected)');
 }
 
