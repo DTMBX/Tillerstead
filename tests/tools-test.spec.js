@@ -18,7 +18,7 @@ async function selectCalculator(page, calcId) {
 }
 
 test.describe('TillerPro App', () => {
-  
+
   test.beforeEach(async ({ page }) => {
     await gotoToolsRoute(page, 'dashboard');
   });
@@ -26,7 +26,7 @@ test.describe('TillerPro App', () => {
   test('App loads with dashboard view', async ({ page }) => {
     // Check app header loads
     await expect(page.locator('.app-header__title')).toContainText('Dashboard');
-    
+
     // Dashboard should be visible by default
     await expect(page.locator('.dashboard')).toBeVisible();
     await expect(page.locator('.dashboard__hero-title')).toContainText('TillerPro');

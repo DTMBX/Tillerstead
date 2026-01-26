@@ -5,11 +5,11 @@
  */
 
 /* Import modern design system */
-@import url('variables.css');
-@import url('glassmorphism.css');
-@import url('gradients.css');
-@import url('components.css');
-@import url('animations.css');
+@import 'variables.css';
+@import 'glassmorphism.css';
+@import 'gradients.css';
+@import 'components.css';
+@import 'animations.css';
 
 /* ========================================
    GLOBAL BASE STYLES
@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: var(--text-5xl);
   background: var(--gradient-primary);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }

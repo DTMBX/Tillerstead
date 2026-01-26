@@ -40,7 +40,7 @@
   transform-origin: center top !important;
   z-index: 10000 !important;
   backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(10px) !important;
 }
 
 /* Slide down with bounce */

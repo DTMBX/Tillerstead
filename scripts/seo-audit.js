@@ -21,15 +21,15 @@ const issues = {
 
 async function auditHTML() {
   console.log(chalk.blue.bold('\n🔍 SEO AUDIT - Starting...\n'));
-  
+
   const htmlFiles = await glob(`${SITE_DIR}/**/*.html`);
   console.log(`Found ${htmlFiles.length} HTML files\n`);
-  
+
   for (const file of htmlFiles) {
     const html = fs.readFileSync(file, 'utf-8');
     const $ = cheerio.load(html);
     const relPath = path.relative(SITE_DIR, file);
-    
+
     // Check meta description
     const metaDesc = $('meta[name="description"]').attr('content');
     if (!metaDesc || metaDesc.length < 50) {
@@ -38,7 +38,7 @@ async function auditHTML() {
         length: metaDesc ? metaDesc.length : 0
       });
     }
-    
+
     // Track duplicate descriptions
     if (metaDesc) {
       if (!issues.duplicateMeta.has(metaDesc)) {
@@ -46,7 +46,7 @@ async function auditHTML() {
       }
       issues.duplicateMeta.get(metaDesc).push(relPath);
     }
-    
+
     // Check title length
     const title = $('title').text();
     if (title.length > 60) {
@@ -56,7 +56,7 @@ async function auditHTML() {
         length: title.length
       });
     }
-    
+
     // Check images for alt text
     $('img').each((i, elem) => {
       const alt = $(elem).attr('alt');
@@ -68,28 +68,28 @@ async function auditHTML() {
         });
       }
     });
-    
+
     // Check for Open Graph tags
     const ogTitle = $('meta[property="og:title"]').attr('content');
     const ogImage = $('meta[property="og:image"]').attr('content');
     if (!ogTitle || !ogImage) {
       issues.missingOG.push(relPath);
     }
-    
+
     // Check for schema.org structured data
     const hasSchema = $('script[type="application/ld+json"]').length > 0;
     if (!hasSchema && !relPath.includes('404')) {
       issues.missingSchema.push(relPath);
     }
   }
-  
+
   printReport();
 }
 
 function printReport() {
   console.log(chalk.yellow.bold('\n📊 SEO AUDIT RESULTS\n'));
   console.log('='.repeat(60));
-  
+
   // Missing meta descriptions
   if (issues.missingMetaDesc.length > 0) {
     console.log(chalk.red.bold(`\n❌ Missing/Short Meta Descriptions: ${issues.missingMetaDesc.length}`));
@@ -102,7 +102,7 @@ function printReport() {
   } else {
     console.log(chalk.green('✓ All pages have meta descriptions'));
   }
-  
+
   // Duplicate meta descriptions
   const duplicates = Array.from(issues.duplicateMeta.entries())
     .filter(([_, files]) => files.length > 1);
@@ -113,7 +113,7 @@ function printReport() {
       files.forEach(f => console.log(chalk.gray(`    - ${f}`)));
     });
   }
-  
+
   // Missing alt text
   if (issues.missingAlt.length > 0) {
     console.log(chalk.red.bold(`\n❌ Missing Alt Text: ${issues.missingAlt.length} images`));
@@ -126,7 +126,7 @@ function printReport() {
   } else {
     console.log(chalk.green('✓ All images have alt text'));
   }
-  
+
   // Missing schema
   if (issues.missingSchema.length > 0) {
     console.log(chalk.yellow.bold(`\n⚠️  Missing Schema.org JSON-LD: ${issues.missingSchema.length}`));
@@ -134,7 +134,7 @@ function printReport() {
       console.log(`  ${file}`);
     });
   }
-  
+
   // Missing OG tags
   if (issues.missingOG.length > 0) {
     console.log(chalk.yellow.bold(`\n⚠️  Missing Open Graph Tags: ${issues.missingOG.length}`));
@@ -142,7 +142,7 @@ function printReport() {
       console.log(`  ${file}`);
     });
   }
-  
+
   // Long titles
   if (issues.longTitle.length > 0) {
     console.log(chalk.yellow.bold(`\n⚠️  Titles Over 60 Characters: ${issues.longTitle.length}`));
@@ -151,7 +151,7 @@ function printReport() {
       console.log(chalk.gray(`    "${title}"`));
     });
   }
-  
+
   // Summary
   console.log('\n' + '='.repeat(60));
   console.log(chalk.blue.bold('\n📈 SUMMARY\n'));

@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 /**
  * Tillerstead Mobile Navigation Tests
  * Validates high-end mobile drawer functionality
- * 
+ *
  * Selectors match _includes/navigation/main-nav.html:
  * - Toggle button: .mobile-nav__toggle
  * - Drawer: #mobile-nav-drawer
@@ -25,7 +25,7 @@ test.describe('Mobile Navigation Drawer', () => {
     page.on('requestfailed', (request) => {
       console.error('[REQUEST FAILED]', request.url(), request.failure());
     });
-    
+
     // Set mobile viewport BEFORE navigation to ensure mobile nav is visible
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto('/');
@@ -84,7 +84,7 @@ test.describe('Mobile Navigation Drawer', () => {
     // Get dimensions to check if backdrop exists
     const viewport = page.viewportSize();
     const navBodyBox = await navBody.boundingBox();
-    
+
     // On very small phones (≤480px), nav body is 100% width - no backdrop area to click
     // In this case, verify close via escape works instead
     if (viewport && navBodyBox && navBodyBox.width >= viewport.width - 20) {
@@ -257,7 +257,7 @@ test.describe('Mobile Navigation Drawer', () => {
 
     // Focus the toggle button
     await toggle.focus();
-    
+
     // Verify toggle is focused
     const isFocused = await toggle.evaluate((el) => document.activeElement === el);
     expect(isFocused).toBe(true);

@@ -1,9 +1,9 @@
 /**
  * Tillerstead Formula Library - Unit Tests
- * 
+ *
  * Tests verify mathematical correctness of formulas.
  * Uses Node.js assert module (no external test framework required).
- * 
+ *
  * Run with: npm run test:tools
  */
 

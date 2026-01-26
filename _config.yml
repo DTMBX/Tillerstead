@@ -44,7 +44,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-paginate
+  # Note: jekyll-paginate disabled - using custom blog listing at /blog/
 
 # Feed settings
 feed:
@@ -66,9 +66,9 @@ seo:
     - https://www.facebook.com/share/17ZQCR2zdZ/
     - https://x.com/tillerstead
 
-# Pagination
-paginate: 10
-paginate_path: "/blog/page:num/"
+# Pagination (disabled - using custom blog listing)
+# paginate: 10
+# paginate_path: "/blog/page:num/"
 
 # ----------------------------
 # Markdown / Kramdown

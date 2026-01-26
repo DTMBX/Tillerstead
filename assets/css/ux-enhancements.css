@@ -64,14 +64,14 @@
 /* Mobile nav safe area */
 .mobile-nav,
 .mobile-nav-drawer {
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
 /* Bottom-fixed elements */
 .fixed-bottom,
 [class*="sticky-bottom"],
 [class*="fixed-bottom"] {
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
 /* Viewport safe areas */
@@ -124,7 +124,7 @@ select:focus-visible {
 .skip-link:focus-visible {
   outline: 4px solid #ffffff;
   outline-offset: 4px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 20px rgb(0 0 0 / 50%);
 }
 
 /* ========================================
@@ -149,7 +149,7 @@ select:focus-visible {
   width: 20px;
   height: 20px;
   margin: -10px 0 0 -10px;
-  border: 3px solid rgba(255, 255, 255, 0.3);
+  border: 3px solid rgb(255 255 255 / 30%);
   border-top-color: #ffffff;
   border-radius: 50%;
   animation: spinner 0.6s linear infinite;
@@ -163,14 +163,14 @@ select:focus-visible {
 .form--loading {
   position: relative;
   pointer-events: none;
-  opacity: 0.6;
+  opacity: 60%;
 }
 
 .form--loading::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgb(255 255 255 / 90%);
   z-index: 10;
   border-radius: var(--radius-lg, 8px);
 }
@@ -226,7 +226,7 @@ select:focus-visible {
 }
 
 .error-list {
-  margin: 0.75rem 0 0 0;
+  margin: 0.75rem 0 0;
   padding-left: 1.5rem;
   list-style-type: disc;
 }
@@ -280,7 +280,7 @@ input.error:focus,
 textarea.error:focus,
 select.error:focus {
   border-color: #991B1B;
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+  box-shadow: 0 0 0 3px rgb(220 38 38 / 10%);
 }
 
 @keyframes shake {
@@ -305,7 +305,7 @@ select.error:focus {
   border-radius: var(--radius-md, 6px);
   color: #065F46;
   font-weight: 600;
-  box-shadow: 0 10px 40px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 10px 40px rgb(16 185 129 / 20%);
   animation: slide-in-right 0.3s ease-out;
 }
 
@@ -326,11 +326,12 @@ select.error:focus {
 
 @keyframes slide-in-right {
   from {
-    opacity: 0;
+    opacity: 0%;
     transform: translateX(100%);
   }
+
   to {
-    opacity: 1;
+    opacity: 100%;
     transform: translateX(0);
   }
 }
@@ -350,24 +351,24 @@ select.error:focus {
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  opacity: 0;
+  opacity: 0%;
   visibility: hidden;
   transform: translateY(20px);
   transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+  box-shadow: 0 6px 20px rgb(14 165 233 / 40%);
   z-index: 998;
-  padding-bottom: env(safe-area-inset-bottom, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
 .back-to-top.visible {
-  opacity: 1;
+  opacity: 100%;
   visibility: visible;
   transform: translateY(0);
 }
 
 .back-to-top:hover {
   background: linear-gradient(135deg, var(--color-primary-600, #0284C7), var(--color-primary-800, #075985));
-  box-shadow: 0 8px 30px rgba(14, 165, 233, 0.6);
+  box-shadow: 0 8px 30px rgb(14 165 233 / 60%);
   transform: translateY(-4px);
 }
 

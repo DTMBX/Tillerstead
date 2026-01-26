@@ -3,7 +3,7 @@
 /**
  * Tyler Voice Rewriter
  * Batch process to add personality to existing blog posts
- * 
+ *
  * Usage: node scripts/tyler-voice-rewriter.js
  */
 

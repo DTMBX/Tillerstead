@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NJ Code Compliance Checklist | Tillerstead LLC</title>
+  <style>
+    @page { size: letter; margin: 0.5in; }
+    @media print {
+      .no-print { display: none; }
+      body { margin: 0; padding: 0; }
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #1f2937;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 20px;
+      font-size: 9pt;
+    }
+    
+    .header {
+      border-bottom: 4px solid #0066cc;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    h1 {
+      color: #0066cc;
+      margin: 0 0 0.5rem 0;
+      font-size: 22pt;
+    }
+    
+    .subtitle {
+      color: #6b7280;
+      font-size: 10pt;
+      margin: 0;
+    }
+    
+    h2 {
+      color: #1f2937;
+      font-size: 13pt;
+      margin: 1.25rem 0 0.5rem 0;
+      padding: 0.4rem 0 0.4rem 0.75rem;
+      border-left: 4px solid #0066cc;
+      background: #f3f4f6;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.75rem 0;
+      font-size: 8.5pt;
+    }
+    
+    th {
+      background: #0066cc;
+      color: white;
+      padding: 0.4rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    
+    td {
+      padding: 0.4rem;
+      border: 1px solid #e5e7eb;
+      vertical-align: top;
+    }
+    
+    tr:nth-child(even) {
+      background: #f9fafb;
+    }
+    
+    .code-ref {
+      font-weight: 600;
+      color: #0066cc;
+      font-family: monospace;
+    }
+    
+    .checklist-item {
+      display: flex;
+      gap: 0.5rem;
+      margin: 0.5rem 0;
+      padding: 0.4rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 3px;
+      page-break-inside: avoid;
+    }
+    
+    .checkbox {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #0066cc;
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    
+    .item-content {
+      flex: 1;
+      font-size: 9pt;
+    }
+    
+    .warning {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 0.6rem;
+      margin: 0.75rem 0;
+      page-break-inside: avoid;
+      font-size: 9pt;
+    }
+    
+    .warning strong {
+      color: #d97706;
+    }
+    
+    .footer {
+      margin-top: 1.5rem;
+      padding-top: 0.75rem;
+      border-top: 2px solid #e5e7eb;
+      text-align: center;
+      font-size: 8pt;
+      color: #6b7280;
+    }
+    
+    .print-button {
+      background: #0066cc;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-size: 13pt;
+      cursor: pointer;
+      margin-bottom: 1rem;
+    }
+    
+    .print-button:hover {
+      background: #0052a3;
+    }
+  </style>
+</head>
+<body>
+  <div class="no-print" style="text-align: center;">
+    <button class="print-button" onclick="window.print()">🖨️ Print Checklist</button>
+  </div>
+  
+  <div class="header">
+    <h1>🏗️ NJ Code Compliance Checklist</h1>
+    <p class="subtitle">IRC 2018/2021 bathroom requirements for Atlantic County, NJ | Tillerstead LLC</p>
+  </div>
+  
+  <h2>Permit & Licensing (BEFORE Work Starts)</h2>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Building permit obtained:</strong> All shower/bathroom work in NJ requires permit. Apply at local construction office. Permit # visible on job site.
+    </div>
+  </div>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>NJ HIC license verified:</strong> Contractor must be licensed for work >$500. Verify at njconsumeraffairs.gov. License # on contract.
+    </div>
+  </div>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Insurance certificates:</strong> General liability + workers comp. Call insurance company to verify active coverage.
+    </div>
+  </div>
+  
+  <h2>Inspection #1: Rough-In (IRC Chapter 3 & 7)</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Code Reference</th>
+        <th style="width: 75%;">Requirement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="code-ref">IRC R307.1</td>
+        <td><strong>Ventilation:</strong> 50 CFM exhaust fan OR window (≥3 sq ft, 50% operable). Fan vents to exterior (NOT attic).</td>
+      </tr>
+      <tr>
+        <td class="code-ref">IRC R302.5</td>
+        <td><strong>Tub/shower enclosure:</strong> Walls must be smooth, non-absorbent to 6" above fixture or showerhead.</td>
+      </tr>
+      <tr>
+        <td class="code-ref">IRC P2708.1</td>
+        <td><strong>Shower valve height:</strong> 38"-48" above finished floor (not subfloor). Account for mortar bed + tile thickness.</td>
+      </tr>
+      <tr>
+        <td class="code-ref">IRC P2709.2</td>
+        <td><strong>Drain size:</strong> 2" minimum for shower drain. Proper trap (P-trap or built-in).</td>
+      </tr>
+      <tr>
+        <td class="code-ref">IRC P3105.1</td>
+        <td><strong>Fixture clearances:</strong> 24" clear space in front of toilet, 21" minimum from centerline to wall/fixture.</td>
+      </tr>
+      <tr>
+        <td class="code-ref">IRC E3902.1</td>
+        <td><strong>GFCI protection:</strong> All outlets within 6' of sink/shower. Arc-fault + GFCI combo breaker OK.</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="warning">
+    <strong>⚠️ INSPECTOR CHECKS:</strong> Framing square and plumb, plumbing leaks (pressure test), electrical boxes grounded, ventilation ducting secure.
+  </div>
+  
+  <h2>Inspection #2: Waterproofing (IRC R302.5.2 — THE CRITICAL ONE)</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Code Reference</th>
+        <th style="width: 75%;">Requirement</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="code-ref">IRC R302.5.2</td>
+        <td><strong>Waterproofing REQUIRED:</strong> "Floors under shower compartments and receptors shall be waterproofed." Membrane must meet ANSI A118.10 performance standard.</td>
+      </tr>
+      <tr>
+        <td class="code-ref">ANSI A118.10</td>
+        <td><strong>Membrane standard:</strong> Load-bearing waterproof membrane. Must pass 72-hour submersion test with zero leakage. Examples: Schluter Kerdi, Laticrete Hydroban, Wedi, Mapei Aquadefense.</td>
+      </tr>
+      <tr>
+        <td class="code-ref">IRC R307.2</td>
+        <td><strong>Shower drainage:</strong> Floor slopes to drain (1/4" per foot minimum). Standing water prohibited.</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Membrane installed per manufacturer specs:</strong> Follow Schluter/Laticrete/Wedi instructions exactly. Installation manual on site.
+    </div>
+  </div>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Factory pre-formed corners:</strong> Inside corners use Kerdi-Kereck, outside corners use Kerdi-Kers (or equivalent). NO field-cut corners.
+    </div>
+  </div>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Membrane height:</strong> Extends 6" ABOVE shower head (minimum 72" from floor). Covers all walls exposed to water spray.
+    </div>
+  </div>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Curb/threshold waterproofed:</strong> Membrane extends over curb and down 3-4" on outside face. No gaps.
+    </div>
+  </div>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Penetrations sealed:</strong> All valve stems, shower arm, drain flange sealed per membrane manufacturer specs.
+    </div>
+  </div>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Flood test performed:</strong> Fill shower pan 2" deep, wait 24-48 hours. ZERO leaks. Document with photos (date/time stamped).
+    </div>
+  </div>
+  
+  <div class="warning">
+    <strong>⚠️ CRITICAL:</strong> Inspector MUST approve waterproofing BEFORE tile installation. Once tile is up, waterproofing cannot be verified. Failed inspection = tear out tile and start over.
+  </div>
+  
+  <h2>During Tile Installation (TCNA Standards)</h2>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Proper thinset for tile size:</strong> Large format (≥15" any side) requires LFT/LHT rated thinset. Standard tile uses A118.1 or A118.4.
+    </div>
+  </div>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Movement joints (EJ171):</strong> Silicone caulk (NOT grout) at all changes of plane: floor-to-wall, wall-to-ceiling, inside corners.
+    </div>
+  </div>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Shower floor slope:</strong> Minimum 1/4" per foot slope to drain. Water must drain within 15 minutes of showering.
+    </div>
+  </div>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Grout joint size:</strong> 1/16" minimum (rectified tile), 1/8"-3/16" standard. Too narrow = cracking risk.
+    </div>
+  </div>
+  
+  <h2>Inspection #3: Final (IRC R302 & R307)</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 25%;">Code Reference</th>
+        <th style="width: 75%;">Inspector Checks</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="code-ref">IRC R302.5</td>
+        <td>Wall surfaces smooth, non-absorbent, approved material. Tile properly adhered (tap test for hollow spots).</td>
+      </tr>
+      <tr>
+        <td class="code-ref">IRC R307.1</td>
+        <td>Ventilation fan operates (50 CFM minimum). Ducting secure, terminates outside (NOT attic).</td>
+      </tr>
+      <tr>
+        <td class="code-ref">IRC P2708.1</td>
+        <td>Fixtures installed per manufacturer specs. Valve height 38"-48" AFF. No leaks (water test).</td>
+      </tr>
+      <tr>
+        <td class="code-ref">IRC E3902.1</td>
+        <td>GFCI outlets functional (test button works). Proper cover plates installed.</td>
+      </tr>
+      <tr>
+        <td class="code-ref">IRC R307.2</td>
+        <td>Shower drains properly (no standing water). Doors/curtains contain spray.</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Water test:</strong> Run shower 15 minutes, check ceiling/walls below for leaks. Test BEFORE contractor leaves site.
+    </div>
+  </div>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Ventilation test:</strong> Fan clears steam within 10 minutes. No moisture buildup on mirrors/walls after 20 minutes.
+    </div>
+  </div>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Grout sealed:</strong> Penetrating sealer applied (not topical). Ask contractor for product name and re-seal schedule.
+    </div>
+  </div>
+  
+  <div class="checklist-item">
+    <div class="checkbox"></div>
+    <div class="item-content">
+      <strong>Certificate of Occupancy:</strong> Inspector signs off permit. Get copy for your records. Required for insurance claims and resale.
+    </div>
+  </div>
+  
+  <h2>County-Specific Notes (Atlantic, Ocean, Cape May)</h2>
+  
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 30%;">County</th>
+        <th style="width: 70%;">Special Requirements</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Atlantic County</strong></td>
+        <td>Permit: Atlantic County Clerk (609-645-5898). 3 inspections required. Average approval: 7-10 business days. Flood zone work requires elevation certificate in coastal areas.</td>
+      </tr>
+      <tr>
+        <td><strong>Ocean County</strong></td>
+        <td>Permit: Ocean County Clerk (732-929-2018). Stricter flood requirements (Zone A/V). Waterproofing inspection often separate from rough-in.</td>
+      </tr>
+      <tr>
+        <td><strong>Cape May County</strong></td>
+        <td>Permit: Cape May County Planning (609-465-1037). Coastal building codes (high wind/flood). Additional structural review if altering load-bearing walls.</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <h2>Common Violations & Penalties</h2>
+  
+  <div class="warning">
+    <strong>No permit:</strong> $500-$2,000 fine + permit application + all inspections + possible tear-out. Voids insurance. Kills resale.
+  </div>
+  
+  <div class="warning">
+    <strong>Failed waterproofing inspection:</strong> Must remove tile, fix membrane, re-inspect, re-tile. Cost: $4,000-$8,000+.
+  </div>
+  
+  <div class="warning">
+    <strong>No GFCI protection:</strong> Immediate fail. Safety hazard (electrocution risk). $200-$500 to fix + re-inspection.
+  </div>
+  
+  <div class="warning">
+    <strong>Inadequate ventilation:</strong> Moisture buildup = mold. Must install proper fan + ductwork. $600-$1,200 fix.
+  </div>
+  
+  <div class="warning">
+    <strong>Work by unlicensed contractor:</strong> Homeowner liable for all corrections. No legal recourse against contractor. Insurance may deny claims.
+  </div>
+  
+  <div class="footer">
+    <p><strong>Tillerstead LLC</strong> | Licensed NJ HIC #13VH10808800 | Atlantic County, NJ</p>
+    <p><strong>Full compliance guide:</strong> Tillerstead.com/nj-code-compliance/ | <strong>TCNA standards:</strong> Tillerstead.com/tcna-methods/</p>
+    <p style="margin-top: 0.75rem; font-size: 7.5pt;">Based on IRC 2018/2021 adopted by New Jersey. Municipal codes may have additional requirements. Always verify with local building official. This checklist is for educational purposes. Consult licensed professionals for specific projects.</p>
+  </div>
+</body>
+</html>

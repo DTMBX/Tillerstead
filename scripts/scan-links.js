@@ -2,7 +2,7 @@
 
 /**
  * Comprehensive Link Scanner & Validator
- * 
+ *
  * Scans all navigation, body content, and includes for:
  * - Broken links
  * - External vs internal links
@@ -28,10 +28,10 @@ const config = {
     'ventures',
     'build'
   ],
-  
+
   // File extensions to scan
   extensions: ['.html', '.md', '.liquid'],
-  
+
   // Patterns to exclude
   exclude: [
     '_site',
@@ -45,7 +45,7 @@ const config = {
     '__pycache__',
     '.jekyll-cache'
   ],
-  
+
   // Link patterns
   patterns: {
     href: /href=["']([^"']+)["']/gi,
@@ -87,7 +87,7 @@ function header(message) {
  */
 function scanAllLinks() {
   header('SCANNING ALL LINKS');
-  
+
   const linkData = {
     internal: [],
     external: [],
@@ -98,20 +98,20 @@ function scanAllLinks() {
     byFile: {},
     issues: []
   };
-  
+
   function scanFile(filePath, relPath) {
     const content = fs.readFileSync(filePath, 'utf-8');
     const fileLinks = [];
-    
+
     // Extract all links
     let match;
     const hrefPattern = /<a\s+(?:[^>]*?\s+)?href=["']([^"']+)["']([^>]*)>/gi;
-    
+
     while ((match = hrefPattern.exec(content)) !== null) {
       const href = match[1];
       const attributes = match[2];
       const fullMatch = match[0];
-      
+
       // Categorize link
       let category = 'internal';
       if (config.patterns.externalDomain.test(href)) {
@@ -125,7 +125,7 @@ function scanAllLinks() {
       } else if (config.patterns.javascript.test(href)) {
         category = 'javascript';
       }
-      
+
       const linkInfo = {
         href,
         category,
@@ -134,10 +134,10 @@ function scanAllLinks() {
         fullTag: fullMatch,
         line: content.substring(0, match.index).split('\n').length
       };
-      
+
       fileLinks.push(linkInfo);
       linkData[category].push(linkInfo);
-      
+
       // Check for issues
       if (category === 'external' && !attributes.includes('rel=')) {
         linkData.issues.push({
@@ -149,7 +149,7 @@ function scanAllLinks() {
           message: 'External link missing rel attribute (should have rel="noopener" or rel="nofollow")'
         });
       }
-      
+
       if (attributes.includes('target="_blank"') && !attributes.includes('rel=')) {
         linkData.issues.push({
           type: 'security',
@@ -160,7 +160,7 @@ function scanAllLinks() {
           message: 'target="_blank" without rel="noopener" (security risk)'
         });
       }
-      
+
       if (category === 'javascript') {
         linkData.issues.push({
           type: 'javascript-href',
@@ -171,7 +171,7 @@ function scanAllLinks() {
           message: 'javascript: href is discouraged (use onclick or event listener)'
         });
       }
-      
+
       // Check for empty link text
       const linkTextMatch = fullMatch.match(/>([^<]*)</);
       if (linkTextMatch && !linkTextMatch[1].trim()) {
@@ -185,23 +185,23 @@ function scanAllLinks() {
         });
       }
     }
-    
+
     if (fileLinks.length > 0) {
       linkData.byFile[relPath] = fileLinks;
     }
   }
-  
+
   function scanDirectory(dir, relPath = '') {
     const items = fs.readdirSync(dir);
-    
+
     items.forEach(item => {
       // Skip excluded directories
       if (config.exclude.includes(item)) return;
-      
+
       const fullPath = path.join(dir, item);
       const itemRelPath = path.join(relPath, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         scanDirectory(fullPath, itemRelPath);
       } else {
@@ -212,7 +212,7 @@ function scanAllLinks() {
       }
     });
   }
-  
+
   // Scan all configured directories
   config.scanDirs.forEach(dir => {
     const dirPath = path.join(REPO_ROOT, dir);
@@ -226,7 +226,7 @@ function scanAllLinks() {
       }
     }
   });
-  
+
   return linkData;
 }
 
@@ -235,33 +235,33 @@ function scanAllLinks() {
  */
 function analyzeNavigation(linkData) {
   header('NAVIGATION LINKS ANALYSIS');
-  
+
   const navFiles = [
     '_includes/navigation/main-nav.html',
     '_includes/navigation/nav-drawer.html',
     '_includes/footer.html',
     '_includes/layout/footer.html'
   ];
-  
+
   const navLinks = [];
   navFiles.forEach(file => {
     if (linkData.byFile[file]) {
       navLinks.push(...linkData.byFile[file]);
     }
   });
-  
+
   log(`Total navigation links: ${navLinks.length}`, 'bright');
-  
+
   const byCategory = {};
   navLinks.forEach(link => {
     byCategory[link.category] = (byCategory[link.category] || 0) + 1;
   });
-  
+
   log('\nBreakdown:', 'cyan');
   Object.entries(byCategory).forEach(([cat, count]) => {
     log(`  ${cat}: ${count}`);
   });
-  
+
   // List all navigation URLs
   log('\nNavigation URLs:', 'cyan');
   const uniqueUrls = [...new Set(navLinks.map(l => l.href))];
@@ -277,23 +277,23 @@ function analyzeNavigation(linkData) {
  */
 function reportIssues(linkData) {
   header('ISSUES FOUND');
-  
+
   if (linkData.issues.length === 0) {
     log('✅ No issues found!', 'green');
     return;
   }
-  
+
   const bySeverity = {
     high: linkData.issues.filter(i => i.severity === 'high'),
     warning: linkData.issues.filter(i => i.severity === 'warning'),
     info: linkData.issues.filter(i => i.severity === 'info')
   };
-  
+
   log(`Total issues: ${linkData.issues.length}`, 'bright');
   log(`  High: ${bySeverity.high.length}`, 'red');
   log(`  Warning: ${bySeverity.warning.length}`, 'yellow');
   log(`  Info: ${bySeverity.info.length}`, 'cyan');
-  
+
   if (bySeverity.high.length > 0) {
     log('\n⚠️  HIGH SEVERITY ISSUES:', 'red');
     bySeverity.high.slice(0, 20).forEach(issue => {
@@ -305,7 +305,7 @@ function reportIssues(linkData) {
       log(`  ... and ${bySeverity.high.length - 20} more`, 'yellow');
     }
   }
-  
+
   if (bySeverity.warning.length > 0) {
     log('\n⚠  WARNING ISSUES:', 'yellow');
     bySeverity.warning.slice(0, 10).forEach(issue => {
@@ -324,11 +324,11 @@ function reportIssues(linkData) {
  */
 function generateStats(linkData) {
   header('LINK STATISTICS');
-  
-  const total = linkData.internal.length + linkData.external.length + 
-                linkData.mailto.length + linkData.tel.length + 
+
+  const total = linkData.internal.length + linkData.external.length +
+                linkData.mailto.length + linkData.tel.length +
                 linkData.anchor.length + linkData.javascript.length;
-  
+
   log(`Total links: ${total}`, 'bright');
   log('');
   log('By Type:', 'cyan');
@@ -338,18 +338,18 @@ function generateStats(linkData) {
   log(`  Phone: ${linkData.tel.length}`);
   log(`  Anchor: ${linkData.anchor.length}`);
   log(`  JavaScript: ${linkData.javascript.length}`);
-  
+
   log('');
   log('Files with most links:', 'cyan');
   const filesByLinkCount = Object.entries(linkData.byFile)
     .map(([file, links]) => ({ file, count: links.length }))
     .sort((a, b) => b.count - a.count)
     .slice(0, 10);
-  
+
   filesByLinkCount.forEach(item => {
     log(`  ${item.file}: ${item.count} links`);
   });
-  
+
   // External domains
   if (linkData.external.length > 0) {
     log('');
@@ -363,7 +363,7 @@ function generateStats(linkData) {
         // Invalid URL
       }
     });
-    
+
     Object.entries(domains)
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
@@ -378,9 +378,9 @@ function generateStats(linkData) {
  */
 function generateRecommendations(linkData) {
   header('RECOMMENDATIONS');
-  
+
   const recs = [];
-  
+
   // Security issues
   const securityIssues = linkData.issues.filter(i => i.type === 'security');
   if (securityIssues.length > 0) {
@@ -391,7 +391,7 @@ function generateRecommendations(linkData) {
       impact: 'Prevents security vulnerabilities (tabnabbing attacks)'
     });
   }
-  
+
   // Accessibility issues
   const a11yIssues = linkData.issues.filter(i => i.type === 'accessibility');
   if (a11yIssues.length > 0) {
@@ -402,7 +402,7 @@ function generateRecommendations(linkData) {
       impact: 'Improves screen reader experience and SEO'
     });
   }
-  
+
   // Missing rel attributes
   const missingRel = linkData.issues.filter(i => i.type === 'missing-rel');
   if (missingRel.length > 0) {
@@ -413,7 +413,7 @@ function generateRecommendations(linkData) {
       impact: 'Better security, potential SEO improvement'
     });
   }
-  
+
   // JavaScript hrefs
   if (linkData.javascript.length > 0) {
     recs.push({
@@ -423,7 +423,7 @@ function generateRecommendations(linkData) {
       impact: 'Better accessibility and modern best practices'
     });
   }
-  
+
   // Internal link optimization
   if (linkData.internal.length > 50) {
     recs.push({
@@ -433,7 +433,7 @@ function generateRecommendations(linkData) {
       impact: 'Faster perceived navigation speed'
     });
   }
-  
+
   if (recs.length === 0) {
     log('✅ No recommendations - links are well optimized!', 'green');
   } else {
@@ -452,11 +452,11 @@ function generateRecommendations(linkData) {
  */
 function saveReport(linkData) {
   const reportPath = path.join(REPO_ROOT, '_reports', 'LINK-SCAN-2026-01.md');
-  
+
   let report = `# Link Scan Report\n`;
   report += `**Date**: ${new Date().toISOString().split('T')[0]}\n`;
   report += `**Total Links**: ${linkData.internal.length + linkData.external.length + linkData.mailto.length + linkData.tel.length + linkData.anchor.length + linkData.javascript.length}\n\n`;
-  
+
   report += `## Summary\n\n`;
   report += `| Type | Count |\n`;
   report += `|------|-------|\n`;
@@ -466,15 +466,15 @@ function saveReport(linkData) {
   report += `| Phone | ${linkData.tel.length} |\n`;
   report += `| Anchor | ${linkData.anchor.length} |\n`;
   report += `| JavaScript | ${linkData.javascript.length} |\n\n`;
-  
+
   report += `## Issues Found: ${linkData.issues.length}\n\n`;
-  
+
   if (linkData.issues.length > 0) {
     const bySeverity = {
       high: linkData.issues.filter(i => i.severity === 'high'),
       warning: linkData.issues.filter(i => i.severity === 'warning')
     };
-    
+
     if (bySeverity.high.length > 0) {
       report += `### High Severity (${bySeverity.high.length})\n\n`;
       bySeverity.high.forEach(issue => {
@@ -483,7 +483,7 @@ function saveReport(linkData) {
         report += `  - Link: \`${issue.href}\`\n\n`;
       });
     }
-    
+
     if (bySeverity.warning.length > 0) {
       report += `### Warnings (${bySeverity.warning.length})\n\n`;
       bySeverity.warning.slice(0, 50).forEach(issue => {
@@ -494,7 +494,7 @@ function saveReport(linkData) {
       }
     }
   }
-  
+
   fs.writeFileSync(reportPath, report, 'utf-8');
   log(`\n📝 Full report saved to: ${reportPath}`, 'bright');
 }
@@ -508,7 +508,7 @@ function main() {
   log('║   Comprehensive Link Scanner & Validator                        ║', 'bright');
   log('║   Tillerstead.com - 2026-01-26                                  ║', 'bright');
   log('╚══════════════════════════════════════════════════════════════════╝', 'cyan');
-  
+
   try {
     const linkData = scanAllLinks();
     generateStats(linkData);
@@ -516,10 +516,10 @@ function main() {
     reportIssues(linkData);
     generateRecommendations(linkData);
     saveReport(linkData);
-    
+
     log('');
     log('✅ Link scan complete!', 'green');
-    
+
     // Exit code based on issues
     const criticalIssues = linkData.issues.filter(i => i.severity === 'high').length;
     if (criticalIssues > 0) {

@@ -335,8 +335,6 @@ We're Tillerstead LLC—fully licensed, insured, and we've been [doing this work
 - [ ] Read-aloud test passed (sounds conversational)
 - [ ] Competitor-neutral (no direct attacks)
 - [ ] Homeowner-protective (warning about red flags)
-`;
-  }
 
 *Last Updated: {{DATE}}*
 `;

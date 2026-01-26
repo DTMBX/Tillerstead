@@ -25,7 +25,7 @@ test.describe('Desktop Navigation Tests', () => {
   test('should display desktop nav on large screens', async ({ page }) => {
     const desktopNav = page.locator('.desktop-nav');
     await expect(desktopNav).toBeVisible();
-    
+
     const mobileNav = page.locator('.mobile-nav__toggle');
     await expect(mobileNav).not.toBeVisible();
   });
@@ -42,7 +42,7 @@ test.describe('Desktop Navigation Tests', () => {
     for (const link of mainLinks) {
       const navLink = page.locator(`.desktop-nav a:has-text("${link.text}")`).first();
       await expect(navLink).toBeVisible();
-      
+
       // Check href
       const href = await navLink.getAttribute('href');
       expect(href).toContain(link.href);
@@ -52,14 +52,14 @@ test.describe('Desktop Navigation Tests', () => {
   test('should open Guides dropdown on hover', async ({ page }) => {
     const guidesButton = page.locator('.desktop-nav button:has-text("Guides")');
     await expect(guidesButton).toBeVisible();
-    
+
     // Hover to open dropdown
     await guidesButton.hover();
-    
+
     // Wait for dropdown to appear
     const dropdown = page.locator('.desktop-nav__dropdown').first();
     await expect(dropdown).toBeVisible({ timeout: 2000 });
-    
+
     // Check dropdown links
     const dropdownLinks = [
       'Build Guide Overview',
@@ -71,7 +71,7 @@ test.describe('Desktop Navigation Tests', () => {
       'TCNA Standards',
       'Flood Testing'
     ];
-    
+
     for (const linkText of dropdownLinks) {
       const link = dropdown.locator(`a:has-text("${linkText}")`);
       await expect(link).toBeVisible();
@@ -81,19 +81,19 @@ test.describe('Desktop Navigation Tests', () => {
   test('should open About dropdown on hover', async ({ page }) => {
     const aboutButton = page.locator('.desktop-nav button:has-text("About")');
     await expect(aboutButton).toBeVisible();
-    
+
     await aboutButton.hover();
-    
+
     const dropdown = page.locator('.desktop-nav__dropdown').nth(1);
     await expect(dropdown).toBeVisible({ timeout: 2000 });
-    
+
     const dropdownLinks = [
       'Our Story',
       'For Contractors',
       'FAQ',
       'Products We Use'
     ];
-    
+
     for (const linkText of dropdownLinks) {
       const link = dropdown.locator(`a:has-text("${linkText}")`);
       await expect(link).toBeVisible();
@@ -115,9 +115,9 @@ test.describe('Desktop Navigation Tests', () => {
   test('should navigate to build guide from dropdown', async ({ page }) => {
     const guidesButton = page.locator('.desktop-nav button:has-text("Guides")');
     await guidesButton.hover();
-    
+
     await page.waitForTimeout(500); // Wait for dropdown animation
-    
+
     await page.click('.desktop-nav__dropdown a:has-text("Build Guide Overview")');
     await page.waitForURL('**/build/', { timeout: 5000 });
     expect(page.url()).toContain('/build/');
@@ -133,7 +133,7 @@ test.describe('Mobile Navigation Tests - iPhone 16 Pro Max', () => {
   test('should display hamburger menu on mobile', async ({ page }) => {
     const hamburger = page.locator('.mobile-nav__toggle');
     await expect(hamburger).toBeVisible();
-    
+
     const desktopNav = page.locator('.desktop-nav');
     await expect(desktopNav).not.toBeVisible();
   });
@@ -141,9 +141,9 @@ test.describe('Mobile Navigation Tests - iPhone 16 Pro Max', () => {
   test('should have proper hamburger icon structure', async ({ page }) => {
     const hamburger = page.locator('.mobile-nav__toggle');
     const lines = hamburger.locator('.hamburger');
-    
+
     await expect(lines).toHaveCount(3);
-    
+
     // Check all 3 lines are visible
     for (let i = 0; i < 3; i++) {
       await expect(lines.nth(i)).toBeVisible();
@@ -153,13 +153,13 @@ test.describe('Mobile Navigation Tests - iPhone 16 Pro Max', () => {
   test('should open mobile nav drawer when hamburger clicked', async ({ page }) => {
     const hamburger = page.locator('.mobile-nav__toggle');
     const drawer = page.locator('.mobile-nav');
-    
+
     // Initially hidden
     await expect(drawer).toHaveAttribute('aria-hidden', 'true');
-    
+
     // Click hamburger
     await hamburger.click();
-    
+
     // Drawer should open
     await expect(drawer).toHaveAttribute('aria-hidden', 'false', { timeout: 2000 });
     await expect(drawer).toBeVisible();
@@ -169,7 +169,7 @@ test.describe('Mobile Navigation Tests - iPhone 16 Pro Max', () => {
     // Open drawer
     await page.click('.mobile-nav__toggle');
     await page.waitForTimeout(500); // Wait for animation
-    
+
     const mobileLinks = [
       'SERVICES',
       'OUR WORK',
@@ -180,7 +180,7 @@ test.describe('Mobile Navigation Tests - iPhone 16 Pro Max', () => {
       'ABOUT',
       'GET ESTIMATE'
     ];
-    
+
     for (const linkText of mobileLinks) {
       const link = page.locator(`.mobile-nav a:has-text("${linkText}"), .mobile-nav button:has-text("${linkText}")`);
       await expect(link).toBeVisible();
@@ -191,14 +191,14 @@ test.describe('Mobile Navigation Tests - iPhone 16 Pro Max', () => {
     const hamburger = page.locator('.mobile-nav__toggle');
     const drawer = page.locator('.mobile-nav');
     const closeButton = page.locator('.mobile-nav__close');
-    
+
     // Open drawer
     await hamburger.click();
     await expect(drawer).toHaveAttribute('aria-hidden', 'false');
-    
+
     // Click close button
     await closeButton.click();
-    
+
     // Drawer should close
     await expect(drawer).toHaveAttribute('aria-hidden', 'true', { timeout: 2000 });
   });
@@ -206,14 +206,14 @@ test.describe('Mobile Navigation Tests - iPhone 16 Pro Max', () => {
   test('should close mobile nav when clicking outside', async ({ page }) => {
     const hamburger = page.locator('.mobile-nav__toggle');
     const drawer = page.locator('.mobile-nav');
-    
+
     // Open drawer
     await hamburger.click();
     await expect(drawer).toHaveAttribute('aria-hidden', 'false');
-    
+
     // Click outside (on overlay)
     await page.click('body', { position: { x: 10, y: 100 } });
-    
+
     // Drawer should close
     await expect(drawer).toHaveAttribute('aria-hidden', 'true', { timeout: 2000 });
   });
@@ -222,23 +222,23 @@ test.describe('Mobile Navigation Tests - iPhone 16 Pro Max', () => {
     // Open drawer
     await page.click('.mobile-nav__toggle');
     await page.waitForTimeout(500);
-    
+
     const guidesButton = page.locator('.mobile-nav button:has-text("GUIDES")');
     await expect(guidesButton).toBeVisible();
-    
+
     // Initially collapsed
     await expect(guidesButton).toHaveAttribute('aria-expanded', 'false');
-    
+
     // Click to expand
     await guidesButton.click();
-    
+
     // Should expand
     await expect(guidesButton).toHaveAttribute('aria-expanded', 'true');
-    
+
     // Submenu should be visible
     const submenu = page.locator('.mobile-nav__submenu').first();
     await expect(submenu).toBeVisible();
-    
+
     // Check submenu links
     const submenuLinks = [
       'Build Guide Overview',
@@ -246,7 +246,7 @@ test.describe('Mobile Navigation Tests - iPhone 16 Pro Max', () => {
       'Shower Pans',
       'Waterproofing'
     ];
-    
+
     for (const linkText of submenuLinks) {
       const link = submenu.locator(`a:has-text("${linkText}")`);
       await expect(link).toBeVisible();
@@ -257,15 +257,15 @@ test.describe('Mobile Navigation Tests - iPhone 16 Pro Max', () => {
     // Open drawer
     await page.click('.mobile-nav__toggle');
     await page.waitForTimeout(500);
-    
+
     const aboutButton = page.locator('.mobile-nav button:has-text("ABOUT")');
     await aboutButton.click();
-    
+
     await expect(aboutButton).toHaveAttribute('aria-expanded', 'true');
-    
+
     const submenu = page.locator('.mobile-nav__submenu').nth(1);
     await expect(submenu).toBeVisible();
-    
+
     // Check submenu links
     await expect(submenu.locator('a:has-text("Our Story")')).toBeVisible();
     await expect(submenu.locator('a:has-text("For Contractors")')).toBeVisible();
@@ -276,10 +276,10 @@ test.describe('Mobile Navigation Tests - iPhone 16 Pro Max', () => {
     // Open drawer
     await page.click('.mobile-nav__toggle');
     await page.waitForTimeout(500);
-    
+
     // Click Services
     await page.click('.mobile-nav a:has-text("SERVICES")');
-    
+
     // Should navigate
     await page.waitForURL('**/services/', { timeout: 5000 });
     expect(page.url()).toContain('/services/');
@@ -289,10 +289,10 @@ test.describe('Mobile Navigation Tests - iPhone 16 Pro Max', () => {
     // Open drawer
     await page.click('.mobile-nav__toggle');
     await page.waitForTimeout(500);
-    
+
     // Click GET ESTIMATE
     await page.click('.mobile-nav a:has-text("GET ESTIMATE")');
-    
+
     // Should navigate
     await page.waitForURL('**/contact/', { timeout: 5000 });
     expect(page.url()).toContain('/contact/');
@@ -300,19 +300,19 @@ test.describe('Mobile Navigation Tests - iPhone 16 Pro Max', () => {
 
   test('hamburger should animate to X when opened', async ({ page }) => {
     const hamburger = page.locator('.mobile-nav__toggle');
-    
+
     // Click to open
     await hamburger.click();
-    
+
     // Check aria-expanded
     await expect(hamburger).toHaveAttribute('aria-expanded', 'true');
-    
+
     // Visual check (hamburger lines should transform)
     const firstLine = hamburger.locator('.hamburger').first();
-    const transform = await firstLine.evaluate(el => 
+    const transform = await firstLine.evaluate(el =>
       window.getComputedStyle(el).transform
     );
-    
+
     // Should have some transform applied
     expect(transform).not.toBe('none');
   });
@@ -322,12 +322,12 @@ test.describe('Mobile Navigation Tests - Other Devices', () => {
   test('should work on iPhone 14', async ({ page }) => {
     await page.setViewportSize(MOBILE_IPHONE_14);
     await page.goto('/');
-    
+
     const hamburger = page.locator('.mobile-nav__toggle');
     await expect(hamburger).toBeVisible();
-    
+
     await hamburger.click();
-    
+
     const drawer = page.locator('.mobile-nav');
     await expect(drawer).toHaveAttribute('aria-hidden', 'false');
   });
@@ -335,12 +335,12 @@ test.describe('Mobile Navigation Tests - Other Devices', () => {
   test('should work on Android device', async ({ page }) => {
     await page.setViewportSize(MOBILE_ANDROID);
     await page.goto('/');
-    
+
     const hamburger = page.locator('.mobile-nav__toggle');
     await expect(hamburger).toBeVisible();
-    
+
     await hamburger.click();
-    
+
     const drawer = page.locator('.mobile-nav');
     await expect(drawer).toHaveAttribute('aria-hidden', 'false');
   });
@@ -350,7 +350,7 @@ test.describe('Accessibility Tests', () => {
   test('desktop nav should have proper ARIA labels', async ({ page }) => {
     await page.setViewportSize(DESKTOP_VIEWPORT);
     await page.goto('/');
-    
+
     const nav = page.locator('.desktop-nav');
     await expect(nav).toHaveAttribute('aria-label', 'Primary Navigation');
   });
@@ -358,7 +358,7 @@ test.describe('Accessibility Tests', () => {
   test('mobile nav toggle should have ARIA label', async ({ page }) => {
     await page.setViewportSize(MOBILE_IPHONE_16_PRO_MAX);
     await page.goto('/');
-    
+
     const toggle = page.locator('.mobile-nav__toggle');
     await expect(toggle).toHaveAttribute('aria-label', 'Toggle menu');
   });
@@ -366,9 +366,9 @@ test.describe('Accessibility Tests', () => {
   test('mobile nav close button should have ARIA label', async ({ page }) => {
     await page.setViewportSize(MOBILE_IPHONE_16_PRO_MAX);
     await page.goto('/');
-    
+
     await page.click('.mobile-nav__toggle');
-    
+
     const closeBtn = page.locator('.mobile-nav__close');
     await expect(closeBtn).toHaveAttribute('aria-label', 'Close');
   });
@@ -376,21 +376,21 @@ test.describe('Accessibility Tests', () => {
   test('dropdown buttons should have aria-expanded', async ({ page }) => {
     await page.setViewportSize(DESKTOP_VIEWPORT);
     await page.goto('/');
-    
+
     const guidesButton = page.locator('.desktop-nav button:has-text("Guides")');
     await expect(guidesButton).toHaveAttribute('aria-expanded', 'false');
-    
+
     await expect(guidesButton).toHaveAttribute('aria-haspopup', 'true');
   });
 
   test('all links should be keyboard accessible', async ({ page }) => {
     await page.setViewportSize(DESKTOP_VIEWPORT);
     await page.goto('/');
-    
+
     // Tab through nav links
     await page.keyboard.press('Tab');
     await page.keyboard.press('Tab');
-    
+
     // Should focus on a nav link
     const focused = page.locator(':focus');
     await expect(focused).toBeVisible();
@@ -402,17 +402,17 @@ test.describe('Responsive Breakpoint Tests', () => {
     // Start at desktop
     await page.setViewportSize({ width: 1024, height: 768 });
     await page.goto('/');
-    
+
     let desktopNav = page.locator('.desktop-nav');
     let mobileToggle = page.locator('.mobile-nav__toggle');
-    
+
     await expect(desktopNav).toBeVisible();
     await expect(mobileToggle).not.toBeVisible();
-    
+
     // Resize to mobile
     await page.setViewportSize({ width: 768, height: 1024 });
     await page.waitForTimeout(500);
-    
+
     await expect(desktopNav).not.toBeVisible();
     await expect(mobileToggle).toBeVisible();
   });
@@ -422,23 +422,23 @@ test.describe('Header Tests', () => {
   test('header should be sticky on mobile', async ({ page }) => {
     await page.setViewportSize(MOBILE_IPHONE_16_PRO_MAX);
     await page.goto('/');
-    
+
     const header = page.locator('.ts-header');
-    
-    const position = await header.evaluate(el => 
+
+    const position = await header.evaluate(el =>
       window.getComputedStyle(el).position
     );
-    
+
     expect(position).toBe('sticky');
   });
 
   test('header should display logo and company name', async ({ page }) => {
     await page.setViewportSize(MOBILE_IPHONE_16_PRO_MAX);
     await page.goto('/');
-    
+
     const logo = page.locator('.ts-header__logo');
     await expect(logo).toBeVisible();
-    
+
     const company = page.locator('.ts-header__company');
     await expect(company).toBeVisible();
     await expect(company).toHaveText('Tillerstead LLC');

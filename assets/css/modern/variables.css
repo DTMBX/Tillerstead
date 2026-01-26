@@ -70,28 +70,28 @@
   --gradient-primary: linear-gradient(135deg, var(--color-primary-600) 0%, var(--color-primary-800) 100%);
   --gradient-accent: linear-gradient(135deg, var(--color-accent-500) 0%, var(--color-accent-700) 100%);
   --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1e40af 50%, #0ea5e9 100%);
-  --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  --gradient-glass: linear-gradient(135deg, rgb(255 255 255 / 10%) 0%, rgb(255 255 255 / 5%) 100%);
   --gradient-ocean: linear-gradient(180deg, #0c4a6e 0%, #0f172a 100%);
   --gradient-sunset: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
   --gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
   
   /* Mesh Gradients for Backgrounds */
-  --gradient-mesh-1: radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.2) 0px, transparent 50%),
-                      radial-gradient(at 100% 100%, rgba(245, 158, 11, 0.15) 0px, transparent 50%),
-                      radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.1) 0px, transparent 50%);
+  --gradient-mesh-1: radial-gradient(at 0% 0%, rgb(14 165 233 / 20%) 0, transparent 50%),
+                      radial-gradient(at 100% 100%, rgb(245 158 11 / 15%) 0, transparent 50%),
+                      radial-gradient(at 100% 0%, rgb(16 185 129 / 10%) 0, transparent 50%);
   
   /* ========================================
      GLASSMORPHISM
      ======================================== */
   
-  --glass-bg-light: rgba(255, 255, 255, 0.1);
-  --glass-bg-medium: rgba(255, 255, 255, 0.15);
-  --glass-bg-strong: rgba(255, 255, 255, 0.25);
-  --glass-bg-dark: rgba(15, 23, 42, 0.5);
+  --glass-bg-light: rgb(255 255 255 / 10%);
+  --glass-bg-medium: rgb(255 255 255 / 15%);
+  --glass-bg-strong: rgb(255 255 255 / 25%);
+  --glass-bg-dark: rgb(15 23 42 / 50%);
   
-  --glass-border-light: rgba(255, 255, 255, 0.15);
-  --glass-border-medium: rgba(255, 255, 255, 0.25);
-  --glass-border-strong: rgba(255, 255, 255, 0.4);
+  --glass-border-light: rgb(255 255 255 / 15%);
+  --glass-border-medium: rgb(255 255 255 / 25%);
+  --glass-border-strong: rgb(255 255 255 / 40%);
   
   --glass-blur-sm: 8px;
   --glass-blur-md: 12px;
@@ -102,27 +102,27 @@
      SHADOWS - Modern Layered System
      ======================================== */
   
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
-  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.16);
-  --shadow-2xl: 0 24px 64px rgba(0, 0, 0, 0.2);
+  --shadow-xs: 0 1px 2px rgb(0 0 0 / 5%);
+  --shadow-sm: 0 2px 4px rgb(0 0 0 / 6%);
+  --shadow-md: 0 4px 12px rgb(0 0 0 / 8%);
+  --shadow-lg: 0 8px 24px rgb(0 0 0 / 12%);
+  --shadow-xl: 0 16px 48px rgb(0 0 0 / 16%);
+  --shadow-2xl: 0 24px 64px rgb(0 0 0 / 20%);
   
   /* Glass-specific shadows */
-  --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  --shadow-glass-hover: 0 12px 48px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  --shadow-glass: 0 8px 32px rgb(0 0 0 / 10%), inset 0 1px 0 rgb(255 255 255 / 20%);
+  --shadow-glass-hover: 0 12px 48px rgb(0 0 0 / 15%), inset 0 1px 0 rgb(255 255 255 / 30%);
   
   /* Colored shadows for depth */
-  --shadow-primary: 0 8px 24px rgba(14, 165, 233, 0.3);
-  --shadow-accent: 0 8px 24px rgba(245, 158, 11, 0.3);
-  --shadow-success: 0 8px 24px rgba(16, 185, 129, 0.3);
+  --shadow-primary: 0 8px 24px rgb(14 165 233 / 30%);
+  --shadow-accent: 0 8px 24px rgb(245 158 11 / 30%);
+  --shadow-success: 0 8px 24px rgb(16 185 129 / 30%);
   
   /* ========================================
      TYPOGRAPHY - Modern Font Stack
      ======================================== */
   
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  --font-sans: 'Inter', -apple-system, blinkmacsystemfont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   --font-display: 'Lexend', 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
   
@@ -253,10 +253,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --glass-bg-light: rgba(15, 23, 42, 0.3);
-    --glass-bg-medium: rgba(15, 23, 42, 0.5);
-    --glass-bg-strong: rgba(15, 23, 42, 0.7);
-    --glass-border-light: rgba(255, 255, 255, 0.1);
+    --glass-bg-light: rgb(15 23 42 / 30%);
+    --glass-bg-medium: rgb(15 23 42 / 50%);
+    --glass-bg-strong: rgb(15 23 42 / 70%);
+    --glass-border-light: rgb(255 255 255 / 10%);
   }
 }
 

@@ -82,7 +82,7 @@
 
 .ts-header__region {
   font-size: 0.875rem;
-  opacity: 0.9;
+  opacity: 90%;
   font-weight: 500;
 }
 
@@ -184,7 +184,7 @@
   padding: 0.5rem;
   z-index: 100;
   display: none;
-  opacity: 0;
+  opacity: 0%;
   transform: translateY(-10px);
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
@@ -272,7 +272,7 @@
 }
 
 .mobile-nav__toggle.is-active .hamburger:nth-child(2) {
-  opacity: 0;
+  opacity: 0%;
   transform: translateX(-10px);
 }
 

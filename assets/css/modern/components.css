@@ -99,7 +99,7 @@
 .card-modern {
   background: var(--glass-bg-medium);
   backdrop-filter: blur(var(--glass-blur-md)) saturate(180%);
-  -webkit-backdrop-filter: blur(var(--glass-blur-md)) saturate(180%);
+  backdrop-filter: blur(var(--glass-blur-md)) saturate(180%);
   border: 1px solid var(--glass-border-light);
   border-radius: var(--radius-2xl);
   padding: var(--space-8);
@@ -117,7 +117,7 @@
   right: 0;
   height: 4px;
   background: var(--gradient-primary);
-  opacity: 0;
+  opacity: 0%;
   transition: opacity var(--transition-base);
 }
 
@@ -128,7 +128,7 @@
 }
 
 .card-modern:hover::before {
-  opacity: 1;
+  opacity: 100%;
 }
 
 .card-header {
@@ -140,7 +140,7 @@
   font-weight: var(--font-bold);
   margin: 0 0 var(--space-2) 0;
   background: var(--gradient-primary);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
@@ -192,7 +192,7 @@
   font-family: var(--font-sans);
   background: var(--glass-bg-light);
   backdrop-filter: blur(var(--glass-blur-sm));
-  -webkit-backdrop-filter: blur(var(--glass-blur-sm));
+  backdrop-filter: blur(var(--glass-blur-sm));
   border: 2px solid var(--glass-border-light);
   border-radius: var(--radius-lg);
   color: white;
@@ -200,14 +200,14 @@
 }
 
 .form-input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgb(255 255 255 / 40%);
 }
 
 .form-input:focus {
   outline: none;
   background: var(--glass-bg-medium);
   border-color: var(--color-primary-400);
-  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.15);
+  box-shadow: 0 0 0 4px rgb(14 165 233 / 15%);
 }
 
 .form-input:focus + .form-label {
@@ -252,16 +252,16 @@
   height: var(--nav-height);
   background: var(--glass-bg-medium);
   backdrop-filter: blur(var(--glass-blur-lg)) saturate(180%);
-  -webkit-backdrop-filter: blur(var(--glass-blur-lg)) saturate(180%);
+  backdrop-filter: blur(var(--glass-blur-lg)) saturate(180%);
   border-bottom: 1px solid var(--glass-border-light);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 24px rgb(0 0 0 / 8%);
   z-index: var(--z-sticky);
   transition: all var(--transition-base);
 }
 
 .nav-modern.scrolled {
   background: var(--glass-bg-strong);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 32px rgb(0 0 0 / 12%);
 }
 
 .nav-container {
@@ -278,7 +278,7 @@
   font-size: var(--text-xl);
   font-weight: var(--font-bold);
   background: var(--gradient-primary);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-decoration: none;
@@ -335,24 +335,24 @@
   border-radius: var(--radius-full);
   background: var(--glass-bg-light);
   backdrop-filter: blur(var(--glass-blur-sm));
-  -webkit-backdrop-filter: blur(var(--glass-blur-sm));
+  backdrop-filter: blur(var(--glass-blur-sm));
   border: 1px solid var(--glass-border-light);
 }
 
 .badge-success {
-  background: rgba(16, 185, 129, 0.2);
+  background: rgb(16 185 129 / 20%);
   border-color: var(--color-success-500);
   color: var(--color-success-300);
 }
 
 .badge-primary {
-  background: rgba(14, 165, 233, 0.2);
+  background: rgb(14 165 233 / 20%);
   border-color: var(--color-primary-500);
   color: var(--color-primary-300);
 }
 
 .badge-accent {
-  background: rgba(245, 158, 11, 0.2);
+  background: rgb(245 158 11 / 20%);
   border-color: var(--color-accent-500);
   color: var(--color-accent-300);
 }

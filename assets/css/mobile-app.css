@@ -14,7 +14,7 @@
   z-index: 1000;
   box-shadow: 0 -2px 10px rgb(0 0 0 / 10%);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .mobile-nav-item {
@@ -304,7 +304,7 @@ body.has-bottom-nav {
   bottom: 0;
   background: rgb(0 0 0 / 50%);
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   z-index: 10001;
   display: flex;
   align-items: center;

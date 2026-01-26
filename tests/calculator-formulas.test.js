@@ -31,9 +31,9 @@ function calcTile(inputs) {
   const tile = TILE_PRESETS.find(t => t.id === tileSize) || TILE_PRESETS[1];
   const layoutData = LAYOUT_PRESETS.find(l => l.id === layout) || LAYOUT_PRESETS[0];
   const wastePercent = waste || layoutData.waste;
-  
+
   const areaWithWaste = area * (1 + wastePercent / 100);
-  
+
   let tilesNeeded;
   if (tile.isMosaic) {
     tilesNeeded = Math.ceil(areaWithWaste);
@@ -51,7 +51,7 @@ function calcMortar(inputs) {
   if (!area || area <= 0) return null;
 
   const trowelData = TROWEL_PRESETS.find(t => t.id === trowel) || TROWEL_PRESETS[0];
-  
+
   let bagsMin = Math.ceil(area / trowelData.max);
   let bagsMax = Math.ceil(area / trowelData.min);
 
@@ -72,7 +72,7 @@ function calcGrout(inputs) {
   const tileL = parseFloat(tileLength);
   const jointW = parseFloat(jointWidth) || 0.125;
   const jointD = parseFloat(tileThickness) || 0.375;
-  
+
   // TCNA formula: Coverage (sq ft/lb) = (L × W) / ((L + W) × D × W × 1.86)
   const coverageSqFtPerLb = (tileL * tileW) / ((tileL + tileW) * jointD * jointW * 1.86);
   const groutLbs = area / coverageSqFtPerLb;
@@ -174,7 +174,7 @@ const result12 = calcGrout({ area: 100, tileWidth: 12, tileLength: 12, jointWidt
 const result24 = calcGrout({ area: 100, tileWidth: 24, tileLength: 24, jointWidth: 0.125, tileThickness: 0.375 });
 test('24x24 needs less grout than 12x12', result24.pounds < result12.pounds, `<${result12.pounds}`, result24.pounds);
 
-// SLOPE TESTS  
+// SLOPE TESTS
 console.log('\n--- Slope Calculator ---');
 
 // 3 ft drain-to-wall at 1/4" per foot = 0.75" rise

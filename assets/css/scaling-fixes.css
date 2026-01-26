@@ -13,8 +13,8 @@
 
 html {
   /* Allow user zoom */
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  text-size-adjust: 100%;
   text-size-adjust: 100%;
   
   /* Smooth scrolling */
@@ -147,8 +147,8 @@ body.modal-open {
 /* Ensure text scales properly when zoomed */
 @media (max-width: 768px) {
   body {
-    -webkit-text-size-adjust: none;
-    -moz-text-size-adjust: none;
+    text-size-adjust: none;
+    text-size-adjust: none;
     text-size-adjust: none;
   }
 }

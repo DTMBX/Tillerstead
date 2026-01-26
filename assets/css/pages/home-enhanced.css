@@ -19,9 +19,9 @@
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(circle at 20% 30%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(245, 158, 11, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 60%);
+    radial-gradient(circle at 20% 30%, rgb(14 165 233 / 8%) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgb(245 158 11 / 6%) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgb(16 185 129 / 5%) 0%, transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
@@ -31,7 +31,7 @@
 .page-home .heading-1.hero-title {
   background: linear-gradient(135deg, #10b981 0%, #0ea5e9 50%, #f59e0b 100%);
   background-clip: text;
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% 200%;
   animation: gradientShift 8s ease infinite;
@@ -58,15 +58,15 @@
   content: '';
   position: absolute;
   inset: -2px;
-  background: linear-gradient(135deg, rgba(16, 185, 129, 0.3), rgba(14, 165, 233, 0.2));
+  background: linear-gradient(135deg, rgb(16 185 129 / 30%), rgb(14 165 233 / 20%));
   border-radius: inherit;
   z-index: -1;
-  opacity: 0;
+  opacity: 0%;
   transition: opacity 0.4s ease;
 }
 
 .page-home .hero-image-wrapper:hover::before {
-  opacity: 1;
+  opacity: 100%;
 }
 
 /* ==========================================
@@ -75,13 +75,13 @@
 
 .page-home #services .service-card,
 .page-home .service-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgb(255 255 255 / 5%);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgb(255 255 255 / 10%);
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.2),
-    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    0 8px 32px rgb(0 0 0 / 20%),
+    inset 0 1px 1px rgb(255 255 255 / 10%);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
@@ -95,33 +95,33 @@
   border-radius: inherit;
   padding: 2px;
   background: linear-gradient(135deg, 
-    rgba(16, 185, 129, 0.4), 
-    rgba(14, 165, 233, 0.3), 
-    rgba(245, 158, 11, 0.3));
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
+    rgb(16 185 129 / 40%), 
+    rgb(14 165 233 / 30%), 
+    rgb(245 158 11 / 30%));
+  mask: linear-gradient(#ffffff 0 0) content-box, linear-gradient(#ffffff 0 0);
+  mask-composite: xor;
   mask-composite: exclude;
-  opacity: 0;
+  opacity: 0%;
   transition: opacity 0.4s ease;
 }
 
 .page-home .service-card:hover::before {
-  opacity: 1;
+  opacity: 100%;
 }
 
 .page-home .service-card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 
-    0 16px 48px rgba(0, 0, 0, 0.3),
-    0 0 40px rgba(16, 185, 129, 0.15),
-    inset 0 1px 1px rgba(255, 255, 255, 0.15);
-  border-color: rgba(16, 185, 129, 0.3);
+    0 16px 48px rgb(0 0 0 / 30%),
+    0 0 40px rgb(16 185 129 / 15%),
+    inset 0 1px 1px rgb(255 255 255 / 15%);
+  border-color: rgb(16 185 129 / 30%);
 }
 
 /* Fallback for browsers without backdrop-filter */
 @supports not (backdrop-filter: blur(12px)) {
   .page-home .service-card {
-    background: rgba(30, 41, 59, 0.85);
+    background: rgb(30 41 59 / 85%);
   }
 }
 
@@ -131,12 +131,12 @@
 
 .page-home #process .process-step,
 .page-home .process-step {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgb(255 255 255 / 4%);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgb(255 255 255 / 8%);
   border-left: 3px solid #10b981;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 24px rgb(0 0 0 / 15%);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -145,14 +145,14 @@
   border-left-width: 4px;
   transform: translateX(4px);
   box-shadow: 
-    -4px 0 20px rgba(16, 185, 129, 0.3),
-    0 8px 32px rgba(0, 0, 0, 0.25);
+    -4px 0 20px rgb(16 185 129 / 30%),
+    0 8px 32px rgb(0 0 0 / 25%);
 }
 
 /* Step numbers with gradient */
 .page-home .process-step .step-number {
   background: linear-gradient(135deg, #10b981, #0ea5e9);
-  color: #fff;
+  color: #ffffff;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -161,7 +161,7 @@
   border-radius: 50%;
   font-weight: 700;
   margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 4px 12px rgb(16 185 129 / 40%);
 }
 
 /* ==========================================
@@ -170,22 +170,22 @@
 
 .page-home #materials .material-card,
 .page-home .material-card {
-  background: rgba(15, 23, 42, 0.6);
+  background: rgb(15 23 42 / 60%);
   backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgb(255 255 255 / 12%);
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    inset 0 1px 1px rgba(255, 255, 255, 0.08);
+    0 8px 32px rgb(0 0 0 / 30%),
+    inset 0 1px 1px rgb(255 255 255 / 8%);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-home .material-card:hover {
-  background: rgba(15, 23, 42, 0.75);
-  border-color: rgba(245, 158, 11, 0.3);
+  background: rgb(15 23 42 / 75%);
+  border-color: rgb(245 158 11 / 30%);
   box-shadow: 
-    0 12px 40px rgba(0, 0, 0, 0.4),
-    0 0 30px rgba(245, 158, 11, 0.1);
+    0 12px 40px rgb(0 0 0 / 40%),
+    0 0 30px rgb(245 158 11 / 10%);
   transform: translateY(-6px);
 }
 
@@ -203,8 +203,8 @@
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.06) 0%, transparent 50%),
-    radial-gradient(circle at 20% 80%, rgba(14, 165, 233, 0.05) 0%, transparent 50%);
+    radial-gradient(circle at 80% 20%, rgb(16 185 129 / 6%) 0%, transparent 50%),
+    radial-gradient(circle at 20% 80%, rgb(14 165 233 / 5%) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -218,8 +218,8 @@
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(circle at 30% 40%, rgba(245, 158, 11, 0.04) 0%, transparent 60%),
-    radial-gradient(circle at 70% 60%, rgba(16, 185, 129, 0.03) 0%, transparent 50%);
+    radial-gradient(circle at 30% 40%, rgb(245 158 11 / 4%) 0%, transparent 60%),
+    radial-gradient(circle at 70% 60%, rgb(16 185 129 / 3%) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -233,8 +233,8 @@
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(circle at 50% 30%, rgba(14, 165, 233, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 50% 70%, rgba(16, 185, 129, 0.04) 0%, transparent 60%);
+    radial-gradient(circle at 50% 30%, rgb(14 165 233 / 5%) 0%, transparent 50%),
+    radial-gradient(circle at 50% 70%, rgb(16 185 129 / 4%) 0%, transparent 60%);
   pointer-events: none;
   z-index: 0;
 }
@@ -252,27 +252,27 @@
 
 .page-home #testimonials .testimonial-card,
 .page-home .testimonial-card {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgb(255 255 255 / 6%);
   backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgb(255 255 255 / 12%);
+  box-shadow: 0 8px 32px rgb(0 0 0 / 20%);
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-home .testimonial-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(245, 158, 11, 0.25);
+  background: rgb(255 255 255 / 8%);
+  border-color: rgb(245 158 11 / 25%);
   box-shadow: 
-    0 12px 40px rgba(0, 0, 0, 0.3),
-    0 0 25px rgba(245, 158, 11, 0.08);
+    0 12px 40px rgb(0 0 0 / 30%),
+    0 0 25px rgb(245 158 11 / 8%);
   transform: translateY(-4px);
 }
 
 /* Star ratings with glow */
 .page-home .testimonial-rating {
   color: #f59e0b;
-  text-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+  text-shadow: 0 0 8px rgb(245 158 11 / 50%);
 }
 
 /* ==========================================
@@ -286,13 +286,13 @@
   right: 0;
   z-index: 1000;
   padding: 1rem;
-  background: rgba(15, 23, 42, 0.95);
+  background: rgb(15 23 42 / 95%);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-top: 1px solid rgba(16, 185, 129, 0.2);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgb(16 185 129 / 20%);
   box-shadow: 
-    0 -4px 20px rgba(0, 0, 0, 0.4),
-    0 0 30px rgba(16, 185, 129, 0.1);
+    0 -4px 20px rgb(0 0 0 / 40%),
+    0 0 30px rgb(16 185 129 / 10%);
   transform: translateY(100%);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -328,13 +328,13 @@
 
 /* Fade in from bottom */
 .scroll-fade-in {
-  opacity: 0;
+  opacity: 0%;
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .scroll-fade-in.animated {
-  opacity: 1;
+  opacity: 100%;
   transform: translateY(0);
 }
 
@@ -346,13 +346,13 @@
 
 /* Scale in effect */
 .scroll-scale-in {
-  opacity: 0;
+  opacity: 0%;
   transform: scale(0.9);
   transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .scroll-scale-in.animated {
-  opacity: 1;
+  opacity: 100%;
   transform: scale(1);
 }
 
@@ -361,20 +361,20 @@
    ========================================== */
 
 .page-home #trust .trust-item {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgb(255 255 255 / 4%);
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgb(255 255 255 / 8%);
   padding: 1rem 1.5rem;
   border-radius: 12px;
   transition: all 0.3s ease;
 }
 
 .page-home #trust .trust-item:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(16, 185, 129, 0.3);
+  background: rgb(255 255 255 / 8%);
+  border-color: rgb(16 185 129 / 30%);
   transform: scale(1.05);
-  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.15);
+  box-shadow: 0 4px 20px rgb(16 185 129 / 15%);
 }
 
 /* Mobile: 2-row grid instead of horizontal scroll */
@@ -396,7 +396,7 @@
   overflow: hidden;
   background: linear-gradient(135deg, #10b981, #0ea5e9);
   border: none;
-  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 4px 20px rgb(16 185 129 / 40%);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -405,17 +405,17 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, #0ea5e9, #10b981);
-  opacity: 0;
+  opacity: 0%;
   transition: opacity 0.3s ease;
 }
 
 .page-home .btn--primary:hover::before {
-  opacity: 1;
+  opacity: 100%;
 }
 
 .page-home .btn--primary:hover {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.5);
+  box-shadow: 0 8px 30px rgb(16 185 129 / 50%);
 }
 
 /* Ensure text stays above gradient */
@@ -431,7 +431,7 @@
 @media (max-width: 640px) {
   /* Reduce parallax intensity on mobile */
   .page-home section::before {
-    opacity: 0.5;
+    opacity: 50%;
   }
   
   /* Smaller transforms on mobile */

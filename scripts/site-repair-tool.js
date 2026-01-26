@@ -2,7 +2,7 @@
 /**
  * Automated Component Repair Tool
  * Similar to onepage.io but tailored for this site
- * 
+ *
  * Scans for and fixes common issues:
  * - Broken links
  * - Missing meta descriptions
@@ -42,7 +42,7 @@ class SiteRepairTool {
 
   async scanBrokenComponents() {
     console.log('→ Checking components...');
-    
+
     const criticalComponents = [
       '_includes/header.html',
       '_includes/layout/footer.html',
@@ -61,7 +61,7 @@ class SiteRepairTool {
         this.issues.total++;
       } else {
         const content = fs.readFileSync(comp, 'utf-8');
-        
+
         // Check for broken include references
         const includeMatches = content.matchAll(/{%\s*include\s+([^\s%]+)/g);
         for (const match of includeMatches) {
@@ -83,7 +83,7 @@ class SiteRepairTool {
 
   async scanBrokenLinks() {
     console.log('→ Checking links...');
-    
+
     const htmlFiles = await glob('_site/**/*.html');
     const validPaths = new Set(
       htmlFiles.map(f => '/' + path.relative('_site', f).replace(/\\/g, '/'))
@@ -119,7 +119,7 @@ class SiteRepairTool {
 
   async scanMissingMeta() {
     console.log('→ Checking SEO...');
-    
+
     const mainPages = [
       'index.html',
       'services.html',
@@ -132,7 +132,7 @@ class SiteRepairTool {
       if (fs.existsSync(page)) {
         const content = fs.readFileSync(page, 'utf-8');
         const frontMatterMatch = content.match(/^---\n([\s\S]*?)\n---/);
-        
+
         if (frontMatterMatch) {
           const frontMatter = frontMatterMatch[1];
           if (!frontMatter.includes('meta_description:') && !frontMatter.includes('description:')) {
@@ -151,7 +151,7 @@ class SiteRepairTool {
 
   async scanUnusedFiles() {
     console.log('→ Checking unused files...');
-    
+
     // Read all built HTML to see what's referenced
     const htmlFiles = await glob('_site/**/*.html');
     let allHTML = '';
@@ -238,7 +238,7 @@ class SiteRepairTool {
 
   async autoFix() {
     console.log(chalk.blue.bold('\n🔧 AUTO-REPAIR MODE\n'));
-    
+
     // Auto-fix broken links by creating redirect pages
     for (const issue of this.issues.brokenLinks) {
       console.log(chalk.cyan(`Fixing: ${issue.link}`));
@@ -253,7 +253,7 @@ class SiteRepairTool {
 if (require.main === module) {
   const tool = new SiteRepairTool();
   const args = process.argv.slice(2);
-  
+
   tool.scan().then(fixes => {
     if (args.includes('--fix')) {
       tool.autoFix();

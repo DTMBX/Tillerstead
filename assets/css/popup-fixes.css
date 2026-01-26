@@ -28,7 +28,7 @@
     rgb(0 107 61 / 95%) 100%) !important;
   border-bottom: 2px solid rgb(212 175 55 / 60%) !important;
   backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
+  backdrop-filter: blur(10px) !important;
   
   /* Content centering */
   display: flex !important;

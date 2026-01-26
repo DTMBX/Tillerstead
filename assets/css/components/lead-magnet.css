@@ -11,20 +11,17 @@
   right: 0;
   bottom: 0;
   z-index: 9999;
-  
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  opacity: 0;
+  opacity: 0%;
   visibility: hidden;
   pointer-events: none;
-  
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 .lead-magnet-popup.active {
-  opacity: 1;
+  opacity: 100%;
   visibility: visible;
   pointer-events: auto;
 }
@@ -35,31 +32,24 @@
   left: 0;
   right: 0;
   bottom: 0;
-  
-  background: rgba(0, 0, 0, 0.8);
+  background: rgb(0 0 0 / 80%);
   backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 
 .lead-magnet-popup__container {
   position: relative;
   z-index: 1;
-  
   max-width: 540px;
   width: calc(100% - 2rem);
   max-height: calc(100vh - 2rem);
-  
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.98) 100%);
+  background: linear-gradient(135deg, rgb(255 255 255 / 95%) 0%, rgb(255 255 255 / 98%) 100%);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  
+  backdrop-filter: blur(20px);
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  
+  border: 1px solid rgb(255 255 255 / 30%);
+  box-shadow: 0 20px 60px rgb(0 0 0 / 30%);
   overflow: hidden;
-  
   transform: scale(0.9) translateY(20px);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -69,22 +59,19 @@
 }
 
 .lead-magnet-popup__header {
-  padding: 2rem 2rem 1rem 2rem;
+  padding: 2rem 2rem 1rem;
   text-align: center;
 }
 
 .lead-magnet-popup__icon {
   width: 64px;
   height: 64px;
-  margin: 0 auto 1rem auto;
-  
+  margin: 0 auto 1rem;
   background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
   border-radius: 16px;
-  
   display: flex;
   align-items: center;
   justify-content: center;
-  
   color: #ffffff;
   font-size: 2rem;
 }
@@ -93,7 +80,7 @@
   font-size: 1.75rem;
   font-weight: 800;
   color: #0F172A;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.5rem;
   line-height: 1.2;
 }
 
@@ -105,7 +92,7 @@
 }
 
 .lead-magnet-popup__content {
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 2rem 2rem;
 }
 
 .lead-magnet-popup__form {
@@ -128,14 +115,11 @@
 
 .lead-magnet-popup__input {
   padding: 0.875rem 1rem;
-  
   font-size: 1rem;
   font-family: inherit;
-  
-  background: rgba(255, 255, 255, 0.8);
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  background: rgb(255 255 255 / 80%);
+  border: 2px solid rgb(0 0 0 / 10%);
   border-radius: 8px;
-  
   transition: all 0.2s ease;
 }
 
@@ -143,29 +127,25 @@
   outline: none;
   border-color: #1E40AF;
   background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+  box-shadow: 0 0 0 3px rgb(30 64 175 / 10%);
 }
 
 .lead-magnet-popup__submit {
   padding: 1rem 2rem;
-  
   font-size: 1.0625rem;
   font-weight: 700;
   color: #ffffff;
-  
   background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
   border: none;
   border-radius: 8px;
-  
   cursor: pointer;
   transition: all 0.2s ease;
-  
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+  box-shadow: 0 4px 12px rgb(245 158 11 / 40%);
 }
 
 .lead-magnet-popup__submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(245, 158, 11, 0.5);
+  box-shadow: 0 6px 16px rgb(245 158 11 / 50%);
 }
 
 .lead-magnet-popup__submit:active {
@@ -173,7 +153,7 @@
 }
 
 .lead-magnet-popup__submit:disabled {
-  opacity: 0.6;
+  opacity: 60%;
   cursor: not-allowed;
   transform: none;
 }
@@ -195,26 +175,21 @@
   top: 1rem;
   right: 1rem;
   z-index: 2;
-  
   width: 40px;
   height: 40px;
-  
-  background: rgba(0, 0, 0, 0.05);
+  background: rgb(0 0 0 / 5%);
   border: none;
   border-radius: 8px;
-  
   color: #64748B;
   cursor: pointer;
-  
   display: flex;
   align-items: center;
   justify-content: center;
-  
   transition: all 0.2s ease;
 }
 
 .lead-magnet-popup__close:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgb(0 0 0 / 10%);
   color: #0F172A;
 }
 
@@ -232,7 +207,7 @@
 .lead-magnet-popup__success-icon {
   width: 64px;
   height: 64px;
-  margin: 0 auto 1rem auto;
+  margin: 0 auto 1rem;
   color: #10B981;
 }
 
@@ -240,7 +215,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: #0F172A;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.5rem;
 }
 
 .lead-magnet-popup__success p {
@@ -261,11 +236,11 @@
   }
   
   .lead-magnet-popup__header {
-    padding: 1.5rem 1.5rem 1rem 1.5rem;
+    padding: 1.5rem 1.5rem 1rem;
   }
   
   .lead-magnet-popup__content {
-    padding: 0 1.5rem 1.5rem 1.5rem;
+    padding: 0 1.5rem 1.5rem;
   }
   
   .lead-magnet-popup__title {
@@ -286,8 +261,8 @@
 /* Dark theme support */
 @media (prefers-color-scheme: dark) {
   .lead-magnet-popup__container {
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.98) 100%);
-    border-color: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgb(15 23 42 / 95%) 0%, rgb(30 41 59 / 98%) 100%);
+    border-color: rgb(255 255 255 / 10%);
   }
   
   .lead-magnet-popup__title {
@@ -304,23 +279,23 @@
   }
   
   .lead-magnet-popup__input {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.1);
+    background: rgb(255 255 255 / 5%);
+    border-color: rgb(255 255 255 / 10%);
     color: #F8FAFC;
   }
   
   .lead-magnet-popup__input:focus {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgb(255 255 255 / 8%);
     border-color: #3B82F6;
   }
   
   .lead-magnet-popup__close {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgb(255 255 255 / 5%);
     color: #CBD5E1;
   }
   
   .lead-magnet-popup__close:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgb(255 255 255 / 10%);
     color: #F8FAFC;
   }
   
@@ -348,12 +323,12 @@
 /* Performance mode */
 body.performance-mode .lead-magnet-popup__overlay {
   backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 body.performance-mode .lead-magnet-popup__container {
   backdrop-filter: none;
-  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 /* Print - hide */
