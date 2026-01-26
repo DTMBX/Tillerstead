@@ -10,6 +10,7 @@
   --tiller-spacing-xl: 5rem;
   --tiller-container-max-width: min(92%, 2800px);
   }
+
   .container,
   .guide-article,
   .ts-main-content > section {
@@ -18,32 +19,38 @@
   h1, .heading-1 { font-size: clamp(2.5rem, 4vw, 5rem); }
   h2, .heading-2 { font-size: clamp(2rem, 3.5vw, 4rem); }
   h3, .heading-3 { font-size: clamp(1.75rem, 3vw, 3.25rem); }
+
   .btn,
   .ts-cta-button {
   font-size: 1.25rem;
   padding: 1rem 2.5rem;
   min-height: 56px;
   }
+
   img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   }
 }
+
 @media (min-width: 3840px) {
   :root {
   --tiller-font-size-base: 1.25rem;
   --tiller-container-max-width: min(88%, 3200px);
   }
+
   .container,
   .guide-article {
   max-width: min(85vw, 2800px);
   }
+
   .cards--3col,
   .cards--4col,
   .ts-plans__grid {
   gap: 3rem;
   }
 }
+
 @media (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   body {
@@ -51,11 +58,13 @@
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizelegibility;
   }
+
   *,
   *::before,
   *::after {
   backface-visibility: hidden;
   }
+
   .card--post,
   .ts-card,
   .btn {
@@ -64,27 +73,32 @@
   0 4px 8px rgb(0 0 0 / 4%);
   }
 }
+
 @media (min-width: 1920px) {
   :root {
   --tiller-font-size-base: 1.0625rem;
   }
+
   .ts-hero,
   .ts-portfolio,
   .ts-gallery {
   max-width: min(95vw, 2200px);
   }
+
   .mobile-nav-link,
   .ts-footer a {
   font-size: 1.125rem;
   padding: 0.75rem 1rem;
   }
 }
+
 @media (min-width: 2560px) {
   html,
   body {
   overflow-x: clip;
   max-width: 100vw;
   }
+
   section,
   .container,
   .ts-hero,
@@ -93,6 +107,7 @@
   overflow-x: clip;
   }
 }
+
 @media (min-width: 2560px) and (pointer: coarse) {
   a,
   button,
@@ -104,6 +119,7 @@
   min-width: 56px;
   font-size: 1.25rem;
   }
+
   input[type="text"],
   input[type="email"],
   input[type="tel"],

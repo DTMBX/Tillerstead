@@ -82,7 +82,7 @@ class AutoSaveManager {
   showStatus(state) {
     const text = this.indicator.querySelector('.autosave-status__text');
     this.indicator.className = 'autosave-status show autosave-status--' + state;
-    
+
     switch (state) {
       case 'saving':
         text.textContent = 'Saving...';
@@ -274,17 +274,17 @@ class HistoryManager {
   push(state) {
     // Remove any states after current index
     this.history = this.history.slice(0, this.currentIndex + 1);
-    
+
     // Add new state
     this.history.push(JSON.parse(JSON.stringify(state)));
-    
+
     // Limit history size
     if (this.history.length > this.maxSize) {
       this.history.shift();
     } else {
       this.currentIndex++;
     }
-    
+
     this.updateButtons();
   }
 
@@ -356,7 +356,7 @@ class HistoryManager {
   updateButtons() {
     const undoBtn = document.getElementById('undoBtn');
     const redoBtn = document.getElementById('redoBtn');
-    
+
     if (undoBtn) undoBtn.disabled = !this.canUndo();
     if (redoBtn) redoBtn.disabled = !this.canRedo();
   }
@@ -434,7 +434,7 @@ class ActivityLogger {
     };
 
     this.activities.unshift(activity);
-    
+
     if (this.activities.length > this.maxActivities) {
       this.activities.pop();
     }
@@ -471,7 +471,7 @@ class ActivityLogger {
     const now = new Date();
     const diffMs = now - date;
     const diffMins = Math.floor(diffMs / 60000);
-    
+
     if (diffMins < 1) return 'Just now';
     if (diffMins < 60) return `${diffMins} min ago`;
     if (diffMins < 1440) return `${Math.floor(diffMins / 60)} hours ago`;

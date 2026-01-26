@@ -2,7 +2,7 @@
 // Minifies each JS file in assets/js/ (except .min.js and bundle.min.js) using esbuild
 import { build } from 'esbuild';
 import { readdirSync } from 'fs';
-import { join, extname, basename } from 'path';
+import { join, basename } from 'path';
 
 const jsDir = 'assets/js';
 const files = readdirSync(jsDir)

@@ -49,9 +49,9 @@ async function refreshMetrics() {
 
 function updateHealthStatus(health) {
   const statusEl = document.getElementById('health-status');
-  
+
   statusEl.className = `health-status ${health.status}`;
-  
+
   const statusText = {
     healthy: 'All Systems Operational',
     warning: 'Performance Degraded',
@@ -59,7 +59,7 @@ function updateHealthStatus(health) {
   };
 
   let text = statusText[health.status] || 'Unknown Status';
-  
+
   if (health.issues && health.issues.length > 0) {
     text += ': ' + health.issues.join(', ');
   }
@@ -83,51 +83,51 @@ function updateCurrentMetrics(metrics) {
   document.getElementById('uptime').textContent = uptimeHours;
 
   // Requests
-  document.getElementById('request-count').textContent = 
+  document.getElementById('request-count').textContent =
     (metrics.requests?.total || 0).toLocaleString();
 }
 
 function updatePerformanceMetrics(performance) {
-  document.getElementById('avg-response').textContent = 
+  document.getElementById('avg-response').textContent =
     performance.avgResponseTime || '—';
-  
-  document.getElementById('requests-per-min').textContent = 
+
+  document.getElementById('requests-per-min').textContent =
     performance.requestsPerMinute || 0;
-  
-  document.getElementById('error-rate').textContent = 
+
+  document.getElementById('error-rate').textContent =
     (performance.errorRate || 0) + '%';
-  
-  document.getElementById('max-response').textContent = 
+
+  document.getElementById('max-response').textContent =
     performance.maxResponseTime || '—';
 }
 
 function updateSystemInfo(system) {
-  document.getElementById('platform').textContent = 
+  document.getElementById('platform').textContent =
     system.platform || '—';
-  
-  document.getElementById('architecture').textContent = 
+
+  document.getElementById('architecture').textContent =
     system.architecture || '—';
-  
-  document.getElementById('node-version').textContent = 
+
+  document.getElementById('node-version').textContent =
     system.nodeVersion || '—';
-  
-  document.getElementById('cpu-count').textContent = 
+
+  document.getElementById('cpu-count').textContent =
     system.cpuCount || '—';
-  
-  document.getElementById('total-memory').textContent = 
+
+  document.getElementById('total-memory').textContent =
     formatBytes(system.totalMemory);
-  
-  document.getElementById('free-memory').textContent = 
+
+  document.getElementById('free-memory').textContent =
     formatBytes(system.freeMemory);
-  
-  document.getElementById('process-uptime').textContent = 
+
+  document.getElementById('process-uptime').textContent =
     formatUptime(system.processUptime);
 }
 
 function updateProgressBar(id, value) {
   const el = document.getElementById(id);
   el.style.width = value + '%';
-  
+
   // Color based on value
   el.className = 'progress-fill';
   if (value > 90) {
@@ -143,7 +143,7 @@ function updateProgressBar(id, value) {
 
 function setupAutoRefresh() {
   const checkbox = document.getElementById('auto-refresh');
-  
+
   checkbox.addEventListener('change', (e) => {
     if (e.target.checked) {
       startAutoRefresh();
@@ -174,7 +174,7 @@ function stopAutoRefresh() {
 
 function formatBytes(bytes) {
   if (!bytes) return '—';
-  
+
   const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
   const i = Math.floor(Math.log(bytes) / Math.log(1024));
   return (bytes / Math.pow(1024, i)).toFixed(2) + ' ' + sizes[i];
@@ -182,15 +182,15 @@ function formatBytes(bytes) {
 
 function formatUptime(seconds) {
   if (!seconds) return '—';
-  
+
   const days = Math.floor(seconds / 86400);
   const hours = Math.floor((seconds % 86400) / 3600);
   const minutes = Math.floor((seconds % 3600) / 60);
-  
+
   const parts = [];
   if (days > 0) parts.push(`${days}d`);
   if (hours > 0) parts.push(`${hours}h`);
   if (minutes > 0) parts.push(`${minutes}m`);
-  
+
   return parts.join(' ') || '< 1m';
 }

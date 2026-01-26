@@ -5,38 +5,45 @@
   color: #000000;
   box-shadow: 0 8px 25px rgb(16 185 129 / 45%);
 }
+
 .btn--ghost:hover,
 .btn--ghost:focus {
   background: var(--tiller-color-gold, #b8a040);
   color: #000000;
   border-color: var(--tiller-color-gold-dark, #9c7a14);
 }
+
 .btn--secondary:hover,
 .btn--secondary:focus {
   background: var(--tiller-color-gold-dark, #9c7a14);
   color: #ffffff;
 }
+
 .cta-card .btn--primary:hover,
 .section-cta .btn--primary:hover,
 .hero-actions .btn--primary:hover {
   color: #000000;
   background: #34d399;
 }
+
 .contact-form .btn--primary:hover,
 .ts-form .btn--primary:hover {
   background: #34d399;
   color: #000000;
 }
+
 button:hover,
 .btn:hover {
   filter: brightness(1.1) saturate(1.15);
 }
+
 [data-high-contrast="true"] .btn--primary:hover,
 [data-high-contrast="true"] .btn:hover {
   background: #ffffff;
   color: #000000;
   border: 2px solid #000000;
 }
+
 [data-high-contrast="true"] .btn--ghost:hover {
   background: #000000;
   color: #ffffff;

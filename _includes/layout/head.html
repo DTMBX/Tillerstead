@@ -1,7 +1,7 @@
 <!-- Jekyll include: no DOCTYPE needed, ensure space indentation -->
 <meta charset="utf-8" />
   <!-- EMERGENCY CONTRAST FIX - LOAD FIRST -->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes" />
 
 <!-- Security Headers (Client-Side) -->
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -61,7 +61,12 @@
 
 <!-- DNS Prefetch & Preconnect for external resources -->
 <link rel="dns-prefetch" href="//www.google-analytics.com" />
+<link rel="dns-prefetch" href="//www.googletagmanager.com" />
+<link rel="dns-prefetch" href="//www.thumbtack.com" />
+<link rel="dns-prefetch" href="//www.acornfinance.com" />
+<link rel="dns-prefetch" href="//newjersey.mylicense.com" />
 <link rel="preconnect" href="https://www.thumbtack.com" crossorigin />
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
 
 <!-- Favicons & App Icons -->
 {% include icons/favicon-meta.html %}
@@ -71,9 +76,32 @@
 <link rel="preload" href="{{ '/assets/css/main.css' | relative_url }}" as="style" />
 {% if page.url == '/' %}
 <link rel="preload" href="{{ '/assets/css/pages/home.css' | relative_url }}" as="style" />
+<!-- Preload SVG sprite for instant hero logo -->
+<link rel="preload" href="{{ '/assets/img/tillerstead-logo-sprite.svg' | relative_url }}" as="image" type="image/svg+xml" />
 {% endif %}
 
-<!-- Core & Utility CSS: Load variables first, then base, then layout, then components, then page/utilities -->
+<!-- Prefetch hints for frequently accessed pages (faster perceived navigation) -->
+{% unless page.url == '/contact/' or page.url == '/contact.html' %}
+<link rel="prefetch" href="{{ '/contact/' | relative_url }}" as="document" />
+{% endunless %}
+{% unless page.url == '/services/' or page.url == '/services.html' %}
+<link rel="prefetch" href="{{ '/services/' | relative_url }}" as="document" />
+{% endunless %}
+{% unless page.url == '/portfolio/' or page.url == '/portfolio.html' %}
+<link rel="prefetch" href="{{ '/portfolio/' | relative_url }}" as="document" />
+{% endunless %}
+{% if page.url == '/' %}
+<!-- Homepage visitors likely to navigate to these pages -->
+<link rel="prefetch" href="{{ '/about/' | relative_url }}" as="document" />
+<link rel="prefetch" href="{{ '/homeowner-resources/' | relative_url }}" as="document" />
+{% endif %}
+
+<!-- Core & Utility CSS: Load modern design system first, then legacy compatibility -->
+<!-- MODERN DESIGN SYSTEM -->
+<link rel="stylesheet" href="{{ '/assets/css/modern/modern.css' | relative_url }}" />
+
+<!-- Legacy CSS (for compatibility) -->
+<link rel="stylesheet" href="{{ '/assets/css/scaling-fixes.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/root-vars.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/design-system.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/mobile-optimizations.css' | relative_url }}" />
@@ -109,6 +137,11 @@
 <link rel="stylesheet" href="{{ '/assets/css/header-nav-critical-fixes.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/navigation-complete.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/popup-fixes.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/components/post-footer.css' | relative_url }}" />
+
+<!-- Revenue Generation Components -->
+<link rel="stylesheet" href="{{ '/assets/css/components/sticky-cta.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/components/lead-magnet.css' | relative_url }}" />
 {% if page.layout == 'build-page' %}
 <link rel="stylesheet" href="{{ '/assets/css/build-guide.css' | relative_url }}" />
 {% endif %}

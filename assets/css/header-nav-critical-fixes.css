@@ -4,10 +4,10 @@
    ============================================================ */
 
 /* ===== FIX: Remove conflicting duplicate styles ===== */
+
 /* These override other stylesheets and cause display issues */
 
 @media (max-width: 768px) {
-  
   /* ===== HEADER - Use existing classes, not new ones ===== */
   .ts-header {
     position: sticky !important;
@@ -111,7 +111,7 @@
   }
   
   .mobile-nav__toggle[aria-expanded="true"] .hamburger:nth-child(2) {
-    opacity: 0 !important;
+    opacity: 0% !important;
   }
   
   .mobile-nav__toggle[aria-expanded="true"] .hamburger:nth-child(3) {
@@ -128,7 +128,7 @@
     height: 100vh !important;
     height: 100dvh !important;
     background: #f8f7f5 !important;
-    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.5) !important;
+    box-shadow: -8px 0 24px rgb(0 0 0 / 50%) !important;
     z-index: 10000 !important;
     transition: right 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
     overflow-y: auto !important;
@@ -150,7 +150,7 @@
     left: 0 !important;
     width: 100vw !important;
     height: 100vh !important;
-    background: rgba(0, 0, 0, 0.6) !important;
+    background: rgb(0 0 0 / 60%) !important;
     z-index: -1 !important;
     backdrop-filter: blur(4px) !important;
   }
@@ -197,7 +197,7 @@
   }
   
   .mobile-nav__list > li {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-bottom: 1px solid rgb(0 0 0 / 10%) !important;
   }
   
   .mobile-nav__list > li > a,
@@ -220,7 +220,7 @@
   
   .mobile-nav__list > li > a:hover,
   .mobile-nav__list > li > button:hover {
-    background: rgba(0, 163, 92, 0.1) !important;
+    background: rgb(0 163 92 / 10%) !important;
     padding-left: 2rem !important;
   }
   
@@ -239,7 +239,7 @@
     padding: 0 !important;
     margin: 0 !important;
     list-style: none !important;
-    background: rgba(0, 163, 92, 0.05) !important;
+    background: rgb(0 163 92 / 5%) !important;
     border-left: 4px solid #00a35c !important;
   }
   

@@ -222,13 +222,15 @@
   function openDrawer() {
     drawer.setAttribute('aria-hidden', 'false');
     toggleBtn.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('nav-open');
+    // Don't set overflow directly - let scroll-fix.js handle it
   }
   
   function closeDrawer() {
     drawer.setAttribute('aria-hidden', 'true');
     toggleBtn.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    document.body.classList.remove('nav-open');
+    // Don't set overflow directly - let scroll-fix.js handle it
   }
   
   if (toggleBtn) toggleBtn.addEventListener('click', openDrawer);

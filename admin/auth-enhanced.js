@@ -58,7 +58,7 @@ class TwoFactorAuth {
    */
   verifyToken(username, token) {
     const userData = this.secrets.get(username);
-    
+
     if (!userData) {
       return { valid: false, error: 'User not found' };
     }
@@ -80,7 +80,7 @@ class TwoFactorAuth {
    */
   enable2FA(username, token) {
     const verification = this.verifyToken(username, token);
-    
+
     if (!verification.valid) {
       return { success: false, error: 'Invalid verification code' };
     }
@@ -101,7 +101,7 @@ class TwoFactorAuth {
    */
   disable2FA(username, token) {
     const verification = this.verifyToken(username, token);
-    
+
     if (!verification.valid) {
       return { success: false, error: 'Invalid verification code' };
     }
@@ -135,13 +135,13 @@ class TwoFactorAuth {
    */
   verifyBackupCode(username, code) {
     const userData = this.secrets.get(username);
-    
+
     if (!userData || !userData.backupCodes) {
       return { valid: false };
     }
 
     const index = userData.backupCodes.indexOf(code);
-    
+
     if (index === -1) {
       return { valid: false };
     }
@@ -160,7 +160,7 @@ class TwoFactorAuth {
    */
   regenerateBackupCodes(username, token) {
     const verification = this.verifyToken(username, token);
-    
+
     if (!verification.valid) {
       return { success: false, error: 'Invalid verification code' };
     }
@@ -269,7 +269,7 @@ class RoleManager {
    */
   hasPermission(username, permission) {
     const role = this.getUserRole(username);
-    
+
     if (!role) return false;
 
     const permissions = this.getRolePermissions(role);

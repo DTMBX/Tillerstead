@@ -41,14 +41,14 @@ async function checkPackageJson() {
     const pkgPath = path.join(__dirname, '..', 'package.json');
     const content = await fs.readFile(pkgPath, 'utf8');
     const pkg = JSON.parse(content);
-    
+
     const missing = [];
     for (const packageName of REQUIRED_PACKAGES) {
       if (!pkg.dependencies[packageName]) {
         missing.push(packageName);
       }
     }
-    
+
     return missing;
   } catch (error) {
     console.error('Failed to read package.json:', error.message);
@@ -59,11 +59,11 @@ async function checkPackageJson() {
 async function main() {
   console.log('\n🔐 Security Features Verification\n');
   console.log('━'.repeat(50));
-  
+
   // Check Node.js version
   const nodeVersion = process.version;
   const majorVersion = parseInt(nodeVersion.slice(1).split('.')[0]);
-  
+
   console.log('\n📦 Node.js Version');
   if (majorVersion >= 18) {
     console.log(`  ✅ ${nodeVersion} (OK)`);
@@ -71,27 +71,27 @@ async function main() {
     console.log(`  ❌ ${nodeVersion} (Require >= 18.0.0)`);
     process.exit(1);
   }
-  
+
   // Check required files
   console.log('\n📁 Required Files');
   let allFilesPresent = true;
-  
+
   for (const file of REQUIRED_FILES) {
     const exists = await checkFile(file);
     const status = exists ? '✅' : '❌';
     console.log(`  ${status} ${file}`);
     if (!exists) allFilesPresent = false;
   }
-  
+
   if (!allFilesPresent) {
     console.log('\n❌ Some required files are missing!');
     process.exit(1);
   }
-  
+
   // Check package dependencies
   console.log('\n📦 Dependencies');
   const missingPackages = await checkPackageJson();
-  
+
   if (missingPackages.length === 0) {
     console.log('  ✅ All security packages present in package.json');
   } else {
@@ -100,7 +100,7 @@ async function main() {
     console.log('\n  Run: npm install');
     process.exit(1);
   }
-  
+
   // Check if node_modules exists
   try {
     await fs.access(path.join(__dirname, '..', 'node_modules'));
@@ -109,7 +109,7 @@ async function main() {
     console.log('  ⚠️  node_modules not found');
     console.log('     Run: npm install');
   }
-  
+
   // Check config directory
   console.log('\n📂 Directories');
   try {
@@ -118,14 +118,14 @@ async function main() {
   } catch {
     console.log('  ℹ️  config directory will be created on first use');
   }
-  
+
   try {
     await fs.access(path.join(__dirname, '..', 'logs'));
     console.log('  ✅ logs directory exists');
   } catch {
     console.log('  ℹ️  logs directory will be created on first use');
   }
-  
+
   // Security recommendations
   console.log('\n🔒 Security Recommendations\n');
   console.log('  1. Change default admin password');
@@ -142,7 +142,7 @@ async function main() {
   console.log('');
   console.log('  5. In production, set NODE_ENV=production');
   console.log('     Enables HTTPS-only secure cookies');
-  
+
   // Quick start guide
   console.log('\n🚀 Quick Start\n');
   console.log('  1. Install dependencies:');
@@ -153,7 +153,7 @@ async function main() {
   console.log('     http://localhost:3001/security\n');
   console.log('  4. Read full documentation:');
   console.log('     SECURITY-GUIDE.md\n');
-  
+
   console.log('━'.repeat(50));
   console.log('✅ Security features verification complete!\n');
 }

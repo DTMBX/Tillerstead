@@ -28,11 +28,7 @@
           <span class="post-author" itemprop="author">By <strong>{{ page.author }}</strong></span>
           {% endif %}
         </div>
-        <div class="contractor-credentials mt-2">
-          <span class="badge badge--trust" title="Licensed NJ Contractor">NJ HIC #13VH10808800</span>
-          <span class="badge badge--compliance" title="TCNA Compliant">TCNA-Compliant Methods</span>
-          <span class="badge badge--reviews" title="5-Star Reviews">★ 5.0 Google & Thumbtack</span>
-        </div>
+        {% include components/credential-badges.html class="mt-2" %}
       </header>
       <!-- Post Content -->
       <div class="post-content">
@@ -40,57 +36,7 @@
       </div>
       <!-- Post Footer Navigation -->
       <footer class="post-footer scroll-fade-in">
-        <a href="/contact/" class="btn btn--primary btn--lg btn--pulse mr-2" data-magnetic>Request an Estimate</a>
-        <a href="tel:+16098628808" class="btn btn--ghost btn--lg">Call (609) 862-8808</a>
-        <div class="mt-3">
-          <a href="/blog/" class="post-footer__link">
-            <span class="post-footer__icon">←</span>
-            View Other Articles
-          </a>
-        </div>
-      </footer>
-     </style>
-    
-  gap: 0.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--tiller-color-emerald, #10b981);
-  text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  background: rgba(16, 185, 129, 0.1);
-  transition: all 0.2s cubic-bezier(.4,1.4,.6,1);
-}
-.post-footer__link:hover {
-  background: rgba(16, 185, 129, 0.2);
-  color: var(--tiller-color-gold, #c9a227);
-}
-.post-footer__icon {
-  font-size: 1.25rem;
-}
-    
-        <div class="post-meta" role="doc-credits">
-          <time class="post-date" datetime="{{ page.date | date: '%Y-%m-%d' }}" itemprop="datePublished">
-            {{ page.date | date: "%B %-d, %Y" }}
-          </time>
-          {% if page.author %}
-          <span class="post-author" itemprop="author">By <strong>{{ page.author }}</strong></span>
-          {% endif %}
-        </div>
-        <div class="contractor-credentials mt-2">
-          <span class="badge badge--trust" title="Licensed NJ Contractor">NJ HIC #13VH10808800</span>
-          <span class="badge badge--compliance" title="TCNA Compliant">TCNA-Compliant Methods</span>
-          <span class="badge badge--reviews" title="5-Star Reviews">★ 5.0 Google & Thumbtack</span>
-        </div>
-      </header>
-      <!-- Post Content -->
-      <div class="post-content">
-        {{ content }}
-      </div>
-      <!-- Post Footer Navigation -->
-      <footer class="post-footer scroll-fade-in">
-        <a href="/contact/" class="btn btn--primary btn--lg btn--pulse mr-2" data-magnetic>Request an Estimate</a>
-        <a href="tel:+16098628808" class="btn btn--ghost btn--lg">Call (609) 862-8808</a>
+        {% include components/cta-buttons.html %}
         <div class="mt-3">
           <a href="/blog/" class="post-footer__link">
             <span class="post-footer__icon">←</span>
@@ -101,34 +47,5 @@
     </article>
   </div>
 </main>
-<style>
-/* Post Footer Navigation */
-.post-footer {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(201, 162, 39, 0.2);
-  text-align: center;
-}
-.post-footer__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--tiller-color-emerald, #10b981);
-  text-decoration: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  background: rgba(16, 185, 129, 0.1);
-  transition: all 0.2s cubic-bezier(.4,1.4,.6,1);
-}
-.post-footer__link:hover {
-  background: rgba(16, 185, 129, 0.2);
-  color: var(--tiller-color-gold, #c9a227);
-}
-.post-footer__icon {
-  font-size: 1.25rem;
-}
-</style>
 {%- endcapture -%}
 {% include layout/page-shell.html html_attrs='class="high-contrast" data-high-contrast="true"' body=post_body show_breadcrumbs=true %}

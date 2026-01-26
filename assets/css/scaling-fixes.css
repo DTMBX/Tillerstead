@@ -1,0 +1,326 @@
+/**
+ * Modern Scaling & Responsive Fixes
+ * Ensures proper viewport scaling, zoom support, and responsive behavior
+ */
+
+/* ===========================
+   1. RESET & BASE SCALING
+   =========================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* Allow user zoom */
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  
+  /* Smooth scrolling */
+  scroll-behavior: smooth;
+  
+  /* Font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  min-height: 100dvh; /* Modern dynamic viewport height */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* ===========================
+   2. RESPONSIVE SCALING
+   =========================== */
+
+/* Fluid typography - scales smoothly between breakpoints */
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 320px) {
+  html {
+    font-size: calc(16px + (18 - 16) * ((100vw - 320px) / (768 - 320)));
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: calc(18px + (20 - 18) * ((100vw - 768px) / (1920 - 768)));
+  }
+}
+
+@media (min-width: 1920px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+/* ===========================
+   3. TOUCH & MOBILE FIXES
+   =========================== */
+
+/* Better touch targets */
+button,
+a,
+input,
+select,
+textarea,
+[role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* iOS fixes */
+input,
+select,
+textarea {
+  /* Prevent iOS zoom on focus */
+  font-size: 16px;
+}
+
+/* Remove tap highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Allow horizontal scroll for tables */
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ===========================
+   4. VIEWPORT UNITS FIX
+   =========================== */
+
+/* Fix for mobile browsers with dynamic toolbars */
+:root {
+  --vh: 1vh;
+  --vw: 1vw;
+}
+
+@supports (height: 100dvh) {
+  :root {
+    --vh: 1dvh;
+  }
+}
+
+/* ===========================
+   5. ZOOM & ACCESSIBILITY
+   =========================== */
+
+/* Allow pinch zoom on all devices */
+html,
+body {
+  touch-action: manipulation;
+}
+
+/* Exception: only disable on nav overlay */
+body.nav-open .mobile-nav,
+body.modal-open {
+  touch-action: none;
+}
+
+/* Ensure text scales properly when zoomed */
+@media (max-width: 768px) {
+  body {
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    text-size-adjust: none;
+  }
+}
+
+/* ===========================
+   6. LANDSCAPE MOBILE FIXES
+   =========================== */
+
+@media (max-height: 500px) and (orientation: landscape) {
+  /* Adjust spacing in landscape */
+  .hero {
+    min-height: 50vh;
+  }
+  
+  .section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+/* ===========================
+   7. HIGH DPI / RETINA
+   =========================== */
+
+@media (min-resolution: 2dppx),
+       (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* ===========================
+   8. SAFE AREA (NOTCH SUPPORT)
+   =========================== */
+
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+}
+
+/* ===========================
+   9. CONTAINER QUERIES PREP
+   =========================== */
+
+.container {
+  container-type: inline-size;
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* ===========================
+   10. SCROLL SNAP (OPTIONAL)
+   =========================== */
+
+.scroll-snap-container {
+  scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
+}
+
+.scroll-snap-item {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Disable snap on reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-snap-container {
+    scroll-snap-type: none;
+  }
+}
+
+/* ===========================
+   11. PRINT STYLES
+   =========================== */
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  /* Hide non-essential elements */
+  nav,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Ensure proper page breaks */
+  h1, h2, h3, h4, h5, h6 {
+    break-after: avoid;
+  }
+  
+  img {
+    max-width: 100% !important;
+  }
+}
+
+/* ===========================
+   12. FOCUS VISIBLE
+   =========================== */
+
+/* Modern focus styles */
+:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--tiller-color-emerald, #10b981);
+  outline-offset: 3px;
+}
+
+/* ===========================
+   13. DARK MODE SUPPORT
+   =========================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+}
+
+[data-color-scheme="dark"] {
+  color-scheme: dark;
+}
+
+/* ===========================
+   14. UTILITY CLASSES
+   =========================== */
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--tiller-color-emerald, #10b981);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}

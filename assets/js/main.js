@@ -37,40 +37,82 @@
   initAnimations();
   
   function initNav() {
-    const dropdowns = document.querySelectorAll('.desktop-nav__item--dropdown');
+    // Desktop dropdown navigation
+    const dropdowns = document.querySelectorAll('.has-dropdown');
     
     dropdowns.forEach(item => {
       const trigger = item.querySelector('.desktop-nav__trigger');
-      if (!trigger) return;
+      const dropdown = item.querySelector('.desktop-nav__dropdown');
       
+      if (!trigger || !dropdown) return;
+      
+      // Click handler
       trigger.addEventListener('click', e => {
         e.preventDefault();
         e.stopPropagation();
-        const isOpen = trigger.getAttribute('aria-expanded') === 'true';
         
+        const isOpen = item.classList.contains('is-open');
+        
+        // Close all other dropdowns
         dropdowns.forEach(other => {
           if (other !== item) {
+            other.classList.remove('is-open');
             const t = other.querySelector('.desktop-nav__trigger');
             if (t) t.setAttribute('aria-expanded', 'false');
           }
         });
         
-        trigger.setAttribute('aria-expanded', !isOpen ? 'true' : 'false');
+        // Toggle this dropdown
+        if (isOpen) {
+          item.classList.remove('is-open');
+          trigger.setAttribute('aria-expanded', 'false');
+        } else {
+          item.classList.add('is-open');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
       });
       
-      if (window.innerWidth > 768) {
+      // Hover handlers for desktop only
+      if (window.innerWidth >= 1080) {
         item.addEventListener('mouseenter', () => {
+          item.classList.add('is-open');
           trigger.setAttribute('aria-expanded', 'true');
         });
+        
         item.addEventListener('mouseleave', () => {
+          item.classList.remove('is-open');
+          trigger.setAttribute('aria-expanded', 'false');
+        });
+        
+        // Keep dropdown open when hovering over it
+        dropdown.addEventListener('mouseenter', () => {
+          item.classList.add('is-open');
+          trigger.setAttribute('aria-expanded', 'true');
+        });
+        
+        dropdown.addEventListener('mouseleave', () => {
+          item.classList.remove('is-open');
           trigger.setAttribute('aria-expanded', 'false');
         });
       }
     });
     
+    // Close dropdowns when clicking outside
     document.addEventListener('click', e => {
-      if (!e.target.closest('.desktop-nav__item--dropdown')) {
+      if (!e.target.closest('.has-dropdown')) {
         dropdowns.forEach(item => {
+          item.classList.remove('is-open');
+          const t = item.querySelector('.desktop-nav__trigger');
+          if (t) t.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
+    
+    // Close dropdowns on ESC key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        dropdowns.forEach(item => {
+          item.classList.remove('is-open');
           const t = item.querySelector('.desktop-nav__trigger');
           if (t) t.setAttribute('aria-expanded', 'false');
         });

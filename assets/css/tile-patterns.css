@@ -24,6 +24,7 @@
   --tiller-pattern-opacity-medium: 0.08;
   --tiller-pattern-opacity-visible: 0.12;
 }
+
 .ts-pattern-subway {
   background-color: var(--tiller-bg-main, #1a1c1a);
   background-image:
@@ -50,6 +51,7 @@
   0 0,
   0 0;
 }
+
 .ts-pattern-subway-offset {
   background-color: var(--tiller-bg-main, #1a1c1a);
   background-image:
@@ -66,6 +68,7 @@
   100% 100%;
   position: relative;
 }
+
 .ts-pattern-herringbone {
   background-color: var(--tiller-bg-soft, #222524);
   background-image:
@@ -83,6 +86,7 @@
   opacity: var(--tiller-pattern-opacity-subtle);
   position: relative;
 }
+
 .ts-pattern-grid {
   background-color: var(--tiller-bg-main, #1a1c1a);
   background-image:
@@ -108,6 +112,7 @@
   opacity: var(--tiller-pattern-opacity-light);
   position: relative;
 }
+
 .ts-pattern-stacked {
   background-color: var(--tiller-bg-slate, #2a2d2c);
   background-image:
@@ -125,6 +130,7 @@
   opacity: var(--tiller-pattern-opacity-subtle);
   position: relative;
 }
+
 .ts-pattern-plank {
   background-color: var(--tiller-bg-soft, #222524);
   background-image:
@@ -142,6 +148,7 @@
   opacity: var(--tiller-pattern-opacity-light);
   position: relative;
 }
+
 .ts-grout-divider {
   height: var(--tiller-grout-width-standard);
   background: linear-gradient(
@@ -155,14 +162,17 @@
   margin: var(--tiller-spacing-lg, 2rem) 0;
   opacity: 60%;
 }
+
 .ts-grout-accent-left {
   border-left: var(--tiller-grout-width-wide) solid var(--tiller-grout-dark);
   padding-left: var(--tiller-spacing-md, 1rem);
 }
+
 .ts-grout-accent-right {
   border-right: var(--tiller-grout-width-wide) solid var(--tiller-grout-dark);
   padding-right: var(--tiller-spacing-md, 1rem);
 }
+
 .ts-grout-frame {
   border: var(--tiller-grout-width-standard) solid var(--tiller-grout-light);
   box-shadow:
@@ -170,6 +180,7 @@
   var(--tiller-shadow-sm);
   position: relative;
 }
+
 .ts-hero-tiled {
   background-color: var(--tiller-bg-main, #1a1c1a);
   background-image:
@@ -196,12 +207,14 @@
   100% 100%;
   position: relative;
 }
+
 .ts-card-subway {
   background-color: var(--tiller-bg-slate, #2a2d2c);
   background-image: var(--tiller-texture-ceramic);
   border: var(--tiller-grout-width-thin) solid var(--tiller-grout-light);
   position: relative;
 }
+
 .ts-card-subway::before {
   content: '';
   position: absolute;
@@ -218,10 +231,12 @@
   pointer-events: none;
   z-index: 0;
 }
+
 .ts-card-subway > * {
   position: relative;
   z-index: 1;
 }
+
 .ts-section-divider {
   height: 1px;
   background: linear-gradient(
@@ -239,6 +254,7 @@
   opacity: 50%;
   position: relative;
 }
+
 .ts-overlay-grid::after {
   content: '';
   position: absolute;
@@ -262,6 +278,7 @@
   pointer-events: none;
   z-index: 0;
 }
+
 .ts-image-tiled {
   border: var(--tiller-grout-width-wide) solid var(--tiller-grout-medium);
   box-shadow:
@@ -272,6 +289,7 @@
   overflow: hidden;
   position: relative;
 }
+
 .ts-gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -280,20 +298,24 @@
   padding: var(--tiller-grout-width-wide);
   border-radius: var(--tiller-border-radius-md, 8px);
 }
+
 @media (max-width: 1024px) {
   .ts-gallery-grid {
   grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 640px) {
   .ts-gallery-grid {
   grid-template-columns: 1fr;
   }
 }
+
 .ts-gallery-grid > * {
   background: var(--tiller-bg-slate, #2a2d2c);
   border-radius: var(--tiller-border-radius-sm, 4px);
 }
+
 @media (max-width: 900px) {
   :root {
   --tiller-tile-subway-width: 120px;
@@ -302,6 +324,7 @@
   --tiller-tile-square-md: 150px;
   --tiller-tile-square-lg: 200px;
   }
+
   .ts-hero-tiled {
   background-size:
   200px 100%,
@@ -309,6 +332,7 @@
   100% 100%;
   }
 }
+
 @media (max-width: 600px) {
   :root {
   --tiller-tile-subway-width: 100px;
@@ -316,18 +340,21 @@
   --tiller-tile-square-sm: 60px;
   --tiller-tile-square-md: 120px;
   }
+
   .ts-hero-tiled {
   background-size:
   150px 100%,
   100% 150px,
   100% 100%;
   }
+
   .ts-pattern-subway,
   .ts-pattern-grid,
   .ts-pattern-stacked {
   opacity: calc(var(--tiller-pattern-opacity-subtle) * 70%);
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
   .ts-pattern-subway,
   .ts-pattern-herringbone,
@@ -338,6 +365,7 @@
   opacity: 100%;
   }
 }
+
 .ts-pattern-subway,
 .ts-pattern-herringbone,
 .ts-pattern-grid,
@@ -345,6 +373,7 @@
 .ts-pattern-plank {
   color: var(--tiller-text-primary, #1a2018);
 }
+
 @media (prefers-contrast: high) {
   .ts-pattern-subway,
   .ts-pattern-herringbone,
@@ -355,12 +384,14 @@
   background-image: none;
   opacity: 100%;
   }
+
   .ts-grout-divider,
   .ts-section-divider {
   background: currentcolor;
   opacity: 30%;
   }
 }
+
 .ts-pattern-retro-salmon {
   background-color: var(--tiller-bg-soft, #222524);
   background-image:
@@ -382,6 +413,7 @@
   opacity: 8%;
   position: relative;
 }
+
 .ts-pattern-retro-mint {
   background-color: var(--tiller-bg-dark, #1a1c1a);
   background-image:
@@ -403,6 +435,7 @@
   opacity: 8%;
   position: relative;
 }
+
 .ts-pattern-retro-teal {
   background-color: var(--tiller-bg-stone, #222524);
   background-image:
@@ -424,6 +457,7 @@
   opacity: 10%;
   position: relative;
 }
+
 .ts-pattern-retro-checkerboard {
   background-color: var(--tiller-bg-dark, #1a1c1a);
   background-image:
@@ -436,6 +470,7 @@
   opacity: 6%;
   position: relative;
 }
+
 .ts-pattern-retro-geometric {
   background-color: var(--tiller-bg-slate, #2a2d2c);
   background-image:
@@ -448,6 +483,7 @@
   opacity: 5%;
   position: relative;
 }
+
 .ts-pattern-retro-diagonal {
   background-color: var(--tiller-bg-stone, #222524);
   background-image:
@@ -465,18 +501,21 @@
   opacity: 8%;
   position: relative;
 }
+
 .grout-retro-teal {
   background-image:
   linear-gradient(rgb(0 128 128 / 20%) 1px, transparent 1px),
   linear-gradient(90deg, rgb(0 128 128 / 20%) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
 .grout-retro-salmon {
   background-image:
   linear-gradient(rgb(250 128 114 / 15%) 1px, transparent 1px),
   linear-gradient(90deg, rgb(250 128 114 / 15%) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
 .ts-card-retro-salmon {
   background-color: var(--tiller-bg-slate, #2a2d2c);
   border: 3px solid var(--retro-salmon);
@@ -486,6 +525,7 @@
   position: relative;
   border-radius: var(--tiller-border-radius-sm);
 }
+
 .ts-card-retro-salmon::before {
   content: '';
   position: absolute;
@@ -499,6 +539,7 @@
   var(--retro-mint) 100%);
   border-radius: var(--tiller-border-radius-sm) var(--tiller-border-radius-sm) 0 0;
 }
+
 .ts-card-retro-teal {
   background-color: var(--tiller-bg-slate, #2a2d2c);
   border: 3px solid var(--retro-teal);
@@ -508,6 +549,7 @@
   position: relative;
   border-radius: var(--tiller-border-radius-sm);
 }
+
 .ts-card-retro-teal::before {
   content: '';
   position: absolute;
@@ -520,6 +562,7 @@
   var(--retro-purple) 100%);
   border-radius: var(--tiller-border-radius-sm) var(--tiller-border-radius-sm) 0 0;
 }
+
 .ts-divider-retro-rainbow {
   height: 4px;
   background: linear-gradient(90deg,

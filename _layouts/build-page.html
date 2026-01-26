@@ -20,11 +20,7 @@ body_class: page-build-guide
     <span class="phase-badge">Phase {{ phase_order }} of 8</span>
     <h1 class="build-guide-title heading-1 text-shadow">{{ page.build_title | default: page.title }}</h1>
     <p class="build-guide-description lead text-white-80">{{ page.description }}</p>
-    <div class="contractor-credentials mt-2">
-      <span class="badge badge--trust" title="Licensed NJ Contractor">NJ HIC #13VH10808800</span>
-      <span class="badge badge--compliance" title="TCNA Compliant">TCNA-Compliant Methods</span>
-      <span class="badge badge--reviews" title="5-Star Reviews">★ 5.0 Google & Thumbtack</span>
-    </div>
+    {% include components/credential-badges.html class="mt-2" %}
   </div>
 </section>
 
@@ -82,11 +78,10 @@ body_class: page-build-guide
     <h2 class="text-white heading-2">Ready to Start Your Project?</h2>
     <p class="text-white-80 lead">Get a detailed estimate for your bathroom or shower remodel from a licensed NJ contractor who follows these standards.</p>
     <div class="cta-buttons flex flex-center gap-cta-btns mt-2">
-      <a href="/contact/" class="btn btn--primary btn--lg btn--pulse" data-magnetic>Request an Estimate</a>
-      <a href="tel:+16098628808" class="btn btn--ghost btn--lg">Call (609) 862-8808</a>
+      {% include components/cta-buttons.html %}
     </div>
     <p class="cta-credential text-white-60 mt-2">
-      <small><span class="badge badge--trust">NJ HIC #13VH10808800</span> <span class="badge badge--compliance">TCNA-Compliant</span> <span class="badge badge--reviews">★ 5.0 Reviews</span></small>
+      <small>{% include components/credential-badges.html %}</small>
     </p>
   </div>
 </section>

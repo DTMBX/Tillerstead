@@ -10,31 +10,31 @@
  * Usage: node scripts/scan-css-contrast.js
  */
 
-const { existsSync, readFileSync, readdirSync, writeFileSync } = require("fs");
-const { join, extname } = require("path");
+const { existsSync, readFileSync, readdirSync, writeFileSync } = require('fs');
+const { join } = require('path');
 
 const ISSUES = [];
 const WARNINGS = [];
 
 // Common background colors in our theme
-const BACKGROUNDS = {
+const _BACKGROUNDS = {
   light: {
-    parchment: "#f9f5eb",
-    white: "#ffffff",
-    surface: "#f0ead8",
-    muted: "#fcfaf4",
+    parchment: '#f9f5eb',
+    white: '#ffffff',
+    surface: '#f0ead8',
+    muted: '#fcfaf4',
   },
   dark: {
-    slate: "#0f1713",
-    ink: "#1c231f",
-    teal700: "#084c3d",
-    teal900: "#022318",
+    slate: '#0f1713',
+    ink: '#1c231f',
+    teal700: '#084c3d',
+    teal900: '#022318',
   },
 };
 
-function parseColor(colorStr) {
+function _parseColor(colorStr) {
   // Handle hex colors
-  if (colorStr.startsWith("#")) {
+  if (colorStr.startsWith('#')) {
     const hex = colorStr.slice(1);
     const shorthand = hex.length === 3;
     const r = parseInt(shorthand ? hex[0] + hex[0] : hex.substring(0, 2), 16);
@@ -64,15 +64,15 @@ function luminance([r, g, b]) {
   return 0.2126 * a[0] + 0.7152 * a[1] + 0.0722 * a[2];
 }
 
-function contrastRatio(rgb1, rgb2) {
+function _contrastRatio(rgb1, rgb2) {
   const l1 = luminance(rgb1);
   const l2 = luminance(rgb2);
   return (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
 }
 
 function scanFile(filePath) {
-  const content = readFileSync(filePath, "utf-8");
-  const lines = content.split("\n");
+  const content = readFileSync(filePath, 'utf-8');
+  const lines = content.split('\n');
 
   // Look for problematic patterns
   lines.forEach((line, index) => {
@@ -88,10 +88,10 @@ function scanFile(filePath) {
         ISSUES.push({
           file: filePath,
           line: lineNum,
-          type: "Low Opacity White Text",
+          type: 'Low Opacity White Text',
           code: line.trim(),
           issue: `White text at ${(opacity * 100).toFixed(0)}% opacity may fail contrast on dark backgrounds`,
-          severity: "high",
+          severity: 'high',
           recommendation: `Increase opacity to >= 0.85 or use semantic color variable`,
         });
       }
@@ -103,11 +103,11 @@ function scanFile(filePath) {
     );
     if (lowOpacity) {
       const opacity = parseFloat(lowOpacity[4]);
-      if (opacity < 0.65 && !line.includes("255, 255, 255")) {
+      if (opacity < 0.65 && !line.includes('255, 255, 255')) {
         WARNINGS.push({
           file: filePath,
           line: lineNum,
-          type: "Low Opacity Color",
+          type: 'Low Opacity Color',
           code: line.trim(),
           note: `Opacity ${(opacity * 100).toFixed(0)}% might create contrast issues`,
         });
@@ -115,57 +115,57 @@ function scanFile(filePath) {
     }
 
     // Pattern 3: Hardcoded colors (not using CSS variables)
-    if (line.includes("color:") && line.match(/#[0-9a-fA-F]{3,6}/)) {
+    if (line.includes('color:') && line.match(/#[0-9a-fA-F]{3,6}/)) {
       const match = line.match(/#[0-9a-fA-F]{3,6}/);
-      if (match && !line.includes("var(--")) {
+      if (match && !line.includes('var(--')) {
         WARNINGS.push({
           file: filePath,
           line: lineNum,
-          type: "Hardcoded Color",
+          type: 'Hardcoded Color',
           code: line.trim(),
-          note: "Consider using CSS variable for maintainability",
+          note: 'Consider using CSS variable for maintainability',
         });
       }
     }
 
     // Pattern 4: Specific low-contrast rgba on dark theme (footer issues)
-    if (line.includes("rgb(255, 255, 255, 0.7)")) {
+    if (line.includes('rgb(255, 255, 255, 0.7)')) {
       ISSUES.push({
         file: filePath,
         line: lineNum,
-        type: "Footer Contrast Issue",
+        type: 'Footer Contrast Issue',
         code: line.trim(),
-        issue: "rgba(255,255,255,0.7) on dark teal may fail AA (needs testing)",
-        severity: "medium",
-        recommendation: "Test contrast or increase to 0.85+ opacity",
+        issue: 'rgba(255,255,255,0.7) on dark teal may fail AA (needs testing)',
+        severity: 'medium',
+        recommendation: 'Test contrast or increase to 0.85+ opacity',
       });
     }
 
     // Pattern 5: Breadcrumbs with low contrast
     if (
-      line.includes("rgb(15, 23, 42, 0.4)") ||
-      line.includes("rgb(15, 23, 42, 0.6)")
+      line.includes('rgb(15, 23, 42, 0.4)') ||
+      line.includes('rgb(15, 23, 42, 0.6)')
     ) {
       ISSUES.push({
         file: filePath,
         line: lineNum,
-        type: "Breadcrumb Contrast",
+        type: 'Breadcrumb Contrast',
         code: line.trim(),
-        issue: "Slate color at low opacity will fail AA on parchment",
-        severity: "high",
+        issue: 'Slate color at low opacity will fail AA on parchment',
+        severity: 'high',
         recommendation:
-          "Replace with var(--ts-color-muted) or increase opacity to 0.9+",
+          'Replace with var(--ts-color-muted) or increase opacity to 0.9+',
       });
     }
 
     // Pattern 6: Dark theme experimental overrides
-    if (filePath.includes("dark-theme") && line.includes("!important")) {
+    if (filePath.includes('dark-theme') && line.includes('!important')) {
       WARNINGS.push({
         file: filePath,
         line: lineNum,
-        type: "Dark Theme Override",
+        type: 'Dark Theme Override',
         code: line.trim(),
-        note: "Using !important may override contrast fixes",
+        note: 'Using !important may override contrast fixes',
       });
     }
   });
@@ -176,8 +176,8 @@ function scanDirectory(dir, pattern = /\.scss$/) {
     WARNINGS.push({
       file: dir,
       line: 0,
-      type: "Missing Directory",
-      code: "",
+      type: 'Missing Directory',
+      code: '',
       note: `Directory not found; skipped scanning: ${dir}`,
     });
     return;
@@ -190,32 +190,32 @@ function scanDirectory(dir, pattern = /\.scss$/) {
 
     if (
       entry.isDirectory() &&
-      !entry.name.startsWith(".") &&
-      entry.name !== "node_modules"
+      !entry.name.startsWith('.') &&
+      entry.name !== 'node_modules'
     ) {
       scanDirectory(fullPath, pattern);
     } else if (entry.isFile() && pattern.test(entry.name)) {
       // Skip archive files
-      if (!fullPath.includes("99-archive")) {
+      if (!fullPath.includes('99-archive')) {
         scanFile(fullPath);
       }
     }
   });
 }
 
-console.log("🔍 Scanning CSS files for contrast issues...\n");
+console.log('🔍 Scanning CSS files for contrast issues...\n');
 
 // Scan SCSS files
-scanDirectory("_sass");
-scanDirectory("assets/css");
+scanDirectory('_sass');
+scanDirectory('assets/css');
 
-console.log("\n" + "=".repeat(70));
+console.log('\n' + '='.repeat(70));
 console.log(`\n📊 Scan Complete`);
 console.log(`❌ Issues Found: ${ISSUES.length}`);
 console.log(`⚠️  Warnings: ${WARNINGS.length}`);
 
 if (ISSUES.length > 0) {
-  console.log("\n🚨 CRITICAL CONTRAST ISSUES:\n");
+  console.log('\n🚨 CRITICAL CONTRAST ISSUES:\n');
   ISSUES.forEach((issue, i) => {
     console.log(`${i + 1}. ${issue.type} [${issue.severity.toUpperCase()}]`);
     console.log(`   File: ${issue.file}:${issue.line}`);
@@ -226,7 +226,7 @@ if (ISSUES.length > 0) {
 }
 
 if (WARNINGS.length > 0 && WARNINGS.length < 20) {
-  console.log("\n⚠️  WARNINGS:\n");
+  console.log('\n⚠️  WARNINGS:\n');
   WARNINGS.forEach((warn, i) => {
     console.log(`${i + 1}. ${warn.type}`);
     console.log(`   ${warn.file}:${warn.line}`);
@@ -246,17 +246,17 @@ const report = {
   warnings: WARNINGS,
   summary: {
     totalIssues: ISSUES.length,
-    criticalIssues: ISSUES.filter((i) => i.severity === "high").length,
-    mediumIssues: ISSUES.filter((i) => i.severity === "medium").length,
+    criticalIssues: ISSUES.filter((i) => i.severity === 'high').length,
+    mediumIssues: ISSUES.filter((i) => i.severity === 'medium').length,
     warnings: WARNINGS.length,
   },
 };
 
 writeFileSync(
-  "reports/css-contrast-scan.json",
+  'reports/css-contrast-scan.json',
   JSON.stringify(report, null, 2),
 );
-console.log("\n📄 Full report: reports/css-contrast-scan.json");
+console.log('\n📄 Full report: reports/css-contrast-scan.json');
 
 // Generate markdown
 let md = `# CSS Contrast Scan Report\n\n`;
@@ -290,13 +290,13 @@ if (WARNINGS.length > 0) {
 
 md += `\n---\n\n**Compliance:** TCNA 2024, NJ HIC, WCAG 2.1\n`;
 
-writeFileSync("reports/CSS_CONTRAST_SCAN.md", md);
-console.log("📄 Markdown report: reports/CSS_CONTRAST_SCAN.md\n");
+writeFileSync('reports/CSS_CONTRAST_SCAN.md', md);
+console.log('📄 Markdown report: reports/CSS_CONTRAST_SCAN.md\n');
 
 if (ISSUES.length > 0) {
-  console.log("⚠️  Action required: Fix contrast issues listed above\n");
+  console.log('⚠️  Action required: Fix contrast issues listed above\n');
   process.exit(1);
 }
 
-console.log("✅ No critical contrast issues detected!\n");
+console.log('✅ No critical contrast issues detected!\n');
 process.exit(0);

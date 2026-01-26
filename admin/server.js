@@ -91,14 +91,14 @@ app.post('/api/auth/login', security.authLimiter, security.checkBruteForce, asyn
   security.bruteForce.recordAttempt(ip, true);
   req.session.userId = username;
   security.auditLog.log('login_success', username, { ip }, ip);
-  
+
   // Check if 2FA is enabled
   if (auth.twoFactorAuth.isEnabled(username)) {
     req.session.pending2FA = true;
-    return res.json({ 
-      success: true, 
+    return res.json({
+      success: true,
       username,
-      require2FA: true 
+      require2FA: true
     });
   }
 
@@ -154,7 +154,7 @@ app.get('/api/calculators/config', requireAuth, async (req, res) => {
   try {
     const toolsPath = path.join(__dirname, '..', 'assets', 'js', 'tools.js');
     const toolsContent = await fs.readFile(toolsPath, 'utf8');
-    
+
     // Extract constants from tools.js
     const config = extractCalculatorConfig(toolsContent);
     res.json(config);
@@ -169,17 +169,17 @@ app.put('/api/calculators/config', requireAuth, async (req, res) => {
     const { presets } = req.body;
     const toolsPath = path.join(__dirname, '..', 'assets', 'js', 'tools.js');
     let toolsContent = await fs.readFile(toolsPath, 'utf8');
-    
+
     // Update the constants in tools.js
     toolsContent = updateCalculatorConfig(toolsContent, presets);
-    
+
     // Backup original file
     const backupPath = `${toolsPath}.backup.${Date.now()}`;
     await fs.copyFile(toolsPath, backupPath);
-    
+
     // Write updated content
     await fs.writeFile(toolsPath, toolsContent, 'utf8');
-    
+
     res.json({ success: true, message: 'Calculator configuration updated' });
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -196,7 +196,7 @@ app.get('/api/content/files', requireAuth, async (req, res) => {
     const dataDir = path.join(__dirname, '..', '_data');
     const files = await fs.readdir(dataDir);
     const ymlFiles = files.filter(f => f.endsWith('.yml'));
-    
+
     const fileList = await Promise.all(ymlFiles.map(async (filename) => {
       const filePath = path.join(dataDir, filename);
       const stats = await fs.stat(filePath);
@@ -207,7 +207,7 @@ app.get('/api/content/files', requireAuth, async (req, res) => {
         modified: stats.mtime
       };
     }));
-    
+
     res.json(fileList);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -219,15 +219,15 @@ app.get('/api/content/file/:filename', requireAuth, async (req, res) => {
   try {
     const { filename } = req.params;
     const filePath = path.join(__dirname, '..', '_data', filename);
-    
+
     // Security: prevent directory traversal
     if (!filePath.startsWith(path.join(__dirname, '..', '_data'))) {
       return res.status(403).json({ error: 'Access denied' });
     }
-    
+
     const content = await fs.readFile(filePath, 'utf8');
     const data = yaml.load(content);
-    
+
     res.json({
       filename,
       content,
@@ -244,26 +244,26 @@ app.put('/api/content/file/:filename', requireAuth, async (req, res) => {
     const { filename } = req.params;
     const { content } = req.body;
     const filePath = path.join(__dirname, '..', '_data', filename);
-    
+
     // Security: prevent directory traversal
     if (!filePath.startsWith(path.join(__dirname, '..', '_data'))) {
       return res.status(403).json({ error: 'Access denied' });
     }
-    
+
     // Validate YAML
     try {
       yaml.load(content);
     } catch (yamlError) {
       return res.status(400).json({ error: 'Invalid YAML syntax: ' + yamlError.message });
     }
-    
+
     // Backup original file
     const backupPath = `${filePath}.backup.${Date.now()}`;
     await fs.copyFile(filePath, backupPath);
-    
+
     // Write updated content
     await fs.writeFile(filePath, content, 'utf8');
-    
+
     res.json({ success: true, message: 'Content file updated' });
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -280,7 +280,7 @@ app.get('/api/settings', requireAuth, async (req, res) => {
     const configPath = path.join(__dirname, '..', '_config.yml');
     const content = await fs.readFile(configPath, 'utf8');
     const config = yaml.load(content);
-    
+
     res.json({ config, raw: content });
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -292,21 +292,21 @@ app.put('/api/settings', requireAuth, async (req, res) => {
   try {
     const { content } = req.body;
     const configPath = path.join(__dirname, '..', '_config.yml');
-    
+
     // Validate YAML
     try {
       yaml.load(content);
     } catch (yamlError) {
       return res.status(400).json({ error: 'Invalid YAML syntax: ' + yamlError.message });
     }
-    
+
     // Backup original file
     const backupPath = `${configPath}.backup.${Date.now()}`;
     await fs.copyFile(configPath, backupPath);
-    
+
     // Write updated content
     await fs.writeFile(configPath, content, 'utf8');
-    
+
     res.json({ success: true, message: 'Site configuration updated. Restart Jekyll to apply changes.' });
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -324,65 +324,65 @@ function extractCalculatorConfig(toolsContent) {
     jointPresets: [],
     trowelPresets: []
   };
-  
+
   // Extract TILE_PRESETS array
   const tileMatch = toolsContent.match(/const TILE_PRESETS = \[([\s\S]*?)\];/);
   if (tileMatch) {
     config.tilePresets = tileMatch[1];
   }
-  
+
   // Extract LAYOUT_PRESETS array
   const layoutMatch = toolsContent.match(/const LAYOUT_PRESETS = \[([\s\S]*?)\];/);
   if (layoutMatch) {
     config.layoutPresets = layoutMatch[1];
   }
-  
+
   // Extract JOINT_PRESETS array
   const jointMatch = toolsContent.match(/const JOINT_PRESETS = \[([\s\S]*?)\];/);
   if (jointMatch) {
     config.jointPresets = jointMatch[1];
   }
-  
+
   // Extract TROWEL_PRESETS array
   const trowelMatch = toolsContent.match(/const TROWEL_PRESETS = \[([\s\S]*?)\];/);
   if (trowelMatch) {
     config.trowelPresets = trowelMatch[1];
   }
-  
+
   return config;
 }
 
 function updateCalculatorConfig(toolsContent, presets) {
   let updated = toolsContent;
-  
+
   if (presets.tilePresets) {
     updated = updated.replace(
       /const TILE_PRESETS = \[[\s\S]*?\];/,
       `const TILE_PRESETS = ${presets.tilePresets};`
     );
   }
-  
+
   if (presets.layoutPresets) {
     updated = updated.replace(
       /const LAYOUT_PRESETS = \[[\s\S]*?\];/,
       `const LAYOUT_PRESETS = ${presets.layoutPresets};`
     );
   }
-  
+
   if (presets.jointPresets) {
     updated = updated.replace(
       /const JOINT_PRESETS = \[[\s\S]*?\];/,
       `const JOINT_PRESETS = ${presets.jointPresets};`
     );
   }
-  
+
   if (presets.trowelPresets) {
     updated = updated.replace(
       /const TROWEL_PRESETS = \[[\s\S]*?\];/,
       `const TROWEL_PRESETS = ${presets.trowelPresets};`
     );
   }
-  
+
   return updated;
 }
 
@@ -397,15 +397,15 @@ app.get('/api/security/overview', requireAuth, async (req, res) => {
     const now = Date.now();
     const oneDayAgo = now - (24 * 60 * 60 * 1000);
 
-    const loginAttempts = logs.filter(log => 
+    const loginAttempts = logs.filter(log =>
       log.event === 'login_success' || log.event === 'login_failed'
     ).filter(log => new Date(log.timestamp).getTime() > oneDayAgo).length;
 
-    const failedLogins = logs.filter(log => 
+    const failedLogins = logs.filter(log =>
       log.event === 'login_failed'
     ).filter(log => new Date(log.timestamp).getTime() > oneDayAgo).length;
 
-    const highSeverity = logs.filter(log => 
+    const highSeverity = logs.filter(log =>
       log.severity === 'high' || log.severity === 'critical'
     ).length;
 
@@ -431,7 +431,7 @@ app.post('/api/auth/2fa/setup', requireAuth, async (req, res) => {
     const username = req.session.userId;
     const secretData = auth.twoFactorAuth.generateSecret(username);
     const qrCode = await auth.twoFactorAuth.generateQRCode(secretData.otpauthUrl);
-    
+
     res.json({
       secret: secretData.secret,
       qrCode
@@ -447,11 +447,11 @@ app.post('/api/auth/2fa/enable', requireAuth, async (req, res) => {
     const { token } = req.body;
     const username = req.session.userId;
     const result = auth.twoFactorAuth.enable2FA(username, token);
-    
+
     if (result.success) {
       security.auditLog.log('2fa_enabled', username, {}, req.ip);
     }
-    
+
     res.json(result);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -464,11 +464,11 @@ app.post('/api/auth/2fa/disable', requireAuth, async (req, res) => {
     const { token } = req.body;
     const username = req.session.userId;
     const result = auth.twoFactorAuth.disable2FA(username, token);
-    
+
     if (result.success) {
       security.auditLog.log('2fa_disabled', username, {}, req.ip);
     }
-    
+
     res.json(result);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -488,11 +488,11 @@ app.post('/api/auth/2fa/regenerate-codes', requireAuth, async (req, res) => {
     const { token } = req.body;
     const username = req.session.userId;
     const result = auth.twoFactorAuth.regenerateBackupCodes(username, token);
-    
+
     if (result.success) {
       security.auditLog.log('backup_codes_regenerated', username, {}, req.ip);
     }
-    
+
     res.json(result);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -592,7 +592,7 @@ app.delete('/api/security/ip-filter/blacklist/:ip', requireAuth, (req, res) => {
 });
 
 // Roles management
-app
+app;
 
 // ==
 // USER MANAGEMENT ROUTES
@@ -608,7 +608,7 @@ app.get('/api/users', requireAuth, (req, res) => {
 app.get('/api/users/stats', requireAuth, (req, res) => {
   const users = userManager.getAllUsers();
   const sessions = sessionManager.getAllActiveSessions();
-  
+
   res.json({
     total: users.length,
     active: users.filter(u => u.isActive).length,
@@ -631,13 +631,13 @@ app.post('/api/users', requireAuth, async (req, res) => {
   try {
     const { username, email, password, role } = req.body;
     const newUser = await userManager.createUser(username, email, password, role);
-    
-    security.auditLog.log('user_created', req.session.userId, { 
-      username, role 
+
+    security.auditLog.log('user_created', req.session.userId, {
+      username, role
     }, req.ip);
-    
+
     emailNotifier.notifyNewUser(newUser, req.session.userId);
-    
+
     res.json(newUser);
   } catch (error) {
     res.status(400).json({ error: error.message });
@@ -649,12 +649,12 @@ app.put('/api/users/:username', requireAuth, async (req, res) => {
   try {
     const updates = req.body;
     const updatedUser = await userManager.updateUser(req.params.username, updates);
-    
+
     security.auditLog.log('user_updated', req.session.userId, {
       username: req.params.username,
       updates: Object.keys(updates)
     }, req.ip);
-    
+
     res.json(updatedUser);
   } catch (error) {
     res.status(400).json({ error: error.message });
@@ -665,13 +665,13 @@ app.put('/api/users/:username', requireAuth, async (req, res) => {
 app.delete('/api/users/:username', requireAuth, async (req, res) => {
   try {
     await userManager.deleteUser(req.params.username);
-    
+
     security.auditLog.log('user_deleted', req.session.userId, {
       username: req.params.username
     }, req.ip);
-    
+
     emailNotifier.notifyUserDeleted(req.params.username, req.session.userId);
-    
+
     res.json({ success: true });
   } catch (error) {
     res.status(400).json({ error: error.message });
@@ -683,12 +683,12 @@ app.put('/api/users/:username/status', requireAuth, async (req, res) => {
   try {
     const { isActive } = req.body;
     const updatedUser = await userManager.toggleUserStatus(req.params.username, isActive);
-    
+
     security.auditLog.log('user_status_changed', req.session.userId, {
       username: req.params.username,
       isActive
     }, req.ip);
-    
+
     res.json(updatedUser);
   } catch (error) {
     res.status(400).json({ error: error.message });
@@ -700,13 +700,13 @@ app.post('/api/users/:username/change-password', requireAuth, async (req, res) =
   try {
     const { currentPassword, newPassword } = req.body;
     await userManager.changePassword(req.params.username, currentPassword, newPassword);
-    
+
     security.auditLog.log('password_changed', req.session.userId, {
       username: req.params.username
     }, req.ip);
-    
+
     emailNotifier.notifyPasswordChanged(req.params.username);
-    
+
     res.json({ success: true });
   } catch (error) {
     res.status(400).json({ error: error.message });
@@ -764,7 +764,9 @@ app.put('/api/notifications/read-all', requireAuth, (req, res) => {
 app.delete('/api/notifications/:id', requireAuth, (req, res) => {
   inAppNotifier.delete(req.params.id);
   res.json({ success: true });
-});.get('/api/security/roles', requireAuth, (req, res) => {
+});
+
+app.get('/api/security/roles', requireAuth, (req, res) => {
   const roles = auth.roleManager.listRoles();
   res.json(roles);
 });

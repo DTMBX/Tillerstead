@@ -3,16 +3,20 @@
   display: block;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
 .ts-header__logo-link:hover {
   transform: scale(1.05);
   opacity: 90%;
 }
+
 .ts-header__logo {
   display: block;
 }
+
 .site-footer__logo {
   margin-bottom: var(--spacing-lg);
 }
+
 .site-footer__logo .logo-image {
   width: auto;
   height: 180px;
@@ -22,21 +26,25 @@
   aspect-ratio: 1 / 1;
   object-fit: contain;
 }
+
 .hero-logo {
   text-align: center;
   margin-bottom: var(--spacing-xl);
 }
+
 .hero-logo .logo-image {
   width: auto;
   height: 240px;
   max-width: 640px;
   object-fit: contain;
 }
+
 .page-logo-showcase {
   text-align: center;
   padding: var(--spacing-2xl) 0;
   background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-stone) 100%);
 }
+
 .page-logo-showcase .logo-image {
   width: auto;
   height: 200px;
@@ -44,10 +52,12 @@
   object-fit: contain;
   filter: drop-shadow(0 8px 16px rgb(0 0 0 / 30%));
 }
+
 .logo-compact .logo-image {
   height: 48px;
   width: auto;
 }
+
 .ts-header__logo .logo-image {
   width: auto;
   height: 100px;
@@ -58,6 +68,7 @@
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgb(0 0 0 / 50%));
 }
+
 .ts-header--minimized .ts-header__logo .logo-image {
   height: 72px;
   min-height: 64px;
@@ -65,22 +76,26 @@
   aspect-ratio: 1 / 1;
   transition: height 0.3s ease;
 }
+
 @media (max-width: 768px) {
   .ts-header__logo .logo-image {
   height: 80px;
   min-height: 64px;
   min-width: 64px;
   }
+
   .ts-header--minimized .ts-header__logo .logo-image {
   height: 64px;
   min-height: 56px;
   min-width: 56px;
   }
+
   .hero-logo .logo-image {
   height: 180px;
   min-height: 140px;
   max-width: 480px;
   }
+
   .footer-logo,
   .footer-logo--large {
   width: 240px;
@@ -89,6 +104,7 @@
   min-height: 160px;
   }
 }
+
 @media print {
   .ts-header__logo .logo-image,
   .site-footer__logo .logo-image {
@@ -96,16 +112,19 @@
   filter: grayscale(100%);
   }
 }
+
 @media (prefers-contrast: high) {
   .ts-header__logo .logo-image,
   .site-footer__logo .logo-image {
   filter: contrast(1.2);
   }
 }
+
 @media (prefers-reduced-motion: reduce) {
   .ts-header__logo-link {
   transition: none;
   }
+
   .ts-header__logo-link:hover {
   transform: none;
   }

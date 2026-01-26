@@ -4,23 +4,25 @@
 .ts-hero h1 {
   color: #0a0a0a !important;
   font-weight: 900 !important;
-  text-shadow: 0 2px 6px rgba(255,255,255,0.8) !important;
+  text-shadow: 0 2px 6px rgb(255 255 255 / 80%) !important;
 }
+
 .hero .lead,
 .hero-section .lead,
 .ts-hero .lead {
   color: #0a0a0a !important;
   font-weight: 800 !important;
-  background: rgba(255,255,255,0.7) !important;
+  background: rgb(255 255 255 / 70%) !important;
   padding: 0.75rem 1.25rem !important;
   border-radius: 8px !important;
   border-left: 5px solid #00a35c !important;
-  text-shadow: 0 1px 3px rgba(255,255,255,0.6) !important;
+  text-shadow: 0 1px 3px rgb(255 255 255 / 60%) !important;
 }
+
 .hero p,
 .hero-section p,
 .ts-hero p {
   color: #1a1a1a !important;
   font-weight: 600 !important;
-  text-shadow: 0 1px 2px rgba(255,255,255,0.5) !important;
+  text-shadow: 0 1px 2px rgb(255 255 255 / 50%) !important;
 }

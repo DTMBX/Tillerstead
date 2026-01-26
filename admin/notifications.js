@@ -15,7 +15,7 @@ class EmailNotifier {
     this.from = process.env.EMAIL_FROM || 'noreply@tillerstead.com';
     this.adminEmail = process.env.ADMIN_EMAIL || 'admin@tillerstead.com';
     this.enabled = process.env.EMAIL_ENABLED === 'true';
-    
+
     if (this.enabled) {
       this.initializeTransporter();
     }
@@ -73,7 +73,7 @@ class EmailNotifier {
       });
 
       console.log('📧 Email sent:', info.messageId);
-      
+
       // For test accounts, log preview URL
       if (process.env.NODE_ENV !== 'production') {
         console.log('Preview URL:', nodemailer.getTestMessageUrl(info));
@@ -272,7 +272,7 @@ class EmailNotifier {
   }
 
   // Helper to get user email (would integrate with user manager)
-  async getUserEmail(username) {
+  async getUserEmail(_username) {
     // This would integrate with your user management system
     // For now, return admin email
     return { email: this.adminEmail };

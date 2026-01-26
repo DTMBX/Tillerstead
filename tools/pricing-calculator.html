@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing Calculator - Tillerstead Internal Tool</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: linear-gradient(135deg, #0F172A 0%, #1E40AF 100%);
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+    
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    
+    h1 {
+      color: #0F172A;
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+    }
+    
+    .subtitle {
+      color: #64748B;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    
+    .section {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      background: rgba(14, 165, 233, 0.05);
+      border-radius: 12px;
+      border: 1px solid rgba(14, 165, 233, 0.2);
+    }
+    
+    .section h2 {
+      color: #1E40AF;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #334155;
+    }
+    
+    .label-help {
+      font-size: 0.75rem;
+      color: #94A3B8;
+      font-weight: 400;
+    }
+    
+    input, select {
+      padding: 0.75rem;
+      border: 2px solid #E2E8F0;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.2s;
+    }
+    
+    input:focus, select:focus {
+      outline: none;
+      border-color: #1E40AF;
+    }
+    
+    .btn {
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1.0625rem;
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 1rem;
+      transition: transform 0.2s;
+    }
+    
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    
+    .results {
+      display: none;
+      margin-top: 2rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(14, 165, 233, 0.1) 100%);
+      border-radius: 12px;
+      border: 2px solid #10B981;
+    }
+    
+    .results.show {
+      display: block;
+    }
+    
+    .results h2 {
+      color: #10B981;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    .result-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .result-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .result-card h3 {
+      color: #64748B;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+    }
+    
+    .result-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0F172A;
+    }
+    
+    .result-note {
+      font-size: 0.875rem;
+      color: #64748B;
+      margin-top: 0.5rem;
+    }
+    
+    .code-output {
+      background: #0F172A;
+      color: #10B981;
+      padding: 1.5rem;
+      border-radius: 8px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.875rem;
+      overflow-x: auto;
+      margin-top: 1rem;
+    }
+    
+    .code-output pre {
+      margin: 0;
+    }
+    
+    .warning {
+      background: rgba(245, 158, 11, 0.1);
+      border: 2px solid #F59E0B;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .warning strong {
+      color: #EA580C;
+    }
+    
+    .tip {
+      background: rgba(14, 165, 233, 0.1);
+      border-left: 4px solid #0EA5E9;
+      padding: 1rem;
+      margin-top: 1rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>💰 Pricing Calculator</h1>
+    <p class="subtitle">Figure out your costs, add margin, get your quote ranges</p>
+    
+    <form id="pricing-form">
+      <!-- Step 1: Labor Costs -->
+      <div class="section">
+        <h2>1️⃣ Your Labor Costs</h2>
+        <div class="input-grid">
+          <div class="input-group">
+            <label>
+              Your hourly rate
+              <span class="label-help">(what you pay yourself/crew per hour)</span>
+            </label>
+            <input type="number" id="hourly-rate" value="50" step="5" required>
+          </div>
+          
+          <div class="input-group">
+            <label>
+              Sq ft per hour (average)
+              <span class="label-help">(how many sqft you tile in 1 hour)</span>
+            </label>
+            <input type="number" id="sqft-per-hour" value="10" step="1" required>
+          </div>
+        </div>
+        
+        <div class="tip">
+          💡 <strong>Typical ranges:</strong> Most tile contractors tile 8-12 sqft/hour for standard work, 5-8 sqft/hour for complex patterns.
+        </div>
+      </div>
+      
+      <!-- Step 2: Material Costs -->
+      <div class="section">
+        <h2>2️⃣ Material Costs (per sqft)</h2>
+        <div class="input-grid">
+          <div class="input-group">
+            <label>Ceramic/Basic Tile</label>
+            <input type="number" id="mat-basic" value="3.50" step="0.50" required>
+          </div>
+          
+          <div class="input-group">
+            <label>Porcelain/Standard</label>
+            <input type="number" id="mat-standard" value="5.50" step="0.50" required>
+          </div>
+          
+          <div class="input-group">
+            <label>Large Format/Premium</label>
+            <input type="number" id="mat-premium" value="8.00" step="0.50" required>
+          </div>
+          
+          <div class="input-group">
+            <label>Mosaic/Luxury</label>
+            <input type="number" id="mat-luxury" value="12.00" step="0.50" required>
+          </div>
+        </div>
+        
+        <div class="tip">
+          💡 This should include: tile, thinset, grout, spacers, sealant (everything you use)
+        </div>
+      </div>
+      
+      <!-- Step 3: Overhead & Profit -->
+      <div class="section">
+        <h2>3️⃣ Overhead & Profit Margin</h2>
+        <div class="input-grid">
+          <div class="input-group">
+            <label>
+              Overhead %
+              <span class="label-help">(insurance, tools, truck, permits, etc.)</span>
+            </label>
+            <input type="number" id="overhead" value="20" step="5" required>
+          </div>
+          
+          <div class="input-group">
+            <label>
+              Target Profit Margin %
+              <span class="label-help">(what you want to take home)</span>
+            </label>
+            <input type="number" id="profit" value="25" step="5" required>
+          </div>
+          
+          <div class="input-group">
+            <label>
+              Minimum Project Fee
+              <span class="label-help">(never quote below this)</span>
+            </label>
+            <input type="number" id="minimum" value="1400" step="100" required>
+          </div>
+        </div>
+        
+        <div class="tip">
+          💡 <strong>Industry standard:</strong> 15-25% overhead, 20-30% profit margin
+        </div>
+      </div>
+      
+      <!-- Step 4: Complexity Buffer -->
+      <div class="section">
+        <h2>4️⃣ Complexity Buffer</h2>
+        <div class="input-grid">
+          <div class="input-group">
+            <label>
+              Unknown factors buffer %
+              <span class="label-help">(for surprises, bad substrate, etc.)</span>
+            </label>
+            <input type="number" id="buffer" value="15" step="5" required>
+          </div>
+        </div>
+        
+        <div class="tip">
+          💡 This creates your price RANGE. Lower end = ideal conditions, upper end = with issues.
+        </div>
+      </div>
+      
+      <button type="submit" class="btn">Calculate My Pricing</button>
+    </form>
+    
+    <!-- Results -->
+    <div id="results" class="results">
+      <h2>✅ Your Custom Pricing Structure</h2>
+      
+      <div class="result-grid" id="result-cards"></div>
+      
+      <div class="warning">
+        <strong>⚠️ Important:</strong> These are your COSTS + margin. Quote the upper range to customers (protects you). Only go to lower range for ideal conditions.
+      </div>
+      
+      <h3 style="margin-top: 2rem; color: #0F172A;">📋 Copy This Into quote-wizard.js</h3>
+      <div class="code-output">
+        <pre id="code-output"></pre>
+      </div>
+      
+      <div class="tip" style="margin-top: 1rem;">
+        💡 <strong>Next step:</strong> Copy the code above and paste it into <code>assets/js/quote-wizard.js</code> (lines 12-50)
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById('pricing-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get inputs
+      const hourlyRate = parseFloat(document.getElementById('hourly-rate').value);
+      const sqftPerHour = parseFloat(document.getElementById('sqft-per-hour').value);
+      const matBasic = parseFloat(document.getElementById('mat-basic').value);
+      const matStandard = parseFloat(document.getElementById('mat-standard').value);
+      const matPremium = parseFloat(document.getElementById('mat-premium').value);
+      const matLuxury = parseFloat(document.getElementById('mat-luxury').value);
+      const overhead = parseFloat(document.getElementById('overhead').value) / 100;
+      const profit = parseFloat(document.getElementById('profit').value) / 100;
+      const buffer = parseFloat(document.getElementById('buffer').value) / 100;
+      const minimum = parseFloat(document.getElementById('minimum').value);
+      
+      // Calculate labor cost per sqft
+      const laborPerSqft = hourlyRate / sqftPerHour;
+      
+      // Calculate total cost per sqft for each tier
+      function calculateTier(materialCost) {
+        const baseCost = laborPerSqft + materialCost;
+        const withOverhead = baseCost * (1 + overhead);
+        const withProfit = withOverhead * (1 + profit);
+        const minQuote = withProfit;
+        const maxQuote = withProfit * (1 + buffer);
+        
+        return {
+          cost: baseCost.toFixed(2),
+          min: minQuote.toFixed(2),
+          max: maxQuote.toFixed(2),
+          material: materialCost.toFixed(2)
+        };
+      }
+      
+      const basic = calculateTier(matBasic);
+      const standard = calculateTier(matStandard);
+      const premium = calculateTier(matPremium);
+      const luxury = calculateTier(matLuxury);
+      
+      // Display results
+      const resultsDiv = document.getElementById('results');
+      const cardsDiv = document.getElementById('result-cards');
+      
+      cardsDiv.innerHTML = `
+        <div class="result-card">
+          <h3>Ceramic/Basic</h3>
+          <div class="result-value">$${basic.min} - $${basic.max}</div>
+          <div class="result-note">per sqft (cost: $${basic.cost})</div>
+        </div>
+        <div class="result-card">
+          <h3>Porcelain/Standard</h3>
+          <div class="result-value">$${standard.min} - $${standard.max}</div>
+          <div class="result-note">per sqft (cost: $${standard.cost})</div>
+        </div>
+        <div class="result-card">
+          <h3>Large Format/Premium</h3>
+          <div class="result-value">$${premium.min} - $${premium.max}</div>
+          <div class="result-note">per sqft (cost: $${premium.cost})</div>
+        </div>
+        <div class="result-card">
+          <h3>Mosaic/Luxury</h3>
+          <div class="result-value">$${luxury.min} - $${luxury.max}</div>
+          <div class="result-note">per sqft (cost: $${luxury.cost})</div>
+        </div>
+      `;
+      
+      // Generate code output
+      const codeOutput = document.getElementById('code-output');
+      codeOutput.textContent = `pricing: {
+  tileInstallation: {
+    basic: { 
+      min: ${basic.min}, 
+      max: ${basic.max}, 
+      materials: ${basic.material} 
+    },
+    standard: { 
+      min: ${standard.min}, 
+      max: ${standard.max}, 
+      materials: ${standard.material} 
+    },
+    premium: { 
+      min: ${premium.min}, 
+      max: ${premium.max}, 
+      materials: ${premium.material} 
+    },
+    luxury: { 
+      min: ${luxury.min}, 
+      max: ${luxury.max}, 
+      materials: ${luxury.material} 
+    }
+  },
+  
+  minimumProject: ${minimum}
+}`;
+      
+      resultsDiv.classList.add('show');
+      resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  </script>
+</body>
+</html>

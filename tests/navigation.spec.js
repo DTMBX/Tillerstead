@@ -3,11 +3,10 @@
 
 import { test, expect } from '@playwright/test';
 
-const BASE_URL = 'http://localhost:4000'; // Jekyll local server
-const PROD_URL = 'https://tillerstead.com'; // Production site
-
-// Use production URL for now, switch to BASE_URL for local testing
-const URL = PROD_URL;
+// URL is managed by Playwright config baseURL
+// Tests will use baseURL automatically via page.goto('/')
+// Local: http://localhost:4173 (via npm run serve:test)
+// CI/Production: set via BASE_URL or PROD_URL environment variables
 
 // Desktop viewport
 const DESKTOP_VIEWPORT = { width: 1920, height: 1080 };
@@ -20,7 +19,7 @@ const MOBILE_ANDROID = { width: 412, height: 915 };
 test.describe('Desktop Navigation Tests', () => {
   test.beforeEach(async ({ page }) => {
     await page.setViewportSize(DESKTOP_VIEWPORT);
-    await page.goto(URL);
+    await page.goto('/');
   });
 
   test('should display desktop nav on large screens', async ({ page }) => {
@@ -128,7 +127,7 @@ test.describe('Desktop Navigation Tests', () => {
 test.describe('Mobile Navigation Tests - iPhone 16 Pro Max', () => {
   test.beforeEach(async ({ page }) => {
     await page.setViewportSize(MOBILE_IPHONE_16_PRO_MAX);
-    await page.goto(URL);
+    await page.goto('/');
   });
 
   test('should display hamburger menu on mobile', async ({ page }) => {
@@ -322,7 +321,7 @@ test.describe('Mobile Navigation Tests - iPhone 16 Pro Max', () => {
 test.describe('Mobile Navigation Tests - Other Devices', () => {
   test('should work on iPhone 14', async ({ page }) => {
     await page.setViewportSize(MOBILE_IPHONE_14);
-    await page.goto(URL);
+    await page.goto('/');
     
     const hamburger = page.locator('.mobile-nav__toggle');
     await expect(hamburger).toBeVisible();
@@ -335,7 +334,7 @@ test.describe('Mobile Navigation Tests - Other Devices', () => {
 
   test('should work on Android device', async ({ page }) => {
     await page.setViewportSize(MOBILE_ANDROID);
-    await page.goto(URL);
+    await page.goto('/');
     
     const hamburger = page.locator('.mobile-nav__toggle');
     await expect(hamburger).toBeVisible();
@@ -350,7 +349,7 @@ test.describe('Mobile Navigation Tests - Other Devices', () => {
 test.describe('Accessibility Tests', () => {
   test('desktop nav should have proper ARIA labels', async ({ page }) => {
     await page.setViewportSize(DESKTOP_VIEWPORT);
-    await page.goto(URL);
+    await page.goto('/');
     
     const nav = page.locator('.desktop-nav');
     await expect(nav).toHaveAttribute('aria-label', 'Primary Navigation');
@@ -358,7 +357,7 @@ test.describe('Accessibility Tests', () => {
 
   test('mobile nav toggle should have ARIA label', async ({ page }) => {
     await page.setViewportSize(MOBILE_IPHONE_16_PRO_MAX);
-    await page.goto(URL);
+    await page.goto('/');
     
     const toggle = page.locator('.mobile-nav__toggle');
     await expect(toggle).toHaveAttribute('aria-label', 'Toggle menu');
@@ -366,7 +365,7 @@ test.describe('Accessibility Tests', () => {
 
   test('mobile nav close button should have ARIA label', async ({ page }) => {
     await page.setViewportSize(MOBILE_IPHONE_16_PRO_MAX);
-    await page.goto(URL);
+    await page.goto('/');
     
     await page.click('.mobile-nav__toggle');
     
@@ -376,7 +375,7 @@ test.describe('Accessibility Tests', () => {
 
   test('dropdown buttons should have aria-expanded', async ({ page }) => {
     await page.setViewportSize(DESKTOP_VIEWPORT);
-    await page.goto(URL);
+    await page.goto('/');
     
     const guidesButton = page.locator('.desktop-nav button:has-text("Guides")');
     await expect(guidesButton).toHaveAttribute('aria-expanded', 'false');
@@ -386,7 +385,7 @@ test.describe('Accessibility Tests', () => {
 
   test('all links should be keyboard accessible', async ({ page }) => {
     await page.setViewportSize(DESKTOP_VIEWPORT);
-    await page.goto(URL);
+    await page.goto('/');
     
     // Tab through nav links
     await page.keyboard.press('Tab');
@@ -402,7 +401,7 @@ test.describe('Responsive Breakpoint Tests', () => {
   test('should switch from desktop to mobile nav at 768px', async ({ page }) => {
     // Start at desktop
     await page.setViewportSize({ width: 1024, height: 768 });
-    await page.goto(URL);
+    await page.goto('/');
     
     let desktopNav = page.locator('.desktop-nav');
     let mobileToggle = page.locator('.mobile-nav__toggle');
@@ -422,7 +421,7 @@ test.describe('Responsive Breakpoint Tests', () => {
 test.describe('Header Tests', () => {
   test('header should be sticky on mobile', async ({ page }) => {
     await page.setViewportSize(MOBILE_IPHONE_16_PRO_MAX);
-    await page.goto(URL);
+    await page.goto('/');
     
     const header = page.locator('.ts-header');
     
@@ -435,7 +434,7 @@ test.describe('Header Tests', () => {
 
   test('header should display logo and company name', async ({ page }) => {
     await page.setViewportSize(MOBILE_IPHONE_16_PRO_MAX);
-    await page.goto(URL);
+    await page.goto('/');
     
     const logo = page.locator('.ts-header__logo');
     await expect(logo).toBeVisible();

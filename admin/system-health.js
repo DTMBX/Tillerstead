@@ -24,7 +24,7 @@ class SystemMonitor {
     this.startTime = Date.now();
     this.requestCount = 0;
     this.errorCount = 0;
-    
+
     // Start periodic collection
     this.startCollection();
   }
@@ -93,10 +93,10 @@ class SystemMonitor {
       let size = 0;
       try {
         const files = await fs.readdir(dir, { withFileTypes: true });
-        
+
         for (const file of files) {
           const filePath = path.join(dir, file.name);
-          
+
           // Skip node_modules and large directories
           if (file.name === 'node_modules' || file.name === '.git' || file.name === '_site') {
             continue;
@@ -112,7 +112,7 @@ class SystemMonitor {
       } catch (error) {
         // Skip inaccessible directories
       }
-      
+
       return size;
     }
 
@@ -194,7 +194,7 @@ class SystemMonitor {
 
   getPerformanceStats() {
     const recentRequests = this.metrics.requests.slice(-100);
-    
+
     if (recentRequests.length === 0) {
       return {
         avgResponseTime: 0,
@@ -212,7 +212,7 @@ class SystemMonitor {
     // Calculate requests per minute
     const now = Date.now();
     const oneMinuteAgo = now - (60 * 1000);
-    const recentRequestsCount = recentRequests.filter(r => 
+    const recentRequestsCount = recentRequests.filter(r =>
       new Date(r.timestamp).getTime() > oneMinuteAgo
     ).length;
 
@@ -226,7 +226,7 @@ class SystemMonitor {
 
   getHealthStatus() {
     const current = this.getCurrentMetrics();
-    
+
     let status = 'healthy';
     let issues = [];
 

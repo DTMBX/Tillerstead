@@ -31,13 +31,26 @@
   },
   "overrides": [
     {
-      // Node.js scripts (build, automation, etc.)
-      "files": ["scripts/**/*.js"],
+      // Node.js scripts and CommonJS files (build, automation, server-side, etc.)
+      "files": ["scripts/**/*.js", "scripts/**/*.cjs", "scripts/**/*.mjs", "admin/**/*.js", "_data/**/*.js", "ventures/**/*.js", "*.cjs", "*.mjs"],
       "env": {
-        "node": true
+        "node": true,
+        "es2021": true
       },
-      "rules": {
-        "no-undef": "off"
+      "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+      }
+    },
+    {
+      // CommonJS files specifically
+      "files": ["**/*.cjs"],
+      "parserOptions": {
+        "sourceType": "script"
+      },
+      "env": {
+        "node": true,
+        "commonjs": true
       }
     },
     {

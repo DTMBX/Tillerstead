@@ -53,13 +53,13 @@ class BruteForceProtection {
 
   recordAttempt(identifier, success) {
     const now = Date.now();
-    
+
     if (!this.attempts.has(identifier)) {
       this.attempts.set(identifier, []);
     }
 
     const attempts = this.attempts.get(identifier);
-    
+
     // Remove old attempts outside the window
     const recentAttempts = attempts.filter(
       time => now - time < this.attemptWindow
@@ -94,11 +94,11 @@ class BruteForceProtection {
 
   isLockedOut(identifier) {
     const lockoutUntil = this.lockouts.get(identifier);
-    
+
     if (!lockoutUntil) return false;
 
     const now = Date.now();
-    
+
     if (now > lockoutUntil) {
       // Lockout expired
       this.lockouts.delete(identifier);
@@ -133,7 +133,7 @@ export const bruteForce = new BruteForceProtection();
 // Middleware to check brute force protection
 export function checkBruteForce(req, res, next) {
   const identifier = req.ip;
-  
+
   if (bruteForce.isLockedOut(identifier)) {
     const status = bruteForce.getStatus(identifier);
     return res.status(429).json({
@@ -154,9 +154,9 @@ export const securityHeaders = helmet({
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
-      scriptSrc: ["'self'", "'unsafe-inline'", "cdnjs.cloudflare.com"],
+      scriptSrc: ["'self'", "'unsafe-inline'", 'cdnjs.cloudflare.com'],
       styleSrc: ["'self'", "'unsafe-inline'"],
-      imgSrc: ["'self'", "data:", "https:"],
+      imgSrc: ["'self'", 'data:', 'https:'],
       connectSrc: ["'self'"],
       fontSrc: ["'self'"],
       objectSrc: ["'none'"],
@@ -283,7 +283,7 @@ export const auditLog = new AuditLogger();
 // Middleware to log all authenticated requests
 export function auditMiddleware(req, res, next) {
   const originalSend = res.send;
-  
+
   res.send = function(data) {
     // Log after response
     if (req.session && req.session.userId) {
@@ -294,7 +294,7 @@ export function auditMiddleware(req, res, next) {
         status: res.statusCode
       }, req.ip);
     }
-    
+
     originalSend.call(this, data);
   };
 
@@ -307,7 +307,7 @@ export function auditMiddleware(req, res, next) {
 
 export function sanitizeInput(input) {
   if (typeof input !== 'string') return input;
-  
+
   // Remove potential XSS
   return input
     .replace(/[<>]/g, '')
@@ -328,7 +328,7 @@ export function validateUsername(username) {
 export function validateFilePath(filePath, allowedDir) {
   const normalized = path.normalize(filePath);
   const allowed = path.normalize(allowedDir);
-  
+
   // Ensure path is within allowed directory
   return normalized.startsWith(allowed);
 }
@@ -358,7 +358,7 @@ class APIKeyManager {
   async saveKeys() {
     const keyFile = path.join(process.cwd(), 'config', 'api-keys.json');
     const dir = path.dirname(keyFile);
-    
+
     try {
       await fs.access(dir);
     } catch {
@@ -372,7 +372,7 @@ class APIKeyManager {
   generateKey(name, permissions = []) {
     const key = 'ts_' + randomBytes(32).toString('hex');
     const hashedKey = this.hashKey(key);
-    
+
     this.keys.set(hashedKey, {
       name,
       permissions,
@@ -382,7 +382,7 @@ class APIKeyManager {
     });
 
     this.saveKeys();
-    
+
     return key; // Return unhashed key only once
   }
 
@@ -393,7 +393,7 @@ class APIKeyManager {
   validateKey(key) {
     const hashedKey = this.hashKey(key);
     const keyData = this.keys.get(hashedKey);
-    
+
     if (!keyData) return null;
 
     // Update usage stats
@@ -426,13 +426,13 @@ export const apiKeys = new APIKeyManager();
 // Middleware to validate API keys
 export function requireAPIKey(req, res, next) {
   const apiKey = req.headers['x-api-key'];
-  
+
   if (!apiKey) {
     return res.status(401).json({ error: 'API key required' });
   }
 
   const keyData = apiKeys.validateKey(apiKey);
-  
+
   if (!keyData) {
     auditLog.log('api_key_invalid', null, { key: apiKey.substring(0, 8) + '...' }, req.ip);
     return res.status(401).json({ error: 'Invalid API key' });
@@ -492,10 +492,10 @@ class IPFilter {
   isAllowed(ip) {
     // If blacklisted, deny
     if (this.blacklist.has(ip)) return false;
-    
+
     // If whitelist is empty, allow all (except blacklisted)
     if (this.whitelist.size === 0) return true;
-    
+
     // If whitelist exists, only allow whitelisted
     return this.whitelist.has(ip);
   }
@@ -505,7 +505,7 @@ export const ipFilter = new IPFilter();
 
 export function checkIPFilter(req, res, next) {
   const ip = req.ip;
-  
+
   if (!ipFilter.isAllowed(ip)) {
     auditLog.log('ip_blocked', null, { ip }, ip);
     return res.status(403).json({ error: 'Access denied from this IP address' });

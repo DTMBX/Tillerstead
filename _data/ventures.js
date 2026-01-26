@@ -10,7 +10,7 @@ const venturesData = {
     activePartnerships: 28,
     lastUpdated: '2026-01-23'
   },
-  
+
   // Active investment projects
   projects: [
     {
@@ -167,7 +167,7 @@ const venturesData = {
       ]
     }
   ],
-  
+
   // Real Estate Partnership Calculator Data
   realEstateDefaults: {
     purchasePricePerUnit: 150000,
@@ -181,7 +181,7 @@ const venturesData = {
     expectedAppreciationPercent: 25,
     timelineMonths: 3
   },
-  
+
   // Academy Revenue Calculator Data
   academyDefaults: {
     studentsPerClass: 12,
@@ -193,7 +193,7 @@ const venturesData = {
     marketingCostPerClass: 3000,
     adminOverheadPercent: 10
   },
-  
+
   // Partnership Structure Calculator Data
   partnershipDefaults: {
     totalInvestment: 100000,
@@ -203,7 +203,7 @@ const venturesData = {
     carriedInterestPercent: 20,
     vestingPeriodMonths: 12
   },
-  
+
   // Historical Performance Data
   historicalROI: [
     { quarter: 'Q1 2025', roi: 18.2 },
@@ -211,7 +211,7 @@ const venturesData = {
     { quarter: 'Q3 2025', roi: 24.8 },
     { quarter: 'Q4 2025', roi: 23.5 }
   ],
-  
+
   // Partner Network
   partners: [
     {
@@ -244,7 +244,7 @@ const venturesData = {
       joinedDate: '2025-01-10'
     }
   ],
-  
+
   // Document Library
   documents: [
     {
@@ -283,7 +283,7 @@ const venturesData = {
       size: '1.5 MB'
     }
   ],
-  
+
   // Contact Preferences for Ventures
   contactInfo: {
     venturesEmail: 'ventures@tillerstead.com',

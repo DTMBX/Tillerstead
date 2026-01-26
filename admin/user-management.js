@@ -95,7 +95,7 @@ class UserManager {
 
   async updateUser(username, updates) {
     const user = this.users.get(username);
-    
+
     if (!user) {
       throw new Error('User not found');
     }
@@ -133,7 +133,7 @@ class UserManager {
     }
 
     const deleted = this.users.delete(username);
-    
+
     if (!deleted) {
       throw new Error('User not found');
     }
@@ -166,7 +166,7 @@ class UserManager {
 
   async changePassword(username, currentPassword, newPassword) {
     const user = this.users.get(username);
-    
+
     if (!user) {
       throw new Error('User not found');
     }
@@ -202,7 +202,7 @@ class UserManager {
 
   async toggleUserStatus(username, isActive) {
     const user = this.users.get(username);
-    
+
     if (!user) {
       throw new Error('User not found');
     }
@@ -244,7 +244,7 @@ class UserManager {
   }
 
   async resetPasswordWithToken(token, newPassword) {
-    const user = Array.from(this.users.values()).find(u => 
+    const user = Array.from(this.users.values()).find(u =>
       u.resetToken === token && u.resetTokenExpiry > Date.now()
     );
 

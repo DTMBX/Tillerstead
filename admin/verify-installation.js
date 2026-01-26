@@ -85,13 +85,13 @@ function checkScripts() {
     const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
     const hasAdminScript = pkg.scripts && pkg.scripts.admin;
     const hasAdminDevScript = pkg.scripts && pkg.scripts['admin:dev'];
-    
+
     checks.push({
       name: 'npm run admin script',
       pass: hasAdminScript,
       message: hasAdminScript ? '✓ Configured' : '✗ Missing'
     });
-    
+
     checks.push({
       name: 'npm run admin:dev script',
       pass: hasAdminDevScript,

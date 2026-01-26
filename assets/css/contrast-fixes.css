@@ -3,23 +3,28 @@ body {
   color: #1a1a1a;
   background: #ffffff;
 }
+
 h1, h2, h3, h4, h5, h6 {
   color: #000000 !important;
   font-weight: 900;
 }
+
 p {
   color: #1a1a1a !important;
   font-weight: 500;
   line-height: 1.7;
 }
+
 a {
   color: #006b3d;
   font-weight: 600;
 }
+
 a:hover {
   color: #004d2b;
   text-decoration: underline;
 }
+
 .btn,
 button,
 [type="button"],
@@ -27,58 +32,70 @@ button,
   font-weight: 700 !important;
   text-shadow: none;
 }
+
 .btn--primary {
   background: #006b3d;
   color: #ffffff !important;
   border: 2px solid #004d2b;
 }
+
 .btn--accent {
   background: #d4af37;
   color: #000000 !important;
   border: 2px solid #9c7a14;
 }
+
 li {
   color: #1a1a1a;
   font-weight: 500;
 }
+
 table {
   color: #1a1a1a;
 }
+
 th {
   background: #006b3d;
   color: #ffffff !important;
   font-weight: 700;
 }
+
 td {
   color: #1a1a1a;
   border: 1px solid #d1d1d1;
 }
+
 label {
   color: #000000 !important;
   font-weight: 700;
 }
+
 input,
 textarea,
 select {
   color: #000000 !important;
   border: 2px solid #006b3d;
 }
+
 footer,
 .footer,
 .ts-footer {
   background: #1a1a1a;
   color: #ffffff !important;
 }
+
 footer a,
 .footer a,
 .ts-footer a {
   color: #ffd700 !important;
 }
+
 .bg-dark,
 .dark-bg,
 [class*="dark"] {
   color: #ffffff !important;
 }
+
 .bg-dark h1,
 .bg-dark h2,
 .bg-dark h3,

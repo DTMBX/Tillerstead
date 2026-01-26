@@ -75,7 +75,7 @@ self.addEventListener('sync', (event) => {
 async function syncForms() {
   try {
     const queue = await getFormQueue();
-    
+
     for (const item of queue) {
       try {
         const response = await fetch('/api/contact', {
@@ -141,7 +141,7 @@ self.addEventListener('fetch', (event) => {
           caches.open(DYNAMIC_CACHE).then((cache) => cache.put(request, clone));
           return response;
         })
-        .catch(() => 
+        .catch(() =>
           caches.match(request)
             .then((cached) => cached || caches.match('/offline.html'))
         )

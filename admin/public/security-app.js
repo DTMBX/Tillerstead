@@ -6,7 +6,7 @@
 // STATE
 // ==
 
-let currentUser = null;
+let _currentUser = null;
 let auditLogs = [];
 let apiKeys = [];
 
@@ -36,7 +36,7 @@ async function checkAuth() {
       return;
     }
     const data = await response.json();
-    currentUser = data.user;
+    _currentUser = data.user;
   } catch (error) {
     window.location.href = '/login.html';
   }
@@ -95,6 +95,11 @@ async function check2FAStatus() {
   }
 }
 
+// ==
+// 2FA OPERATIONS
+// ==
+
+// eslint-disable-next-line no-unused-vars
 async function setup2FA() {
   try {
     const response = await fetch('/api/auth/2fa/setup', { method: 'POST' });
@@ -102,7 +107,7 @@ async function setup2FA() {
 
     document.getElementById('qr-code').src = data.qrCode;
     document.getElementById('secret-key').textContent = data.secret;
-    
+
     document.getElementById('2fa-modal').classList.add('active');
     document.getElementById('2fa-setup').style.display = 'block';
     document.getElementById('backup-codes-display').style.display = 'none';
@@ -111,6 +116,7 @@ async function setup2FA() {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 async function verify2FA() {
   const token = document.getElementById('2fa-token').value;
 
@@ -147,11 +153,12 @@ async function verify2FA() {
 
 function displayBackupCodes(codes) {
   const container = document.getElementById('backup-codes');
-  container.innerHTML = codes.map(code => 
+  container.innerHTML = codes.map(code =>
     `<div class="backup-code">${code}</div>`
   ).join('');
 }
 
+// eslint-disable-next-line no-unused-vars
 async function regenerateBackupCodes() {
   const token = prompt('Enter your 2FA code to regenerate backup codes:');
   if (!token) return;
@@ -179,6 +186,7 @@ async function regenerateBackupCodes() {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 async function disable2FA() {
   if (!confirm('Are you sure you want to disable 2FA? This will make your account less secure.')) {
     return;
@@ -208,6 +216,7 @@ async function disable2FA() {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 function close2FAModal() {
   document.getElementById('2fa-modal').classList.remove('active');
   document.getElementById('2fa-token').value = '';
@@ -246,6 +255,7 @@ function displayAuditLogs(logs) {
   `).join('');
 }
 
+// eslint-disable-next-line no-unused-vars
 function filterAuditLogs() {
   const filter = document.getElementById('audit-filter').value;
   loadAuditLogs(filter);
@@ -289,6 +299,7 @@ function displayAPIKeys(keys) {
   `).join('');
 }
 
+// eslint-disable-next-line no-unused-vars
 async function createAPIKey() {
   const name = prompt('Enter a name for this API key:');
   if (!name) return;
@@ -303,7 +314,7 @@ async function createAPIKey() {
     const data = await response.json();
 
     alert(`API Key created!\n\n${data.key}\n\n⚠️ Save this key now - you won't be able to see it again!`);
-    
+
     await loadAPIKeys();
     await loadSecurityOverview();
   } catch (error) {
@@ -311,6 +322,7 @@ async function createAPIKey() {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 async function revokeAPIKey(hash) {
   if (!confirm('Are you sure you want to revoke this API key?')) {
     return;
@@ -361,6 +373,7 @@ function displayIPList(type, ips) {
   `).join('');
 }
 
+// eslint-disable-next-line no-unused-vars
 async function addToWhitelist() {
   const ip = document.getElementById('whitelist-ip').value.trim();
   if (!ip) return;
@@ -369,6 +382,7 @@ async function addToWhitelist() {
   document.getElementById('whitelist-ip').value = '';
 }
 
+// eslint-disable-next-line no-unused-vars
 async function addToBlacklist() {
   const ip = document.getElementById('blacklist-ip').value.trim();
   if (!ip) return;
@@ -393,6 +407,7 @@ async function addIP(type, ip) {
   }
 }
 
+// eslint-disable-next-line no-unused-vars
 async function removeIP(type, ip) {
   try {
     await fetch(`/api/security/ip-filter/${type}/${ip}`, {

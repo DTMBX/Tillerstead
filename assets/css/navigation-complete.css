@@ -44,7 +44,7 @@
   }
   
   .desktop-nav__link:hover {
-    background: rgba(255, 255, 255, 0.1) !important;
+    background: rgb(255 255 255 / 10%) !important;
     color: #ffd700 !important;
   }
   
@@ -61,20 +61,20 @@
     min-width: 220px !important;
     background: #ffffff !important;
     border-radius: 12px !important;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15) !important;
+    box-shadow: 0 8px 32px rgb(0 0 0 / 15%) !important;
     list-style: none !important;
-    margin: 0.5rem 0 0 0 !important;
+    margin: 0.5rem 0 0 !important;
     padding: 0.5rem !important;
     z-index: 1000 !important;
     display: none !important;
-    opacity: 0 !important;
+    opacity: 0% !important;
     transform: translateY(-10px) !important;
     transition: opacity 0.2s ease, transform 0.2s ease !important;
   }
   
   .desktop-nav__item--dropdown:hover .desktop-nav__dropdown {
     display: block !important;
-    opacity: 1 !important;
+    opacity: 100% !important;
     transform: translateY(0) !important;
   }
   
@@ -94,7 +94,7 @@
   }
   
   .desktop-nav__dropdown a:hover {
-    background: rgba(0, 163, 92, 0.1) !important;
+    background: rgb(0 163 92 / 10%) !important;
     color: #006b3d !important;
     transform: translateX(4px) !important;
   }
@@ -133,7 +133,7 @@
   }
   
   .mobile-nav__toggle:hover {
-    background: rgba(255, 255, 255, 0.1) !important;
+    background: rgb(255 255 255 / 10%) !important;
   }
   
   .mobile-nav__toggle:focus {
@@ -156,7 +156,7 @@
   }
   
   .mobile-nav__toggle[aria-expanded="true"] .hamburger:nth-child(2) {
-    opacity: 0 !important;
+    opacity: 0% !important;
   }
   
   .mobile-nav__toggle[aria-expanded="true"] .hamburger:nth-child(3) {
@@ -174,7 +174,7 @@
   height: 100vh !important;
   height: 100dvh !important;
   background: #f8f7f5 !important;
-  box-shadow: -8px 0 24px rgba(0, 0, 0, 0.5) !important;
+  box-shadow: -8px 0 24px rgb(0 0 0 / 50%) !important;
   z-index: 10000 !important;
   transition: right 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
   overflow-y: auto !important;
@@ -195,7 +195,7 @@
     left: 0 !important;
     width: 100vw !important;
     height: 100vh !important;
-    background: rgba(0, 0, 0, 0.6) !important;
+    background: rgb(0 0 0 / 60%) !important;
     z-index: -1 !important;
     backdrop-filter: blur(4px) !important;
     -webkit-backdrop-filter: blur(4px) !important;
@@ -204,8 +204,8 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from { opacity: 0%; }
+  to { opacity: 100%; }
 }
 
 .mobile-nav__header {
@@ -260,7 +260,7 @@
 }
 
 .mobile-nav__list > li {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 1px solid rgb(0 0 0 / 10%) !important;
 }
 
 .mobile-nav__list > li > a,
@@ -284,7 +284,7 @@
 
 .mobile-nav__list > li > a:hover,
 .mobile-nav__list > li > button:hover {
-  background: rgba(0, 163, 92, 0.1) !important;
+  background: rgb(0 163 92 / 10%) !important;
   padding-left: 2rem !important;
   color: #006b3d !important;
 }
@@ -309,7 +309,7 @@
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
-  background: rgba(0, 163, 92, 0.05) !important;
+  background: rgb(0 163 92 / 5%) !important;
   border-left: 4px solid #00a35c !important;
   overflow: hidden !important;
   max-height: 0 !important;
@@ -331,7 +331,7 @@
 }
 
 .mobile-nav__submenu li a:hover {
-  background: rgba(0, 163, 92, 0.15) !important;
+  background: rgb(0 163 92 / 15%) !important;
   padding-left: 3rem !important;
   color: #006b3d !important;
 }
@@ -349,13 +349,13 @@
   border-radius: 12px !important;
   text-align: center !important;
   font-weight: 900 !important;
-  box-shadow: 0 4px 12px rgba(0, 163, 92, 0.3) !important;
+  box-shadow: 0 4px 12px rgb(0 163 92 / 30%) !important;
 }
 
 .mobile-nav__cta:hover {
   background: linear-gradient(135deg, #006b3d 0%, #004d2b 100%) !important;
   transform: translateY(-2px) !important;
-  box-shadow: 0 6px 20px rgba(0, 163, 92, 0.5) !important;
+  box-shadow: 0 6px 20px rgb(0 163 92 / 50%) !important;
 }
 
 /* ===== BODY LOCK WHEN NAV OPEN ===== */

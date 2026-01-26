@@ -1,0 +1,409 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic:
+    - status:
+      - generic: Pull to refresh
+  - navigation "Skip navigation" [ref=e2]:
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#main-content"
+  - banner "Main Header" [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "Tillerstead LLC - Home" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "Tillerstead Logo" [ref=e8]
+        - generic [ref=e10]: Tillerstead LLC
+      - button "Toggle menu" [ref=e11] [cursor=pointer]
+  - main "Main content" [ref=e15]:
+    - region "Welcome to Tillerstead" [ref=e16]:
+      - region "TCNA-Compliant Tile & Bathroom Remodeling" [ref=e17]:
+        - generic [ref=e18]:
+          - generic [ref=e19]:
+            - paragraph [ref=e20]: "NJ HIC #13VH10808800"
+            - heading "TCNA-Compliant Tile & Bathroom Remodeling" [level=1] [ref=e21]
+            - paragraph [ref=e22]: "Standards-based tile installation, waterproofing assemblies, and bathroom remodeling for South Jersey, New Jersey homeowners. Licensed NJ HIC #13VH10808800."
+            - generic [ref=e23]:
+              - link "Request Free Estimate" [ref=e24] [cursor=pointer]:
+                - /url: /contact/
+              - link "See Our Work" [ref=e25] [cursor=pointer]:
+                - /url: /portfolio/
+          - complementary "Featured project" [ref=e26]:
+            - figure [ref=e27]:
+              - img "TCNA-compliant tile installation by Tillerstead in New Jersey" [ref=e28]
+            - list [ref=e29]:
+              - listitem [ref=e30]:
+                - paragraph [ref=e31]: TCNA & ANSI Compliant
+                - paragraph [ref=e32]: Installations follow current TCNA Handbook and ANSI A108 standards.
+              - listitem [ref=e33]:
+                - paragraph [ref=e34]: Owner-Operated
+                - paragraph [ref=e35]: Direct communication and hands-on execution from start to finish.
+              - listitem [ref=e36]:
+                - paragraph [ref=e37]: South Jersey Service
+                - paragraph [ref=e38]: Atlantic, Ocean & Cape May Counties. Fully licensed and insured.
+            - text: </div>
+    - region "Credentials and protections" [ref=e39]:
+      - region "Credentials and protections" [ref=e40]:
+        - list [ref=e42]:
+          - listitem [ref=e43]:
+            - img
+            - generic [ref=e44]: "New Jersey HIC #13VH10808800"
+          - listitem [ref=e45]:
+            - img
+            - generic [ref=e46]: TCNA 2024 compliant assemblies
+          - listitem [ref=e47]:
+            - img
+            - generic [ref=e48]: Fully insured contractor
+          - listitem [ref=e49]:
+            - img
+            - generic [ref=e50]: Atlantic, Ocean & Cape May Counties, New Jersey
+          - listitem [ref=e51]:
+            - img
+            - generic [ref=e52]: Written scope, change orders, and warranties
+    - region [ref=e53]:
+      - region "Tile & Waterproofing Services That Hold Up" [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - paragraph [ref=e57]: Built for Durability, Not Just Day-One Looks
+            - heading "Tile & Waterproofing Services That Hold Up" [level=2] [ref=e58]:
+              - text: Tile & Waterproofing
+              - text: Services That Hold Up
+            - paragraph [ref=e59]: "Tile performs when the assembly is built correctly: proper substrate preparation, compatible mortars, verified coverage, movement accommodation, and waterproofing where the application demands it. We build to published industry methods and product specifications—not guesswork."
+            - paragraph [ref=e60]: You don’t need to speak “construction” to hire well. We explain the plan in plain language, provide a written scope, and document critical steps so you know what’s behind the finish.
+          - generic [ref=e61]:
+            - article [ref=e62]:
+              - heading "Tile Installation (Ceramic & Porcelain)" [level=3] [ref=e63]
+              - paragraph [ref=e64]: Floors and walls installed with correct prep, layout planning, and compatible materials— designed for clean lines and long-term performance.
+              - list [ref=e65]:
+                - listitem [ref=e66]: → Substrate evaluated and corrected for the tile format
+                - listitem [ref=e67]: → Mortar and grout selected for the tile, substrate, and exposure
+                - listitem [ref=e68]: → Coverage verified during installation, especially in wet areas
+                - listitem [ref=e69]: → Movement accommodation at perimeters and changes of plane
+                - listitem [ref=e70]: → Layout planned to reduce awkward cuts and narrow slivers
+              - link "Learn more about Tile Installation (Ceramic & Porcelain)" [ref=e71] [cursor=pointer]:
+                - /url: /services/#tile
+                - text: Learn more →
+            - article [ref=e72]:
+              - heading "Natural Stone & Large-Format Tile" [level=3] [ref=e73]
+              - paragraph [ref=e74]: Stone and large-format tile require tighter tolerances, stronger support, and careful planning. We build the substrate and setting system to match the material—not the other way around.
+              - list [ref=e75]:
+                - listitem [ref=e76]: → Flatness and substrate readiness addressed for large-format requirements
+                - listitem [ref=e77]: → Setting methods selected to support full contact and long-term stability
+                - listitem [ref=e78]: → Materials matched to stone type and manufacturer specifications
+                - listitem [ref=e79]: → Sealers used where appropriate, based on product data and application
+                - listitem [ref=e80]: → Heat, sunlight, and transitions considered in the plan
+              - link "Learn more about Natural Stone & Large-Format Tile" [ref=e81] [cursor=pointer]:
+                - /url: /services/#stone
+                - text: Learn more →
+            - article [ref=e82]:
+              - heading "Shower Waterproofing Systems" [level=3] [ref=e83]
+              - paragraph [ref=e84]: Wet areas are built as waterproofing assemblies first—then tiled. We use membranes and system components appropriate to the application, detailed at corners, penetrations, and drains, and verified before finishes.
+              - list [ref=e85]:
+                - listitem [ref=e86]: → Membrane and drain integration planned as one coherent system
+                - listitem [ref=e87]: → Corners, seams, niches, curbs, and penetrations detailed per system requirements
+                - listitem [ref=e88]: → Slope and drainage confirmed before tile installation
+                - listitem [ref=e89]: → Flood testing performed where required or method-appropriate (documented)
+                - listitem [ref=e90]: → Closeout guidance provided for care and long-term maintenance
+              - link "Learn more about Shower Waterproofing Systems" [ref=e91] [cursor=pointer]:
+                - /url: /services/#waterproofing
+                - text: Learn more →
+          - generic [ref=e92]:
+            - link "Request a Written Estimate" [ref=e93] [cursor=pointer]:
+              - /url: /contact/
+            - link "Explore the Portfolio" [ref=e94] [cursor=pointer]:
+              - /url: /portfolio/
+          - paragraph [ref=e95]: Work is performed using published tile industry methods and applicable product standards, with written scope, change orders (if needed), and warranty terms provided before work begins.
+    - region [ref=e96]:
+      - region "Real Reviews from Real South Jersey Homeowners" [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - paragraph [ref=e100]: Verified Client Feedback
+            - heading "Real Reviews from Real South Jersey Homeowners" [level=2] [ref=e101]
+          - generic [ref=e102]:
+            - article [ref=e103]:
+              - text: "\""
+              - generic "5 star rating" [ref=e104]: ★★★★★
+              - paragraph [ref=e106]: I hired Devon Tyler for tile work in my home and was impressed by his patience, precision, and professionalism. He took his time to get every cut right and made sure the job was solid and clean. I’d absolutely recommend him to anyone looking for quality tile work done with care.
+              - generic [ref=e107]:
+                - strong [ref=e108]: Maria J.
+                - generic [ref=e109]: Tile Installation and Replacement
+              - generic [ref=e110]: via Thumbtack
+            - article [ref=e111]:
+              - text: "\""
+              - generic "5 star rating" [ref=e112]: ★★★★★
+              - generic [ref=e113]:
+                - paragraph [ref=e114]: I recently hired Devon for a bathroom remodel, and my wife and I couldn’t be happier with the results. From start to finish, Devon was professional, punctual, and detail-oriented. He took the time to listen to what we wanted, offered helpful suggestions, and executed everything with precision.
+                - paragraph [ref=e115]: Devon kept the work area tidy throughout the project and completed the job on time without cutting corners.
+                - paragraph [ref=e116]: It’s rare to find someone who truly takes pride in their work the way Devon does. I’d highly recommend him.
+              - generic [ref=e117]:
+                - strong [ref=e118]: Ahmed A.
+                - generic [ref=e119]: Bathroom Remodel
+              - generic [ref=e120]: via Thumbtack
+            - article [ref=e121]:
+              - text: "\""
+              - generic "5 star rating" [ref=e122]: ★★★★★
+              - paragraph [ref=e124]: It was a pleasure working with Devon to repair our ceiling in our closet. We chose to repair it rather than replace. Devon walked us through what that would look like offering the most cost effective option. He was very professional. I recommend working with him!!
+              - generic [ref=e125]:
+                - strong [ref=e126]: Alexandra S.
+                - generic [ref=e127]: Drywall Repair and Texturing
+              - generic [ref=e128]: via Thumbtack
+    - region [ref=e129]:
+      - region "Transparent Workflow. Written Scope. Verified Steps." [ref=e130]:
+        - generic [ref=e131]:
+          - generic [ref=e132]:
+            - paragraph [ref=e133]: A Clear Sequence You Can Understand
+            - heading "Transparent Workflow. Written Scope. Verified Steps." [level=2] [ref=e134]:
+              - text: Transparent Workflow.
+              - text: Written Scope.
+              - text: Verified Steps.
+            - paragraph [ref=e135]: A bathroom remodel runs smoothly when decisions are made early and the build follows a defined order. We keep scope clear, document key phases, and confirm readiness before moving forward.
+          - generic [ref=e136]:
+            - generic [ref=e137]:
+              - generic "Step 1" [ref=e138]: "1"
+              - heading "Site Assessment & Scope Definition" [level=3] [ref=e139]
+              - paragraph [ref=e140]: We review the space, identify constraints, and define scope boundaries—so the estimate matches reality.
+            - generic [ref=e141]:
+              - generic "Step 2" [ref=e142]: "2"
+              - heading "Written Estimate & Approval" [level=3] [ref=e143]
+              - paragraph [ref=e144]: You receive a written proposal outlining scope, materials, sequencing, and warranty terms. Work begins after approval.
+            - generic [ref=e145]:
+              - generic "Step 3" [ref=e146]: "3"
+              - heading "Build, Verify, Document" [level=3] [ref=e147]
+              - paragraph [ref=e148]: We prepare surfaces, construct waterproofing assemblies where needed, and verify readiness before tile goes in. Key phases are documented.
+            - generic [ref=e149]:
+              - generic "Step 4" [ref=e150]: "4"
+              - heading "Closeout & Owner Packet" [level=3] [ref=e151]
+              - paragraph [ref=e152]: Walkthrough, care guidance, warranty paperwork, and a photo record of critical stages suitable for owner records.
+          - paragraph [ref=e153]:
+            - strong [ref=e154]: "Why this matters:"
+            - text: Many failures originate before the first tile is installed. That’s why we focus on substrate readiness, water management, and verification before finishes conceal the work.
+    - region [ref=e155]:
+      - region "The Right Components for Wet Areas and High-Traffic Spaces" [ref=e156]:
+        - generic [ref=e157]:
+          - generic [ref=e158]:
+            - paragraph [ref=e159]: Materials Selected for the Application
+            - heading "The Right Components for Wet Areas and High-Traffic Spaces" [level=2] [ref=e160]
+            - paragraph [ref=e161]: Materials are selected based on substrate, exposure, and performance requirements—not convenience. Mortars, membranes, and grouts are specified in writing and matched to the installation system.
+          - paragraph [ref=e163]: We don’t substitute “one-size-fits-all” products for system components without written approval. Product selection follows published data sheets and the requirements of the method used.
+          - generic [ref=e164]:
+            - generic [ref=e165]:
+              - heading "Mortars & Grouts" [level=3] [ref=e166]
+              - paragraph [ref=e167]: Mortars and grouts are selected based on tile type, size, substrate, and service conditions.
+              - list [ref=e168]:
+                - listitem [ref=e169]: • Compatible mortars selected for performance and environment
+                - listitem [ref=e170]: • Grout selected for joint width, cleaning needs, and exposure
+                - listitem [ref=e171]: • Higher-performance options used when the application demands it
+            - generic [ref=e172]:
+              - heading "Waterproofing Components" [level=3] [ref=e173]
+              - paragraph [ref=e174]: Waterproofing systems are chosen by application and integrated as complete assemblies, including drain connection and detailing.
+              - list [ref=e175]:
+                - listitem [ref=e176]: • Membranes and accessories selected as a matched system
+                - listitem [ref=e177]: • Seams and penetrations detailed per manufacturer requirements
+                - listitem [ref=e178]: • Verification performed before finishes conceal the work
+            - generic [ref=e179]:
+              - heading "Natural Stone & Specialty Materials" [level=3] [ref=e180]
+              - paragraph [ref=e181]: Stone installations are planned around support, compatibility, and maintenance expectations.
+              - list [ref=e182]:
+                - listitem [ref=e183]: • Stone-appropriate prep and setting materials
+                - listitem [ref=e184]: • Sealers used where appropriate per product data
+                - listitem [ref=e185]: • Finish and maintenance guidance provided at closeout
+          - paragraph [ref=e186]: Every installation is built as an assembly and documented for owner records.
+    - region [ref=e187]:
+      - region "Request a Written Estimate You Can Trust" [ref=e188]:
+        - generic [ref=e190]:
+          - paragraph [ref=e191]: Start with a Written Scope
+          - heading "Request a Written Estimate You Can Trust" [level=2] [ref=e192]
+          - paragraph [ref=e193]: "Clear scope, transparent pricing, and documentation you can keep. Licensed New Jersey HIC #13VH10808800—serving Atlantic, Ocean & Cape May Counties."
+          - generic [ref=e194]:
+            - link "Request a Written Estimate" [ref=e195] [cursor=pointer]:
+              - /url: /contact/
+            - link "Call/Text" [ref=e196] [cursor=pointer]:
+              - /url: tel:+16098628808
+          - paragraph [ref=e197]: "NJ HIC #13VH10808800 · Serving Atlantic, Ocean & Cape May"
+    - generic [ref=e198]:
+      - link "Request an Estimate" [ref=e199] [cursor=pointer]:
+        - /url: /contact/
+      - link "Call (609) 862-8808" [ref=e200] [cursor=pointer]:
+        - /url: tel:+16098628808
+    - generic [ref=e201]:
+      - generic "Licensed NJ Contractor" [ref=e202]: "NJ HIC #13VH10808800"
+      - generic "TCNA Compliant" [ref=e203]: TCNA-Compliant Methods
+      - generic "5-Star Reviews" [ref=e204]: ★ 5.0 Google & Thumbtack
+  - contentinfo "Site Footer" [ref=e205]:
+    - generic [ref=e206] [cursor=pointer]:
+      - generic [ref=e207]:
+        - link "- Go to homepage" [ref=e208]:
+          - /url: /
+          - img "-" [ref=e210]
+        - generic:
+          - paragraph
+          - paragraph
+      - navigation "Footer navigation" [ref=e211]:
+        - region "Service Areas" [ref=e212]:
+          - heading "Service Areas" [level=3] [ref=e213]:
+            - img
+            - text: Service Areas
+          - list [ref=e214]:
+            - listitem [ref=e215]:
+              - link "Atlantic County" [ref=e216]:
+                - /url: /atlantic-county-nj/
+            - listitem [ref=e217]:
+              - link "Ocean County" [ref=e218]:
+                - /url: /ocean-county-nj/
+            - listitem [ref=e219]:
+              - link "Cape May County" [ref=e220]:
+                - /url: /cape-may-county-nj/
+        - generic [ref=e221]:
+          - region "Learn" [ref=e222]:
+            - heading "Learn" [level=3] [ref=e223]:
+              - img
+              - text: Learn
+            - list [ref=e224]:
+              - listitem [ref=e225]:
+                - link "FAQ" [ref=e226]:
+                  - /url: /faq/
+              - listitem [ref=e227]:
+                - link "Products" [ref=e228]:
+                  - /url: /products/
+              - listitem [ref=e229]:
+                - link "Blog" [ref=e230]:
+                  - /url: /blog/
+          - region "Build Guides" [ref=e231]:
+            - heading "Build Guides" [level=3] [ref=e232]:
+              - img
+              - text: Build Guides
+            - list [ref=e233]:
+              - listitem [ref=e234]:
+                - link "Codes & Permits" [ref=e235]:
+                  - /url: /build/nj-codes-permits/
+              - listitem [ref=e236]:
+                - link "Shower Pans & Slopes" [ref=e237]:
+                  - /url: /build/shower-pans-slopes-drains/
+              - listitem [ref=e238]:
+                - link "Waterproofing Systems" [ref=e239]:
+                  - /url: /build/waterproofing-systems/
+              - listitem [ref=e240]:
+                - link "Curbless Showers" [ref=e241]:
+                  - /url: /build/curbs-curbless/
+              - listitem [ref=e242]:
+                - link "Benches & Niches" [ref=e243]:
+                  - /url: /build/framing-benches-niches/
+              - listitem [ref=e244]:
+                - link "Tile Standards (TCNA)" [ref=e245]:
+                  - /url: /build/tile-installation-standards/
+              - listitem [ref=e246]:
+                - link "Flood Testing" [ref=e247]:
+                  - /url: /build/flood-testing/
+              - listitem [ref=e248]:
+                - link "Common Build Failures" [ref=e249]:
+                  - /url: /build/common-build-failures/
+          - region "Company" [ref=e250]:
+            - heading "Company" [level=3] [ref=e251]:
+              - img
+              - text: Company
+            - list [ref=e252]:
+              - listitem [ref=e253]:
+                - link "About" [ref=e254]:
+                  - /url: /about/
+              - listitem [ref=e255]:
+                - link "For Contractors" [ref=e256]:
+                  - /url: /for-general-contractors/
+              - listitem [ref=e257]:
+                - link "Contact" [ref=e258]:
+                  - /url: /contact/
+      - region "Contact Us" [ref=e259]:
+        - heading "Contact Us" [level=3] [ref=e260]:
+          - img
+          - text: Contact Us
+        - generic [ref=e261]:
+          - generic [ref=e262]:
+            - img
+            - generic [ref=e263]:
+              - generic [ref=e264]: NJ HIC Licensed
+              - generic [ref=e265]: "#"
+          - generic [ref=e266]:
+            - img
+            - generic [ref=e267]: ","
+          - link "Call" [ref=e268]:
+            - /url: "tel:"
+            - text: ☎
+            - img
+          - link "Email" [ref=e269]:
+            - /url: "mailto:"
+            - text: ✉
+            - img
+      - generic [ref=e270]:
+        - navigation "Social media" [ref=e271]:
+          - link "Tillerstead on Thumbtack" [ref=e272]:
+            - /url: https://www.thumbtack.com/nj/absecon/tile/tillerstead-llc/service/547437618353160199
+            - img
+        - generic [ref=e273]:
+          - generic [ref=e274]:
+            - img
+            - text: Fully Insured
+          - generic [ref=e275]:
+            - img
+            - text: TCNA Compliant
+          - generic [ref=e276]:
+            - img
+            - text: Owner On-Site
+        - navigation "Legal" [ref=e277]:
+          - link "Privacy Policy" [ref=e278]:
+            - /url: /privacy/
+          - generic: ·
+          - link "Terms of Service" [ref=e279]:
+            - /url: /terms/
+          - generic: ·
+          - link "Business Ventures" [ref=e280]:
+            - /url: /ventures/
+          - generic: ·
+          - generic [ref=e281]: © 2026 . All rights reserved.
+  - region "Quick contact actions" [ref=e282]:
+    - link "Call now" [ref=e283] [cursor=pointer]:
+      - /url: tel:+16098628808
+      - text: ☎
+      - img [ref=e284]
+      - text: Call Now
+    - link "Text Us" [ref=e286] [cursor=pointer]:
+      - /url: sms:+16098628808
+      - img [ref=e287]
+      - text: Text Us
+    - link "Get Quote" [ref=e289] [cursor=pointer]:
+      - /url: /contact/
+      - img [ref=e290]
+      - text: Get Quote
+  - region "Accessibility options" [ref=e293]:
+    - button "Open accessibility options" [ref=e294] [cursor=pointer]:
+      - img
+      - generic [ref=e295]: Accessibility
+  - progressbar "Page scroll progress"
+  - button "Toggle performance mode" [ref=e296] [cursor=pointer]: ⚡ Speedy OFF
+  - navigation "Mobile bottom navigation" [ref=e297]:
+    - link "Home" [ref=e298] [cursor=pointer]:
+      - /url: /
+      - generic: 🏠
+      - generic [ref=e299]: Home
+    - link "Tools" [ref=e300] [cursor=pointer]:
+      - /url: /tools/
+      - generic: 🧮
+      - generic [ref=e301]: Tools
+    - link "Portfolio" [ref=e302] [cursor=pointer]:
+      - /url: /portfolio/
+      - generic: 🖼️
+      - generic [ref=e303]: Portfolio
+    - link "Contact" [ref=e304] [cursor=pointer]:
+      - /url: /contact/
+      - generic: ✉️
+      - generic [ref=e305]: Contact
+  - generic [ref=e308]: Scheduling January projects now
+  - button "Get a free quote" [ref=e309] [cursor=pointer]:
+    - generic: ✉
+    - generic [ref=e310]: Get Quote
+  - generic [ref=e312]:
+    - generic [ref=e313]: 🎉 New version available!
+    - button "Refresh" [ref=e314] [cursor=pointer]
+  - status [ref=e315]:
+    - text: 📅 Scheduling February projects now
+    - button "Close scheduling bar" [ref=e316] [cursor=pointer]: ✕
+```

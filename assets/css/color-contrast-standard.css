@@ -52,8 +52,8 @@
   color: var(--text-white) !important;
 }
 
-.bg-dark *:not(.btn):not(a),
-.bg-black *:not(.btn):not(a) {
+.bg-dark *:not(.btn, a),
+.bg-black *:not(.btn, a) {
   color: var(--text-white) !important;
 }
 
@@ -73,7 +73,7 @@
 /* Headings - Maximum Contrast */
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-white) !important;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+  text-shadow: 0 2px 8px rgb(0 0 0 / 80%) !important;
   font-weight: 900 !important;
 }
 
@@ -89,7 +89,7 @@ p {
   color: var(--text-white) !important;
   font-weight: 600 !important;
   line-height: 1.6 !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 60%) !important;
 }
 
 .bg-white p, .bg-off-white p {
@@ -106,9 +106,9 @@ p {
   font-weight: 900 !important;
   font-size: 1.125rem !important;
   text-shadow: 
-    0 2px 4px rgba(0, 0, 0, 0.9),
-    0 0 20px rgba(0, 0, 0, 0.5) !important;
-  background: rgba(0, 107, 61, 0.9) !important;
+    0 2px 4px rgb(0 0 0 / 90%),
+    0 0 20px rgb(0 0 0 / 50%) !important;
+  background: rgb(0 107 61 / 90%) !important;
   padding: 0.75rem 1.5rem !important;
   border-radius: 50px !important;
   border: 3px solid var(--brand-gold-bright) !important;
@@ -138,7 +138,7 @@ p {
   color: var(--brand-gold-bright) !important;
   font-weight: 900 !important;
   font-size: 1.25rem !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
+  text-shadow: 0 2px 4px rgb(0 0 0 / 80%) !important;
 }
 
 /* Testimonial meta (project type, source) */
@@ -156,7 +156,7 @@ p {
   font-size: 1rem !important;
   font-weight: 600 !important;
   line-height: 1.6 !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 60%) !important;
 }
 
 /* Location/region text */
@@ -166,7 +166,7 @@ p {
 [class*="region"] {
   color: var(--brand-gold-bright) !important;
   font-weight: 800 !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8) !important;
+  text-shadow: 0 2px 4px rgb(0 0 0 / 80%) !important;
 }
 
 /* ============================================================
@@ -181,14 +181,14 @@ button {
   color: var(--text-white) !important;
   font-weight: 900 !important;
   border: 3px solid var(--brand-green-light) !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6) !important;
+  text-shadow: 0 2px 4px rgb(0 0 0 / 60%) !important;
 }
 
 .btn:hover,
 .btn--primary:hover {
   background: var(--brand-green) !important;
   border-color: var(--brand-gold-bright) !important;
-  box-shadow: 0 4px 12px rgba(0, 163, 92, 0.5) !important;
+  box-shadow: 0 4px 12px rgb(0 163 92 / 50%) !important;
 }
 
 /* Secondary buttons */
@@ -213,12 +213,12 @@ a {
   color: var(--brand-gold-bright) !important;
   font-weight: 700 !important;
   text-decoration: underline !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 60%) !important;
 }
 
 a:hover {
   color: var(--brand-gold) !important;
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8) !important;
+  text-shadow: 0 2px 6px rgb(0 0 0 / 80%) !important;
 }
 
 /* Links on light backgrounds */
@@ -270,7 +270,7 @@ a:hover {
   font-weight: 900 !important;
   padding: 0.5rem 1rem !important;
   border-radius: 50px !important;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+  text-shadow: 0 1px 3px rgb(0 0 0 / 60%) !important;
 }
 
 /* ============================================================
@@ -305,7 +305,7 @@ select {
 input::placeholder,
 textarea::placeholder {
   color: var(--text-gray) !important;
-  opacity: 1 !important;
+  opacity: 100% !important;
 }
 
 label {
@@ -319,7 +319,6 @@ label {
    ============================================================ */
 
 @media (max-width: 768px) {
-  
   /* Increase font weight on mobile */
   p, span, div {
     font-weight: 700 !important;
@@ -328,8 +327,8 @@ label {
   /* Stronger shadows on mobile */
   h1, h2, h3 {
     text-shadow: 
-      0 3px 10px rgba(0, 0, 0, 0.9),
-      0 0 30px rgba(0, 0, 0, 0.6) !important;
+      0 3px 10px rgb(0 0 0 / 90%),
+      0 0 30px rgb(0 0 0 / 60%) !important;
   }
   
   /* Make all text larger on mobile */
@@ -347,7 +346,6 @@ label {
    ============================================================ */
 
 @media (prefers-color-scheme: dark) {
-  
   /* Even stronger contrast in dark mode */
   body {
     background: var(--bg-black) !important;

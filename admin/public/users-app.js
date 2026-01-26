@@ -114,7 +114,10 @@ function displayUsers(users) {
 // ==
 // USER MODAL
 // ==
+// MODALS & USER OPERATIONS
+// ==
 
+// eslint-disable-next-line no-unused-vars
 function openCreateUserModal() {
   editingUser = null;
   document.getElementById('modal-title').textContent = 'Create User';
@@ -125,9 +128,10 @@ function openCreateUserModal() {
   document.getElementById('user-modal').classList.add('active');
 }
 
+// eslint-disable-next-line no-unused-vars
 function editUser(username) {
   editingUser = users.find(u => u.username === username);
-  
+
   if (!editingUser) return;
 
   document.getElementById('modal-title').textContent = 'Edit User';
@@ -151,6 +155,7 @@ function closeUserModal() {
 // SAVE USER
 // ==
 
+// eslint-disable-next-line no-unused-vars
 async function saveUser(event) {
   event.preventDefault();
 
@@ -165,7 +170,7 @@ async function saveUser(event) {
   try {
     const endpoint = isEdit ? `/api/users/${editUsername}` : '/api/users';
     const method = isEdit ? 'PUT' : 'POST';
-    
+
     const body = {
       username,
       email,
@@ -202,6 +207,7 @@ async function saveUser(event) {
 // DELETE USER
 // ==
 
+// eslint-disable-next-line no-unused-vars
 async function deleteUser(username) {
   if (!confirm(`Are you sure you want to delete user "${username}"?`)) {
     return;
@@ -229,6 +235,7 @@ async function deleteUser(username) {
 // TOGGLE USER STATUS
 // ==
 
+// eslint-disable-next-line no-unused-vars
 async function toggleUserStatus(username, newStatus) {
   try {
     const response = await fetch(`/api/users/${username}/status`, {

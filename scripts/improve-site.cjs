@@ -7,18 +7,18 @@
  * Usage: node scripts/improve-site.js [--check|--fix|--report]
  */
 
-const fs = require("fs");
-const path = require("path");
-const { execSync } = require("child_process");
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
 // Color output helpers
 const colors = {
-  reset: "\x1b[0m",
-  bright: "\x1b[1m",
-  red: "\x1b[31m",
-  green: "\x1b[32m",
-  yellow: "\x1b[33m",
-  cyan: "\x1b[36m",
+  reset: '\x1b[0m',
+  bright: '\x1b[1m',
+  red: '\x1b[31m',
+  green: '\x1b[32m',
+  yellow: '\x1b[33m',
+  cyan: '\x1b[36m',
 };
 
 const log = {
@@ -36,14 +36,14 @@ const log = {
 const config = {
   rootDir: process.cwd(),
   srcDirs: {
-    sass: "_sass",
-    includes: "_includes",
-    layouts: "_layouts",
-    pages: "pages",
-    assets: "assets",
+    sass: '_sass',
+    includes: '_includes',
+    layouts: '_layouts',
+    pages: 'pages',
+    assets: 'assets',
   },
-  outputDir: "_site",
-  reports: "reports",
+  outputDir: '_site',
+  reports: 'reports',
 };
 
 // Issue tracking
@@ -60,34 +60,34 @@ const issues = {
 // ============================================================================
 
 async function checkStructure() {
-  log.section("Checking Site Structure");
+  log.section('Checking Site Structure');
 
   const checks = [
     {
-      name: "Required directories exist",
+      name: 'Required directories exist',
       check: () => {
         const requiredDirs = [
-          "_sass",
-          "_includes",
-          "_layouts",
-          "pages",
-          "assets",
+          '_sass',
+          '_includes',
+          '_layouts',
+          'pages',
+          'assets',
         ];
         const missing = requiredDirs.filter((dir) => !fs.existsSync(dir));
         if (missing.length > 0) {
-          issues.high.push(`Missing directories: ${missing.join(", ")}`);
+          issues.high.push(`Missing directories: ${missing.join(', ')}`);
           return false;
         }
         return true;
       },
       fix: () => {
         const requiredDirs = [
-          "_sass",
-          "_includes",
-          "_layouts",
-          "pages",
-          "assets",
-          "reports",
+          '_sass',
+          '_includes',
+          '_layouts',
+          'pages',
+          'assets',
+          'reports',
         ];
         requiredDirs.forEach((dir) => {
           if (!fs.existsSync(dir)) {
@@ -99,11 +99,11 @@ async function checkStructure() {
       },
     },
     {
-      name: "No duplicate HTML/MD files in pages/",
+      name: 'No duplicate HTML/MD files in pages/',
       check: () => {
-        if (!fs.existsSync("pages")) return true;
+        if (!fs.existsSync('pages')) return true;
 
-        const files = fs.readdirSync("pages");
+        const files = fs.readdirSync('pages');
         const basenames = new Map();
         const duplicates = [];
 
@@ -120,7 +120,7 @@ async function checkStructure() {
 
         if (duplicates.length > 0) {
           issues.critical.push(
-            `Duplicate page files found: ${duplicates.join("; ")}`,
+            `Duplicate page files found: ${duplicates.join('; ')}`,
           );
           return false;
         }
@@ -128,18 +128,18 @@ async function checkStructure() {
       },
       fix: () => {
         // Manual intervention required - log for review
-        log.warning("Duplicate files require manual review");
+        log.warning('Duplicate files require manual review');
       },
     },
     {
-      name: "Consistent file naming (kebab-case)",
+      name: 'Consistent file naming (kebab-case)',
       check: () => {
         const badNames = [];
         const checkDir = (dir) => {
           if (!fs.existsSync(dir)) return;
           fs.readdirSync(dir, { withFileTypes: true }).forEach((entry) => {
             const name = entry.name;
-            if (name.startsWith(".") || name.startsWith("_")) return;
+            if (name.startsWith('.') || name.startsWith('_')) return;
 
             // Check for non-kebab-case (camelCase, snake_case, spaces)
             if (/[A-Z]/.test(name) || /_/.test(name) || /\s/.test(name)) {
@@ -152,10 +152,10 @@ async function checkStructure() {
           });
         };
 
-        ["_sass", "_includes", "pages"].forEach(checkDir);
+        ['_sass', '_includes', 'pages'].forEach(checkDir);
 
         if (badNames.length > 0) {
-          issues.low.push(`Non-kebab-case files: ${badNames.join(", ")}`);
+          issues.low.push(`Non-kebab-case files: ${badNames.join(', ')}`);
           return false;
         }
         return true;
@@ -186,32 +186,32 @@ async function checkStructure() {
 // ============================================================================
 
 async function checkStyles() {
-  log.section("Checking CSS/SCSS Quality");
+  log.section('Checking CSS/SCSS Quality');
 
   const checks = [
     {
-      name: "All SCSS files compile without errors",
+      name: 'All SCSS files compile without errors',
       check: () => {
         try {
-          execSync("npm run build:css", { stdio: "pipe" });
+          execSync('npm run build:css', { stdio: 'pipe' });
           return true;
         } catch (e) {
-          issues.critical.push("SCSS compilation failed");
+          issues.critical.push('SCSS compilation failed');
           return false;
         }
       },
       fix: () => {
-        log.warning("SCSS errors require manual fixing");
+        log.warning('SCSS errors require manual fixing');
       },
     },
     {
-      name: "No hardcoded colors (use design tokens)",
+      name: 'No hardcoded colors (use design tokens)',
       check: () => {
         const hardcodedColors = [];
         const colorRegex = /#[0-9a-fA-F]{3,6}(?![^{]*})/g;
 
         const checkFile = (filePath) => {
-          const content = fs.readFileSync(filePath, "utf8");
+          const content = fs.readFileSync(filePath, 'utf8');
           const matches = content.match(colorRegex);
           if (matches && matches.length > 5) {
             // Allow few for gradients
@@ -227,17 +227,17 @@ async function checkStyles() {
             const fullPath = path.join(dir, entry.name);
             if (entry.isDirectory()) {
               walkDir(fullPath);
-            } else if (entry.name.endsWith(".scss")) {
+            } else if (entry.name.endsWith('.scss')) {
               checkFile(fullPath);
             }
           });
         };
 
-        walkDir("_sass");
+        walkDir('_sass');
 
         if (hardcodedColors.length > 0) {
           issues.medium.push(
-            `Hardcoded colors found: ${hardcodedColors.join("; ")}`,
+            `Hardcoded colors found: ${hardcodedColors.join('; ')}`,
           );
           return false;
         }
@@ -245,37 +245,37 @@ async function checkStyles() {
       },
     },
     {
-      name: "Mobile breakpoints defined",
+      name: 'Mobile breakpoints defined',
       check: () => {
-        const mainCss = fs.existsSync("assets/css/style.css")
-          ? fs.readFileSync("assets/css/style.css", "utf8")
-          : "";
+        const mainCss = fs.existsSync('assets/css/style.css')
+          ? fs.readFileSync('assets/css/style.css', 'utf8')
+          : '';
 
         const hasBreakpoints =
-          mainCss.includes("@media") &&
-          (mainCss.includes("max-width") || mainCss.includes("min-width"));
+          mainCss.includes('@media') &&
+          (mainCss.includes('max-width') || mainCss.includes('min-width'));
 
         if (!hasBreakpoints) {
-          issues.high.push("No responsive breakpoints found in CSS");
+          issues.high.push('No responsive breakpoints found in CSS');
           return false;
         }
         return true;
       },
     },
     {
-      name: "Contrast ratios meet WCAG AA",
+      name: 'Contrast ratios meet WCAG AA',
       check: () => {
         // Run contrast checker if available
-        if (fs.existsSync("scripts/check-contrast.js")) {
+        if (fs.existsSync('scripts/check-contrast.js')) {
           try {
-            execSync("node scripts/check-contrast.js", { stdio: "pipe" });
+            execSync('node scripts/check-contrast.js', { stdio: 'pipe' });
             return true;
           } catch (e) {
-            issues.high.push("Contrast ratio checks failed");
+            issues.high.push('Contrast ratio checks failed');
             return false;
           }
         }
-        log.warning("Contrast checker script not found");
+        log.warning('Contrast checker script not found');
         return true; // Skip if script doesn't exist
       },
     },
@@ -304,17 +304,17 @@ async function checkStyles() {
 // ============================================================================
 
 async function checkFunctionality() {
-  log.section("Checking Site Functionality");
+  log.section('Checking Site Functionality');
 
   const checks = [
     {
-      name: "All forms have proper attributes",
+      name: 'All forms have proper attributes',
       check: () => {
         const badForms = [];
 
-        if (fs.existsSync("_site")) {
+        if (fs.existsSync('_site')) {
           const checkFile = (filePath) => {
-            const content = fs.readFileSync(filePath, "utf8");
+            const content = fs.readFileSync(filePath, 'utf8');
             const formMatches = content.match(/<form[^>]*>/g);
 
             if (formMatches) {
@@ -322,13 +322,13 @@ async function checkFunctionality() {
                 // Check for action="#" or missing method
                 if (
                   form.includes('action="#"') &&
-                  !form.includes("data-netlify")
+                  !form.includes('data-netlify')
                 ) {
                   badForms.push(
                     `${filePath}: Form with action="#" and no Netlify`,
                   );
                 }
-                if (!form.includes("method=")) {
+                if (!form.includes('method=')) {
                   badForms.push(`${filePath}: Form missing method attribute`);
                 }
               });
@@ -338,34 +338,34 @@ async function checkFunctionality() {
           const walkDir = (dir) => {
             fs.readdirSync(dir, { withFileTypes: true }).forEach((entry) => {
               const fullPath = path.join(dir, entry.name);
-              if (entry.isDirectory() && !entry.name.startsWith(".")) {
+              if (entry.isDirectory() && !entry.name.startsWith('.')) {
                 walkDir(fullPath);
-              } else if (entry.name.endsWith(".html")) {
+              } else if (entry.name.endsWith('.html')) {
                 checkFile(fullPath);
               }
             });
           };
 
-          walkDir("_site");
+          walkDir('_site');
         }
 
         if (badForms.length > 0) {
-          issues.critical.push(`Form issues: ${badForms.join("; ")}`);
+          issues.critical.push(`Form issues: ${badForms.join('; ')}`);
           return false;
         }
         return true;
       },
       fix: () => {
-        log.warning("Form issues require manual review of form includes");
+        log.warning('Form issues require manual review of form includes');
       },
     },
     {
-      name: "Images have alt attributes",
+      name: 'Images have alt attributes',
       check: () => {
-        const missingAlts = [];
+        const _missingAlts = [];
 
-        if (fs.existsSync("_site/index.html")) {
-          const content = fs.readFileSync("_site/index.html", "utf8");
+        if (fs.existsSync('_site/index.html')) {
+          const content = fs.readFileSync('_site/index.html', 'utf8');
           const imgWithoutAlt = content.match(/<img(?![^>]*alt=)[^>]*>/g);
 
           if (imgWithoutAlt && imgWithoutAlt.length > 0) {
@@ -379,36 +379,36 @@ async function checkFunctionality() {
       },
     },
     {
-      name: "No broken internal links",
+      name: 'No broken internal links',
       check: () => {
         // Basic check - could be enhanced
-        if (fs.existsSync("_site")) {
+        if (fs.existsSync('_site')) {
           const brokenLinks = [];
           const checkFile = (filePath) => {
-            const content = fs.readFileSync(filePath, "utf8");
+            const content = fs.readFileSync(filePath, 'utf8');
             const links = content.match(/href="\/[^"]*"/g) || [];
 
             links.forEach((link) => {
               const url = link.match(/href="([^"]*)"/)[1];
-              const targetPath = path.join("_site", url);
+              const targetPath = path.join('_site', url);
 
               if (
                 !fs.existsSync(targetPath) &&
-                !fs.existsSync(targetPath + ".html") &&
-                !fs.existsSync(path.join(targetPath, "index.html"))
+                !fs.existsSync(targetPath + '.html') &&
+                !fs.existsSync(path.join(targetPath, 'index.html'))
               ) {
                 brokenLinks.push(`${filePath}: ${url}`);
               }
             });
           };
 
-          if (fs.existsSync("_site/index.html")) {
-            checkFile("_site/index.html");
+          if (fs.existsSync('_site/index.html')) {
+            checkFile('_site/index.html');
           }
 
           if (brokenLinks.length > 0) {
             issues.medium.push(
-              `Potential broken links: ${brokenLinks.slice(0, 3).join("; ")}`,
+              `Potential broken links: ${brokenLinks.slice(0, 3).join('; ')}`,
             );
             return false;
           }
@@ -417,18 +417,18 @@ async function checkFunctionality() {
       },
     },
     {
-      name: "JavaScript loaded with defer/async",
+      name: 'JavaScript loaded with defer/async',
       check: () => {
         const badScripts = [];
 
-        if (fs.existsSync("_site/index.html")) {
-          const content = fs.readFileSync("_site/index.html", "utf8");
+        if (fs.existsSync('_site/index.html')) {
+          const content = fs.readFileSync('_site/index.html', 'utf8');
           const scripts = content.match(/<script[^>]*src=[^>]*>/g) || [];
 
           scripts.forEach((script) => {
             if (
-              !script.includes("defer") &&
-              !script.includes("async") &&
+              !script.includes('defer') &&
+              !script.includes('async') &&
               !script.includes('type="module"')
             ) {
               badScripts.push(script);
@@ -470,14 +470,14 @@ async function checkFunctionality() {
 // ============================================================================
 
 async function checkPerformance() {
-  log.section("Checking Performance");
+  log.section('Checking Performance');
 
   const checks = [
     {
-      name: "CSS file size < 100KB",
+      name: 'CSS file size < 100KB',
       check: () => {
-        if (fs.existsSync("assets/css/style.css")) {
-          const stats = fs.statSync("assets/css/style.css");
+        if (fs.existsSync('assets/css/style.css')) {
+          const stats = fs.statSync('assets/css/style.css');
           const sizeKB = stats.size / 1024;
 
           if (sizeKB > 100) {
@@ -490,9 +490,9 @@ async function checkPerformance() {
       },
     },
     {
-      name: "Images optimized (WebP preferred)",
+      name: 'Images optimized (WebP preferred)',
       check: () => {
-        const imageDir = "assets/img";
+        const imageDir = 'assets/img';
         if (!fs.existsSync(imageDir)) return true;
 
         let totalImages = 0;
@@ -505,7 +505,7 @@ async function checkPerformance() {
               walkDir(fullPath);
             } else if (/\.(jpg|jpeg|png|webp)$/i.test(entry.name)) {
               totalImages++;
-              if (entry.name.endsWith(".webp")) webpCount++;
+              if (entry.name.endsWith('.webp')) webpCount++;
             }
           });
         };
@@ -524,17 +524,17 @@ async function checkPerformance() {
       },
     },
     {
-      name: "Lazy loading implemented",
+      name: 'Lazy loading implemented',
       check: () => {
-        if (fs.existsSync("_site/index.html")) {
-          const content = fs.readFileSync("_site/index.html", "utf8");
+        if (fs.existsSync('_site/index.html')) {
+          const content = fs.readFileSync('_site/index.html', 'utf8');
           const imgs = content.match(/<img[^>]*>/g) || [];
           const lazyImgs = imgs.filter((img) =>
             img.includes('loading="lazy"'),
           ).length;
 
           if (imgs.length > 3 && lazyImgs === 0) {
-            issues.medium.push("No images use lazy loading");
+            issues.medium.push('No images use lazy loading');
             return false;
           }
 
@@ -568,10 +568,10 @@ async function checkPerformance() {
 // ============================================================================
 
 function generateReport() {
-  log.section("Generating Improvement Report");
+  log.section('Generating Improvement Report');
 
-  const timestamp = new Date().toISOString().split("T")[0];
-  const reportPath = path.join("reports", `site-improvement-${timestamp}.md`);
+  const timestamp = new Date().toISOString().split('T')[0];
+  const reportPath = path.join('reports', `site-improvement-${timestamp}.md`);
 
   const totalIssues =
     issues.critical.length +
@@ -589,30 +589,30 @@ function generateReport() {
 
 ## Critical Issues (${issues.critical.length})
 
-${issues.critical.length > 0 ? issues.critical.map((i) => `- ⛔ ${i}`).join("\n") : "_None_"}
+${issues.critical.length > 0 ? issues.critical.map((i) => `- ⛔ ${i}`).join('\n') : '_None_'}
 
 ## High Priority (${issues.high.length})
 
-${issues.high.length > 0 ? issues.high.map((i) => `- 🔴 ${i}`).join("\n") : "_None_"}
+${issues.high.length > 0 ? issues.high.map((i) => `- 🔴 ${i}`).join('\n') : '_None_'}
 
 ## Medium Priority (${issues.medium.length})
 
-${issues.medium.length > 0 ? issues.medium.map((i) => `- 🟡 ${i}`).join("\n") : "_None_"}
+${issues.medium.length > 0 ? issues.medium.map((i) => `- 🟡 ${i}`).join('\n') : '_None_'}
 
 ## Low Priority (${issues.low.length})
 
-${issues.low.length > 0 ? issues.low.map((i) => `- 🔵 ${i}`).join("\n") : "_None_"}
+${issues.low.length > 0 ? issues.low.map((i) => `- 🔵 ${i}`).join('\n') : '_None_'}
 
 ## Fixed in This Run (${issues.fixed.length})
 
-${issues.fixed.length > 0 ? issues.fixed.map((i) => `- ✅ ${i}`).join("\n") : "_None_"}
+${issues.fixed.length > 0 ? issues.fixed.map((i) => `- ✅ ${i}`).join('\n') : '_None_'}
 
 ---
 
 ## Recommendations
 
 ### Immediate Actions
-${issues.critical.length > 0 ? "- Fix all critical issues immediately\n" : ""}${issues.high.length > 0 ? "- Address high priority issues within 24 hours\n" : ""}
+${issues.critical.length > 0 ? '- Fix all critical issues immediately\n' : ''}${issues.high.length > 0 ? '- Address high priority issues within 24 hours\n' : ''}
 
 ### Short-term (This Week)
 - Review medium priority issues
@@ -628,8 +628,8 @@ ${issues.critical.length > 0 ? "- Fix all critical issues immediately\n" : ""}${
 **Version:** 1.0.0
 `;
 
-  if (!fs.existsSync("reports")) {
-    fs.mkdirSync("reports", { recursive: true });
+  if (!fs.existsSync('reports')) {
+    fs.mkdirSync('reports', { recursive: true });
   }
 
   fs.writeFileSync(reportPath, report);
@@ -644,7 +644,7 @@ ${issues.critical.length > 0 ? "- Fix all critical issues immediately\n" : ""}${
 
 async function main() {
   const args = process.argv.slice(2);
-  const mode = args[0] || "--check";
+  const mode = args[0] || '--check';
 
   console.log(`
 ╔════════════════════════════════════════════════════════════════╗
@@ -664,8 +664,8 @@ async function main() {
   const performanceChecks = await checkPerformance();
 
   // Apply fixes if --fix mode
-  if (mode === "--fix") {
-    log.section("Applying Fixes");
+  if (mode === '--fix') {
+    log.section('Applying Fixes');
 
     [
       ...structureChecks,
@@ -687,7 +687,7 @@ async function main() {
   const reportPath = generateReport();
 
   // Summary
-  log.section("Summary");
+  log.section('Summary');
 
   const totalIssues =
     issues.critical.length +

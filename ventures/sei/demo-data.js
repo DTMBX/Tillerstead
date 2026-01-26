@@ -55,7 +55,7 @@ const DEMO_USERS = {
       nightTripPercent: 6
     }
   },
-  
+
   'michael-chen': {
     id: 'user-002',
     name: 'Michael Chen',
@@ -122,7 +122,7 @@ const DEMO_USERS = {
       nightTripPercent: 32
     }
   },
-  
+
   'emma-rodriguez': {
     id: 'user-003',
     name: 'Emma Rodriguez',
@@ -178,7 +178,7 @@ const DEMO_USERS = {
       nightTripPercent: 2
     }
   },
-  
+
   'james-williams': {
     id: 'user-004',
     name: 'James Williams',

@@ -1,6 +1,6 @@
 // run-nav-shim.cjs — minimal DOM shim to execute browser nav.js under Node (CommonJS)
-const path = require("path");
-const navPath = path.resolve(__dirname, "assets", "js", "nav.js");
+const path = require('path');
+const navPath = path.resolve(__dirname, 'assets', 'js', 'nav.js');
 
 // Minimal classList shim
 function makeClassList() {
@@ -16,7 +16,7 @@ function makeClassList() {
       return s.has(c);
     },
     toString() {
-      return Array.from(s).join(" ");
+      return Array.from(s).join(' ');
     },
   };
 }
@@ -37,14 +37,14 @@ function createElement(tag) {
     },
     setAttribute(k, v) {
       this.attributes[k] = String(v);
-      if (k.startsWith("data-")) this.dataset[k.slice(5)] = v;
+      if (k.startsWith('data-')) this.dataset[k.slice(5)] = v;
     },
     getAttribute(k) {
       return this.attributes[k];
     },
     removeAttribute(k) {
       delete this.attributes[k];
-      if (k.startsWith("data-")) delete this.dataset[k.slice(5)];
+      if (k.startsWith('data-')) delete this.dataset[k.slice(5)];
     },
     addEventListener(ev, fn) {
       listeners[ev] = listeners[ev] || [];
@@ -65,7 +65,7 @@ function createElement(tag) {
     },
     querySelector(sel) {
       // minimal for nav.querySelector('button, a')
-      if (sel && (sel.includes("button") || sel.includes("a")))
+      if (sel && (sel.includes('button') || sel.includes('a')))
         return this._button || null;
       return null;
     },
@@ -88,18 +88,18 @@ global.requestAnimationFrame = global.window.requestAnimationFrame;
 
 // document
 global.document = global.document || {};
-const header = createElement("header");
-const navShell = createElement("navShell");
-const nav = createElement("nav");
-const navToggle = createElement("button");
-const navClose = createElement("button");
-const navOverlay = createElement("overlay");
+const header = createElement('header');
+const navShell = createElement('navShell');
+const nav = createElement('nav');
+const navToggle = createElement('button');
+const navClose = createElement('button');
+const navOverlay = createElement('overlay');
 
 // wire simple relationships
 header.querySelector = (sel) => {
   if (!sel) return null;
-  if (sel === "[data-nav-container]") return navShell;
-  if (sel === "#mobile-nav") return nav;
+  if (sel === '[data-nav-container]') return navShell;
+  if (sel === '#mobile-nav') return nav;
   return null;
 };
 
@@ -107,11 +107,11 @@ header.querySelector = (sel) => {
 nav._button = navClose; // so nav.querySelector('button, a') returns navClose
 
 // basic attribute defaults
-nav.setAttribute("aria-expanded", "false");
+nav.setAttribute('aria-expanded', 'false');
 navShell.setAttribute = function (k, v) {
   this.attributes = this.attributes || {};
   this.attributes[k] = v;
-  if (k.startsWith("data-")) this.dataset[k.slice(5)] = v;
+  if (k.startsWith('data-')) this.dataset[k.slice(5)] = v;
 };
 navShell.getAttribute = function (k) {
   return (this.attributes || {})[k];
@@ -124,17 +124,17 @@ const body = { classList: makeClassList() };
 document.querySelector = (sel) => {
   if (!sel) return null;
   switch (sel) {
-    case ".nav-toggle":
+    case '.nav-toggle':
       return navToggle;
-    case ".site-header":
+    case '.site-header':
       return header;
-    case "[data-nav-container]":
+    case '[data-nav-container]':
       return navShell;
-    case "#mobile-nav":
+    case '#mobile-nav':
       return nav;
-    case "[data-nav-close]":
+    case '[data-nav-close]':
       return navClose;
-    case "[data-nav-overlay]":
+    case '[data-nav-overlay]':
       return navOverlay;
     default:
       return null;
@@ -143,10 +143,10 @@ document.querySelector = (sel) => {
 document.querySelectorAll = () => [];
 document.body = body;
 document.activeElement = body;
-document.addEventListener = (ev, fn) => {
+document.addEventListener = (_ev, _fn) => {
   /* noop for tests */
 };
-document.removeEventListener = (ev, fn) => {
+document.removeEventListener = (_ev, _fn) => {
   /* noop */
 };
 
@@ -154,7 +154,7 @@ document.removeEventListener = (ev, fn) => {
 global.console = console;
 
 // minimal window.addEventListener
-window.addEventListener = (ev, fn) => {
+window.addEventListener = (_ev, _fn) => {
   /* noop */
 };
 
@@ -163,46 +163,46 @@ try {
   // Require the nav.js file so it runs against the shims above
   require(navPath);
   console.log(
-    "nav.js loaded. Exposed globals:",
-    typeof window.tsOpenNav === "function"
-      ? "tsOpenNav() available"
-      : "not available",
+    'nav.js loaded. Exposed globals:',
+    typeof window.tsOpenNav === 'function'
+      ? 'tsOpenNav() available'
+      : 'not available',
   );
 } catch (err) {
-  console.error("Error loading nav.js:", err);
+  console.error('Error loading nav.js:', err);
   process.exit(1);
 }
 
 // Run open/close sequence and print state
 const dumpState = (label) => {
-  console.log("\n== " + label + " ==");
-  console.log("navShell classes:", navShell.classList.toString());
-  console.log("nav classes:", nav.classList.toString());
-  console.log("body classes:", document.body.classList.toString());
+  console.log('\n== ' + label + ' ==');
+  console.log('navShell classes:', navShell.classList.toString());
+  console.log('nav classes:', nav.classList.toString());
+  console.log('body classes:', document.body.classList.toString());
   console.log(
-    "nav aria-expanded:",
-    nav.getAttribute && nav.getAttribute("aria-expanded"),
+    'nav aria-expanded:',
+    nav.getAttribute && nav.getAttribute('aria-expanded'),
   );
-  console.log("nav dataset.open:", nav.dataset && nav.dataset.open);
+  console.log('nav dataset.open:', nav.dataset && nav.dataset.open);
   console.log(
-    "navToggle aria-expanded:",
-    navToggle.getAttribute && navToggle.getAttribute("aria-expanded"),
+    'navToggle aria-expanded:',
+    navToggle.getAttribute && navToggle.getAttribute('aria-expanded'),
   );
 };
 
 // Open nav via exposed API if available
-if (typeof window.tsOpenNav === "function") {
+if (typeof window.tsOpenNav === 'function') {
   window.tsOpenNav();
   setTimeout(() => {
-    dumpState("After openNav");
+    dumpState('After openNav');
     // Close
-    if (typeof window.tsCloseNav === "function") window.tsCloseNav();
+    if (typeof window.tsCloseNav === 'function') window.tsCloseNav();
     setTimeout(() => {
-      dumpState("After closeNav");
+      dumpState('After closeNav');
       process.exit(0);
     }, 50);
   }, 50);
 } else {
-  console.error("tsOpenNav not exposed — cannot run open/close");
+  console.error('tsOpenNav not exposed — cannot run open/close');
   process.exit(1);
 }

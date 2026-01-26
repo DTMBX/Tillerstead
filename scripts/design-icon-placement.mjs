@@ -5,17 +5,17 @@
  * for maximum visual impact and user experience
  */
 
-import fs from "fs";
-import path from "path";
-import { fileURLToPath } from "url";
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Icon placement strategy mapping
-const ICON_PLACEMENTS = {
+const _ICON_PLACEMENTS = {
   // Trust bar - certifications and credentials
-  "sections/section-trust-bar.html": {
+  'sections/section-trust-bar.html': {
     replacements: [
       {
         search: /<li class="trust-bar__item">NJ HIC #13VH10808800<\/li>/,
@@ -48,7 +48,7 @@ const ICON_PLACEMENTS = {
   },
 
   // CTA Section - call-to-action with phone icon
-  "cta-section.html": {
+  'cta-section.html': {
     insertions: [
       {
         after: /<a[^>]+class="[^"]*btn[^"]*"[^>]*href="tel:/,
@@ -70,7 +70,7 @@ const ICON_PLACEMENTS = {
   },
 
   // Footer - contact information
-  "footer.html": {
+  'footer.html': {
     replacements: [
       {
         search: /class="footer-phone"/,
@@ -90,63 +90,63 @@ const ICON_PLACEMENTS = {
   },
 
   // Hero facts - feature highlights
-  "page-hero.html": {
+  'page-hero.html': {
     patterns: [
       {
-        fact: "TCNA",
-        icon: "check-circle",
+        fact: 'TCNA',
+        icon: 'check-circle',
       },
       {
-        fact: "Licensed",
-        icon: "badge",
+        fact: 'Licensed',
+        icon: 'badge',
       },
       {
-        fact: "Documented",
-        icon: "document",
+        fact: 'Documented',
+        icon: 'document',
       },
       {
-        fact: "Verified",
-        icon: "clipboard",
+        fact: 'Verified',
+        icon: 'clipboard',
       },
     ],
   },
 };
 
 // Service to icon mapping
-const SERVICE_ICONS = {
-  tile: "icon-tile",
-  stone: "icon-stone",
-  waterproofing: "icon-waterproofing",
-  flooring: "icon-tile",
-  bathroom: "icon-waterproofing",
-  shower: "icon-waterproofing",
+const _SERVICE_ICONS = {
+  tile: 'icon-tile',
+  stone: 'icon-stone',
+  waterproofing: 'icon-waterproofing',
+  flooring: 'icon-tile',
+  bathroom: 'icon-waterproofing',
+  shower: 'icon-waterproofing',
 };
 
 // Process step icons
-const PROCESS_ICONS = [
-  "clipboard", // 1. Initial consultation
-  "ruler", // 2. Measurement & planning
-  "document", // 3. Detailed proposal
-  "check-circle", // 4. Material selection
-  "tool", // 5. Installation
-  "badge", // 6. Final inspection
+const _PROCESS_ICONS = [
+  'clipboard', // 1. Initial consultation
+  'ruler', // 2. Measurement & planning
+  'document', // 3. Detailed proposal
+  'check-circle', // 4. Material selection
+  'tool', // 5. Installation
+  'badge', // 6. Final inspection
 ];
 
-console.log("🎨 Tillerstead Icon Placement Designer\n");
-console.log("=".repeat(50));
+console.log('🎨 Tillerstead Icon Placement Designer\n');
+console.log('='.repeat(50));
 
 /**
  * Apply icon to trust bar items
  */
 function enhanceTrustBar() {
-  const filePath = path.join(__dirname, "../_includes/sections/section-trust-bar.html");
+  const filePath = path.join(__dirname, '../_includes/sections/section-trust-bar.html');
 
   if (!fs.existsSync(filePath)) {
-    console.log("⚠️  Trust bar not found, skipping...");
+    console.log('⚠️  Trust bar not found, skipping...');
     return;
   }
 
-  let content = fs.readFileSync(filePath, "utf8");
+  let content = fs.readFileSync(filePath, 'utf8');
   const original = content;
 
   // Add icons to each trust bar item
@@ -181,8 +181,8 @@ function enhanceTrustBar() {
   );
 
   if (content !== original) {
-    fs.writeFileSync(filePath, content, "utf8");
-    console.log("✅ Enhanced section-trust-bar.html with icons");
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log('✅ Enhanced section-trust-bar.html with icons');
   }
 }
 
@@ -190,18 +190,18 @@ function enhanceTrustBar() {
  * Add icons to CTA buttons
  */
 function enhanceCTA() {
-  const filePath = path.join(__dirname, "../_includes/cta-section.html");
+  const filePath = path.join(__dirname, '../_includes/cta-section.html');
 
   if (!fs.existsSync(filePath)) {
-    console.log("⚠️  CTA section not found, skipping...");
+    console.log('⚠️  CTA section not found, skipping...');
     return;
   }
 
-  let content = fs.readFileSync(filePath, "utf8");
+  let content = fs.readFileSync(filePath, 'utf8');
   const original = content;
 
   // Add phone icon to phone CTAs
-  if (content.includes("tel:") && !content.includes("#icon-phone")) {
+  if (content.includes('tel:') && !content.includes('#icon-phone')) {
     content = content.replace(
       /(href="tel:[^"]+">)\s*([^<]+)/g,
       `$1
@@ -213,7 +213,7 @@ function enhanceCTA() {
   }
 
   // Add mail icon to email CTAs
-  if (content.includes("mailto:") && !content.includes("#icon-mail")) {
+  if (content.includes('mailto:') && !content.includes('#icon-mail')) {
     content = content.replace(
       /(href="mailto:[^"]+">)\s*([^<]+)/g,
       `$1
@@ -225,8 +225,8 @@ function enhanceCTA() {
   }
 
   if (content !== original) {
-    fs.writeFileSync(filePath, content, "utf8");
-    console.log("✅ Enhanced cta-section.html with icons");
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log('✅ Enhanced cta-section.html with icons');
   }
 }
 
@@ -234,7 +234,7 @@ function enhanceCTA() {
  * Create enhanced process section with icons
  */
 function createProcessSection() {
-  const filePath = path.join(__dirname, "../_includes/sections/process.html");
+  const filePath = path.join(__dirname, '../_includes/sections/process.html');
 
   const processContent = `{% comment %}
 Process Section - TCNA-compliant workflow with icons
@@ -340,15 +340,15 @@ Process Section - TCNA-compliant workflow with icons
   </div>
 </section>`;
 
-  fs.writeFileSync(filePath, processContent, "utf8");
-  console.log("✅ Created process.html with step icons");
+  fs.writeFileSync(filePath, processContent, 'utf8');
+  console.log('✅ Created process.html with step icons');
 }
 
 /**
  * Create process step CSS
  */
 function createProcessCSS() {
-  const cssPath = path.join(__dirname, "../_sass/30-components/_process.scss");
+  const cssPath = path.join(__dirname, '../_sass/30-components/_process.scss');
 
   const processCSS = `/* ============================================
   Process Section with Icon Steps
@@ -461,25 +461,25 @@ function createProcessCSS() {
 }
 `;
 
-  fs.writeFileSync(cssPath, processCSS, "utf8");
-  console.log("✅ Created _process.scss with step styling");
+  fs.writeFileSync(cssPath, processCSS, 'utf8');
+  console.log('✅ Created _process.scss with step styling');
 }
 
 /**
  * Update style.scss to include process styles
  */
 function updateMainSCSS() {
-  const scssPath = path.join(__dirname, "../assets/css/style.scss");
-  let content = fs.readFileSync(scssPath, "utf8");
+  const scssPath = path.join(__dirname, '../assets/css/style.scss');
+  let content = fs.readFileSync(scssPath, 'utf8');
 
-  if (!content.includes("30-components/process")) {
+  if (!content.includes('30-components/process')) {
     content = content.replace(
       /@import "30-components\/icons";/,
       `@import "30-components/icons";\n@import "30-components/process";`,
     );
 
-    fs.writeFileSync(scssPath, content, "utf8");
-    console.log("✅ Updated style.scss with process import");
+    fs.writeFileSync(scssPath, content, 'utf8');
+    console.log('✅ Updated style.scss with process import');
   }
 }
 
@@ -487,7 +487,7 @@ function updateMainSCSS() {
  * Create icon usage guide
  */
 function createIconGuide() {
-  const guidePath = path.join(__dirname, "../ICON_PLACEMENT_GUIDE.md");
+  const guidePath = path.join(__dirname, '../ICON_PLACEMENT_GUIDE.md');
 
   const guide = `# Icon Placement Guide
 
@@ -542,42 +542,42 @@ function createIconGuide() {
 - **3xl** → Service cards, primary features
 `;
 
-  fs.writeFileSync(guidePath, guide, "utf8");
-  console.log("✅ Created ICON_PLACEMENT_GUIDE.md");
+  fs.writeFileSync(guidePath, guide, 'utf8');
+  console.log('✅ Created ICON_PLACEMENT_GUIDE.md');
 }
 
 // Execute all enhancements
 async function main() {
   try {
-    console.log("\n📍 Step 1: Enhancing Trust Bar...");
+    console.log('\n📍 Step 1: Enhancing Trust Bar...');
     enhanceTrustBar();
 
-    console.log("\n📍 Step 2: Enhancing CTA Sections...");
+    console.log('\n📍 Step 2: Enhancing CTA Sections...');
     enhanceCTA();
 
-    console.log("\n📍 Step 3: Creating Process Section...");
+    console.log('\n📍 Step 3: Creating Process Section...');
     createProcessSection();
 
-    console.log("\n📍 Step 4: Creating Process Styles...");
+    console.log('\n📍 Step 4: Creating Process Styles...');
     createProcessCSS();
 
-    console.log("\n📍 Step 5: Updating Main SCSS...");
+    console.log('\n📍 Step 5: Updating Main SCSS...');
     updateMainSCSS();
 
-    console.log("\n📍 Step 6: Creating Icon Placement Guide...");
+    console.log('\n📍 Step 6: Creating Icon Placement Guide...');
     createIconGuide();
 
-    console.log("\n" + "=".repeat(50));
-    console.log("✨ Icon placement design complete!\n");
-    console.log("Next steps:");
-    console.log("1. Run: npm run build:css");
-    console.log("2. Run: npm run build");
-    console.log("3. Review the changes");
+    console.log('\n' + '='.repeat(50));
+    console.log('✨ Icon placement design complete!\n');
+    console.log('Next steps:');
+    console.log('1. Run: npm run build:css');
+    console.log('2. Run: npm run build');
+    console.log('3. Review the changes');
     console.log(
       '4. Commit with: git add -A && git commit -m "Implement strategic icon placement"',
     );
   } catch (error) {
-    console.error("❌ Error:", error.message);
+    console.error('❌ Error:', error.message);
     process.exit(1);
   }
 }

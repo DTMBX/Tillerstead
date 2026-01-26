@@ -7,25 +7,28 @@
   z-index: 1;
   background: #f8f7f5;
 }
+
 .hero h1,
 .hero-section h1,
 .ts-hero h1,
 [class*="hero"] h1 {
   color: #1a1a1a !important;
-  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+  text-shadow: 0 2px 4px rgb(255 255 255 / 50%);
   font-weight: 900;
   line-height: 1.2;
 }
+
 .hero p,
 .hero-section p,
 .ts-hero p,
 [class*="hero"] p {
   color: #2a2a2a !important;
-  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 1px 2px rgb(255 255 255 / 30%);
   font-weight: 600;
   font-size: clamp(1.125rem, 2vw, 1.5rem);
   line-height: 1.6;
 }
+
 .hero .lead,
 .hero-section .lead,
 .ts-hero .lead,
@@ -34,28 +37,32 @@
   font-weight: 700;
   font-size: clamp(1.25rem, 2.5vw, 1.75rem);
 }
+
 .hero-light p,
 .hero-light h1,
 .hero-light .lead {
   color: #1a1a1a !important;
   text-shadow: none;
 }
+
 .hero-dark,
 .hero-dark p,
 .hero-dark h1,
 .hero-dark .lead {
   background: #1a1a1a;
   color: #ffffff !important;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 4px rgb(0 0 0 / 50%);
 }
+
 .hero .btn,
 .hero-section .btn,
 .ts-hero .btn {
   font-weight: 700;
   font-size: 1.125rem;
   padding: 1rem 2rem;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 14px rgb(0 0 0 / 25%);
 }
+
 main,
 .main-content,
 .ts-main-content {
@@ -64,21 +71,25 @@ main,
   background: #ffffff;
   margin-top: 0;
 }
+
 section:first-of-type,
 .hero:first-child,
 main > *:first-child {
   margin-top: 0;
   padding-top: 0;
 }
+
 html {
   scroll-padding-top: 100px;
 }
+
 @media (max-width: 768px) {
   .hero p,
   .hero-section p,
   .ts-hero p {
   font-size: clamp(1rem, 4vw, 1.25rem);
   }
+
   .hero h1,
   .hero-section h1,
   .ts-hero h1 {

@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en"{% if include.html_attrs %} {{ include.html_attrs }}{% endif %}>
 <head>
+  <!-- DNS Prefetch & Preconnect for external resources -->
+  <link rel="dns-prefetch" href="//www.google-analytics.com" />
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  
   {% include layout/head.html %}
   {% include schema/schema-combined.js %}
   {% include layout/meta-open-graph.html %}

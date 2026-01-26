@@ -5,6 +5,7 @@ html {
   height: 100% !important;
   scroll-behavior: smooth !important;
 }
+
 body {
   overflow-y: auto !important;
   overflow-x: hidden !important;
@@ -12,68 +13,84 @@ body {
   min-height: 100vh !important;
   position: relative !important;
 }
+
 * {
   overflow-y: visible !important;
 }
+
 .mobile-nav,
 .modal,
 .dropdown,
 .desktop-nav__dropdown {
   overflow-y: auto !important;
 }
+
 html, body {
   -webkit-overflow-scrolling: touch !important;
   touch-action: pan-y pan-x !important;
   overscroll-behavior: contain !important;
 }
+
 .ts-main-content,
 main,
 #main-content {
   min-height: auto !important;
   overflow: visible !important;
 }
+
 .ts-scroll-progress {
   pointer-events: none !important;
 }
+
 .ts-header {
   position: sticky !important;
   top: 0 !important;
   pointer-events: auto !important;
 }
+
+/* Mobile nav visibility handled by navigation.css using opacity/visibility */
 .mobile-nav[aria-hidden="true"] {
   pointer-events: none !important;
-  display: none !important;
+  /* DO NOT use display:none - breaks transitions */
 }
+
 .mobile-nav[aria-hidden="false"] {
   pointer-events: auto !important;
-  display: block !important;
+  /* DO NOT use display:block - navigation.css handles this */
 }
+
 @media (min-width: 2560px) {
   html {
   font-size: 18px;
   }
+
   .ts-header__container {
   max-width: 1800px;
   }
+
   .container,
   .ts-main-content > * {
   max-width: 1600px;
   }
 }
+
 @media (min-width: 3840px) {
   html {
   font-size: 20px;
   }
+
   .ts-header__container {
   max-width: 2400px;
   }
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+@media (min-resolution: 192dpi) {
   img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   }
 }
+
 .ts-header,
 .desktop-nav__dropdown,
 .mobile-nav,
@@ -84,10 +101,12 @@ main,
   backface-visibility: hidden;
   perspective: 1000px;
 }
+
 * {
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 @media (prefers-reduced-motion: reduce) {
   * {
   animation-duration: 0.01ms !important;
@@ -96,19 +115,23 @@ main,
   scroll-behavior: auto !important;
   }
 }
+
 img[loading="lazy"] {
   content-visibility: auto;
 }
+
 .card,
 .section,
 article {
   contain: layout style paint;
 }
+
 .responsive-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: clamp(1rem, 2vw, 2rem);
 }
+
 :root {
   --fluid-min-width: 320;
   --fluid-max-width: 3840;
@@ -117,68 +140,84 @@ article {
   --fluid-min-ratio: 1.2;
   --fluid-max-ratio: 1.333;
 }
+
 h1 {
   font-size: clamp(2rem, 5vw, 4rem);
 }
+
 h2 {
   font-size: clamp(1.5rem, 4vw, 3rem);
 }
+
 h3 {
   font-size: clamp(1.25rem, 3vw, 2rem);
 }
+
 p, li {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   line-height: 1.6;
 }
+
 html {
   scroll-padding-top: 100px;
 }
+
 @supports (scroll-behavior: smooth) {
   html {
   scroll-behavior: smooth;
   }
 }
+
 .lazy-section {
   content-visibility: auto;
   contain-intrinsic-size: 0 500px;
 }
+
 .page-layout {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
+
 .ts-header__container {
   display: flex;
   flex-wrap: wrap;
   gap: clamp(1rem, 2vw, 2rem);
 }
+
 .video-container,
 .image-container {
   aspect-ratio: 16 / 9;
   width: 100%;
   object-fit: cover;
 }
+
 :focus-visible {
   outline: 3px solid #00e184;
   outline-offset: 2px;
   border-radius: 4px;
 }
+
 :focus:not(:focus-visible) {
   outline: none;
 }
+
 body {
   color: #1a1a1a;
   background: #ffffff;
 }
+
 @media (prefers-color-scheme: dark) {
   body {
   color: #f0f0f0;
   background: #1a1a1a;
   }
+
   .ts-header {
   background: linear-gradient(135deg, #00b46a 0%, #008855 100%);
   }
 }
+
 @media print {
   .ts-header,
   .ts-footer,
@@ -186,6 +225,7 @@ body {
   .mobile-nav {
   display: none !important;
   }
+
   body {
   overflow: visible !important;
   background: white !important;

@@ -8,24 +8,29 @@ html, body {
   -webkit-overflow-scrolling: touch !important;
   scroll-behavior: smooth !important;
 }
+
 .ts-scroll-progress {
   pointer-events: none !important;
 }
+
 .mobile-nav[aria-hidden="true"],
 .modal[aria-hidden="true"] {
   pointer-events: none !important;
 }
+
 .ts-header {
   position: sticky !important;
   top: 0 !important;
   z-index: 1000 !important;
 }
+
 .sticky-cta-bar {
   position: fixed !important;
   bottom: 0 !important;
   z-index: 999 !important;
   pointer-events: auto !important;
 }
+
 .ts-main-content {
   position: relative !important;
   overflow-y: visible !important;

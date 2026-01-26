@@ -6,20 +6,20 @@ const stylelint = require('stylelint');
 const prettier = require('prettier');
 const fs = require('fs');
 const path = require('path');
-const htmlhint = require('htmlhint').HTMLHint;
+const _htmlhint = require('htmlhint').HTMLHint;
 const jsYaml = require('js-yaml');
 
 async function fixJS() {
   const eslint = new ESLint({ fix: true });
-  await eslint.lintFiles(["**/*.js", "**/*.ts"]);
-  await ESLint.outputFixes(await eslint.lintFiles(["**/*.js", "**/*.ts"]));
+  await eslint.lintFiles(['**/*.js', '**/*.ts']);
+  await ESLint.outputFixes(await eslint.lintFiles(['**/*.js', '**/*.ts']));
 }
 
 async function fixCSS() {
-  await stylelint.lint({ files: ["**/*.{css,scss}"], fix: true });
+  await stylelint.lint({ files: ['**/*.{css,scss}'], fix: true });
 }
 
-async function fixHTML() {
+async function _fixHTML() {
   // HTMLHint does not auto-fix, but we can prettify HTML
   async function walk(dir) {
     for (const f of fs.readdirSync(dir)) {

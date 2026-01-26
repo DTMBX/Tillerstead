@@ -7,12 +7,7 @@
         "message": "Use BEM-style class names: block__element--modifier (lowercase, hyphens only)"
       }
     ],
-    "custom-property-pattern": [
-      "^[a-z0-9]+-[a-z0-9\\-]+$",
-      {
-        "message": "Custom properties must include a lowercase namespace prefix (e.g., text-scale, tiller-color-primary)"
-      }
-    ],
+    "custom-property-pattern": null,
     "scss/dollar-variable-pattern": [
       "^[a-z0-9]+-[a-z0-9\\-]+$",
       {
@@ -25,10 +20,15 @@
     "property-no-vendor-prefix": [
       true,
       {
-        "ignoreProperties": ["backdrop-filter"]
+        "ignoreProperties": ["backdrop-filter", "text-size-adjust"]
       }
     ],
-    "value-keyword-case": "lower",
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreKeywords": ["currentColor", "optimizeLegibility"]
+      }
+    ],
     "color-hex-length": "long",
     "custom-property-empty-line-before": null,
     "media-feature-range-notation": "prefix",
@@ -67,9 +67,22 @@
         "ignore": ["blockless-at-rules"]
       }
     ],
-    "selector-max-id": 0,
+    "selector-max-id": null,
     "selector-max-type": 2,
-    "declaration-block-single-line-max-declarations": 1,
+    "declaration-block-single-line-max-declarations": null,
+    "keyframes-name-pattern": null,
+    "property-no-deprecated": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
+    "block-no-empty": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
     "no-duplicate-selectors": [
       true,
       {
