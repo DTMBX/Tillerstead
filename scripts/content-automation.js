@@ -137,66 +137,206 @@ class ContentAutomation {
   }
   
   /**
-   * Get blog post template
+   * Get blog post template with Tyler's voice and TCNA compliance
    */
   static getBlogTemplate() {
     return `---
 layout: post
 title: "{{TITLE}}"
-meta_title: "{{TITLE}} | Tillerstead LLC"
-meta_description: ""
-description: ""
+meta_title: "{{TITLE}} | Expert Tile Contractor Insights"
+meta_description: "{{META_DESCRIPTION}}"
+description: "{{DESCRIPTION}}"
 date: {{DATE}}
-author: "Tillerstead LLC"
-category: ""
-tags: []
+author: "Tyler, Tillerstead LLC"
+category: "{{CATEGORY}}"
+tags: {{TAGS}}
 image: "/assets/images/blog/{{SLUG}}.jpg"
 featured: true
 ---
 
 # {{TITLE}}
 
-**Last Updated:** {{DATE}} | **Reading Time:** X minutes
+**Last Updated:** {{DATE}} | **Reading Time:** {{READING_TIME}} minutes
 
-[Introduction paragraph - hook the reader]
+[INTRO - Tyler's Voice Framework]:
+- Start with a personal anecdote or observation from 15+ years of tile work
+- Include humor or a "war story" that hooks the reader
+- Establish credibility (licensed contractor, real experience, not theory)
+- Preview what the reader will learn (concrete value prop)
+- Use conversational tone: "Look," "Here's the thing," "After 15 years..."
+
+Example Opening:
+"Look, I've been installing [topic] in New Jersey for 15 years, and I've seen some *stuff*. The kind of stuff that makes building inspectors cry. [Specific example]. Want to know the difference between [good outcome] and [bad outcome]? [This guide topic]."
 
 ## Table of Contents
 
-1. [Section 1](#section-1)
-2. [Section 2](#section-2)
-3. [Section 3](#section-3)
+1. [Why This Matters](#why-matters)
+2. [{{SECTION_1}}](#section-1)
+3. [{{SECTION_2}}](#section-2)
+4. [{{SECTION_3}}](#section-3)
+5. [Common Mistakes (And How to Avoid Them)](#common-mistakes)
+6. [Pro Tips from the Trenches](#pro-tips)
 
 ---
 
-## Section 1 {#section-1}
+## Why This Matters (And Why Others Get It Wrong) {#why-matters}
 
-[Content]
+[Framework]:
+- Explain stakes: What happens if you get this wrong?
+- Include cost of mistakes ($X,000-$Y,000)
+- Add real example or case study
+- Subtle competitor roasting (without naming names)
+- Build urgency: Why act now vs. later?
 
-## Section 2 {#section-2}
-
-[Content]
-
-## Section 3 {#section-3}
-
-[Content]
-
----
-
-## Conclusion
-
-[Summary and CTA]
+**Technical Accuracy Required:**
+- All TCNA method references must be accurate
+- NJ HIC requirements must be current
+- Building code citations must be verified
+- Product recommendations must be legitimate
 
 ---
 
-## Get Expert Help
+## {{SECTION_1}} {#section-1}
 
-**Free Consultation:** [Schedule Now](https://calendly.com/tillerstead/30min)  
-**Call/Text:** [(609) 862-8808](tel:+16098628808)  
-**Service Areas:** Atlantic, Ocean & Cape May Counties, NJ
+[Content Framework]:
+- Use subheadings for scannability
+- Include bulleted lists for quick reference
+- Add tables for comparisons
+- Use checkboxes for checklists
+- Include blockquotes for important callouts
+- Add humor where appropriate (but stay professional)
 
-Licensed NJ HIC #13VH10808800
+**Tyler Voice Elements:**
+✅ "Here's what nobody tells you..."
+✅ "After 15 years, I can tell you this..."
+✅ "You know what's fun? [Sarcastic statement about bad practice]"
+✅ "Translation: [Plain English explanation]"
+✅ "Run. Fast." (for red flags)
+
+**Technical Requirements:**
+- Cite ANSI/TCNA standards where applicable
+- Include NJ-specific code requirements
+- Reference manufacturer specifications
+- Provide cost ranges (be transparent)
 
 ---
+
+## {{SECTION_2}} {#section-2}
+
+[War Story Section - Include One Per Post]:
+
+> **Real Talk:** [Brief case study or horror story]
+>
+> [Details of what went wrong]
+> [Financial/structural consequences]
+> [What should have been done]
+> [Moral of the story]
+>
+> [Punchline or lesson]
+
+---
+
+## {{SECTION_3}} {#section-3}
+
+[Content continues with Tyler's voice + technical accuracy]
+
+---
+
+## Common Mistakes (And How to Avoid Them) {#common-mistakes}
+
+**❌ WRONG:** [Common misconception or bad practice]  
+✅ RIGHT:** [Correct method with TCNA/code reference]
+
+**Cost of Mistake:** $X,XXX-$X,XXX (be specific)
+
+[Repeat for 5-8 common mistakes]
+
+**Pattern to Follow:**
+1. State the mistake
+2. Explain why it's wrong (technically)
+3. Show the correct method
+4. Quantify the cost of getting it wrong
+5. Add Tyler commentary ("Seriously, don't do this")
+
+---
+
+## Pro Tips from 15 Years in the Trenches {#pro-tips}
+
+💡 **Tip #1:** [Insider knowledge]
+- Why it matters
+- How to implement
+- Expected outcome
+
+[Continue for 5-7 actionable tips]
+
+---
+
+## Final Thoughts: [Wrap-Up Message]
+
+[Framework]:
+- Summarize key takeaways (3-5 bullets)
+- Reinforce main message
+- Call out charlatan contractor red flags
+- Build confidence in reader's ability to make informed decision
+- Transition to CTA
+
+**Tyler Signature Style:**
+"After 15 years of [doing this work], I can tell you this with absolute certainty: [main lesson]. [Supporting statement]. When someone tells you [common bad advice], what they're really saying is [translation]. Run. Fast."
+
+---
+
+## Need Expert Help with {{TOPIC}}?
+
+We're Tillerstead LLC—fully licensed, insured, and we've been [doing this work] in South Jersey for over 15 years.
+
+**What Sets Us Apart:**
+- ✅ **Licensed & Insured** - NJ HIC #13VH10808800 ($1M liability)
+- ✅ **TCNA-Compliant Methods** - Every project built to last 30+ years
+- ✅ **Transparent Pricing** - No surprises, no hidden fees
+- ✅ **5-Star Reviews** - Check Google (we don't ghost our clients)
+- ✅ **15+ Years Experience** - Still here, still answering our phone
+
+**📞 Get Your Free Consultation:**
+- **Call/Text:** [(609) 862-8808](tel:+16098628808)
+- **Email:** info@tillerstead.com
+- **Schedule Online:** [Book Your Free Estimate](https://tillerstead.com/contact)
+
+**🌍 Service Areas:** Atlantic County, Ocean County, Cape May County, and surrounding South Jersey communities.
+
+---
+
+**Related Articles:**
+- [Link to related post 1]
+- [Link to related post 2]
+- [Link to related post 3]
+
+**Verify Our License:** [NJ Consumer Affairs](https://newjersey.mylicense.com/verification/)
+
+---
+
+**SEO REQUIREMENTS (Fill Before Publishing):**
+- Primary Keyword: {{PRIMARY_KEYWORD}}
+- Secondary Keywords: {{SECONDARY_KEYWORDS}}
+- Meta Description: 150-160 characters, include primary keyword
+- Image Alt Text: Descriptive, includes primary keyword
+- Internal Links: Minimum 3-5 to other blog posts/service pages
+- External Links: 1-2 authoritative sources (TCNA, NJ.gov)
+- Schema Markup: Auto-added via post layout
+
+**CONTENT QUALITY CHECKLIST:**
+- [ ] 2,500-3,500 words minimum
+- [ ] Tyler's voice consistent throughout
+- [ ] Technical accuracy verified (TCNA/NJ HIC compliant)
+- [ ] At least one war story or case study
+- [ ] Humor/sass present but professional
+- [ ] Actionable takeaways clear
+- [ ] All cost ranges researched and accurate
+- [ ] Call-to-action strong and specific
+- [ ] Read-aloud test passed (sounds conversational)
+- [ ] Competitor-neutral (no direct attacks)
+- [ ] Homeowner-protective (warning about red flags)
+`;
+  }
 
 *Last Updated: {{DATE}}*
 `;
