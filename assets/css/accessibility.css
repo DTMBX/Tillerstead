@@ -1056,6 +1056,8 @@ aside {
   [role="navigation"]:focus-within,
   [role="main"]:focus-within,
   [role="contentinfo"]:focus-within {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
   }
 }
 
@@ -1066,6 +1068,8 @@ aside {
 
 @media (min-resolution: 192dpi) {
   html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 

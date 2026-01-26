@@ -384,13 +384,13 @@ Walk through your project, explain which TCNA methods apply, real costs
 ## Related Resources
 
 **Technical Guides:**
-- [NJ Building Codes for Showers 2026](/blog/nj-tile-shower-building-codes-complete-guide/)
-- [Waterproofing System Comparison](/blog/waterproofing-membrane-comparison/)
-- [Atlantic County Tile Trends 2026](/blog/atlantic-county-tile-trends-2026/)
+- [NJ Code Compliance Guide](/nj-code-compliance/)
+- [Waterproofing Standards](/build/waterproofing-systems/)
+- [Tile Installation Standards](/build/tile-installation-standards/)
 
-**Case Studies:**
-- [Brigantine Bathroom Renovation](/blog/brigantine-bathroom-gut-renovation-case-study/)
-- [Curbless Shower Conversion](/blog/curbless-shower-conversion-somers-point-case-study/)
+**Related Blog Posts:**
+- [Large Format Tile Installation](/blog/large-format-tile-flatness-mortars-trowels/)
+- [Waterproofing System Comparison](/blog/waterproofing-redgard-vs-kerdi-vs-hydroban/)
 
 ---
 

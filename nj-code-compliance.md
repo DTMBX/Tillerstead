@@ -720,12 +720,12 @@ Review your project requirements, explain applicable codes, discuss permit proce
 
 **Technical Guides:**
 - [TCNA Installation Methods Explained](/tcna-methods/)
-- [Waterproofing System Comparison](/blog/waterproofing-membrane-comparison/)
-- [NJ Building Codes Complete Guide](/blog/nj-tile-shower-building-codes-complete-guide/)
+- [Waterproofing Standards](/build/waterproofing-systems/)
+- [Tile Installation Standards](/build/tile-installation-standards/)
 
-**Case Studies:**
-- [Code-Compliant Brigantine Renovation](/blog/brigantine-bathroom-gut-renovation-case-study/)
-- [ADA + Code Curbless Shower](/blog/curbless-shower-conversion-somers-point-case-study/)
+**Related Blog Posts:**
+- [Large Format Tile Installation](/blog/large-format-tile-flatness-mortars-trowels/)
+- [Professional Tile Consultation](/blog/nj-tile-bath-consultation-guide/)
 
 ---
 
