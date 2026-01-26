@@ -57,7 +57,8 @@
   "version": "1.0.0",
   "name": "tillerstead-com",
   "dependencies": {
-    "jspdf": "2.5.2"
+    "dompurify": "3.3.1",
+    "jspdf": "4.0.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.49.0",
