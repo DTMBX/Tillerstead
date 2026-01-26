@@ -28,6 +28,7 @@
     "lighthouse": "lighthouse https://tillerstead.com --output html --output-path ./lighthouse-report.html --view",
     "lighthouse:local": "lighthouse http://localhost:4000 --output html --output-path ./lighthouse-local.html --view",
     "analyze": "npm run lighthouse && npm run scan:links && npm run optimize",
+    "site:repair": "node scripts/site-repair-tool.js",
     "seo:audit": "node scripts/seo-audit.js",
     "images:webp": "node scripts/convert-to-webp.js",
     "images:avif": "node scripts/convert-to-avif.js",
