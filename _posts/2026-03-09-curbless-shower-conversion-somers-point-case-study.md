@@ -79,6 +79,8 @@ Patricia's mom didn't want "institutional" looking. She wanted safe AND dignifie
 
 Traditional showers have a raised pan (sits on the floor). Curbless showers need the drain BELOW the floor level (so water slopes away).
 
+> **🏗️ Technical Standard:** Curbless showers require precise slope engineering per TCNA Method B421 (mortar bed with linear drain) and ANSI A108.10 (bonded waterproof membrane). See our [TCNA Methods Guide](/tcna-methods/#installation-methods) for complete specifications.
+
 **Patricia's mom's house:**
 - Floor joists: 8 inches tall (discovered during demo)
 - Curbless drain needs: 3-4 inches depth
@@ -110,10 +112,12 @@ We lowered the shower floor. Smarter, cheaper, less disruptive.
 - **Enhanced LED lighting** (5000K daylight spectrum—see clearly)
 - **Thermostatic valve** (anti-scald protection—critical for elderly)
 
+> **♿ ADA Compliance Note:** This shower meets ADA 2010 Standards (Section 608) for residential accessibility: 60"x30" minimum clear space, grab bars at 33"-36" height, controls 38"-48" AFF (above finished floor), slip-resistant surface (DCOF ≥0.42). For NJ building code requirements, see our [NJ Code Compliance Guide](/nj-code-compliance/).
+
 **Materials (Quality Stuff That Lasts):**
 - **Tile:** 12x24 porcelain floor (gray matte), 3x12 subway walls (white)
-- **Schluter Kerdi-Line:** 48" brushed stainless linear drain
-- **Schluter Kerdi-Board:** Waterproof substrate (bench + walls)
+- **Schluter Kerdi-Line:** 48" brushed stainless linear drain ([TCNA Method B415](/tcna-methods/#waterproofing))
+- **Schluter Kerdi-Board:** Waterproof substrate (bench + walls, ANSI A118.10 compliant)
 - **Kohler thermostatic valve:** Temperature control, safety lockout
 - **Brushed nickel finishes:** Easier to grip when wet than chrome
 

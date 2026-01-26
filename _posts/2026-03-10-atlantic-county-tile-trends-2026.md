@@ -53,6 +53,8 @@ If you're planning a bathroom remodel and want to know what your neighbors are i
 - ❌ Tumbled travertine (unless you're renovating a Tuscan villa)
 - ❌ Ornate Mediterranean patterns (no one's building a Roman bath)
 
+> **💡 Pro Tip:** Whatever trend you choose, make sure your contractor uses ANSI A118.10 waterproofing and follows [TCNA installation methods](/tcna-methods/). Pretty tile over bad installation = expensive disaster. See our [NJ Code Compliance Guide](/nj-code-compliance/) for what inspectors actually check.
+
 **What's Actually New:**
 - ✅ Wood-look porcelain (floors only—wet wood-look tile is weird)
 - ✅ Terrazzo comeback (30 years later, everything old is new)

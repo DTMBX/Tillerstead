@@ -78,6 +78,12 @@ Turns out the previous "contractor" (let's call him Larry the Liability) used "w
 Larry? Disappeared. Phone disconnected. Business name changed. Classic.
 
 **What Larry Got Wrong:**
+- Skipped ANSI A118.10 waterproofing membrane (required per [IRC R302.5.2](/nj-code-compliance/#waterproofing))
+- No understanding of TCNA installation methods (see our [TCNA Methods Guide](/tcna-methods/) for proper standards)
+
+> **🏗️ Code Requirement:** NJ IRC R302.5.2 mandates ANSI A118.10 waterproofing in all shower installations. For full inspector checklist, see [NJ Code Compliance Guide](/nj-code-compliance/#inspection-schedule).
+
+**What a Proper Installation Requires:**
 ❌ "Water-resistant" board ≠ waterproof (huge difference)  
 ❌ No ANSI A118.10 membrane (required by NJ code since 2015)  
 ❌ No flood test (would've caught it immediately)  
@@ -191,6 +197,11 @@ None of them are "bad." But they're different, and which one you choose depends 
 ---
 
 ## Schluter Kerdi: The German Engineering Approach {#schluter-kerdi}
+
+**TCNA Method:** B415-18 (Bonded waterproof membrane over cement board or Kerdi-Board)  
+**ANSI Standard:** A118.10 compliant (independently tested and verified)
+
+> **📋 Technical Details:** For complete TCNA Method B415 specifications and installation requirements, see our [TCNA Methods Guide - Waterproofing](/tcna-methods/#waterproofing).
 
 ### My Honest Opinion
 

@@ -67,10 +67,12 @@ Day 1 of demo revealed the truth:
 
 ### Building Code Violations (The Legal Stuff)
 
-- ❌ No waterproofing membrane (ANSI A118.10—required since 2015, non-existent in 1964)
+- ❌ No waterproofing membrane (ANSI A118.10—[required per IRC R302.5.2](/nj-code-compliance/#waterproofing), non-existent in 1964)
 - ❌ No GFCI outlets (NEC requirement—critical safety)
-- ❌ Zero ventilation (80 CFM exhaust fan required, they had... a window)
+- ❌ Zero ventilation (80 CFM exhaust fan required per IRC R307.1, they had... a window)
 - ❌ Non-compliant plumbing venting (1960s code ≠ 2026 code)
+
+> **📋 Full Code Requirements:** See our [NJ Code Compliance Guide](/nj-code-compliance/) for complete IRC 2021 bathroom requirements including waterproofing, ventilation, and inspection schedules.
 
 **Translation:** This bathroom wouldn't pass a single inspection if it was new construction. But it was 60 years old, grandfathered in, and slowly destroying itself from the inside.
 
