@@ -180,6 +180,9 @@
   {% endfor %}
 {% endif %}
 
+<!-- CRITICAL: Mobile fix MUST load last to override all other CSS -->
+<link rel="stylesheet" href="{{ '/assets/css/mobile-critical-fix.css' | relative_url }}" />
+
 <!-- Page-specific scripts -->
 {% if page.scripts %}
   {% for script in page.scripts %}

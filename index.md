@@ -79,6 +79,11 @@ keywords: "tile contractor South Jersey, waterproofing contractor NJ, bathroom r
 {% include sections/section-services.html data=data.services %}
 </section>
 
+<!-- TillerPro™ Professional Tools Banner -->
+<section id="tillerpro" aria-labelledby="tillerpro-heading" class="scroll-fade-in">
+{% include sections/tillerpro-banner.html %}
+</section>
+
 <!-- Testimonials Section - Social Proof (Moved Higher for Impact) -->
 <section id="testimonials" aria-labelledby="testimonials-heading" class="scroll-fade-in">
 {% include sections/section-testimonials.html data=data.testimonials %}

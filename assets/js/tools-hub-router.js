@@ -671,6 +671,38 @@
       },
       meta: { title: 'Export Project', icon: '📤' }
     });
+
+    // Dashboard (Enterprise)
+    router.register('dashboard', {
+      name: 'Dashboard',
+      loader: async (params) => {
+        const response = await fetch('/assets/views/dashboard.html');
+        const html = await response.text();
+        return html;
+      },
+      meta: { 
+        title: 'Multi-Location Dashboard', 
+        icon: '📊',
+        category: 'enterprise',
+        requiresAuth: false // Set to true when auth is implemented
+      }
+    });
+
+    // Admin Settings (Enterprise)
+    router.register('admin', {
+      name: 'Admin Settings',
+      loader: async (params) => {
+        const response = await fetch('/assets/views/admin.html');
+        const html = await response.text();
+        return html;
+      },
+      meta: { 
+        title: 'Admin Settings', 
+        icon: '⚙️',
+        category: 'enterprise',
+        requiresAuth: false // Set to true when auth is implemented
+      }
+    });
   }
 
   console.log('[Router] Ready - Default routes registered');

@@ -397,6 +397,11 @@
 			"label": "Build site",
 			"type": "shell",
 			"command": "npm run build:site"
+		},
+		{
+			"label": "Build site",
+			"type": "shell",
+			"command": "npm run build:site"
 		}
 	]
 }
