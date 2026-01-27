@@ -766,8 +766,8 @@ After 50+ Atlantic County bathrooms in the past year, I know what works in this 
 ## Related Resources
 
 **Planning Your Project:**
-- [NJ Building Codes for Showers 2026](/blog/nj-tile-shower-building-codes-complete-guide/) - What inspectors actually check
-- [Waterproofing System Comparison](/blog/waterproofing-membrane-comparison/) - Schluter vs. Laticrete vs. RedGard
+- [NJ Building Codes for Showers 2026](/building%20codes%20&%20regulations/2026/01/27/nj-tile-shower-building-codes-complete-guide/) - What inspectors actually check
+- [Waterproofing System Comparison](/blog/waterproofing-redgard-vs-kerdi-vs-hydroban/) - Schluter vs. Laticrete vs. RedGard
 - [Bathroom Remodel Cost Guide](/services/) - Real Atlantic County pricing
 
 **Design Inspiration:**

@@ -395,8 +395,8 @@ Final grouting, caulking, deep cleaning. Walkthrough with Sarah and Tom.
 ## Related Resources
 
 **Planning Your Project:**
-- [NJ Tile Shower Building Codes 2026](/blog/nj-tile-shower-building-codes-complete-guide/) - What inspectors check
-- [Waterproofing System Comparison](/blog/waterproofing-membrane-comparison/) - Schluter vs. competitors
+- [NJ Tile Shower Building Codes 2026](/building%20codes%20&%20regulations/2026/01/27/nj-tile-shower-building-codes-complete-guide/) - What inspectors check
+- [Waterproofing System Comparison](/blog/waterproofing-redgard-vs-kerdi-vs-hydroban/) - Schluter vs. competitors
 - [Atlantic County Tile Trends 2026](/blog/atlantic-county-tile-trends-2026/) - What's popular now
 
 **More Case Studies:**

@@ -336,8 +336,8 @@ Walk through your space, discuss options, real costs
 ## Related Resources
 
 **Accessibility Planning:**
-- [NJ Building Codes for Showers 2026](/blog/nj-tile-shower-building-codes-complete-guide/)
-- [Waterproofing System Comparison](/blog/waterproofing-membrane-comparison/)
+- [NJ Building Codes for Showers 2026](/building%20codes%20&%20regulations/2026/01/27/nj-tile-shower-building-codes-complete-guide/)
+- [Waterproofing System Comparison](/blog/waterproofing-redgard-vs-kerdi-vs-hydroban/)
 - [Atlantic County Tile Trends 2026](/blog/atlantic-county-tile-trends-2026/)
 
 **More Case Studies:**

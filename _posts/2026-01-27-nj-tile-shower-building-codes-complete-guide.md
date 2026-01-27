@@ -265,7 +265,7 @@ This is my go-to method for residential showers—inspector-approved, manufactur
 
 Alright, let's talk about the section where I've seen more disasters than a reality TV show marathon. Waterproofing is **the** most critical part of a shower—mess this up and you're not just redoing tile, you're gutting walls and replacing subfloors.
 
-> **🔧 Technical Deep Dive:** For contractor-level waterproofing details, see our [Waterproofing System Comparison](/blog/waterproofing-membrane-comparison/) with Schluter vs. Laticrete vs. RedGard analysis.
+- **🔧 Technical Deep Dive:** For contractor-level waterproofing details, see our [Waterproofing System Comparison](/blog/waterproofing-redgard-vs-kerdi-vs-hydroban/) with Schluter vs. Laticrete vs. RedGard analysis.
 
 ### NJ's Non-Negotiable Waterproofing Requirements (IRC R302.5.2)
 
@@ -854,8 +854,8 @@ Tillerstead LLC is a fully licensed NJ HIC contractor (#13VH10808800) specializi
 
 **Further Reading:**
 - [Complete TCNA Shower Installation Guide](/build/waterproofing-systems/)
-- [Choosing the Right Waterproofing Membrane](/blog/waterproofing-comparison/)
-- [NJ Building Code Updates 2026](/blog/nj-code-updates-2026/)
+- [Choosing the Right Waterproofing Membrane](/blog/waterproofing-redgard-vs-kerdi-vs-hydroban/)
+<!-- [NJ Building Code Updates 2026](/blog/nj-code-updates-2026/) -->
 
 ---
 
