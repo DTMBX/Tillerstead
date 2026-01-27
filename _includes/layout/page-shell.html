@@ -26,6 +26,37 @@
         opacity: 0 !important;
         pointer-events: none !important;
       }
+      
+      /* CRITICAL: Hide mobile nav drawer and toggle */
+      .mobile-nav__toggle,
+      .mobile-nav,
+      #mobile-nav-drawer,
+      .nav-drawer,
+      #mobile-nav,
+      .mobile-nav-shell,
+      .hamburger-icon,
+      .mobile-nav__close,
+      .nav-drawer-overlay,
+      body.nav-open::before,
+      body.nav-open::after {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+      
+      /* Prevent body scroll lock */
+      body.nav-open {
+        overflow: auto !important;
+        touch-action: auto !important;
+      }
+      
+      /* Remove backdrop blur */
+      body::before,
+      body::after {
+        display: none !important;
+        backdrop-filter: none !important;
+      }
     }
   </style>
   
