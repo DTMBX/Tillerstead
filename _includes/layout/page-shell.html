@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"{% if include.html_attrs %} {{ include.html_attrs }}{% endif %}>
 <head>
+  <!-- CRITICAL: Mobile content visibility fix - inline for immediate rendering -->
+  <style>
+    @media (max-width: 768px) {
+      /* Emergency override: Force ALL content visible on mobile */
+      body, main, section, div, article, header, footer,
+      [data-animate], .ts-main-content, .gradient-mesh {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+      }
+      /* Disable animations that hide content */
+      * { animation: none !important; transform: none !important; }
+    }
+  </style>
+  
   <!-- DNS Prefetch & Preconnect for external resources -->
   <link rel="dns-prefetch" href="//www.google-analytics.com" />
   <link rel="dns-prefetch" href="//www.googletagmanager.com" />

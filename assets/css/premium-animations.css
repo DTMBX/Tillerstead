@@ -24,18 +24,18 @@
    ============================================== */
 
 [data-animate] {
-  opacity: 0;
+  opacity: 0%;
   transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
               transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-animate].animated {
-  opacity: 1;
+  opacity: 100%;
 }
 
 /* Fade In */
 [data-animate="fade"].animated {
-  opacity: 1;
+  opacity: 100%;
 }
 
 /* Fade Up */
@@ -97,14 +97,14 @@
    ============================================== */
 
 [data-stagger] > * {
-  opacity: 0;
+  opacity: 0%;
   transform: translateY(20px);
   transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
               transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-stagger] > *.stagger-animate {
-  opacity: 1;
+  opacity: 100%;
   transform: translateY(0);
 }
 
@@ -124,13 +124,13 @@
   inset: -10px;
   border-radius: inherit;
   background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), 
-              rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  opacity: 0;
+              rgb(255 255 255 / 10%) 0%, transparent 70%);
+  opacity: 0%;
   transition: opacity 0.3s;
 }
 
 [data-magnetic]:hover::before {
-  opacity: 1;
+  opacity: 100%;
 }
 
 /* ==============================================
@@ -145,7 +145,7 @@
 .ripple {
   position: absolute;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgb(255 255 255 / 60%);
   transform: scale(0);
   animation: ripple-animation 0.6s cubic-bezier(0, 0, 0.2, 1);
   pointer-events: none;
@@ -154,7 +154,7 @@
 @keyframes ripple-animation {
   to {
     transform: scale(4);
-    opacity: 0;
+    opacity: 0%;
   }
 }
 
@@ -176,16 +176,16 @@
   height: 100%;
   background: radial-gradient(
     circle 200px at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(255, 255, 255, 0.15) 0%,
+    rgb(255 255 255 / 15%) 0%,
     transparent 100%
   );
-  opacity: 0;
+  opacity: 0%;
   transition: opacity 0.3s;
   pointer-events: none;
 }
 
 [data-shine]:hover::before {
-  opacity: 1;
+  opacity: 100%;
 }
 
 /* ==============================================
@@ -207,8 +207,9 @@
 
 @keyframes float {
   0%, 100% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -224,10 +225,11 @@
 
 @keyframes pulse {
   0%, 100% {
-    opacity: 1;
+    opacity: 100%;
   }
+
   50% {
-    opacity: 0.5;
+    opacity: 50%;
   }
 }
 
@@ -244,9 +246,11 @@
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
@@ -263,7 +267,7 @@
 
 .hover-lift:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px rgb(0 0 0 / 20%);
 }
 
 /* ==============================================
@@ -297,9 +301,9 @@
 .skeleton {
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.05) 0%,
-    rgba(255, 255, 255, 0.1) 50%,
-    rgba(255, 255, 255, 0.05) 100%
+    rgb(255 255 255 / 5%) 0%,
+    rgb(255 255 255 / 10%) 50%,
+    rgb(255 255 255 / 5%) 100%
   );
   background-size: 200% 100%;
   animation: skeleton-loading 1.5s infinite;
@@ -310,6 +314,7 @@
   0% {
     background-position: 200% 0;
   }
+
   100% {
     background-position: -200% 0;
   }
@@ -328,12 +333,15 @@
   0%, 100% {
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   }
+
   25% {
     border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
   }
+
   50% {
     border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
   }
+
   75% {
     border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
   }
@@ -351,7 +359,6 @@
     var(--color-primary-400)
   );
   background-size: 200% auto;
-  -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: text-gradient-flow 3s linear infinite;
@@ -405,10 +412,7 @@
   will-change: transform;
 }
 
-/* Remove will-change after animation */
-[data-animate].animated {
-  will-change: auto;
-}
+/* Remove will-change after animation - combined with earlier rule */
 
 /* ==============================================
    MOBILE FIX - Disable animations on mobile
@@ -424,7 +428,7 @@
   [data-animate="fade-right"],
   [data-animate="scale"],
   [data-animate="rotate"] {
-    opacity: 1 !important;
+    opacity: 100% !important;
     transform: none !important;
     animation: none !important;
     transition: none !important;
@@ -443,7 +447,7 @@
   /* Disable stagger delays on mobile */
   [data-stagger] > * {
     animation-delay: 0s !important;
-    opacity: 1 !important;
+    opacity: 100% !important;
   }
 
   /* Hide scroll progress bar on mobile */

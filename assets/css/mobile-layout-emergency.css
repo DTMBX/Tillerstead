@@ -246,6 +246,55 @@
     visibility: visible !important;
     opacity: 1 !important;
   }
+
+  /* CRITICAL: Force ALL sections and divs inside main to be visible */
+  main > *,
+  main section,
+  main section > *,
+  main div,
+  main article,
+  #hero,
+  #trust,
+  #services,
+  #tillerpro,
+  #testimonials,
+  #why-us,
+  #process,
+  #portfolio,
+  #materials,
+  #faq,
+  .gradient-mesh,
+  .gradient-mesh > * {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  /* Force show ALL elements with data-animate */
+  [data-animate],
+  [data-animate="fade"],
+  [data-animate="fade-up"],
+  [data-animate="fade-down"],
+  [data-delay] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Force hero section to be visible */
+  .hero-3d,
+  .page-depth {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+  }
 }
 
 /* Desktop - allow these features */

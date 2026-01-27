@@ -1243,24 +1243,18 @@ strong {
   .hidden-desktop {
     display: none;
   }
-
 }
-}
-
-
-
 
 @media print {
   .no-print {
     display: none !important;
   }
+}
 
 /*
  * UX Enhancements - Critical Improvements
  * Fixes: Touch targets, focus states, safe areas, loading states
  */
-
-}
 /* ========================================
    IMPROVED TOUCH TARGETS (WCAG AAA 44x44px)
    ======================================== */
