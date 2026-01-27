@@ -61,7 +61,7 @@ To generate a new password hash:
 node -e "const bcrypt = require('bcrypt'); bcrypt.hash('YOUR_NEW_PASSWORD', 10, (e, h) => console.log(h));"
 ```
 
-Then update the `passwordHash` in [admin/server.js](admin/server.js):
+Then update the `passwordHash` in `admin/server.js`:
 
 ```javascript
 const ADMIN_USERS = {
