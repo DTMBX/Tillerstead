@@ -27,13 +27,20 @@
     state: {
       shown: false,
       submitted: false,
-      triggered: false
+      triggered: false,
+      initialized: false
     },
 
     /**
      * Initialize lead magnet system
      */
     init: function() {
+      // Prevent double initialization
+      if (this.state.initialized) {
+        console.log('[Lead Magnet] Already initialized, skipping');
+        return;
+      }
+      
       this.elements.popup = document.querySelector('.lead-magnet-popup');
       
       if (!this.elements.popup) {
@@ -58,6 +65,10 @@
 
       this.attachEvents();
       this.startTriggers();
+      
+      // Mark as initialized
+      this.state.initialized = true;
+      console.log('[Lead Magnet] Initialized successfully');
     },
 
     /**
@@ -157,12 +168,8 @@
       this.state.shown = true;
       this.state.triggered = true;
 
-      // Use central scroll lock manager
-      if (window.ScrollLockManager) {
-        window.ScrollLockManager.lock('lead-magnet');
-      } else {
-        document.body.style.overflow = 'hidden';
-      }
+      // MOBILE FIX: Never lock scroll - modal is non-blocking overlay design
+      // No scroll locking needed - popup doesn't require full-screen takeover
 
       // Focus first input
       const firstInput = this.elements.form?.querySelector('input[type="email"], input[type="text"]');
@@ -183,12 +190,7 @@
       this.elements.popup.classList.remove('active');
       this.state.shown = false;
 
-      // Use central scroll lock manager
-      if (window.ScrollLockManager) {
-        window.ScrollLockManager.unlock('lead-magnet');
-      } else {
-        document.body.style.overflow = '';
-      }
+      // No scroll unlocking needed - we don't lock scroll anymore
 
       this.elements.popup.setAttribute('aria-hidden', 'true');
 

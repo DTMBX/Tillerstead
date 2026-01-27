@@ -1,26 +1,46 @@
 /**
- * UNIFIED HEADER & NAVIGATION FLOW
- * Improved UX, accessibility, and performance
+ * Unified Navigation System
+ * Modern, accessible, and performant navigation
+ * 
+ * Features:
+ *  - Mobile drawer with smooth animations
+ *  - Desktop dropdowns with hover/keyboard support
+ *  - Scroll-aware header behavior
+ *  - Full accessibility (ARIA, keyboard nav, focus management)
+ * 
+ * @version 2.0.0
  */
 
 (function() {
   'use strict';
 
-  // ===== CONFIGURATION =====
+  // ============================================================
+  // CONFIGURATION
+  // ============================================================
+
   const CONFIG = {
     MOBILE_BREAKPOINT: 1080,
     DROPDOWN_DELAY: 150,
-    ANIMATION_DURATION: 300
+    ANIMATION_DURATION: 300,
+    SCROLL_THRESHOLD: 100,
+    DEBUG: location.hostname === 'localhost'
   };
 
-  // ===== STATE =====
+  // ============================================================
+  // STATE MANAGEMENT
+  // ============================================================
+
   const state = {
     navOpen: false,
     scrolled: false,
-    activeDropdown: null
+    activeDropdown: null,
+    lastScrollY: 0
   };
 
-  // ===== DOM ELEMENTS =====
+  // ============================================================
+  // DOM REFERENCES
+  // ============================================================
+
   const el = {
     header: document.querySelector('.ts-header'),
     mobileToggle: document.querySelector('.mobile-nav__toggle'),
@@ -28,25 +48,49 @@
     mobileClose: document.querySelector('.mobile-nav__close')
   };
 
-  // ===== MOBILE NAVIGATION =====
-  function setupMobileNav() {
-    if (!el.mobileToggle || !el.mobileNav) return;
+  // ============================================================
+  // UTILITIES
+  // ============================================================
 
-    // Toggle button click
+  function log(message, ...args) {
+    if (!CONFIG.DEBUG) return;
+    console.log(`🧭 [Nav] ${message}`, ...args);
+  }
+
+  function isMobile() {
+    return window.innerWidth < CONFIG.MOBILE_BREAKPOINT;
+  }
+
+  // ============================================================
+  // MOBILE NAVIGATION
+  // ============================================================
+
+  function setupMobileNav() {
+    if (!el.mobileToggle || !el.mobileNav) {
+      log('Mobile nav elements not found');
+      return;
+    }
+
+    // Toggle button
     el.mobileToggle.addEventListener('click', toggleMobileNav);
 
-    // Close button click
+    // Close button
     el.mobileClose?.addEventListener('click', closeMobileNav);
 
-    // Click outside to close
+    // Click overlay to close
     el.mobileNav.addEventListener('click', (e) => {
       if (e.target === el.mobileNav) closeMobileNav();
     });
 
-    // Escape to close
+    // Escape key to close
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && state.navOpen) closeMobileNav();
+      if (e.key === 'Escape' && state.navOpen) {
+        closeMobileNav();
+      }
     });
+
+    log('Mobile navigation initialized');
+  }
 
     // Close when navigating
     const links = el.mobileNav.querySelectorAll('a:not([href^="#"])');

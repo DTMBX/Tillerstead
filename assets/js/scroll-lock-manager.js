@@ -1,40 +1,73 @@
 /**
- * NATIVE SCROLL RESTORATION - Master Controller
+ * Scroll Lock Manager - Centralized scroll control
  * 
- * Problem: Multiple scripts (nav.js, scroll-fix.js, lead-magnet, modals) 
- * all try to manage body scroll, causing conflicts.
+ * Purpose: Prevent scroll conflicts between components
+ * Features:
+ *  - Reference counting for multiple lock sources
+ *  - Mobile-aware (no locking on small screens)
+ *  - Position restoration on unlock
+ *  - Emergency unlock mechanisms
  * 
- * Solution: Central scroll lock manager with reference counting
- * - Multiple components can request scroll lock
- * - Scroll only unlocks when ALL components release it
- * - Native scroll is the default state
+ * @version 2.0.0
  */
 
 (function() {
   'use strict';
 
-  // Scroll lock reference counter
+  // ============================================================
+  // CONFIGURATION
+  // ============================================================
+
+  const CONFIG = {
+    MOBILE_BREAKPOINT: 1080,
+    MOBILE_LOCK_BREAKPOINT: 768, // Never lock below this
+    EMERGENCY_TIMEOUT: 500,       // Auto-unlock if stuck
+    DEBUG: location.hostname === 'localhost'
+  };
+
+  // ============================================================
+  // STATE
+  // ============================================================
+
   let scrollLockCount = 0;
   let savedScrollPosition = 0;
-  const MOBILE_BREAKPOINT = 1080;
+  const lockSources = new Set(); // Track who's locking
+
+  // ============================================================
+  // UTILITIES
+  // ============================================================
 
   function isMobile() {
-    return window.innerWidth < MOBILE_BREAKPOINT;
+    return window.innerWidth < CONFIG.MOBILE_BREAKPOINT;
   }
+
+  function isMobileSmall() {
+    return window.innerWidth <= CONFIG.MOBILE_LOCK_BREAKPOINT;
+  }
+
+  function log(level, message, ...args) {
+    if (!CONFIG.DEBUG && level === 'debug') return;
+    const icon = level === 'error' ? '❌' : level === 'warn' ? '⚠️' : '📜';
+    console[level === 'debug' ? 'log' : level](`${icon} [Scroll Lock] ${message}`, ...args);
+  }
+
+  // ============================================================
+  // CORE FUNCTIONS
+  // ============================================================
 
   /**
    * Lock scroll (increments counter)
-   * MOBILE FIX: Only lock on desktop, never on mobile
-   * @param {string} source - Name of component requesting lock
+   * Mobile-aware: Only locks on desktop viewports
+   * @param {string} source - Component requesting lock
    */
   function lockScroll(source = 'unknown') {
-    // CRITICAL: Don't lock scroll on mobile - causes content to disappear
-    const isMobile = window.innerWidth <= 768;
-    if (isMobile) {
-      console.log(`[Scroll Lock] Lock request from ${source} IGNORED on mobile`);
+    // Don't lock on mobile - prevents content blocking
+    if (isMobileSmall()) {
+      log('debug', `Lock request from "${source}" IGNORED on mobile`);
       return;
     }
     
+    lockSources.add(source);
     scrollLockCount++;
     
     if (scrollLockCount === 1) {
@@ -46,17 +79,18 @@
       document.body.style.width = '100%';
       document.body.style.overflow = 'hidden';
       
-      console.log(`[Scroll Lock] Locked by ${source} (count: ${scrollLockCount})`);
+      log('debug', `🔒 Locked by "${source}" (count: ${scrollLockCount})`);
     } else {
-      console.log(`[Scroll Lock] Already locked, count increased: ${scrollLockCount} (by ${source})`);
+      log('debug', `Already locked, count increased: ${scrollLockCount} (by "${source}")`);
     }
   }
 
   /**
    * Release scroll lock (decrements counter)
-   * @param {string} source - Name of component releasing lock
+   * @param {string} source - Component releasing lock
    */
   function unlockScroll(source = 'unknown') {
+    lockSources.delete(source);
     scrollLockCount = Math.max(0, scrollLockCount - 1);
     
     if (scrollLockCount === 0) {
@@ -69,7 +103,7 @@
       document.body.style.overflow = '';
       
       if (wasFixed && savedScrollPosition) {
-        // Restore scroll position smoothly
+        // Restore scroll position instantly
         window.scrollTo({
           top: savedScrollPosition,
           behavior: 'instant'
@@ -77,51 +111,85 @@
         savedScrollPosition = 0;
       }
       
-      console.log(`[Scroll Lock] Unlocked by ${source} (count: ${scrollLockCount})`);
+      log('debug', `🔓 Unlocked by "${source}" (count: ${scrollLockCount})`);
     } else {
-      console.log(`[Scroll Lock] Still locked, count decreased: ${scrollLockCount} (by ${source})`);
+      log('debug', `Still locked, count decreased: ${scrollLockCount} (by "${source}")`);
+      log('debug', `Active locks: ${Array.from(lockSources).join(', ')}`);
     }
   }
 
   /**
    * Force unlock (emergency reset)
+   * Clears all locks and restores scroll
    */
   function forceUnlock() {
+    const hadLocks = scrollLockCount > 0;
+    
     scrollLockCount = 0;
+    lockSources.clear();
+    
     document.body.style.position = '';
     document.body.style.top = '';
     document.body.style.width = '';
     document.body.style.overflow = '';
-    console.warn('[Scroll Lock] Force unlocked!');
+    
+    if (hadLocks) {
+      log('warn', '⚡ Force unlocked! All locks cleared.');
+    }
   }
 
   /**
    * Check if scroll is currently locked
+   * @returns {boolean}
    */
   function isLocked() {
     return scrollLockCount > 0;
   }
 
-  // Global API
+  /**
+   * Get current lock status
+   * @returns {Object} Status info
+   */
+  function getStatus() {
+    return {
+      locked: scrollLockCount > 0,
+      count: scrollLockCount,
+      sources: Array.from(lockSources),
+      savedPosition: savedScrollPosition
+    };
+  }
+
+  // ============================================================
+  // PUBLIC API
+  // ============================================================
+
   window.ScrollLockManager = {
     lock: lockScroll,
     unlock: unlockScroll,
     forceUnlock: forceUnlock,
     isLocked: isLocked,
-    getCount: () => scrollLockCount
+    getStatus: getStatus,
+    getCount: () => scrollLockCount,
+    getSources: () => Array.from(lockSources)
   };
 
-  // Ensure scroll is unlocked on page load
-  document.addEventListener('DOMContentLoaded', function() {
-    // EMERGENCY: Force unlock everything
+  // ============================================================
+  // SAFETY MECHANISMS
+  // ============================================================
+
+  /**
+   * Emergency unlock on DOM ready
+   */
+  document.addEventListener('DOMContentLoaded', () => {
+    // Reset to clean state
     scrollLockCount = 0;
+    lockSources.clear();
     savedScrollPosition = 0;
     
-    // Force enable native scrolling
+    // Clear all scroll-blocking styles
     document.documentElement.style.overflow = '';
     document.documentElement.style.overflowY = '';
     document.body.style.overflow = '';
-    document.body.style.overflowY = '';
     document.body.style.position = '';
     document.body.style.top = '';
     document.body.style.width = '';
@@ -130,38 +198,54 @@
     // Enable smooth scrolling
     document.documentElement.style.scrollBehavior = 'smooth';
     
-    console.log('[Scroll Lock] EMERGENCY unlock on DOM ready - count reset to 0');
+    log('debug', '✓ Initialized - scroll enabled');
   });
   
-  // SECOND CHECK: After everything loads
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      if (scrollLockCount > 0 || document.body.style.overflow === 'hidden' || document.body.style.position === 'fixed') {
-        console.warn('[Scroll Lock] CRITICAL: Detected stuck scroll lock after page load, forcing unlock!');
+  /**
+   * Final verification after page load
+   */
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      const bodyStyles = window.getComputedStyle(document.body);
+      const isStuck = scrollLockCount > 0 || 
+                     bodyStyles.overflow === 'hidden' || 
+                     bodyStyles.position === 'fixed';
+      
+      if (isStuck) {
+        log('error', '⚠️ Detected stuck scroll lock after page load!');
         forceUnlock();
+        
+        // Nuclear clear
         document.body.style.overflow = '';
         document.body.style.position = '';
         document.body.style.top = '';
         document.body.style.width = '';
         document.documentElement.style.overflow = '';
       }
-      console.log('[Scroll Lock] Page load verification complete - scroll enabled');
-    }, 500);
+      
+      log('debug', '✓ Load verification complete');
+    }, CONFIG.EMERGENCY_TIMEOUT);
   });
 
-  // Monitor for rogue scripts that set overflow:hidden directly
+  // ============================================================
+  // ROGUE SCRIPT MONITOR
+  // ============================================================
+
+  /**
+   * Watch for unauthorized scroll locks
+   */
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.type === 'attributes' && mutation.attributeName === 'style') {
         const target = mutation.target;
         
-        // If body/html overflow is set to hidden but we have no locks, restore it
+        // If body/html has overflow:hidden but we have no active locks, restore it
         if ((target === document.body || target === document.documentElement) && scrollLockCount === 0) {
           const overflow = target.style.overflow;
           const overflowY = target.style.overflowY;
           
           if (overflow === 'hidden' || overflowY === 'hidden') {
-            console.warn('[Scroll Lock] Detected unauthorized scroll lock, restoring...');
+            log('warn', '🚨 Detected unauthorized scroll lock - restoring...');
             target.style.overflow = '';
             target.style.overflowY = '';
           }

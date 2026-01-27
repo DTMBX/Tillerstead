@@ -1309,10 +1309,7 @@ html, body, #___gatsby, #site, main, .ts-body {
   height: auto !important;
   min-height: 100vh !important;
   position: static !important;
-}
-* {
   overscroll-behavior: auto !important;
-}
 }
 
 @media (min-width: 769px) {

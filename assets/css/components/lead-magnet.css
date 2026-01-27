@@ -34,6 +34,12 @@
   bottom: 0;
   background: rgb(0 0 0 / 80%);
   backdrop-filter: blur(4px);
+  pointer-events: auto;
+}
+
+/* Ensure overlay doesn't block content when popup is hidden */
+.lead-magnet-popup:not(.active) .lead-magnet-popup__overlay {
+  pointer-events: none;
 }
 
 .lead-magnet-popup__container {
