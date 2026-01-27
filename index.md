@@ -112,7 +112,7 @@ keywords: "tile contractor South Jersey, waterproofing contractor NJ, bathroom r
 
 <!-- Materials Section - Technical Authority & Trust -->
 <section id="materials" aria-labelledby="materials-heading" data-animate="fade-up">
-{% include sections/section-materials.html data=data.materials %>
+{% include sections/section-materials.html data=data.materials %}
 </section>
 
 <!-- FAQ Section - Objection Handling -->
