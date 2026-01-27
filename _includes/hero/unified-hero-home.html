@@ -56,14 +56,14 @@ waterproofing assemblies, and bathroom remodeling for South Jersey, New Jersey h
 
       <div class="ts-hero__actions">
         {% if actions == "default" %}
-        <a class="btn btn--primary" href="{{ '/contact/' | relative_url }}" style="position: relative; overflow: visible;">
+        <a class="btn btn--primary btn-premium btn-premium--gradient" href="{{ '/contact/' | relative_url }}" data-magnetic data-ripple style="position: relative; overflow: visible;">
           Request Free Estimate
           <!-- Discount badge removed for cleaner design -->
         </a>
-        <a class="btn btn--ghost" href="{{ '/portfolio/' | relative_url }}">See Our Work</a>
+        <a class="btn btn--ghost btn-premium btn-premium--outline" href="{{ '/portfolio/' | relative_url }}" data-magnetic>See Our Work</a>
         {% else %}
         {% for action in actions %}
-        <a class="btn btn--{{ action.style | default: 'primary' }}" href="{{ action.url | relative_url }}">
+        <a class="btn btn--{{ action.style | default: 'primary' }} btn-premium" href="{{ action.url | relative_url }}" data-magnetic data-ripple>
           {{ action.label }}
         </a>
         {% endfor %}

@@ -78,8 +78,9 @@ body_class: page-services
 }
 </script>
 
-<!-- Hero Section -->
-<section class="services-hero">
+<!-- Hero Section with Gradient Mesh -->
+<div class="gradient-mesh">
+<section class="services-hero" data-animate="fade">
   <div class="container">
     <div class="services-hero__content">
       <span class="services-hero__eyebrow">TCNA 2024 · ANSI A108/A118 Compliant</span>
@@ -92,9 +93,10 @@ body_class: page-services
     </div>
   </div>
 </section>
+</div>
 
 <!-- Trust Bar -->
-<section class="services-trust">
+<section class="services-trust" data-animate="fade-up" data-delay="100">
   <div class="container">
     <div class="services-trust__grid">
       <div class="services-trust__item">
@@ -142,11 +144,11 @@ body_class: page-services
         </p>
       </div>
 
-      <!-- Services Grid -->
-      <div class="services-grid">
+      <!-- Services Grid with Bento Layout -->
+      <div class="services-grid bento-grid" data-stagger data-stagger-delay="100">
         
         <!-- Tile Installation -->
-        <article class="service-card" id="tile">
+        <article class="service-card glass-card" id="tile" data-shine>
           <div class="service-card__header">
             <span class="service-card__icon">🧱</span>
             <h2 class="service-card__title">Tile Installation</h2>
@@ -169,7 +171,7 @@ body_class: page-services
         </article>
 
         <!-- Natural Stone -->
-        <article class="service-card" id="stone">
+        <article class="service-card glass-card" id="stone" data-shine>
           <div class="service-card__header">
             <span class="service-card__icon">🪨</span>
             <h2 class="service-card__title">Natural Stone & Slabs</h2>
@@ -192,7 +194,7 @@ body_class: page-services
         </article>
 
         <!-- Waterproofing -->
-        <article class="service-card service-card--featured" id="waterproofing">
+        <article class="service-card service-card--featured glass-card bento-item--large" id="waterproofing" data-shine>
           <div class="service-card__header">
             <span class="service-card__icon">💧</span>
             <h2 class="service-card__title">Waterproofing Systems</h2>
@@ -215,7 +217,7 @@ body_class: page-services
         </article>
 
         <!-- Bathroom Remodeling -->
-        <article class="service-card" id="remodeling">
+        <article class="service-card glass-card" id="remodeling" data-shine>
           <div class="service-card__header">
             <span class="service-card__icon">🚿</span>
             <h2 class="service-card__title">Bathroom Remodeling</h2>
@@ -238,7 +240,7 @@ body_class: page-services
         </article>
 
         <!-- Shower Systems -->
-        <article class="service-card" id="showers">
+        <article class="service-card glass-card" id="showers" data-shine>
           <div class="service-card__header">
             <span class="service-card__icon">🛁</span>
             <h2 class="service-card__title">Custom Tile Showers</h2>
@@ -261,7 +263,7 @@ body_class: page-services
         </article>
 
         <!-- Repair & Maintenance -->
-        <article class="service-card" id="repair">
+        <article class="service-card glass-card" id="repair" data-shine>
           <div class="service-card__header">
             <span class="service-card__icon">🔧</span>
             <h2 class="service-card__title">Repair & Diagnostics</h2>

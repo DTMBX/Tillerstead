@@ -25,14 +25,20 @@ body_class: page-portfolio
   3. CTA - Request estimate
 {%- endcomment -%}
 
-<!-- Hero Section -->
+<!-- Hero Section with Gradient Mesh -->
+<div class="gradient-mesh">
 {% include sections/section-portfolio-hero.html %}
+</div>
 
 <!-- Portfolio Gallery with Filtering -->
+<div data-animate="fade-up" data-delay="200">
 {% include sections/section-portfolio-gallery.html %}
+</div>
 
 <!-- CTA Section -->
+<div data-animate="scale">
 {% include sections/section-portfolio-cta.html %}
+</div>
 
 <!-- Page-specific styles and scripts -->
 <link rel="stylesheet" href="/assets/css/pages/portfolio.css">
