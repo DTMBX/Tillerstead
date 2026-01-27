@@ -137,6 +137,7 @@
 .app-logo img {
   width: 40px;
   height: 40px;
+  object-fit: contain;
   border-radius: var(--hub-radius-md);
 }
 
@@ -150,24 +151,6 @@
   font-weight: 600;
   color: var(--hub-fg);
   text-align: center;
-}
-
-/* Mode Toggle */
-.mode-toggle {
-  padding: 0.5rem 1rem;
-  background: var(--hub-bg);
-  border: 1px solid var(--hub-border);
-  border-radius: var(--hub-radius-lg);
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--hub-fg);
-  cursor: pointer;
-  transition: all var(--hub-transition-fast);
-}
-
-.mode-toggle:hover {
-  background: #f9fafb;
-  border-color: var(--hub-accent);
 }
 
 /* Mobile Nav Toggle */

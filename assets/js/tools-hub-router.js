@@ -354,7 +354,8 @@
         'waterproofing-calculator-adapter': 'WaterproofingCalculatorAdapter',
         'slope-calculator-adapter': 'SlopeCalculatorAdapter',
         'leveling-calculator-adapter': 'LevelingCalculatorAdapter',
-        'labor-estimator-adapter': 'LaborEstimatorAdapter'
+        'labor-estimator-adapter': 'LaborEstimatorAdapter',
+        'quote-form-adapter': 'QuoteFormAdapter'
       };
       
       const className = adapterClasses[adapterName];
@@ -467,7 +468,11 @@
     // Overview
     router.register('overview', {
       name: 'Overview',
-      component: '/assets/views/overview.html',
+      loader: async (params) => {
+        const response = await fetch('/assets/views/overview.html');
+        const html = await response.text();
+        return html;
+      },
       meta: { title: 'Project Overview', icon: '📊' }
     });
 
@@ -615,13 +620,17 @@
               <div class="stat">Estimated Budget: $${summary.budgetEstimate || 0}</div>
             </div>
             <div id="quote-form-container">
-              <!-- Quote wizard will be inserted here -->
+              <!-- Quote form will be inserted here by adapter -->
               <p>Loading quote form...</p>
             </div>
           </div>
         `;
       },
-      meta: { title: 'Request Quote', icon: '💬' }
+      meta: { 
+        title: 'Request Quote', 
+        icon: '💬',
+        adapter: '/assets/js/adapters/quote-form-adapter.js'
+      }
     });
 
     // Export

@@ -197,7 +197,6 @@
         version: this.version,
         created: now,
         updated: now,
-        mode: 'homeowner', // or 'contractor'
         
         project: {
           id: `proj_${Date.now()}`,

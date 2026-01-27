@@ -1,0 +1,63 @@
+/* EMERGENCY HEADER FIX - Dark Overlay Blocking Navigation */
+
+/* Remove solid dark background, make header transparent/semi-transparent */
+.ts-header {
+  background: rgba(0, 107, 61, 0.95) !important; /* Semi-transparent instead of solid */
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+/* Ensure header doesn't have a blocking overlay */
+.ts-header::before,
+.ts-header::after {
+  display: none !important;
+}
+
+/* Make sure nav links are visible and clickable */
+.desktop-nav,
+.desktop-nav__list,
+.desktop-nav__link {
+  position: relative !important;
+  z-index: 1001 !important;
+}
+
+/* Fix any dark overlays on mobile */
+@media (max-width: 768px) {
+  .ts-header {
+    background: linear-gradient(135deg, rgba(0, 77, 43, 0.98) 0%, rgba(0, 107, 61, 0.98) 100%) !important;
+    backdrop-filter: blur(8px) !important;
+  }
+  
+  /* Ensure mobile toggle is always visible */
+  .mobile-nav__toggle {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: 2px solid #ffffff !important;
+    z-index: 10002 !important;
+  }
+}
+
+/* Prevent any dark solid overlays from other CSS */
+.ts-header .ts-header__container::before,
+.ts-header .ts-header__container::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Make nav items always visible */
+.desktop-nav__link {
+  color: #ffffff !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3) !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+}
+
+.desktop-nav__link:hover {
+  color: #ffd700 !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Fix header actions buttons visibility */
+.ts-header__actions .btn {
+  z-index: 1001 !important;
+  position: relative !important;
+}

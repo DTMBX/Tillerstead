@@ -128,9 +128,6 @@ sitemap:
         </div>
         
         <div class="app-header__right">
-          <button id="mode-toggle" class="mode-toggle" aria-label="Toggle mode">
-            <span class="mode-toggle__label">Homeowner</span>
-          </button>
           <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Open navigation" aria-expanded="false">
             <span class="hamburger-icon">
               <span></span>
@@ -244,32 +241,6 @@ sitemap:
         });
       }
       
-      // Mode toggle (Homeowner / Contractor)
-      function initModeToggle() {
-        const toggle = document.getElementById('mode-toggle');
-        if (!toggle) return;
-        
-        // Get current mode from ProjectState
-        const currentMode = window.ProjectState ? window.ProjectState.get('mode') : 'homeowner';
-        const label = toggle.querySelector('.mode-toggle__label');
-        
-        function updateMode(mode) {
-          if (label) {
-            label.textContent = mode === 'contractor' ? 'Contractor' : 'Homeowner';
-          }
-          if (window.ProjectState) {
-            window.ProjectState.set('mode', mode);
-          }
-          document.body.setAttribute('data-mode', mode);
-        }
-        
-        updateMode(currentMode);
-        
-        toggle.addEventListener('click', () => {
-          const newMode = currentMode === 'homeowner' ? 'contractor' : 'homeowner';
-          updateMode(newMode);
-        });
-      }
       
       // Update title based on route
       window.addEventListener('toolshub:viewloaded', (e) => {
@@ -285,12 +256,10 @@ sitemap:
         document.addEventListener('DOMContentLoaded', () => {
           initApp();
           initMobileNav();
-          initModeToggle();
         });
       } else {
         initApp();
         initMobileNav();
-        initModeToggle();
       }
     })();
   </script>
