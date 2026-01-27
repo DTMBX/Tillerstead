@@ -113,6 +113,10 @@
 
   // Ensure scroll is unlocked on page load
   document.addEventListener('DOMContentLoaded', function() {
+    // EMERGENCY: Force unlock everything
+    scrollLockCount = 0;
+    savedScrollPosition = 0;
+    
     // Force enable native scrolling
     document.documentElement.style.overflow = '';
     document.documentElement.style.overflowY = '';
@@ -120,14 +124,29 @@
     document.body.style.overflowY = '';
     document.body.style.position = '';
     document.body.style.top = '';
+    document.body.style.width = '';
     document.body.style.height = 'auto';
     
     // Enable smooth scrolling
     document.documentElement.style.scrollBehavior = 'smooth';
     
-    scrollLockCount = 0;
-    
-    console.log('[Scroll Lock] Native scroll restored on page load');
+    console.log('[Scroll Lock] EMERGENCY unlock on DOM ready - count reset to 0');
+  });
+  
+  // SECOND CHECK: After everything loads
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      if (scrollLockCount > 0 || document.body.style.overflow === 'hidden' || document.body.style.position === 'fixed') {
+        console.warn('[Scroll Lock] CRITICAL: Detected stuck scroll lock after page load, forcing unlock!');
+        forceUnlock();
+        document.body.style.overflow = '';
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        document.documentElement.style.overflow = '';
+      }
+      console.log('[Scroll Lock] Page load verification complete - scroll enabled');
+    }, 500);
   });
 
   // Monitor for rogue scripts that set overflow:hidden directly
