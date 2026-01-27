@@ -147,16 +147,21 @@ h6 {
  * Works uniformly across all pages
  */
 .skip-links {
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: -200px;
   left: 0;
-  z-index: 10000;
+  right: 0;
+  z-index: 100000;
+  transition: top 0.2s ease-out;
+}
+
+.skip-links:focus-within {
+  top: 0;
 }
 
 .skip-link {
-  position: absolute;
-  left: -9999px;
-  top: 0;
+  position: relative;
+  display: inline-block;
   padding: 1rem 1.5rem;
   background: var(--tiller-color-gold, #c9a227);
   color: #000;
@@ -164,11 +169,9 @@ h6 {
   text-decoration: none;
   border-radius: 0 0 8px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  z-index: 10001;
 }
 
 .skip-link:focus {
-  left: 0;
   outline: 3px solid #000;
   outline-offset: 3px;
 }
