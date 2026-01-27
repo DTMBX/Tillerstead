@@ -31,9 +31,9 @@
 .ts-header--minimized .ts-header__logo .logo-image {
   height: 72px;
   min-height: 64px;
-  min-width: 64px;
+  min-width: 96px;
   max-height: 72px;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 2;
 }
 
 .ts-header--minimized .ts-header__branding {

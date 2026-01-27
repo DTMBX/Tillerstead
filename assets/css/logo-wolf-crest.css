@@ -23,7 +23,7 @@
   min-height: 140px;
   min-width: 140px;
   max-width: 400px;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 2;
   object-fit: contain;
 }
 
@@ -62,9 +62,9 @@
   width: auto;
   height: 100px;
   min-height: 80px;
-  min-width: 80px;
+  min-width: 120px;
   max-width: 200px;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 2;
   object-fit: contain;
   filter: drop-shadow(0 2px 4px rgb(0 0 0 / 50%));
 }
@@ -72,8 +72,8 @@
 .ts-header--minimized .ts-header__logo .logo-image {
   height: 72px;
   min-height: 64px;
-  min-width: 64px;
-  aspect-ratio: 1 / 1;
+  min-width: 96px;
+  aspect-ratio: 3 / 2;
   transition: height 0.3s ease;
 }
 
