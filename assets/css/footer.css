@@ -285,6 +285,20 @@
   color: var(--tiller-text-muted, #6b7280);
 }
 
+.footer-trademark {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(255 255 255 / 10%);
+  text-align: center;
+}
+
+.footer-trademark-text {
+  color: var(--tiller-text-muted, #9ca3af);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
 @media (max-width: 900px) {
   .footer-columns {
   grid-template-columns: 1fr 1fr;
@@ -363,6 +377,14 @@
 
   .footer-legal {
   justify-content: center;
+  }
+
+  .footer-trademark {
+  padding-inline: 1rem;
+  }
+
+  .footer-trademark-text {
+  font-size: 0.75rem;
   }
 }
 

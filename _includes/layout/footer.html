@@ -197,14 +197,26 @@
 
       <!-- Legal Links -->
       <nav class="footer-legal" aria-label="Legal" tabindex="0">
-        <a href="/privacy/">Privacy Policy</a>
+        <a href="/privacy/">Privacy</a>
         <span class="footer-divider" aria-hidden="true">·</span>
-        <a href="/terms/">Terms of Service</a>
+        <a href="/terms/">Terms</a>
         <span class="footer-divider" aria-hidden="true">·</span>
-        <a href="/ventures/" class="footer-ventures-link" rel="nofollow">Business Ventures</a>
+        <a href="/disclaimers/">Disclaimers</a>
         <span class="footer-divider" aria-hidden="true">·</span>
-        <span class="footer-copyright">© {{ 'now' | date: '%Y' }} {{ brand.company.legal_name }}. All rights reserved.</span>
+        <a href="/copyright/">Copyright</a>
+        <span class="footer-divider" aria-hidden="true">·</span>
+        <a href="/ventures/" class="footer-ventures-link" rel="nofollow">Ventures</a>
+        <span class="footer-divider" aria-hidden="true">·</span>
+        <span class="footer-copyright">© {{ 'now' | date: '%Y' }} {{ brand.company.legal_name }}. All Rights Reserved.</span>
       </nav>
+      
+      <!-- Trademark Notice -->
+      <div class="footer-trademark">
+        <p class="footer-trademark-text">
+          Tillerstead™ and TillerPro™ are trademarks of Tillerstead LLC. 
+          Licensed, Bonded, and Insured. NJ HIC #{{ site.company.hic }}.
+        </p>
+      </div>
       
     </div>
   </div>
