@@ -10,6 +10,7 @@ category: "Building Codes & Regulations"
 tags: ["NJ building codes", "tile shower codes", "TCNA standards", "permits", "inspections", "compliance"]
 image: "/assets/images/blog/nj-building-codes-2026.jpg"
 featured: true
+permalink: /blog/nj-tile-shower-building-codes-complete-guide/
 ---
 
 # NJ Tile Shower Building Codes: Complete 2026 Compliance Guide
