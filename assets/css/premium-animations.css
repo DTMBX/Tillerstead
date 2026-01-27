@@ -409,3 +409,45 @@
 [data-animate].animated {
   will-change: auto;
 }
+
+/* ==============================================
+   MOBILE FIX - Disable animations on mobile
+   ============================================== */
+
+@media (max-width: 768px) {
+  /* Force all animated elements to be visible immediately */
+  [data-animate],
+  [data-animate="fade"],
+  [data-animate="fade-up"],
+  [data-animate="fade-down"],
+  [data-animate="fade-left"],
+  [data-animate="fade-right"],
+  [data-animate="scale"],
+  [data-animate="rotate"] {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Disable parallax on mobile */
+  [data-parallax] {
+    transform: none !important;
+  }
+
+  /* Disable magnetic effects on mobile */
+  [data-magnetic]::before {
+    display: none !important;
+  }
+
+  /* Disable stagger delays on mobile */
+  [data-stagger] > * {
+    animation-delay: 0s !important;
+    opacity: 1 !important;
+  }
+
+  /* Hide scroll progress bar on mobile */
+  .scroll-progress {
+    display: none !important;
+  }
+}

@@ -106,6 +106,9 @@
 {% endif %}
 
 <!-- Core & Utility CSS: Load modern design system first, then legacy compatibility -->
+<!-- EMERGENCY MOBILE LAYOUT FIX - Load ABSOLUTE FIRST -->
+<link rel="stylesheet" href="{{ '/assets/css/mobile-layout-emergency.css' | relative_url }}" />
+
 <!-- EMERGENCY MOBILE FIX - Load FIRST for critical rendering -->
 <link rel="stylesheet" href="{{ '/assets/css/mobile-emergency-fix.css' | relative_url }}" />
 

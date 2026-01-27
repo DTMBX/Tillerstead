@@ -1,0 +1,200 @@
+/* MOBILE LAYOUT FIX - Emergency Override */
+
+/* Force hide all popups, modals, and overlays on mobile */
+@media (max-width: 768px) {
+  /* Hide performance mode toggle */
+  #performance-toggle,
+  .performance-toggle,
+  [data-performance-toggle] {
+    display: none !important;
+  }
+
+  /* Hide all toast notifications on load */
+  .toast,
+  .toast-container,
+  .notification-banner,
+  .scheduling-banner {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* Hide message system popups */
+  [class*="message-"],
+  [id*="message-"],
+  .message-overlay,
+  .message-popup {
+    display: none !important;
+  }
+
+  /* Hide lightbox and modals */
+  .lightbox,
+  .modal,
+  .modal-overlay,
+  [data-lightbox],
+  [role="dialog"]:not(.ts-main-content) {
+    display: none !important;
+  }
+
+  /* Ensure main content is ALWAYS visible */
+  html,
+  body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    position: relative !important;
+  }
+
+  main,
+  [role="main"],
+  .ts-main-content,
+  #main-content,
+  section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  /* Fix animations hiding content */
+  [data-animate] {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  /* Disable scroll progress bar on mobile */
+  .scroll-progress,
+  [data-scroll-progress] {
+    display: none !important;
+  }
+
+  /* Fix footer */
+  footer,
+  .site-footer,
+  .ts-footer {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  /* Fix header */
+  header,
+  .site-header,
+  .ts-header {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 100 !important;
+  }
+
+  /* Reset z-index chaos */
+  * {
+    z-index: auto !important;
+  }
+
+  /* Priority z-index for essential elements */
+  header,
+  .site-header,
+  .ts-header,
+  nav,
+  .navigation {
+    z-index: 100 !important;
+  }
+
+  main,
+  [role="main"],
+  section,
+  article {
+    z-index: 1 !important;
+  }
+
+  footer,
+  .site-footer {
+    z-index: 10 !important;
+  }
+
+  /* Disable all fixed positioning except header */
+  [style*="position: fixed"]:not(header):not(.site-header):not(nav) {
+    position: relative !important;
+  }
+
+  /* Remove gradient mesh overlays on mobile */
+  .gradient-mesh {
+    position: relative !important;
+    z-index: auto !important;
+    pointer-events: auto !important;
+  }
+
+  /* Ensure bento grids don't overflow */
+  .bento-grid,
+  .bento-item {
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+
+  /* Fix glass cards blocking content */
+  .glass-card {
+    position: relative !important;
+    z-index: auto !important;
+  }
+
+  /* Disable magnetic buttons on mobile (they cause issues) */
+  [data-magnetic] {
+    pointer-events: auto !important;
+  }
+
+  [data-magnetic]::before {
+    display: none !important;
+  }
+
+  /* Disable parallax on mobile */
+  [data-parallax] {
+    transform: none !important;
+  }
+
+  /* Fix any accidentally hidden sections */
+  .hero,
+  .services,
+  .portfolio,
+  .contact,
+  .testimonials,
+  .process,
+  .materials,
+  .faq,
+  .cta {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+}
+
+/* Desktop - allow these features */
+@media (min-width: 769px) {
+  /* Allow toasts on desktop */
+  .toast-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10000;
+  }
+
+  /* Allow modals on desktop */
+  .lightbox,
+  .modal {
+    position: fixed;
+    z-index: 9999;
+  }
+
+  /* Performance toggle on desktop */
+  #performance-toggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000;
+  }
+}

@@ -203,10 +203,7 @@
 
         @media (max-width: 768px) {
           .perf-mode-toggle {
-            bottom: 10px;
-            right: 10px;
-            padding: 8px 12px;
-            font-size: 12px;
+            display: none !important; /* Hide on mobile - causes confusion */
           }
         }
       `;
