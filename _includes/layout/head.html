@@ -1,7 +1,14 @@
 <!-- Jekyll include: no DOCTYPE needed, ensure space indentation -->
 <meta charset="utf-8" />
   <!-- EMERGENCY CONTRAST FIX - LOAD FIRST -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes, maximum-scale=5.0, minimum-scale=1.0" />
+
+<!-- Modern device hints -->
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="format-detection" content="telephone=yes" />
+<meta name="HandheldFriendly" content="true" />
 
 <!-- Security Headers (Client-Side) -->
 <meta http-equiv="X-Content-Type-Options" content="nosniff" />
@@ -122,6 +129,7 @@
 <link rel="stylesheet" href="{{ '/assets/css/accessibility.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/accessibility-enhanced.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/mobile-thumb-zones.css' | relative_url }}" />
+<link rel="stylesheet" href="{{ '/assets/css/modern-devices.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/nav-drawer.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/navigation.css' | relative_url }}" />
 <link rel="stylesheet" href="{{ '/assets/css/animations.css' | relative_url }}" />
