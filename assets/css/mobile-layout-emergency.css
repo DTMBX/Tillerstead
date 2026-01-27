@@ -2,10 +2,28 @@
 
 /* Force hide all popups, modals, and overlays on mobile */
 @media (max-width: 768px) {
+  /* CRITICAL: Hide ALL floating action buttons and toolbars */
+  .mobile-fab,
+  .fab,
+  .floating-action-button,
+  [class*="fab-"],
+  [class*="-fab"],
+  .a11y-toolbar,
+  .accessibility-toolbar,
+  [class*="a11y"],
+  [aria-label*="Accessibility"],
+  button[class*="float"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
   /* Hide performance mode toggle */
   #performance-toggle,
   .performance-toggle,
-  [data-performance-toggle] {
+  [data-performance-toggle],
+  .perf-mode-toggle {
     display: none !important;
   }
 
@@ -36,25 +54,84 @@
     display: none !important;
   }
 
-  /* Ensure main content is ALWAYS visible */
-  html,
-  body {
+  /* CRITICAL: Force proper document flow */
+  html {
     overflow-y: auto !important;
     overflow-x: hidden !important;
     height: auto !important;
     position: relative !important;
   }
 
+  body {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important;
+  }
+
+  /* CRITICAL: Header at top */
+  header,
+  .site-header,
+  .ts-header,
+  [role="banner"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 100 !important;
+    order: 1 !important;
+    width: 100% !important;
+  }
+
+  /* CRITICAL: Main content in middle, ALWAYS visible */
   main,
   [role="main"],
   .ts-main-content,
-  #main-content,
-  section {
+  #main-content {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
     position: relative !important;
     z-index: 1 !important;
+    order: 2 !important;
+    flex: 1 !important;
+    width: 100% !important;
+  }
+
+  /* CRITICAL: All sections must be visible */
+  main section,
+  main article,
+  main div {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+  }
+
+  /* CRITICAL: Footer at bottom */
+  footer,
+  .site-footer,
+  .ts-footer,
+  [role="contentinfo"] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 10 !important;
+    order: 3 !important;
+    width: 100% !important;
+    margin-top: auto !important;
+  }
+
+  /* Hide footer trademark if it's floating */
+  .footer-trademark {
+    position: relative !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
   }
 
   /* Fix animations hiding content */
@@ -70,39 +147,19 @@
     display: none !important;
   }
 
-  /* Fix footer */
-  footer,
-  .site-footer,
-  .ts-footer {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    position: relative !important;
-    z-index: 10 !important;
-  }
-
-  /* Fix header */
-  header,
-  .site-header,
-  .ts-header {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    position: relative !important;
-    z-index: 100 !important;
-  }
-
-  /* Reset z-index chaos */
+  /* Reset z-index chaos - ONLY these elements get z-index */
   * {
     z-index: auto !important;
   }
 
-  /* Priority z-index for essential elements */
+  /* Priority z-index for essential elements ONLY */
   header,
   .site-header,
   .ts-header,
   nav,
-  .navigation {
+  .navigation,
+  [role="banner"],
+  [role="navigation"] {
     z-index: 100 !important;
   }
 
@@ -114,12 +171,20 @@
   }
 
   footer,
-  .site-footer {
+  .site-footer,
+  [role="contentinfo"] {
     z-index: 10 !important;
   }
 
-  /* Disable all fixed positioning except header */
-  [style*="position: fixed"]:not(header):not(.site-header):not(nav) {
+  /* Remove ALL fixed positioning on mobile */
+  [style*="position: fixed"],
+  [style*="position:fixed"] {
+    position: relative !important;
+  }
+
+  /* Force relative positioning */
+  .fixed,
+  [class*="fixed"] {
     position: relative !important;
   }
 
@@ -167,6 +232,16 @@
   .materials,
   .faq,
   .cta {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Ensure content wrapper is visible */
+  .content,
+  .content-wrapper,
+  .page-content,
+  .site-content {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;

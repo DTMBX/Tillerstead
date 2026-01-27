@@ -259,81 +259,7 @@ class PerformanceOptimizer {
   }
 }
 
-/**
- * IMAGE OPTIMIZER - Responsive images helper
- */
-class ImageOptimizer {
-  static generateSrcSet(basePath, widths = [320, 640, 960, 1280, 1920]) {
-    return widths
-      .map(width => {
-        const ext = basePath.split('.').pop();
-        const path = basePath.replace(`.${ext}`, `-${width}w.${ext}`);
-        return `${path} ${width}w`;
-      })
-      .join(', ');
-  }
-
-  static generatePicture(src, alt, options = {}) {
-    const {
-      avif = true,
-      webp = true,
-      widths = [320, 640, 960, 1280, 1920],
-      sizes = '100vw'
-    } = options;
-
-    const basePath = src.replace(/\.[^.]+$/, '');
-    const ext = src.split('.').pop();
-
-    let html = '<picture>';
-
-    // AVIF source
-    if (avif) {
-      const avifSrcSet = widths.map(w => `${basePath}-${w}w.avif ${w}w`).join(', ');
-      html += `<source type="image/avif" srcset="${avifSrcSet}" sizes="${sizes}">`;
-    }
-
-    // WebP source
-    if (webp) {
-      const webpSrcSet = widths.map(w => `${basePath}-${w}w.webp ${w}w`).join(', ');
-      html += `<source type="image/webp" srcset="${webpSrcSet}" sizes="${sizes}">`;
-    }
-
-    // Fallback
-    const fallbackSrcSet = widths.map(w => `${basePath}-${w}w.${ext} ${w}w`).join(', ');
-    html += `<img src="${src}" srcset="${fallbackSrcSet}" sizes="${sizes}" alt="${alt}" loading="lazy">`;
-    html += '</picture>';
-
-    return html;
-  }
-}
-
-/**
- * FONT LOADING OPTIMIZATION
- */
-class FontOptimizer {
-  static async preloadFonts(fonts = []) {
-    fonts.forEach(font => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.as = 'font';
-      link.type = 'font/woff2';
-      link.href = font;
-      link.crossOrigin = 'anonymous';
-      document.head.appendChild(link);
-    });
-  }
-
-  static enableFontDisplay(strategy = 'swap') {
-    // Add font-display to @font-face rules
-    const style = document.createElement('style');
-    style.textContent = `
-      @font-face {
-        font-display: ${strategy};
-      }
-    `;
-    document.head.appendChild(style);
-  }
-}
+// ImageOptimizer and FontOptimizer removed - already defined in premium-ux.js to avoid duplication
 
 // Initialize performance optimizer
 const performanceOptimizer = new PerformanceOptimizer();
@@ -341,8 +267,6 @@ const performanceOptimizer = new PerformanceOptimizer();
 // Export for module use
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = {
-    PerformanceOptimizer,
-    ImageOptimizer,
-    FontOptimizer
+    PerformanceOptimizer
   };
 }
