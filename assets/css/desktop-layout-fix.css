@@ -1,0 +1,71 @@
+/**
+ * DESKTOP LAYOUT FIX
+ * - Wider hero/body content on desktop
+ * - Hide install app popup on desktop
+ * - Fix bottom-right button alignment
+ */
+
+/* Make hero and main content wider on desktop */
+@media (min-width: 1024px) {
+  .container--wide {
+    --container-max: 100rem; /* Wider from 96rem */
+    max-width: 1600px;
+  }
+  
+  .ts-hero--home .ts-hero__inner {
+    max-width: 100%;
+    padding-left: clamp(2rem, 5vw, 4rem);
+    padding-right: clamp(2rem, 5vw, 4rem);
+  }
+  
+  /* Full width sections on desktop */
+  .ts-hero,
+  .ts-main-content,
+  main {
+    max-width: 100%;
+  }
+}
+
+/* Hide PWA install popup on desktop (mobile only) */
+@media (min-width: 769px) {
+  .pwa-install-prompt,
+  .ts-pwa-install-prompt,
+  [class*="pwa"][class*="install"],
+  [class*="install"][class*="app"] {
+    display: none !important;
+  }
+}
+
+/* Fix bottom-right button positioning (accessibility + install app conflicts) */
+.a11y-toolbar {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 9998 !important;
+}
+
+/* On mobile, stack buttons vertically with spacing */
+@media (max-width: 768px) {
+  .a11y-toolbar {
+    bottom: 90px !important; /* Space for install app popup below */
+  }
+  
+  .pwa-install-prompt,
+  .ts-pwa-install-prompt {
+    position: fixed !important;
+    bottom: 16px !important;
+    right: 16px !important;
+    left: 16px !important;
+    max-width: calc(100vw - 32px) !important;
+    z-index: 9997 !important;
+  }
+}
+
+/* Ensure header container is also wider */
+@media (min-width: 1024px) {
+  .ts-header__container {
+    max-width: 1600px;
+    padding-left: clamp(2rem, 5vw, 4rem);
+    padding-right: clamp(2rem, 5vw, 4rem);
+  }
+}
