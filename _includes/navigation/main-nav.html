@@ -287,39 +287,44 @@
     }
   });
   
-  // Mobile nav toggle
+  // Mobile nav toggle - only run if elements exist
   var toggleBtn = document.querySelector('.mobile-nav__toggle');
   var closeBtn = document.querySelector('.mobile-nav__close');
   var drawer = document.getElementById('mobile-nav-drawer');
   var overlay = document.querySelector('.mobile-nav__overlay');
   
-  function openDrawer() {
-    drawer.setAttribute('aria-hidden', 'false');
-    toggleBtn.setAttribute('aria-expanded', 'true');
-    document.body.classList.add('nav-open');
-    // Don't set overflow directly - let scroll-fix.js handle it
+  // Only initialize mobile nav if elements are present (disabled on mobile)
+  if (toggleBtn && drawer) {
+    function openDrawer() {
+      drawer.setAttribute('aria-hidden', 'false');
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      document.body.classList.add('nav-open');
+    }
+    
+    function closeDrawer() {
+      drawer.setAttribute('aria-hidden', 'true');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('nav-open');
+    }
+    
+    toggleBtn.addEventListener('click', openDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    if (overlay) overlay.addEventListener('click', closeDrawer);
   }
   
-  function closeDrawer() {
-    drawer.setAttribute('aria-hidden', 'true');
-    toggleBtn.setAttribute('aria-expanded', 'false');
-    document.body.classList.remove('nav-open');
-    // Don't set overflow directly - let scroll-fix.js handle it
-  }
-  
-  if (toggleBtn) toggleBtn.addEventListener('click', openDrawer);
-  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-  if (overlay) overlay.addEventListener('click', closeDrawer);
-  
-  // Mobile accordions
+  // Mobile accordions - only if they exist
   var accordionTriggers = document.querySelectorAll('.mobile-nav__accordion-trigger');
-  accordionTriggers.forEach(function(trigger) {
-    trigger.addEventListener('click', function() {
-      var isExpanded = this.getAttribute('aria-expanded') === 'true';
-      var panel = document.getElementById(this.getAttribute('aria-controls'));
-      this.setAttribute('aria-expanded', !isExpanded);
-      panel.hidden = isExpanded;
+  if (accordionTriggers.length > 0) {
+    accordionTriggers.forEach(function(trigger) {
+      trigger.addEventListener('click', function() {
+        var isExpanded = this.getAttribute('aria-expanded') === 'true';
+        var panel = document.getElementById(this.getAttribute('aria-controls'));
+        if (panel) {
+          this.setAttribute('aria-expanded', !isExpanded);
+          panel.hidden = isExpanded;
+        }
+      });
     });
-  });
+  }
 })();
 </script>
