@@ -18,7 +18,7 @@ Comprehensive mobile experience overhaul addressing navigation drawer issues, he
 ### 1. ✅ TillerPro Enterprise Banner Removal
 **Problem:** TillerPro promotional banner appearing on contracting homepage  
 **Impact:** Confusing messaging, diluted brand focus  
-**Solution:** Removed from [index.md](c:\web-dev\github-repos\Tillerstead.com\index.md)  
+**Solution:** Removed from `index.md`  
 **Result:** Clean homepage focused solely on NJ home improvement contracting
 
 ### 2. ✅ Mobile Header Blur Fix
@@ -323,9 +323,9 @@ Social icons: 1.5rem
 ---
 
 ## Related Documentation
-- [EMAIL-OPTIMIZATION-COMPLETE.md](c:\web-dev\github-repos\Tillerstead.com\EMAIL-OPTIMIZATION-COMPLETE.md) - Email system updates
-- [BRAND-GUIDELINES.md](c:\web-dev\github-repos\Tillerstead.com\BRAND-GUIDELINES.md) - Brand standards
-- [COLOR-STANDARD.md](c:\web-dev\github-repos\Tillerstead.com\COLOR-STANDARD.md) - Color system
+- EMAIL-OPTIMIZATION-COMPLETE.md - Email system updates
+- BRAND-GUIDELINES.md - Brand standards
+- COLOR-STANDARD.md - Color system
 
 ---
 
