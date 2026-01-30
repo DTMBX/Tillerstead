@@ -95,7 +95,11 @@
 }
 
 .bg-light {
-  background: var(--tiller-bg-stone, #222524);
+  background: #ffffff;
+  border-radius: clamp(1rem, 2vw, 1.5rem);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06),
+              0 8px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
 }
 
 .bg-primary {
@@ -927,7 +931,9 @@
   background: white;
   color: var(--tiller-color-emerald-accessible, #008f5d);
   font-weight: 700;
-  box-shadow: 0 4px 20px rgb(255 255 255 / 25%);
+  border-radius: clamp(0.75rem, 1.5vw, 1rem);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2),
+              0 8px 24px rgba(255, 255, 255, 0.15);
 }
 
 .home-cta .btn--white:hover {

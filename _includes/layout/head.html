@@ -212,6 +212,15 @@
 <!-- CRITICAL: Mobile fix MUST load last to override all other CSS -->
 <link rel="stylesheet" href="{{ '/assets/css/mobile-critical-fix.css' | relative_url }}" />
 
+<!-- COMPREHENSIVE FIXES 2026-01-29 - Navigation, Footer, Contrast, A11y Button -->
+<link rel="stylesheet" href="{{ '/assets/css/fixes-comprehensive.css' | relative_url }}" />
+
+<!-- MOBILE NAV FIX 2026-01-29 - Hamburger visibility, A11y integration, mobile layout -->
+<link rel="stylesheet" href="{{ '/assets/css/mobile-nav-fix.css' | relative_url }}" />
+
+<!-- HAMBURGER EMERGENCY VISIBILITY - Maximum contrast -->
+<link rel="stylesheet" href="{{ '/assets/css/hamburger-visibility.css' | relative_url }}" />
+
 <!-- Page-specific scripts -->
 {% if page.scripts %}
   {% for script in page.scripts %}

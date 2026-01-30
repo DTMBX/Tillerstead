@@ -53,7 +53,11 @@
     "automate:schedule": "node scripts/content-automation.js schedule",
     "automate:social": "node scripts/content-automation.js social",
     "automate:newsletter": "node scripts/content-automation.js newsletter",
-    "automate:analytics": "node scripts/content-automation.js analytics"
+    "automate:analytics": "node scripts/content-automation.js analytics",
+    "check:ux": "node scripts/quick-error-check.js",
+    "fix:ux": "npm run check:ux && npm run build",
+    "verify:ux": "node scripts/verify-ux-files.js",
+    "test:ux": "npm run verify:ux && bundle exec jekyll build && bundle exec jekyll serve"
   },
   "author": "DTB396",
   "version": "1.0.0",
