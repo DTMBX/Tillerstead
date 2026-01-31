@@ -41,3 +41,7 @@ npm-debug.log*
 *.tmp
 *.temp
 .cache/
+
+# Encryption keys (NEVER COMMIT)
+.git-encrypt/encryption.key
+.git-encrypt/*.key
