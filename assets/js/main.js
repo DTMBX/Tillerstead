@@ -3,6 +3,30 @@
 
   // // // // // // // // // // // // // // // console.log('[TILLERSTEAD] Initializing - No Bounce Edition'); // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED // AUTO-DISABLED
 
+  // Premium Performance Features (inline for compatibility)
+  console.log('⚡ Initializing Performance Features...');
+  
+  // Initialize lazy loading
+  if ('loading' in HTMLImageElement.prototype) {
+    document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+      if (img.dataset.src) img.src = img.dataset.src;
+    });
+    console.log('🚀 Native lazy loading enabled');
+  }
+
+  // Track basic performance
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      if ('performance' in window) {
+        const perfData = performance.getEntriesByType('navigation')[0];
+        if (perfData) {
+          console.log('📊 Page Load:', Math.round(perfData.loadEventEnd - perfData.fetchStart), 'ms');
+        }
+      }
+      console.log('✅ Performance features initialized');
+    }, 0);
+  });
+
   // Header scroll - NO BOUNCE
   const header = document.getElementById('site-header');
   if (header) {
