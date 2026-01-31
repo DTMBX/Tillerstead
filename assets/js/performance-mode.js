@@ -11,7 +11,7 @@
 
   class PerformanceMode {
     constructor() {
-      this.enabled = this.getStoredPreference();
+      this.enabled = true;
       this.reducedMotion = this.checkReducedMotion();
       this.init();
     }
@@ -20,13 +20,8 @@
       // Check system preference
       this.checkSystemPreferences();
 
-      // Apply saved preference
-      if (this.enabled || this.reducedMotion) {
-        this.enable();
-      }
-
-      // Add toggle button if not exists
-      this.addToggleButton();
+      // Always enable performance mode
+      this.enable();
 
       // Listen for preference changes
       this.listenForChanges();
@@ -50,8 +45,8 @@
     }
 
     getStoredPreference() {
-      return localStorage.getItem(PERF_KEY) === 'true' ||
-             localStorage.getItem(REDUCE_MOTION_KEY) === 'true';
+      // Always return true - performance mode is always on
+      return true;
     }
 
     checkReducedMotion() {
@@ -74,28 +69,13 @@
     }
 
     disable() {
-      // Don't disable if system prefers reduced motion
-      if (this.reducedMotion) {
-        return;
-      }
-
-      this.enabled = false;
-      localStorage.setItem(PERF_KEY, 'false');
-
-      // Remove performance class
-      document.documentElement.classList.remove('performance-mode');
-      document.documentElement.classList.remove('reduce-motion');
-
-      // Re-enable animations
-      this.enableAnimations();
+      // Performance mode is always on - cannot be disabled
+      return;
     }
 
     toggle() {
-      if (this.enabled) {
-        this.disable();
-      } else {
-        this.enable();
-      }
+      // Performance mode is always on - cannot be toggled
+      return;
     }
 
     disableHeavyAnimations() {
@@ -153,64 +133,8 @@
     }
 
     addToggleButton() {
-      // Check if button already exists
-      if (document.getElementById('perf-mode-toggle')) {
-        return;
-      }
-
-      const button = document.createElement('button');
-      button.id = 'perf-mode-toggle';
-      button.className = 'perf-mode-toggle';
-      button.setAttribute('aria-label', 'Toggle performance mode');
-      button.setAttribute('title', this.enabled ? 'Disable Performance Mode' : 'Enable Performance Mode');
-      button.innerHTML = this.enabled ? '⚡ Speedy ON' : '⚡ Speedy OFF';
-
-      button.addEventListener('click', () => {
-        this.toggle();
-        button.innerHTML = this.enabled ? '⚡ Speedy ON' : '⚡ Speedy OFF';
-        button.setAttribute('title', this.enabled ? 'Disable Performance Mode' : 'Enable Performance Mode');
-      });
-
-      // Style the button
-      const style = document.createElement('style');
-      style.textContent = `
-        .perf-mode-toggle {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          z-index: 9999;
-          padding: 10px 16px;
-          background: #10b981;
-          color: white;
-          border: none;
-          border-radius: 8px;
-          font-size: 14px;
-          font-weight: 600;
-          cursor: pointer;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-          transition: all 0.2s ease;
-        }
-
-        .perf-mode-toggle:hover {
-          background: #059669;
-          transform: translateY(-2px);
-          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-        }
-
-        .perf-mode-toggle:active {
-          transform: translateY(0);
-        }
-
-        @media (max-width: 768px) {
-          .perf-mode-toggle {
-            display: none !important; /* Hide on mobile - causes confusion */
-          }
-        }
-      `;
-      document.head.appendChild(style);
-
-      // Add to page
-      document.body.appendChild(button);
+      // Toggle button removed - performance mode is always on
+      return;
     }
 
     listenForChanges() {
@@ -233,13 +157,5 @@
 
   // Expose globally
   window.tsPerformanceMode = perfMode;
-
-  // Keyboard shortcut: Alt + Shift + S
-  document.addEventListener('keydown', (e) => {
-    if (e.altKey && e.shiftKey && e.code === 'KeyS') {
-      e.preventDefault();
-      perfMode.toggle();
-    }
-  });
 
 })();
