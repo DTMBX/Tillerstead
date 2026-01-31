@@ -45,3 +45,4 @@ npm-debug.log*
 # Encryption keys (NEVER COMMIT)
 .git-encrypt/encryption.key
 .git-encrypt/*.key
+.git-crypt-key
