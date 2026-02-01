@@ -66,12 +66,6 @@
 <link rel="preload" as="style" href="{{ '/assets/css/root-vars.css' | relative_url }}" />
 <link rel="preload" as="style" href="{{ '/assets/css/critical.css' | relative_url }}" />
 <link rel="preload" as="script" href="{{ '/assets/js/main.js' | relative_url }}" />
-{% if page.is_home == true %}
-<link rel="preload" as="image" href="{{ '/assets/images/heroes/tillerstead-hero-optimized.webp' | relative_url }}" />
-{% endif %}
-
-<!-- Early Hints for fonts -->
-<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/inter-var.woff2" crossorigin />
 
 <!-- Prefetch next likely pages -->
 {% if page.is_home == true %}
