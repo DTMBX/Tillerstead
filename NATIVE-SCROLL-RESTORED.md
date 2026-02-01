@@ -21,7 +21,7 @@
 - ❌ `scroll-reveal.js` - Duplicate functionality
 
 #### Cleaned Scripts
-Removed from [_includes/layout/scripts.html](_includes/layout/scripts.html):
+Removed from `_includes/layout/scripts.html`:
 - ❌ `premium-animations.js` - Bloated
 - ❌ `interactive-components.js` - Not needed
 - ❌ `performance-optimizer.js` - Ironic name
@@ -85,7 +85,7 @@ document.body.style.overflow = 'hidden';
 ## 🧹 Code Quality
 
 ### CSS Changes
-[assets/css/base/system.css](assets/css/base/system.css):
+`assets/css/base/system.css`:
 ```css
 /* BEFORE - Forced smooth scrolling */
 html{scroll-behavior:smooth;overflow-y:scroll!important;overflow-x:hidden!important}
@@ -97,7 +97,7 @@ body{line-height:1.6}
 ```
 
 ### JavaScript Changes
-[assets/js/app.js](assets/js/app.js):
+`assets/js/app.js`:
 ```javascript
 // BEFORE - Intercepted all anchor clicks
 function initSmoothScroll() {
