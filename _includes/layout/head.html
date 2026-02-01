@@ -29,27 +29,27 @@
 <!-- Early accessibility preference detection (runs before render to prevent flash) -->
 <script>
 (function(){
-  var d=document.documentElement,m=window.matchMedia;
+  var d=document.documentElement,m=globalThis.matchMedia;
   // Reduced motion
   if(m('(prefers-reduced-motion:reduce)').matches)d.classList.add('reduce-motion');
   // High contrast / forced colors
-  if(m('(forced-colors:active)').matches||m('(prefers-contrast:more)').matches)d.setAttribute('data-high-contrast','true');
+  if(m('(forced-colors:active)').matches||m('(prefers-contrast:more)').matches)d.dataset.highContrast='true';
   // Color scheme
-  if(m('(prefers-color-scheme:dark)').matches)d.setAttribute('data-color-scheme','dark');
+  if(m('(prefers-color-scheme:dark)').matches)d.dataset.colorScheme='dark';
   // Touch device
-  if(m('(pointer:coarse)').matches){d.setAttribute('data-pointer','coarse');d.classList.add('touch-friendly');}
+  if(m('(pointer:coarse)').matches){d.dataset.pointer='coarse';d.classList.add('touch-friendly');}
   // No hover
-  if(m('(hover:none)').matches)d.setAttribute('data-hover','none');
+  if(m('(hover:none)').matches)d.dataset.hover='none';
   // Reduced transparency
-  if(m('(prefers-reduced-transparency:reduce)').matches)d.setAttribute('data-reduced-transparency','true');
+  if(m('(prefers-reduced-transparency:reduce)').matches)d.dataset.reducedTransparency='true';
   // Inverted colors
-  if(m('(inverted-colors:inverted)').matches)d.setAttribute('data-inverted-colors','true');
+  if(m('(inverted-colors:inverted)').matches)d.dataset.invertedColors='true';
   // Load saved user preferences
   try{var p=JSON.parse(localStorage.getItem('tillerstead-a11y-prefs')||'{}');
-    if(p.highContrast)d.setAttribute('data-high-contrast','true');
-    if(p.textSize)d.setAttribute('data-text-size',p.textSize);
+    if(p.highContrast)d.dataset.highContrast='true';
+    if(p.textSize)d.dataset.textSize=p.textSize;
     if(p.reducedMotion)d.classList.add('reduce-motion');
-  }catch(e){}
+  }catch(e){/* Ignore storage errors */}
 })();
 </script>
 

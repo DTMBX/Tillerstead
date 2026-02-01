@@ -21,17 +21,17 @@
 <!-- Early accessibility preference detection -->
 <script>
 (function(){
-  var d=document.documentElement,m=window.matchMedia;
+  var d=document.documentElement,m=globalThis.matchMedia;
   if(m('(prefers-reduced-motion:reduce)').matches)d.classList.add('reduce-motion');
-  if(m('(forced-colors:active)').matches||m('(prefers-contrast:more)').matches)d.setAttribute('data-high-contrast','true');
-  if(m('(prefers-color-scheme:dark)').matches)d.setAttribute('data-color-scheme','dark');
-  if(m('(pointer:coarse)').matches){d.setAttribute('data-pointer','coarse');d.classList.add('touch-friendly');}
-  if(m('(hover:none)').matches)d.setAttribute('data-hover','none');
+  if(m('(forced-colors:active)').matches||m('(prefers-contrast:more)').matches)d.dataset.highContrast='true';
+  if(m('(prefers-color-scheme:dark)').matches)d.dataset.colorScheme='dark';
+  if(m('(pointer:coarse)').matches){d.dataset.pointer='coarse';d.classList.add('touch-friendly');}
+  if(m('(hover:none)').matches)d.dataset.hover='none';
   try{var p=JSON.parse(localStorage.getItem('tillerstead-a11y-prefs')||'{}');
-    if(p.highContrast)d.setAttribute('data-high-contrast','true');
-    if(p.textSize)d.setAttribute('data-text-size',p.textSize);
+    if(p.highContrast)d.dataset.highContrast='true';
+    if(p.textSize)d.dataset.textSize=p.textSize;
     if(p.reducedMotion)d.classList.add('reduce-motion');
-  }catch(e){}
+  }catch(e){/* Ignore storage errors */}
 })();
 </script>
 
