@@ -444,7 +444,125 @@ permalink: /tools/
       </svg>
       <span>Settings</span>
     </a>
+    <button 
+      type="button"
+      class="app-bottom-nav__link bottom-nav__link a11y-nav-btn"
+      id="a11y-toolbar-toggle-nav"
+      aria-expanded="false"
+      aria-controls="a11y-toolbar-panel-nav"
+      aria-label="Open accessibility options"
+    >
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <circle cx="12" cy="12" r="10"/>
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M4.93 19.07l1.41-1.41m11.32-11.32l1.41-1.41"/>
+      </svg>
+      <span>Access</span>
+    </button>
   </nav>
+
+  <!-- Accessibility Panel (for bottom nav) -->
+  <div 
+    class="a11y-toolbar__panel a11y-toolbar__panel--bottom-nav" 
+    id="a11y-toolbar-panel-nav"
+    role="dialog"
+    aria-label="Accessibility settings"
+    hidden
+  >
+    <div class="a11y-toolbar__header">
+      <h3 class="a11y-toolbar__title">Accessibility Options</h3>
+      <button 
+        type="button" 
+        class="a11y-toolbar__close"
+        id="a11y-toolbar-close-nav"
+        aria-label="Close accessibility options"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="a11y-toolbar__content">
+      <!-- Read Aloud (Text-to-Speech) -->
+      <button 
+        type="button"
+        class="a11y-toolbar__btn"
+        id="a11y-tts-nav"
+        aria-pressed="false"
+        onclick="a11yToggleTextToSpeech(); this.setAttribute('aria-pressed', document.documentElement.hasAttribute('data-tts-active'))"
+      >
+        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+        </svg>
+        <span>Read Aloud</span>
+      </button>
+
+      <!-- Stop Reading -->
+      <button 
+        type="button"
+        class="a11y-toolbar__btn"
+        id="a11y-tts-stop-nav"
+        onclick="a11yStopReading()"
+      >
+        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <rect x="6" y="6" width="12" height="12" rx="2"/>
+        </svg>
+        <span>Stop Reading</span>
+      </button>
+
+      <!-- High Contrast -->
+      <button 
+        type="button"
+        class="a11y-toolbar__btn"
+        id="a11y-contrast-nav"
+        aria-pressed="false"
+        onclick="a11yToggleHighContrast()"
+      >
+        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 2a10 10 0 0 1 0 20V2z"/>
+        </svg>
+        <span>High Contrast</span>
+      </button>
+
+      <!-- Text Size -->
+      <button 
+        type="button"
+        class="a11y-toolbar__btn"
+        id="a11y-textsize-nav"
+        aria-pressed="false"
+        onclick="a11yToggleTextSize()"
+      >
+        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <text x="3" y="20" font-size="12" fill="currentColor">A</text>
+          <text x="14" y="18" font-size="16" fill="currentColor">A</text>
+        </svg>
+        <span>Larger Text</span>
+      </button>
+
+      <!-- Custom Cursor -->
+      <button 
+        type="button"
+        class="a11y-toolbar__btn"
+        id="a11y-cursor-nav"
+        aria-pressed="false"
+        onclick="a11yToggleCustomCursor()"
+      >
+        <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="8"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+        <span>Fancy Cursor</span>
+      </button>
+
+      <p class="a11y-toolbar__note">
+        <small>Settings are saved for your next visit</small>
+      </p>
+    </div>
+  </div>
 
   <!-- Toast Container -->
   <div class="toast-container" id="toast-container" role="region" aria-live="polite" aria-label="Notifications"></div>
@@ -654,6 +772,152 @@ permalink: /tools/
     .shortcut span {
       color: var(--app-text-muted);
     }
+
+    /* Accessibility Panel Integration */
+    .a11y-nav-btn {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      transition: all var(--transition-fast);
+    }
+    .a11y-nav-btn[aria-expanded="true"] {
+      background: var(--app-primary-muted);
+      color: var(--app-primary);
+    }
+    
+    .a11y-toolbar__panel--bottom-nav {
+      position: fixed;
+      bottom: calc(var(--bottom-nav-height, 64px) + 0.5rem);
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: min(400px, calc(100vw - 2rem));
+      width: 100%;
+      background: var(--app-surface-2);
+      border: 1px solid var(--app-border);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      z-index: 9999;
+      animation: slideUpFade 0.2s ease;
+    }
+    
+    @keyframes slideUpFade {
+      from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    }
+    
+    .a11y-toolbar__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid var(--app-border);
+    }
+    
+    .a11y-toolbar__title {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--app-text);
+    }
+    
+    .a11y-toolbar__close {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: transparent;
+      border: none;
+      border-radius: 6px;
+      color: var(--app-text-dim);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .a11y-toolbar__close:hover {
+      background: var(--app-surface-3);
+      color: var(--app-text);
+    }
+    .a11y-toolbar__close:focus-visible {
+      outline: 2px solid var(--app-primary);
+      outline-offset: 2px;
+    }
+    
+    .a11y-toolbar__content {
+      padding: 1rem;
+      max-height: 60vh;
+      overflow-y: auto;
+    }
+    
+    .a11y-toolbar__btn {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      width: 100%;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.5rem;
+      background: var(--app-surface);
+      border: 1px solid var(--app-border);
+      border-radius: 8px;
+      color: var(--app-text);
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-align: left;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .a11y-toolbar__btn:last-of-type {
+      margin-bottom: 0;
+    }
+    .a11y-toolbar__btn:hover {
+      background: var(--app-surface-3);
+      border-color: var(--app-primary);
+      transform: translateX(2px);
+    }
+    .a11y-toolbar__btn:focus-visible {
+      outline: 2px solid var(--app-primary);
+      outline-offset: 2px;
+    }
+    .a11y-toolbar__btn[aria-pressed="true"] {
+      background: var(--app-primary-muted);
+      border-color: var(--app-primary);
+      color: var(--app-primary);
+    }
+    .a11y-toolbar__btn svg {
+      flex-shrink: 0;
+      opacity: 0.8;
+    }
+    
+    .a11y-toolbar__note {
+      margin: 1rem 0 0;
+      padding: 0.75rem;
+      background: var(--app-surface);
+      border: 1px solid var(--app-border);
+      border-radius: 6px;
+      font-size: 0.75rem;
+      color: var(--app-text-dim);
+      text-align: center;
+    }
+    .a11y-toolbar__note small {
+      display: block;
+    }
+    
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .a11y-toolbar__panel--bottom-nav {
+        bottom: calc(var(--bottom-nav-height, 64px) + 0.25rem);
+        max-width: calc(100vw - 1rem);
+        border-radius: 16px 16px 0 0;
+      }
+      .a11y-toolbar__content {
+        max-height: 50vh;
+      }
+    }
   </style>
 
   <!-- Load existing tools.js for calculation functions -->
@@ -669,11 +933,9 @@ permalink: /tools/
       script.onload = function() {
         // Normalize jsPDF reference
         window.jsPDF = window.jspdf?.jsPDF || window.jspdf || window.jsPDF;
-        console.log('[TillerPro] jsPDF loaded:', typeof window.jsPDF);
         resolve(window.jsPDF);
       };
       script.onerror = function() {
-        console.warn('[TillerPro] jsPDF CDN failed, trying unpkg...');
         var fallback = document.createElement('script');
         fallback.src = 'https://unpkg.com/jspdf@2.5.2/dist/jspdf.umd.min.js';
         fallback.onload = function() {
@@ -741,6 +1003,13 @@ permalink: /tools/
         // Escape = Close modals
         if (e.key === 'Escape') {
           toggleShortcuts(false);
+          // Close a11y panel
+          const a11yPanel = document.getElementById('a11y-toolbar-panel-nav');
+          const a11yToggle = document.getElementById('a11y-toolbar-toggle-nav');
+          if (a11yPanel && !a11yPanel.hidden) {
+            a11yPanel.hidden = true;
+            a11yToggle?.setAttribute('aria-expanded', 'false');
+          }
           return;
         }
         
@@ -753,6 +1022,42 @@ permalink: /tools/
           }
         }
       });
+    })();
+
+    // Accessibility Panel Toggle
+    (function() {
+      const toggle = document.getElementById('a11y-toolbar-toggle-nav');
+      const panel = document.getElementById('a11y-toolbar-panel-nav');
+      const close = document.getElementById('a11y-toolbar-close-nav');
+      
+      if (toggle && panel) {
+        toggle.addEventListener('click', function() {
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !expanded);
+          panel.hidden = expanded;
+          
+          if (!expanded) {
+            const firstBtn = panel.querySelector('button.a11y-toolbar__btn');
+            firstBtn?.focus();
+          }
+        });
+
+        if (close) {
+          close.addEventListener('click', function() {
+            panel.hidden = true;
+            toggle.setAttribute('aria-expanded', 'false');
+            toggle.focus();
+          });
+        }
+
+        // Close on outside click
+        document.addEventListener('click', function(e) {
+          if (!panel.hidden && !panel.contains(e.target) && !toggle.contains(e.target)) {
+            panel.hidden = true;
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
     })();
   </script>
 </body>
