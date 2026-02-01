@@ -32,8 +32,10 @@
   function updateHeader() {
     if (lastScrollY > 50) {
       header.classList.add('is-scrolled');
+      header.classList.add('ts-header--scrolled');
     } else {
       header.classList.remove('is-scrolled');
+      header.classList.remove('ts-header--scrolled');
     }
   }
 

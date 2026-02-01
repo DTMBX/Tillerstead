@@ -30,24 +30,10 @@ function init() {
   console.log('✅ All premium features loaded successfully!');
 }
 
-// Smooth scrolling for anchor links
+// Native anchor scrolling - browser handles it
 function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href === '#') return;
-
-      e.preventDefault();
-      const target = document.querySelector(href);
-      
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
-      }
-    });
-  });
+  // Let browser handle anchor links natively - faster and more responsive
+  // Remove this function if not needed
 }
 
 // Enhanced form handling
